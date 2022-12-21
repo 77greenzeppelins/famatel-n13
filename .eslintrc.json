@@ -1,3 +1,9 @@
+//___initial version
 {
   "extends": "next/core-web-vitals"
 }
+
+//__
+// {
+//   "extends": ["next/babel","next/core-web-vitals"]
+// }
