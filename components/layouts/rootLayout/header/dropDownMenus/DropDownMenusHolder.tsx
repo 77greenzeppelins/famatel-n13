@@ -27,9 +27,7 @@ const DropDownMenusHolder = ({
   /**JSX**/
   return (
     <>
-      <AnimatePresence
-      //  exitBeforeEnter
-      >
+      <AnimatePresence mode="wait">
         {isHovered && hasDropDownMenu && (
           /*
           linkState.condition

@@ -1,16 +1,12 @@
 import type { ReactElement } from 'react';
+/**Components*/
 import Layout from '../../components/layouts/rootLayout/Layout';
+import KategorieProduktowContent from '../../components/pagesComponents/kategorie-produktow/KategorieProduktowContent';
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 import type { NextPageWithLayout } from '../_app';
 
 const KategorieProduktowPage: NextPageWithLayout = () => {
-  return (
-    <div className="relative">
-      <div className="h-[50vh] bg-green-900"> </div>
-      <div className="h-[50vh] bg-red-900"></div>
-      <div className="h-[50vh] bg-green-700"></div>
-    </div>
-  );
+  return <KategorieProduktowContent />;
 };
 
 KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {

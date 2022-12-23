@@ -5,7 +5,8 @@
 /*__________________________________________________________base*/
 @layer base {
   body {
-    @apply overflow-x-hidden;
+    @apply overflow-x-hidden bg-grey;
+    @apply scroll-bar-style;
   }
   :root {
     /*
@@ -49,4 +50,39 @@
   .no-sparkling {
     -webkit-tap-highlight-color: transparent;
   }
+
+  /**
+  * Scrollbar style
+  * set here and add in: @layer base{ body{..., @apply scroll-bar-style;}, ...}
+  */
+  .scroll-bar-style {
+    /* IE and Edge */
+    -ms-overflow-style: thin;
+    /* Firefox */
+    scrollbar-width: thin;
+  }
+
+  /* Chrome, Safari and Opera */
+  .scroll-bar-style::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--corpo-grey-shade-2);
+  }
+  .scroll-bar-style::-webkit-scrollbar-thumb {
+    background-color: var(--corpo-grey-shade-1);
+  }
+  .scroll-bar-style::-webkit-scrollbar-thumb:hover {
+    background-color: var(--corpo-grey);
+  }
 }
+/*
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; //___Chrome, Safari and Opera
+  }
+*/
+
+/*
+.no-scrollbar {
+    -ms-overflow-style: none; //___IE and Edge
+    scrollbar-width: none; //__Firefox
+  }
+*/
