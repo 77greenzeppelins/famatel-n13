@@ -4,6 +4,10 @@ interface ICorpoColors {
   light: string;
   orange: string;
   grey: string;
+  greyShade1: string;
+  greyShade2: string;
+  greyTint1: string;
+  greyTint2: string;
   dark: string;
 }
 interface IPagesUrl {
@@ -26,43 +30,40 @@ interface IMainCategoriesItem {
   name: string;
   fullName: string;
   url: string;
-  // image: StaticImageData;
+  image: StaticImageData;
 }
 
-interface ICatalogCardTableType {
-  //__used in "wtyczki i gniazda"
-  vatTable: string;
-}
-interface IVatColors {
-  110: string;
-  230: string;
-  400: string;
-  500: string;
-}
-interface IVatColorsPale {
-  allColors: string[];
-  110: string;
-  230: string;
-  400: string;
-  500: string;
-  paleGrey: string;
-  leftSideBody: string;
-}
-interface IVatLowColors {
-  allPaleColors: string[];
-  violetVivid: string;
-  violetPale: string;
-  greenVivid: string;
-  greenPale: string;
-}
+//_____________________________________???
+// interface IVatColors {
+//   110: string;
+//   230: string;
+//   400: string;
+//   500: string;
+// }
+// interface IVatColorsPale {
+//   allColors: string[];
+//   110: string;
+//   230: string;
+//   400: string;
+//   500: string;
+//   paleGrey: string;
+//   leftSideBody: string;
+// }
+// interface IVatLowColors {
+//   allPaleColors: string[];
+//   violetVivid: string;
+//   violetPale: string;
+//   greenVivid: string;
+//   greenPale: string;
+// }
 
 export type {
   ICorpoColors,
   IPagesUrl,
   mainPagesItem,
   IMainCategoriesItem,
-  ICatalogCardTableType,
-  IVatColors,
-  IVatColorsPale,
-  IVatLowColors,
+  // ICatalogCardTableType,
+  // IVatColors,
+  // IVatColorsPale,
+  // IVatLowColors,
 };

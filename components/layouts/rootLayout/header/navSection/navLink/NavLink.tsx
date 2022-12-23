@@ -5,6 +5,9 @@ import AriaJSLink from '../../../../../_basicComponents/links/ariaJSLink/AriaJSL
 import DropDownMenusHolder from '../../dropDownMenus/DropDownMenusHolder';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+/**Basic Data**/
+import { tailwindStyles } from '../../../../../../data/_styleData';
 
 /**********************************************************************************/
 const NavLink: React.FunctionComponent<{
@@ -66,6 +69,29 @@ const NavLink: React.FunctionComponent<{
         />
       </div>
 
+      {/* <Link
+        href={url}
+        controlsSet={{ background: 'transparent' }}
+        controlsStart={{
+          background: 'transparent',
+        }}
+        aStyle="relative fc w-full h-full cursor-pointer bg-transparent select-none touch-none focus:outline-none group "
+      >
+        <p
+          className={`relative fc w-full text-[0.625rem] lg:text-[0.75rem] xl:text-[0.875rem] tracking-widest ${
+            linkStyleisHovered ? 'text-corpo' : 'text-grey'
+          }`}
+        >
+          <span>{label}</span>
+        </p>
+        <div
+          className={`absolute border-b border-grey h-[44px] ${
+            linkStyleisHovered ? 'w-[0%]' : 'w-full'
+          } inset-0 opacity-0 hover:opacity-100  ease-in duration-300 `}
+          //__w-full h-full
+        />
+      </Link> */}
+
       <AriaJSLink
         linkHref={url}
         controlsSet={{ background: 'transparent' }}
@@ -75,7 +101,7 @@ const NavLink: React.FunctionComponent<{
         aStyle="relative fc w-full h-full cursor-pointer bg-transparent select-none touch-none focus:outline-none group "
       >
         <p
-          className={`relative fc w-full text-[0.625rem] lg:text-[0.75rem] xl:text-[0.875rem] tracking-widest ${
+          className={`text-[0.625rem] lg:text-[0.75rem] xl:text-[0.875rem] tracking-widest ${
             linkStyleisHovered ? 'text-corpo' : 'text-grey'
           }`}
         >

@@ -25,8 +25,8 @@ const Header = () => {
       }
     >
       <div
-        className="h-full mx-auto px-[2%] md:px-[60px]"
-        //  className={`${tailwindStyles.innerContainer}`}
+        // className="h-full mx-auto px-[2%] md:px-[60px]"
+        className={`${tailwindStyles.innerContainer}`}
       >
         <div className="flex items-center justify-between w-full h-full ">
           <div className="origin-left fc">

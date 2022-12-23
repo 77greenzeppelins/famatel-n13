@@ -10,6 +10,11 @@ const tailwindStyles = {
   //___
   defaultLink:
     'fc h-[70%] aspect-1 text-[1rem] bg-greyShade1 select-none touch-none focus:outline-none',
+  //___text
+  // categoryCard:
+  //   'text-light text-center opacity-70 group-hover:opacity-100 ease-in duration-300 text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal xxl:font-thin ',
+  // headerLinkLabel:
+  // 'text-[0.625rem] lg:text-[0.75rem] xl:text-[0.875rem] tracking-widest',
   //___
   globHeaderLabelStyle: 'text-[0.625rem]  xxl:text-[0.75rem] text-light',
   globHeaderCellStyle: `py-[0.3rem] px-2 bg-greyShade2 opacity-[0.8]`,

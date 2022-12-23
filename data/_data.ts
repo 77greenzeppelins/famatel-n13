@@ -1,17 +1,17 @@
 /*...*/
-// import { imagesProductsCategoriesMenu } from '../public/images/3_productsCategoriesMenu/imagesProductsCategoriesMenu';
-/*TS Staff*/
+import { imgOfProductsReps } from '../public/images/categories/imgOfProductsReps';
+/**TS Staff**/
 import {
   ICorpoColors,
   IPagesUrl,
   mainPagesItem,
   IMainCategoriesItem,
-  ICatalogCardTableType,
-  IVatColors,
-  IVatColorsPale,
-  IVatLowColors,
+  // IVatColors,
+  // IVatColorsPale,
+  // IVatLowColors,
 } from './_data_TS';
-/**Instant Contact Buttons*/
+
+/**Instant Contact Buttons**/
 const linksToInstantContactData = {
   phone: 'mailto:77greenzeppelins@gmail.com',
   mobile: 'tel:798-905-558',
@@ -19,8 +19,8 @@ const linksToInstantContactData = {
 // const businessMail = 'mailto:77greenzeppelins@gmail.com';
 // const businessPhone = 'tel:798-905-558';
 
-/**Data for Data*/
-const corpoColors = {
+/**Data for Data**/
+const corpoColors: ICorpoColors = {
   light: '#ffffff',
   orange: '#e74124',
   grey: '#9d9e9f',
@@ -41,9 +41,7 @@ const pagesUrl: IPagesUrl = {
 };
 
 const menuLinkLabel: string[] = [
-  /*
-  used in: _dropDownMenusHolder_data.ts
-  */
+  /**used in: _dropDownMenusHolder_data.ts**/
   'O FIRMIE',
   'PRODUKTY',
   'NOWOŚCI',
@@ -52,7 +50,7 @@ const menuLinkLabel: string[] = [
   'KONTAKT',
 ];
 
-/**used in <Header>; within appPages.map(); */
+/**used in <Header>; within appPages.map();**/
 const mainPages: mainPagesItem[] = [
   {
     arrayIndex: 0,
@@ -133,84 +131,84 @@ const mainCategories: IMainCategoriesItem[] = [
     name: mainCategoriesNames[0],
     fullName: 'Przemysłowe wtyczki i gniazda',
     url: `/kategorie-produktow/${mainCategoriesPath[0]}`,
-    // image: imagesProductsCategoriesMenu[0].image,
+    image: imgOfProductsReps[0].image,
   },
   {
     arrayIndex: 1,
     name: mainCategoriesNames[1],
     fullName: 'Przemysłowe gniazda z rozłącznikiem i blokadą ',
     url: `/kategorie-produktow/${mainCategoriesPath[1]}`,
-    // image: imagesProductsCategoriesMenu[1].image,
+    image: imgOfProductsReps[1].image,
   },
   {
     arrayIndex: 2,
     name: mainCategoriesNames[2],
     fullName: 'Adaptery przemysłowe',
     url: `/kategorie-produktow/${mainCategoriesPath[2]}`,
-    // image: imagesProductsCategoriesMenu[2].image,
+    image: imgOfProductsReps[2].image,
   },
   {
     arrayIndex: 3,
     name: mainCategoriesNames[3],
     fullName: 'Gniazda podwieszane',
     url: `/kategorie-produktow/${mainCategoriesPath[3]}`,
-    // image: imagesProductsCategoriesMenu[3].image,
+    image: imgOfProductsReps[3].image,
   },
   {
     arrayIndex: 4,
     name: mainCategoriesNames[4],
     fullName: 'Przedłużacze bębnowe',
     url: `/kategorie-produktow/${mainCategoriesPath[4]}`,
-    // image: imagesProductsCategoriesMenu[4].image,
+    image: imgOfProductsReps[4].image,
   },
   {
     arrayIndex: 5,
     name: mainCategoriesNames[5],
     fullName: 'Rozłączniki bezpieczeństwa',
     url: `/kategorie-produktow/${mainCategoriesPath[5]}`,
-    // image: imagesProductsCategoriesMenu[5].image,
+    image: imgOfProductsReps[5].image,
   },
   {
     arrayIndex: 6,
     name: mainCategoriesNames[6],
     fullName: 'Ładowarki pojazdów elektrycznych',
     url: `/kategorie-produktow/${mainCategoriesPath[6]}`,
-    // image: imagesProductsCategoriesMenu[6].image,
+    image: imgOfProductsReps[6].image,
   },
   {
     arrayIndex: 7,
     name: mainCategoriesNames[7],
     fullName: 'Obudowy i rozdzielnice',
     url: `/kategorie-produktow/${mainCategoriesPath[7]}`,
-    // image: imagesProductsCategoriesMenu[7].image,
+    image: imgOfProductsReps[7].image,
   },
   {
     arrayIndex: 8,
     name: mainCategoriesNames[8],
     fullName: 'Rozdzielnice modułowe',
     url: `/kategorie-produktow/${mainCategoriesPath[8]}`,
-    // image: imagesProductsCategoriesMenu[8].image,
+    image: imgOfProductsReps[8].image,
   },
   {
     arrayIndex: 9,
     name: mainCategoriesNames[9],
     fullName: 'Puszki instalacyjne',
     url: `/kategorie-produktow/${mainCategoriesPath[9]}`,
-    // image: imagesProductsCategoriesMenu[9].image,
+    image: imgOfProductsReps[9].image,
   },
   {
     arrayIndex: 10,
     name: mainCategoriesNames[10],
     fullName: 'Wtyczki, gniazda, adaptery domowe',
     url: `/kategorie-produktow/${mainCategoriesPath[10]}`,
-    // image: imagesProductsCategoriesMenu[10].image,
+    image: imgOfProductsReps[10].image,
   },
   {
     arrayIndex: 11,
     name: mainCategoriesNames[11],
     fullName: 'Himarsy i dżaweliny',
     url: `/kategorie-produktow/${mainCategoriesPath[11]}`,
-    // image: imagesProductsCategoriesMenu[11].image,
+    image: imgOfProductsReps[11].image,
   },
 ];
 // const gniazdaZBlokadaSubCategories: string[] = [

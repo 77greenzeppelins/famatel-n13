@@ -40,26 +40,26 @@ const AriaJsLink = ({
 
   /**JSX*/
   return (
-    <FocusRing
-      //  focusRingClass="ring ring-offset-2 ring-offset-black"
-      focusRingClass="focus:ring focus:ring-offset-2 focus:ring-offset-black"
-    >
-      <Link href={linkHref} scroll={false} legacyBehavior passHref>
-        {/* <div className="w-[70px] h-full bg-corpo">{children}</div> */}
-        <motion.a
-          aria-label={props.ariaLabel}
-          animate={controls}
-          {...linkProps}
-          style={{
-            WebkitTapHighlightColor: 'transparent',
-            // alignSelf: 'center',
-          }}
-          className={props.aStyle ? props.aStyle : aDefaultStyle}
-        >
-          {children}
-        </motion.a>
-      </Link>
-    </FocusRing>
+    // <FocusRing
+    //   //  focusRingClass="ring ring-offset-2 ring-offset-black"
+    //   focusRingClass="focus:ring focus:ring-offset-2 focus:ring-offset-black"
+    // >
+    <Link href={linkHref} scroll={false} legacyBehavior passHref>
+      {/* <div className="w-[70px] h-full bg-corpo">{children}</div> */}
+      <motion.a
+        aria-label={props.ariaLabel}
+        animate={controls}
+        {...linkProps}
+        style={{
+          WebkitTapHighlightColor: 'transparent',
+          // alignSelf: 'center',
+        }}
+        className={props.aStyle ? props.aStyle : aDefaultStyle}
+      >
+        {children}
+      </motion.a>
+    </Link>
+    // </FocusRing>
   );
 };
 export default AriaJsLink;
