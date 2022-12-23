@@ -29,7 +29,7 @@ const KategorieProduktowContent = () => {
         );
       })}
       <div className="fixed bottom-0 left-0 right-0 h-[10vh] bg-green-900" />
-      <div className="fixed fc bottom-0 w-[60px] h-screen bg-green-700">X</div>
+      <div className="fixed fc bottom-0 w-[60px] h-screen bg-blue-700">X</div>
     </div>
   );
 };
