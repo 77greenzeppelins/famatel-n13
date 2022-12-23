@@ -5,7 +5,7 @@ import { zIndex } from '../../../../data/_data';
 const SideMenu = () => {
   return (
     <div
-      className={`fixed top-0 bottom-0 w-[60px] ${zIndex.sideMenu} bg-dark border-r border-light`}
+      className={`fixed bottom-0 w-[60px] h-screen ${zIndex.sideMenu} bg-dark border-r border-light`}
     >
       X
     </div>
