@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div data-component="RootLayout">
         <div className="relative z-[10]">{children}</div>
 
-        <SideMenu />
+        {/* <SideMenu /> */}
         <Header />
         {/* <div className="fixed top-0 bottom-0 bg-slate-200 w-[60px] z-[400]"></div>{' '} */}
       </div>
