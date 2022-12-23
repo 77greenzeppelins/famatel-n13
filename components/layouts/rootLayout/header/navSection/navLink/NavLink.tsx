@@ -10,44 +10,47 @@ import { motion } from 'framer-motion';
 const NavLink: React.FunctionComponent<{
   label: string | number;
   url: string;
-}> = ({ label, url }) => {
+  hasDropDownMenu: boolean;
+}> = ({ label, url, hasDropDownMenu }) => {
   /**useRouter Section*/
-  /**why: I want link to be in corpo color and has no border-bottom when user is on its corresponding page */
+  /**why: for style sake;  I want link to be in corpo color and has no border-bottom when user is on its corresponding page */
   const router = useRouter();
-  const linkStyleCondition = router.pathname === url;
+  const linkStyleisHovered = router.pathname === url;
 
   /**Local State*/
-  const [isHovered, setIsHovered] = useState<{
-    condition: boolean;
+  const [hovererState, setHoverState] = useState<{
+    isHovered: boolean;
     label: string;
   }>({
-    condition: false,
+    isHovered: false,
     label: '',
   });
   /**Hover Handlers*/
   const onHoverStartHandler = (event: MouseEvent) => {
     //___second param: info: EventInfo
     const target = event.target as HTMLElement; //TS requirements
-    setIsHovered({ condition: true, label: target.innerText });
+    setHoverState({ isHovered: true, label: target.innerText });
   };
 
   const onHoverEndHandler = (event: MouseEvent) => {
-    setIsHovered({ condition: false, label: '' });
+    setHoverState({ isHovered: false, label: '' });
   };
 
   /**It allowes to close dropdownMenu when url changes*/
   useEffect(() => {
     return () => {
-      setIsHovered({ condition: false, label: '' });
+      setHoverState({ isHovered: false, label: '' });
     };
   }, [router.asPath]);
 
-  // console.log('linkStyleCondition', linkStyleCondition);
+  // console.log('linkStyleisHovered', linkStyleisHovered);
+  // console.log('label / url', { label, url });
+
   /**JSX*/
   return (
     <motion.li
       data-component="HeaderLink_container"
-      className="relative ml-6 fc "
+      className="relative ml-6 fc"
       //___my-auto
       onHoverStart={onHoverStartHandler}
       onHoverEnd={onHoverEndHandler}
@@ -57,8 +60,9 @@ const NavLink: React.FunctionComponent<{
         className="fixed left-0 top-[60px] bottom-[1px]"
       >
         <DropDownMenusHolder
-          condition={isHovered.condition}
-          label={isHovered.label}
+          isHovered={hovererState.isHovered}
+          label={hovererState.label}
+          hasDropDownMenu={hasDropDownMenu}
         />
       </div>
 
@@ -72,30 +76,18 @@ const NavLink: React.FunctionComponent<{
       >
         <p
           className={`relative fc w-full text-[0.625rem] lg:text-[0.75rem] xl:text-[0.875rem] tracking-widest ${
-            linkStyleCondition ? 'text-corpo' : 'text-grey'
+            linkStyleisHovered ? 'text-corpo' : 'text-grey'
           }`}
         >
           <span>{label}</span>
         </p>
         <div
           className={`absolute border-b border-grey h-[44px] ${
-            linkStyleCondition ? 'w-[0%]' : 'w-full'
+            linkStyleisHovered ? 'w-[0%]' : 'w-full'
           } inset-0 opacity-0 hover:opacity-100  ease-in duration-300 `}
           //__w-full h-full
         />
       </AriaJSLink>
-      {/*
-        This <div> is a sort of "dropDownMenu" container; value of top coresponds with <li> height to "allow / keep" hovering 
-     */}
-      {/* <div
-        data-layout="wrapper_for_MenuOfLinkProdukty"
-        className="fixed left-0 top-[40px] bottom-[1px]  "
-      >
-        <DropDownMenusHolder
-          condition={isHovered.condition}
-          label={isHovered.label}
-        />
-      </div> */}
     </motion.li>
   );
 };

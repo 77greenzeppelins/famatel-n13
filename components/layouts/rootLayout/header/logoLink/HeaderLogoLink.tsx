@@ -14,7 +14,7 @@ const HeaderLogoLink = () => {
       controlsStart={{
         background: 'transparent',
       }}
-      aStyle="relative cursor-pointer fc bg-transparent select-none touch-none focus:outline-none group"
+      aStyle="relative cursor-pointer fc bg-transparent select-none touch-none focus:outline-none group "
     >
       <div className="flex justify-start cursor-pointer no-sparkling">
         <SvgLogo scaleFactor={0.25} />

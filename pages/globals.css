@@ -4,6 +4,9 @@
 
 /*__________________________________________________________base*/
 @layer base {
+  body {
+    @apply overflow-x-hidden;
+  }
   :root {
     /*
     Tints of #e74124: #ee7a65  #f5b3a7

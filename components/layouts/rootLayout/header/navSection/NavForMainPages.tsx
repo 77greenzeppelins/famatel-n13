@@ -4,8 +4,6 @@ import NavLink from './navLink/NavLink';
 /**Basic Data*/
 import { mainPages } from '../../../../../data/_data';
 
-const fakeLabels = [];
-
 /**________temp*/
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 import { useRouter } from 'next/router';
@@ -38,13 +36,14 @@ const NavForMainPages: React.FunctionComponent = () => {
   return (
     <nav className="h-full">
       <ul className="hidden h-full md:flex ">
-        {mainPages.map(({ arrayIndex, label, url }) => {
+        {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
           if (arrayIndex === 2) {
             return (
               <NavLink
                 key={arrayIndex}
                 url={url}
                 label={`W: ${width}`}
+                hasDropDownMenu={hasDropDownMenu}
               ></NavLink>
             );
           }
@@ -54,19 +53,19 @@ const NavForMainPages: React.FunctionComponent = () => {
                 key={arrayIndex}
                 url={url}
                 label={`H: ${height}`}
+                hasDropDownMenu={hasDropDownMenu}
               ></NavLink>
             );
           }
-          if (arrayIndex === 4) {
-            return (
-              <NavLink
-                key={arrayIndex}
-                url={url}
-                label={`C-H: ${containerHeight}`}
-              ></NavLink>
-            );
-          }
-          return <NavLink key={arrayIndex} url={url} label={label}></NavLink>;
+
+          return (
+            <NavLink
+              key={arrayIndex}
+              url={url}
+              label={label}
+              hasDropDownMenu={hasDropDownMenu}
+            ></NavLink>
+          );
         })}
       </ul>
     </nav>

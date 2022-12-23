@@ -19,6 +19,7 @@ interface mainPagesItem {
   arrayIndex: number;
   label: string;
   url: string;
+  hasDropDownMenu: boolean;
 }
 interface IMainCategoriesItem {
   arrayIndex: number;

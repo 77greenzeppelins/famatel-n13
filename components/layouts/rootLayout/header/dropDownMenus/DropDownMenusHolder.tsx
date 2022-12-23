@@ -1,31 +1,36 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-/*FramerMotion Staff*/
+/**FramerMotion Staff**/
 import { AnimatePresence, motion } from 'framer-motion';
-// import { overlayContainerVariants } from '../../../../../utils/framerMotion';
-/*Basic Data*/
-// import { dropDownMenusArray } from './_dropDownMenusHolder_data';
+import { overlayContainerVariants } from '../../../../../utils/framerMotion/framerMotionUtils';
+/**Basic Data**/
+import { dropDownMenusArray } from './_dropDownMenusHolder_data';
 import { mainPages } from '../../../../../data/_data';
 
 /*******************************************************************************/
 const DropDownMenusHolder = ({
-  condition,
+  isHovered,
   label,
+  hasDropDownMenu,
 }: {
-  condition: boolean;
+  isHovered: boolean;
   label: string;
+  hasDropDownMenu: boolean;
 }) => {
-  /**...*/
+  /**Router Section**/
   const router = useRouter();
-  /**...*/
-  console.log('condition', condition);
-  /*
-  JSX
-  */
+  /**AdditionalCondition
+   * why: to prevent displaying <ProduktyDropDownMenu> when user is on ".../kategorie-produktow" path
+   */
+  const specialCondition = router.pathname !== mainPages[1].url;
+
+  /**JSX**/
   return (
     <>
-      <AnimatePresence exitBeforeEnter>
-        {condition && (
+      <AnimatePresence
+      //  exitBeforeEnter
+      >
+        {isHovered && hasDropDownMenu && (
           /*
           linkState.condition
           this condition can be moved to "if (linkState.label === id)"...
@@ -33,12 +38,26 @@ const DropDownMenusHolder = ({
           <motion.div
             id="DropDownMenusHolder__container"
             key={label}
-            className="fc bg-light w-5 h-[50px]"
-            // variants={overlayContainerVariants}
-            // animate="animate"
-            // initial="initial"
-            // exit="initial"
-          ></motion.div>
+            className="fc bg-dark"
+            variants={overlayContainerVariants}
+            animate="animate"
+            initial="initial"
+            exit="initial"
+          >
+            {dropDownMenusArray.map(({ id, Component }) => {
+              if (label === id) {
+                return (
+                  <React.Fragment key={id}>
+                    {specialCondition && (
+                      <div className="w-screen h-screen fc">
+                        <Component />
+                      </div>
+                    )}
+                  </React.Fragment>
+                );
+              }
+            })}
+          </motion.div>
         )}
       </AnimatePresence>
     </>

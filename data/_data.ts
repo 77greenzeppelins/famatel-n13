@@ -54,12 +54,42 @@ const menuLinkLabel: string[] = [
 
 /**used in <Header>; within appPages.map(); */
 const mainPages: mainPagesItem[] = [
-  { arrayIndex: 0, label: menuLinkLabel[0], url: pagesUrl.home },
-  { arrayIndex: 1, label: menuLinkLabel[1], url: pagesUrl.produkty },
-  { arrayIndex: 2, label: menuLinkLabel[2], url: pagesUrl.nowosci },
-  { arrayIndex: 3, label: menuLinkLabel[3], url: pagesUrl.realizacje },
-  { arrayIndex: 4, label: menuLinkLabel[4], url: pagesUrl.doPobrania },
-  { arrayIndex: 5, label: menuLinkLabel[5], url: pagesUrl.kontakt },
+  {
+    arrayIndex: 0,
+    label: menuLinkLabel[0],
+    url: pagesUrl.home,
+    hasDropDownMenu: false,
+  },
+  {
+    arrayIndex: 1,
+    label: menuLinkLabel[1],
+    url: pagesUrl.produkty,
+    hasDropDownMenu: true,
+  },
+  {
+    arrayIndex: 2,
+    label: menuLinkLabel[2],
+    url: pagesUrl.nowosci,
+    hasDropDownMenu: false,
+  },
+  {
+    arrayIndex: 3,
+    label: menuLinkLabel[3],
+    url: pagesUrl.realizacje,
+    hasDropDownMenu: false,
+  },
+  {
+    arrayIndex: 4,
+    label: menuLinkLabel[4],
+    url: pagesUrl.doPobrania,
+    hasDropDownMenu: false,
+  },
+  {
+    arrayIndex: 5,
+    label: menuLinkLabel[5],
+    url: pagesUrl.kontakt,
+    hasDropDownMenu: false,
+  },
 ];
 
 const mainCategoriesPath: string[] = [

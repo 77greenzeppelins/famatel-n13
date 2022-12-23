@@ -40,7 +40,10 @@ const AriaJsLink = ({
 
   /**JSX*/
   return (
-    <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black">
+    <FocusRing
+      //  focusRingClass="ring ring-offset-2 ring-offset-black"
+      focusRingClass="focus:ring focus:ring-offset-2 focus:ring-offset-black"
+    >
       <Link href={linkHref} scroll={false} legacyBehavior passHref>
         {/* <div className="w-[70px] h-full bg-corpo">{children}</div> */}
         <motion.a
@@ -52,9 +55,6 @@ const AriaJsLink = ({
             // alignSelf: 'center',
           }}
           className={props.aStyle ? props.aStyle : aDefaultStyle}
-          // className="h-[100%]"
-          // className="fc h-[80%] text-[1rem] bg-greyShade1 select-none touch-none focus:outline-none"
-          // className="fc bg-grey"
         >
           {children}
         </motion.a>
