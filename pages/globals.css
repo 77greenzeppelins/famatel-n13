@@ -1,0 +1,49 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+/*__________________________________________________________base*/
+@layer base {
+  :root {
+    /*
+    Tints of #e74124: #ee7a65  #f5b3a7
+    Monochromatic (darker):  #da3518
+    R231 G65 B56
+    */
+    --corpo-orange: #e74124;
+    /*
+    Tints: #9d9e9f #a6a7a8  #b0b1b2  #babbbb  #c4c4c5  #cececf  #d7d8d8  #e1e1e2  #ebebeb  #f5f5f5  #ffffff
+    Monochromatic: #676869
+    R157 G158 B159
+    */
+    --corpo-grey: #9d9e9f;
+    --corpo-grey-tint-1: #b0b1b2;
+    --corpo-grey-tint-2: #d7d8d8;
+    --corpo-grey-shade-1: #6d6e6f;
+    --corpo-grey-shade-2: #2f2f2f;
+    --corpo-grey50: lighter(#9d9e9f, 50);
+    /*
+    Tints: #1d1d1b #2d2d2c #4a4a48 #60605f #777776 #8e8e8d #a4a4a3 #bbbbba #d1d1d1 #e8e8e8 #ffffff
+    Shades: #1d1d1b #1a1a18 #171715 #141412 #111110 #0e0e0d #0b0b0a #080808 #050505 #020202 #000000
+    R0 G0 B0 | or rather: r:29, g:29, b:27
+    */
+    --corpo-dark: #1d1d1b;
+    --light: #ffffff;
+  }
+}
+
+/*__________________________________________________________components*/
+/*for classes, that can be override within conmponent */
+/* @layer components{
+
+}; */
+
+/*__________________________________________________________utilities*/
+@layer utilities {
+  .fc {
+    @apply flex justify-center items-center;
+  }
+  .no-sparkling {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
