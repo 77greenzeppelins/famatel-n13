@@ -28,6 +28,10 @@ const KategorieProduktowContent = () => {
           </React.Fragment>
         );
       })}
+      <div className="fixed bottom-0 left-0 right-0 h-[10vh] bg-green-900" />
+      <div className="fixed fc bottom-0 left-0 top-0 w-[5vw] bg-green-700">
+        X
+      </div>
     </div>
   );
 };

@@ -33,7 +33,7 @@ const FakeContent = ({ arrayIndex }: { arrayIndex: number }) => {
     <div
       data-component="FakeContent__container"
       ref={ref}
-      className="fc w-full h-screen"
+      className="fc w-screen h-screen"
     ></div>
   );
 };
