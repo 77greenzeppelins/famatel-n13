@@ -43,10 +43,12 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
       //  className={roboto.className}
       className={haasFont.className}
     >
+      <ProductPageFixedOverlay />
+
       <PageTransitionHolder>
         <Component {...pageProps} />
       </PageTransitionHolder>
-      <ProductPageFixedOverlay />
+      {/* <ProductPageFixedOverlay /> */}
     </main>
   );
 }

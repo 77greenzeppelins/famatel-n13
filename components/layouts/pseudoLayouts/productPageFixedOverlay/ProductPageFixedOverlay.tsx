@@ -13,7 +13,7 @@ const ProductPageFixedOverlay = () => {
         <React.Fragment>
           <div
             data-component="ProductPageFixedOverlay"
-            className="fixed left-0 right-0 top-[60px] bottom-[60px] bg-blue-500"
+            className="fixed inset-0 fc bg-greyShade2"
           >
             <p className="text-2xl text-light">
               XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX

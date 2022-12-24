@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 /**Components**/
 import FakeContent from './fakeContent/FakeContent';
 import BottomMenu from './bottomMenu/BottomMenu';
+import ProductPageFixedOverlay from '../../layouts/pseudoLayouts/productPageFixedOverlay/ProductPageFixedOverlay';
 
 /**----------------------------------------------------------------------------------**/
 const KategorieProduktowContent = () => {
@@ -14,6 +15,7 @@ const KategorieProduktowContent = () => {
       className="relative"
     >
       <FakeContent setCategoryIndex={setCategoryIndex} />
+      <ProductPageFixedOverlay />
       <div className="fixed fc bottom-0 left-0 right-0 h-[60px] ">
         <BottomMenu categoryIndex={categoryIndex} />
       </div>
