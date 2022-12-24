@@ -13,11 +13,23 @@ const ProductPageFixedOverlay = () => {
         <React.Fragment>
           <div
             data-component="ProductPageFixedOverlay"
-            className="fixed inset-0 fc bg-greyShade2"
+            className="fixed top-0 bottom-0 w-screen bg-greyShade2"
           >
-            <p className="text-2xl text-light">
-              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            </p>
+            <div className="fc flex-col w-full h-full ">
+              <div className="fc w-full h-[50%]">
+                <p className="fc w-[40%] h-full text-2xl text-light">
+                  Test test test
+                </p>
+                <div className="w-[40%] h-full bg-yellow-800"></div>
+              </div>
+              <div className="flex items-center justify-between w-full h-[50%]">
+                <div className="w-[40%] h-full bg-yellow-800"></div>
+                <p className="fc w-[40%] h-full text-2xl text-light">
+                  Test test test
+                </p>
+              </div>
+            </div>
+
             {/* <ScrollableCategoriesCarousel /> */}
           </div>
         </React.Fragment>
