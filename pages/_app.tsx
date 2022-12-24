@@ -16,6 +16,7 @@ import './globals.css';
 // });
 // import Hass from '@next/font/local';
 import localFont from '@next/font/local';
+import ProductPageFixedOverlay from '../components/layouts/pseudoLayouts/productPageFixedOverlay/ProductPageFixedOverlay';
 const haasFont = localFont({
   src: '../public/fonts/HaasGrotDisp-55Roman.woff2',
 });
@@ -45,6 +46,7 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
       <PageTransitionHolder>
         <Component {...pageProps} />
       </PageTransitionHolder>
+      <ProductPageFixedOverlay />
     </main>
   );
 }
