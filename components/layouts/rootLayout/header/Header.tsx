@@ -9,6 +9,11 @@ import NavForMainPages from './navSection/NavForMainPages';
 import { mainPages, zIndex } from '../../../../data/_data';
 import { tailwindStyles } from '../../../../data/_styleData';
 
+// import localFont from '@next/font/local';
+// const haasFont = localFont({
+//   src: '../../../../public/fonts/HaasGrotDisp-55Roman.woff2',
+// });
+
 /******************************************************************************/
 const Header = () => {
   /**Hook Section*/
@@ -20,15 +25,16 @@ const Header = () => {
     <header
       data-component="Header__container"
       className={
-        `fixed w-screen top-0 left-0 right-0 h-[50px] md:h-[60px]  bg-dark border-b border-grey z-[500]`
+        `fixed w-screen top-0 left-0 right-0 h-[50px] md:h-[60px]  bg-dark  z-[500] `
         //___${zIndex.header}
+        //__className={haasFont.className}
       }
     >
       <div
         // className="h-full mx-auto px-[2%] md:px-[60px]"
-        className={`${tailwindStyles.innerContainer}`}
+        className={`${tailwindStyles.innerContainer} `}
       >
-        <div className="flex items-center justify-between w-full h-full ">
+        <div className="flex items-center justify-between w-full h-full  border-b border-grey">
           <div className="origin-left fc">
             <HeaderLogoLink />
           </div>

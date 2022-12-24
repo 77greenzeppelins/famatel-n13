@@ -5,8 +5,22 @@ import type { AppProps } from 'next/app';
 import PageTransitionHolder from '../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
 /**CSS / Tailwind Staff*/
 import './globals.css';
-
 // import '../styles/globals.css';
+/**Fonts Staff
+ * resource: doc. / https://www.youtube.com/watch?v=L8_98i_bMMA
+ **/
+// import { Roboto } from '@next/font/google';
+// const roboto = Roboto({
+//   subsets: ['latin'],
+//   weight: '400', // ['400', '800']
+// });
+// import Hass from '@next/font/local';
+import localFont from '@next/font/local';
+const haasFont = localFont({
+  src: '../public/fonts/HaasGrotDisp-55Roman.woff2',
+});
+
+// import {x} from '../public/fonts/'
 
 /**TS*/
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -24,8 +38,13 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   // return getLayout(<Component {...pageProps} />);
   return getLayout(
-    <PageTransitionHolder>
-      <Component {...pageProps} />
-    </PageTransitionHolder>
+    <main
+      //  className={roboto.className}
+      className={haasFont.className}
+    >
+      <PageTransitionHolder>
+        <Component {...pageProps} />
+      </PageTransitionHolder>
+    </main>
   );
 }

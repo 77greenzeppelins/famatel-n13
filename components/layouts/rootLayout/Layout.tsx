@@ -3,12 +3,20 @@ import React from 'react';
 /**Components*/
 import Header from './header/Header';
 import SideMenu from './sideMenu/SideMenu';
+/** */
+import localFont from '@next/font/local';
+const haasFont = localFont({
+  src: '../../../public/fonts/HaasGrotDisp-55Roman.woff2',
+});
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       {' '}
-      <div data-component="RootLayout">
+      <div
+        data-component="RootLayout__container"
+        className={haasFont.className}
+      >
         <div className="relative z-[10]">{children}</div>
 
         {/* <SideMenu /> */}

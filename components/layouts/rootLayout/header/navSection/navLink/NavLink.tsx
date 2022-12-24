@@ -5,9 +5,9 @@ import AriaJSLink from '../../../../../_basicComponents/links/ariaJSLink/AriaJSL
 import DropDownMenusHolder from '../../dropDownMenus/DropDownMenusHolder';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+// import Link from 'next/link';
 /**Basic Data**/
-import { tailwindStyles } from '../../../../../../data/_styleData';
+// import { tailwindStyles } from '../../../../../../data/_styleData';
 
 /**********************************************************************************/
 const NavLink: React.FunctionComponent<{
@@ -101,7 +101,7 @@ const NavLink: React.FunctionComponent<{
         aStyle="relative fc w-full h-full cursor-pointer bg-transparent select-none touch-none focus:outline-none group "
       >
         <p
-          className={`text-[0.625rem] lg:text-[0.75rem] xl:text-[0.875rem] tracking-widest ${
+          className={`text-[0.625rem] lg:text-[0.75rem] xxxl:text-[0.875rem] tracking-widest ${
             linkStyleisHovered ? 'text-corpo' : 'text-grey'
           }`}
         >

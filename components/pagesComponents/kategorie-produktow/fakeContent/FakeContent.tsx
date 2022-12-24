@@ -4,38 +4,38 @@ import React, { useEffect, useRef } from 'react';
 // import { productPageCategoryIndex } from '../../../../../valtioGlobalState/valtioGlobalState';
 /*Hook Staff*/
 import useIntersectionObserver from '../../../../utils/hooks/useIntersectionObserver';
+/**Basic Data**/
+import { mainCategories } from '../../../../data/_data';
+import FakeSection from './fakeSection/FakeSection';
+/**TS*/
+interface IF_FakeContent {
+  setCategoryIndex: React.Dispatch<React.SetStateAction<number>>;
+}
 
 /********************************************************************************/
-const FakeContent = ({ arrayIndex }: { arrayIndex: number }) => {
-  /*
-  References; what we want to observe...
-  */
-  const ref = useRef<HTMLDivElement | null>(null);
-  /*
-  IntersectionObserver Staff
-  */
-  const entry = useIntersectionObserver(ref, { threshold: 0.5 });
-  //___
-  const isVisible = !!entry?.isIntersecting;
-  /*
-  ...
-  */
-  useEffect(() => {
-    if (isVisible) {
-      // productPageCategoryIndex.categoryIndex = arrayIndex;
-      console.log(`...title`);
+const FakeContent: React.FunctionComponent<IF_FakeContent> = ({
+  setCategoryIndex,
+}) => {
+  /**just map...**/
+  const fakeSections = mainCategories.map(({ arrayIndex, fullName, url }) => {
+    //___don't render "himarsy i javeliny"
+    if (arrayIndex === mainCategories.length - 1) {
+      return null;
     }
-  }, [isVisible, arrayIndex]);
+    return (
+      <React.Fragment key={arrayIndex}>
+        {' '}
+        <FakeSection
+          arrayIndex={arrayIndex}
+          setCategoryIndex={setCategoryIndex}
+        />{' '}
+      </React.Fragment>
+    );
+  });
   /*
   JSX
   */
-  return (
-    <div
-      data-component="FakeContent__container"
-      ref={ref}
-      className="fc w-screen h-screen"
-    ></div>
-  );
+  return <>{fakeSections}</>;
 };
 
 export default FakeContent;

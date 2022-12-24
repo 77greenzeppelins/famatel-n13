@@ -1,3 +1,4 @@
+// import Head from 'next/head';
 import type { ReactElement } from 'react';
 import Layout from '../components/layouts/rootLayout/Layout';
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
@@ -5,11 +6,23 @@ import type { NextPageWithLayout } from './_app';
 
 const HomePage: NextPageWithLayout = () => {
   return (
+    // <>
+    //   <Head>
+    //     <title>Famatel Polska</title>
+    //     <meta />
+    //   </Head>
     <div className="relative">
-      <div className="h-[50vh] bg-greyShade2"> </div>
+      <div className="fc h-[50vh] bg-greyShade2 px-4">
+        <p className="text-3xl text-corpo">
+          At Famatel we have the knowledge, experience and technology necessary
+          to develop new electrical solutions that meet the needs of the sector
+          śćążźół.
+        </p>{' '}
+      </div>
       <div className="h-[50vh] bg-dark"></div>
       <div className="h-[50vh] bg-amber-400"></div>
     </div>
+    // </>
   );
 };
 
