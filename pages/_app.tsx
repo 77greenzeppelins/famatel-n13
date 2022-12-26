@@ -34,7 +34,7 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   // return getLayout(<Component {...pageProps} />);
   return getLayout(
-    <main className={haasFont.className}>
+    <main className={`${haasFont.className} fixed w-full h-full`}>
       <ProductPageFixedOverlay />
       <PageTransitionHolder>
         <Component {...pageProps} />

@@ -21,7 +21,7 @@ const PageTransitionHolder: React.FunctionComponent<{
     >
       <motion.div
         data-container="PageTransitionHolder__container"
-        className="w-full h-full bg-dark"
+        className="w-full h-full"
         key={pathname}
         variants={variants}
         initial="out"
