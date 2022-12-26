@@ -20,7 +20,7 @@ const PageTransitionHolder: React.FunctionComponent<{
       onExitComplete={() => window.scrollTo(0, 0)}
     >
       <motion.div
-        data-container="PageTransitionContainer"
+        data-container="PageTransitionHolder__container"
         className="w-full h-full bg-dark"
         key={pathname}
         variants={variants}

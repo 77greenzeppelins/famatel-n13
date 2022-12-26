@@ -9,12 +9,7 @@ import './globals.css';
 /**Fonts Staff
  * resource: doc. / https://www.youtube.com/watch?v=L8_98i_bMMA
  **/
-// import { Roboto } from '@next/font/google';
-// const roboto = Roboto({
-//   subsets: ['latin'],
-//   weight: '400', // ['400', '800']
-// });
-// import Hass from '@next/font/local';
+
 import localFont from '@next/font/local';
 import ProductPageFixedOverlay from '../components/layouts/pseudoLayouts/productPageFixedOverlay/ProductPageFixedOverlay';
 const haasFont = localFont({
@@ -39,12 +34,8 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   // return getLayout(<Component {...pageProps} />);
   return getLayout(
-    <main
-      //  className={roboto.className}
-      className={haasFont.className}
-    >
+    <main className={haasFont.className}>
       <ProductPageFixedOverlay />
-
       <PageTransitionHolder>
         <Component {...pageProps} />
       </PageTransitionHolder>
@@ -52,3 +43,10 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     </main>
   );
 }
+
+// import { Roboto } from '@next/font/google';
+// const roboto = Roboto({
+//   subsets: ['latin'],
+//   weight: '400', // ['400', '800']
+// });
+// import Hass from '@next/font/local';

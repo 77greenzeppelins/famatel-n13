@@ -13,18 +13,18 @@ const ProductPageFixedOverlay = () => {
         <React.Fragment>
           <div
             data-component="ProductPageFixedOverlay"
-            className="fixed top-0 bottom-0 w-screen bg-greyShade2"
+            className="fixed top-0 bottom-[62px] w-screen pt-[62px]"
           >
             <div className="fc flex-col w-full h-full ">
-              <div className="fc w-full h-[50%]">
-                <p className="fc w-[40%] h-full text-2xl text-light">
+              <div className="fc w-full h-[50%] bg-blue-900 divide-x">
+                <p className="fc w-[40%] h-full text-2xl text-light  bg-blue-800">
                   Test test test
                 </p>
-                <div className="w-[40%] h-full bg-yellow-800"></div>
+                <div className="w-[40%] h-full bg-blue-600"></div>
               </div>
-              <div className="flex items-center justify-between w-full h-[50%]">
+              <div className="flex items-center justify-between w-full h-[50%] bg-yellow-900">
                 <div className="w-[40%] h-full bg-yellow-800"></div>
-                <p className="fc w-[40%] h-full text-2xl text-light">
+                <p className="fc w-[40%] h-full text-2xl text-light bg-yellow-600">
                   Test test test
                 </p>
               </div>
