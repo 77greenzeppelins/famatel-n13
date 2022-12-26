@@ -13,7 +13,8 @@ const ProductPageFixedOverlay = () => {
         <React.Fragment>
           <div
             data-component="ProductPageFixedOverlay"
-            className="fixed top-0 bottom-[62px] w-screen pt-[62px]"
+            // className="fixed top-0 bottom-[62px] w-screen pt-[62px]"
+            className="fixed h-full w-screen"
           >
             <div className="fc flex-col w-full h-full ">
               <div className="fc w-full h-[50%] bg-blue-900 divide-x">
