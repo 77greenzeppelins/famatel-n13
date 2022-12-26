@@ -9,9 +9,9 @@ import './globals.css';
 /**Fonts Staff
  * resource: doc. / https://www.youtube.com/watch?v=L8_98i_bMMA
  **/
-
 import localFont from '@next/font/local';
 import ProductPageFixedOverlay from '../components/layouts/pseudoLayouts/productPageFixedOverlay/ProductPageFixedOverlay';
+import MainHtmlElement from '../components/layouts/pseudoLayouts/mainHtmlElement/MainHtmlElement';
 const haasFont = localFont({
   src: '../public/fonts/HaasGrotDisp-55Roman.woff2',
 });
@@ -34,13 +34,14 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   // return getLayout(<Component {...pageProps} />);
   return getLayout(
-    <main className={`${haasFont.className} fixed w-full h-full`}>
+    // <main className={`${haasFont.className} fixed w-full h-full`}>
+    <MainHtmlElement>
       <ProductPageFixedOverlay />
       <PageTransitionHolder>
         <Component {...pageProps} />
       </PageTransitionHolder>
-      {/* <ProductPageFixedOverlay /> */}
-    </main>
+    </MainHtmlElement>
+    // </main>
   );
 }
 
