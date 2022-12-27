@@ -11,7 +11,7 @@ const OFirmieContent = () => {
   return (
     <div
       data-component="OFirmieContent__container"
-      className="relative flex items-end w-screen h-screen pt-[64px] bg-dark"
+      className="relative flex items-end w-screen h-screen pt-[64px] bg-dark pb-[20px]"
     >
       {/* <div
         // className={`${tailwindStyles.innerContainer} relative fc flex-col`}
