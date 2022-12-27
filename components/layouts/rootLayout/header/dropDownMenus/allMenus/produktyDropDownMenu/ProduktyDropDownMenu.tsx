@@ -21,7 +21,7 @@ const ProduktyDropDownMenu = () => {
           // onClick={onClickHandler}
         >
           <CategoryCard
-            mainCategoriesData={{
+            categoryCardData={{
               arrayIndex: arrayIndex,
               name: name,
               fullName: name,

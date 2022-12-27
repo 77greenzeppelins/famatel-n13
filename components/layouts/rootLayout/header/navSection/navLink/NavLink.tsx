@@ -52,15 +52,15 @@ const NavLink: React.FunctionComponent<{
   /**JSX*/
   return (
     <motion.li
-      data-component="HeaderLink_container"
+      data-component="NavLink_container"
       className="relative ml-6 fc"
       //___my-auto
       onHoverStart={onHoverStartHandler}
       onHoverEnd={onHoverEndHandler}
     >
       <div
-        data-layout="wrapper_for_MenuOfLinkProdukty"
-        className="fixed left-0 top-[60px] bottom-[1px]"
+        data-layout="wrapper_for_DropDownMenuHolder"
+        className="fixed left-0 right-0 top-[60px] bottom-[1px]"
       >
         <DropDownMenusHolder
           isHovered={hovererState.isHovered}
@@ -68,29 +68,6 @@ const NavLink: React.FunctionComponent<{
           hasDropDownMenu={hasDropDownMenu}
         />
       </div>
-
-      {/* <Link
-        href={url}
-        controlsSet={{ background: 'transparent' }}
-        controlsStart={{
-          background: 'transparent',
-        }}
-        aStyle="relative fc w-full h-full cursor-pointer bg-transparent select-none touch-none focus:outline-none group "
-      >
-        <p
-          className={`relative fc w-full text-[0.625rem] lg:text-[0.75rem] xl:text-[0.875rem] tracking-widest ${
-            linkStyleisHovered ? 'text-corpo' : 'text-grey'
-          }`}
-        >
-          <span>{label}</span>
-        </p>
-        <div
-          className={`absolute border-b border-grey h-[44px] ${
-            linkStyleisHovered ? 'w-[0%]' : 'w-full'
-          } inset-0 opacity-0 hover:opacity-100  ease-in duration-300 `}
-          //__w-full h-full
-        />
-      </Link> */}
 
       <AriaJSLink
         linkHref={url}
@@ -119,3 +96,26 @@ const NavLink: React.FunctionComponent<{
 };
 
 export default NavLink;
+
+/* <Link
+        href={url}
+        controlsSet={{ background: 'transparent' }}
+        controlsStart={{
+          background: 'transparent',
+        }}
+        aStyle="relative fc w-full h-full cursor-pointer bg-transparent select-none touch-none focus:outline-none group "
+      >
+        <p
+          className={`relative fc w-full text-[0.625rem] lg:text-[0.75rem] xl:text-[0.875rem] tracking-widest ${
+            linkStyleisHovered ? 'text-corpo' : 'text-grey'
+          }`}
+        >
+          <span>{label}</span>
+        </p>
+        <div
+          className={`absolute border-b border-grey h-[44px] ${
+            linkStyleisHovered ? 'w-[0%]' : 'w-full'
+          } inset-0 opacity-0 hover:opacity-100  ease-in duration-300 `}
+          //__w-full h-full
+        />
+      </Link> */

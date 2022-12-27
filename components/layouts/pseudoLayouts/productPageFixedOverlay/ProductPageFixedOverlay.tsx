@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 /**BasicData*/
 import { pagesUrl } from '../../../../data/_data';
 
+/**----------------------------------------------------------------------------------**/
 const ProductPageFixedOverlay = () => {
   /**Router Section*/
   const router = useRouter();
@@ -30,8 +31,6 @@ const ProductPageFixedOverlay = () => {
                 </p>
               </div>
             </div>
-
-            {/* <ScrollableCategoriesCarousel /> */}
           </div>
         </React.Fragment>
       )}

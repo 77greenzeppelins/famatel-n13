@@ -1,16 +1,17 @@
 import Link from 'next/link';
 // import { useState } from 'react';
 /*Components*/
-import ActivePartOfCard from './activePartOfCard/ActivePartOfCard';
+import SquareImageHolder from '../../imageHolder/SquareImageHolder';
 /*FramerMotion Staff*/
 import { motion } from 'framer-motion';
 /*TS*/
 import { IMainCategoriesItem } from '../../../../data/_data_TS';
+
 interface ICardOfDropDownMenu {
-  mainCategoriesData: IMainCategoriesItem;
+  categoryCardData: IMainCategoriesItem;
 }
 /*****************************************************************************/
-const CategoryCard = ({ mainCategoriesData }: ICardOfDropDownMenu) => {
+const CategoryCard = ({ categoryCardData }: ICardOfDropDownMenu) => {
   /*Local State*/
   // const [linkState, setLinkState] = useState(true);
   /*
@@ -22,7 +23,7 @@ const CategoryCard = ({ mainCategoriesData }: ICardOfDropDownMenu) => {
       className="w-full h-full p-2 lg:p-3"
       //place-self-stretch
     >
-      <Link href={mainCategoriesData.url} scroll={false}>
+      <Link href={categoryCardData.url} scroll={false}>
         <div
           className="relative w-full h-full cursor-pointer group"
           //   style={{ width, height }}
@@ -36,9 +37,9 @@ const CategoryCard = ({ mainCategoriesData }: ICardOfDropDownMenu) => {
             <div className=" flex items-end  w-[18%] h-[80%]  ">
               <div className="fc border-r border-light w-full h-full  p-[0.25rem] opacity-70 group-hover:opacity-100 ease-in duration-300">
                 <p className="text-light text-center text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal ">
-                  {mainCategoriesData.arrayIndex + 1 < 10
-                    ? `0${mainCategoriesData.arrayIndex + 1}`
-                    : `${mainCategoriesData.arrayIndex + 1}`}
+                  {categoryCardData.arrayIndex + 1 < 10
+                    ? `0${categoryCardData.arrayIndex + 1}`
+                    : `${categoryCardData.arrayIndex + 1}`}
                 </p>
               </div>
             </div>
@@ -53,7 +54,7 @@ const CategoryCard = ({ mainCategoriesData }: ICardOfDropDownMenu) => {
                   className="fc relative h-[80%] w-[80%] z-[10] "
                   //rounded-md overflow-hidden
                 >
-                  <ActivePartOfCard imageData={mainCategoriesData.image} />
+                  <SquareImageHolder imageData={categoryCardData.image} />
                 </div>{' '}
               </div>
               <div
@@ -61,7 +62,7 @@ const CategoryCard = ({ mainCategoriesData }: ICardOfDropDownMenu) => {
                 className="fc h-[45%] w-full p-1"
               >
                 <p className="text-light text-center opacity-70 group-hover:opacity-100 ease-in duration-300 text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal xxl:font-thin ">
-                  {mainCategoriesData.name}
+                  {categoryCardData.name}
                 </p>
               </div>
             </div>

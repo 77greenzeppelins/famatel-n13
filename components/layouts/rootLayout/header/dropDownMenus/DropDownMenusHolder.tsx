@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { overlayContainerVariants } from '../../../../../utils/framerMotion/framerMotionUtils';
 /**Basic Data**/
 import { dropDownMenusArray } from './_dropDownMenusHolder_data';
-import { mainPages } from '../../../../../data/_data';
+import { mainPages, pagesUrl } from '../../../../../data/_data';
 
 /*******************************************************************************/
 const DropDownMenusHolder = ({
@@ -18,11 +18,14 @@ const DropDownMenusHolder = ({
   hasDropDownMenu: boolean;
 }) => {
   /**Router Section**/
-  const router = useRouter();
+  const { pathname } = useRouter();
   /**AdditionalCondition
    * why: to prevent displaying <ProduktyDropDownMenu> when user is on ".../kategorie-produktow" path
    */
-  const specialCondition = router.pathname !== mainPages[1].url;
+  const specialCondition = pathname !== mainPages[1].url;
+
+  const styleCondition =
+    pathname === pagesUrl.kontakt || pathname === pagesUrl.kontakt;
 
   /**JSX**/
   return (
@@ -36,7 +39,7 @@ const DropDownMenusHolder = ({
           <motion.div
             id="DropDownMenusHolder__container"
             key={label}
-            className="fc bg-dark"
+            className="fc "
             variants={overlayContainerVariants}
             animate="animate"
             initial="initial"
@@ -47,7 +50,11 @@ const DropDownMenusHolder = ({
                 return (
                   <React.Fragment key={id}>
                     {specialCondition && (
-                      <div className="w-screen h-screen fc">
+                      <div
+                        className={`w-screen h-screen fc ${
+                          styleCondition ? 'bg-light' : 'bg-dark'
+                        } `}
+                      >
                         <Component />
                       </div>
                     )}
