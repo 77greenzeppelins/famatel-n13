@@ -11,6 +11,7 @@ const OFirmieContent = () => {
   return (
     <div
       data-component="OFirmieContent__container"
+      //__(!) "pb-[20px]" is required by mobile browser to prevent partial cutting of the image
       className="relative flex items-end w-screen h-screen pt-[64px] bg-dark pb-[20px]"
     >
       {/* <div

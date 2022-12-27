@@ -45,7 +45,7 @@ const Header = () => {
             initial={{ y: '-100%' }}
             animate={{ y: 0, transition: { duration: 0.8 } }}
           >
-            <div className="origin-left fc">
+            <div className="origin-left fc scale-75   md:scale-100">
               <HeaderLogoLink />
             </div>
             <div className="h-full ">
