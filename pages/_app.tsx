@@ -3,20 +3,10 @@ import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 /**Components*/
 import PageTransitionHolder from '../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
-/**CSS / Tailwind Staff*/
-import './globals.css';
-// import '../styles/globals.css';
-/**Fonts Staff
- * resource: doc. / https://www.youtube.com/watch?v=L8_98i_bMMA
- **/
-import localFont from '@next/font/local';
 import ProductPageFixedOverlay from '../components/layouts/pseudoLayouts/productPageFixedOverlay/ProductPageFixedOverlay';
 import MainHtmlElement from '../components/layouts/pseudoLayouts/mainHtmlElement/MainHtmlElement';
-const haasFont = localFont({
-  src: '../public/fonts/HaasGrotDisp-55Roman.woff2',
-});
-
-// import {x} from '../public/fonts/'
+/**CSS / Tailwind Staff*/
+import './globals.css'; // import '../styles/globals.css';
 
 /**TS*/
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
