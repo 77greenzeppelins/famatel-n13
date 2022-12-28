@@ -16,7 +16,7 @@ const SvgLogo = ({
   animationCondition?: boolean;
 }) => {
   /**...WTF*/
-  console.log('SvgLogo', animationCondition);
+  // console.log('SvgLogo', animationCondition);
   /**FramerMotion Staff*/
 
   /**JSX*/

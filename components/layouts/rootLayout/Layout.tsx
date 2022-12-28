@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {' '}
       <div
         data-component="RootLayout__container"
-        className={haasFont.className}
+        className={`${haasFont.className}`}
       >
         <div className="relative z-[10]">{children}</div>
 

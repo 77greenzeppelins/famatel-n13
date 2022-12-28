@@ -6,7 +6,7 @@ import type { NextPageWithLayout } from '../_app';
 const KontaktPage: NextPageWithLayout = () => {
   return (
     <div className="relative">
-      <div className="h-screen bg-light"> </div>
+      <div className="h-screen bg-dark"> </div>
     </div>
   );
 };

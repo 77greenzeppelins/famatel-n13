@@ -1,88 +1,100 @@
-import React from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
 /**Components**/
-import TextModule from './textModule/TextModule';
+import OFirmieSlider from './slider/OFirmieSlider';
 /**Hook Staf**/
 import useWindowSize from '../../../utils/hooks/useWindowSize';
 /**Basic Data*/
-import { tailwindStyles } from '../../../data/_styleData';
-import { imgOFirmiePage } from '../../../public/images/oFirmiePage/imgOFirmiePage';
-import SquareImageHolder from '../../multipagesComponents/imageHolder/SquareImageHolder';
-import GraphicModule from './graphicModule/GraphicModule';
+const sectionsNumber = 3;
+const timeoutFactor = 1000;
 
 /**----------------------------------------------------------------**/
 const OFirmieContent = () => {
   /**Hook Section**/
-  const { isLandscape, height } = useWindowSize({ screensNumber: 1 });
+  const { isLandscape } = useWindowSize({ screensNumber: 1 });
 
-  console.log('isLandscape:', isLandscape);
+  /*
+  LocalState nr1; just to disable scrollin temporaily
+  */
+  const [wheelState, setWheelState] = useState<boolean>(true);
+  /*
+  LocalState nr2; just to control slides
+  */
+  const [slideState, setSlideState] = useState<{
+    number: number;
+    deltaY: number;
+  }>({
+    number: 0,
+    deltaY: 0,
+  });
+  /*
+  LocalState nr3; allowes to coordinate <ProduktInfoPanel> visibility and its content; is set via buttons in <SnipersLayout> <ProductInfoPanel>'c "closeButton"
+  */
+  // const [svgGraphicState, setSvgGraphicState] = useState<{
+  //   renderInfoPanel: boolean;
+  //   productId: string;
+  // }>({
+  //   renderInfoPanel: false,
+  //   productId: '',
+  // });
+
+  /**Events Management**/
+  const onWheelHandler = (event: any): void => {
+    /*
+    "if statement" that specify what to do when wheelState is false; what we actually want react to do is "nothing"; but...
+    using : console.log('<SectionContainer/> / should by !wheelState', wheelState) it's logged to console when value is false and user scrolls; usualy lots of logs...
+    */
+    if (!wheelState) {
+      return;
+    }
+
+    if (event.deltaY > 0 && slideState.number < sectionsNumber - 1) {
+      /**let's utilize wheelEvent data
+       * when user scrolls down = expects progress = goes forward => deltaY > 0
+       **/
+      // console.log('user scrolls down', event.deltaY);
+      setSlideState({
+        number: slideState.number + 1,
+        deltaY: event.deltaY,
+      });
+    }
+    if (event.deltaY < 0 && slideState.number > 0) {
+      // console.log('user scrolls up', event.deltaY);
+      setSlideState({
+        number: slideState.number - 1,
+        deltaY: event.deltaY,
+      });
+    }
+    //    console.log('wheelState before setWheelState(false):', wheelState);
+    //   console.log('<SectionContainer/> / setTimeout / event', event.deltaY);
+
+    /**let's manipulate wheelState
+     *__1__above instructiuons are evaluated "immedietely"; so at this stage they are complete
+     *__2__with "setWheelState(false)" we disable wheeling
+     *__3__with "setTimeout(...)" we specify when whilling would be active again
+     *__4__with such setting "wheelvent" works as "time-base-switcher"
+     */
+    setWheelState(false);
+    setTimeout(function () {
+      setWheelState(true);
+      // console.log('<wheelState in setTimeout', wheelState);
+    }, timeoutFactor);
+    /* end of "time-base-switcher" */
+  };
+
   /**JSX**/
   return (
     <div
       data-component="OFirmieContent__container"
-      //__(!) "pb-[20px]" is required by mobile browser to prevent partial cutting of the image
-      // className="relative flex items-end w-screen h-screen pt-[64px] bg-dark pb-[28px]"
-      //__(!) why such complex heightStyle? samsumg tab cuts about 100px at the bottom
-      // className={`w-screen h-screen pt-[52px] bg-dark ${
-      //   height > 799 ? 'pb-[100px]' : height > 500 ? 'pb-[40px]' : 'pb-[20px]'
-      // }`}
-      //__(!) change "h-screen" into "h-full"
-      className="w-screen h-full pt-[52px] bg-dark pb-[10px]"
+      className="w-screen h-screen pt-[52px]  bg-dark"
+      onWheel={onWheelHandler}
     >
-      <div
-        className={`flex ${
-          isLandscape ? 'flex-row' : 'flex-col'
-        } w-full h-full  bg-green-800`}
-      >
-        <div
-          className={`${isLandscape ? 'w-[50%] h-full' : ' w-full h-[50%] '}`}
-        >
-          <TextModule />
-        </div>
-        <div
-          className={`${isLandscape ? 'w-[50%] h-full' : ' w-full h-[50%] '}`}
-        >
-          <GraphicModule />
-        </div>
-      </div>
+      <OFirmieSlider
+        isLandscape={isLandscape}
+        slideNumber={slideState.number}
+        scrollDeltaValue={slideState.deltaY}
+      />
     </div>
   );
 };
 
 export default OFirmieContent;
-
-{
-  /* <div
-        // className={`${tailwindStyles.innerContainer} relative fc flex-col`}
-        className="fc h-[40%] mx-auto px-[2%] md:px-[60px]"
-      >
-        <p className="text-3xl text-light uppercase">Elektryka przemysłowa</p>{' '}
-      </div> */
-}
-
-{
-  /* <div className="flex items-end justify-between h-[80%] w-full"> */
-}
-{
-  /* <div className="h-full max-h-[600px] w-[80%] md:w-[50%]">
-          <SquareImageHolder
-            imageData={imgOFirmiePage[3].image}
-            squareDivStyle="relative  overflow-hidden"
-            refDivStyle="flex justify-start items-end relative h-full w-full select-none"
-          />
-        </div> */
-}
-
-{
-  /* <div className="h-full max-h-[600px] w-0 md:w-[50%]  ">
-          {' '}
-          <SquareImageHolder
-            imageData={imgOFirmiePage[4].image}
-            squareDivStyle="relative overflow-hidden"
-            refDivStyle="flex justify-end items-end relative h-full w-full"
-          />
-        </div> */
-}
-{
-  /* </div> */
-}
