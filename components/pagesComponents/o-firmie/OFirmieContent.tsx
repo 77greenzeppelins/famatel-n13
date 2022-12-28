@@ -22,10 +22,12 @@ const OFirmieContent = () => {
       data-component="OFirmieContent__container"
       //__(!) "pb-[20px]" is required by mobile browser to prevent partial cutting of the image
       // className="relative flex items-end w-screen h-screen pt-[64px] bg-dark pb-[28px]"
-      //__why such complex heightStyle? samsumg tab cuts about 100px at the bottom
-      className={`w-screen h-full pt-[52px] bg-dark ${
-        height > 799 ? 'pb-[100px]' : height > 500 ? 'pb-[40px]' : 'pb-[20px]'
-      }`}
+      //__(!) why such complex heightStyle? samsumg tab cuts about 100px at the bottom
+      // className={`w-screen h-screen pt-[52px] bg-dark ${
+      //   height > 799 ? 'pb-[100px]' : height > 500 ? 'pb-[40px]' : 'pb-[20px]'
+      // }`}
+      //__(!) change "h-screen" into "h-full"
+      className="w-screen h-full pt-[52px] bg-dark pb-[10px]"
     >
       <div
         className={`flex ${
