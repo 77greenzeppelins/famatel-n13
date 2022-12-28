@@ -22,7 +22,7 @@ const OFirmieContent = () => {
       data-component="OFirmieContent__container"
       //__(!) "pb-[20px]" is required by mobile browser to prevent partial cutting of the image
       // className="relative flex items-end w-screen h-screen pt-[64px] bg-dark pb-[28px]"
-      className=" w-screen h-screen pt-[52px] bg-dark pb-[60px] bg-blue-800"
+      className=" w-screen h-screen pt-[52px] bg-dark pb-[100px] bg-blue-400"
     >
       <div
         className={`flex ${
