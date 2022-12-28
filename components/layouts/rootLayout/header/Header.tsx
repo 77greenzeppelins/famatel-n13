@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header
       data-component="Header__container"
-      className={`fixed w-screen top-0 left-0 right-0 h-[50px] md:h-[60px] z-[500] `}
+      className={`fixed w-screen top-0 left-0 right-0  md:h-[50px] z-[500] `}
     >
       <div
         // className="h-full mx-auto px-[2%] md:px-[60px]"
@@ -45,7 +45,7 @@ const Header = () => {
             initial={{ y: '-100%' }}
             animate={{ y: 0, transition: { duration: 0.8 } }}
           >
-            <div className="origin-left fc scale-75   md:scale-100">
+            <div className="origin-left h-full flex items-end scale-75 md:scale-100 pb-1 ">
               <HeaderLogoLink />
             </div>
             <div className="h-full ">

@@ -60,7 +60,7 @@ const NavLink: React.FunctionComponent<{
     >
       <div
         data-layout="wrapper_for_DropDownMenuHolder"
-        className="fixed left-0 right-0 top-[60px] bottom-[1px]"
+        className="fixed left-0 right-0 top-[50px] bottom-[1px]"
       >
         <DropDownMenusHolder
           isHovered={hovererState.isHovered}
@@ -85,7 +85,7 @@ const NavLink: React.FunctionComponent<{
           <span>{label}</span>
         </p>
         <div
-          className={`absolute border-b border-grey h-[44px] ${
+          className={`absolute border-b border-grey h-[32px] ${
             linkStyleisHovered ? 'w-[0%]' : 'w-full'
           } inset-0 opacity-0 hover:opacity-100  ease-in duration-300 `}
           //__w-full h-full

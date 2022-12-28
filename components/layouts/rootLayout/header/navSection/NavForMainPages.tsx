@@ -28,13 +28,16 @@ const NavForMainPages: React.FunctionComponent = () => {
     }
   };
 
-  const { width, height, isLandscape, containerHeight } = useWindowSize({
+  const { width, height } = useWindowSize({
     screensNumber: totalHeight(pathname),
   });
 
   /**JSX*/
   return (
-    <nav className="h-full">
+    <nav
+      className="h-full pt-2"
+      //___why "pt-2"? to break "center-y-alignment"...
+    >
       <ul className="hidden h-full md:flex ">
         {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
           if (arrayIndex === 2) {
