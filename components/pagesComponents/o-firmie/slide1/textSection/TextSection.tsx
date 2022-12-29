@@ -13,7 +13,7 @@ const TextSection = () => {
       <div className="flex h-[50%] justify-end items-end bg-dark pb-6 z-[10] ">
         <div className=" overflow-hidden">
           <motion.h1
-            className=" text-right uppercase"
+            className=" text-right uppercase disable"
             variants={variants}
             initial="initial"
             animate="animate"
@@ -33,7 +33,7 @@ const TextSection = () => {
       <div className="flex h-[50%] justify-end  bg-dark pt-6 z-[1]">
         <div className=" overflow-hidden">
           <motion.p
-            className="text-[2rem] text-grey text-right leading-[2rem]"
+            className="text-[2rem] text-grey text-right leading-[2rem] disable"
             variants={variants}
             initial="initial"
             animate="animate"

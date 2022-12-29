@@ -10,7 +10,8 @@ const timeoutFactor = 1000;
 /**----------------------------------------------------------------**/
 const OFirmieContent = () => {
   /**LocalState nr1; just to disable scrollin temporaily**/
-  const [wheelState, setWheelState] = useState<boolean>(true);
+  const [allPseudoScrollEventsState, setAllPseudoScrollEventsState] =
+    useState<boolean>(true);
   /*
   LocalState nr2; just to control slides
   */
@@ -21,24 +22,16 @@ const OFirmieContent = () => {
     number: 0,
     deltaY: 0,
   });
-  /*
-  LocalState nr3; allowes to coordinate <ProduktInfoPanel> visibility and its content; is set via buttons in <SnipersLayout> <ProductInfoPanel>'c "closeButton"
-  */
-  // const [svgGraphicState, setSvgGraphicState] = useState<{
-  //   renderInfoPanel: boolean;
-  //   productId: string;
-  // }>({
-  //   renderInfoPanel: false,
-  //   productId: '',
-  // });
+  /**LocalState nr3; just to set initial valu of onTouchStart Event**/
+  const [touchInitialValue, setTouchInitialValue] = useState(0);
 
   /**Events Management**/
   const onWheelHandler = (event: any): void => {
     /*
-    "if statement" that specify what to do when wheelState is false; what we actually want react to do is "nothing"; but...
-    using : console.log('<SectionContainer/> / should by !wheelState', wheelState) it's logged to console when value is false and user scrolls; usualy lots of logs...
+    "if statement" that specify what to do when allPseudoScrollEventsState is false; what we actually want react to do is "nothing"; but...
+    using : console.log('<SectionContainer/> / should by !allPseudoScrollEventsState', allPseudoScrollEventsState) it's logged to console when value is false and user scrolls; usualy lots of logs...
     */
-    if (!wheelState) {
+    if (!allPseudoScrollEventsState) {
       return;
     }
     /**let's utilize wheelEvent data
@@ -58,92 +51,61 @@ const OFirmieContent = () => {
         deltaY: event.deltaY,
       });
     }
-    //    console.log('wheelState before setWheelState(false):', wheelState);
+    //    console.log('allPseudoScrollEventsState before setAllPseudoScrollEventsState(false):', allPseudoScrollEventsState);
     //   console.log('<SectionContainer/> / setTimeout / event', event.deltaY);
 
-    /**let's manipulate wheelState
+    /**let's manipulate allPseudoScrollEventsState
      *__1__above instructiuons are evaluated "immedietely"; so at this stage they are complete
-     *__2__with "setWheelState(false)" we disable wheeling
+     *__2__with "setAllPseudoScrollEventsState(false)" we disable wheeling
      *__3__with "setTimeout(...)" we specify when whilling would be active again
      *__4__with such setting "wheelvent" works as "time-base-switcher"
      */
-    setWheelState(false);
+    setAllPseudoScrollEventsState(false);
     setTimeout(function () {
-      setWheelState(true);
-      // console.log('<wheelState in setTimeout', wheelState);
-    }, timeoutFactor);
-    /* end of "time-base-switcher" */
-  };
-
-  const [x, setX] = useState('0');
-  const [y, setY] = useState(0);
-  const onPointerMoveHandler = (e: React.PointerEvent<HTMLDivElement>) => {
-    /**...*/
-    // e.stopPropagation();
-    /**...*/
-    if (!wheelState) {
-      return;
-    }
-    // console.log(e.movementY);
-
-    if (e.movementY < 0 && slideState.number < sectionsNumber - 1) {
-      console.log(e);
-      setSlideState({
-        number: slideState.number + 1,
-        deltaY: e.movementY,
-      });
-      setX('up');
-      setY(e.movementY);
-    }
-    if (e.movementY > 0 && slideState.number > 0) {
-      // console.log('user scrolls up', event.deltaY);
-      setSlideState({
-        number: slideState.number - 1,
-        deltaY: e.movementY,
-      });
-      setX('down');
-      setY(e.movementY);
-    }
-    setWheelState(false);
-    setTimeout(function () {
-      // setWheelState(true);
-      console.log('<setTimeout / wheelState ');
-      setWheelState(true);
+      setAllPseudoScrollEventsState(true);
     }, timeoutFactor);
   };
-
-  const [touchProgress, setTouchProgress] = useState(0);
 
   const onTouchEndHandler = (e: React.TouchEvent<HTMLDivElement>) => {
-    /**...*/
     // e.stopPropagation();
-    /**...*/
-    if (!wheelState) {
+    if (!allPseudoScrollEventsState) {
       return;
     }
     // console.log(e.movementY);
     if (
-      touchProgress > e.changedTouches[0].screenY &&
+      // touchInitialValue > e.changedTouches[0].screenY
+      touchInitialValue - e.changedTouches[0].screenY > 100 &&
       slideState.number < sectionsNumber - 1
     ) {
-      // console.log(e);
+      // console.log(
+      //   'forward / touchInitialValue - e.changedTouches[0].screenY:',
+      //   // Math.abs(touchInitialValue - e.changedTouches[0].screenY)
+      //   touchInitialValue - e.changedTouches[0].screenY
+      // );
       setSlideState({
         number: slideState.number + 1,
         deltaY: 0,
       });
     }
-    if (touchProgress < e.changedTouches[0].screenY && slideState.number > 0) {
-      // console.log('user scrolls up', event.deltaY);
+    if (
+      //___
+      touchInitialValue - e.changedTouches[0].screenY < -100 &&
+      slideState.number > 0
+    ) {
+      // console.log(
+      //   'backward / touchInitialValue - e.changedTouches[0].screenY:',
+      //   // Math.abs(touchInitialValue - e.changedTouches[0].screenY)
+      //   touchInitialValue - e.changedTouches[0].screenY
+      // );
       setSlideState({
         number: slideState.number - 1,
         deltaY: 0,
       });
     }
-    setWheelState(false);
+    setAllPseudoScrollEventsState(false);
     setTimeout(function () {
-      // setWheelState(true);
-      // console.log('<setTimeout / wheelState ');
-      setWheelState(true);
+      // console.log('<setTimeout / allPseudoScrollEventsState ');
+      setAllPseudoScrollEventsState(true);
     }, timeoutFactor);
   };
 
@@ -157,11 +119,8 @@ const OFirmieContent = () => {
       className="fixed w-screen h-full pt-[52px] bg-dark touch-auto"
       // className="fixed inset-0 pt-[52px] bg-dark"
       onWheel={onWheelHandler}
-      // onPointerMove={onPointerMoveHandler}
-
       onTouchStart={e => {
-        // console.log('onTouchStart', Math.abs(e.changedTouches[0].screenY));
-        setTouchProgress(e.changedTouches[0].screenY);
+        setTouchInitialValue(e.changedTouches[0].screenY);
       }}
       onTouchEnd={onTouchEndHandler}
     >
@@ -170,7 +129,7 @@ const OFirmieContent = () => {
         scrollDeltaValue={slideState.deltaY}
       />
       {/* <div className="fc absolute top-0 left-0 right-0 bg-grey h-[75px] text-2xl">
-        {`${touchProgress} / state: ${wheelState}`}
+        {`${touchInitialValue} / state: ${allPseudoScrollEventsState}`}
       </div> */}
     </motion.div>
   );
@@ -178,12 +137,40 @@ const OFirmieContent = () => {
 
 export default OFirmieContent;
 
-// onTouchEnd={e => {
-//   console.log('onTouchEnd', Math.abs(e.changedTouches[0].screenY));
-//   if (touchProgress > e.changedTouches[0].screenY) {
-//     setXXX('progress');
+/**...*/
+// e.stopPropagation();
+/**...*/
+
+// const [x, setX] = useState('0');
+// const [y, setY] = useState(0);
+// const onPointerMoveHandler = (e: React.PointerEvent<HTMLDivElement>) => {
+
+//   if (!allPseudoScrollEventsState) {
+//     return;
 //   }
-//   if (touchProgress < e.changedTouches[0].screenY) {
-//     setXXX('regress');
+
+//   if (e.movementY < 0 && slideState.number < sectionsNumber - 1) {
+//     console.log(e);
+//     setSlideState({
+//       number: slideState.number + 1,
+//       deltaY: e.movementY,
+//     });
+//     setX('up');
+//     setY(e.movementY);
 //   }
-// }}
+//   if (e.movementY > 0 && slideState.number > 0) {
+//     // console.log('user scrolls up', event.deltaY);
+//     setSlideState({
+//       number: slideState.number - 1,
+//       deltaY: e.movementY,
+//     });
+//     setX('down');
+//     setY(e.movementY);
+//   }
+//   setAllPseudoScrollEventsState(false);
+//   setTimeout(function () {
+//     // setAllPseudoScrollEventsState(true);
+//     console.log('<setTimeout / allPseudoScrollEventsState ');
+//     setAllPseudoScrollEventsState(true);
+//   }, timeoutFactor);
+// };
