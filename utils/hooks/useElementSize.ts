@@ -1,9 +1,7 @@
 /*
 used in: <CarouselWithScrollbar>
 */
-
 import { useCallback, useState } from 'react';
-
 import useEventListener from './useEventListener';
 import useIsomorphicLayoutEffect from './useIsomorphicLayoutEffect';
 

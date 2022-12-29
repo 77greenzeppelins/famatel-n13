@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import Image, { StaticImageData } from 'next/image';
 /*Hook staff*/
-import useElementSize from '../../../utils/hooks/useElementSize';
+import useMeasure from 'react-use-measure';
 /**Basic Data*/
 const defaultRefDivStyle = 'fc relative h-full w-full';
 const defaultSquareDivStyle = 'relative bg-light p-[6px] overflow-hidden';
@@ -21,9 +21,9 @@ const SquareImageHolder = ({
   children,
 }: IF_SquareImageHolder) => {
   /**Hook Section**/
-  // const [ref, { width, height }] = useMeasure();
-  const [squareRef, { width, height }] = useElementSize();
-
+  const [ref, { width, height }] = useMeasure();
+  /**...WTF**/
+  console.log('width / height', width, height);
   /**
    * JSX
    * how it works?
@@ -33,11 +33,14 @@ const SquareImageHolder = ({
   return (
     <div
       data-component="SquareImageHolder__container"
-      ref={squareRef}
+      ref={ref}
       className={refDivStyle ? refDivStyle : defaultRefDivStyle}
+      // className={`${refDivStyle ? refDivStyle : defaultRefDivStyle} bg-corpo`}
     >
       <div
-        className={squareDivStyle ? squareDivStyle : defaultSquareDivStyle}
+        className={`${
+          squareDivStyle ? squareDivStyle : defaultSquareDivStyle
+        } `}
         style={{
           width: width >= height ? height : width,
           height: height >= width ? width : height,
@@ -52,8 +55,6 @@ const SquareImageHolder = ({
         </div>
         {children}
       </div>
-
-      {/* <ImageSquare src={imageData} imageScaleFactor={0.8} /> */}
     </div>
   );
 };

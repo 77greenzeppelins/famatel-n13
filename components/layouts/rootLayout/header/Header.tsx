@@ -23,7 +23,7 @@ const Header = () => {
   const condition = router.pathname === mainPages[0].url;
 
   /**.........temp**/
-  const { width, height } = useWindowSize({
+  const { width, height, isLandscape } = useWindowSize({
     screensNumber: 1,
   });
 
@@ -65,7 +65,7 @@ const Header = () => {
           >
             <div className="origin-left h-full flex items-end scale-75 md:scale-100 pb-1 ">
               {/* <HeaderLogoLink /> */}
-              <p className="text-grey text-[0.75rem]">{`w: ${width}  /  h: ${height}`}</p>
+              <p className="text-grey text-[0.75rem]">{`w: ${width}  /  h: ${height} / L: ${isLandscape}`}</p>
             </div>
             <div className="h-full ">
               <NavForMainPages />
