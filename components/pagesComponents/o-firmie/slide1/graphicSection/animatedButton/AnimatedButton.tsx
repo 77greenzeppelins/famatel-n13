@@ -21,6 +21,7 @@ const AnimatedButton = () => {
           stiffness: 100,
           restDelta: 0.001,
         }}
+        onClick={() => console.log('...........AnimatedButton')}
       >
         <div className="flex justify-between flex-col w-full h-full">
           <div className="flex justify-between w-full h-[30%] ">

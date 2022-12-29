@@ -112,6 +112,41 @@ const OFirmieContent = () => {
     }, timeoutFactor);
   };
 
+  const [touchProgress, setTouchProgress] = useState(0);
+
+  const onTouchEndHandler = (e: React.TouchEvent<HTMLDivElement>) => {
+    /**...*/
+    // e.stopPropagation();
+    /**...*/
+    if (!wheelState) {
+      return;
+    }
+    // console.log(e.movementY);
+    if (
+      touchProgress > e.changedTouches[0].screenY &&
+      slideState.number < sectionsNumber - 1
+    ) {
+      // console.log(e);
+      setSlideState({
+        number: slideState.number + 1,
+        deltaY: 0,
+      });
+    }
+    if (touchProgress < e.changedTouches[0].screenY && slideState.number > 0) {
+      // console.log('user scrolls up', event.deltaY);
+      setSlideState({
+        number: slideState.number - 1,
+        deltaY: 0,
+      });
+    }
+    setWheelState(false);
+    setTimeout(function () {
+      // setWheelState(true);
+      // console.log('<setTimeout / wheelState ');
+      setWheelState(true);
+    }, timeoutFactor);
+  };
+
   /**JSX**/
   return (
     <motion.div
@@ -122,18 +157,33 @@ const OFirmieContent = () => {
       className="fixed w-screen h-full pt-[52px] bg-dark touch-auto"
       // className="fixed inset-0 pt-[52px] bg-dark"
       onWheel={onWheelHandler}
-      onPointerMove={onPointerMoveHandler}
-      // onTouchMove={onPointerMoveHandler}
+      // onPointerMove={onPointerMoveHandler}
+
+      onTouchStart={e => {
+        // console.log('onTouchStart', Math.abs(e.changedTouches[0].screenY));
+        setTouchProgress(e.changedTouches[0].screenY);
+      }}
+      onTouchEnd={onTouchEndHandler}
     >
       <OFirmieSlider
         slideNumber={slideState.number}
         scrollDeltaValue={slideState.deltaY}
       />
-      <div className="fc absolute top-0 left-0 right-0 bg-grey h-[75px] text-2xl">
-        {`${y} / state: ${wheelState}`}
-      </div>
+      {/* <div className="fc absolute top-0 left-0 right-0 bg-grey h-[75px] text-2xl">
+        {`${touchProgress} / state: ${wheelState}`}
+      </div> */}
     </motion.div>
   );
 };
 
 export default OFirmieContent;
+
+// onTouchEnd={e => {
+//   console.log('onTouchEnd', Math.abs(e.changedTouches[0].screenY));
+//   if (touchProgress > e.changedTouches[0].screenY) {
+//     setXXX('progress');
+//   }
+//   if (touchProgress < e.changedTouches[0].screenY) {
+//     setXXX('regress');
+//   }
+// }}
