@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 /**Components**/
 import OFirmieSlider from './slider/OFirmieSlider';
 /**FramerMotion Staf**/
-import { motion } from 'framer-motion';
+import { motion, PanInfo } from 'framer-motion';
 /**Basic Data*/
 const sectionsNumber = 3;
 const timeoutFactor = 1000;
@@ -73,20 +73,30 @@ const OFirmieContent = () => {
     }
     // console.log(e.movementY);
     if (
-      touchInitialValue > e.changedTouches[0].screenY &&
+      // touchInitialValue > e.changedTouches[0].screenY
+      touchInitialValue - e.changedTouches[0].screenY > 100 &&
       slideState.number < sectionsNumber - 1
     ) {
-      // console.log(e);
+      // console.log(
+      //   'forward / touchInitialValue - e.changedTouches[0].screenY:',
+      //   // Math.abs(touchInitialValue - e.changedTouches[0].screenY)
+      //   touchInitialValue - e.changedTouches[0].screenY
+      // );
       setSlideState({
         number: slideState.number + 1,
         deltaY: 0,
       });
     }
     if (
-      touchInitialValue < e.changedTouches[0].screenY &&
+      //___
+      touchInitialValue - e.changedTouches[0].screenY < -100 &&
       slideState.number > 0
     ) {
-      // console.log('user scrolls up', event.deltaY);
+      // console.log(
+      //   'backward / touchInitialValue - e.changedTouches[0].screenY:',
+      //   // Math.abs(touchInitialValue - e.changedTouches[0].screenY)
+      //   touchInitialValue - e.changedTouches[0].screenY
+      // );
       setSlideState({
         number: slideState.number - 1,
         deltaY: 0,
