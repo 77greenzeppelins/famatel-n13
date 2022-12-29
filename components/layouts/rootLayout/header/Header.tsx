@@ -8,6 +8,8 @@ import { motion } from 'framer-motion';
 /*Basic Data*/
 import { mainPages } from '../../../../data/_data';
 import { tailwindStyles } from '../../../../data/_styleData';
+/**.........temp**/
+import useWindowSize from '../../../../utils/hooks/useWindowSize';
 
 // import localFont from '@next/font/local';
 // const haasFont = localFont({
@@ -18,7 +20,12 @@ import { tailwindStyles } from '../../../../data/_styleData';
 const Header = () => {
   /**Hook Section*/
   const router = useRouter();
-  const condition = router.pathname === mainPages[5].url;
+  const condition = router.pathname === mainPages[0].url;
+
+  /**.........temp**/
+  const { width, height } = useWindowSize({
+    screensNumber: 1,
+  });
 
   /**JSX*/
   return (
@@ -31,7 +38,7 @@ const Header = () => {
         className={`${tailwindStyles.innerContainer} `}
       >
         <div className="relative w-full h-full">
-          {router.pathname === mainPages[0].url ? null : (
+          {condition ? null : (
             <motion.div
               className="absolute bottom-0 left-0 right-0 h-full border-b border-grey"
               initial={{ width: '0%', opacity: 0 }}
@@ -57,7 +64,8 @@ const Header = () => {
             animate={{ y: 0, transition: { duration: 0.8 } }}
           >
             <div className="origin-left h-full flex items-end scale-75 md:scale-100 pb-1 ">
-              <HeaderLogoLink />
+              {/* <HeaderLogoLink /> */}
+              <p className="text-grey text-[0.75rem]">{`w: ${width}  /  h: ${height}`}</p>
             </div>
             <div className="h-full ">
               <NavForMainPages />
