@@ -9,12 +9,7 @@ const timeoutFactor = 1000;
 
 /**----------------------------------------------------------------**/
 const OFirmieContent = () => {
-  /**Hook Section**/
-  const { isLandscape } = useWindowSize({ screensNumber: 1 });
-
-  /*
-  LocalState nr1; just to disable scrollin temporaily
-  */
+  /**LocalState nr1; just to disable scrollin temporaily**/
   const [wheelState, setWheelState] = useState<boolean>(true);
   /*
   LocalState nr2; just to control slides
@@ -89,7 +84,6 @@ const OFirmieContent = () => {
       onWheel={onWheelHandler}
     >
       <OFirmieSlider
-        isLandscape={isLandscape}
         slideNumber={slideState.number}
         scrollDeltaValue={slideState.deltaY}
       />

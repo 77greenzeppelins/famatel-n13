@@ -1,48 +1,51 @@
 import React from 'react';
 /**Components*/
-import SquareImageHolder from '../../../multipagesComponents/imageHolder/SquareImageHolder';
+import GraphicSection from './graphicSection/GraphicSection';
 /**Hook Staf**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
-/**Basic Data**/
-import { imgOFirmiePage } from '../../../../public/images/oFirmiePage/imgOFirmiePage';
-/**Framer Motion Staff**/
 
 /**------------------------------------------------------------------------**/
 const Slide1: React.FunctionComponent<{
-  isLandscape: boolean | null;
   slideNumber: number;
   scrollDeltaValue: number;
-}> = ({ isLandscape, slideNumber, scrollDeltaValue }) => {
+}> = ({ slideNumber, scrollDeltaValue }) => {
   /**...WTF**/
-  console.log('isLandscape', isLandscape);
+  //   console.log('isLandscape', isLandscape);
   /**Hook Section**/
-  const { isLandscape: boolean } = useWindowSize({ screensNumber: 1 });
+  const { isLandscape } = useWindowSize({ screensNumber: 1 });
 
   /**JSX**/
   return (
     <div
       className={`flex ${
-        !boolean
+        !isLandscape
           ? 'flex-col-reverse'
           : slideNumber === 0
           ? `flex-row`
           : 'flex-row-reverse'
       } w-full h-full`}
     >
-      <div className={`fc ${boolean ? `w-[50%] h-full` : 'w-full h-[50%]'} `}>
-        <SquareImageHolder
-          imageData={imgOFirmiePage[0].image}
-          refDivStyle="flex justify-start items-end h-full w-full"
-          squareDivStyle="relative overflow-hidden"
-        />
+      <div
+        className={` fc ${isLandscape ? `w-[50%] h-full` : 'w-full h-[50%]'} `}
+      >
+        <GraphicSection />
       </div>
       <div
-        className={`fc ${
-          boolean ? `w-[50%] h-full` : 'w-full h-[50%]'
-        } text-3xl text-light`}
+        className={` flex flex-col ${
+          isLandscape ? `w-[50%] h-full` : 'w-full h-[50%]'
+        } text-3xl text-light px-[2%] md:px-[60px]`}
       >
-        <p>Elektryka</p>
-        <p>Przemysłowa</p>
+        <div className="flex h-[50%] justify-end items-end bg-dark pb-6 z-[10] ">
+          <h1 className="text-[4rem] text-right leading-[5rem] uppercase">
+            Elektryka <br />
+            Przemysłowa
+          </h1>
+        </div>
+        <div className="flex h-[50%] justify-end  bg-dark pt-6 z-[1]">
+          <p className="text-[2rem] text-grey text-right leading-[2rem]">
+            Zobacz pełną ofertę
+          </p>
+        </div>
       </div>
     </div>
   );

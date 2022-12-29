@@ -44,4 +44,13 @@ const overlayContainerVariants = {
   },
 };
 
-export { routingAnimation, overlayContainerVariants };
+const homePageSliderVariants = {
+  from: { opacity: 0 },
+  presence: {
+    opacity: 1,
+    transition: { type: 'tween', duration: 0.6 },
+  },
+  to: { opacity: 0, transition: { type: 'tween', duration: 0.6 } },
+};
+
+export { routingAnimation, overlayContainerVariants, homePageSliderVariants };

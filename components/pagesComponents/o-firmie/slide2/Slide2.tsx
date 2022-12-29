@@ -1,15 +1,18 @@
 import React from 'react';
 /**Components*/
 import SquareImageHolder from '../../../multipagesComponents/imageHolder/SquareImageHolder';
+/**Hook Staf**/
+import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**Basic Data**/
 import { imgOFirmiePage } from '../../../../public/images/oFirmiePage/imgOFirmiePage';
 
 /**------------------------------------------------------------------------**/
 const Slide2: React.FunctionComponent<{
-  isLandscape: boolean | null;
   slideNumber: number;
   scrollDeltaValue: number;
-}> = ({ isLandscape, slideNumber, scrollDeltaValue }) => {
+}> = ({ slideNumber, scrollDeltaValue }) => {
+  /**Hook Section**/
+  const { isLandscape } = useWindowSize({ screensNumber: 1 });
   /**JSX**/
   return (
     <div

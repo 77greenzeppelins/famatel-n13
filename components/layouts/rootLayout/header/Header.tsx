@@ -6,7 +6,7 @@ import NavForMainPages from './navSection/NavForMainPages';
 /*FramerMotion Staff*/
 import { motion } from 'framer-motion';
 /*Basic Data*/
-import { mainPages, zIndex } from '../../../../data/_data';
+import { mainPages } from '../../../../data/_data';
 import { tailwindStyles } from '../../../../data/_styleData';
 
 // import localFont from '@next/font/local';
@@ -31,7 +31,18 @@ const Header = () => {
         className={`${tailwindStyles.innerContainer} `}
       >
         <div className="relative w-full h-full">
-          <motion.div
+          {router.pathname === mainPages[0].url ? null : (
+            <motion.div
+              className="absolute bottom-0 left-0 right-0 h-full border-b border-grey"
+              initial={{ width: '0%', opacity: 0 }}
+              animate={{
+                width: '100%',
+                opacity: 1,
+                transition: { duration: 0.8 },
+              }}
+            />
+          )}
+          {/* <motion.div
             className="absolute bottom-0 left-0 right-0 h-full border-b border-grey"
             initial={{ width: '0%', opacity: 0 }}
             animate={{
@@ -39,7 +50,7 @@ const Header = () => {
               opacity: 1,
               transition: { duration: 0.8 },
             }}
-          />
+          /> */}
           <motion.div
             className="flex items-center justify-between w-full h-full"
             initial={{ y: '-100%' }}
