@@ -80,7 +80,8 @@ const OFirmieContent = () => {
   return (
     <div
       data-component="OFirmieContent__container"
-      className="w-screen h-full pt-[52px]  bg-dark"
+      // className="w-screen h-full pt-[52px] bg-dark"
+      className="fixed inset-0 pt-[52px] bg-dark"
       onWheel={onWheelHandler}
     >
       <OFirmieSlider
