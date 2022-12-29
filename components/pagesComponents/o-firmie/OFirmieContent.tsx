@@ -122,8 +122,8 @@ const OFirmieContent = () => {
         slideNumber={slideState.number}
         scrollDeltaValue={slideState.deltaY}
       />
-      <div className="fc absolute top-0 left-0 right-0 h-[75px] bg-corpo text-2xl">
-        {x}
+      <div className="fc absolute top-0 left-0 right-0 h-[75px] text-2xl">
+        {`${x} / state: ${wheelState}`}
       </div>
     </motion.div>
   );
