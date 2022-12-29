@@ -112,7 +112,7 @@ const OFirmieContent = () => {
       /**
        * "fixed" prevents from "resizing" when changing pages
        */
-      className="fixed w-screen h-full pt-[52px] bg-dark overscroll-y-contain"
+      className="fixed w-screen h-full pt-[52px] bg-dark touch-auto"
       // className="fixed inset-0 pt-[52px] bg-dark"
       onWheel={onWheelHandler}
       onPointerMove={onPointerMoveHandler}
