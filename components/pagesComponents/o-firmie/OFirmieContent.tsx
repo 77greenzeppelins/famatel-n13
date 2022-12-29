@@ -123,17 +123,30 @@ const OFirmieContent = () => {
     }
     // console.log(e.movementY);
     if (
-      touchProgress > e.changedTouches[0].screenY &&
+      // touchProgress > e.changedTouches[0].screenY
+      touchProgress - e.changedTouches[0].screenY > 100 &&
       slideState.number < sectionsNumber - 1
     ) {
-      // console.log(e);
+      console.log(
+        'forward / touchProgress - e.changedTouches[0].screenY:',
+        // Math.abs(touchProgress - e.changedTouches[0].screenY)
+        touchProgress - e.changedTouches[0].screenY
+      );
       setSlideState({
         number: slideState.number + 1,
         deltaY: 0,
       });
     }
-    if (touchProgress < e.changedTouches[0].screenY && slideState.number > 0) {
-      // console.log('user scrolls up', event.deltaY);
+    if (
+      // touchProgress < e.changedTouches[0].screenY
+      touchProgress - e.changedTouches[0].screenY < -100 &&
+      slideState.number > 0
+    ) {
+      console.log(
+        'backward / touchProgress - e.changedTouches[0].screenY:',
+        // Math.abs(touchProgress - e.changedTouches[0].screenY)
+        touchProgress - e.changedTouches[0].screenY
+      );
       setSlideState({
         number: slideState.number - 1,
         deltaY: 0,
@@ -169,9 +182,9 @@ const OFirmieContent = () => {
         slideNumber={slideState.number}
         scrollDeltaValue={slideState.deltaY}
       />
-      {/* <div className="fc absolute top-0 left-0 right-0 bg-grey h-[75px] text-2xl">
+      <div className="fc absolute top-0 left-0 right-0 bg-grey h-[75px] text-2xl">
         {`${touchProgress} / state: ${wheelState}`}
-      </div> */}
+      </div>
     </motion.div>
   );
 };
