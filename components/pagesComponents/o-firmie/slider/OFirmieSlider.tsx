@@ -17,7 +17,7 @@ const OFirmieSlider: React.FunctionComponent<{
 }> = ({ slideNumber, scrollDeltaValue }) => {
   /**JSX**/
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode="wait" initial={true}>
       {slidesArr.map((Component, index) => {
         if (index === slideNumber)
           return (
