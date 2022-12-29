@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 /**Framer Motion Staff*/
 import { motion } from 'framer-motion';
 /**FReact Aria Staff*/
@@ -6,6 +6,7 @@ import { FocusRing } from 'react-aria';
 
 /**--------------------------------------------------------**/
 const AnimatedButton = () => {
+  const [state, setState] = useState(false);
   /**JSX**/
   return (
     <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black">
@@ -26,7 +27,11 @@ const AnimatedButton = () => {
         <div className="flex justify-between flex-col w-full h-full">
           <div className="flex justify-between w-full h-[30%] ">
             <div className="w-[30%] h-full border-t border-l border-grey" />
-            <div className="w-[30%] h-full border-t border-r border-grey" />
+            <div
+              className={`w-[30%] h-full border-t border-r ${
+                state ? ' border-corpo' : 'border-grey'
+              } border-grey`}
+            />
           </div>
           <div className="flex justify-between  w-full h-[30%] ">
             <div className="w-[30%] h-full border-b border-l border-grey" />
