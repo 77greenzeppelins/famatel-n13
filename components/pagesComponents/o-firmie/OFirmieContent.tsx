@@ -93,7 +93,7 @@ const OFirmieContent = () => {
       //   deltaY: event.deltaY,
       // });
     }
-    if (pointInfo.offset.y < 0 && slideState.number > 0) {
+    if (pointInfo.offset.y < 0 && slideState.number >= 0) {
       console.log('user scrolls up', pointInfo.offset.y);
       setX(pointInfo.offset.y);
       // setSlideState({
