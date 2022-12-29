@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 /**Components**/
-import OFirmieSlider from './slider/OFirmieSlider';
+import OFirmieSlider from '../slider/OFirmieSlider';
 /**FramerMotion Staf**/
 import { motion, PanInfo } from 'framer-motion';
 /**Basic Data*/
