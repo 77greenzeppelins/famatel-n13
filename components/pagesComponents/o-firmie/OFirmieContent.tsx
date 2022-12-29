@@ -116,8 +116,8 @@ const OFirmieContent = () => {
       // className="fixed inset-0 pt-[52px] bg-dark"
       onWheel={onWheelHandler}
       drag={false}
-      onDrag={(event, info) => console.log(info.point.x, info.point.y)}
-      onPan={onPanHandler}
+      // onDrag={(event, info) => console.log(info.point.x, info.point.y)}
+      // onPan={onPanHandler}
     >
       <OFirmieSlider
         slideNumber={slideState.number}
