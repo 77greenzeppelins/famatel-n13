@@ -41,11 +41,10 @@ const OFirmieContent = () => {
     if (!wheelState) {
       return;
     }
-
+    /**let's utilize wheelEvent data
+     * when user scrolls down = expects progress = goes forward => deltaY > 0
+     **/
     if (event.deltaY > 0 && slideState.number < sectionsNumber - 1) {
-      /**let's utilize wheelEvent data
-       * when user scrolls down = expects progress = goes forward => deltaY > 0
-       **/
       // console.log('user scrolls down', event.deltaY);
       setSlideState({
         number: slideState.number + 1,
@@ -76,33 +75,56 @@ const OFirmieContent = () => {
     /* end of "time-base-switcher" */
   };
 
-  const [x, setX] = useState(0);
+  const onPointerMoveHandler = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (!wheelState) {
+      return;
+    }
+    // console.log(e.movementY);
 
-  const onPanHandler = (
-    event: MouseEvent | TouchEvent | PointerEvent,
-    pointInfo: PanInfo
-  ) => {
-    if (pointInfo.offset.y > 0 && slideState.number < sectionsNumber - 1) {
-      setX(pointInfo.offset.y);
-      /**let's utilize wheelEvent data
-       * when user scrolls down = expects progress = goes forward => deltaY > 0
-       **/
-      console.log('user scrolls down', pointInfo.offset.y);
-      // setSlideState({
-      //   number: slideState.number + 1,
-      //   deltaY: event.deltaY,
-      // });
+    if (e.movementY < 0 && slideState.number < sectionsNumber - 1) {
+      setSlideState({
+        number: slideState.number + 1,
+        deltaY: e.movementY,
+      });
     }
-    if (pointInfo.offset.y < 0 && slideState.number >= 0) {
-      console.log('user scrolls up', pointInfo.offset.y);
-      setX(pointInfo.offset.y);
-      // setSlideState({
-      //   number: slideState.number - 1,
-      //   deltaY: event.deltaY,
-      // });
+    if (e.movementY > 0 && slideState.number > 0) {
+      // console.log('user scrolls up', event.deltaY);
+      setSlideState({
+        number: slideState.number - 1,
+        deltaY: e.movementY,
+      });
     }
-    // console.log(pointInfo.point.x, pointInfo.point.y);
-    console.log(pointInfo);
+    setWheelState(false);
+    setTimeout(function () {
+      // setWheelState(true);
+      console.log('<setTimeout / wheelState ');
+      setWheelState(true);
+    }, timeoutFactor);
+  };
+  const onPointerLeaveHandler = (e: React.PointerEvent<HTMLDivElement>) => {
+    console.log('should be progress:', e);
+    // if (e.screenY < 0) {
+    //   console.log('should be progress:', e.screenY);
+    // }
+    // if (e.screenY === 0) {
+    //   console.log('should be regress:', e.screenY);
+    // }
+    // if (e.screenY < 0 && slideState.number < sectionsNumber - 1) {
+    //   console.log('should be progress:', e.screenY);
+    //   setSlideState({
+    //     number: slideState.number + 1,
+    //     deltaY: e.screenY,
+    //   });
+    // }
+    // if (e.screenY === 0 && slideState.number > 0) {
+    //   console.log('should be regreff:', e.screenY);
+    //   // console.log('user scrolls up', event.deltaY);
+    //   setSlideState({
+    //     number: slideState.number - 1,
+    //     deltaY: e.screenY,
+    //   });
+    // }
+    // console.log('e:', e);
   };
 
   /**JSX**/
@@ -115,17 +137,20 @@ const OFirmieContent = () => {
       className="fixed w-screen h-full pt-[52px] bg-dark overscroll-y-contain"
       // className="fixed inset-0 pt-[52px] bg-dark"
       onWheel={onWheelHandler}
-      drag={false}
+      // drag={false}
       // onDrag={(event, info) => console.log(info.point.x, info.point.y)}
-      onPan={onPanHandler}
+      // onPan={onPanHandler}
+      onPointerMove={onPointerMoveHandler}
+      // onTouchMove={event => {
+      //   console.log('onTouchMove:', event);
+      // }}
+      // onPointerLeave={onPointerLeaveHandler}
     >
       <OFirmieSlider
         slideNumber={slideState.number}
         scrollDeltaValue={slideState.deltaY}
       />
-      <div className="fc absolute top-0 left-0 right-0 h-[100px] bg-corpo text-2xl">
-        {x}
-      </div>
+      <div className="fc absolute top-0 left-0 right-0 h-[100px] bg-corpo text-2xl"></div>
     </motion.div>
   );
 };

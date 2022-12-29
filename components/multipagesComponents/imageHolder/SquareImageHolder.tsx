@@ -23,7 +23,7 @@ const SquareImageHolder = ({
   /**Hook Section**/
   const [ref, { width, height }] = useMeasure();
   /**...WTF**/
-  console.log('width / height', width, height);
+  // console.log('width / height', width, height);
   /**
    * JSX
    * how it works?
