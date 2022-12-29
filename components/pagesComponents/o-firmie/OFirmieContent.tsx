@@ -124,7 +124,7 @@ const OFirmieContent = () => {
         scrollDeltaValue={slideState.deltaY}
       />
       <div className="fc absolute top-0 left-0 right-0 h-[100px] bg-corpo text-2xl">
-        overscroll-y-contain
+        body:overscroll-y-contain
       </div>
     </motion.div>
   );

@@ -5,7 +5,7 @@
 /*__________________________________________________________base*/
 @layer base {
   body {
-    @apply overflow-x-hidden w-full h-full;
+    @apply overflow-x-hidden w-full h-full overscroll-y-contain;
     @apply scroll-bar-style;
   }
   :root {
