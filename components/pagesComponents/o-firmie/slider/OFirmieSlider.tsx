@@ -28,7 +28,7 @@ const OFirmieSlider: React.FunctionComponent<{
               initial="from"
               animate="presence"
               exit="to"
-              className="fc w-[100%] h-[100%]"
+              className="fc w-[100%] h-[100%] "
               // className="fixed inset-0"
             >
               <Component

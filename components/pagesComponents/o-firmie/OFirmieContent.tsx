@@ -76,18 +76,24 @@ const OFirmieContent = () => {
   };
 
   const [x, setX] = useState('0');
+  const [y, setY] = useState(0);
   const onPointerMoveHandler = (e: React.PointerEvent<HTMLDivElement>) => {
+    /**...*/
+    // e.stopPropagation();
+    /**...*/
     if (!wheelState) {
       return;
     }
     // console.log(e.movementY);
 
     if (e.movementY < 0 && slideState.number < sectionsNumber - 1) {
+      console.log(e);
       setSlideState({
         number: slideState.number + 1,
         deltaY: e.movementY,
       });
       setX('up');
+      setY(e.movementY);
     }
     if (e.movementY > 0 && slideState.number > 0) {
       // console.log('user scrolls up', event.deltaY);
@@ -96,6 +102,7 @@ const OFirmieContent = () => {
         deltaY: e.movementY,
       });
       setX('down');
+      setY(e.movementY);
     }
     setWheelState(false);
     setTimeout(function () {
@@ -122,8 +129,8 @@ const OFirmieContent = () => {
         slideNumber={slideState.number}
         scrollDeltaValue={slideState.deltaY}
       />
-      <div className="fc absolute top-0 left-0 right-0 h-[75px] text-2xl">
-        {`${x} / state: ${wheelState}`}
+      <div className="fc absolute top-0 left-0 right-0 bg-grey h-[75px] text-2xl">
+        {`${y} / state: ${wheelState}`}
       </div>
     </motion.div>
   );
