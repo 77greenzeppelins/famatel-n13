@@ -38,7 +38,7 @@ const TextSection = () => {
             initial="initial"
             animate="animate"
           >
-            Zobacz pełną ofertę
+            Zobacz pełną ofertę 0
           </motion.p>
         </div>
       </div>

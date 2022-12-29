@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 /**Components**/
 import OFirmieSlider from '../slider/OFirmieSlider';
 /**FramerMotion Staf**/
-import { motion, PanInfo } from 'framer-motion';
+import { motion } from 'framer-motion';
 /**Basic Data*/
 const sectionsNumber = 3;
 const timeoutFactor = 1000;
@@ -119,15 +119,18 @@ const OFirmieContent = () => {
       className="fixed w-screen h-full pt-[52px] bg-dark touch-auto"
       // className="fixed inset-0 pt-[52px] bg-dark"
       onWheel={onWheelHandler}
-      onTouchStart={e => {
-        setTouchInitialValue(e.changedTouches[0].screenY);
-      }}
-      onTouchEnd={onTouchEndHandler}
+      // onTouchStart={e => {
+      //   setTouchInitialValue(e.changedTouches[0].screenY);
+      // }}
+      // onTouchEnd={onTouchEndHandler}
     >
       <OFirmieSlider
         slideNumber={slideState.number}
         scrollDeltaValue={slideState.deltaY}
       />
+      <div className="fc absolute top-0 left-0 right-0 bg-grey h-[75px] text-2xl">
+        {`${touchInitialValue} / state: ${allPseudoScrollEventsState}`}
+      </div>
     </motion.div>
   );
 };

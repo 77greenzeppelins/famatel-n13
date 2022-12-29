@@ -73,7 +73,7 @@ const OFirmieContent = () => {
     }
     // console.log(e.movementY);
     if (
-      touchInitialValue > e.changedTouches[0].screenY &&
+      touchInitialValue - e.changedTouches[0].screenY > 100 &&
       slideState.number < sectionsNumber - 1
     ) {
       // console.log(e);
@@ -83,7 +83,7 @@ const OFirmieContent = () => {
       });
     }
     if (
-      touchInitialValue < e.changedTouches[0].screenY &&
+      touchInitialValue - e.changedTouches[0].screenY < -100 &&
       slideState.number > 0
     ) {
       // console.log('user scrolls up', event.deltaY);
