@@ -75,6 +75,7 @@ const OFirmieContent = () => {
     /* end of "time-base-switcher" */
   };
 
+  const [x, setX] = useState('0');
   const onPointerMoveHandler = (e: React.PointerEvent<HTMLDivElement>) => {
     if (!wheelState) {
       return;
@@ -86,6 +87,7 @@ const OFirmieContent = () => {
         number: slideState.number + 1,
         deltaY: e.movementY,
       });
+      setX('up');
     }
     if (e.movementY > 0 && slideState.number > 0) {
       // console.log('user scrolls up', event.deltaY);
@@ -93,6 +95,7 @@ const OFirmieContent = () => {
         number: slideState.number - 1,
         deltaY: e.movementY,
       });
+      setX('down');
     }
     setWheelState(false);
     setTimeout(function () {
@@ -100,31 +103,6 @@ const OFirmieContent = () => {
       console.log('<setTimeout / wheelState ');
       setWheelState(true);
     }, timeoutFactor);
-  };
-  const onPointerLeaveHandler = (e: React.PointerEvent<HTMLDivElement>) => {
-    console.log('should be progress:', e);
-    // if (e.screenY < 0) {
-    //   console.log('should be progress:', e.screenY);
-    // }
-    // if (e.screenY === 0) {
-    //   console.log('should be regress:', e.screenY);
-    // }
-    // if (e.screenY < 0 && slideState.number < sectionsNumber - 1) {
-    //   console.log('should be progress:', e.screenY);
-    //   setSlideState({
-    //     number: slideState.number + 1,
-    //     deltaY: e.screenY,
-    //   });
-    // }
-    // if (e.screenY === 0 && slideState.number > 0) {
-    //   console.log('should be regreff:', e.screenY);
-    //   // console.log('user scrolls up', event.deltaY);
-    //   setSlideState({
-    //     number: slideState.number - 1,
-    //     deltaY: e.screenY,
-    //   });
-    // }
-    // console.log('e:', e);
   };
 
   /**JSX**/
@@ -137,20 +115,16 @@ const OFirmieContent = () => {
       className="fixed w-screen h-full pt-[52px] bg-dark overscroll-y-contain"
       // className="fixed inset-0 pt-[52px] bg-dark"
       onWheel={onWheelHandler}
-      // drag={false}
-      // onDrag={(event, info) => console.log(info.point.x, info.point.y)}
-      // onPan={onPanHandler}
       onPointerMove={onPointerMoveHandler}
-      // onTouchMove={event => {
-      //   console.log('onTouchMove:', event);
-      // }}
-      // onPointerLeave={onPointerLeaveHandler}
+      // onTouchMove={onPointerMoveHandler}
     >
       <OFirmieSlider
         slideNumber={slideState.number}
         scrollDeltaValue={slideState.deltaY}
       />
-      <div className="fc absolute top-0 left-0 right-0 h-[100px] bg-corpo text-2xl"></div>
+      <div className="fc absolute top-0 left-0 right-0 h-[75px] bg-corpo text-2xl">
+        {x}
+      </div>
     </motion.div>
   );
 };
