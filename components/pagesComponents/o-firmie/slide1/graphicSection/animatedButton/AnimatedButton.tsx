@@ -11,7 +11,7 @@ const AnimatedButton = () => {
     <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black">
       <motion.button
         aria-label="Zobacz opis wtyczki"
-        className="absolute top-[20%] left-[30%] h-[65%] w-[65%] select-none touch-none focus:outline-none"
+        className="absolute top-[20%] left-[30%] h-[65%] w-[65%] select-none touch-none focus:outline-none no-sparkling"
         whileHover={{
           scale: 1.05,
         }}

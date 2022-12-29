@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 /**Components**/
 import OFirmieSlider from './slider/OFirmieSlider';
-/**Hook Staf**/
-import useWindowSize from '../../../utils/hooks/useWindowSize';
+/**FramerMotion Staf**/
+import { motion, PanInfo } from 'framer-motion';
 /**Basic Data*/
 const sectionsNumber = 3;
 const timeoutFactor = 1000;
@@ -76,23 +76,57 @@ const OFirmieContent = () => {
     /* end of "time-base-switcher" */
   };
 
+  const [x, setX] = useState(0);
+
+  const onPanHandler = (
+    event: MouseEvent | TouchEvent | PointerEvent,
+    pointInfo: PanInfo
+  ) => {
+    if (pointInfo.offset.y > 0 && slideState.number < sectionsNumber - 1) {
+      setX(pointInfo.offset.y);
+      /**let's utilize wheelEvent data
+       * when user scrolls down = expects progress = goes forward => deltaY > 0
+       **/
+      console.log('user scrolls down', pointInfo.offset.y);
+      // setSlideState({
+      //   number: slideState.number + 1,
+      //   deltaY: event.deltaY,
+      // });
+    }
+    if (pointInfo.offset.y < 0 && slideState.number > 0) {
+      console.log('user scrolls up', pointInfo.offset.y);
+      setX(pointInfo.offset.y);
+      // setSlideState({
+      //   number: slideState.number - 1,
+      //   deltaY: event.deltaY,
+      // });
+    }
+    // console.log(pointInfo.point.x, pointInfo.point.y);
+    console.log(pointInfo);
+  };
+
   /**JSX**/
   return (
-    <div
+    <motion.div
       data-component="OFirmieContent__container"
-      className="fixed w-screen h-full pt-[52px] bg-dark"
       /**
        * "fixed" prevents from "resizing" when changing pages
-       *
        */
+      className="fixed w-screen h-full pt-[52px] bg-dark"
       // className="fixed inset-0 pt-[52px] bg-dark"
       onWheel={onWheelHandler}
+      drag={false}
+      onDrag={(event, info) => console.log(info.point.x, info.point.y)}
+      onPan={onPanHandler}
     >
       <OFirmieSlider
         slideNumber={slideState.number}
         scrollDeltaValue={slideState.deltaY}
       />
-    </div>
+      <div className="fc absolute top-0 left-0 right-0 h-[100px] bg-corpo text-2xl">
+        {x}
+      </div>
+    </motion.div>
   );
 };
 

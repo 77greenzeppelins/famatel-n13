@@ -50,7 +50,6 @@
   .no-sparkling {
     -webkit-tap-highlight-color: transparent;
   }
-
   /**
   * Scrollbar style
   * set here and add in: @layer base{ body{..., @apply scroll-bar-style;}, ...}
