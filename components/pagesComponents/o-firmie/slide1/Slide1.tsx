@@ -17,29 +17,40 @@ const Slide1: React.FunctionComponent<{
 
   /**JSX**/
   return (
-    <div
-      className={`flex ${
-        !isLandscape
-          ? 'flex-col-reverse'
-          : slideNumber === 0
-          ? `flex-row`
-          : 'flex-row-reverse'
-      } w-full h-full`}
-    >
-      <div
-        //__
-        className={
-          isLandscape ? 'fc w-[50%] h-full' : 'fc w-full h-[50%] sm:h-[60%]'
-        }
-      >
+    <div className="flex flex-col-reverse justify-between sm:flex-row w-full h-full ">
+      <div className="flex w-full h-[40%] absolute top-0  sm:top-0 sm:right-0  sm:w-[70%] sm:h-[70%]  border-b border-r border-greyShade1 " />
+      <div className="flex w-full h-[60%] absolute bottom-0 sm:left-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%]  border-t border-l border-greyShade2" />
+
+      <div className="flex w-full h-[60%] absolute bottom-0 sm:left-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%] ">
         <GraphicSection />
       </div>
-      <div
-        className={isLandscape ? `w-[50%] h-full` : 'w-full h-[50%] sm:h-[40%]'}
-      >
+      <div className="flex w-full h-[40%] absolute top-0  sm:top-0 sm:right-0  sm:w-[70%] sm:h-[70%] pt-[62px]">
         <TextSection />
       </div>
     </div>
+
+    // <div
+    //   className={`flex ${
+    //     !isLandscape
+    //       ? 'flex-col-reverse'
+    //       : slideNumber === 0
+    //       ? `flex-row`
+    //       : 'flex-row-reverse'
+    //   } w-full h-full`}
+    // >
+    //   <div
+    //     className={
+    //       isLandscape ? 'fc w-[50%] h-full' : 'fc w-full h-[50%] sm:h-[60%]'
+    //     }
+    //   >
+    //     <GraphicSection />
+    //   </div>
+    //   <div
+    //     className={isLandscape ? `w-[50%] h-full` : 'w-full h-[50%] sm:h-[40%]'}
+    //   >
+    //     <TextSection />
+    //   </div>
+    // </div>
   );
 };
 
