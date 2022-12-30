@@ -3,6 +3,7 @@ import React from 'react';
 import GraphicSection from './graphicSection/GraphicSection';
 /**Hook Staf**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
+import TextSection from './textSection/TextSection';
 /**Basic Data**/
 
 /**------------------------------------------------------------------------**/
@@ -15,11 +16,11 @@ const Slide2: React.FunctionComponent<{
   /**JSX**/
   return (
     <div className="flex flex-col-reverse sm:flex-row w-full h-full">
-      <div className="flex w-full h-[50%] sm:absolute sm:bottom-0 sm:right-0 sm:w-[60%] sm:h-[60%] lg:w-[70%] lg:h-[70%] xl:w-[90%] xl:h-[90%] xxl:w-[100%] xxl:h-[100%] border-t border-l border-greyShade1">
+      <div className="flex w-full h-[50%] sm:absolute sm:bottom-0 sm:right-0 sm:w-[0%] sm:h-[60%] lg:w-[70%] lg:h-[70%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%] border-t border-l border-greyShade2">
         <GraphicSection />
       </div>
-      <div className="flex w-full h-[50%] sm:absolute sm:top-0 sm:left-0 sm:w-[70%] sm:h-[70%]  border-b border-r border-greyShade1 ">
-        {' '}
+      <div className="flex w-full h-[50%] sm:absolute sm:top-0 sm:left-0 sm:w-[70%] sm:h-[70%]  border-b border-r border-greyShade2 ">
+        <TextSection />
       </div>
     </div>
 
