@@ -31,14 +31,14 @@ const TextSection = () => {
         </div>
       </div>
       <div className="flex h-[50%] justify-end  bg-dark pt-6 z-[1]">
-        <div className=" overflow-hidden">
+        <div className="overflow-hidden">
           <motion.p
-            className="text-[2rem] text-grey text-right leading-[2rem] disable"
+            className="text-[1rem] text-dark text-right leading-[2rem] uppercase bg-corpo px-4 py-1 rounded-sm disable"
             variants={variants}
             initial="initial"
             animate="animate"
           >
-            Zobacz pełną ofertę 0
+            Zobacz pełną ofertę
           </motion.p>
         </div>
       </div>

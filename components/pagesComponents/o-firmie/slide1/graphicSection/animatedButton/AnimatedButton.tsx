@@ -1,45 +1,33 @@
 import React, { useState } from 'react';
-/**Framer Motion Staff*/
-import { motion } from 'framer-motion';
-/**FReact Aria Staff*/
-import { FocusRing } from 'react-aria';
+/**Components**/
+import AriaMotionButton from '../../../../../_basicComponents/buttons/ariaMotionButton/AriaMotionButton';
+/**FrameMotion Staff
+ */
+import { animatedButton } from '../../../../../../utils/framerMotion/framerMotionUtils';
 
 /**--------------------------------------------------------**/
-const AnimatedButton = () => {
-  const [state, setState] = useState(false);
+const AnimatedButton: React.FunctionComponent<{
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+}> = ({ onClick }) => {
   /**JSX**/
   return (
-    <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black">
-      <motion.button
-        aria-label="Zobacz opis wtyczki"
-        className="absolute top-[20%] left-[30%] h-[65%] w-[65%] select-none touch-none focus:outline-none no-sparkling"
-        whileHover={{
-          scale: 1.05,
-        }}
-        transition={{
-          type: 'spring',
-          damping: 5,
-          stiffness: 100,
-          restDelta: 0.001,
-        }}
-        onClick={() => console.log('...........AnimatedButton')}
-      >
-        <div className="flex justify-between flex-col w-full h-full">
-          <div className="flex justify-between w-full h-[30%] ">
-            <div className="w-[30%] h-full border-t border-l border-grey" />
-            <div
-              className={`w-[30%] h-full border-t border-r ${
-                state ? ' border-corpo' : 'border-grey'
-              } border-grey`}
-            />
-          </div>
-          <div className="flex justify-between  w-full h-[30%] ">
-            <div className="w-[30%] h-full border-b border-l border-grey" />
-            <div className="w-[30%] h-full border-b border-r border-grey" />
-          </div>
+    <AriaMotionButton
+      ariaLabel="Zobacz opis wtyczki"
+      whileHover={animatedButton.whileHover}
+      transition={animatedButton.transition}
+      onClick={onClick}
+    >
+      <div className="flex justify-between flex-col w-full h-full">
+        <div className="flex justify-between w-full h-[30%] ">
+          <div className="w-[30%] h-full border-t border-l border-grey" />
+          <div className={`w-[30%] h-full border-t border-r  border-grey`} />
         </div>
-      </motion.button>
-    </FocusRing>
+        <div className="flex justify-between  w-full h-[30%] ">
+          <div className="w-[30%] h-full border-b border-l border-grey" />
+          <div className="w-[30%] h-full border-b border-r border-grey" />
+        </div>
+      </div>
+    </AriaMotionButton>
   );
 };
 

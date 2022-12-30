@@ -53,4 +53,21 @@ const homePageSliderVariants = {
   to: { opacity: 0, transition: { type: 'tween', duration: 0.6 } },
 };
 
-export { routingAnimation, overlayContainerVariants, homePageSliderVariants };
+const animatedButton = {
+  whileHover: {
+    scale: 1.05,
+  },
+  transition: {
+    type: 'spring',
+    damping: 5,
+    stiffness: 100,
+    restDelta: 0.001,
+  },
+};
+
+export {
+  routingAnimation,
+  overlayContainerVariants,
+  homePageSliderVariants,
+  animatedButton,
+};

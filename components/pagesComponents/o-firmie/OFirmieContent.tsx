@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 /**Components**/
 import OFirmieSlider from './slider/OFirmieSlider';
+import NavPanel from './navPanel/NavPanel';
 /**FramerMotion Staf**/
 import { motion } from 'framer-motion';
 /**Basic Data*/
@@ -117,6 +118,11 @@ const OFirmieContent = () => {
       <OFirmieSlider
         slideNumber={slideState.number}
         scrollDeltaValue={slideState.deltaY}
+      />
+      <NavPanel
+        slideNumber={slideState.number + 1}
+        setSlideState={setSlideState}
+        sectionsNumber={sectionsNumber}
       />
     </motion.div>
   );
