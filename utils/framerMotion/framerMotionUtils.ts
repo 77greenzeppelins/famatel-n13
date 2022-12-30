@@ -53,6 +53,10 @@ const homePageSliderVariants = {
   to: { opacity: 0, transition: { type: 'tween', duration: 0.6 } },
 };
 
+/**
+ * used in <AriaMotionButton> /  ...
+ * propsed in: <AnimatedButton> / ...
+ */
 const animatedButton = {
   whileHover: {
     scale: 1.05,

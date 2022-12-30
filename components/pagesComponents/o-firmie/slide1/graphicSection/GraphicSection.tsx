@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 /**Component**/
 import SquareImageHolder from '../../../../multipagesComponents/imageHolder/SquareImageHolder';
 import AnimatedButton from './animatedButton/AnimatedButton';
@@ -8,11 +8,13 @@ import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFir
 import { motion } from 'framer-motion';
 const variants = {
   initial: { x: '-100%', y: '-20%' },
-  animate: { x: 0, y: 0, transition: { duration: 1.2 } },
+  animate: { x: 0, y: 0, transition: { ease: 'circOut', duration: 1.2 } },
 };
 
 /**----------------------------------------------------------------------**/
 const GraphicSection = () => {
+  /**Local State*/
+  const [sniperIsMounted, setSniperIsMounted] = useState(false);
   /**JSX**/
   return (
     <motion.div
@@ -20,19 +22,33 @@ const GraphicSection = () => {
       variants={variants}
       initial="initial"
       animate="animate"
+      onAnimationComplete={() => console.log(setSniperIsMounted(true))}
     >
       <SquareImageHolder
         imageData={imgOFirmiePage[0].image}
         refDivStyle="flex justify-start items-end w-full h-full "
         squareDivStyle="relative overflow-hidden"
       >
-        <div className="absolute top-[20%] left-[30%] h-[65%] w-[65%]">
+        {sniperIsMounted && (
+          <motion.div
+            className="absolute top-[20%] left-[30%] h-[65%] w-[65%]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 0.9 } }}
+          >
+            <AnimatedButton
+              onClick={() => {
+                console.log('...........AnimatedButton / GraphicSection');
+              }}
+            />
+          </motion.div>
+        )}
+        {/* <div className="absolute top-[20%] left-[30%] h-[65%] w-[65%]">
           <AnimatedButton
             onClick={() => {
               console.log('...........AnimatedButton / GraphicSection');
             }}
           />
-        </div>
+        </div> */}
       </SquareImageHolder>
     </motion.div>
   );

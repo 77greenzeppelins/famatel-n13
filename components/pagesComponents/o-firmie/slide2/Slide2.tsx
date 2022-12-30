@@ -1,10 +1,9 @@
 import React from 'react';
 /**Components*/
-import SquareImageHolder from '../../../multipagesComponents/imageHolder/SquareImageHolder';
+import GraphicSection from './graphicSection/GraphicSection';
 /**Hook Staf**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**Basic Data**/
-import { imgOFirmiePage } from '../../../../public/images/oFirmiePage/imgOFirmiePage';
 
 /**------------------------------------------------------------------------**/
 const Slide2: React.FunctionComponent<{
@@ -15,28 +14,38 @@ const Slide2: React.FunctionComponent<{
   const { isLandscape } = useWindowSize({ screensNumber: 1 });
   /**JSX**/
   return (
-    <div
-      className={`${
-        isLandscape ? `flex flex-row` : 'flex flex-col'
-      } w-full h-full`}
-    >
-      <div
-        className={`fc ${
-          isLandscape ? `w-[50%] h-full` : 'w-full h-[50%]'
-        } text-3xl text-light`}
-      >
-        <p>text for slide_2</p>
+    <div className="flex flex-col-reverse sm:flex-row w-full h-full">
+      <div className="flex w-full h-[50%] sm:absolute sm:bottom-0 sm:right-0 sm:w-[60%] sm:h-[60%] lg:w-[70%] lg:h-[70%] xl:w-[90%] xl:h-[90%] xxl:w-[100%] xxl:h-[100%] border-t border-l border-greyShade1">
+        <GraphicSection />
       </div>
-      <div
-        className={`fc ${isLandscape ? `w-[50%] h-full` : 'w-full h-[50%]'} `}
-      >
-        <SquareImageHolder
-          imageData={imgOFirmiePage[1].image}
-          refDivStyle="flex justify-end items-end h-full w-full"
-          squareDivStyle="relative bg-dark overflow-hidden"
-        />
+      <div className="flex w-full h-[50%] sm:absolute sm:top-0 sm:left-0 sm:w-[70%] sm:h-[70%]  border-b border-r border-greyShade1 ">
+        {' '}
       </div>
     </div>
+
+    // <div
+    //   className={`${
+    //     isLandscape ? `flex flex-row` : 'flex flex-col'
+    //   } w-full h-full`}
+    // >
+    //   <div
+    //     className={`fc ${
+    //       isLandscape ? `w-[50%] h-full` : 'w-full h-[40%]'
+    //     } text-3xl text-light`}
+    //   >
+    //     <div className="flex justify-center flex-col px-[2%] md:px-[60px] w-full h-full ">
+    //       <h1 className=" text-light text-left text-[3rem]  leading-[3rem]  xl:text-[6rem]  xl:leading-[6rem]">
+    //         Header in slide_2
+    //       </h1>
+    //     </div>
+    //   </div>
+    //   <div
+    //     //__
+    //     className={isLandscape ? 'fc w-[50%] h-full' : 'fc w-full h-[60%]'}
+    //   >
+    //     <GraphicSection />
+    //   </div>
+    // </div>
   );
 };
 

@@ -1,9 +1,9 @@
 import React from 'react';
 /**Components*/
 import GraphicSection from './graphicSection/GraphicSection';
+import TextSection from './textSection/TextSection';
 /**Hook Staf**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
-import TextSection from './textSection/TextSection';
 
 /**------------------------------------------------------------------------**/
 const Slide1: React.FunctionComponent<{
@@ -28,14 +28,14 @@ const Slide1: React.FunctionComponent<{
     >
       <div
         //__
-        className={isLandscape ? 'fc w-[50%] h-full' : 'fc w-full h-[60%]'}
+        className={
+          isLandscape ? 'fc w-[50%] h-full' : 'fc w-full h-[50%] sm:h-[60%]'
+        }
       >
         <GraphicSection />
       </div>
       <div
-        className={` flex flex-col text-3xl text-light px-[2%] md:px-[60px] ${
-          isLandscape ? `w-[50%] h-full` : 'w-full h-[40%]'
-        } `}
+        className={isLandscape ? `w-[50%] h-full` : 'w-full h-[50%] sm:h-[40%]'}
       >
         <TextSection />
       </div>
