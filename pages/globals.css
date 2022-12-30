@@ -53,6 +53,12 @@
   .disable {
     @apply select-none touch-none no-sparkling;
   }
+  .inner-px {
+    @apply px-[2%] xxs:px-[6%] xs:px-[60px];
+  }
+  .inner-px-md {
+    @apply px-[2%] xxs:px-[6%] md:px-[60px];
+  }
   /**
   * Scrollbar style
   * set here and add in: @layer base{ body{..., @apply scroll-bar-style;}, ...}

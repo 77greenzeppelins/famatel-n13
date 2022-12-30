@@ -78,7 +78,7 @@ const NavLink: React.FunctionComponent<{
         aStyle="relative fc w-full h-full cursor-pointer bg-transparent select-none touch-none focus:outline-none group "
       >
         <p
-          className={`text-[0.625rem] lg:text-[0.75rem] xxxl:text-[0.875rem] tracking-widest ${
+          className={`text-[0.625rem] lg:text-[0.75rem] xxxl:text-[0.875rem] tracking-widest  ${
             linkStyleisHovered ? 'text-corpo' : 'text-grey'
           }`}
         >

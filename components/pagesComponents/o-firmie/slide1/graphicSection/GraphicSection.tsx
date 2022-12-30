@@ -18,7 +18,7 @@ const GraphicSection = () => {
   /**JSX**/
   return (
     <motion.div
-      className="w-full h-full disable"
+      className="w-full max-w-[800px] xxl:max-w-[1400px] h-full  disable"
       variants={variants}
       initial="initial"
       animate="animate"
@@ -26,7 +26,7 @@ const GraphicSection = () => {
     >
       <SquareImageHolder
         imageData={imgOFirmiePage[0].image}
-        refDivStyle="flex justify-start items-end w-full h-full "
+        refDivStyle="flex justify-start items-center sm:items-end w-full h-full "
         squareDivStyle="relative overflow-hidden"
       >
         {sniperIsMounted && (

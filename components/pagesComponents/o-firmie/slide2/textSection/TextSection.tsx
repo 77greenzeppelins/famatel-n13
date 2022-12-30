@@ -11,19 +11,19 @@ const variants = {
 /**----------------------------------------------------------**/
 const TextSection = () => {
   return (
-    <div className="flex justify-center flex-col px-[2%] md:px-[60px] w-full max-w-[1000px] h-full ">
+    <div className="flex justify-center flex-col px-[2%] md:px-[60px] w-full max-w-[80%] sm:max-w-[1000px] h-full ">
       <h1 className=" text-light text-left  text-[3rem]  leading-[3rem] md:text-[4rem] md:leading-[4rem]  xl:text-[5rem]  xl:leading-[5rem]">
         Twój nowy projekt
       </h1>
       <div className="overflow-hidden">
         <motion.p
-          className="text-[1rem] md:text-[1.5rem] text-grey text-left tracking-[0.25rem]  "
+          className="text-[1rem] md:text-[1.5rem] text-grey text-left tracking-[0.2rem]  "
           variants={variants}
           initial="initial"
           animate="animate"
         >
-          potrzebuje optymalnego wsparcia technicznego. Jesteśmy gotowi je
-          zapewnić.
+          potrzebuje optymalnego wsparcia technicznego.{' '}
+          <span className="text-light"> Jesteśmy gotowi je zapewnić.</span>
         </motion.p>
       </div>
     </div>

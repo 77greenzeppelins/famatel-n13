@@ -23,10 +23,10 @@ const AriaMotionButton: React.FunctionComponent<IF_AriaMotionButton> = ({
   children,
 }) => {
   return (
-    <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black">
+    <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black ">
       <motion.button
         aria-label={ariaLabel}
-        className="w-full h-full focus:outline-none disable"
+        className="w-full h-full focus:outline-none disable pointer-events-auto"
         whileHover={whileHover}
         transition={transition}
         onClick={onClick}

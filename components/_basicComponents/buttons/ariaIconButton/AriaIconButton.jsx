@@ -6,7 +6,8 @@ import { motion, useAnimation } from 'framer-motion';
 /**BasicData*/
 //___<a> style, optimised for "iconStyle"
 const buttonDefaultStyle =
-  'fc h-[70%] aspect-square bg-greyShade1 select-none touch-none focus:outline-none';
+  // 'fc h-[70%] aspect-square bg-greyShade1 select-none touch-none focus:outline-none';
+  'fc h-[70%] aspect-square bg-greyShade1 focus:outline-none';
 
 /**----------------------------------------------------------------------------------**/
 const AriaIconButton = ({ children, ...props }) => {
@@ -48,7 +49,9 @@ const AriaIconButton = ({ children, ...props }) => {
         style={{
           WebkitTapHighlightColor: 'transparent',
         }}
-        className={props.buttonStyle ? props.buttonStyle : buttonDefaultStyle}
+        className={`${
+          props.buttonStyle ? props.buttonStyle : buttonDefaultStyle
+        } pointer-events-auto disabled`}
       >
         {children}
         {/* {childType ? children : createLabel(isPressed)} */}
