@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 /**Component**/
 import SquareImageHolder from '../../../../multipagesComponents/imageHolder/SquareImageHolder';
 import AnimatedButton from './animatedButton/AnimatedButton';
@@ -12,17 +12,19 @@ const variants = {
 };
 
 /**----------------------------------------------------------------------**/
-const GraphicSection = () => {
+const GraphicSection: React.FunctionComponent<{
+  productDescriptionOpener: Dispatch<SetStateAction<boolean>>;
+}> = ({ productDescriptionOpener }) => {
   /**Local State*/
   const [sniperIsMounted, setSniperIsMounted] = useState(false);
   /**JSX**/
   return (
     <motion.div
-      className="w-full max-w-[800px] xxl:max-w-[1400px] h-full  disable"
+      className="w-full max-w-[800px] xxl:max-w-[1400px] h-full disable"
       variants={variants}
       initial="initial"
       animate="animate"
-      onAnimationComplete={() => console.log(setSniperIsMounted(true))}
+      onAnimationComplete={() => setSniperIsMounted(true)}
     >
       <SquareImageHolder
         imageData={imgOFirmiePage[0].image}
@@ -37,18 +39,11 @@ const GraphicSection = () => {
           >
             <AnimatedButton
               onClick={() => {
-                console.log('...........AnimatedButton / GraphicSection');
+                productDescriptionOpener(prev => !prev);
               }}
             />
           </motion.div>
         )}
-        {/* <div className="absolute top-[20%] left-[30%] h-[65%] w-[65%]">
-          <AnimatedButton
-            onClick={() => {
-              console.log('...........AnimatedButton / GraphicSection');
-            }}
-          />
-        </div> */}
       </SquareImageHolder>
     </motion.div>
   );

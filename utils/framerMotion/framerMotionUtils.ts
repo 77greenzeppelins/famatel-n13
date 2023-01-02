@@ -61,11 +61,23 @@ const animatedButton = {
   whileHover: {
     scale: 1.05,
   },
+  whileTap: {
+    scale: 1.05,
+  },
   transition: {
     type: 'spring',
     damping: 5,
     stiffness: 100,
     restDelta: 0.001,
+  },
+};
+const animatedSniper = {
+  whileHover: {
+    opacity: 1,
+  },
+  transition: {
+    type: 'tween',
+    duration: 0.6,
   },
 };
 
@@ -74,4 +86,5 @@ export {
   overlayContainerVariants,
   homePageSliderVariants,
   animatedButton,
+  animatedSniper,
 };

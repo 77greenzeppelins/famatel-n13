@@ -1,19 +1,18 @@
-import React from 'react';
+import { AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react';
 /**Components*/
 import GraphicSection from './graphicSection/GraphicSection';
 import TextSection from './textSection/TextSection';
-/**Hook Staf**/
-import useWindowSize from '../../../../utils/hooks/useWindowSize';
 
 /**------------------------------------------------------------------------**/
 const Slide1: React.FunctionComponent<{
   slideNumber: number;
-  scrollDeltaValue: number;
-}> = ({ slideNumber, scrollDeltaValue }) => {
+}> = ({ slideNumber }) => {
+  /**State Section**/
+  const [isProductDescriptionOpen, setIsProductDescriptionOpen] =
+    useState(false);
   /**...WTF**/
-  //   console.log('isLandscape', isLandscape);
-  /**Hook Section**/
-  const { isLandscape } = useWindowSize({ screensNumber: 1 });
+  // console.log('slideNumber', slideNumber);
 
   /**JSX**/
   return (
@@ -22,13 +21,18 @@ const Slide1: React.FunctionComponent<{
       <div className="flex w-full h-[60%] absolute bottom-0 sm:left-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%]  border-t border-l border-greyShade2" /> */}
 
       <div className="flex w-full h-[60%] absolute bottom-0 sm:left-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%] ">
-        <GraphicSection />
+        <GraphicSection
+          productDescriptionOpener={setIsProductDescriptionOpen}
+        />
       </div>
       <div
-        className="flex w-full h-[40%] absolute top-0 sm:top-0 sm:right-0  sm:w-[70%] sm:h-[70%]  xl:h-full pointer-events-none"
+        className="absolute top-0 sm:top-0 sm:right-0 flex w-full h-[40%]  sm:w-[70%] sm:h-[70%]  xl:h-full pointer-events-none"
         //__border-b border-greyShade2
       >
-        <TextSection />
+        <TextSection
+          isProductDescriptionOpen={isProductDescriptionOpen}
+          slideNumber={slideNumber}
+        />
       </div>
     </div>
 

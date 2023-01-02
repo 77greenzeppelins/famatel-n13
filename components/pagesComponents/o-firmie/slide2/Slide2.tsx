@@ -1,29 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 /**Components*/
 import GraphicSection from './graphicSection/GraphicSection';
-/**Hook Staf**/
-import useWindowSize from '../../../../utils/hooks/useWindowSize';
 import TextSection from './textSection/TextSection';
-/**Basic Data**/
 
 /**------------------------------------------------------------------------**/
 const Slide2: React.FunctionComponent<{
   slideNumber: number;
-  scrollDeltaValue: number;
-}> = ({ slideNumber, scrollDeltaValue }) => {
-  /**Hook Section**/
-  const { isLandscape } = useWindowSize({ screensNumber: 1 });
+}> = ({ slideNumber }) => {
+  /**State Section**/
+  const [isProductDescriptionOpen, setIsProductDescriptionOpen] =
+    useState(false);
   /**JSX**/
   return (
     <div className="flex flex-col-reverse justify-between sm:flex-row w-full h-full ">
-      <div className="flex w-full h-[50%] sm:absolute sm:bottom-0 sm:right-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%] border-t border-l border-greyShade2" />
-      <div className="flex w-full h-[50%] sm:absolute sm:top-0 sm:left-0 sm:w-[70%] sm:h-[70%]  border-b border-r border-greyShade2 " />
+      {/* <div className="flex w-full h-[50%] sm:absolute sm:bottom-0 sm:right-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%] border-t border-l border-greyShade2" />
+      <div className="flex w-full h-[50%] sm:absolute sm:top-0 sm:left-0 sm:w-[70%] sm:h-[70%]  border-b border-r border-greyShade2 " /> */}
 
-      <div className="flex w-full h-[60%] absolute bottom-0  sm:bottom-0 sm:right-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%] ">
-        <GraphicSection />
+      <div className="flex w-full h-[60%] absolute bottom-0 sm:justify-end sm:bottom-0 sm:right-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%] ">
+        <GraphicSection
+          productDescriptionOpener={setIsProductDescriptionOpen}
+        />
       </div>
-      <div className="flex w-full h-[40%] absolute top-0  sm:top-0 sm:left-0  sm:w-[70%] sm:h-[70%]  ">
-        <TextSection />
+      <div className="flex w-full h-[40%] absolute top-0 sm:top-0 sm:left-0 sm:w-[60%] sm:h-full pointer-events-none">
+        <TextSection
+          isProductDescriptionOpen={isProductDescriptionOpen}
+          slideNumber={slideNumber}
+        />
       </div>
     </div>
 

@@ -108,17 +108,14 @@ const OFirmieContent = () => {
        * "fixed" prevents from "resizing" when changing pages
        */
       className="fixed w-screen h-full pt-[52px] bg-dark touch-auto"
-      // className="fixed inset-0 pt-[52px] bg-dark"
+      // className="fixed inset-0 pt-[52px] bg-dark "
       onWheel={onWheelHandler}
       onTouchStart={e => {
         setTouchInitialValue(e.changedTouches[0].screenY);
       }}
       onTouchEnd={onTouchEndHandler}
     >
-      <OFirmieSlider
-        slideNumber={slideState.number}
-        scrollDeltaValue={slideState.deltaY}
-      />
+      <OFirmieSlider slideNumber={slideState.number} />
       <NavPanel
         slideNumber={slideState.number + 1}
         setSlideState={setSlideState}

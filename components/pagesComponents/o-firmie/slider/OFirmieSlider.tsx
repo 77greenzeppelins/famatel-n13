@@ -3,18 +3,16 @@ import React from 'react';
 import Slide1 from '../slide1/Slide1';
 import Slide2 from '../slide2/Slide2';
 import Slide3 from '../slide3/Slide3';
-
 /**Framer Motion Staff**/
 import { AnimatePresence, motion } from 'framer-motion';
 import { homePageSliderVariants } from '../../../../utils/framerMotion/framerMotionUtils';
 /**Basic Data**/
-const slidesArr = [Slide1, Slide2, Slide3];
+const slidesArr = [Slide2, Slide1, Slide3];
 
 /**----------------------------------------------------**/
 const OFirmieSlider: React.FunctionComponent<{
   slideNumber: number;
-  scrollDeltaValue: number;
-}> = ({ slideNumber, scrollDeltaValue }) => {
+}> = ({ slideNumber }) => {
   /**JSX**/
   return (
     <AnimatePresence mode="wait" initial={true}>
@@ -31,10 +29,7 @@ const OFirmieSlider: React.FunctionComponent<{
               className="fc w-[100%] h-[100%] "
               // className="fixed inset-0"
             >
-              <Component
-                slideNumber={slideNumber}
-                scrollDeltaValue={scrollDeltaValue}
-              />
+              <Component slideNumber={slideNumber} />
             </motion.div>
           );
       })}

@@ -8,25 +8,31 @@ import { motion } from 'framer-motion';
 export interface IF_AriaMotionButton {
   ariaLabel: string;
   whileHover?: {};
+  whileTap?: {};
   transition?: {};
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   children?: ReactNode;
-  fake?: string;
+  buttonStyle?: string;
 }
 
 /**-------------------------------------------------------------------------------**/
 const AriaMotionButton: React.FunctionComponent<IF_AriaMotionButton> = ({
   ariaLabel,
   whileHover,
+  whileTap,
   transition,
   onClick,
   children,
+  buttonStyle,
 }) => {
   return (
     <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black ">
       <motion.button
         aria-label={ariaLabel}
-        className="w-full h-full focus:outline-none disable pointer-events-auto"
+        className={`${
+          buttonStyle ? buttonStyle : 'relative fc'
+        } w-full h-full focus:outline-none disable pointer-events-auto group`}
+        whileTap={whileTap}
         whileHover={whileHover}
         transition={transition}
         onClick={onClick}
