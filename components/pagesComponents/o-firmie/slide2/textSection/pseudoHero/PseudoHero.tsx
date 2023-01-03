@@ -27,7 +27,7 @@ const PseudoHero: React.FunctionComponent<{ slideNumber: number }> = ({
       {slideNumber === 0 && (
         <div
           className={`flex flex-col justify-end items-start md:justify-center lg:justify-center inner-px sm:inner-px-md pt-[62px] ${
-            layoutCondition ? 'lg:pb-0' : 'lg:pb-[30%] xl:pb-0'
+            layoutCondition ? 'md:pb-0' : 'md:pb-[50%] xl:pb-0'
           }  w-full h-full`}
         >
           <div className="flex justify-start items-end lg:pb-0 z-[10] ">
