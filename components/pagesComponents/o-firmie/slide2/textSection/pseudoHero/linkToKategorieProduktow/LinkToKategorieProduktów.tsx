@@ -15,7 +15,7 @@ const LinkToKategorieProduktów = () => {
   return (
     <TextLinkWithArrow
       linkHref={pagesUrl.produkty}
-      aStyle="fc  focus:outline-none h-[40px] overflow-hidden"
+      aStyle="fc focus:outline-none h-[40px] overflow-hidden disable"
       ariaLabel={'Link do strony: "Kategorie Produktów"'}
       variants={variants}
       label="Zobacz pełną ofertę"
