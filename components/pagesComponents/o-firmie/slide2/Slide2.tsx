@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 /**Components*/
 import GraphicSection from './graphicSection/GraphicSection';
 import TextSection from './textSection/TextSection';
-/** */
+/**Hoof Staff**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**Basic Data
  * (!) crucial breakPoint: md / 768
@@ -49,7 +49,7 @@ const Slide2: React.FunctionComponent<{
       <div
         className={`absolute ${
           layoutCondition
-            ? 'bottom-0 h-full fc pb-[64px] scale-90 origin-left'
+            ? 'bottom-0 h-full fc pb-[74px] scale-90 origin-left'
             : 'top-0 h-[40%]'
         }  left-0 flex w-full md:w-[70%] md:h-full pointer-events-none`}
       >

@@ -50,10 +50,10 @@ const AriaJsLink = ({
         aria-label={props.ariaLabel}
         animate={controls}
         {...linkProps}
-        style={{
-          WebkitTapHighlightColor: 'transparent',
-          // alignSelf: 'center',
-        }}
+        // style={{
+        //   WebkitTapHighlightColor: 'transparent',
+        //   // alignSelf: 'center',
+        // }}
         className={props.aStyle ? props.aStyle : aDefaultStyle}
       >
         {children}
