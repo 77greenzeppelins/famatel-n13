@@ -2,6 +2,15 @@ import React, { useState } from 'react';
 /**Components*/
 import GraphicSection from './graphicSection/GraphicSection';
 import TextSection from './textSection/TextSection';
+/** */
+import useWindowSize from '../../../../utils/hooks/useWindowSize';
+/**Basic Data
+ * (!) crucial breakPoint: md / 768
+ * additional settingas are in "SquareImageHolder__container" & "TextSection-Slide1__container"
+ */
+const mdMainContainer = 'md:flex-row';
+const mdGraphicContainer =
+  'md:justify-end md:w-[80%] md:h-[100%] xl:w-[90%] xl:h-[100%] xxl:w-[96%] xxl:h-[100%]';
 
 /**------------------------------------------------------------------------**/
 const Slide2: React.FunctionComponent<{
@@ -10,18 +19,40 @@ const Slide2: React.FunctionComponent<{
   /**State Section**/
   const [isProductDescriptionOpen, setIsProductDescriptionOpen] =
     useState(false);
+
+  /**Hook For Special Case*/
+  const { height } = useWindowSize({ screensNumber: 1 });
+  const layoutCondition = height < 550;
+  /**Special Render*/
+  // if (height < 500){
+  console.log('layoutCondition:', layoutCondition);
+
+  // }
   /**JSX**/
   return (
-    <div className="flex flex-col-reverse justify-between sm:flex-row w-full h-full ">
-      {/* <div className="flex w-full h-[50%] sm:absolute sm:bottom-0 sm:right-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%] border-t border-l border-greyShade2" />
-      <div className="flex w-full h-[50%] sm:absolute sm:top-0 sm:left-0 sm:w-[70%] sm:h-[70%]  border-b border-r border-greyShade2 " /> */}
-
-      <div className="flex w-full max-h-[1200px] h-[60%] absolute bottom-0 sm:justify-end sm:bottom-0 sm:right-0 sm:w-[80%] sm:h-[100%] xl:w-[90%] xl:h-[100%] xxl:w-[96%] xxl:h-[100%] ">
+    <div
+      data-component="Slide2__container"
+      // className={
+      //   layoutCondition
+      //     ? 'bg-corpo'
+      //     : `flex flex-col-reverse w-full h-full ${mdMainContainer}`
+      // }
+      className={`flex flex-col-reverse w-full h-full ${mdMainContainer} `}
+    >
+      <div
+        className={`absolute bottom-0 right-0 flex w-full max-h-[1200px] h-[60%] ${mdGraphicContainer}`}
+      >
         <GraphicSection
           productDescriptionOpener={setIsProductDescriptionOpen}
         />
       </div>
-      <div className="flex w-full h-[40%] absolute top-0 sm:top-0 sm:left-0 sm:w-[60%] sm:h-full pointer-events-none">
+      <div
+        className={`absolute ${
+          layoutCondition
+            ? 'bottom-0 h-full fc pb-[64px] scale-90 origin-left'
+            : 'top-0 h-[40%]'
+        }  left-0 flex w-full md:w-[70%] md:h-full pointer-events-none`}
+      >
         <TextSection
           isProductDescriptionOpen={isProductDescriptionOpen}
           slideNumber={slideNumber}

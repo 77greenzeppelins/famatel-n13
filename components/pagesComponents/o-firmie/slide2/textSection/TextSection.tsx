@@ -28,12 +28,12 @@ const TextSection: React.FunctionComponent<{
   return (
     <div
       data-component="TextSection-Slide1__container"
-      className="relative w-full h-full overflow-hidden "
+      className="relative w-full h-full overflow-hidden"
     >
       <AnimatePresence initial={false}>
         <motion.div
           key={Number(isProductDescriptionOpen)}
-          className="absolute inset-0"
+          className="flex w-full h-full"
           variants={variants}
           initial="initial"
           animate="animate"

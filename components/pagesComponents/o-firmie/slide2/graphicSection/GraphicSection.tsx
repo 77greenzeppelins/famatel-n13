@@ -19,15 +19,16 @@ const GraphicSection: React.FunctionComponent<{
   /**JSX**/
   return (
     <motion.div
+      data-component="GraphicSection-slide2__container"
       variants={variants}
       initial="initial"
       animate="animate"
-      className="w-full max-w-[800px] xxl:max-w-[1400px] h-full disable "
+      className="w-full max-w-[800px] xxl:max-w-[1400px] h-full disable"
       onAnimationComplete={() => setSniperIsMounted(true)}
     >
       <SquareImageHolder
         imageData={imgOFirmiePage[1].image}
-        refDivStyle="flex justify-end items-end w-full h-full "
+        refDivStyle="flex justify-end items-center w-full h-full pb-[60px] md:pt-[30%]  lg:pb-0 lg:pt-[10%]"
         squareDivStyle="relative overflow-hidden"
       >
         {sniperIsMounted && (

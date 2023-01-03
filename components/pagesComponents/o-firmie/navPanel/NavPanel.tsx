@@ -14,7 +14,7 @@ const NavPanel: React.FunctionComponent<{
 }> = ({ slideNumber, setSlideState, sectionsNumber }) => {
   /**JSX*/
   return (
-    <div className="absolute hidden xl:flex justify-between inset-0 pointer-events-none">
+    <div className="absolute flex justify-between inset-0 pointer-events-none">
       <div className="flex-1 ">
         <ButtonsSection
           sectionsNumber={sectionsNumber}
@@ -22,7 +22,7 @@ const NavPanel: React.FunctionComponent<{
           setSlideState={setSlideState}
         />
       </div>
-      <div className="flex items-start sm:items-end w-[60px] xl:w-[120px]">
+      <div className="flex items-end w-[30px] md:w-[40px] xl:w-[120px] pb-[60px] pointer-events-none">
         <ScrollSection />
       </div>
     </div>

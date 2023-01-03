@@ -19,8 +19,8 @@ const PseudoHero: React.FunctionComponent<{ slideNumber: number }> = ({
   return (
     <AnimatePresence initial={true}>
       {slideNumber === 0 && (
-        <div className="flex flex-col justify-center items-start lg:justify-center inner-px sm:inner-px-md pt-[62px] sm:pb-16 lg:pb-0 w-full h-full ">
-          <div className="flex justify-start items-end  lg:pb-0 z-[10] ">
+        <div className="flex flex-col justify-end items-start md:justify-center lg:justify-center inner-px sm:inner-px-md pt-[62px]  lg:pb-0 w-full h-full">
+          <div className="flex justify-start items-end lg:pb-0 z-[10] ">
             <div className=" overflow-hidden">
               <motion.h1
                 className=" tracking-[0.25rem] disable "
