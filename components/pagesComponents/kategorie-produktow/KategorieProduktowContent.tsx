@@ -1,25 +1,39 @@
 import React, { useState } from 'react';
 /**Components**/
-import FakeContent from './fakeContent/FakeContent';
-import BottomMenu from './bottomMenu/BottomMenu';
-import ProductPageFixedOverlay from '../../layouts/pseudoLayouts/productPageFixedOverlay/ProductPageFixedOverlay';
-
+import FixedContainerWithEngine from '../../layouts/pseudoLayouts/fixedContainerWithEngine/FixedContainerWithEngine';
+import KategorieProduktowSlider from './slider/KategorieProduktowSlider';
+/**Basic Data*/
+const screensNumber = 11;
+const timeoutFactor = 1000;
 /**----------------------------------------------------------------------------------**/
 const KategorieProduktowContent = () => {
-  /**Local State**/
-  const [categoryIndex, setCategoryIndex] = useState<number>(0);
+  /**LocalState; just to control slides**/
+  const [slideState, setSlideState] = useState<{
+    number: number;
+  }>({
+    number: 0,
+  });
+
   /**JSX**/
   return (
-    <div
-      data-component="KategorieProduktowContent__container"
-      className="relative"
+    <FixedContainerWithEngine
+      slideState={slideState.number}
+      setSlideState={setSlideState}
+      timeoutFactor={timeoutFactor}
+      sectionsNumber={screensNumber}
     >
-      <FakeContent setCategoryIndex={setCategoryIndex} />
-      <ProductPageFixedOverlay />
-      <div className="fixed fc bottom-0 left-0 right-0 h-[60px] ">
-        <BottomMenu categoryIndex={categoryIndex} />
-      </div>
-    </div>
+      <KategorieProduktowSlider currentCategory={slideState.number} />
+    </FixedContainerWithEngine>
+    // <div
+    //   data-component="KategorieProduktowContent__container"
+    //   className="relative"
+    // >
+    //   <FakeContent setCategoryIndex={setCategoryIndex} />
+    //   <ProductPageFixedOverlay />
+    //   <div className="fixed fc bottom-0 left-0 right-0 h-[60px] ">
+    //     <BottomMenu categoryIndex={categoryIndex} />
+    //   </div>
+    // </div>
   );
 };
 

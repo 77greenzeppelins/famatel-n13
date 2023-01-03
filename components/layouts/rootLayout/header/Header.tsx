@@ -39,26 +39,18 @@ const Header = () => {
         className="h-full inner-px"
       >
         <div className="relative w-full h-full">
-          {condition ? null : (
-            <motion.div
-              className="absolute bottom-0 left-0 right-0 h-full border-b border-grey"
-              initial={{ width: '0%', opacity: 0 }}
-              animate={{
-                width: '100%',
-                opacity: 1,
-                transition: { duration: 0.8 },
-              }}
-            />
-          )}
-          {/* <motion.div
-            className="absolute bottom-0 left-0 right-0 h-full border-b border-grey"
+          {/* {condition ? null : ( */}
+          <motion.div
+            className="absolute bottom-0 left-0 right-0 h-full border-b border-greyShade1"
             initial={{ width: '0%', opacity: 0 }}
             animate={{
               width: '100%',
               opacity: 1,
               transition: { duration: 0.8 },
             }}
-          /> */}
+          />
+          {/* )} */}
+
           <motion.div
             className="flex items-center justify-between w-full h-full"
             initial={{ y: '-100%' }}

@@ -19,7 +19,7 @@ const PseudoHero: React.FunctionComponent<{ slideNumber: number }> = ({
     <AnimatePresence initial={true}>
       {slideNumber === 0 && (
         <div className="flex flex-col justify-end items-start xl:justify-center sm:items-end sm:justify-start inner-px sm:inner-px-md pt-[62px] lg:pt-[88px] sm:pb-16 lg:pb-0 w-full h-full">
-          <div className="flex sm:h-[50%] justify-end items-end  lg:pb-0 z-[10] ">
+          <div className="flex justify-end items-end  lg:pb-0 z-[10] ">
             <div className=" overflow-hidden">
               <motion.h1
                 className=" text-right tracking-[0.25rem] disable "
@@ -27,20 +27,20 @@ const PseudoHero: React.FunctionComponent<{ slideNumber: number }> = ({
                 initial="initial"
                 animate="animate"
               >
-                <span
-                  className=" text-light text-right text-[3rem]  leading-[3rem] sm:text-[4.4rem] sm:leading-[4.4rem] 
-            lg:text-[5.4rem] lg:leading-[5.4rem] xl:text-[6rem]  xl:leading-[6rem]"
-                >
+                <span className=" text-light text-right text-[3rem]  leading-[3rem] sm:text-[4.4rem] sm:leading-[4.4rem] lg:text-[5.4rem] lg:leading-[5.4rem] xl:text-[6rem]  xl:leading-[6rem]">
                   Elektryka
                 </span>{' '}
                 <br />
-                <span className=" text-light text-right text-[2rem]  leading-[2rem] sm:text-[3rem]  sm:leading-[3rem] lg:text-[3.6rem]  lg:leading-[3.6rem] xl:text-[4rem]  xl:leading-[5rem]">
+                <span
+                  //  className=" text-light text-right text-[2rem]  leading-[2rem] sm:text-[3rem]  sm:leading-[3rem] lg:text-[3.6rem]  lg:leading-[3.6rem] xl:text-[4rem]  xl:leading-[5rem]"
+                  className=" text-light text-right text-[3rem]  leading-[3rem] sm:text-[4.4rem] sm:leading-[4.4rem] lg:text-[5.4rem] lg:leading-[5.4rem] xl:text-[6rem]  xl:leading-[6rem]"
+                >
                   przemysłowa
                 </span>
               </motion.h1>
             </div>
           </div>
-          <div className="flex sm:h-[50%] justify-end pt-6 z-[1] ">
+          <div className="flex  justify-end pt-6 z-[1] ">
             <div className="overflow-hidden">
               <motion.p
                 // className="text-[1rem] text-dark text-right leading-[2rem] uppercase bg-corpo px-4 py-1 rounded-sm disable"

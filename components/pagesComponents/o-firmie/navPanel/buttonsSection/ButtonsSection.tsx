@@ -18,7 +18,6 @@ const ButtonsSection: React.FunctionComponent<{
   setSlideState: React.Dispatch<
     React.SetStateAction<{
       number: number;
-      deltaY: number;
     }>
   >;
 }> = ({ sectionsNumber, slideNumber, setSlideState }) => {
@@ -39,7 +38,6 @@ const ButtonsSection: React.FunctionComponent<{
               onClick={() => {
                 setSlideState({
                   number: i,
-                  deltaY: i,
                 });
               }}
               whileTap={animatedButton.whileTap}

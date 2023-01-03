@@ -11,8 +11,7 @@ import { pagesUrl } from '../../../../../data/_data';
 const HeaderLogoLink = () => {
   /**Staff for condition that switches between dark and lighr svgPath...*/
   const { pathname } = useRouter();
-  const condition =
-    pathname === pagesUrl.produkty || pathname === pagesUrl.kontakt;
+  const condition = pathname === pagesUrl.kontakt;
   /**JSX*/
   return (
     <AriaJSLink

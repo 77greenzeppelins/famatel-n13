@@ -8,7 +8,6 @@ const NavPanel: React.FunctionComponent<{
   setSlideState: React.Dispatch<
     React.SetStateAction<{
       number: number;
-      deltaY: number;
     }>
   >;
   sectionsNumber: number;

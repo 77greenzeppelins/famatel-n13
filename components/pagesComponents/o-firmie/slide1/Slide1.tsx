@@ -20,7 +20,7 @@ const Slide1: React.FunctionComponent<{
       {/* <div className="flex w-full h-[40%] absolute top-0  sm:top-0 sm:right-0  sm:w-[70%] sm:h-[70%]  border-b border-r border-greyShade1 " />
       <div className="flex w-full h-[60%] absolute bottom-0 sm:left-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%]  border-t border-l border-greyShade2" /> */}
 
-      <div className="flex w-full h-[60%] absolute bottom-0 sm:left-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%] ">
+      <div className="flex w-full h-[100%] absolute bottom-0 sm:left-0 sm:w-[80%]  xl:w-[100%]  xxl:w-[96%]  ">
         <GraphicSection
           productDescriptionOpener={setIsProductDescriptionOpen}
         />

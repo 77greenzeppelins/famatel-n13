@@ -10,6 +10,8 @@ const haasFont = localFont({
 
 /**
  * Component main functions
+ * ___0___
+ * used in _app.jsx
  * ___1___
  * allowes to introduce font for all pages
  * ___2___

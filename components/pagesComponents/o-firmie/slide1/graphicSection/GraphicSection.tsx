@@ -27,13 +27,13 @@ const GraphicSection: React.FunctionComponent<{
       onAnimationComplete={() => setSniperIsMounted(true)}
     >
       <SquareImageHolder
-        imageData={imgOFirmiePage[0].image}
+        imageData={imgOFirmiePage[2].image}
         refDivStyle="flex justify-start items-center sm:items-end w-full h-full "
         squareDivStyle="relative overflow-hidden"
       >
         {sniperIsMounted && (
           <motion.div
-            className="absolute top-[20%] left-[30%] h-[65%] w-[65%]"
+            className="absolute top-[20%] left-[20%] h-[40%] w-[40%]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.9 } }}
           >
