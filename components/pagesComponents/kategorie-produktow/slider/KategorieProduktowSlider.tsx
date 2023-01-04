@@ -18,10 +18,10 @@ const KategorieProduktowSlider: React.FunctionComponent<{
         isLandscape ? 'flex-row' : 'flex-col-reverse'
       }`}
     >
-      <div className="fc w-full h-full bg-corpo">
+      <div className="fc w-full h-full ">
         <TextSection currentCategory={currentCategory} />
       </div>
-      <div className="fc w-full h-full bg-grey">
+      <div className="fc w-full h-full ">
         <GraphicSection currentCategory={currentCategory} />
       </div>
     </div>

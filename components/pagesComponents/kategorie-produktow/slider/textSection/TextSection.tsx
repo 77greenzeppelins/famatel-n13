@@ -13,7 +13,7 @@ const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
   /**Hook Section**/
   const { isLandscape } = useWindowSize({ screensNumber: 1 });
   const counterStyle = ` text-grey text-center ${
-    isLandscape ? 'text-[1rem] xs:text-[2rem] sx:text-[3rem] ' : 'text-[1rem] '
+    isLandscape ? 'text-[1rem] xs:text-[2rem] sx:text-[3rem] ' : 'text-[2rem] '
   } `;
 
   const categoryNameStyle = ` text-light text-left ${
@@ -29,28 +29,69 @@ const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
       <AnimatePresence initial={false}>
         <motion.div
           key={currentCategory}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: 'easeInOut' }}
-          className="absolute fc flex-col gap-6 inset-0"
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // exit={{ opacity: 0 }}
+          // transition={{ duration: 0.6, ease: 'easeInOut' }}
+          className={`absolute fc h-full w-full ${
+            isLandscape ? 'inner-pl-md-lg py-[5%]' : 'inner-px-md-lg py-[5%]'
+          }`}
         >
-          <div className="flex w-full inner-px-md-lg leading-none">
-            <div className="flex w-full border-b border-greyShade1 ">
-              <p className={`${counterStyle} w-[40px]`}>{`${
-                currentCategory + 1 < 10 ? '0' : ''
-              }${currentCategory + 1} `}</p>
-              <p className={`${counterStyle} w-[50px]`}>/</p>
-              <p className={`${counterStyle} w-[40px]`}>
-                {mainCategories.length - 1}
-              </p>
+          <div
+            className="flex h-full w-full flex-col gap-6 leading-none  px-2 py-2"
+            //__border border-greyShade2
+          >
+            <div
+            //  className="flex w-full inner-px-md-lg leading-none"
+            >
+              <div className="flex w-full border-b border-greyShade1 ">
+                <motion.p
+                  className={`${counterStyle} w-[40px]`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.6, ease: 'easeInOut' }}
+                >{`${currentCategory + 1 < 10 ? '0' : ''}${
+                  currentCategory + 1
+                } `}</motion.p>
+                <p className={`${counterStyle} w-[50px]`}>/</p>
+                <p className={`${counterStyle} w-[40px]`}>
+                  {mainCategories.length - 1}
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex w-full inner-px-md-lg leading-none">
-            {' '}
-            <p className={categoryNameStyle}>
-              {mainCategories[currentCategory].fullName}
-            </p>
+            <motion.div
+              className="flex  w-full "
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6, ease: 'easeInOut' }}
+            >
+              <div className="h-full w-[2px] border-l-2 border-corpo pr-2" />
+              <p className={categoryNameStyle}>
+                {mainCategories[currentCategory].fullName}
+              </p>
+            </motion.div>
+            <motion.div
+              className="flex  w-full "
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6, ease: 'easeInOut' }}
+            >
+              <div className="h-full w-[2px] border-l-2 border-corpo pr-2" />
+              <p className={categoryNameStyle}>Zobacz szczegóły</p>
+            </motion.div>
+            <motion.div
+              className="flex  w-full "
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.6, ease: 'easeInOut' }}
+            >
+              <div className="h-full w-[2px] border-l-2 border-corpo pr-2" />
+              <p className={categoryNameStyle}>Szybki podgląd</p>
+            </motion.div>
           </div>
         </motion.div>
       </AnimatePresence>

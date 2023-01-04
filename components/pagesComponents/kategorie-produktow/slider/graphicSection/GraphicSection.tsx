@@ -29,9 +29,7 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
         >
           <motion.div
             className={`h-full w-full disable ${
-              isLandscape
-                ? 'pr-[2%] xxs:pr-[6%] md:pr-[60px] lg:pr-[100px]'
-                : 'inner-px-md-lg'
+              isLandscape ? 'inner-pr-md-lg' : 'inner-px-md-lg'
             }`}
             //___w-full max-w-[800px] xxl:max-w-[1200px] h-full
             initial={{ opacity: 0 }}
