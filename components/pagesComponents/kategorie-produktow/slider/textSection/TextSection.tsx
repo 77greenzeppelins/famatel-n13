@@ -20,9 +20,12 @@ const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
     isLandscape
       ? 'text-[1rem]  '
       : 'text-[1.5rem] xs:text-[2rem] sx:text-[3rem] '
-  } `;
+  }`;
+  const categoryNameContainerStyle = `${
+    isLandscape ? 'h-[2rem]  ' : 'h-[3rem] xs:h-[4rem] sx:h-[6rem] '
+  }`;
 
-  console.log('isLandscape:', isLandscape);
+  // console.log('isLandscape:', isLandscape);
   /**JSX**/
   return (
     <div className="relative w-full h-full overflow-hidden">
@@ -38,39 +41,44 @@ const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
           }`}
         >
           <div
-            className="flex h-full w-full flex-col gap-6 leading-none  px-2 py-2"
+            className="flex justify-center gap-2 w-full h-full flex-col leading-none  px-2 py-2 "
             //__border border-greyShade2
           >
             <div
-            //  className="flex w-full inner-px-md-lg leading-none"
+              className="flex"
+              style={{ width: 'fit-content' }}
+              //___border border-greyShade1
             >
-              <div className="flex w-full border-b border-greyShade1 ">
-                <motion.p
-                  className={`${counterStyle} w-[40px]`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.6, ease: 'easeInOut' }}
-                >{`${currentCategory + 1 < 10 ? '0' : ''}${
-                  currentCategory + 1
-                } `}</motion.p>
-                <p className={`${counterStyle} w-[50px]`}>/</p>
-                <p className={`${counterStyle} w-[40px]`}>
-                  {mainCategories.length - 1}
-                </p>
-              </div>
+              <motion.p
+                className={`${counterStyle} w-[40px]`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6, ease: 'easeInOut' }}
+              >{`${currentCategory + 1 < 10 ? '0' : ''}${
+                currentCategory + 1
+              } `}</motion.p>
+              <p className={`${counterStyle} w-[50px]`}>/</p>
+              <p className={`${counterStyle} w-[40px]`}>
+                {mainCategories.length - 1}
+              </p>
             </div>
+
             <motion.div
-              className="flex  w-full "
+              className="flex items-center w-full h-[30%]"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6, ease: 'easeInOut' }}
             >
-              <div className="h-full w-[2px] border-l-2 border-corpo pr-2" />
-              <p className={categoryNameStyle}>
-                {mainCategories[currentCategory].fullName}
-              </p>
+              <div
+                className={`${categoryNameContainerStyle} flex items-center`}
+              >
+                <div className="h-full w-[2px] border-l-2 border-corpo pr-2" />
+                <p className={categoryNameStyle}>
+                  {mainCategories[currentCategory].fullName}
+                </p>
+              </div>
             </motion.div>
             <motion.div
               className="flex  w-full "

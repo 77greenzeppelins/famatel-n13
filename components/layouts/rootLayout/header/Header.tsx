@@ -8,24 +8,12 @@ import { motion } from 'framer-motion';
 /*Basic Data*/
 import { mainPages } from '../../../../data/_data';
 import { tailwindStyles } from '../../../../data/_styleData';
-/**.........temp**/
-// import useWindowSize from '../../../../utils/hooks/useWindowSize';
-
-// import localFont from '@next/font/local';
-// const haasFont = localFont({
-//   src: '../../../../public/fonts/HaasGrotDisp-55Roman.woff2',
-// });
 
 /******************************************************************************/
 const Header = () => {
   /**Hook Section*/
   const router = useRouter();
   const condition = router.pathname === mainPages[0].url;
-
-  /**.........temp**/
-  // const { width, height, isLandscape } = useWindowSize({
-  //   screensNumber: 1,
-  // });
 
   /**JSX*/
   return (
@@ -58,7 +46,6 @@ const Header = () => {
           >
             <div className="origin-left h-full flex items-end scale-75 md:scale-100 pb-1 ">
               <HeaderLogoLink />
-              {/* <p className="text-grey text-[0.75rem]">{`w: ${width}  /  h: ${height} / L: ${isLandscape}`}</p> */}
             </div>
             <div className="h-full ">
               <NavForMainPages />

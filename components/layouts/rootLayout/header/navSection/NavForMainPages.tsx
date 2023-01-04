@@ -38,39 +38,43 @@ const NavForMainPages: React.FunctionComponent = () => {
       className="h-full pt-2"
       //___why "pt-2"? to break "center-y-alignment"...
     >
-      <ul className="hidden h-full md:flex ">
-        {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
-          if (arrayIndex === 2) {
-            return (
-              <NavLink
-                key={arrayIndex}
-                url={url}
-                label={`W: ${width}`}
-                hasDropDownMenu={hasDropDownMenu}
-              ></NavLink>
-            );
-          }
-          if (arrayIndex === 3) {
-            return (
-              <NavLink
-                key={arrayIndex}
-                url={url}
-                label={`H: ${height}`}
-                hasDropDownMenu={hasDropDownMenu}
-              ></NavLink>
-            );
-          }
+      {width > 768 ? (
+        <ul className="hidden h-full md:flex ">
+          {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
+            if (arrayIndex === 2) {
+              return (
+                <NavLink
+                  key={arrayIndex}
+                  url={url}
+                  label={`W: ${width}`}
+                  hasDropDownMenu={hasDropDownMenu}
+                ></NavLink>
+              );
+            }
+            if (arrayIndex === 3) {
+              return (
+                <NavLink
+                  key={arrayIndex}
+                  url={url}
+                  label={`H: ${height}`}
+                  hasDropDownMenu={hasDropDownMenu}
+                ></NavLink>
+              );
+            }
 
-          return (
-            <NavLink
-              key={arrayIndex}
-              url={url}
-              label={label}
-              hasDropDownMenu={hasDropDownMenu}
-            ></NavLink>
-          );
-        })}
-      </ul>
+            return (
+              <NavLink
+                key={arrayIndex}
+                url={url}
+                label={label}
+                hasDropDownMenu={hasDropDownMenu}
+              ></NavLink>
+            );
+          })}
+        </ul>
+      ) : (
+        <p className="text-grey text-[0.75rem]">{`w:${width} / h: ${height}`}</p>
+      )}
     </nav>
   );
 };

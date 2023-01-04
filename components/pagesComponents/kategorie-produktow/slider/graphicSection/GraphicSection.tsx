@@ -21,34 +21,33 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
       <AnimatePresence initial={false}>
         <motion.div
           key={currentCategory}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: 'easeInOut' }}
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // exit={{ opacity: 0 }}
+          // transition={{ duration: 0.6, ease: 'easeInOut' }}
           className="absolute fc inset-0 "
         >
-          <motion.div
+          <div
             className={`h-full w-full disable ${
               isLandscape ? 'inner-pr-md-lg' : 'inner-px-md-lg'
             }`}
-            //___w-full max-w-[800px] xxl:max-w-[1200px] h-full
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6, ease: 'easeInOut' }}
-            // variants={variants}
-            // initial="initial"
-            // animate="animate"
-
-            // onAnimationComplete={() => setSniperIsMounted(true)}
           >
-            <div className="fc w-full h-full bg-light">{currentCategory}</div>
+            <div className="fc w-full h-full bg-light">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6, ease: 'easeInOut' }}
+              >
+                {currentCategory}
+              </motion.p>
+            </div>
             {/* <SquareImageHolder
               imageData={imgKategorieProduktowPage[currentCategory].image}
               refDivStyle="flex justify-end items-end w-full h-full "
               squareDivStyle="relative overflow-hidden"
             ></SquareImageHolder> */}
-          </motion.div>
+          </div>
         </motion.div>
       </AnimatePresence>
     </div>

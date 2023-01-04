@@ -107,8 +107,6 @@ const FixedContainerWithEngine: React.FunctionComponent<{
     }, timeoutFactor);
   };
 
-  console.log(isEngineActive);
-
   /**JSX**/
   return (
     <motion.div
