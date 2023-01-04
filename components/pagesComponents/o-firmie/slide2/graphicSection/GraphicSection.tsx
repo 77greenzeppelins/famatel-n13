@@ -33,7 +33,7 @@ const GraphicSection: React.FunctionComponent<{
       >
         {sniperIsMounted && (
           <motion.div
-            className="absolute bottom-[15%] right-[20%] h-[65%] w-[65%]"
+            className="absolute bottom-[16%] right-[38%] h-[55%] w-[50%]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.9 } }}
           >

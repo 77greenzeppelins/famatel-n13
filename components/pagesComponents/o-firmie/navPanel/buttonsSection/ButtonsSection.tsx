@@ -26,7 +26,7 @@ const ButtonsSection: React.FunctionComponent<{
   /**JSX**/
   return (
     <div className="absolute fc bottom-0 left-0 right-0 h-[60px] pb-[10px]">
-      <div className="flex justify-between w-[400px] h-full ">
+      <div className="flex justify-between w-[200px] lg:w-[400px] h-full ">
         {Array.from({ length: sectionsNumber }).map((_, i) => (
           <div
             key={i}

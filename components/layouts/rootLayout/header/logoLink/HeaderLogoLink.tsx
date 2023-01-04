@@ -6,9 +6,12 @@ import AriaJSLink from '../../../../_basicComponents/links/ariaJSLink/AriaJSLink
 import { useRouter } from 'next/router';
 /**BasicData*/
 import { pagesUrl } from '../../../../../data/_data';
+import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 
 /******************************************************************************/
 const HeaderLogoLink = () => {
+  /**...*/
+  const { width, height } = useWindowSize({ screensNumber: 1 });
   /**Staff for condition that switches between dark and lighr svgPath...*/
   const { pathname } = useRouter();
   const condition = pathname === pagesUrl.kontakt;
@@ -23,7 +26,8 @@ const HeaderLogoLink = () => {
       aStyle="relative cursor-pointer fc bg-transparent select-none touch-none focus:outline-none group "
     >
       <div className="flex justify-start cursor-pointer no-sparkling">
-        <SvgLogo scaleFactor={0.25} animationCondition={condition} />
+        {/* <SvgLogo scaleFactor={0.25} animationCondition={condition} /> */}
+        <p className="text-grey text-[0.75rem]">{`w:${width} / h: ${height}`}</p>
       </div>
     </AriaJSLink>
   );

@@ -19,6 +19,7 @@ const FixedContainerWithEngine: React.FunctionComponent<{
   timeoutFactor: number;
   children: ReactNode;
   containerStyle?: string;
+  isEngineActive: boolean;
 }> = ({
   //___index of current screen
   slideState,
@@ -28,10 +29,11 @@ const FixedContainerWithEngine: React.FunctionComponent<{
   timeoutFactor,
   children,
   containerStyle,
+  isEngineActive,
 }) => {
   /**LocalState nr1; just to disable "scrolling" temporaily**/
   const [allPseudoScrollEventsState, setAllPseudoScrollEventsState] =
-    useState<boolean>(true);
+    useState<boolean>(isEngineActive);
   /**LocalState nr2; just to set initial value of onTouchStart Event**/
   const [touchInitialValue, setTouchInitialValue] = useState(0);
 
@@ -104,6 +106,8 @@ const FixedContainerWithEngine: React.FunctionComponent<{
       setAllPseudoScrollEventsState(true);
     }, timeoutFactor);
   };
+
+  console.log(isEngineActive);
 
   /**JSX**/
   return (

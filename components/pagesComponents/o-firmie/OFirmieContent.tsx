@@ -25,6 +25,7 @@ const OFirmieContent = () => {
       setSlideState={setSlideState}
       timeoutFactor={timeoutFactor}
       sectionsNumber={screensNumber}
+      isEngineActive={true}
     >
       <OFirmieSlider slideNumber={slideState.number} />
       <NavPanel
