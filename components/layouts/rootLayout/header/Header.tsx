@@ -36,7 +36,7 @@ const Header = () => {
       <div
         // className="h-full mx-auto px-[2%] md:px-[60px]"
         // className={`${tailwindStyles.innerContainer} `}
-        className="h-full inner-px"
+        className="h-full w-full inner-px-md-lg"
       >
         <div className="relative w-full h-full">
           {/* {condition ? null : ( */}
