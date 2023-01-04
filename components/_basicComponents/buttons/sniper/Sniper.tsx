@@ -21,11 +21,11 @@ const Sniper: React.FunctionComponent<{
   transition,
 }) => {
   return (
-    <div className="relative fc  w-full h-full group transition">
-      <div className="absolute top-0 left-0 h-[30%] w-[30%] border-t border-l border-light opacity-60 group-hover:opacity-100 group-hover:h-[70%] transition duration-[0.4s] ease-in delay-[0.2s]" />
-      <div className="absolute bottom-0 left-0 h-[30%] w-[30%] border-b border-l border-light opacity-60 group-hover:opacity-100 group-hover:w-[70%] transition duration-[0.4s] ease-in delay-[0.2s]" />
-      <div className="absolute bottom-0 right-0 h-[30%] w-[30%] border-b border-r border-light opacity-60 group-hover:opacity-100 group-hover:h-[70%] transition duration-[0.4s] ease-in delay-[0.2s]" />
-      <div className="absolute top-0 right-0 h-[30%] w-[30%] border-t border-r border-light opacity-60 group-hover:opacity-100 group-hover:w-[70%] transition duration-[0.4s] ease-in delay-[0.2s]" />
+    <div className="relative fc  w-full h-full group">
+      <div className="absolute top-0 left-0 h-[30%] w-[30%] border-t border-l border-light opacity-60 group-hover:opacity-100 group-hover:h-[70%]  duration-[0.4s] ease-in delay-[0.2s]" />
+      <div className="absolute bottom-0 left-0 h-[30%] w-[30%] border-b border-l border-light opacity-60 group-hover:opacity-100 group-hover:w-[70%] duration-[0.4s] ease-in delay-[0.2s]" />
+      <div className="absolute bottom-0 right-0 h-[30%] w-[30%] border-b border-r border-light opacity-60 group-hover:opacity-100 group-hover:h-[70%] duration-[0.4s] ease-in delay-[0.2s]" />
+      <div className="absolute top-0 right-0 h-[30%] w-[30%] border-t border-r border-light opacity-60 group-hover:opacity-100 group-hover:w-[70%] duration-[0.4s] ease-in delay-[0.2s]" />
     </div>
     // <motion.div
     //   className={`flex justify-between flex-col w-full h-full ${
