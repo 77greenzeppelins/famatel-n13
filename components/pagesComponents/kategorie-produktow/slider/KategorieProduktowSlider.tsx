@@ -21,7 +21,7 @@ const KategorieProduktowSlider: React.FunctionComponent<{
       <div className="fc w-full h-full ">
         <TextSection currentCategory={currentCategory} />
       </div>
-      <div className="fc w-full h-full ">
+      <div className="fc w-full h-full">
         <GraphicSection currentCategory={currentCategory} />
       </div>
     </div>
