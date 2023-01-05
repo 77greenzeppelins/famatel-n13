@@ -56,7 +56,7 @@ const PseudoHero: React.FunctionComponent<{ slideNumber: number }> = ({
               </motion.h1>
             </div>
           </div>
-          <div className="flex  justify-end pt-6 z-[1] ">
+          <div className="flex justify-end pt-6 z-[1] ">
             <LinkToKategorieProduktów />
           </div>
         </div>

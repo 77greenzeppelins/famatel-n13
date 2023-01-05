@@ -21,7 +21,8 @@ const SlidesOfLine = ({ slidesNumber }: { slidesNumber: number }) => {
         return (
           <div
             key={i}
-            className="flex flex-col w-[200px]  h-[200px] border"
+            className="flex flex-col border border-greyShade2"
+            style={{ width: slideSide, height: slideSide }}
             // className="w-[250px]  h-[250px] border"
             // className={`w-[${slideSide}px]  h-[${slideSide}px] border`}
             // className={`${cellSize} border`}
@@ -46,22 +47,22 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
   const [ref, { width, height }] = useMeasure();
   const slidersLines = height > 400 ? 2 : 1;
 
-  /**Some Handler**/
+  /**Some Handler to create individual "line / container" with slides**/
   const createLineOfSlides = () => {
+    //**just initial condition**/
     if (!width || !height) return;
+    /**simple data; how many n-size cells can we put to the line**/
     const minNumberOfSlides = Math.trunc(width / slideSide);
-    // console.log('minNumberOfSlides:', minNumberOfSlides);
-    /**Handlers map()**/
+    /**Handlers map(); we map as slider can have 1 or two "linesOfSlides"**/
     const createContent = Array.from({ length: slidersLines }).map((_, i) => {
+      /**map() JSX; gragable "slidesHolder"...**/
       return (
         <motion.div
           data-layout="lineOfSlides"
           key={i}
           className="flex"
           drag="x"
-          dragConstraints={
-            isLandscape ? { left: 0, right: 0 } : { left: 0, right: 0 }
-          }
+          dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
           dragSnapToOrigin={false}
           dragElastic={0.9}
           dragMomentum={true}
@@ -85,7 +86,11 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
       //__overflow-hidden
     >
       <AnimatePresence initial={false}>
-        <motion.div key={currentCategory} className="absolute fc inset-0 ">
+        <motion.div
+          //___Special case / bug pseudoSolver: this forces to rerender when window resizes; just to keep dragConstraints
+          key={currentCategory + width + height}
+          className="absolute fc inset-0 "
+        >
           <div
             className={`h-full w-full disable ${
               isLandscape ? 'inner-pr-md-lg' : 'inner-px-md-lg'
@@ -97,9 +102,11 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6, ease: 'easeInOut' }}
-              className="fc flex-col h-full w-full border-t border-b border-greyShade1 overflow-hidden"
-              //__overflow-hidden
+              className="relative fc flex-col h-full w-full  overflow-hidden"
+              //__border-t border-b border-greyShade1
             >
+              <div className="absolute left-0 w-[5%] h-full bg-gradient-to-r from-dark  z-[10]" />
+              <div className="absolute right-0 w-[5%] h-full bg-gradient-to-l from-dark" />
               {createLineOfSlides()}
             </motion.div>
           </div>

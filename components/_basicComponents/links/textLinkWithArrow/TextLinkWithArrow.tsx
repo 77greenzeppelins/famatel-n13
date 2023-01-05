@@ -1,20 +1,16 @@
-import React, { ReactNode, useRef, useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
-/**ReactAria Staff*/
-import { FocusRing, useLink } from 'react-aria';
-/**FramerMotion Staff*/
-import { AnimatePresence, motion, useAnimation } from 'framer-motion';
-const variants = {
-  initial: { y: '-100%' },
-  animate: { y: 0, transition: { ease: 'circOut', duration: 0.8 } },
-};
-/**BasicData*/
-import { corpoColors } from '../../../../data/_data';
-import { tailwindStyles } from '../../../../data/_styleData';
+/**Components*/
 import ArrowLongRightIcon from '../../../SVG/icons/ArrowLongRightIcon';
+/**FramerMotion Staff*/
+import { motion } from 'framer-motion';
+// const variants = {
+//   initial: { y: '-100%' },
+//   animate: { y: 0, transition: { ease: 'circOut', duration: 0.8 } },
+// };
+/**BasicData*/
 //___<a> style, optimised for "iconStyle"
-const aDefaultStyle =
-  'fc h-[70%] aspect-1 text-[1rem] bg-greyShade1 select-none touch-none focus:outline-none';
+const aDefaultStyle = 'fc h-[40px] disable focus:outline-none overflow-hidden';
 
 /**-----------------------------------------------**/
 
@@ -22,9 +18,10 @@ const TextLinkWithArrow: React.FunctionComponent<{
   linkHref: string;
   ariaLabel: string;
   label: string;
-  aStyle: string;
+  containerStyle?: string;
+  aStyle?: string;
   //   children: ReactNode;
-  variants: {
+  variants?: {
     initial: {
       y: string;
     };
@@ -36,14 +33,10 @@ const TextLinkWithArrow: React.FunctionComponent<{
       };
     };
   };
-}> = ({ linkHref, ariaLabel, aStyle, variants, label }) => {
-  /**State**/
-  const [state, setState] = useState(false);
-
-  //   console.log('state', state);
+}> = ({ linkHref, ariaLabel, containerStyle, aStyle, variants, label }) => {
   /**JSX**/
   return (
-    <div className="rounded-sm bg-corpo">
+    <div className={containerStyle ? containerStyle : 'rounded-sm bg-corpo'}>
       <Link href={linkHref} scroll={false} legacyBehavior passHref>
         <motion.a
           aria-label={ariaLabel}
@@ -52,7 +45,7 @@ const TextLinkWithArrow: React.FunctionComponent<{
           transition={{ delay: 0.2, duration: 0.4 }}
         >
           <motion.p
-            className="fc h-full text-light text-[0.625rem] lg:text-[0.75rem] xxxl:text-[0.875rem] tracking-widest uppercase  disable pointer-events-auto cursor-pointer px-4 z-[10] whitespace-nowrap"
+            className="fc h-full text-light text-[0.625rem] lg:text-[0.75rem] xxxl:text-[0.875rem] tracking-widest uppercase pointer-events-auto cursor-pointer px-4 z-[10] whitespace-nowrap"
             variants={variants}
             initial="initial"
             animate="animate"
@@ -67,7 +60,7 @@ const TextLinkWithArrow: React.FunctionComponent<{
             animate="animate"
           >
             <ArrowLongRightIcon
-              containerStyle="fc h-full aspect-1 stroke-dark"
+              containerStyle="fc h-full aspect-1 "
               pathStyle="stroke-light scale-[0.75] origin-left"
             />
           </motion.div>
