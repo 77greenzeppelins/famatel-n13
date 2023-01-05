@@ -6,7 +6,8 @@
 /**for tables...*/
 const tailwindStyles = {
   pseudoHeroH1Sizes:
-    'text-[3rem]  leading-[3rem] sm:text-[4.4rem] sm:leading-[4.4rem] lg:text-[5.4rem] lg:leading-[5.4rem] xl:text-[6rem]  xl:leading-[6rem]',
+    'text-[2rem] sm:text-[2.5rem] md:text-[3rem] xl:text-[3.5rem]',
+  //___tracking-[2rem]
   //___
   // innerContainer: 'h-full mx-auto px-[2%] md:px-[60px]', // case of "60px"
   //___

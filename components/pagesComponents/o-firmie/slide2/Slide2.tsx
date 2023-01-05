@@ -10,7 +10,7 @@ import useWindowSize from '../../../../utils/hooks/useWindowSize';
  */
 const mdMainContainer = 'md:flex-row';
 const mdGraphicContainer =
-  'md:justify-end md:w-[80%] md:h-[100%] xl:w-[90%] xl:h-[100%] xxl:w-[96%] xxl:h-[100%]';
+  'md:justify-end md:w-[80%] md:h-[100%]  xl:h-[100%] xxl:w-[96%] xxl:h-[100%]';
 
 /**------------------------------------------------------------------------**/
 const Slide2: React.FunctionComponent<{
@@ -21,11 +21,12 @@ const Slide2: React.FunctionComponent<{
     useState(false);
 
   /**Hook For Special Case*/
-  const { height } = useWindowSize({ screensNumber: 1 });
+  const { width, height } = useWindowSize({ screensNumber: 1 });
+  const layoutCondition_1 = height < 450 && width < 400;
   const layoutCondition = height < 550;
   /**Special Render*/
   // if (height < 500){
-  console.log('layoutCondition:', layoutCondition);
+  // console.log('layoutCondition:', layoutCondition);
 
   // }
   /**JSX**/
@@ -39,13 +40,16 @@ const Slide2: React.FunctionComponent<{
       // }
       className={`flex flex-col-reverse w-full h-full ${mdMainContainer} `}
     >
-      <div
-        className={`absolute bottom-0 right-0 flex w-full max-h-[1200px] h-[60%] ${mdGraphicContainer}`}
-      >
-        <GraphicSection
-          productDescriptionOpener={setIsProductDescriptionOpen}
-        />
-      </div>
+      {!layoutCondition_1 && (
+        <div
+          className={`absolute bottom-0 right-0 flex w-full max-h-[1200px] h-[60%] sm:h-[65%] ${mdGraphicContainer} `}
+        >
+          <GraphicSection
+            productDescriptionOpener={setIsProductDescriptionOpen}
+          />
+        </div>
+      )}
+
       <div
         className={`absolute ${
           layoutCondition

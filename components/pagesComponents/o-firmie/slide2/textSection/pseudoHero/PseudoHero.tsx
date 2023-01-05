@@ -26,7 +26,7 @@ const PseudoHero: React.FunctionComponent<{ slideNumber: number }> = ({
     <AnimatePresence initial={true}>
       {slideNumber === 0 && (
         <div
-          className={`flex flex-col justify-end items-start md:justify-center lg:justify-center inner-px sm:inner-px-md pt-[62px] ${
+          className={`flex flex-col justify-end items-start md:justify-center inner-px-md-lg pt-[62px] ${
             layoutCondition
               ? 'md:pb-0 lg:pb-0'
               : 'md:pb-[50%] lg:pb-[20%] xl:pb-0'
@@ -35,7 +35,7 @@ const PseudoHero: React.FunctionComponent<{ slideNumber: number }> = ({
           <div className="flex justify-start items-end lg:pb-0 z-[10] ">
             <div className=" overflow-hidden">
               <motion.h1
-                className=" tracking-[0.25rem] disable "
+                className=" tracking-[0.125rem] leading-tight disable "
                 variants={variants}
                 initial="initial"
                 animate="animate"
@@ -48,7 +48,8 @@ const PseudoHero: React.FunctionComponent<{ slideNumber: number }> = ({
                 <br />
                 <span
                   //  className=" text-light text-right text-[2rem]  leading-[2rem] sm:text-[3rem]  sm:leading-[3rem] lg:text-[3.6rem]  lg:leading-[3.6rem] xl:text-[4rem]  xl:leading-[5rem]"
-                  className={`text-light text-left ${tailwindStyles.pseudoHeroH1Sizes}`}
+                  // className={`text-light text-left ${tailwindStyles.pseudoHeroH1Sizes}`}
+                  className={`text-light text-left text-[2rem] sm:text-[2.5rem] md:text-[3rem] xl:text-[3.5rem]`}
                 >
                   przemysłowa
                 </span>

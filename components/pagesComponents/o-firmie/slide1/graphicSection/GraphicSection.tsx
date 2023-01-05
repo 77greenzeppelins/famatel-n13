@@ -6,6 +6,7 @@ import AnimatedButton from './animatedButton/AnimatedButton';
 import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFirmiePage';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
+import SafetySwitch from '../../../../SVG/techDrawings/oFirmiePage/SafetySwitch';
 const variants = {
   initial: { x: '-100%', y: '-20%' },
   animate: { x: 0, y: 0, transition: { ease: 'circOut', duration: 1.2 } },
@@ -27,13 +28,16 @@ const GraphicSection: React.FunctionComponent<{
       onAnimationComplete={() => setSniperIsMounted(true)}
     >
       <SquareImageHolder
-        imageData={imgOFirmiePage[2].image}
+        imageData={imgOFirmiePage[6].image}
         refDivStyle="flex justify-start items-center sm:items-end w-full h-full "
         squareDivStyle="relative overflow-hidden"
       >
+        {/* <motion.div className="absolute inset-0">
+          <SafetySwitch />
+        </motion.div> */}
         {sniperIsMounted && (
           <motion.div
-            className="absolute top-[20%] left-[20%] h-[40%] w-[40%]"
+            className="absolute top-[35%] left-[10%] h-[40%] w-[40%]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.9 } }}
           >
@@ -41,6 +45,7 @@ const GraphicSection: React.FunctionComponent<{
               onClick={() => {
                 productDescriptionOpener(prev => !prev);
               }}
+              // sniperColor="border-corpo"
             />
           </motion.div>
         )}

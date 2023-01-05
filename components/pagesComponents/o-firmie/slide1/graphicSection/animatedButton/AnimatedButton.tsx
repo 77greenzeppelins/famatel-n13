@@ -8,7 +8,8 @@ import { animatedButton } from '../../../../../../utils/framerMotion/framerMotio
 /**--------------------------------------------------------**/
 const AnimatedButton: React.FunctionComponent<{
   onClick: React.MouseEventHandler<HTMLButtonElement>;
-}> = ({ onClick }) => {
+  sniperColor?: string;
+}> = ({ onClick, sniperColor }) => {
   /**JSX**/
   return (
     <AriaMotionButton
@@ -17,7 +18,7 @@ const AnimatedButton: React.FunctionComponent<{
       transition={animatedButton.transition}
       onClick={onClick}
     >
-      <Sniper />
+      <Sniper color={sniperColor} />
     </AriaMotionButton>
   );
 };

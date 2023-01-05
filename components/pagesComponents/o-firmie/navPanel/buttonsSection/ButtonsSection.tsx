@@ -25,13 +25,13 @@ const ButtonsSection: React.FunctionComponent<{
   // console.log('ButtonsSection / slideNumber:', slideNumber);
   /**JSX**/
   return (
-    <div className="absolute fc bottom-0 left-0 right-0 h-[60px] pb-[10px]">
-      <div className="flex justify-between w-[200px] lg:w-[400px] h-full ">
+    <div className="absolute fc bottom-0 left-0 right-0 h-[40px] pb-[10px] ">
+      <div className="flex justify-between w-[200px] lg:w-[300px] h-full ">
         {Array.from({ length: sectionsNumber }).map((_, i) => (
           <div
             key={i}
             //__
-            className="relative fc w-[40px] h-[40px]"
+            className="relative fc w-[36px] h-[36px]"
           >
             <AriaMotionButton
               ariaLabel={`zobacz slajd ${i + 1}`}
