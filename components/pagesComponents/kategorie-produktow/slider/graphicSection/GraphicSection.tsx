@@ -59,7 +59,9 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
           key={i}
           className="flex"
           drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
+          dragConstraints={
+            isLandscape ? { left: 0, right: 0 } : { left: 0, right: 0 }
+          }
           dragSnapToOrigin={false}
           dragElastic={0.9}
           dragMomentum={true}
