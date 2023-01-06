@@ -49,7 +49,7 @@ const AriaIconButton = ({ children, ...props }) => {
         {...buttonProps}
         className={`${
           props.buttonStyle ? props.buttonStyle : buttonDefaultStyle
-        } pointer-events-auto disabled`}
+        } pointer-events-auto disable`}
       >
         {children}
       </motion.button>
