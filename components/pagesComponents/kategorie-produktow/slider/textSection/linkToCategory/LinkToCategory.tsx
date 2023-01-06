@@ -9,9 +9,9 @@ import { corpoColors, pagesUrl } from '../../../../../../data/_data';
 const LinkToCategory = () => {
   /**JSX**/
   return (
-    <div className="h-[40px]">
+    <div className="h-[36px]">
       <AriaJSLink
-        linkHref={pagesUrl.produkty}
+        linkHref={pagesUrl.kontakt}
         controlsSet={{ background: corpoColors.greyTint1 }}
         controlsStart={{
           background: corpoColors.dark, //background color

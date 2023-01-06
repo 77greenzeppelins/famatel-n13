@@ -9,6 +9,7 @@ import {
 import { motion } from 'framer-motion';
 import { corpoColors } from '../../../../../data/_data';
 import Sniper from '../../../../_basicComponents/buttons/sniper/Sniper';
+import AriaButton from '../../../../_basicComponents/buttons/ariaButton/AriaButton';
 /**Basic Data**/
 
 /**------------------------------------------------------------------------**/
@@ -33,7 +34,44 @@ const ButtonsSection: React.FunctionComponent<{
             //__
             className="relative fc w-[36px] h-[36px]"
           >
-            <AriaMotionButton
+            <AriaButton
+              // onClick={showSubcategories}
+              specialOnClickHandler={() => {
+                setSlideState({
+                  number: i,
+                });
+              }}
+              controlsSet={{
+                background: corpoColors.greyShade1,
+                // scale: slideNumber === i + 1 ? 1.5 : 1,
+                // scale: 1.5,
+              }}
+              controlsStart={{
+                background: corpoColors.dark, //background color
+                transition: { duration: 0.4 },
+                // scale: slideNumber === i + 1 ? 1.5 : 1,
+                // scale: 1,
+              }}
+              buttonStyle="fc gap-4 h-full aspect-square border border-greyShade1 rounded-sm bg-transparent focus:outline-none group"
+              specialStyle={
+                slideNumber === i + 1
+                  ? { borderColor: corpoColors.light }
+                  : { borderColor: corpoColors.greyShade1 }
+              }
+            >
+              <motion.p
+                className={`header-link-label text-greyShade1 group-hover:text-light ease-in duration-300 px-2`}
+                // animate={{
+                //   color:
+                //     slideNumber === i + 1
+                //       ? corpoColors.orange
+                //       : corpoColors.greyShade1,
+                // }}
+              >
+                {`0${i + 1}`}
+              </motion.p>
+            </AriaButton>
+            {/* <AriaMotionButton
               ariaLabel={`zobacz slajd ${i + 1}`}
               onClick={() => {
                 setSlideState({
@@ -62,19 +100,7 @@ const ButtonsSection: React.FunctionComponent<{
                   }}
                 >{`0${i + 1}`}</motion.p>
               </motion.div>
-            </AriaMotionButton>
-            {/* <motion.div className="absolute fc w-full h-full opacity-[0.3]">
-              <motion.p
-                className="text-[0.625rem] lg:text-[0.75rem] xl:text-[0.875rem] tracking-widest text-light"
-                // animate={{
-                //   color:
-                //     slideNumber === i + 1
-                //       ? corpoColors.orange
-                //       : corpoColors.light,
-                //   opacity: slideNumber === i + 1 ? 1 : 0.2,
-                // }}
-              >{`0${i + 1}`}</motion.p>
-            </motion.div> */}
+            </AriaMotionButton> */}
           </div>
         ))}
       </div>

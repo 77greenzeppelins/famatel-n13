@@ -10,7 +10,7 @@ const buttonDefaultStyle =
   'fc bg-greyShade1 focus:outline-none';
 
 /**----------------------------------------------------------------------------------**/
-const AriaIconButton = ({ children, ...props }) => {
+const AriaButton = ({ children, ...props }) => {
   /**Referencea*/
   const ref = useRef();
   /**FramerMotion Section*/
@@ -45,15 +45,19 @@ const AriaIconButton = ({ children, ...props }) => {
     <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black">
       <motion.button
         aria-label={props.ariaLabel}
-        animate={controls}
+        animate={{
+          // ...props.specialStyle,
+          ...controls,
+        }}
         {...buttonProps}
         className={`${
           props.buttonStyle ? props.buttonStyle : buttonDefaultStyle
         } pointer-events-auto disable`}
+        style={{ ...props.specialStyle }}
       >
         {children}
       </motion.button>
     </FocusRing>
   );
 };
-export default AriaIconButton;
+export default AriaButton;

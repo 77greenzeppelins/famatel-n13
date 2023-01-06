@@ -1,7 +1,7 @@
 import React from 'react';
 /**Components**/
 import ListIcon from '../../../../../SVG/icons/ListIcon';
-import AriaJSButton from '../../../../../_basicComponents/buttons/ariaIconButton/AriaIconButton';
+import AriaButton from '../../../../../_basicComponents/buttons/ariaButton/AriaButton';
 /**Basic Data**/
 import { corpoColors } from '../../../../../../data/_data';
 
@@ -9,17 +9,13 @@ import { corpoColors } from '../../../../../../data/_data';
 const PreviewButton = () => {
   /**JSX*/
   return (
-    <div className="h-[40px]">
-      <AriaJSButton
+    <div className="h-[36px]">
+      <AriaButton
         // onClick={showSubcategories}
         specialOnClickHandler={() => {
           console.log('.................');
         }}
         controlsSet={{ background: corpoColors.greyTint1 }}
-        // controlsStart={{
-        //   background: corpoColors.greyShade1, //dark
-        //   transition: { duration: 0.4 },
-        // }}
         controlsStart={{
           // background: 'transparent', //dark
           background: corpoColors.dark, //background color
@@ -33,7 +29,7 @@ const PreviewButton = () => {
           Szybki podgląd kategorii
         </p>
         <ListIcon containerStyle="fc h-full aspect-square stroke-greyTint1 group-hover:stroke-corpo group-hover:translate-x-1 ease-in duration-300 scale-[0.75] origin-center" />
-      </AriaJSButton>
+      </AriaButton>
     </div>
   );
 };

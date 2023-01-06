@@ -37,11 +37,6 @@ const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
       ? 'h-[2rem] lg:h-[4.6rem] xxl:h-[6rem]  '
       : 'h-[3rem] xs:h-[4rem] sx:h-[6rem] '
   }`;
-  const buttonLabelStyle = ` text-light text-left ${
-    isLandscape
-      ? 'text-[1rem] tracking-widest'
-      : 'text-[1.5rem] xs:text-[2rem] sx:text-[3rem] '
-  }`;
 
   // console.log('isLandscape:', isLandscape);
   /**JSX**/
@@ -50,10 +45,6 @@ const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
       <AnimatePresence initial={false}>
         <motion.div
           key={currentCategory}
-          // initial={{ opacity: 0 }}
-          // animate={{ opacity: 1 }}
-          // exit={{ opacity: 0 }}
-          // transition={{ duration: 0.6, ease: 'easeInOut' }}
           className={`absolute fc h-full w-full ${
             isLandscape ? 'inner-pl-md-lg py-[5%]' : 'inner-px-md-lg py-[5%]'
           }`}
@@ -98,13 +89,8 @@ const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
                 </p>
               </div>
             </motion.div>
-            <motion.div
-              className="flex w-full "
-              // initial={{ opacity: 0 }}
-              // animate={{ opacity: 1 }}
-              // exit={{ opacity: 0 }}
-              // transition={{ duration: 0.6, ease: 'easeInOut' }}
-            >
+
+            <motion.div className="flex w-full ">
               <LinkToCategory />
             </motion.div>
 
