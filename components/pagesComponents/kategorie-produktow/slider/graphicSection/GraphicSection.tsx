@@ -4,17 +4,14 @@ import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 import useMeasure from 'react-use-measure';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
-import SquareImageHolder from '../../../../multipagesComponents/imageHolder/SquareImageHolder';
+import DraggableSlider from './draggableSlider/DraggableSlider';
 /**Basic Data**/
-import { mainCategories } from '../../../../../data/_data';
-import { imgKategorieProduktowPage } from '../../../../../public/images/kategorieProduktowPage/imgKategorieProduktowPage';
 const slideSide = 200;
-const cellSize = 'w-[250px] h-[250px]';
 
 /**Direct Child**/
-const SlidesOfLine = ({ slidesNumber }: { slidesNumber: number }) => {
+const Line = ({ slidesNumber }: { slidesNumber: number }) => {
   // if (!slidesNumber) return;
-
+  /**JSX**/
   return (
     <>
       {Array.from({ length: slidesNumber }).map((_, i) => {
@@ -42,13 +39,17 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
   currentCategory,
 }) => {
   /**Hook Section / just tell me what device's orientation is... **/
-  const { isLandscape } = useWindowSize({ screensNumber: 1 });
+  const {
+    isLandscape,
+    width: windowWidth,
+    height: windowHeight,
+  } = useWindowSize({ screensNumber: 1 });
   /**Hook Section / just count container of "sliding" images... **/
   const [ref, { width, height }] = useMeasure();
   const slidersLines = height > 400 ? 2 : 1;
 
   /**Some Handler to create individual "line / container" with slides**/
-  const createLineOfSlides = () => {
+  const createLinesOfSlides = () => {
     //**just initial condition**/
     if (!width || !height) return;
     /**simple data; how many n-size cells can we put to the line**/
@@ -59,7 +60,7 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
       return (
         <motion.div
           data-layout="lineOfSlides"
-          key={i}
+          key={i + windowWidth + windowHeight - width - height}
           className="flex"
           drag="x"
           dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
@@ -67,7 +68,7 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
           dragElastic={0.9}
           dragMomentum={true}
         >
-          <SlidesOfLine slidesNumber={minNumberOfSlides + 4} />
+          <Line slidesNumber={minNumberOfSlides + 4} />
         </motion.div>
       );
     });
@@ -85,10 +86,20 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
       className="relative w-full h-full "
       //__overflow-hidden
     >
-      <AnimatePresence initial={false}>
+      <AnimatePresence
+        initial={false}
+        // initial={true}
+      >
         <motion.div
           //___Special case / bug pseudoSolver: this forces to rerender when window resizes; just to keep dragConstraints
-          key={currentCategory + width + height}
+          key={
+            currentCategory +
+            windowWidth +
+            windowHeight -
+            width -
+            height +
+            Number(isLandscape)
+          }
           className="absolute fc inset-0 "
         >
           <div
@@ -98,16 +109,28 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
           >
             <motion.div
               ref={ref}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
+              initial={{
+                opacity: 0,
+                // y: -100
+              }}
+              animate={{
+                opacity: 1,
+                // y: 0,
+                // transition: { duration: 0.6, ease: 'easeInOut' },
+              }}
+              exit={{
+                opacity: 0,
+                // y: -100,
+                // transition: { duration: 0, ease: 'easeInOut' },
+              }}
+              transition={{ duration: 0.4, ease: 'easeInOut' }}
               className="relative fc flex-col h-full w-full  overflow-hidden"
               //__border-t border-b border-greyShade1
             >
               <div className="absolute left-0 w-[5%] h-full bg-gradient-to-r from-dark  z-[10]" />
               <div className="absolute right-0 w-[5%] h-full bg-gradient-to-l from-dark" />
-              {createLineOfSlides()}
+              {/* {createLinesOfSlides()} */}
+              <DraggableSlider width={width} height={height} />
             </motion.div>
           </div>
         </motion.div>

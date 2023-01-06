@@ -7,7 +7,7 @@ import DropDownMenusHolder from '../../dropDownMenus/DropDownMenusHolder';
 import { motion } from 'framer-motion';
 // import Link from 'next/link';
 /**Basic Data**/
-// import { tailwindStyles } from '../../../../../../data/_styleData';
+import { tailwindStyles } from '../../../../../../data/_styleData';
 
 /**********************************************************************************/
 const NavLink: React.FunctionComponent<{
@@ -78,10 +78,12 @@ const NavLink: React.FunctionComponent<{
         aStyle="relative fc w-full h-full cursor-pointer bg-transparent select-none touch-none focus:outline-none group "
       >
         <p
-          className={`text-[0.625rem]  tracking-widest  ${
+          className={`header-link-label   ${
             linkStyleisHovered ? 'text-corpo' : 'text-grey'
-          }`}
-          //___xxxl:text-[0.875rem]
+          } `}
+          // style={{ wordSpacing: '0.25rem' }}
+          //${tailwindStyles.headerLinkTextStyle}
+          //text-[0.625rem] xxl:text-[0.75rem] xxxl:text-[0.825rem] lg:tracking-[0.125rem] uppercase wordSpacing025
         >
           <span>{label}</span>
         </p>

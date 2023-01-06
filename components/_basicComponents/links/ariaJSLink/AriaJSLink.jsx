@@ -9,7 +9,7 @@ import { corpoColors } from '../../../../data/_data';
 import { tailwindStyles } from '../../../../data/_styleData';
 //___<a> style, optimised for "iconStyle"
 const aDefaultStyle =
-  'fc h-[70%] aspect-1 text-[1rem] bg-greyShade1 select-none touch-none focus:outline-none';
+  'fc h-[70%] aspect-1 text-[1rem] bg-greyShade1 focus:outline-none';
 /**********************************************************************************************/
 const AriaJsLink = ({
   children,
@@ -45,16 +45,13 @@ const AriaJsLink = ({
     //   focusRingClass="focus:ring focus:ring-offset-2 focus:ring-offset-black"
     // >
     <Link href={linkHref} scroll={false} legacyBehavior passHref>
-      {/* <div className="w-[70px] h-full bg-corpo">{children}</div> */}
       <motion.a
         aria-label={props.ariaLabel}
         animate={controls}
         {...linkProps}
-        // style={{
-        //   WebkitTapHighlightColor: 'transparent',
-        //   // alignSelf: 'center',
-        // }}
-        className={props.aStyle ? props.aStyle : aDefaultStyle}
+        className={`${
+          props.aStyle ? props.aStyle : aDefaultStyle
+        } pointer-events-auto disable`}
       >
         {children}
       </motion.a>

@@ -1,6 +1,8 @@
 import React from 'react';
 /**Components*/
-import TextLinkWithArrow from '../../../../_basicComponents/links/textLinkWithArrow/TextLinkWithArrow';
+import LinkToCategory from './linkToCategory/LinkToCategory';
+// import PreviewButton from './previewButton/PreviewButton';
+// import TextButtonWithListIcon from '../../../../_basicComponents/buttons/textButtonWithListIcon/TextButtonWithListIcon';
 /**Hook Staff**/
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 /**Framer Motion Staff*/
@@ -11,7 +13,7 @@ const variants = {
 };
 /**Basic Data**/
 import { mainCategories } from '../../../../../data/_data';
-import TextButtonWithListIcon from '../../../../_basicComponents/buttons/textButtonWithListIcon/TextButtonWithListIcon';
+import PreviewButton from './previewButton/PreviewButton';
 
 /**--------------------------------------------------------------------------------**/
 const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
@@ -98,36 +100,16 @@ const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
             </motion.div>
             <motion.div
               className="flex w-full "
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
+              // initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              // exit={{ opacity: 0 }}
+              // transition={{ duration: 0.6, ease: 'easeInOut' }}
             >
-              <TextLinkWithArrow
-                linkHref={mainCategories[currentCategory].url}
-                containerStyle="rounded-sm border border-grey"
-                aStyle="fc focus:outline-none h-[40px] overflow-hidden disable"
-                ariaLabel={'Link do strony: "Zobacz szczegóły"'}
-                label="Zobacz szczegóły"
-              />
+              <LinkToCategory />
             </motion.div>
 
-            <motion.div
-              className="flex w-full "
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-            >
-              <TextButtonWithListIcon
-                containerStyle="rounded-sm border border-grey"
-                buttonStyle="fc focus:outline-none h-[40px] overflow-hidden disable"
-                ariaLabel={'Przycisk: "Szybki podgląd"'}
-                label="Szybki podgląd"
-              />
-              {/* <div className="fc rounded-sm border border-grey focus:outline-none h-[40px] overflow-hidden disable">
-                <p className={buttonLabelStyle}>Szybki podgląd</p>
-              </div> */}
+            <motion.div className="flex w-full ">
+              <PreviewButton />
             </motion.div>
           </div>
         </motion.div>

@@ -69,6 +69,19 @@
     @apply pr-[2%] xxs:pr-[6%] md:pr-[60px] lg:pr-[100px];
   }
   /**
+  * size-settings for link label; no color setting 
+  */
+  .word-spacing-0125 {
+    word-spacing: 0.125rem;
+  }
+  .word-spacing-025 {
+    word-spacing: 0.25rem;
+  }
+  .header-link-label {
+    @apply text-[0.625rem] xxl:text-[0.75rem] xxxl:text-[0.825rem] tracking-[1px] lg:tracking-[0.125rem] uppercase  word-spacing-0125 lg:word-spacing-025;
+  }
+
+  /**
   * Scrollbar style
   * set here and add in: @layer base{ body{..., @apply scroll-bar-style;}, ...}
   */

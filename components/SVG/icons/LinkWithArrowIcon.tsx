@@ -22,12 +22,9 @@ const LinkWithArrowIcon = ({
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={strokeWidth}
-      // stroke={corpoColors.light}
+      // strokeWidth={strokeWidth ? strokeWidth : 1.5}
       className={containerStyle}
-      // onHoverStart={e => { fill:'#9b59b6'}}
-      // onHoverEnd={e => {}}
     >
-      {/* <title>Link SVG Icon</title> */}
       <path
         className={pathStyle}
         strokeLinecap="round"
@@ -40,22 +37,8 @@ const LinkWithArrowIcon = ({
 
 export default LinkWithArrowIcon;
 
-// onHoverStart={e => {}}
-// onHoverEnd={e => {}}
-// whileHover={{ scale: 1.05, stroke: corpoColors.dark }}
-// transition={{
-//   default: { type: 'spring', stiffness: 400, damping: 10 },
-//   stroke: { duration: 0.4 },
-// }}
-// hover:stroke-dark ease-in duration-300
+/* 
+//___why not? shows description when hovered...
+<title>Link SVG Icon</title> 
 
-// whileHover={
-//   {
-//     //  scale: 1.01,
-//     // stroke: corpoColors.dark,
-//   }
-// }
-// transition={{
-//   // default: { type: 'spring', stiffness: 400, damping: 10 },
-//   stroke: { duration: 0.4, ease: 'easeOut' },
-// }}
+*/

@@ -7,7 +7,7 @@ import { motion, useAnimation } from 'framer-motion';
 //___<a> style, optimised for "iconStyle"
 const buttonDefaultStyle =
   // 'fc h-[70%] aspect-square bg-greyShade1 select-none touch-none focus:outline-none';
-  'fc h-[70%] aspect-square bg-greyShade1 focus:outline-none';
+  'fc bg-greyShade1 focus:outline-none';
 
 /**----------------------------------------------------------------------------------**/
 const AriaIconButton = ({ children, ...props }) => {
@@ -22,15 +22,16 @@ const AriaIconButton = ({ children, ...props }) => {
       onPressStart: () => {
         controls.stop();
         controls.set({ ...props.controlsSet }); //light
+        props.specialOnClickHandler();
       },
       onPressEnd: () => {
         controls.start({ ...props.controlsStart });
       },
       onPress: () => {
-        if (props.specialOnClickHandler) {
-          props.specialOnClickHandler();
-        }
-        props.onPress();
+        // if (props.specialOnClickHandler) {
+        //   props.specialOnClickHandler();
+        // }
+        // props.onPress();
       },
     },
     ref
@@ -46,15 +47,11 @@ const AriaIconButton = ({ children, ...props }) => {
         aria-label={props.ariaLabel}
         animate={controls}
         {...buttonProps}
-        style={{
-          WebkitTapHighlightColor: 'transparent',
-        }}
         className={`${
           props.buttonStyle ? props.buttonStyle : buttonDefaultStyle
         } pointer-events-auto disabled`}
       >
         {children}
-        {/* {childType ? children : createLabel(isPressed)} */}
       </motion.button>
     </FocusRing>
   );
