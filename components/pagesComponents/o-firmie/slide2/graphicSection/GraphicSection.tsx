@@ -27,7 +27,7 @@ const GraphicSection: React.FunctionComponent<{
       onAnimationComplete={() => setSniperIsMounted(true)}
     >
       <SquareImageHolder
-        imageData={imgOFirmiePage[1].image}
+        imageData={imgOFirmiePage[2].image}
         refDivStyle="flex justify-end items-center w-full h-full pb-[60px] md:pt-[30%]  lg:pb-0 lg:pt-[10%]"
         squareDivStyle="relative overflow-hidden"
       >

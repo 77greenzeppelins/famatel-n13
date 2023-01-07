@@ -1,18 +1,16 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
 /**Component**/
 import SquareImageHolder from '../../../../multipagesComponents/imageHolder/SquareImageHolder';
-import AnimatedButton from './animatedButton/AnimatedButton';
 /**Image Staff**/
 import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFirmiePage';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
-import SafetySwitch from '../../../../SVG/techDrawings/oFirmiePage/SafetySwitch';
+import AnimatedButton from '../../slide1/graphicSection/animatedButton/AnimatedButton';
 const variants = {
-  initial: { x: '-100%', y: '-20%' },
+  initial: { x: '100%', y: '-20%' },
   animate: { x: 0, y: 0, transition: { ease: 'circOut', duration: 1.2 } },
 };
 
-/**----------------------------------------------------------------------**/
 const GraphicSection: React.FunctionComponent<{
   productDescriptionOpener: Dispatch<SetStateAction<boolean>>;
 }> = ({ productDescriptionOpener }) => {
@@ -21,23 +19,21 @@ const GraphicSection: React.FunctionComponent<{
   /**JSX**/
   return (
     <motion.div
-      className="w-full max-w-[800px] xxl:max-w-[1400px] h-full disable"
+      data-component="GraphicSection-slide2__container"
       variants={variants}
       initial="initial"
       animate="animate"
+      className="w-full max-w-[800px] xxl:max-w-[1400px] h-full disable"
       onAnimationComplete={() => setSniperIsMounted(true)}
     >
       <SquareImageHolder
-        imageData={imgOFirmiePage[6].image}
-        refDivStyle="flex justify-start items-center sm:items-end w-full h-full "
+        imageData={imgOFirmiePage[1].image}
+        refDivStyle="flex justify-end items-center w-full h-full pb-[60px] md:pt-[30%]  lg:pb-0 lg:pt-[10%]"
         squareDivStyle="relative overflow-hidden"
       >
-        {/* <motion.div className="absolute inset-0">
-          <SafetySwitch />
-        </motion.div> */}
         {sniperIsMounted && (
           <motion.div
-            className="absolute top-[35%] left-[10%] h-[40%] w-[40%]"
+            className="absolute bottom-[16%] right-[38%] h-[55%] w-[50%]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.9 } }}
           >
@@ -45,7 +41,6 @@ const GraphicSection: React.FunctionComponent<{
               onClick={() => {
                 productDescriptionOpener(prev => !prev);
               }}
-              // sniperColor="border-corpo"
             />
           </motion.div>
         )}
@@ -55,34 +50,3 @@ const GraphicSection: React.FunctionComponent<{
 };
 
 export default GraphicSection;
-
-/*
-//___staff for "Tracking the cursor"
-//___0
-import { motion, useMotionValue, useTransform } from 'framer-motion';
-//___1
-<motion.div className="absolute inset-0" onMouseMove={handleMouse} />
- <motion.div
-        className="w-full h-full"
-        initial={{ x: '-100%' }}
-        animate={{
-          x: 0,
-          transition: { duration: 1.8 },
-        }}
-        style={{ rotateX: rotateX }}
-      >
-//___2
-  // const x = useMotionValue(10);
-  // const y = useMotionValue(10);
-
-  // function handleMouse(e: MouseEvent) {
-    // e.preventDefault();
-    // x.set(e.clientX);
-    // y.set(e.clientY);
-    // x.set(e.clientY + e.clientX);
-  // }
-
-  // const rotateX = useTransform(x, [0, 2000], [50, -50]);
-  // const rotateX = useTransform(y, [0, 1000], [10, -10]);
-  // const rotateY = useTransform(x, [0, 1000], [-10, 10]);
-*/

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 /**Components**/
 import ListIcon from '../../../../../SVG/icons/ListIcon';
 import AriaButton from '../../../../../_basicComponents/buttons/ariaButton/AriaButton';
@@ -6,7 +6,9 @@ import AriaButton from '../../../../../_basicComponents/buttons/ariaButton/AriaB
 import { corpoColors } from '../../../../../../data/_data';
 
 /**-------------------------------------------**/
-const PreviewButton = () => {
+const PreviewButton: React.FunctionComponent<{
+  setIsPreviewOpen: Dispatch<SetStateAction<boolean>>;
+}> = ({ setIsPreviewOpen }) => {
   /**JSX*/
   return (
     <div className="h-[36px]">
@@ -14,6 +16,7 @@ const PreviewButton = () => {
         // onClick={showSubcategories}
         specialOnClickHandler={() => {
           console.log('.................');
+          setIsPreviewOpen(prev => !prev);
         }}
         controlsSet={{ background: corpoColors.greyTint1 }}
         controlsStart={{

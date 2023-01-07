@@ -1,64 +1,93 @@
-import { AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react';
 /**Components*/
 import GraphicSection from './graphicSection/GraphicSection';
 import TextSection from './textSection/TextSection';
+/**Hoof Staff**/
+import useWindowSize from '../../../../utils/hooks/useWindowSize';
+/**Basic Data
+ * (!) crucial breakPoint: md / 768
+ * additional settingas are in "SquareImageHolder__container" & "TextSection-Slide1__container"
+ */
+const mdMainContainer = 'md:flex-row';
+const mdGraphicContainer =
+  'md:justify-end md:w-[80%] md:h-[100%]  xl:h-[100%] xxl:w-[96%] xxl:h-[100%]';
 
 /**------------------------------------------------------------------------**/
-const Slide1: React.FunctionComponent<{
+const Slide2: React.FunctionComponent<{
   slideNumber: number;
 }> = ({ slideNumber }) => {
   /**State Section**/
   const [isProductDescriptionOpen, setIsProductDescriptionOpen] =
     useState(false);
-  /**...WTF**/
-  // console.log('slideNumber', slideNumber);
 
+  /**Hook For Special Case*/
+  const { width, height } = useWindowSize({ screensNumber: 1 });
+  const layoutCondition_1 = height < 450 && width < 400;
+  const layoutCondition = height < 550;
+  /**Special Render*/
+  // if (height < 500){
+  // console.log('layoutCondition:', layoutCondition);
+
+  // }
   /**JSX**/
   return (
-    <div className="flex flex-col-reverse justify-between md:flex-row w-full h-full ">
-      {/* <div className="flex w-full h-[40%] absolute top-0  sm:top-0 sm:right-0  sm:w-[70%] sm:h-[70%]  border-b border-r border-greyShade1 " />
-      <div className="flex w-full h-[60%] absolute bottom-0 sm:left-0 sm:w-[80%] sm:h-[80%] xl:w-[90%] xl:h-[90%] xxl:w-[96%] xxl:h-[96%]  border-t border-l border-greyShade2" /> */}
+    <div
+      data-component="Slide2__container"
+      // className={
+      //   layoutCondition
+      //     ? 'bg-corpo'
+      //     : `flex flex-col-reverse w-full h-full ${mdMainContainer}`
+      // }
+      className={`flex flex-col-reverse w-full h-full ${mdMainContainer}`}
+    >
+      {!layoutCondition_1 && (
+        <div
+          className={`absolute bottom-0 right-0 flex w-full max-h-[1200px] h-[60%] sm:h-[65%] ${mdGraphicContainer} `}
+        >
+          <GraphicSection
+            productDescriptionOpener={setIsProductDescriptionOpen}
+          />
+        </div>
+      )}
 
-      <div className="absolute bottom-0 left-0 flex w-full h-[60%] max-h-[800px] xl:max-h-[929px] md:w-[80%]  xl:w-[100%]  xxl:w-[96%] pb-[40px] ">
-        <GraphicSection
-          productDescriptionOpener={setIsProductDescriptionOpen}
-        />
-      </div>
       <div
-        className="absolute top-0 sm:top-0 sm:right-0 flex w-full h-[40%]  md:w-[70%] md:h-[70%]  xl:h-full pointer-events-none bg-greyShade2"
-        //__border-b border-greyShade2
+        className={`absolute ${
+          layoutCondition
+            ? 'bottom-0 h-full fc pb-[74px] scale-90 origin-left'
+            : 'top-0 h-[40%]'
+        }  left-0 flex w-full md:w-[70%] md:h-full pointer-events-none`}
       >
-        <TextSection
+        {/* <TextSection
           isProductDescriptionOpen={isProductDescriptionOpen}
           slideNumber={slideNumber}
-        />
+        /> */}
       </div>
     </div>
 
     // <div
-    //   className={`flex ${
-    //     !isLandscape
-    //       ? 'flex-col-reverse'
-    //       : slideNumber === 0
-    //       ? `flex-row`
-    //       : 'flex-row-reverse'
+    //   className={`${
+    //     isLandscape ? `flex flex-row` : 'flex flex-col'
     //   } w-full h-full`}
     // >
     //   <div
-    //     className={
-    //       isLandscape ? 'fc w-[50%] h-full' : 'fc w-full h-[50%] sm:h-[60%]'
-    //     }
+    //     className={`fc ${
+    //       isLandscape ? `w-[50%] h-full` : 'w-full h-[40%]'
+    //     } text-3xl text-light`}
     //   >
-    //     <GraphicSection />
+    //     <div className="flex justify-center flex-col px-[2%] md:px-[60px] w-full h-full ">
+    //       <h1 className=" text-light text-left text-[3rem]  leading-[3rem]  xl:text-[6rem]  xl:leading-[6rem]">
+    //         Header in slide_2
+    //       </h1>
+    //     </div>
     //   </div>
     //   <div
-    //     className={isLandscape ? `w-[50%] h-full` : 'w-full h-[50%] sm:h-[40%]'}
+    //     //__
+    //     className={isLandscape ? 'fc w-[50%] h-full' : 'fc w-full h-[60%]'}
     //   >
-    //     <TextSection />
+    //     <GraphicSection />
     //   </div>
     // </div>
   );
 };
 
-export default Slide1;
+export default Slide2;

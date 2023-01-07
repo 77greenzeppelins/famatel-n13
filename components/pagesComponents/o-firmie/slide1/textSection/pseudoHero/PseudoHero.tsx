@@ -17,7 +17,7 @@ const PseudoHero: React.FunctionComponent<{ slideNumber: number }> = ({
   /**JSX**/
   return (
     <AnimatePresence initial={true}>
-      {slideNumber === 0 && (
+      {slideNumber === 1 && (
         <div className="flex flex-col justify-end items-start xl:justify-center sm:items-end sm:justify-start inner-px sm:inner-px-md pt-[62px] lg:pt-[88px] sm:pb-16 lg:pb-0 w-full h-full">
           <div className="flex justify-end items-end  lg:pb-0 z-[10] ">
             <div className=" overflow-hidden">

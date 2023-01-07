@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 /**Components*/
 import LinkToCategory from './linkToCategory/LinkToCategory';
 // import PreviewButton from './previewButton/PreviewButton';
@@ -16,9 +16,10 @@ import { mainCategories } from '../../../../../data/_data';
 import PreviewButton from './previewButton/PreviewButton';
 
 /**--------------------------------------------------------------------------------**/
-const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
-  currentCategory,
-}) => {
+const TextSection: React.FunctionComponent<{
+  currentCategory: number;
+  setIsPreviewOpen: Dispatch<SetStateAction<boolean>>;
+}> = ({ currentCategory, setIsPreviewOpen }) => {
   /**Hook Section**/
   const { isLandscape } = useWindowSize({ screensNumber: 1 });
   const counterStyle = ` text-grey text-center ${
@@ -95,7 +96,7 @@ const TextSection: React.FunctionComponent<{ currentCategory: number }> = ({
             </motion.div>
 
             <motion.div className="flex w-full ">
-              <PreviewButton />
+              <PreviewButton setIsPreviewOpen={setIsPreviewOpen} />
             </motion.div>
           </div>
         </motion.div>

@@ -5,6 +5,7 @@ import useMeasure from 'react-use-measure';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
 import DraggableSlider from './draggableSlider/DraggableSlider';
+import PreviewOverlay from '../textSection/previewOverlay/PreviewOverlay';
 /**Basic Data**/
 const slideSide = 200;
 
@@ -35,9 +36,10 @@ const Line = ({ slidesNumber }: { slidesNumber: number }) => {
   );
 };
 /**--------------------------------------------------------------------------------**/
-const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
-  currentCategory,
-}) => {
+const GraphicSection: React.FunctionComponent<{
+  currentCategory: number;
+  isPreviewOpen: boolean;
+}> = ({ currentCategory, isPreviewOpen }) => {
   /**Hook Section / just tell me what device's orientation is... **/
   const {
     isLandscape,
@@ -83,9 +85,12 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
   /**JSX**/
   return (
     <div
-      className="relative w-full h-full "
+      className="relative w-full h-full overflow-hidden "
       //__overflow-hidden
     >
+      {/* <AnimatePresence>
+        {isPreviewOpen && <div className="w-full h-full bg-corpo z-[10]"></div>}
+      </AnimatePresence> */}
       <AnimatePresence
         initial={false}
         // initial={true}
@@ -135,6 +140,11 @@ const GraphicSection: React.FunctionComponent<{ currentCategory: number }> = ({
           </div>
         </motion.div>
       </AnimatePresence>
+      <PreviewOverlay
+        isPreviewAvailable={width > 360 && height > 400}
+        isPreviewOpen={isPreviewOpen}
+        currentCategory={currentCategory}
+      />
     </div>
   );
 };
