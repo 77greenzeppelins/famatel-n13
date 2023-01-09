@@ -73,7 +73,7 @@ const OverlayCell: React.FunctionComponent<IF_OverlayCell> = ({
     delayRef.current = 0.6 + d * delayPerPixel;
 
     console.log('delayRef.current: ', delayRef.current);
-  }, [delayPerPixel]);
+  }, [delayPerPixel, originOffset]);
 
   /**JSX**/
   return (

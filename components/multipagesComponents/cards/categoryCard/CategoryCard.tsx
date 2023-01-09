@@ -54,7 +54,13 @@ const CategoryCard = ({ categoryCardData }: ICardOfDropDownMenu) => {
                   className="fc relative h-[80%] w-[80%] z-[10] "
                   //rounded-md overflow-hidden
                 >
-                  <SquareImageHolder imageData={categoryCardData.image} />
+                  <SquareImageHolder
+                    imageData={categoryCardData.image}
+                    hasOverlay={false}
+                    itemsNumber={0}
+                    columns={0}
+                    delayPerPixel={0}
+                  />
                 </div>{' '}
               </div>
               <div
