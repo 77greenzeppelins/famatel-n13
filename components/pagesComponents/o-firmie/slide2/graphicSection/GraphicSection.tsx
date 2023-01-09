@@ -20,16 +20,22 @@ const GraphicSection: React.FunctionComponent<{
   return (
     <motion.div
       data-component="GraphicSection-slide2__container"
-      variants={variants}
-      initial="initial"
-      animate="animate"
+      // variants={variants}
+      // initial="initial"
+      // animate="animate"
       className="w-full max-w-[800px] xxl:max-w-[1400px] h-full disable"
-      onAnimationComplete={() => setSniperIsMounted(true)}
+      // onAnimationComplete={() => setSniperIsMounted(true)}
     >
       <SquareImageHolder
-        imageData={imgOFirmiePage[2].image}
+        imageData={imgOFirmiePage[1].image}
         refDivStyle="flex justify-end items-center w-full h-full pb-[60px] md:pt-[30%]  lg:pb-0 lg:pt-[10%]"
         squareDivStyle="relative overflow-hidden"
+        hasOverlay={true}
+        //
+        itemsNumber={16}
+        columns={4}
+        gridStyle="grid-cols-[repeat(4,_1fr)]"
+        delayPerPixel={0.0008}
       >
         {sniperIsMounted && (
           <motion.div
