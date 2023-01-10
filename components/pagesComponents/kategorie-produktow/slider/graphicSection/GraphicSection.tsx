@@ -85,7 +85,7 @@ const GraphicSection: React.FunctionComponent<{
   /**JSX**/
   return (
     <div
-      className="relative w-full h-full overflow-hidden "
+      className="relative w-full h-full overflow-hidden"
       //__overflow-hidden
     >
       {/* <AnimatePresence>
@@ -110,7 +110,7 @@ const GraphicSection: React.FunctionComponent<{
           <div
             className={`h-full w-full disable ${
               isLandscape ? 'inner-pr-md-lg' : 'inner-px-md-lg'
-            }`}
+            } `}
           >
             <motion.div
               ref={ref}
@@ -129,13 +129,17 @@ const GraphicSection: React.FunctionComponent<{
                 // transition: { duration: 0, ease: 'easeInOut' },
               }}
               transition={{ duration: 0.4, ease: 'easeInOut' }}
-              className="relative fc flex-col h-full w-full  overflow-hidden"
+              className="relative fc flex-col h-full w-full  overflow-hidden "
               //__border-t border-b border-greyShade1
             >
-              <div className="absolute left-0 w-[5%] h-full bg-gradient-to-r from-dark  z-[10]" />
-              <div className="absolute right-0 w-[5%] h-full bg-gradient-to-l from-dark" />
+              {/* <div className="absolute left-0 w-[5%] h-full bg-gradient-to-r from-dark  z-[10]" />
+              <div className="absolute right-0 w-[5%] h-full bg-gradient-to-l from-dark" /> */}
               {/* {createLinesOfSlides()} */}
-              <DraggableSlider width={width} height={height} />
+              <DraggableSlider
+                width={width}
+                height={height}
+                currentCategory={currentCategory}
+              />
             </motion.div>
           </div>
         </motion.div>
