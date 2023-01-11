@@ -9,7 +9,7 @@ const RowOfSlides: React.FunctionComponent<{
 }> = ({ slidesNumber, slideSide, currentCategory, slidesLineIndex }) => {
   // if (!slidesNumber) return;
 
-  console.log({ slidesLineIndex });
+  // console.log({ slidesLineIndex });
   /**JSX**/
   return (
     <div data-component="RowOfSlides__container" className="flex">
@@ -17,7 +17,7 @@ const RowOfSlides: React.FunctionComponent<{
         return (
           <div
             key={i}
-            className="border border-greyShade2"
+            // className="border border-greyShade2"
             style={{ width: slideSide, height: slideSide }}
           >
             <SlideContent

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 /**Components**/
-import RowOfSlides from './draggableSlidesContainer/RowOfSlides';
+import RowOfSlides from './draggableSliderContent/RowOfSlides';
 /**Hook Staff**/
 import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
 /**Framer Motion Staff*/
