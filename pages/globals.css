@@ -71,6 +71,9 @@
   /**
   * size-settings for link label; no color setting 
   */
+  .word-spacing-01 {
+    word-spacing: 0.01rem;
+  }
   .word-spacing-0125 {
     word-spacing: 0.125rem;
   }
@@ -79,6 +82,9 @@
   }
   .header-link-label {
     @apply text-[0.625rem] xxl:text-[0.75rem] xxxl:text-[0.825rem] tracking-[1px] lg:tracking-[0.125rem] uppercase word-spacing-0125 lg:word-spacing-025;
+  }
+  .p-small {
+    @apply text-[0.625rem] xxl:text-[0.75rem] xxxl:text-[0.825rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-01 lg:word-spacing-0125;
   }
 
   /**

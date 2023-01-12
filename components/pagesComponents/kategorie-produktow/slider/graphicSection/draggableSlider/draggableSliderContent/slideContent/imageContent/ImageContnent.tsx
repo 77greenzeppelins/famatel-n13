@@ -38,12 +38,16 @@ const ImageContnent: React.FunctionComponent<{
   const categoryImages = arrOfImages[categoryIndex];
   /**JSX**/
   return (
-    <div className="w-full h-full bg-light p-2 rounded-sm">
+    <div className="relative w-full h-full bg-light p-5 rounded-sm">
       <AnimatePresence initial={true}>
         <motion.div
           key={categoryIndex}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.2 } }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            transition: { delay: 0.05, duration: 0.4 },
+          }}
           exit={{ opacity: 0 }}
           className="relative fc w-full h-full "
         >
@@ -60,9 +64,23 @@ const ImageContnent: React.FunctionComponent<{
             fill // intrinsic|fixed|responsive|fill allowed;  fill your parent bro! that is why I calculated width and height to make parent of square shape
           />
 
-          <div data-layout="someFakeContainer" className="absolute inset-0" />
+          <div data-layout="someFakeContainer" className="absolute inset-0 " />
         </motion.div>
+        {/* <motion.div
+          data-layout="someFakeContainer"
+          className="absolute inset-0 bg-dark"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0, transition: { delay: 0.2, duration: 0.4 } }}
+          exit={{ opacity: 1, transition: { duration: 0.4 } }}
+        /> */}
       </AnimatePresence>
+      {/* <motion.div
+        data-layout="someFakeContainer"
+        className="absolute inset-0 bg-dark"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0, transition: { delay: 0.2, duration: 0.2 } }}
+        exit={{ opacity: 1 }}
+      /> */}
     </div>
   );
 };

@@ -5,6 +5,7 @@ import GraphicSection from './graphicSection/GraphicSection';
 /**Hook Staff**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 import useMeasure from 'react-use-measure';
+import CategoriesPreviewOverlay from './overlay/CategoriesPreviewOverlay';
 
 /**-----------------------------------------------------------**/
 const KategorieProduktowSlider: React.FunctionComponent<{
@@ -12,6 +13,7 @@ const KategorieProduktowSlider: React.FunctionComponent<{
 }> = ({ currentCategory }) => {
   /**Hook Section**/
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+
   /**Hook Section**/
   const { isLandscape } = useWindowSize({ screensNumber: 1 });
   /**Hook Section**/
@@ -19,7 +21,7 @@ const KategorieProduktowSlider: React.FunctionComponent<{
   /**JSX**/
   return (
     <div
-      className={`w-full h-full fc ${
+      className={`relative w-full h-full fc ${
         isLandscape ? 'flex-row' : 'flex-col-reverse'
       }`}
     >
@@ -35,8 +37,19 @@ const KategorieProduktowSlider: React.FunctionComponent<{
           isPreviewOpen={isPreviewOpen}
         />
       </div>
+      <CategoriesPreviewOverlay
+        currentCategory={currentCategory}
+        isPreviewOpen={isPreviewOpen}
+        setIsPreviewOpen={setIsPreviewOpen}
+      />
     </div>
   );
 };
 
 export default KategorieProduktowSlider;
+
+// setIsPreviewOpen = {
+//   function(value: React.SetStateAction<boolean>): void {
+//     throw new Error('Function not implemented.');
+//   },
+// };

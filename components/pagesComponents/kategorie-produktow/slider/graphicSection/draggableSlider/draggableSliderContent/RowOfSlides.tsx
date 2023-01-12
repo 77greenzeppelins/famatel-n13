@@ -1,6 +1,8 @@
 import React from 'react';
+/**Components**/
 import SlideContent from './slideContent/SlideContent';
 
+/**-----------------------------------------------------**/
 const RowOfSlides: React.FunctionComponent<{
   slidesNumber: number; // from... to ...
   slideSide: number; // 200 or 150

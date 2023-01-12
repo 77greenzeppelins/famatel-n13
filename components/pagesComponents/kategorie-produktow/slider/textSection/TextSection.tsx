@@ -1,16 +1,10 @@
 import React, { Dispatch, SetStateAction } from 'react';
 /**Components*/
 import LinkToCategory from './linkToCategory/LinkToCategory';
-// import PreviewButton from './previewButton/PreviewButton';
-// import TextButtonWithListIcon from '../../../../_basicComponents/buttons/textButtonWithListIcon/TextButtonWithListIcon';
 /**Hook Staff**/
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
-const variants = {
-  initial: { y: '-100%' },
-  animate: { y: 0, transition: { ease: 'circOut', duration: 0.8 } },
-};
 /**Basic Data**/
 import { mainCategories } from '../../../../../data/_data';
 import PreviewButton from './previewButton/PreviewButton';
@@ -27,7 +21,6 @@ const TextSection: React.FunctionComponent<{
       ? 'text-[1rem] xs:text-[2rem] sx:text-[3rem] '
       : 'text-[1.5rem] '
   } `;
-
   const categoryNameStyle = ` text-light text-left ${
     isLandscape
       ? 'text-[1rem] lg:text-[2rem] xxl:text-[3rem] tracking-widest'

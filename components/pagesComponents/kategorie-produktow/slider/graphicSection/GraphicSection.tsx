@@ -5,7 +5,6 @@ import useMeasure from 'react-use-measure';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
 import DraggableSlider from './draggableSlider/DraggableSlider';
-import PreviewOverlay from '../textSection/previewOverlay/PreviewOverlay';
 /**Basic Data**/
 const slideSide = 200;
 
@@ -88,11 +87,6 @@ const GraphicSection: React.FunctionComponent<{
           </div>
         </motion.div>
       </AnimatePresence>
-      <PreviewOverlay
-        isPreviewAvailable={width > 360 && height > 400}
-        isPreviewOpen={isPreviewOpen}
-        currentCategory={currentCategory}
-      />
     </div>
   );
 };
