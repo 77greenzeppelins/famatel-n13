@@ -14,7 +14,7 @@ const LinksSection: React.FunctionComponent<{
   currentCategory: number;
 }> = ({ isPreviewOpen, currentCategory }) => {
   const { isLandscape } = useWindowSize({ screensNumber: 1 });
-  const { subcategoriesNames, subcategoriesUrls } =
+  const { subCategoriesNames, subCategoriesUrls } =
     catalogStructureData[currentCategory];
 
   /**JSX**/
@@ -33,12 +33,12 @@ const LinksSection: React.FunctionComponent<{
           //   transition: { duration: 0.4 },
           // }}
         >
-          {subcategoriesNames.map((label, i) => (
+          {subCategoriesNames.map((label, i) => (
             <LinkToSubCategory
               key={currentCategory + i}
               label={label}
               index={i}
-              url={subcategoriesUrls[i]}
+              url={subCategoriesUrls[i]}
             />
           ))}
         </motion.ul>
