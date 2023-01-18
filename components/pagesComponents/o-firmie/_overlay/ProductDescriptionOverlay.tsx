@@ -20,9 +20,9 @@ const plugSpec = [
   },
   {
     pseudoHeader: 'Podkategoria',
-    name: catalogStructureData[0].subcategoriesNames[0],
+    name: catalogStructureData[0].subCategoriesNames[0],
     buttonLabel: 'Zobacz podkategorię',
-    url: catalogStructureData[0].subcategoriesUrls[0],
+    url: catalogStructureData[0].subCategoriesUrls[0],
   },
   {
     pseudoHeader: 'Model',
