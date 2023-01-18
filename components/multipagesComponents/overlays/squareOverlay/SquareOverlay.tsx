@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { Dispatch, SetStateAction, useEffect, useRef } from 'react';
 /**Components**/
 import OverlayCell from './overlayCell/OverlayCell';
 /**Hook Staff**/
@@ -34,7 +34,8 @@ const SquareOverlay: React.FunctionComponent<{
       variants={{}}
       ref={ref}
       data-component="SquareOverlay__container"
-      className={`relative grid ${gridStyle} w-full h-full`}
+      className={`relative grid ${gridStyle} w-full h-full pointer-events-none`}
+      // onAnimationComplete={() => setSniperIsMounted(true)}
     >
       {' '}
       {/* <p className="text-corpo">{`h: ${Math.trunc(height)}`}</p>

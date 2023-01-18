@@ -10,36 +10,35 @@ import { catalogStructureData } from '../../../../../../data/_catalogStructure_d
 
 /**-------------------------------------------------------**/
 const LinksSection: React.FunctionComponent<{
-  isPreviewOpen: boolean;
+  isPreviewOpen?: boolean;
   currentCategory: number;
 }> = ({ isPreviewOpen, currentCategory }) => {
   const { isLandscape } = useWindowSize({ screensNumber: 1 });
-  const { subcategories, url } = catalogStructureData[currentCategory];
+  const { subcategoriesNames, subcategoriesUrls } =
+    catalogStructureData[currentCategory];
 
   /**JSX**/
   return (
     <div
-      className={`relative w-full h-full inner-px-md-lg  ${
-        isLandscape ? 'py-4' : 'py-0'
-      } `}
+      className={`relative w-full h-full  ${isLandscape ? 'py-4' : 'py-0'} `}
     >
       <AnimatePresence mode="wait">
         <motion.ul
           key={currentCategory}
           className="relative flex flex-col h-auto max-w-[550px] gap-3 "
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 0.4, duration: 0.4 } }}
-          exit={{
-            opacity: 0,
-            transition: { duration: 0.4 },
-          }}
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1, transition: { delay: 0.4, duration: 0.4 } }}
+          // exit={{
+          //   opacity: 0,
+          //   transition: { duration: 0.4 },
+          // }}
         >
-          {subcategories.map((label, i) => (
+          {subcategoriesNames.map((label, i) => (
             <LinkToSubCategory
               key={currentCategory + i}
               label={label}
               index={i}
-              url={url[i]}
+              url={subcategoriesUrls[i]}
             />
           ))}
         </motion.ul>

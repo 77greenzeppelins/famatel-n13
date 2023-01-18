@@ -1,4 +1,12 @@
-import { mainCategories } from './_data';
+/**ImagesStaff**/
+import {
+  fakeSetOf36Images,
+  imgMainCategories,
+} from '../public/images/categories/imgOfProductsReps';
+/**TS**/
+import { IF_CatalogStructureData } from '../utils/TS/typeScriptStaff';
+/**BasicData**/
+import { pagesUrl, mainCategoriesPath, mainCategories } from './_data';
 
 //_____category__1
 const wtyczkiGniazdaSubCategoryNames: string[] = [
@@ -12,7 +20,7 @@ const wtyczkiGniazdaSubCategoryNames: string[] = [
   'Wtyczki i gniazda do sprzętu estradowego',
   'Wtyczki i gniazda campingowe',
 ];
-const wtyczkiGniazdaSubCategoryPaths = [
+const wtyczkiGniazdaSubCategoryPaths: string[] = [
   `przenosne`,
   `tablicowe`,
   `scienne`,
@@ -25,15 +33,16 @@ const wtyczkiGniazdaSubCategoryPaths = [
 ];
 
 const wtyczkiGniazdaSubCategoriesUrls: string[] = [
-  `${mainCategories[0].url}/${wtyczkiGniazdaSubCategoryPaths[0]}`,
-  `${mainCategories[0].url}/${wtyczkiGniazdaSubCategoryPaths[1]}`,
-  `${mainCategories[0].url}/${wtyczkiGniazdaSubCategoryPaths[2]}`,
-  `${mainCategories[0].url}/${wtyczkiGniazdaSubCategoryPaths[3]}`,
-  `${mainCategories[0].url}/${wtyczkiGniazdaSubCategoryPaths[4]}`,
-  `${mainCategories[0].url}/${wtyczkiGniazdaSubCategoryPaths[5]}`,
-  `${mainCategories[0].url}/${wtyczkiGniazdaSubCategoryPaths[6]}`,
-  `${mainCategories[0].url}/${wtyczkiGniazdaSubCategoryPaths[7]}`,
-  `${mainCategories[0].url}/${wtyczkiGniazdaSubCategoryPaths[8]}`,
+  // `${pagesUrl.produkty}/${mainCategoriesPath[0]}/${wtyczkiGniazdaSubCategoryPaths[0]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[0]}/${wtyczkiGniazdaSubCategoryPaths[0]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[0]}/${wtyczkiGniazdaSubCategoryPaths[1]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[0]}/${wtyczkiGniazdaSubCategoryPaths[2]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[0]}/${wtyczkiGniazdaSubCategoryPaths[3]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[0]}/${wtyczkiGniazdaSubCategoryPaths[4]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[0]}/${wtyczkiGniazdaSubCategoryPaths[5]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[0]}/${wtyczkiGniazdaSubCategoryPaths[6]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[0]}/${wtyczkiGniazdaSubCategoryPaths[7]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[0]}/${wtyczkiGniazdaSubCategoryPaths[8]}`,
 ];
 
 //_____category__2
@@ -50,10 +59,10 @@ const GniazdaZBlokadaSubCategoryPaths: string[] = [
   'akcesoria',
 ];
 const GniazdaZBlokadaSubCategoryUrls: string[] = [
-  `${mainCategories[1].url}/${GniazdaZBlokadaSubCategoryPaths[0]}`,
-  `${mainCategories[1].url}/${GniazdaZBlokadaSubCategoryPaths[1]}`,
-  `${mainCategories[1].url}/${GniazdaZBlokadaSubCategoryPaths[2]}`,
-  `${mainCategories[1].url}/${GniazdaZBlokadaSubCategoryPaths[3]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[1]}/${GniazdaZBlokadaSubCategoryPaths[0]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[1]}/${GniazdaZBlokadaSubCategoryPaths[1]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[1]}/${GniazdaZBlokadaSubCategoryPaths[2]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[1]}/${GniazdaZBlokadaSubCategoryPaths[3]}`,
 ];
 
 //_____category__3
@@ -69,15 +78,17 @@ const adapteryPrzemysloweSubCategoryPaths: string[] = [
 ];
 
 const adapteryPrzemysloweSubCategoryUrls: string[] = [
-  `${mainCategories[2].url}/${adapteryPrzemysloweSubCategoryPaths[0]}`,
-  `${mainCategories[2].url}/${adapteryPrzemysloweSubCategoryPaths[1]}`,
-  `${mainCategories[2].url}/${adapteryPrzemysloweSubCategoryPaths[2]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[2]}/${adapteryPrzemysloweSubCategoryPaths[0]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[2]}/${adapteryPrzemysloweSubCategoryPaths[1]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[2]}/${adapteryPrzemysloweSubCategoryPaths[2]}`,
 ];
 
 //_____category__4
-const gniazdaPodwieszaneSubCategoryNames: string[] = [''];
-const gniazdaPodwieszaneSubCategoryPaths: string[] = [''];
-const gniazdaPodwieszaneSubCategoryUrls: string[] = [''];
+const gniazdaPodwieszaneSubCategoryNames: string[] = ['Gnizada podwieszane'];
+const gniazdaPodwieszaneSubCategoryPaths: string[] = ['gniazda-podwieszane'];
+const gniazdaPodwieszaneSubCategoryUrls: string[] = [
+  `${pagesUrl.produkty}/${mainCategoriesPath[3]}`,
+];
 
 //_____category__5
 const przedluzaczeBebnoweSubCategoriesNames: string[] = [
@@ -85,26 +96,33 @@ const przedluzaczeBebnoweSubCategoriesNames: string[] = [
   'Przemysłowe przedłużacze bębnowe z gniazdami IP67',
   'Metalowe przemysłowe przedłużacze bębnowe z gniazdami IP67',
 ];
-const przedluzaczeBebnoweobudowyAndRozdzielnicerozdzielniceModuloweSubCategoryPathss: string[] =
-  [
-    'przedluzacz-bebnowy-schuko',
-    'przemyslowy-przedluzacz-bebnowy',
-    'metalowy-przedluzacz-bebnowy',
-  ];
+const przedluzaczeBebnoweobudowePaths: string[] = [
+  'przedluzacz-bebnowy-schuko',
+  'przemyslowy-przedluzacz-bebnowy',
+  'metalowy-przedluzacz-bebnowy',
+];
 const przedluzaczeBebnoweSubCategoriesUrls: string[] = [
-  `${mainCategories[4].url}/${przedluzaczeBebnoweobudowyAndRozdzielnicerozdzielniceModuloweSubCategoryPathss[0]}`,
-  `${mainCategories[4].url}/${przedluzaczeBebnoweobudowyAndRozdzielnicerozdzielniceModuloweSubCategoryPathss[1]}`,
-  `${mainCategories[4].url}/${przedluzaczeBebnoweobudowyAndRozdzielnicerozdzielniceModuloweSubCategoryPathss[2]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[4]}/${przedluzaczeBebnoweobudowePaths[0]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[4]}/${przedluzaczeBebnoweobudowePaths[1]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[4]}/${przedluzaczeBebnoweobudowePaths[2]}`,
 ];
 //_____category__6
-const rozlacznikiBezpieczenstwaSubCategoryNames: string[] = [''];
-const rozlacznikiBezpieczenstwaSubCategoryPaths: string[] = [''];
-const rozlacznikiBezpieczenstwaSubCategoryUrls: string[] = [''];
+const rozlacznikiBezpieczenstwaSubCategoryNames: string[] = [
+  'Rozłączniki bezpieczeństwa',
+];
+const rozlacznikiBezpieczenstwaSubCategoryPaths: string[] = [
+  'Rozłączniki bezpieczeństwa',
+];
+const rozlacznikiBezpieczenstwaSubCategoryUrls: string[] = [
+  `${pagesUrl.produkty}/${mainCategoriesPath[5]}`,
+];
 
 //_____category__7
-const ladowarkiPojazdowSubCategoryNames: string[] = [''];
+const ladowarkiPojazdowSubCategoryNames: string[] = ['Ładowarki samochodowe'];
 const ladowarkiPojazdowSubCategoryPaths: string[] = [''];
-const ladowarkiPojazdowSubCategoryUrls: string[] = [''];
+const ladowarkiPojazdowSubCategoryUrls: string[] = [
+  `${pagesUrl.produkty}/${mainCategoriesPath[6]}`,
+];
 
 //_____category__8
 const obudowyAndRozdzielniceSubCategoryNames: string[] = [
@@ -113,18 +131,18 @@ const obudowyAndRozdzielniceSubCategoryNames: string[] = [
   'Obudowy gumowe IP65',
   'Akcesoria',
 ];
-const obudowyAndRozdzielniceSubCategoryPaths = [
+const obudowyAndRozdzielniceSubCategoryPaths: string[] = [
   'obudowy-ip65-puste',
   'rozdzielnice-przemyslowe',
   'obudowy-ip65-gumowe',
   'obudowy-akcesoria',
 ];
 
-const obudowyAndRozdzielniceSubCategoryUrls = [
-  `${mainCategories[7].url}/${obudowyAndRozdzielniceSubCategoryPaths[0]}`,
-  `${mainCategories[7].url}/${obudowyAndRozdzielniceSubCategoryPaths[1]}`,
-  `${mainCategories[7].url}/${obudowyAndRozdzielniceSubCategoryPaths[2]}`,
-  `${mainCategories[7].url}/${obudowyAndRozdzielniceSubCategoryPaths[3]}`,
+const obudowyAndRozdzielniceSubCategoryUrls: string[] = [
+  `${pagesUrl.produkty}/${mainCategoriesPath[7]}/${obudowyAndRozdzielniceSubCategoryPaths[0]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[7]}/${obudowyAndRozdzielniceSubCategoryPaths[1]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[7]}/${obudowyAndRozdzielniceSubCategoryPaths[2]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[7]}/${obudowyAndRozdzielniceSubCategoryPaths[3]}`,
 ];
 
 //_____category__9
@@ -136,7 +154,7 @@ const rozdzielniceModuloweSubCategoryNames: string[] = [
   'Metalowe rozdzielnice modułowe ICT',
   'Akcesoria',
 ];
-const rozdzielniceModuloweSubCategoryPaths = [
+const rozdzielniceModuloweSubCategoryPaths: string[] = [
   'scienne-ip65',
   'modulowe-ip65',
   'modulowe-ip40',
@@ -144,13 +162,13 @@ const rozdzielniceModuloweSubCategoryPaths = [
   'metalowe-modulowe-ict',
   'akcesoria',
 ];
-const rozdzielniceModuloweSubCategoryUrls = [
-  `${mainCategories[8].url}/${rozdzielniceModuloweSubCategoryPaths[0]}`,
-  `${mainCategories[8].url}/${rozdzielniceModuloweSubCategoryPaths[1]}`,
-  `${mainCategories[8].url}/${rozdzielniceModuloweSubCategoryPaths[2]}`,
-  `${mainCategories[8].url}/${rozdzielniceModuloweSubCategoryPaths[3]}`,
-  `${mainCategories[8].url}/${rozdzielniceModuloweSubCategoryPaths[4]}`,
-  `${mainCategories[8].url}/${rozdzielniceModuloweSubCategoryPaths[5]}`,
+const rozdzielniceModuloweSubCategoryUrls: string[] = [
+  `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[0]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[1]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[2]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[3]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[4]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[5]}`,
 ];
 
 //_____category__10
@@ -164,10 +182,10 @@ const puszkiInstalacyjneSubCategoryPaths: string[] = [
   'drywall',
   'osadzone',
 ];
-const puszkiInstalacyjneSubCategoryUrls = [
-  `${mainCategories[9].url}/${puszkiInstalacyjneSubCategoryPaths[0]}`,
-  `${mainCategories[9].url}/${puszkiInstalacyjneSubCategoryPaths[1]}`,
-  `${mainCategories[9].url}/${puszkiInstalacyjneSubCategoryPaths[2]}`,
+const puszkiInstalacyjneSubCategoryUrls: string[] = [
+  `${pagesUrl.produkty}/${mainCategoriesPath[9]}/${puszkiInstalacyjneSubCategoryPaths[0]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[9]}/${puszkiInstalacyjneSubCategoryPaths[1]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[9]}/${puszkiInstalacyjneSubCategoryPaths[2]}`,
 ];
 
 //_____category__11
@@ -187,81 +205,130 @@ const osprzetDomowySubCategoryPaths: string[] = [
   'adaptery-podróżne',
   'adaptery-domowe',
 ];
-const osprzetDomowySubCategoryUrls = [
-  `${mainCategories[10].url}/${puszkiInstalacyjneSubCategoryPaths[0]}`,
-  `${mainCategories[10].url}/${puszkiInstalacyjneSubCategoryPaths[1]}`,
-  `${mainCategories[10].url}/${puszkiInstalacyjneSubCategoryPaths[2]}`,
-  `${mainCategories[10].url}/${puszkiInstalacyjneSubCategoryPaths[4]}`,
-  `${mainCategories[10].url}/${puszkiInstalacyjneSubCategoryPaths[5]}`,
-  `${mainCategories[10].url}/${puszkiInstalacyjneSubCategoryPaths[6]}`,
+const osprzetDomowySubCategoryUrls: string[] = [
+  `${pagesUrl.produkty}/${mainCategoriesPath[10]}/${osprzetDomowySubCategoryPaths[0]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[10]}/${osprzetDomowySubCategoryPaths[1]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[10]}/${osprzetDomowySubCategoryPaths[2]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[10]}/${osprzetDomowySubCategoryPaths[4]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[10]}/${osprzetDomowySubCategoryPaths[5]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[10]}/${osprzetDomowySubCategoryPaths[6]}`,
 ];
 
-const catalogStructureData = [
+/**
+ * "name" is a name of main category /
+ *  "subcategories" is an array of subcategories names
+ * url is an array of subcategories urls
+ */
+const catalogStructureData: IF_CatalogStructureData[] = [
   //_____category__1
   {
-    name: mainCategories[0].fullName,
-    subcategories: [...wtyczkiGniazdaSubCategoryNames],
-    url: [...wtyczkiGniazdaSubCategoriesUrls],
+    mainCategoryIndex: 0,
+    mainCategoryName: mainCategories[0].fullName,
+    mainCategoryUrl: mainCategories[0].url,
+    mainCategoryImage: imgMainCategories[0],
+    subcategoriesNames: [...wtyczkiGniazdaSubCategoryNames],
+    subcategoriesUrls: [...wtyczkiGniazdaSubCategoriesUrls],
+    imageData: [...fakeSetOf36Images],
   },
   //_____category__2
   {
-    name: mainCategories[1].fullName,
-    subcategories: [...GniazdaZBlokadaSubCategoryNames],
-    url: [...GniazdaZBlokadaSubCategoryUrls],
+    mainCategoryIndex: 1,
+    mainCategoryName: mainCategories[1].fullName,
+    mainCategoryUrl: mainCategories[1].url,
+    mainCategoryImage: imgMainCategories[1],
+    subcategoriesNames: [...GniazdaZBlokadaSubCategoryNames],
+    subcategoriesUrls: [...GniazdaZBlokadaSubCategoryUrls],
+    imageData: [...fakeSetOf36Images],
   },
   //_____category__3
   {
-    name: mainCategories[2].fullName,
-    subcategories: [...adapteryPrzemysloweSubCategoryNames],
-    url: [...adapteryPrzemysloweSubCategoryUrls],
+    mainCategoryIndex: 2,
+    mainCategoryName: mainCategories[2].fullName,
+    mainCategoryUrl: mainCategories[2].url,
+    mainCategoryImage: imgMainCategories[2],
+    subcategoriesNames: [...adapteryPrzemysloweSubCategoryNames],
+    subcategoriesUrls: [...adapteryPrzemysloweSubCategoryUrls],
+    imageData: [...fakeSetOf36Images],
   },
   //_____category__4__noSubcategory
   {
-    name: mainCategories[3].fullName,
-    subcategories: [...gniazdaPodwieszaneSubCategoryNames],
-    url: [...gniazdaPodwieszaneSubCategoryUrls],
+    mainCategoryIndex: 3,
+    mainCategoryName: mainCategories[3].fullName,
+    mainCategoryUrl: mainCategories[3].url,
+    mainCategoryImage: imgMainCategories[3],
+    subcategoriesNames: [...gniazdaPodwieszaneSubCategoryNames],
+    subcategoriesUrls: [...gniazdaPodwieszaneSubCategoryUrls],
+    imageData: [...fakeSetOf36Images],
   },
-  //_____category__5
+  // //_____category__5
   {
-    name: mainCategories[4].fullName,
-    subcategories: [...przedluzaczeBebnoweSubCategoriesNames],
-    url: [...przedluzaczeBebnoweSubCategoriesUrls],
+    mainCategoryIndex: 4,
+    mainCategoryName: mainCategories[4].fullName,
+    mainCategoryUrl: mainCategories[4].url,
+    mainCategoryImage: imgMainCategories[4],
+    subcategoriesNames: [...przedluzaczeBebnoweSubCategoriesNames],
+    subcategoriesUrls: [...przedluzaczeBebnoweSubCategoriesUrls],
+    imageData: [...fakeSetOf36Images],
   },
-  //_____category__6__noSubcategory
+  // //_____category__6__noSubcategory
   {
-    name: mainCategories[5].fullName,
-    subcategories: [...rozlacznikiBezpieczenstwaSubCategoryNames],
-    url: [...rozlacznikiBezpieczenstwaSubCategoryUrls],
+    mainCategoryIndex: 5,
+    mainCategoryName: mainCategories[5].fullName,
+    mainCategoryUrl: mainCategories[5].url,
+    mainCategoryImage: imgMainCategories[5],
+    subcategoriesNames: [...rozlacznikiBezpieczenstwaSubCategoryNames],
+    subcategoriesUrls: [...rozlacznikiBezpieczenstwaSubCategoryUrls],
+    imageData: [...fakeSetOf36Images],
   },
-  //_____category__7__noSubcategory
+  // //_____category__7__noSubcategory
   {
-    name: mainCategories[6].fullName,
-    subcategories: [...ladowarkiPojazdowSubCategoryNames],
-    url: [...ladowarkiPojazdowSubCategoryUrls],
+    mainCategoryIndex: 6,
+    mainCategoryName: mainCategories[6].fullName,
+    mainCategoryUrl: mainCategories[6].url,
+    mainCategoryImage: imgMainCategories[6],
+    subcategoriesNames: [...ladowarkiPojazdowSubCategoryNames],
+    subcategoriesUrls: [...ladowarkiPojazdowSubCategoryUrls],
+    imageData: [...fakeSetOf36Images],
   },
-  //_____category__8
+  // //_____category__8
   {
-    name: mainCategories[7].fullName,
-    subcategories: [...obudowyAndRozdzielniceSubCategoryNames],
-    url: [...obudowyAndRozdzielniceSubCategoryUrls],
+    mainCategoryIndex: 7,
+    mainCategoryName: mainCategories[7].fullName,
+    mainCategoryUrl: mainCategories[7].url,
+    mainCategoryImage: imgMainCategories[7],
+    subcategoriesNames: [...obudowyAndRozdzielniceSubCategoryNames],
+    subcategoriesUrls: [...obudowyAndRozdzielniceSubCategoryUrls],
+    imageData: [...fakeSetOf36Images],
   },
-  //_____category__9
+  // //_____category__9
   {
-    name: mainCategories[8].fullName,
-    subcategories: [...rozdzielniceModuloweSubCategoryNames],
-    url: [...rozdzielniceModuloweSubCategoryUrls],
+    mainCategoryIndex: 8,
+    mainCategoryName: mainCategories[8].fullName,
+    mainCategoryUrl: mainCategories[8].url,
+    mainCategoryImage: imgMainCategories[8],
+    subcategoriesNames: [...rozdzielniceModuloweSubCategoryNames],
+    subcategoriesUrls: [...rozdzielniceModuloweSubCategoryUrls],
+    imageData: [...fakeSetOf36Images],
   },
-  //_____category__10
+  // //_____category__10
   {
-    name: mainCategories[9].fullName,
-    subcategories: [...puszkiInstalacyjneSubCategoryNames],
-    url: [...puszkiInstalacyjneSubCategoryUrls],
+    mainCategoryIndex: 9,
+    mainCategoryName: mainCategories[9].fullName,
+    mainCategoryUrl: mainCategories[9].url,
+    mainCategoryImage: imgMainCategories[9],
+    subcategoriesNames: [...puszkiInstalacyjneSubCategoryNames],
+    subcategoriesUrls: [...puszkiInstalacyjneSubCategoryUrls],
+    imageData: [...fakeSetOf36Images],
   },
-  //_____category__11
+  // //_____category__11
   {
-    name: mainCategories[10].fullName,
-    subcategories: [...osprzetDomowySubCategoryNames],
-    url: [...osprzetDomowySubCategoryUrls],
+    mainCategoryIndex: 10,
+    mainCategoryName: mainCategories[10].fullName,
+    mainCategoryUrl: mainCategories[10].url,
+    mainCategoryImage: imgMainCategories[10],
+    subcategoriesNames: [...osprzetDomowySubCategoryNames],
+    subcategoriesUrls: [...osprzetDomowySubCategoryUrls],
+    imageData: [...fakeSetOf36Images],
   },
 ];
 

@@ -1,13 +1,18 @@
 import React, { Dispatch, SetStateAction } from 'react';
 /**Components*/
 import LinkToCategory from './linkToCategory/LinkToCategory';
+import CategoriesCounter from '../../../../multipagesComponents/counters/categoriesCounter/CategoriesCounter';
 /**Hook Staff**/
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 /**Framer Motion Staff*/
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { opacityScaleYVariants } from '../../../../../utils/framerMotion/framerMotionUtils';
 /**Basic Data**/
 import { mainCategories } from '../../../../../data/_data';
 import PreviewButton from './previewButton/PreviewButton';
+import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import H1AnimatedPresence from '../../../../_basicComponents/componentH1/H1AnimatedPresence';
+import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
 
 /**--------------------------------------------------------------------------------**/
 const TextSection: React.FunctionComponent<{
@@ -16,11 +21,7 @@ const TextSection: React.FunctionComponent<{
 }> = ({ currentCategory, setIsPreviewOpen }) => {
   /**Hook Section**/
   const { isLandscape } = useWindowSize({ screensNumber: 1 });
-  const counterStyle = ` text-grey text-center ${
-    isLandscape
-      ? 'text-[1rem] xs:text-[2rem] sx:text-[3rem] '
-      : 'text-[1.5rem] '
-  } `;
+
   const categoryNameStyle = ` text-light text-left ${
     isLandscape
       ? 'text-[1rem] lg:text-[2rem] xxl:text-[3rem] tracking-widest'
@@ -32,70 +33,80 @@ const TextSection: React.FunctionComponent<{
       : 'h-[3rem] xs:h-[4rem] sx:h-[6rem] '
   }`;
 
-  // console.log('isLandscape:', isLandscape);
   /**JSX**/
   return (
-    <div className="relative w-full h-full overflow-hidden">
-      <AnimatePresence initial={false}>
-        <motion.div
-          key={currentCategory}
-          className={`absolute fc h-full w-full ${
-            isLandscape ? 'inner-pl-md-lg py-[5%]' : 'inner-px-md-lg py-[5%]'
-          }`}
-        >
-          <div
-            className="flex justify-center gap-2 w-full h-full flex-col leading-none  px-2 py-2 "
-            //__border border-greyShade2
-          >
-            <div
-              className="flex"
-              style={{ width: 'fit-content' }}
-              //___border border-greyShade1
-            >
-              <motion.p
-                className={`${counterStyle} w-[40px]`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.6, ease: 'easeInOut' }}
-              >{`${currentCategory + 1 < 10 ? '0' : ''}${
-                currentCategory + 1
-              } `}</motion.p>
-              <p className={`${counterStyle} w-[50px]`}>/</p>
-              <p className={`${counterStyle} w-[40px]`}>
-                {mainCategories.length - 1}
-              </p>
+    <div className="relative w-full h-full overflow-hidden ">
+      <div
+        className={`absolute fc h-full w-full ${
+          isLandscape ? 'inner-pl-md-lg py-[5%]' : 'inner-px-md-lg py-[5%]'
+        }`}
+      >
+        <div className="flex justify-center gap-4 md:gap-10 w-full h-full flex-col leading-none px-2 py-2 ">
+          <div className="flex flex-col gap-4 h-[120px] ">
+            <div className="flex w-full pb-1 md:pb-1">
+              <SmallPseudoHeader text="Podkategoria" containerStyle="pr-10" />
+              {/* <div className="h-auto w-[10px] border-l border-corpo" />
+            <p className={`header-link-label text-grey pr-10`}>Kategoria</p> */}
+              <CategoriesCounter
+                key={currentCategory + 20}
+                currentCategoryIndex={currentCategory}
+                digitStyle="header-link-label text-grey"
+                digitContainerStyle="fc w-[20px]"
+              />
             </div>
 
-            <motion.div
-              className="flex items-center w-full h-[30%]"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-            >
-              <div
-                className={`${categoryNameContainerStyle} flex items-center`}
-              >
-                <div className="h-full w-[2px] border-l-2 border-corpo pr-2" />
-                <p className={categoryNameStyle}>
-                  {mainCategories[currentCategory].fullName}
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div className="flex w-full ">
-              <LinkToCategory />
-            </motion.div>
-
-            <motion.div className="flex w-full ">
-              <PreviewButton setIsPreviewOpen={setIsPreviewOpen} />
-            </motion.div>
+            <div className="flex items-center max-w-[750px] h-auto leading-8 xxl:leading-[2.75rem] disable ">
+              <H1AnimatedPresence
+                uniqueKey={currentCategory}
+                text={catalogStructureData[currentCategory].mainCategoryName}
+                // variantH="h2"
+              />
+            </div>
           </div>
-        </motion.div>
-      </AnimatePresence>
+
+          <div className="flex flex-col gap-2">
+            <div className="flex w-full ">
+              <LinkToCategory currentCategory={currentCategory} />
+            </div>
+
+            <div className="flex w-full ">
+              <PreviewButton setIsPreviewOpen={setIsPreviewOpen} />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default TextSection;
+
+{
+  /* <div
+            className="flex"
+            style={{ width: 'fit-content' }}
+            //___border border-greyShade1
+          >
+            <CategoriesCounter
+              key={currentCategory}
+              currentCategoryIndex={currentCategory}
+            />
+          </div> */
+}
+
+{
+  /* <div className="flex items-center w-full h-auto disable">
+            <div className={`${categoryNameContainerStyle} flex items-center`}>
+              <div className="h-full w-[2px] border-l-2 border-corpo pr-2" />
+              <motion.p
+                key={currentCategory}
+                className={categoryNameStyle}
+                variants={opacityScaleYVariants}
+                initial="from"
+                animate="to"
+              >
+                {mainCategories[currentCategory].fullName}
+              </motion.p>
+            </div>
+          </div> */
+}

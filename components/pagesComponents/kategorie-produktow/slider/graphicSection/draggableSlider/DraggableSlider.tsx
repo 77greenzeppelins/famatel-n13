@@ -22,11 +22,9 @@ const DraggableSlider: React.FunctionComponent<{
   /**...**/
   const constraintsRef = useRef(null);
   /**Hook Section / just tell me what device's orientation is... **/
-  const {
-    isLandscape,
-    width: windowWidth,
-    height: windowHeight,
-  } = useWindowSize({ screensNumber: 1 });
+  const { width: windowWidth, height: windowHeight } = useWindowSize({
+    screensNumber: 1,
+  });
   //**just initial condition**/
   //   if (!width || !height) return null;
   /**simple data; how many n-size cells can we put to the line**/
@@ -44,10 +42,9 @@ const DraggableSlider: React.FunctionComponent<{
        * **/
       return (
         <motion.div
-          // ref={tempRef}
           data-layout={`DraggableSlider__slidersRowNr${i}`}
-          // key={i + windowWidth + windowHeight}
-          key={JSON.stringify(windowWidth + windowHeight + i)}
+          key={i}
+          // key={JSON.stringify(windowWidth + windowHeight + i)}
           drag="x"
           dragConstraints={constraintsRef}
           // dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}

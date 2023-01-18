@@ -4,6 +4,7 @@ import AriaJSLink from '../../../../../../_basicComponents/links/ariaJSLink/Aria
 /** */
 import { corpoColors } from '../../../../../../../data/_data';
 import { motion } from 'framer-motion';
+import { opacityScaleYVariants } from '../../../../../../../utils/framerMotion/framerMotionUtils';
 
 /**---------------------------------------------------------------**/
 const LinkToSubCategory: React.FunctionComponent<{
@@ -16,12 +17,16 @@ const LinkToSubCategory: React.FunctionComponent<{
     <motion.li
       className="block"
       data-component="LinkToSubCategory__li-container"
-      initial={{ scaleY: 0 }}
-      animate={{ scaleY: 1, transition: { delay: 0.4, duration: 0.4 } }}
-      exit={{
-        scaleY: 0,
-        transition: { duration: 0.4 },
-      }}
+      // initial={{ scaleY: 0 }}
+      // animate={{ scaleY: 1, transition: { delay: 0.0, duration: 0.4 } }}
+      // exit={{
+      //   scaleY: 0,
+      //   transition: { duration: 0.4 },
+      // }}
+      variants={opacityScaleYVariants}
+      initial="from"
+      animate="to"
+      exit="exit"
     >
       <AriaJSLink
         linkHref={url}

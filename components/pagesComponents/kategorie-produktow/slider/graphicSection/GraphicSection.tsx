@@ -5,8 +5,6 @@ import useMeasure from 'react-use-measure';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
 import DraggableSlider from './draggableSlider/DraggableSlider';
-/**Basic Data**/
-const slideSide = 200;
 
 /**--------------------------------------------------------------------------------**/
 const GraphicSection: React.FunctionComponent<{
@@ -21,72 +19,30 @@ const GraphicSection: React.FunctionComponent<{
   } = useWindowSize({ screensNumber: 1 });
   /**Hook Section / just count container of "sliding" images... **/
   const [ref, { width, height }] = useMeasure();
-  const slidersLines = height > 400 ? 2 : 1;
-
-  /**Some Handler to create individual "line / container" with slides**/
 
   /**JSX**/
   return (
-    <div
-      className="relative w-full h-full overflow-hidden"
-      //__overflow-hidden
-    >
-      {/* <AnimatePresence>
-        {isPreviewOpen && <div className="w-full h-full bg-corpo z-[10]"></div>}
-      </AnimatePresence> */}
-      <AnimatePresence
-        initial={false}
-        // initial={true}
-      >
-        <motion.div
-          //___Special case / bug pseudoSolver: this forces to rerender when window resizes; just to keep dragConstraints
-          key={
-            currentCategory +
-            windowWidth +
-            windowHeight -
-            width -
-            height +
-            Number(isLandscape)
-          }
-          className="absolute fc inset-0 "
+    <div className="relative w-full h-full overflow-hidden">
+      <div className="absolute fc inset-0 ">
+        <div
+          className={`h-full w-full disable ${
+            isLandscape ? 'inner-pr-md-lg' : 'inner-px-md-lg'
+          } `}
         >
           <div
-            className={`h-full w-full disable ${
-              isLandscape ? 'inner-pr-md-lg' : 'inner-px-md-lg'
-            } `}
+            ref={ref}
+            className="relative fc flex-col h-full w-full  overflow-hidden "
           >
-            <motion.div
-              ref={ref}
-              initial={{
-                opacity: 0,
-                // y: -100
-              }}
-              animate={{
-                opacity: 1,
-                // y: 0,
-                // transition: { duration: 0.6, ease: 'easeInOut' },
-              }}
-              exit={{
-                opacity: 0,
-                // y: -100,
-                // transition: { duration: 0, ease: 'easeInOut' },
-              }}
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
-              className="relative fc flex-col h-full w-full  overflow-hidden "
-              //__border-t border-b border-greyShade1
-            >
-              {/* <div className="absolute left-0 w-[5%] h-full bg-gradient-to-r from-dark  z-[10]" />
-              <div className="absolute right-0 w-[5%] h-full bg-gradient-to-l from-dark" /> */}
-              {/* {createLinesOfSlides()} */}
-              <DraggableSlider
-                width={width}
-                height={height}
-                currentCategory={currentCategory}
-              />
-            </motion.div>
+            <DraggableSlider
+              width={width}
+              height={height}
+              currentCategory={currentCategory}
+            />
+            {/* <div className="absolute left-0 w-[5%] h-full bg-gradient-to-r from-dark  " /> */}
+            {/* <div className="absolute w-[110%] h-[110%] backdrop-blur-md backdrop-brightness-50" /> */}
           </div>
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      </div>
     </div>
   );
 };

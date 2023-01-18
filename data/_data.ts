@@ -2,14 +2,11 @@
 import { imgOfProductsReps } from '../public/images/categories/imgOfProductsReps';
 /**TS Staff**/
 import {
-  ICorpoColors,
-  IPagesUrl,
-  mainPagesItem,
-  IMainCategoriesItem,
-  // IVatColors,
-  // IVatColorsPale,
-  // IVatLowColors,
-} from './_data_TS';
+  IF_MainCategorySpecification,
+  IF_CorpoColors,
+  IF_PagesUrl,
+  IF_MainPagesItem,
+} from '../utils/TS/typeScriptStaff';
 
 /**Instant Contact Buttons**/
 const linksToInstantContactData = {
@@ -20,7 +17,7 @@ const linksToInstantContactData = {
 // const businessPhone = 'tel:798-905-558';
 
 /**Data for Data**/
-const corpoColors: ICorpoColors = {
+const corpoColors: IF_CorpoColors = {
   light: '#ffffff',
   orange: '#e74124',
   grey: '#9d9e9f',
@@ -31,7 +28,7 @@ const corpoColors: ICorpoColors = {
   dark: '#1d1d1b',
 };
 
-const pagesUrl: IPagesUrl = {
+const pagesUrl: IF_PagesUrl = {
   home: '/',
   realizacje: '/realizacje',
   produkty: '/kategorie-produktow',
@@ -51,7 +48,7 @@ const menuLinkLabel: string[] = [
 ];
 
 /**used in <Header>; within appPages.map();**/
-const mainPages: mainPagesItem[] = [
+const mainPages: IF_MainPagesItem[] = [
   {
     arrayIndex: 0,
     label: menuLinkLabel[0],
@@ -92,12 +89,12 @@ const mainPages: mainPagesItem[] = [
 
 const mainCategoriesPath: string[] = [
   'wtyczki-gniazda',
-  'gniazda-rozlacznik-blokada',
+  'gniazda-z-blokada',
   'adaptery-przemyslowe',
   'gniazda-podwieszane',
   'przedluzacze-bebnowe',
   'rozlaczniki-bezpieczenstwa',
-  'ladowarki-pojazdow-elektrycznych',
+  'ladowarki-samochodowe',
   'obudowy-i-rozdzielnice',
   'rozdzielnice-modulowe',
   'puszki-instalacyjne',
@@ -116,7 +113,8 @@ const mainCategoriesNames: string[] = [
   'Obudowy i rozdzielnice',
   'Rozdzielnice modułowe',
   'Puszki instalacyjne',
-  'Wtyczki, gniazda, adaptery domowe',
+  'Osprzęt domowy',
+  // 'Wtyczki, gniazda, adaptery domowe',
   'Himarsy i dżaweliny',
 ];
 
@@ -125,7 +123,7 @@ used in: layout | ... | dropDownMenu | produkty | <ProduktyDropDownMenu>
 used in: 'url" is used in _categoryName_data.ts; for instance: _wtyczki-gniazda_data.ts
 keys: arrayIndex,name, fullName, url, image
 */
-const mainCategories: IMainCategoriesItem[] = [
+const mainCategories: IF_MainCategorySpecification[] = [
   {
     arrayIndex: 0,
     name: mainCategoriesNames[0],
@@ -136,7 +134,7 @@ const mainCategories: IMainCategoriesItem[] = [
   {
     arrayIndex: 1,
     name: mainCategoriesNames[1],
-    fullName: 'Przemysłowe gniazda z rozłącznikiem i blokadą ',
+    fullName: 'Gniazda z rozłącznikiem i blokadą ',
     url: `/kategorie-produktow/${mainCategoriesPath[1]}`,
     image: imgOfProductsReps[1].image,
   },
@@ -171,7 +169,7 @@ const mainCategories: IMainCategoriesItem[] = [
   {
     arrayIndex: 6,
     name: mainCategoriesNames[6],
-    fullName: 'Ładowarki pojazdów elektrycznych',
+    fullName: 'Ładowarki samochodowe',
     url: `/kategorie-produktow/${mainCategoriesPath[6]}`,
     image: imgOfProductsReps[6].image,
   },
@@ -199,7 +197,8 @@ const mainCategories: IMainCategoriesItem[] = [
   {
     arrayIndex: 10,
     name: mainCategoriesNames[10],
-    fullName: 'Wtyczki, gniazda, adaptery domowe',
+    // fullName: 'Wtyczki, gniazda, adaptery domowe',
+    fullName: 'Osprzęt domowy',
     url: `/kategorie-produktow/${mainCategoriesPath[10]}`,
     image: imgOfProductsReps[10].image,
   },

@@ -1,37 +1,37 @@
-import { StaticImageData } from 'next/image';
+// import { StaticImageData } from 'next/image';
 
-interface ICorpoColors {
-  light: string;
-  orange: string;
-  grey: string;
-  greyShade1: string;
-  greyShade2: string;
-  greyTint1: string;
-  greyTint2: string;
-  dark: string;
-}
-interface IPagesUrl {
-  home: string;
-  realizacje: string;
-  produkty: string;
-  nowosci: string;
-  doPobrania: string;
-  kontakt: string;
-}
+// interface ICorpoColors {
+//   light: string;
+//   orange: string;
+//   grey: string;
+//   greyShade1: string;
+//   greyShade2: string;
+//   greyTint1: string;
+//   greyTint2: string;
+//   dark: string;
+// }
+// interface IPagesUrl {
+//   home: string;
+//   realizacje: string;
+//   produkty: string;
+//   nowosci: string;
+//   doPobrania: string;
+//   kontakt: string;
+// }
 
-interface mainPagesItem {
-  arrayIndex: number;
-  label: string;
-  url: string;
-  hasDropDownMenu: boolean;
-}
-interface IMainCategoriesItem {
-  arrayIndex: number;
-  name: string;
-  fullName: string;
-  url: string;
-  image: StaticImageData;
-}
+// interface mainPagesItem {
+//   arrayIndex: number;
+//   label: string;
+//   url: string;
+//   hasDropDownMenu: boolean;
+// }
+// interface IMainCategoriesItem {
+//   arrayIndex: number;
+//   name: string;
+//   fullName: string;
+//   url: string;
+//   image: StaticImageData;
+// }
 
 //_____________________________________???
 // interface IVatColors {
@@ -57,13 +57,12 @@ interface IMainCategoriesItem {
 //   greenPale: string;
 // }
 
-export type {
-  ICorpoColors,
-  IPagesUrl,
-  mainPagesItem,
-  IMainCategoriesItem,
-  // ICatalogCardTableType,
-  // IVatColors,
-  // IVatColorsPale,
-  // IVatLowColors,
-};
+export // ICorpoColors,
+// IPagesUrl,
+// mainPagesItem,
+// IMainCategoriesItem,
+// ICatalogCardTableType,
+// IVatColors,
+// IVatColorsPale,
+// IVatLowColors,
+ type {};

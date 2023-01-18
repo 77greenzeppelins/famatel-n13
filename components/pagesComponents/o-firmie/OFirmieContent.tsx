@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 /**Components**/
+import FixedContainerWithEngine from '../../layouts/pseudoLayouts/fixedContainerWithEngine/FixedContainerWithEngine';
 import OFirmieSlider from './slider/OFirmieSlider';
 import NavPanel from './navPanel/NavPanel';
-/**FramerMotion Staf**/
-import { motion } from 'framer-motion';
-import FixedContainerWithEngine from '../../layouts/pseudoLayouts/fixedContainerWithEngine/FixedContainerWithEngine';
+import ProductDescriptionOverlay from './_overlay/ProductDescriptionOverlay';
 /**Basic Data*/
 const screensNumber = 3;
 const timeoutFactor = 1000;
 
 /**----------------------------------------------------------------**/
 const OFirmieContent = () => {
-  /**LocalState; just to control slides**/
+  /**LocalState; just to control slides **/
   const [slideState, setSlideState] = useState<{
     number: number;
   }>({
     number: 0,
   });
+  /**LocalState; just to open/close <ProductDescriptionOverlay> **/
+  const [isProductDescriptionOpen, setIsProductDescriptionOpen] =
+    useState(false);
 
   /**JSX**/
   return (
@@ -27,11 +29,20 @@ const OFirmieContent = () => {
       sectionsNumber={screensNumber}
       isEngineActive={true}
     >
-      <OFirmieSlider slideNumber={slideState.number} />
+      <OFirmieSlider
+        slideNumber={slideState.number}
+        isProductDescriptionOpen={isProductDescriptionOpen}
+        setIsProductDescriptionOpen={setIsProductDescriptionOpen}
+      />
       <NavPanel
         slideNumber={slideState.number + 1}
         setSlideState={setSlideState}
         sectionsNumber={screensNumber}
+      />
+      <ProductDescriptionOverlay
+        currentIndex={slideState.number}
+        isPreviewOpen={isProductDescriptionOpen}
+        setIsProductDescriptionOpen={setIsProductDescriptionOpen}
       />
     </FixedContainerWithEngine>
   );

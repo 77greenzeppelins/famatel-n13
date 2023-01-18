@@ -38,7 +38,7 @@ const ImageContnent: React.FunctionComponent<{
   const categoryImages = arrOfImages[categoryIndex];
   /**JSX**/
   return (
-    <div className="relative w-full h-full bg-light p-5 rounded-sm">
+    <div className="relative w-full h-full bg-light p-5 rounded-sm overflow-hidden">
       <AnimatePresence initial={true}>
         <motion.div
           key={categoryIndex}
@@ -46,7 +46,7 @@ const ImageContnent: React.FunctionComponent<{
           animate={{
             opacity: 1,
             scale: 1,
-            transition: { delay: 0.05, duration: 0.4 },
+            transition: { delay: 0.1, duration: 0.8 },
           }}
           exit={{ opacity: 0 }}
           className="relative fc w-full h-full "

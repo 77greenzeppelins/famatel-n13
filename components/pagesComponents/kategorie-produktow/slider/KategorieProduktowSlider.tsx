@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 /**Components**/
 import TextSection from './textSection/TextSection';
 import GraphicSection from './graphicSection/GraphicSection';
+import CategoriesPreviewOverlay from './overlay/CategoriesPreviewOverlay';
 /**Hook Staff**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
-import useMeasure from 'react-use-measure';
-import CategoriesPreviewOverlay from './overlay/CategoriesPreviewOverlay';
+// import useMeasure from 'react-use-measure';
 
 /**-----------------------------------------------------------**/
 const KategorieProduktowSlider: React.FunctionComponent<{
@@ -13,11 +13,10 @@ const KategorieProduktowSlider: React.FunctionComponent<{
 }> = ({ currentCategory }) => {
   /**Hook Section**/
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
-
   /**Hook Section**/
   const { isLandscape } = useWindowSize({ screensNumber: 1 });
   /**Hook Section**/
-  const [ref, { width, height }] = useMeasure();
+  // const [ref, { width, height }] = useMeasure();
   /**JSX**/
   return (
     <div

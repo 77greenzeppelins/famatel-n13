@@ -3,15 +3,21 @@ import React from 'react';
 import LinkWithArrowIcon from '../../../../../SVG/icons/LinkWithArrowIcon';
 import AriaJSLink from '../../../../../_basicComponents/links/ariaJSLink/AriaJSLink';
 /**BasicData**/
-import { corpoColors, pagesUrl } from '../../../../../../data/_data';
+import {
+  corpoColors,
+  pagesUrl,
+  mainCategories,
+} from '../../../../../../data/_data';
 
 /**---------------------------------------**/
-const LinkToCategory = () => {
+const LinkToCategory: React.FunctionComponent<{ currentCategory: number }> = ({
+  currentCategory,
+}) => {
   /**JSX**/
   return (
     <div className="h-[36px]">
       <AriaJSLink
-        linkHref={pagesUrl.kontakt}
+        linkHref={mainCategories[currentCategory].url}
         controlsSet={{ background: corpoColors.greyTint1 }}
         controlsStart={{
           background: corpoColors.dark, //background color
