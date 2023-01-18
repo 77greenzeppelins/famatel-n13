@@ -99,25 +99,21 @@ const mainCategoriesPath: string[] = [
   'rozdzielnice-modulowe',
   'puszki-instalacyjne',
   'osprzet-domowy',
-  'k',
 ];
 
 const mainCategoriesNames: string[] = [
-  'Wtyczki i gniazda',
+  'Przemysłowe wtyczki i gniazda',
   'Gniazda z rozłącznikiem i blokadą',
   'Adaptery przemysłowe',
   'Gniazda podwieszane',
   'Przedłużacze bębnowe',
   'Rozłączniki bezpieczeństwa',
-  'Ładowarki pojazdów elektrycznych',
+  'Ładowarki samochodowe',
   'Obudowy i rozdzielnice',
   'Rozdzielnice modułowe',
   'Puszki instalacyjne',
   'Osprzęt domowy',
-  // 'Wtyczki, gniazda, adaptery domowe',
-  'Himarsy i dżaweliny',
 ];
-
 /*
 used in: layout | ... | dropDownMenu | produkty | <ProduktyDropDownMenu>
 used in: 'url" is used in _categoryName_data.ts; for instance: _wtyczki-gniazda_data.ts
@@ -128,70 +124,70 @@ const mainCategories: IF_MainCategorySpecification[] = [
     arrayIndex: 0,
     name: mainCategoriesNames[0],
     fullName: 'Przemysłowe wtyczki i gniazda',
-    url: `/kategorie-produktow/${mainCategoriesPath[0]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[0]}`,
     image: imgOfProductsReps[0].image,
   },
   {
     arrayIndex: 1,
     name: mainCategoriesNames[1],
     fullName: 'Gniazda z rozłącznikiem i blokadą ',
-    url: `/kategorie-produktow/${mainCategoriesPath[1]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[1]}`,
     image: imgOfProductsReps[1].image,
   },
   {
     arrayIndex: 2,
     name: mainCategoriesNames[2],
     fullName: 'Adaptery przemysłowe',
-    url: `/kategorie-produktow/${mainCategoriesPath[2]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[2]}`,
     image: imgOfProductsReps[2].image,
   },
   {
     arrayIndex: 3,
     name: mainCategoriesNames[3],
     fullName: 'Gniazda podwieszane',
-    url: `/kategorie-produktow/${mainCategoriesPath[3]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[3]}`,
     image: imgOfProductsReps[3].image,
   },
   {
     arrayIndex: 4,
     name: mainCategoriesNames[4],
     fullName: 'Przedłużacze bębnowe',
-    url: `/kategorie-produktow/${mainCategoriesPath[4]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[4]}`,
     image: imgOfProductsReps[4].image,
   },
   {
     arrayIndex: 5,
     name: mainCategoriesNames[5],
     fullName: 'Rozłączniki bezpieczeństwa',
-    url: `/kategorie-produktow/${mainCategoriesPath[5]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[5]}`,
     image: imgOfProductsReps[5].image,
   },
   {
     arrayIndex: 6,
     name: mainCategoriesNames[6],
     fullName: 'Ładowarki samochodowe',
-    url: `/kategorie-produktow/${mainCategoriesPath[6]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[6]}`,
     image: imgOfProductsReps[6].image,
   },
   {
     arrayIndex: 7,
     name: mainCategoriesNames[7],
     fullName: 'Obudowy i rozdzielnice',
-    url: `/kategorie-produktow/${mainCategoriesPath[7]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[7]}`,
     image: imgOfProductsReps[7].image,
   },
   {
     arrayIndex: 8,
     name: mainCategoriesNames[8],
     fullName: 'Rozdzielnice modułowe',
-    url: `/kategorie-produktow/${mainCategoriesPath[8]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[8]}`,
     image: imgOfProductsReps[8].image,
   },
   {
     arrayIndex: 9,
     name: mainCategoriesNames[9],
     fullName: 'Puszki instalacyjne',
-    url: `/kategorie-produktow/${mainCategoriesPath[9]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[9]}`,
     image: imgOfProductsReps[9].image,
   },
   {
@@ -199,22 +195,17 @@ const mainCategories: IF_MainCategorySpecification[] = [
     name: mainCategoriesNames[10],
     // fullName: 'Wtyczki, gniazda, adaptery domowe',
     fullName: 'Osprzęt domowy',
-    url: `/kategorie-produktow/${mainCategoriesPath[10]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[10]}`,
     image: imgOfProductsReps[10].image,
   },
   {
     arrayIndex: 11,
     name: mainCategoriesNames[11],
     fullName: 'Himarsy i dżaweliny',
-    url: `/kategorie-produktow/${mainCategoriesPath[11]}`,
+    url: `${pagesUrl.produkty}/${mainCategoriesPath[11]}`,
     image: imgOfProductsReps[11].image,
   },
 ];
-// const gniazdaZBlokadaSubCategories: string[] = [
-//   'Gniazda tablicowe z blokadą mechaniczną',
-//   'Gniazda stałe z blokadą mechaniczną',
-//   'Gniazda z blokadą mechaniczną i opcjonalnymi komponentami',
-// ];
 /*
 in set in: layout | overlays |...| <OverlayOpener>
 is used in: pagesComponents | _nestedPages | _nestedPages | <WtyczkiGniazdaPrzenosneOverlayManager> => all >SubCategoryNameOverlayManager>s
@@ -247,21 +238,6 @@ is used in: pagesComponents | _nestedPages | _nestedPages | <WtyczkiGniazdaPrzen
 //   greenVivid: '#458053',
 //   greenPale: '#9cb598',
 // };
-
-// const categoryNamesForSideNavigation: (string | string[])[] = [
-//   ['Wtyczki', 'i gniazda'],
-//   ['Gniazda z', 'rozłącznikiem', 'i blokadą'],
-//   'Adaptery przemysłowe',
-//   'Gniazda podwieszane',
-//   'Przedłużacze bębnowe',
-//   'Rozłączniki bezpieczeństwa',
-//   'Ładowarki pojazdów elektrycznych',
-//   'Obudowy',
-//   'Rozdzielnice',
-//   'Puszki instalacyjne',
-//   'Wtyczki, gniazda, adaptery domowe',
-//   'Himarsy i dżaweliny',
-// ];
 
 /**Aria staff*/
 const closeOverlay = 'przycisk: zamknij okno';

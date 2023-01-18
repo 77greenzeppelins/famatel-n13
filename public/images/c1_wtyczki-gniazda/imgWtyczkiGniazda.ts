@@ -1,27 +1,23 @@
-import { StaticImageData } from 'next/image';
+// import { StaticImageData } from 'next/image';
 /**Images**/
-import img1 from './1.1_13200_CR_2.webp';
-import img2 from './1.1_13200_CR.webp';
-import img3 from './1.1_13200.webp';
-import img4 from './1.1_13311_2.webp';
-import img5 from './1.1_14200.webp';
-import img6 from './1.1_14304.webp';
-import img7 from './1.1_14307.webp';
-import img8 from './1.1_23200.webp';
-import img9 from './1.1_24200.webp';
-import img10 from './1.1_24305_306.jpg';
-import img11 from './1.1_24307.webp';
-//___
-import img12 from './1.2_13634.webp';
-import img13 from './1.2_24374.webp';
+import img1 from './4_schuko-scianne/1.4_01_13953.webp';
+import img2 from './2_tablicowe/1.2_07_24377.webp';
+import img3 from './3_scienne/1.3_12_23626.webp';
+import img4 from './1_przenosne/1.1_03_14304.webp';
+import img5 from './5_schuko/1.5_07_188G.webp';
+import img6 from './6_niskie-napiecia/1.6_07_23072.webp';
+import img7 from './7_chlodnicze/1.7_04_24398.webp';
+import img8 from './8_events/1.8_08_17020.webp';
+import img9 from './9_camping/1.9_04_13000.webp';
 
 /**TS**/
-interface IF_ImgOFirmiePage {
-  image: StaticImageData;
-}
+import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
+// interface IF_ImgStaticData {
+//   image: StaticImageData;
+// }
 
 /**...**/
-const imgWtyczkiGniazda: IF_ImgOFirmiePage[] = [
+const imgWtyczkiGniazda: IF_ImgStaticData[] = [
   { image: img1 },
   { image: img2 },
   { image: img3 },
@@ -31,10 +27,21 @@ const imgWtyczkiGniazda: IF_ImgOFirmiePage[] = [
   { image: img7 },
   { image: img8 },
   { image: img9 },
-  { image: img10 },
-  { image: img11 },
-  { image: img12 },
-  { image: img13 },
 ];
 
-export { imgWtyczkiGniazda };
+/**
+ * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
+ **/
+const imgWtyczkiGniazda_subCategoryCatalog: IF_ImgStaticData[] = [
+  { image: img4 },
+  { image: img2 },
+  { image: img3 },
+
+  { image: img1 },
+  { image: img5 },
+  { image: img6 },
+  { image: img7 },
+  { image: img8 },
+  { image: img9 },
+];
+export { imgWtyczkiGniazda, imgWtyczkiGniazda_subCategoryCatalog };

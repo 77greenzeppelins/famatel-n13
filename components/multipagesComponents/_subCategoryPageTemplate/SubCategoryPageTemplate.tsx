@@ -8,9 +8,10 @@ import { wtyczkiGniazdaSubCategoriesData } from '../../../data/categoriesData/_c
 /**-----------------------------------------------------------------**/
 const SubCategoryPageTemplate: React.FunctionComponent<{
   subCategoryIndex: number;
-}> = ({ subCategoryIndex }) => {
+  parentCategoryUrl: string;
+}> = ({ subCategoryIndex, parentCategoryUrl }) => {
   /**Props destructuring**/
-  const { parentCategory, arrayIndex, name, url } =
+  const { parentCategoryName, arrayIndex, subCategoryName, subCategoryUrl } =
     wtyczkiGniazdaSubCategoriesData[subCategoryIndex];
   /**JSX**/
   return (
@@ -20,12 +21,12 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
           <SmallPseudoHeader text="Kategoria" />
           <p className="header-link-label text-grey disable">/</p>
           <p className="header-link-label text-grey disable">
-            {parentCategory}
+            {parentCategoryName}
           </p>
         </div>
         <SmallPseudoHeader text="Podkategoria" />
         <SubCategoryPageHeader
-          fullName={name}
+          fullName={subCategoryName}
           subCategoryIndex={subCategoryIndex}
         />
       </div>

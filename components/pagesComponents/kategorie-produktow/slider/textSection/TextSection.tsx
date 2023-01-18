@@ -64,7 +64,10 @@ const TextSection: React.FunctionComponent<{
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div
+            className="flex flex-col gap-2 lg:gap-4"
+            style={{ width: 'fit-content' }}
+          >
             <div className="flex w-full ">
               <LinkToCategory currentCategory={currentCategory} />
             </div>

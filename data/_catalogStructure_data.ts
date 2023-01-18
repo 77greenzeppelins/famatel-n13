@@ -3,10 +3,11 @@ import {
   fakeSetOf36Images,
   imgMainCategories,
 } from '../public/images/categories/imgOfProductsReps';
+import { imgSubCategoryCatalogs } from '../public/images/kategorieProduktowPages/imgKategorieProduktowPage';
 /**TS**/
 import { IF_CatalogStructureData } from '../utils/TS/typeScriptStaff';
 /**BasicData**/
-import { pagesUrl, mainCategoriesPath, mainCategories } from './_data';
+import { pagesUrl, mainCategoriesPath, mainCategoriesNames } from './_data';
 
 //_____category__1
 const wtyczkiGniazdaSubCategoryNames: string[] = [
@@ -91,7 +92,7 @@ const gniazdaPodwieszaneSubCategoryUrls: string[] = [
 ];
 
 //_____category__5
-const przedluzaczeBebnoweSubCategoriesNames: string[] = [
+const przedluzaczeBebnoweSubCategoryNames: string[] = [
   'Przedłużacze bębnowe IP55 z gniazdami Schuko IP67',
   'Przemysłowe przedłużacze bębnowe z gniazdami IP67',
   'Metalowe przemysłowe przedłużacze bębnowe z gniazdami IP67',
@@ -101,7 +102,7 @@ const przedluzaczeBebnoweobudowePaths: string[] = [
   'przemyslowy-przedluzacz-bebnowy',
   'metalowy-przedluzacz-bebnowy',
 ];
-const przedluzaczeBebnoweSubCategoriesUrls: string[] = [
+const przedluzaczeBebnoweSubCategoryUrls: string[] = [
   `${pagesUrl.produkty}/${mainCategoriesPath[4]}/${przedluzaczeBebnoweobudowePaths[0]}`,
   `${pagesUrl.produkty}/${mainCategoriesPath[4]}/${przedluzaczeBebnoweobudowePaths[1]}`,
   `${pagesUrl.produkty}/${mainCategoriesPath[4]}/${przedluzaczeBebnoweobudowePaths[2]}`,
@@ -223,111 +224,111 @@ const catalogStructureData: IF_CatalogStructureData[] = [
   //_____category__1
   {
     mainCategoryIndex: 0,
-    mainCategoryName: mainCategories[0].fullName,
-    mainCategoryUrl: mainCategories[0].url,
+    mainCategoryName: mainCategoriesNames[0],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[0]}`,
     mainCategoryImage: imgMainCategories[0],
-    subcategoriesNames: [...wtyczkiGniazdaSubCategoryNames],
-    subcategoriesUrls: [...wtyczkiGniazdaSubCategoriesUrls],
-    imageData: [...fakeSetOf36Images],
+    subCategoriesNames: [...wtyczkiGniazdaSubCategoryNames],
+    subCategoriesUrls: [...wtyczkiGniazdaSubCategoriesUrls],
+    imageData: imgSubCategoryCatalogs[0],
   },
   //_____category__2
   {
     mainCategoryIndex: 1,
-    mainCategoryName: mainCategories[1].fullName,
-    mainCategoryUrl: mainCategories[1].url,
+    mainCategoryName: mainCategoriesNames[1],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[1]}`,
     mainCategoryImage: imgMainCategories[1],
-    subcategoriesNames: [...GniazdaZBlokadaSubCategoryNames],
-    subcategoriesUrls: [...GniazdaZBlokadaSubCategoryUrls],
-    imageData: [...fakeSetOf36Images],
+    subCategoriesNames: [...GniazdaZBlokadaSubCategoryNames],
+    subCategoriesUrls: [...GniazdaZBlokadaSubCategoryUrls],
+    imageData: imgSubCategoryCatalogs[1],
   },
   //_____category__3
   {
     mainCategoryIndex: 2,
-    mainCategoryName: mainCategories[2].fullName,
-    mainCategoryUrl: mainCategories[2].url,
+    mainCategoryName: mainCategoriesNames[2],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[2]}`,
     mainCategoryImage: imgMainCategories[2],
-    subcategoriesNames: [...adapteryPrzemysloweSubCategoryNames],
-    subcategoriesUrls: [...adapteryPrzemysloweSubCategoryUrls],
+    subCategoriesNames: [...adapteryPrzemysloweSubCategoryNames],
+    subCategoriesUrls: [...adapteryPrzemysloweSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
   //_____category__4__noSubcategory
   {
     mainCategoryIndex: 3,
-    mainCategoryName: mainCategories[3].fullName,
-    mainCategoryUrl: mainCategories[3].url,
+    mainCategoryName: mainCategoriesNames[3],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[3]}`,
     mainCategoryImage: imgMainCategories[3],
-    subcategoriesNames: [...gniazdaPodwieszaneSubCategoryNames],
-    subcategoriesUrls: [...gniazdaPodwieszaneSubCategoryUrls],
+    subCategoriesNames: [...gniazdaPodwieszaneSubCategoryNames],
+    subCategoriesUrls: [...gniazdaPodwieszaneSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
   // //_____category__5
   {
     mainCategoryIndex: 4,
-    mainCategoryName: mainCategories[4].fullName,
-    mainCategoryUrl: mainCategories[4].url,
+    mainCategoryName: mainCategoriesNames[4],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[4]}`,
     mainCategoryImage: imgMainCategories[4],
-    subcategoriesNames: [...przedluzaczeBebnoweSubCategoriesNames],
-    subcategoriesUrls: [...przedluzaczeBebnoweSubCategoriesUrls],
+    subCategoriesNames: [...przedluzaczeBebnoweSubCategoryNames],
+    subCategoriesUrls: [...przedluzaczeBebnoweSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
   // //_____category__6__noSubcategory
   {
     mainCategoryIndex: 5,
-    mainCategoryName: mainCategories[5].fullName,
-    mainCategoryUrl: mainCategories[5].url,
+    mainCategoryName: mainCategoriesNames[5],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[5]}`,
     mainCategoryImage: imgMainCategories[5],
-    subcategoriesNames: [...rozlacznikiBezpieczenstwaSubCategoryNames],
-    subcategoriesUrls: [...rozlacznikiBezpieczenstwaSubCategoryUrls],
+    subCategoriesNames: [...rozlacznikiBezpieczenstwaSubCategoryNames],
+    subCategoriesUrls: [...rozlacznikiBezpieczenstwaSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
   // //_____category__7__noSubcategory
   {
     mainCategoryIndex: 6,
-    mainCategoryName: mainCategories[6].fullName,
-    mainCategoryUrl: mainCategories[6].url,
+    mainCategoryName: mainCategoriesNames[6],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[6]}`,
     mainCategoryImage: imgMainCategories[6],
-    subcategoriesNames: [...ladowarkiPojazdowSubCategoryNames],
-    subcategoriesUrls: [...ladowarkiPojazdowSubCategoryUrls],
+    subCategoriesNames: [...ladowarkiPojazdowSubCategoryNames],
+    subCategoriesUrls: [...ladowarkiPojazdowSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
   // //_____category__8
   {
     mainCategoryIndex: 7,
-    mainCategoryName: mainCategories[7].fullName,
-    mainCategoryUrl: mainCategories[7].url,
+    mainCategoryName: mainCategoriesNames[7],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[7]}`,
     mainCategoryImage: imgMainCategories[7],
-    subcategoriesNames: [...obudowyAndRozdzielniceSubCategoryNames],
-    subcategoriesUrls: [...obudowyAndRozdzielniceSubCategoryUrls],
+    subCategoriesNames: [...obudowyAndRozdzielniceSubCategoryNames],
+    subCategoriesUrls: [...obudowyAndRozdzielniceSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
   // //_____category__9
   {
     mainCategoryIndex: 8,
-    mainCategoryName: mainCategories[8].fullName,
-    mainCategoryUrl: mainCategories[8].url,
+    mainCategoryName: mainCategoriesNames[8],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[8]}`,
     mainCategoryImage: imgMainCategories[8],
-    subcategoriesNames: [...rozdzielniceModuloweSubCategoryNames],
-    subcategoriesUrls: [...rozdzielniceModuloweSubCategoryUrls],
+    subCategoriesNames: [...rozdzielniceModuloweSubCategoryNames],
+    subCategoriesUrls: [...rozdzielniceModuloweSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
   // //_____category__10
   {
     mainCategoryIndex: 9,
-    mainCategoryName: mainCategories[9].fullName,
-    mainCategoryUrl: mainCategories[9].url,
+    mainCategoryName: mainCategoriesNames[9],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[9]}`,
     mainCategoryImage: imgMainCategories[9],
-    subcategoriesNames: [...puszkiInstalacyjneSubCategoryNames],
-    subcategoriesUrls: [...puszkiInstalacyjneSubCategoryUrls],
+    subCategoriesNames: [...puszkiInstalacyjneSubCategoryNames],
+    subCategoriesUrls: [...puszkiInstalacyjneSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
   // //_____category__11
   {
     mainCategoryIndex: 10,
-    mainCategoryName: mainCategories[10].fullName,
-    mainCategoryUrl: mainCategories[10].url,
+    mainCategoryName: mainCategoriesNames[10],
+    mainCategoryUrl: `${pagesUrl.produkty}/${mainCategoriesPath[10]}`,
     mainCategoryImage: imgMainCategories[10],
-    subcategoriesNames: [...osprzetDomowySubCategoryNames],
-    subcategoriesUrls: [...osprzetDomowySubCategoryUrls],
+    subCategoriesNames: [...osprzetDomowySubCategoryNames],
+    subCategoriesUrls: [...osprzetDomowySubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
 ];

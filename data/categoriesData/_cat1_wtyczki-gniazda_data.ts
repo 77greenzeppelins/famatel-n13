@@ -1,17 +1,18 @@
 /*Basic Data*/
 import { ISubCategoriesItem } from '../../utils/TS/typeScriptStaff';
 import { mainCategories, mainCategoriesNames, corpoColors } from '../_data';
+import { catalogStructureData } from '../_catalogStructure_data';
 /*Images saff*/
 import { imgOfProductsReps } from '../../public/images/categories/imgOfProductsReps';
+
 // import { imagesWtyczkiGniazdaSubCategories } from '../../../../public/images/produkty/packshots/wtyczki_gniazda/_indexImagesWtyczkiGniazda';
 /*TS*/
 // import { IDaneTechniczneText } from '../../../../utils/interfaces';
 // import type { ISubCategoriesItem } from './_cat1_wtyczki-gniazda_TS';
 
 /*
-Data for data and
+Data for data
 */
-
 const wtyczkiGniazdaSubCategoryNames: string[] = [
   'Wtyczki i gniazda przenośne',
   'Wtyczki i gniazda tablicowe',
@@ -59,17 +60,18 @@ const pseudoHeroData = {
 const wtyczkiGniazdaSubCategoriesData: ISubCategoriesItem[] = [
   {
     arrayIndex: 0,
-    parentCategory: mainCategoriesNames[0],
-    name: wtyczkiGniazdaSubCategoryNames[0],
-    url: subCategoriesUrls[0],
+    parentCategoryName: catalogStructureData[0].mainCategoryName,
+    parentCategoryUrl: catalogStructureData[0].mainCategoryUrl,
+    subCategoryName: wtyczkiGniazdaSubCategoryNames[0],
+    subCategoryUrl: subCategoriesUrls[0],
     // imageData: imagesWtyczkiGniazdaSubCategories[0],
   },
   // {
-  //   arrayIndex: 1,
-  //   parentCategory: mainCategoriesNames[0],
-  //   name: wtyczkiGniazdaSubCategoryNames[1],
-  //   url: subCategoriesUrls[1],
-  //   // imageData: imagesWtyczkiGniazdaSubCategories[1],
+  // arrayIndex: 1,
+  // parentCategory: mainCategoriesNames[0],
+  // name: wtyczkiGniazdaSubCategoryNames[1],
+  // url: subCategoriesUrls[1],
+  // imageData: imagesWtyczkiGniazdaSubCategories[1],
   // },
   // {
   //   parentCategory: mainCategoriesNames[0],

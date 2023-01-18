@@ -14,9 +14,10 @@ interface IImage {
 }
 interface ISubCategoriesItem {
   arrayIndex: number;
-  parentCategory: string;
-  name: string;
-  url: string;
+  parentCategoryName: string;
+  parentCategoryUrl: string;
+  subCategoryName: string;
+  subCategoryUrl: string;
   // imageData: IImage;
   icons?: string[];
 }
@@ -29,8 +30,8 @@ interface IF_CatalogStructureData {
   mainCategoryName: string;
   mainCategoryUrl: string;
   mainCategoryImage: IF_ImgStaticData;
-  subcategoriesNames: string[];
-  subcategoriesUrls: string[];
+  subCategoriesNames: string[];
+  subCategoriesUrls: string[];
   imageData: IF_ImgStaticData[];
 }
 

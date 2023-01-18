@@ -11,7 +11,7 @@ const PreviewButton: React.FunctionComponent<{
 }> = ({ setIsPreviewOpen }) => {
   /**JSX*/
   return (
-    <div className="h-[36px]">
+    <div className="h-[36px] w-full">
       <AriaButton
         // onClick={showSubcategories}
         specialOnClickHandler={() => {
@@ -24,7 +24,7 @@ const PreviewButton: React.FunctionComponent<{
           background: corpoColors.dark, //background color
           transition: { duration: 0.4 },
         }}
-        buttonStyle="fc gap-4 h-full border border-greyTint1 hover:border-corpo rounded-sm bg-transparent focus:outline-none group"
+        buttonStyle="flex items-center justify-between gap-4 h-full w-full border border-greyTint1 hover:border-corpo rounded-sm bg-transparent focus:outline-none group"
       >
         <p
           className={`header-link-label text-greyTint1 group-hover:text-corpo ease-in duration-300 px-2`}
