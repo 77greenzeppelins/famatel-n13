@@ -54,9 +54,9 @@ const GniazdaZBlokadaSubCategoryNames: string[] = [
   'Akcesoria do gniazd z blokadą',
 ];
 const GniazdaZBlokadaSubCategoryPaths: string[] = [
-  `gniazda-tablicowe-z-blokada-mechaniczna`,
-  `gniazda-stale-z-blokada-mechaniczna`,
-  `gniazda-z-blokada-i-komponentami`,
+  `tablicowe`,
+  `stale`,
+  `z-komponentami`,
   'akcesoria',
 ];
 const GniazdaZBlokadaSubCategoryUrls: string[] = [

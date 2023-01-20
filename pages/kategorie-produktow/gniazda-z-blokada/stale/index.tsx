@@ -4,8 +4,8 @@ import Layout from '../../../../components/layouts/rootLayout/Layout';
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
-import { obudowyRozdzielniceSubCategoriesData } from '../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/_cat8_obudowy-i-rozdzielnice_data';
-import { productCardsData } from '../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_3_gumowe';
+import { gniazdaBlokadaSubCategoriesData } from '../../../../data/categoriesData/cat_2_gniazda-z-blokada/_cat2_gniazda-z-blokada_data';
+import { productCardsData } from '../../../../data/categoriesData/cat_2_gniazda-z-blokada/subCategories/_subCat_2_stale';
 
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';
@@ -14,7 +14,7 @@ import type { NextPageWithLayout } from '../../../_app';
 const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <SubCategoryPageTemplate
-      subCategoryData={obudowyRozdzielniceSubCategoriesData[2]}
+      subCategoryData={gniazdaBlokadaSubCategoriesData[1]}
       productCardsData={productCardsData}
     />
   );

@@ -24,7 +24,6 @@ const imgGniazdaZBlokada: IF_ImgStaticData[] = [
   { image: img3 },
   { image: img4 },
   { image: img4 },
-
   { image: img5 },
   { image: img5 },
   { image: img6 },
@@ -34,7 +33,6 @@ const imgGniazdaZBlokada: IF_ImgStaticData[] = [
   { image: img8 },
   { image: img8 },
 ];
-
 /**
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
