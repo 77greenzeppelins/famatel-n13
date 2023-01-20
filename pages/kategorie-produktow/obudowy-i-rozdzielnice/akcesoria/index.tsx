@@ -14,7 +14,7 @@ import type { NextPageWithLayout } from '../../../_app';
 const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <SubCategoryPageTemplate
-      wtyczkiGniazdaSubCategoryData={wtyczkiGniazdaSubCategoriesData[7]}
+      subCategoryData={wtyczkiGniazdaSubCategoriesData[7]}
       productCardsData={productCardsData}
     />
   );
