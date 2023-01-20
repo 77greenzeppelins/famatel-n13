@@ -4,8 +4,8 @@ import Layout from '../../../../components/layouts/rootLayout/Layout';
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
-import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/_cat1_wtyczki-gniazda_data';
-import { catalogStructureData } from '../../../../data/_catalogStructure_data';
+import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
+import { productCardsData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_1_przenosne_data';
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';
 
@@ -13,8 +13,8 @@ import type { NextPageWithLayout } from '../../../_app';
 const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <SubCategoryPageTemplate
-      parentCategoryUrl={catalogStructureData[0].mainCategoryUrl}
-      subCategoryIndex={wtyczkiGniazdaSubCategoriesData[0].arrayIndex}
+      subCategoryData={wtyczkiGniazdaSubCategoriesData[0]}
+      productCardsData={productCardsData}
     />
   );
 };

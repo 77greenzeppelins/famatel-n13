@@ -22,7 +22,8 @@ const DropDownMenusHolder = ({
   /**AdditionalCondition
    * why: to prevent displaying <ProduktyDropDownMenu> when user is on ".../kategorie-produktow" path
    */
-  const specialCondition = pathname !== mainPages[1].url;
+  // const specialCondition = pathname !== mainPages[1].url;
+  const specialCondition = true;
 
   const styleCondition =
     pathname === pagesUrl.kontakt || pathname === pagesUrl.kontakt;

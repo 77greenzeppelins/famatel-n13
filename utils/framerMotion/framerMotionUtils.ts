@@ -214,6 +214,19 @@ const textSectionChildrenVariants = {
   },
 };
 
+/**
+ * used in cards to animate image's "white-containers": <BasicCardGraphicSection> & <ProductCardImageSection>
+ */
+
+const cardVariants = {
+  initial: { opacity: 0, scale: 0.95 },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.4, delay: 0.4 },
+  },
+};
+
 export {
   routingAnimation,
   overlayContainerVariants,
@@ -226,4 +239,6 @@ export {
   //___
   textSectionContainerVariants,
   textSectionChildrenVariants,
+  //____
+  cardVariants,
 };

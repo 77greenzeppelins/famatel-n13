@@ -17,29 +17,24 @@ const CategoryPageTemplate: React.FunctionComponent<{
       data-component="CategoryPageTemplate__container"
       className="w-screen inner-px-md-lg pt-[60px]"
     >
-      <div
-        data-layout="CategoryPageTemplate__pseudoHero"
-        className="flex flex-col h-[40vh] pt-[40px]"
-      >
-        <SmallPseudoHeader text="Kategoria" containerStyle="pd-2 md:pb-4" />
+      <div className="flex flex-col gap-y-6 pt-[40px]">
+        <SmallPseudoHeader text="Kategoria" />
         <CategoryPageHeader
           categoryIndex={mainCategoryIndex}
           categoryName={
             catalogStructureData[mainCategoryIndex].mainCategoryName
           }
         />
-      </div>
-      <div
-        data-layout="CategoryPageTemplate__catalogSection"
-        className="flex flex-col w-full  "
-      >
+
         {/* <div className="flex w-full ">
           <div className="w-[60%] border-t border-greyShade2" />
         </div> */}
-        <SmallPseudoHeader text="Katalog" containerStyle="pb-4 md:pb-10" />
+        <SmallPseudoHeader
+          text="Katalog podkategorii"
+          containerStyle="pb-4 md:pb-10"
+        />
         <SubCategoriesCatalog subCategoryData={subCategoryData} />
       </div>
-      <div className="fc w-full h-[10vh] "></div>
       <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>
   );

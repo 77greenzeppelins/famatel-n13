@@ -1,7 +1,7 @@
 import Link from 'next/link';
 /*Components*/
-import CardFrame from '../cardFrame/CardFrame';
-import CounterSection from './counterSection/CounterSection';
+import CardFrame from '../_cardFrame/CardFrame';
+import CardCounter from '../_cardCounter/CardCounter';
 import BasicCardMainSection from './mainSection/BasicCardMainSection';
 /**TS**/
 import { IF_Card } from '../../../../utils/TS/typeScriptStaff';
@@ -24,7 +24,7 @@ const BasicCard: React.FunctionComponent<IF_Card> = ({
         {/* <div className="relative w-full h-full"> */}
         <CardFrame>
           <div className="w-[18%] h-[80%]">
-            <CounterSection arrayIndex={arrayIndex} />
+            <CardCounter arrayIndex={arrayIndex} />
           </div>
 
           <div className="w-[82%] h-full">

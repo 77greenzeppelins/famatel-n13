@@ -27,7 +27,7 @@ const wtyczkiGniazdaSubCategoryPaths: string[] = [
   `scienne`,
   `tablicowe-jednofazowe`,
   `jednofazowe`,
-  `bardzo-niskie-napiecia`,
+  `niskie-napiecia`,
   `chlodnicze`,
   `estradowe`,
   `campingowe`,
@@ -133,10 +133,10 @@ const obudowyAndRozdzielniceSubCategoryNames: string[] = [
   'Akcesoria',
 ];
 const obudowyAndRozdzielniceSubCategoryPaths: string[] = [
-  'obudowy-ip65-puste',
+  'obudowy-puste',
   'rozdzielnice-przemyslowe',
-  'obudowy-ip65-gumowe',
-  'obudowy-akcesoria',
+  'obudowy-gumowe',
+  'akcesoria',
 ];
 
 const obudowyAndRozdzielniceSubCategoryUrls: string[] = [
@@ -221,7 +221,7 @@ const osprzetDomowySubCategoryUrls: string[] = [
  * url is an array of subcategories urls
  */
 const catalogStructureData: IF_CatalogStructureData[] = [
-  //_____category__1
+  //_____category__1__wtyczki-gniazda
   {
     mainCategoryIndex: 0,
     mainCategoryName: mainCategoriesNames[0],
@@ -231,7 +231,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...wtyczkiGniazdaSubCategoriesUrls],
     imageData: imgSubCategoryCatalogs[0],
   },
-  //_____category__2
+  //_____category__2__gniazda-z-blokada
   {
     mainCategoryIndex: 1,
     mainCategoryName: mainCategoriesNames[1],
@@ -241,7 +241,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...GniazdaZBlokadaSubCategoryUrls],
     imageData: imgSubCategoryCatalogs[1],
   },
-  //_____category__3
+  //_____category__3__adaptery-przemyslowe
   {
     mainCategoryIndex: 2,
     mainCategoryName: mainCategoriesNames[2],
@@ -251,7 +251,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...adapteryPrzemysloweSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
-  //_____category__4__noSubcategory
+  //_____category__4__noSubCategory__gniazda-podwieszane
   {
     mainCategoryIndex: 3,
     mainCategoryName: mainCategoriesNames[3],
@@ -261,7 +261,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...gniazdaPodwieszaneSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
-  // //_____category__5
+  // //_____category__5__przedlużacze-będnowe
   {
     mainCategoryIndex: 4,
     mainCategoryName: mainCategoriesNames[4],
@@ -271,7 +271,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...przedluzaczeBebnoweSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
-  // //_____category__6__noSubcategory
+  // //_____category__6__noSubcategory__rozlaczniki-bezpieczenstwa
   {
     mainCategoryIndex: 5,
     mainCategoryName: mainCategoriesNames[5],
@@ -281,7 +281,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...rozlacznikiBezpieczenstwaSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
-  // //_____category__7__noSubcategory
+  // //_____category__7__noSubcategory__ladowarki-samochodowe
   {
     mainCategoryIndex: 6,
     mainCategoryName: mainCategoriesNames[6],
@@ -291,7 +291,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...ladowarkiPojazdowSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
-  // //_____category__8
+  // //_____category__8__obudowy-i-rozdzielnice
   {
     mainCategoryIndex: 7,
     mainCategoryName: mainCategoriesNames[7],
@@ -299,7 +299,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     mainCategoryImage: imgMainCategories[7],
     subCategoriesNames: [...obudowyAndRozdzielniceSubCategoryNames],
     subCategoriesUrls: [...obudowyAndRozdzielniceSubCategoryUrls],
-    imageData: [...fakeSetOf36Images],
+    imageData: imgSubCategoryCatalogs[7],
   },
   // //_____category__9
   {

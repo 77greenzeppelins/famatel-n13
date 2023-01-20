@@ -14,8 +14,8 @@ const GraphicSection: React.FunctionComponent<{
   /**Hook Section / just tell me what device's orientation is... **/
   const {
     isLandscape,
-    width: windowWidth,
-    height: windowHeight,
+    // width: windowWidth,
+    // height: windowHeight,
   } = useWindowSize({ screensNumber: 1 });
   /**Hook Section / just count container of "sliding" images... **/
   const [ref, { width, height }] = useMeasure();

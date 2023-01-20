@@ -1,40 +1,42 @@
 import React from 'react';
 /**Components**/
+import SectionKategoria from './subCategoryPageHeader/sectionKategoria/SectionKategoria';
 import SubCategoryPageHeader from './subCategoryPageHeader/SubCategoryPageHeader';
 import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
-/**Basic Data**/
-import { wtyczkiGniazdaSubCategoriesData } from '../../../data/categoriesData/_cat1_wtyczki-gniazda_data';
+import ProductsCatalog from './productsCatalog/ProductsCatalog';
+/**TS**/
+import {
+  IF_ProductCardData,
+  ISubCategoriesItem,
+} from '../../../utils/TS/typeScriptStaff';
 
 /**-----------------------------------------------------------------**/
 const SubCategoryPageTemplate: React.FunctionComponent<{
-  subCategoryIndex: number;
-  parentCategoryUrl: string;
-}> = ({ subCategoryIndex, parentCategoryUrl }) => {
+  subCategoryData: ISubCategoriesItem;
+  productCardsData: IF_ProductCardData[];
+}> = ({ subCategoryData, productCardsData }) => {
   /**Props destructuring**/
-  const { parentCategoryName, arrayIndex, subCategoryName, subCategoryUrl } =
-    wtyczkiGniazdaSubCategoriesData[subCategoryIndex];
+  const { arrayIndex, parentCategoryName, parentCategoryUrl, subCategoryName } =
+    subCategoryData;
+
   /**JSX**/
   return (
-    <div className="w-screen inner-px-md-lg pt-[60px] bg-dark">
-      <div className="flex flex-col gap-y-6 h-[50vh] pt-[40px]">
-        <div className="flex gap-x-4">
-          <SmallPseudoHeader text="Kategoria" />
-          <p className="header-link-label text-grey disable">/</p>
-          <p className="header-link-label text-grey disable">
-            {parentCategoryName}
-          </p>
-        </div>
+    <div
+      data-component="SubCategoryPageTemplate__container"
+      className="w-screen inner-px-md-lg pt-[60px] bg-dark"
+    >
+      <div className="flex flex-col gap-y-6 pt-[40px]">
+        <SectionKategoria
+          parentCategoryName={parentCategoryName}
+          parentCategoryUrl={parentCategoryUrl}
+        />
         <SmallPseudoHeader text="Podkategoria" />
         <SubCategoryPageHeader
           fullName={subCategoryName}
-          subCategoryIndex={subCategoryIndex}
+          subCategoryIndex={arrayIndex}
         />
-      </div>
-      <div className="flex flex-col w-full h-[50vh] border-t border-greyShade2">
-        <SmallPseudoHeader text="Katalog" />
-      </div>
-      <div className="fc w-full h-[50vh] bg-greyShade2">
-        <p className="text-3xl text-corpo">Wtyczki Gniazda part_3</p>
+        <SmallPseudoHeader text="Katalog produktów" />
+        <ProductsCatalog productCardsData={productCardsData} />
       </div>
 
       <div className="fixed w-full h-[50px] top-0 bg-dark" />

@@ -10,7 +10,7 @@ import { imgGniazdaPodwieszaneFake } from '../../../../../../../../../public/ima
 import { imgPrzedluzaczeBebnowe } from '../../../../../../../../../public/images/c5_przedluzacze-bebnowe/imgPrzedluzaczeBebnowe';
 import { imgRozlacznikBezpieczenstwaSlides } from '../../../../../../../../../public/images/c6_rozlacznik-bezpieczenstwa/imgRozlacznikBezpieczenstwa';
 import { imgLadowarkiSlides } from '../../../../../../../../../public/images/c7_ladowarki/imgLadowarki';
-import { imgObudowyRozdzielniceSlide } from '../../../../../../../../../public/images/c8_obudowy-rozdzielnice/imgObudowyRozdzielniceSlide';
+import { imgObudowyRozdzielniceSlide } from '../../../../../../../../../public/images/c8_obudowy-rozdzielnice/imgObudowyRozdzielnice';
 import { imgRozdzielniceModuloweSlider } from '../../../../../../../../../public/images/c9_rozdzielnice-modulowe/imgRozdzielniceModulowe';
 import { imgPuszkiInstalacyjneSlider } from '../../../../../../../../../public/images/c10_puszki-instalacyjne/imgPuszkiInstalacyjne';
 import { imgDomoweSlider } from '../../../../../../../../../public/images/c11_domowe/imgDomowe';

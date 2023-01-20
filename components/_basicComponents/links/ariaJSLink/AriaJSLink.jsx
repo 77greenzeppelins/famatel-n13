@@ -8,8 +8,9 @@ import { motion, useAnimation } from 'framer-motion';
 import { corpoColors } from '../../../../data/_data';
 import { tailwindStyles } from '../../../../data/_styleData';
 //___<a> style, optimised for "iconStyle"
+// const aDefaultStyle = 'fc h-[70%] text-[1rem] bg-greyShade1 ';
 const aDefaultStyle =
-  'fc h-[70%] aspect-1 text-[1rem] bg-greyShade1 focus:outline-none';
+  'fc gap-4 h-full border border-greyTint1 hover:border-corpo rounded-sm bg-transparent focus:outline-none group';
 /**********************************************************************************************/
 const AriaJsLink = ({
   children,
@@ -44,17 +45,32 @@ const AriaJsLink = ({
     //   //  focusRingClass="ring ring-offset-2 ring-offset-black"
     //   focusRingClass="focus:ring focus:ring-offset-2 focus:ring-offset-black"
     // >
-    <Link href={linkHref} scroll={false} legacyBehavior passHref>
+    <Link
+      href={linkHref}
+      scroll={false}
+      legacyBehavior
+      passHref
+      // legacyBehavior
+      //  passHref
+    >
       <motion.a
         aria-label={props.ariaLabel}
         animate={controls}
         {...linkProps}
         className={`${
           props.aStyle ? props.aStyle : aDefaultStyle
-        } pointer-events-auto disable`}
+        } focus:outline-none pointer-events-auto disable`}
       >
         {children}
       </motion.a>
+      {/* <motion.div
+        aria-label={props.ariaLabel}
+        animate={controls}
+        {...linkProps}
+        className="fc gap-4 h-full border border-greyTint1 hover:border-corpo rounded-sm bg-transparent focus:outline-none group pointer-events-auto disable"
+      >
+        {children}
+      </motion.div> */}
     </Link>
     // </FocusRing>
   );

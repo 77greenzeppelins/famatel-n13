@@ -13,13 +13,10 @@ import img9 from './2_modulowe/9.1_09_39054.webp';
 import img10 from './2_modulowe/9.1_10_39072.webp';
 
 /**TS**/
-interface IF {
-  image: StaticImageData;
-}
+import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
-/**...**/
-
-const imgRozdzielniceModuloweSlider: IF[] = [
+/**For slider on "KategorieProduktowPage"**/
+const imgRozdzielniceModuloweSlider: IF_ImgStaticData[] = [
   { image: img1 },
   { image: img1 },
   { image: img7 },
@@ -37,4 +34,17 @@ const imgRozdzielniceModuloweSlider: IF[] = [
   { image: img8 },
   { image: img8 },
 ];
-export { imgRozdzielniceModuloweSlider };
+
+/**
+ * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
+ **/
+const imgRozdzielniceModuloweSlider_subCategoryCatalog: IF_ImgStaticData[] = [
+  { image: img1 },
+  { image: img6 },
+  { image: img4 },
+  { image: img8 },
+];
+export {
+  imgRozdzielniceModuloweSlider,
+  imgRozdzielniceModuloweSlider_subCategoryCatalog,
+};

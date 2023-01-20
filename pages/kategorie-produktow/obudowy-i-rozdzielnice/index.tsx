@@ -3,14 +3,17 @@ import type { ReactElement } from 'react';
 import Layout from '../../../components/layouts/rootLayout/Layout';
 import CategoryPageTemplate from '../../../components/multipagesComponents/_categoryPageTemplate/CategoryPageTemplate';
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
-import type { NextPageWithLayout } from '../../_app';
 /**BasicData*/
-import { mainCategories } from '../../../data/_data';
+import { catalogStructureData } from '../../../data/_catalogStructure_data';
+/**TS**/
+import type { NextPageWithLayout } from '../../_app';
 
 const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <div className="fc flex-col w-screen min-h-screen bg-dark">
-      <CategoryPageTemplate mainCategoryIndex={mainCategories[7].arrayIndex} />
+      <CategoryPageTemplate
+        mainCategoryIndex={catalogStructureData[7].mainCategoryIndex}
+      />
     </div>
   );
 };

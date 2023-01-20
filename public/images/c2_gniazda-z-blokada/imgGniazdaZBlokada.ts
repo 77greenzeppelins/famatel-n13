@@ -14,7 +14,7 @@ import img8 from './4_akcesoria/2.4_02_23022.webp';
 /**TS**/
 import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
-/**...**/
+/**For slider on "KategorieProduktowPage"**/
 const imgGniazdaZBlokada: IF_ImgStaticData[] = [
   { image: img1 },
   { image: img1 },

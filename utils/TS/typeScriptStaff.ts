@@ -18,7 +18,6 @@ interface ISubCategoriesItem {
   parentCategoryUrl: string;
   subCategoryName: string;
   subCategoryUrl: string;
-  // imageData: IImage;
   icons?: string[];
 }
 
@@ -85,6 +84,18 @@ interface IF_MainPagesItem {
   hasDropDownMenu: boolean;
 }
 
+/**
+ * used in data / categoriesData / cat_1_ .... / sunCategories / subCat1_przenośne...
+ */
+interface IF_ProductCardData {
+  arrayIndex: number;
+  productId: string;
+  shortId: string;
+  productName: string | string[];
+  textIcons: string[];
+  imageData: IF_ImgStaticData;
+}
+
 export type {
   ISubCategoriesItem,
   IF_CatalogStructureData,
@@ -94,4 +105,5 @@ export type {
   IF_CorpoColors,
   IF_PagesUrl,
   IF_MainPagesItem,
+  IF_ProductCardData,
 };

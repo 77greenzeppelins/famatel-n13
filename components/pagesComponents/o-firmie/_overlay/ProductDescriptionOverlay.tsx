@@ -2,7 +2,7 @@ import React, { Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
 /**Components**/
 import FullScreenOverlay from '../../../multipagesComponents/overlays/fullScreenOverlay/FullScreenOverlay';
-import CardFrame from '../../../multipagesComponents/cards/cardFrame/CardFrame';
+import CardFrame from '../../../multipagesComponents/cards/_cardFrame/CardFrame';
 import SmallPseudoHeader from '../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import H1AnimatedPresence from '../../../_basicComponents/componentH1/H1AnimatedPresence';
 import LinkWithArrowIcon from '../../../SVG/icons/LinkWithArrowIcon';
