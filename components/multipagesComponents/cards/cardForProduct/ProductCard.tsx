@@ -20,9 +20,9 @@ const ProductCard: React.FunctionComponent<{
       <Link href={'./'} scroll={false}>
         {/* <div className="relative w-full h-full"> */}
         <CardFrame>
-          {/* <div className="w-[10%] h-[80%] ">
+          <div className="w-[10%] h-[80%] ">
             <CardCounter arrayIndex={productCardData.arrayIndex} />
-          </div> */}
+          </div>
 
           <div className="w-[90%] h-full ">
             <ProductCardMainSection
