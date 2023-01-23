@@ -1,6 +1,6 @@
 import React from 'react';
 /**Components**/
-import ImageContnent from './imageContent/ImageContnent';
+import ImageContent from './imageContent/ImageContent';
 import IconsContent from './iconsContent/IconsContent';
 
 /**-------------------------------------------------**/
@@ -25,7 +25,7 @@ const SlideContent: React.FunctionComponent<{
      * if slide index is odd / "nieparzysty" return <ImageContnent>
      * **/
     return slideIndex % 2 ? (
-      <ImageContnent
+      <ImageContent
         categoryIndex={categoryIndex}
         slidesLineIndex={slidesLineIndex}
         slideIndex={slideIndex}

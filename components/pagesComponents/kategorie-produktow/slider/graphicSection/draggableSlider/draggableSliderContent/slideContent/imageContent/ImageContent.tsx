@@ -4,10 +4,10 @@ import Image, { StaticImageData } from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 /**Basic Data / arrays of images for each category **/
 import { imgWtyczkiGniazda } from '../../../../../../../../../public/images/c1_wtyczki-gniazda/imgWtyczkiGniazda';
-import { imgGniazdaZBlokada } from '../../../../../../../../../public/images/c2_gniazda-z-blokada/imgGniazdaZBlokada';
-import { imgAdapteryPrzemyslowe } from '../../../../../../../../../public/images/c3_adaptery-przemyslowe/imgAdapteryPrzemyslowe';
+import { imgGniazdaZBlokadaSlides } from '../../../../../../../../../public/images/c2_gniazda-z-blokada/imgGniazdaZBlokada';
+import { imgAdapteryPrzemysloweSlides } from '../../../../../../../../../public/images/c3_adaptery-przemyslowe/imgAdapteryPrzemyslowe';
 import { imgGniazdaPodwieszaneFake } from '../../../../../../../../../public/images/c4_gniazda-podwieszane/imgGniazdaPodwieszane';
-import { imgPrzedluzaczeBebnowe } from '../../../../../../../../../public/images/c5_przedluzacze-bebnowe/imgPrzedluzaczeBebnowe';
+import { imgPrzedluzaczeBebnoweSlides } from '../../../../../../../../../public/images/c5_przedluzacze-bebnowe/imgPrzedluzaczeBebnowe';
 import { imgRozlacznikBezpieczenstwaSlides } from '../../../../../../../../../public/images/c6_rozlacznik-bezpieczenstwa/imgRozlacznikBezpieczenstwa';
 import { imgLadowarkiSlides } from '../../../../../../../../../public/images/c7_ladowarki/imgLadowarki';
 import { imgObudowyRozdzielniceSlide } from '../../../../../../../../../public/images/c8_obudowy-rozdzielnice/imgObudowyRozdzielnice';
@@ -16,10 +16,10 @@ import { imgPuszkiInstalacyjneSlider } from '../../../../../../../../../public/i
 import { imgDomoweSlider } from '../../../../../../../../../public/images/c11_domowe/imgDomowe';
 const arrOfImages = [
   imgWtyczkiGniazda,
-  imgGniazdaZBlokada,
-  imgAdapteryPrzemyslowe,
+  imgGniazdaZBlokadaSlides,
+  imgAdapteryPrzemysloweSlides,
   imgGniazdaPodwieszaneFake,
-  imgPrzedluzaczeBebnowe,
+  imgPrzedluzaczeBebnoweSlides,
   imgRozlacznikBezpieczenstwaSlides,
   imgLadowarkiSlides,
   imgObudowyRozdzielniceSlide,

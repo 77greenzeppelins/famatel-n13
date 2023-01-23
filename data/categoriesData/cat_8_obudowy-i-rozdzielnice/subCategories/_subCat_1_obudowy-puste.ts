@@ -65,7 +65,7 @@ const productCardsData: IF_ProductCardData[] = [
     productName: ['Model: 3957', 'Obudowy puste'],
     textIcons: ['IP65', '9 DIN'],
     // imageData: imgObudowyRozdzielnice_01_obudowy_puste[6],
-    imageData: imgObudowyRozdzielnice_01_obudowy_puste[3],
+    imageData: imgObudowyRozdzielnice_01_obudowy_puste[6],
   },
   {
     arrayIndex: 7,
@@ -74,7 +74,7 @@ const productCardsData: IF_ProductCardData[] = [
     productName: ['Model: 3958', 'Obudowy puste'],
     textIcons: ['IP65', '9 DIN'],
     // imageData: imgObudowyRozdzielnice_01_obudowy_puste[7],
-    imageData: imgObudowyRozdzielnice_01_obudowy_puste[4],
+    imageData: imgObudowyRozdzielnice_01_obudowy_puste[7],
   },
   {
     arrayIndex: 8,
@@ -82,7 +82,7 @@ const productCardsData: IF_ProductCardData[] = [
     shortId: 'Obudowy puste AcquaCOMBI IP659',
     productName: ['Model: 3959', 'Obudowy puste'],
     textIcons: ['IP65', '12 DIN'],
-    imageData: imgObudowyRozdzielnice_01_obudowy_puste[5],
+    imageData: imgObudowyRozdzielnice_01_obudowy_puste[8],
   },
   {
     arrayIndex: 9,
@@ -91,7 +91,7 @@ const productCardsData: IF_ProductCardData[] = [
     shortId: 'Obudowy z gotowymi otworami pod gniazda AcquaCOMBI IP65',
     productName: ['Model 3928', 'Obudowy puste'],
     textIcons: ['IP65', '6 DIN'],
-    imageData: imgObudowyRozdzielnice_01_obudowy_puste[6],
+    imageData: imgObudowyRozdzielnice_01_obudowy_puste[9],
   },
   {
     arrayIndex: 10,
@@ -100,7 +100,7 @@ const productCardsData: IF_ProductCardData[] = [
     shortId: 'Obudowy z gotowymi otworami pod gniazda AcquaCOMBI',
     productName: ['Model 3960', 'Obudowy puste'],
     textIcons: ['IP65', '6 DIN'],
-    imageData: imgObudowyRozdzielnice_01_obudowy_puste[7],
+    imageData: imgObudowyRozdzielnice_01_obudowy_puste[10],
   },
   {
     arrayIndex: 11,
@@ -109,7 +109,7 @@ const productCardsData: IF_ProductCardData[] = [
     shortId: 'Obudowy z gotowymi otworami pod gniazda AcquaCOMBI IP65',
     productName: ['Model 3975', 'Obudowy puste'],
     textIcons: ['IP65', '16 DIN'],
-    imageData: imgObudowyRozdzielnice_01_obudowy_puste[7],
+    imageData: imgObudowyRozdzielnice_01_obudowy_puste[11],
   },
 ];
 

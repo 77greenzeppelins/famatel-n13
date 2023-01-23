@@ -15,7 +15,7 @@ import img8 from './4_akcesoria/2.4_02_23022.webp';
 import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
 /**For slider on "KategorieProduktowPage"**/
-const imgGniazdaZBlokada: IF_ImgStaticData[] = [
+const imgGniazdaZBlokadaSlides: IF_ImgStaticData[] = [
   { image: img1 },
   { image: img1 },
   { image: img2 },
@@ -43,4 +43,4 @@ const imgGniazdaZBlokada_subCategoryCatalog: IF_ImgStaticData[] = [
   { image: img8 },
 ];
 
-export { imgGniazdaZBlokada, imgGniazdaZBlokada_subCategoryCatalog };
+export { imgGniazdaZBlokadaSlides, imgGniazdaZBlokada_subCategoryCatalog };

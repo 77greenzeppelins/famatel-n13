@@ -150,17 +150,23 @@ const obudowyAndRozdzielniceSubCategoryUrls: string[] = [
 const rozdzielniceModuloweSubCategoryNames: string[] = [
   'Rozdzielnice ścienne IP65',
   'Rozdzielnice modułowe IP65',
-  'Rozdzielnice ścienne IP40',
-  'Metalowe rozdzielnice modułowe IP40',
-  'Metalowe rozdzielnice modułowe ICT',
+  'Rozdzielnice modułowe Nuova IP40',
+  'Rozdzielnice modułowe Nuova+ IP40',
+  'Rozdzielnice modułowe Vita IP40',
+  'Rozdzielnice modułowe ścienne ICP',
+  'Rozdzielnice modułowe metalowe IP40',
+  'Rozdzielnice modułowe metalowe ICT',
   'Akcesoria',
 ];
 const rozdzielniceModuloweSubCategoryPaths: string[] = [
   'scienne-ip65',
   'modulowe-ip65',
-  'modulowe-ip40',
-  'metalowe-modulowe-ip40',
-  'metalowe-modulowe-ict',
+  'modulowe-nuova',
+  'modulowe-nuova-plus',
+  'modulowe-vita',
+  'scienne-icp',
+  'metalowe-ip40',
+  'metalowe-ict',
   'akcesoria',
 ];
 const rozdzielniceModuloweSubCategoryUrls: string[] = [
@@ -170,6 +176,9 @@ const rozdzielniceModuloweSubCategoryUrls: string[] = [
   `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[3]}`,
   `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[4]}`,
   `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[5]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[6]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[7]}`,
+  `${pagesUrl.produkty}/${mainCategoriesPath[8]}/${rozdzielniceModuloweSubCategoryPaths[8]}`,
 ];
 
 //_____category__10
@@ -249,7 +258,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     mainCategoryImage: imgMainCategories[2],
     subCategoriesNames: [...adapteryPrzemysloweSubCategoryNames],
     subCategoriesUrls: [...adapteryPrzemysloweSubCategoryUrls],
-    imageData: [...fakeSetOf36Images],
+    imageData: imgSubCategoryCatalogs[2],
   },
   //_____category__4__noSubCategory__gniazda-podwieszane
   {
@@ -261,7 +270,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...gniazdaPodwieszaneSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
-  // //_____category__5__przedlużacze-będnowe
+  //_____category__5__przedlużacze-będnowe
   {
     mainCategoryIndex: 4,
     mainCategoryName: mainCategoriesNames[4],
@@ -269,9 +278,9 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     mainCategoryImage: imgMainCategories[4],
     subCategoriesNames: [...przedluzaczeBebnoweSubCategoryNames],
     subCategoriesUrls: [...przedluzaczeBebnoweSubCategoryUrls],
-    imageData: [...fakeSetOf36Images],
+    imageData: imgSubCategoryCatalogs[4],
   },
-  // //_____category__6__noSubcategory__rozlaczniki-bezpieczenstwa
+  //_____category__6__noSubcategory__rozlaczniki-bezpieczenstwa
   {
     mainCategoryIndex: 5,
     mainCategoryName: mainCategoriesNames[5],
@@ -281,7 +290,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...rozlacznikiBezpieczenstwaSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
-  // //_____category__7__noSubcategory__ladowarki-samochodowe
+  //_____category__7__noSubcategory__ladowarki-samochodowe
   {
     mainCategoryIndex: 6,
     mainCategoryName: mainCategoriesNames[6],
@@ -291,7 +300,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...ladowarkiPojazdowSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
-  // //_____category__8__obudowy-i-rozdzielnice
+  //_____category__8__obudowy-i-rozdzielnice
   {
     mainCategoryIndex: 7,
     mainCategoryName: mainCategoriesNames[7],
@@ -301,7 +310,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...obudowyAndRozdzielniceSubCategoryUrls],
     imageData: imgSubCategoryCatalogs[7],
   },
-  // //_____category__9
+  //_____category__9__rozdzielnice-modulowe
   {
     mainCategoryIndex: 8,
     mainCategoryName: mainCategoriesNames[8],
@@ -309,9 +318,9 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     mainCategoryImage: imgMainCategories[8],
     subCategoriesNames: [...rozdzielniceModuloweSubCategoryNames],
     subCategoriesUrls: [...rozdzielniceModuloweSubCategoryUrls],
-    imageData: [...fakeSetOf36Images],
+    imageData: imgSubCategoryCatalogs[8],
   },
-  // //_____category__10
+  //_____category__10
   {
     mainCategoryIndex: 9,
     mainCategoryName: mainCategoriesNames[9],
@@ -321,7 +330,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesUrls: [...puszkiInstalacyjneSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
   },
-  // //_____category__11
+  //_____category__11
   {
     mainCategoryIndex: 10,
     mainCategoryName: mainCategoriesNames[10],

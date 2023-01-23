@@ -1,16 +1,18 @@
 import { StaticImageData } from 'next/image';
 /**Images**/
 //___one for 3 products
-import img1 from './2_modulowe/9.1_01_3902-T.webp';
-import img2 from './2_modulowe/9.1_02_3904-T.webp';
-import img3 from './2_modulowe/9.1_03_3908-T.webp';
-import img4 from './2_modulowe/9.1_04_3912-T.webp';
-import img5 from './2_modulowe/9.1_05_3926-T.webp';
-import img6 from './2_modulowe/9.1_06_3942-T.webp';
-import img7 from './2_modulowe/9.1_07_39018.webp';
-import img8 from './2_modulowe/9.1_08_39036.webp';
-import img9 from './2_modulowe/9.1_09_39054.webp';
-import img10 from './2_modulowe/9.1_10_39072.webp';
+import img1 from './2_modulowe-ip56/9.2_01_3902-T.webp';
+import img2 from './2_modulowe-ip56/9.2_02_3904-T.webp';
+import img4 from './2_modulowe-ip56/9.2_04_3912-T.webp';
+import img6 from './2_modulowe-ip56/9.2_06_3942-T.webp';
+import imageC1 from './1_scienne/9.1_11_39168.webp';
+import imageC3 from './3_modulowe-nuova/9.3.2.wall-m_09_3624.webp';
+import imageC4 from './4_modulowe-nuovaPlus/9.4_03_3537.webp';
+import imageC5 from './5_modulowe-vita/9.6_06_3320-F.webp';
+import imageC6 from './6_scienne-icp/9.7_06_3401.webp';
+import imageC7 from './7_metalowe-ip40/9.8_01_3114.webp';
+import imageC8 from './8_metalowe-ict/9.9_04_3235.webp';
+import imageC9 from './9_akcesoria/9.9_11_keys.webp';
 
 /**TS**/
 import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
@@ -19,32 +21,37 @@ import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 const imgRozdzielniceModuloweSlider: IF_ImgStaticData[] = [
   { image: img1 },
   { image: img1 },
-  { image: img7 },
-  { image: img7 },
+  { image: imageC4 },
+  { image: imageC4 },
   { image: img2 },
   { image: img2 },
-  { image: img3 },
-  { image: img3 },
+  { image: imageC7 },
+  { image: imageC7 },
   { image: img4 },
   { image: img4 },
-  { image: img5 },
-  { image: img5 },
+  { image: imageC3 },
+  { image: imageC3 },
   { image: img6 },
   { image: img6 },
-  { image: img8 },
-  { image: img8 },
+  { image: imageC1 },
+  { image: imageC1 },
 ];
 
 /**
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
-const imgRozdzielniceModuloweSlider_subCategoryCatalog: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img6 },
-  { image: img4 },
-  { image: img8 },
+const imgRozdzielniceModulowe_subCategoryCatalog: IF_ImgStaticData[] = [
+  { image: imageC1 },
+  { image: img2 },
+  { image: imageC3 },
+  { image: imageC4 },
+  { image: imageC5 },
+  { image: imageC6 },
+  { image: imageC7 },
+  { image: imageC8 },
+  { image: imageC9 },
 ];
 export {
   imgRozdzielniceModuloweSlider,
-  imgRozdzielniceModuloweSlider_subCategoryCatalog,
+  imgRozdzielniceModulowe_subCategoryCatalog,
 };
