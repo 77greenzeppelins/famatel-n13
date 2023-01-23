@@ -5,7 +5,7 @@ import SubCategoryPageTemplate from '../../../../components/multipagesComponents
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { obudowyRozdzielniceSubCategoriesData } from '../../../../data/categoriesData/cat_9_rozdzielnice-modulowe/_cat9_rozdzielnice-modulowe_data';
-import { productCardsData } from '../../../../data/categoriesData/cat_9_rozdzielnice-modulowe/subCategories/_subCat_1_rozdzielnice-scienne';
+import { productCardsData } from '../../../../data/categoriesData/cat_9_rozdzielnice-modulowe/subCategories/_subCat_5_modulowe-vita';
 
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';
@@ -14,7 +14,7 @@ import type { NextPageWithLayout } from '../../../_app';
 const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <SubCategoryPageTemplate
-      subCategoryData={obudowyRozdzielniceSubCategoriesData[0]}
+      subCategoryData={obudowyRozdzielniceSubCategoriesData[4]}
       productCardsData={productCardsData}
     />
   );

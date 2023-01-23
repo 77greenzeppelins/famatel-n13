@@ -107,6 +107,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP40', '465 x 680'],
     imageData: imgRozdzielniceModulowe_04_modulowe_nuovaPlus[11],
   },
+
   {
     arrayIndex: 12,
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3672',
