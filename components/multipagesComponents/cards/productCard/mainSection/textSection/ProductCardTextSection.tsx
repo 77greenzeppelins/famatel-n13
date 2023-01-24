@@ -67,7 +67,10 @@ const ProductCardTextSection: React.FunctionComponent<{
         {textIcons.map((textIcon, i) => (
           <div key={i} className="relative fc py-1 px-3">
             <div className="absolute w-full h-full border border-light opacity-60 group-hover:opacity-100 ease-in duration-300 rounded-sm" />
-            <p className="text-light text-center opacity-70 group-hover:opacity-100 ease-in duration-300 header-link-label">
+            <p
+              className="text-light text-center opacity-70 group-hover:opacity-100 ease-in duration-300 p-small "
+              //___header-link-label
+            >
               {textIcon}
             </p>
           </div>

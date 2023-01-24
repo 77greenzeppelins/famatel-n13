@@ -6,6 +6,7 @@ import SubCategoryPageTemplate from '../../../../components/multipagesComponents
 /**BasicData*/
 import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
 import { productCardsData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_2_tablicowe_data';
+
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';
 

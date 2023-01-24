@@ -1,9 +1,6 @@
 import React from 'react';
 /**TS**/
-import {
-  IF_ImgStaticData,
-  IF_ProductCardData,
-} from '../../../../../utils/TS/typeScriptStaff';
+import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
 import ProductCardGraphicSection from './graphicSection/ProductCardGraphicSection';
 import ProductCardTextSection from './textSection/ProductCardTextSection';
 // import LinkWithTextAndIcon from '../../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
