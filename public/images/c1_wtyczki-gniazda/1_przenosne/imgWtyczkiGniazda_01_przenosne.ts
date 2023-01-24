@@ -4,7 +4,7 @@ import img1 from './1.1_01_13200.webp';
 import img2 from './1.1_02_14200.webp';
 import img3 from './1.1_03_14304.webp';
 import img4 from './1.1_04_14307.webp';
-import img5 from './1.1_05__23200.webp';
+import img5 from './1.1_05_23200.webp';
 import img6 from './1.1_06_24200.webp';
 import img7 from './1.1_07_24305_306.jpg';
 import img8 from './1.1_08_24307.webp';
