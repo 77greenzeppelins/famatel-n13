@@ -1,19 +1,46 @@
 import React from 'react';
 /**Hardcoded Data**/
 const containerDefaultStyle = '';
+const textDefaultStyle = 'header-link-label text-grey';
+const verticalOrnamentDefaultStyle = 'h-auto w-[10px] border-l border-corpo';
 
 const SmallPseudoHeader: React.FunctionComponent<{
   text: string;
   containerStyle?: string;
-}> = ({ text, containerStyle }) => {
+  textStyle?: string;
+  verticalOrnamentStyle?: string;
+  hesVerticalOrnament?: boolean;
+  hesHorizontalOrnament?: boolean;
+}> = ({
+  text,
+  containerStyle,
+  textStyle,
+  verticalOrnamentStyle,
+  hesVerticalOrnament = true,
+  hesHorizontalOrnament = false,
+}) => {
   return (
     <div
       className={`${
         containerStyle ? containerStyle : containerDefaultStyle
-      } flex disable`}
+      }relative flex disable`}
     >
-      <div className="h-auto w-[10px] border-l border-corpo" />
-      <p className={`header-link-label text-grey `}>{text}</p>
+      {hesVerticalOrnament && (
+        <div
+          className={
+            verticalOrnamentStyle
+              ? verticalOrnamentStyle
+              : verticalOrnamentDefaultStyle
+          }
+        />
+      )}
+      {hesHorizontalOrnament && (
+        <div className="absolute bottom-0 h-[1px] w-full border-b border-corpo" />
+      )}
+      {hesHorizontalOrnament && (
+        <div className="absolute top-0 h-[1px] w-full border-b border-corpo" />
+      )}
+      <p className={textStyle ? textStyle : textDefaultStyle}>{text}</p>
     </div>
   );
 };

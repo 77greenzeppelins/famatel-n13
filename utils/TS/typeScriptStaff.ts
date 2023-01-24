@@ -89,11 +89,17 @@ interface IF_MainPagesItem {
  */
 interface IF_ProductCardData {
   arrayIndex: number;
-  productId: string;
-  shortId: string;
-  productName: string | string[];
-  textIcons: string[];
   imageData: IF_ImgStaticData;
+  productId?: string;
+  shortId?: string;
+  productName?: string | string[] | undefined;
+  //___
+  textIcons: string[];
+  largeTextIcons?: string[];
+  //___
+  type?: string;
+  collection?: string[];
+  model?: string;
 }
 
 export type {

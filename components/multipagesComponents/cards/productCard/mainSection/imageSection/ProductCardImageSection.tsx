@@ -15,7 +15,7 @@ const ProductCardImageSection: React.FunctionComponent<{
   return (
     <motion.div
       data-component="ProductCardImageSection__white-container"
-      className="fc w-[90%] aspect-square bg-light p-1 rounded-sm"
+      className="fc w-[90%] aspect-square p-1 rounded-sm "
       variants={cardVariants}
       initial="initial"
       animate="animate"

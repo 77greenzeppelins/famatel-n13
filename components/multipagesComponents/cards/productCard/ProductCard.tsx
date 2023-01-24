@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 /**Components**/
 import CardFrame from '../_cardFrame/CardFrame';
-import CardCounter from '../_cardCounter/CardCounter';
 import ProductCardMainSection from './mainSection/ProductCardMainSection';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
@@ -20,18 +19,8 @@ const ProductCard: React.FunctionComponent<{
       <Link href={'./'} scroll={false}>
         {/* <div className="relative w-full h-full"> */}
         <CardFrame>
-          {/* <div className="w-[10%] h-[80%] ">
-            <CardCounter arrayIndex={productCardData.arrayIndex} />
-          </div> */}
-
-          <div className="w-[90%] h-full ">
-            <ProductCardMainSection
-              productId={productCardData.productId}
-              productName={productCardData.productName}
-              textIcons={productCardData.textIcons}
-              imageData={productCardData.imageData}
-              //   heightMattersCondition={heightMattersCondition}
-            />
+          <div className="w-full h-full">
+            <ProductCardMainSection productCardData={productCardData} />
           </div>
         </CardFrame>
         {/* </div> */}
