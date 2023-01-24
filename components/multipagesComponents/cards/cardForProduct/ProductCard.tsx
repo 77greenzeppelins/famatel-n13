@@ -3,7 +3,7 @@ import React from 'react';
 /**Components**/
 import CardFrame from '../_cardFrame/CardFrame';
 import CardCounter from '../_cardCounter/CardCounter';
-import ProductCardMainSection from './mainSection/ProductCardMainSection';
+// import ProductCardMainSection from './mainSection/ProductCardMainSection';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
@@ -25,13 +25,13 @@ const ProductCard: React.FunctionComponent<{
           </div>
 
           <div className="w-[90%] h-full ">
-            <ProductCardMainSection
+            {/* <ProductCardMainSection
               productId={productCardData.productId}
               productName={productCardData.productName}
               textIcons={productCardData.textIcons}
               imageData={productCardData.imageData}
               //   heightMattersCondition={heightMattersCondition}
-            />
+            /> */}
           </div>
         </CardFrame>
         {/* </div> */}
