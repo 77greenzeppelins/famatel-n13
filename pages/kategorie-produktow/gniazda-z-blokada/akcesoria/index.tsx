@@ -5,7 +5,7 @@ import SubCategoryPageTemplate from '../../../../components/multipagesComponents
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { gniazdaBlokadaSubCategoriesData } from '../../../../data/categoriesData/cat_2_gniazda-z-blokada/_cat2_gniazda-z-blokada_data';
-import { productCardsData } from '../../../../data/categoriesData/cat_2_gniazda-z-blokada/subCategories/_subCat_1_tablicowe';
+import { productCardsData } from '../../../../data/categoriesData/cat_2_gniazda-z-blokada/subCategories/_subCat_4_akcesoria';
 
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';

@@ -57,17 +57,11 @@ function SvgIconENEC({ size, colorFG, colorBG, colorBGOpacity }: IProps) {
       </g>
       <text
         xmlSpace="preserve"
-        style={{ lineHeight: '0.9' }}
-        x="16.469"
-        y="10.389"
-        // stroke="#fff"
         fill={colorFG ? colorFG : '#fff'}
-        strokeWidth="0.077"
-        fontFamily="Jost*"
-        fontSize="5.45"
-        letterSpacing="0"
+        fontFamily="Arial"
+        fontSize="5.25"
       >
-        <tspan x="16.469" y="10.389" strokeWidth="0.077">
+        <tspan x="17.59" y="10.389">
           03
         </tspan>
       </text>

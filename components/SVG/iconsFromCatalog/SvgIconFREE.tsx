@@ -46,41 +46,17 @@ const SvgIconFREE = ({
         ></path>
       </g>
       <text
-        x="3.377"
-        y="21.586"
-        style={{
-          fontVariantCaps: 'normal',
-          fontVariantEastAsian: 'normal',
-          fontVariantLigatures: 'normal',
-          fontVariantNumeric: 'normal',
-        }}
-        strokeWidth="3.968"
         fontFamily="Arial"
-        fontSize="23.81"
+        className="text-[1.25rem] tracking-[0.0525rem]"
         fill={colorFG ? colorFG : '#fff'}
       >
         <tspan
           x="3.3768437 19.591637 32.020599 37.449337 51.116425 64.450172 77.402962"
           y="21.586"
-          style={{
-            fontVariantCaps: 'normal',
-            fontVariantEastAsian: 'normal',
-            fontVariantLigatures: 'normal',
-            fontVariantNumeric: 'normal',
-          }}
         >
           Halogen
         </tspan>
-        <tspan
-          x="3.3768437 11.23423 19.234488 32.187267"
-          y="45.396"
-          style={{
-            fontVariantCaps: 'normal',
-            fontVariantEastAsian: 'normal',
-            fontVariantLigatures: 'normal',
-            fontVariantNumeric: 'normal',
-          }}
-        >
+        <tspan x="3.3768437 11.23423 19.234488 32.187267" y="45.396">
           free
         </tspan>
       </text>

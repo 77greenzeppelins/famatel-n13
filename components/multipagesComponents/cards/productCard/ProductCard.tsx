@@ -14,7 +14,7 @@ const ProductCard: React.FunctionComponent<{
   return (
     <div
       id="ProductCard__container"
-      className="w-[80%] xs:w-[500px] h-[250px] cursor-pointer group disable"
+      className="w-[80%] xs:w-[400px] h-[250px] cursor-pointer group disable"
     >
       <Link href={'./'} scroll={false}>
         {/* <div className="relative w-full h-full"> */}

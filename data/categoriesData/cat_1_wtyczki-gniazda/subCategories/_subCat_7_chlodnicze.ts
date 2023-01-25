@@ -57,13 +57,11 @@ const productCardsData: IF_ProductCardData[] = [
   },
   // {
   //   arrayIndex: 4,
-  //   productId:
-  //     'Gniazda tablicowe proste na bardzo niskie napięcia IP44 / 16A / 32A / wymiar: 75x85',
-  //   shortId:
-  //     'Gniazda tablicowe proste na bardzo niskie napięcia IP44 / 16A / 32A / wymiar: 75x85',
-  //   productName: 'Gniazda tablicowe proste na bardzo niskie napięcia',
   //   textIcons: ['IP44', '16A', '32A', 'wymiar: 75x85'],
   //   imageData: imgWtyczkiGniazda_07_chlodnicze[4],
+  //   type: 'Typ: Gniazdo stałe / Wersja kontenerowa',
+  //   collection: ['Kolekcja:', 'SpeedPRO'],
+  //   model: 'Model: 24398',
   // },
   // {
   //   arrayIndex: 5,

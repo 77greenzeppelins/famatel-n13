@@ -4,13 +4,17 @@ import CategoryPageHeader from './categoryPageHeader/CategoryPageHeader';
 import SubCategoriesCatalog from './subCategoriesCatalog/SubCategoriesCatalog';
 /**Basic Data**/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
+import { ReactNode } from 'react';
+import BasicIconsManager from '../iconsManagers/basicIconsManager/BasicIconsManager';
 
 /**---------------------------------------------------------**/
 const CategoryPageTemplate: React.FunctionComponent<{
   mainCategoryIndex: number;
-}> = ({ mainCategoryIndex }) => {
+  children?: ReactNode;
+}> = ({ mainCategoryIndex, children }) => {
   /**Retrieved Data*/
-  const subCategoryData = catalogStructureData[mainCategoryIndex];
+  const categoryData = catalogStructureData[mainCategoryIndex];
+
   /**JSX**/
   return (
     <div
@@ -25,7 +29,10 @@ const CategoryPageTemplate: React.FunctionComponent<{
             catalogStructureData[mainCategoryIndex].mainCategoryName
           }
         />
-
+        <BasicIconsManager
+          svgIcons={categoryData.svgIcons}
+          labeledIcons={categoryData.labeledIcons}
+        />
         {/* <div className="flex w-full ">
           <div className="w-[60%] border-t border-greyShade2" />
         </div> */}
@@ -33,7 +40,9 @@ const CategoryPageTemplate: React.FunctionComponent<{
           text="Katalog podkategorii"
           containerStyle="pb-4 md:pb-10"
         />
-        <SubCategoriesCatalog subCategoryData={subCategoryData} />
+        <SubCategoriesCatalog subCategoryData={categoryData} />
+
+        {children}
       </div>
       <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>

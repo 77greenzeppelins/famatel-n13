@@ -32,6 +32,9 @@ interface IF_CatalogStructureData {
   subCategoriesNames: string[];
   subCategoriesUrls: string[];
   imageData: IF_ImgStaticData[];
+  //___
+  svgIcons: string[];
+  labeledIcons: string[];
 }
 
 /**

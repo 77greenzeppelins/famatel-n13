@@ -23,7 +23,7 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
   return (
     <div
       data-component="SubCategoryPageTemplate__container"
-      className="w-screen inner-px-md-lg pt-[60px] bg-dark"
+      className="w-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
     >
       <div className="flex flex-col gap-y-6 pt-[40px]">
         <SectionKategoria

@@ -5,7 +5,7 @@ import H1AnimatedPresence from '../../../../_basicComponents/componentH1/H1Anima
 import FullScreenOverlay from '../../../../multipagesComponents/overlays/fullScreenOverlay/FullScreenOverlay';
 import CategoriesCounter from '../../../../multipagesComponents/counters/categoriesCounter/CategoriesCounter';
 import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
-import OverlayGraphicSection from '../../../o-firmie/_overlay/graphicSection/OverlayGraphicSection';
+import CategoryPreviewGraphicSection from './categoryPreviewGraphicSection/CategoryPreviewGraphicSection';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
 /**Basic Data*/
@@ -87,7 +87,7 @@ const CategoriesPreviewOverlay: React.FunctionComponent<{
           </motion.div>
         </div>
         <div className="hidden md:fc w-[60%] h-full px-2">
-          <OverlayGraphicSection categoryIndex={currentCategory} />
+          <CategoryPreviewGraphicSection categoryIndex={currentCategory} />
         </div>
       </div>
     </FullScreenOverlay>

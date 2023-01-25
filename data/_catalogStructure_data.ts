@@ -239,6 +239,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...wtyczkiGniazdaSubCategoryNames],
     subCategoriesUrls: [...wtyczkiGniazdaSubCategoriesUrls],
     imageData: imgSubCategoryCatalogs[0],
+    svgIcons: ['IP54', 'IP67', 'ENEC'],
+    labeledIcons: ['16A', '32A', '63A', '125A'],
   },
   //_____category__2__gniazda-z-blokada
   {
@@ -249,6 +251,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...GniazdaZBlokadaSubCategoryNames],
     subCategoriesUrls: [...GniazdaZBlokadaSubCategoryUrls],
     imageData: imgSubCategoryCatalogs[1],
+    svgIcons: ['IP54', 'IP67', 'IK08', 'ENEC'],
+    labeledIcons: ['16A', '32A', '63A', '125A'],
   },
   //_____category__3__adaptery-przemyslowe
   {
@@ -259,6 +263,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...adapteryPrzemysloweSubCategoryNames],
     subCategoriesUrls: [...adapteryPrzemysloweSubCategoryUrls],
     imageData: imgSubCategoryCatalogs[2],
+    svgIcons: ['IP20', 'IP54', 'IP67'],
+    labeledIcons: ['16A', '32A'],
   },
   //_____category__4__noSubCategory__gniazda-podwieszane
   {
@@ -269,6 +275,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...gniazdaPodwieszaneSubCategoryNames],
     subCategoriesUrls: [...gniazdaPodwieszaneSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
+    svgIcons: ['IP65', 'IK07'],
+    labeledIcons: ['16A', '32A', '63A', '125A'],
   },
   //_____category__5__przedlużacze-będnowe
   {
@@ -279,6 +287,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...przedluzaczeBebnoweSubCategoryNames],
     subCategoriesUrls: [...przedluzaczeBebnoweSubCategoryUrls],
     imageData: imgSubCategoryCatalogs[4],
+    svgIcons: ['IP55', 'IP67', 'IK06'],
+    labeledIcons: ['16A'],
   },
   //_____category__6__noSubcategory__rozlaczniki-bezpieczenstwa
   {
@@ -289,6 +299,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...rozlacznikiBezpieczenstwaSubCategoryNames],
     subCategoriesUrls: [...rozlacznikiBezpieczenstwaSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
+    svgIcons: ['IP67', 'IK08'],
+    labeledIcons: ['16A', '20A', '25A', '32A', '40A'],
   },
   //_____category__7__noSubcategory__ladowarki-samochodowe
   {
@@ -299,6 +311,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...ladowarkiPojazdowSubCategoryNames],
     subCategoriesUrls: [...ladowarkiPojazdowSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
+    svgIcons: ['IP54', 'IK08'],
+    labeledIcons: ['16A', '32A'],
   },
   //_____category__8__obudowy-i-rozdzielnice
   {
@@ -309,6 +323,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...obudowyAndRozdzielniceSubCategoryNames],
     subCategoriesUrls: [...obudowyAndRozdzielniceSubCategoryUrls],
     imageData: imgSubCategoryCatalogs[7],
+    svgIcons: ['IP65', 'IK08', 'FREE', 'UV', 'IZO', 'MODR'],
+    labeledIcons: ['16A', '32A'],
   },
   //_____category__9__rozdzielnice-modulowe
   {
@@ -319,6 +335,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...rozdzielniceModuloweSubCategoryNames],
     subCategoriesUrls: [...rozdzielniceModuloweSubCategoryUrls],
     imageData: imgSubCategoryCatalogs[8],
+    svgIcons: ['IP65', 'IK08', 'FREE', 'UV', 'IZO', 'MODR'],
+    labeledIcons: ['16A', '32A'],
   },
   //_____category__10
   {
@@ -329,6 +347,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...puszkiInstalacyjneSubCategoryNames],
     subCategoriesUrls: [...puszkiInstalacyjneSubCategoryUrls],
     imageData: [...fakeSetOf36Images],
+    svgIcons: ['IP65', 'IK08', 'FREE', 'UV', 'IZO', 'MODR'],
+    labeledIcons: ['16A', '32A'],
   },
   //_____category__11
   {
@@ -339,6 +359,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...osprzetDomowySubCategoryNames],
     subCategoriesUrls: [...osprzetDomowySubCategoryUrls],
     imageData: [...fakeSetOf36Images],
+    svgIcons: ['IP65', 'IK08', 'FREE', 'UV', 'IZO', 'MODR'],
+    labeledIcons: ['16A', '32A'],
   },
 ];
 

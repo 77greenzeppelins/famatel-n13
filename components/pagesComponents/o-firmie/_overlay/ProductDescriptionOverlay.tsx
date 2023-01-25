@@ -6,7 +6,7 @@ import CardFrame from '../../../multipagesComponents/cards/_cardFrame/CardFrame'
 import SmallPseudoHeader from '../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import H1AnimatedPresence from '../../../_basicComponents/componentH1/H1AnimatedPresence';
 import LinkWithArrowIcon from '../../../SVG/icons/LinkWithArrowIcon';
-import OverlayGraphicSection from './graphicSection/OverlayGraphicSection';
+import SVG_14307_P28 from '../../../SVG/techDrawings/1_wtyczki-gniazda/SVG_14307_P28';
 /**Basic Data**/
 import { catalogStructureData } from '../../../../data/_catalogStructure_data';
 
@@ -88,8 +88,13 @@ const ProductDescriptionOverlay: React.FunctionComponent<{
             );
           })}
         </div>
-        <div className="hidden md:fc w-full h-full">
-          <OverlayGraphicSection categoryIndex={currentIndex} />
+        <div className="hidden md:fc w-full max-w-[1000px] h-full pl-12">
+          <div
+            className="fc w-full h-full "
+            //  className="fc w-[90%] h-[90%] "
+          >
+            <SVG_14307_P28 />
+          </div>
         </div>
       </div>
     </FullScreenOverlay>

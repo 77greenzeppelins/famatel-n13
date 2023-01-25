@@ -43,10 +43,9 @@ const TextSection: React.FunctionComponent<{
       >
         <div className="flex justify-center gap-4 md:gap-10 w-full h-full flex-col leading-none px-2 py-2 ">
           <div className="flex flex-col gap-4 h-[120px] ">
-            <div className="flex w-full pb-1 md:pb-1">
+            <div className="flex gap-x-4 w-full pb-1 md:pb-1">
               <SmallPseudoHeader text="Podkategoria" containerStyle="pr-10" />
-              {/* <div className="h-auto w-[10px] border-l border-corpo" />
-            <p className={`header-link-label text-grey pr-10`}>Kategoria</p> */}
+
               <CategoriesCounter
                 key={currentCategory + 20}
                 currentCategoryIndex={currentCategory}
@@ -54,14 +53,14 @@ const TextSection: React.FunctionComponent<{
                 digitContainerStyle="fc w-[20px]"
               />
             </div>
-
-            <div className="flex items-center max-w-[750px] h-auto leading-8 xxl:leading-[2.75rem] disable ">
+            <div className="flex items-center max-w-[750px] h-full leading-8 xxl:leading-[2.75rem] disable">
               <H1AnimatedPresence
                 uniqueKey={currentCategory}
                 text={catalogStructureData[currentCategory].mainCategoryName}
                 // variantH="h2"
               />
             </div>
+            n
           </div>
 
           <div

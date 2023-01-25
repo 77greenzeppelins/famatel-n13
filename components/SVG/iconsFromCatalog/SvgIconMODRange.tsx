@@ -12,7 +12,7 @@ interface IProps {
 }
 
 /********************************************************************************/
-const SvgIconMOD12 = ({
+const SvgIconMODRange = ({
   //  size,
   colorFG,
   colorBG,
@@ -49,10 +49,10 @@ IProps) => {
         }}
         fontFamily="Arial"
         fill={colorFG ? colorFG : '#fff'}
-        className="text-[1.25rem] tracking-[0.0525rem]"
+        className="text-[1.125rem] tracking-[0.0525rem]"
       >
         <tspan
-          x="70"
+          x="61"
           y="92"
           style={{
             fontVariantCaps: 'normal',
@@ -61,7 +61,7 @@ IProps) => {
             fontVariantNumeric: 'normal',
           }}
         >
-          12
+          4-72
         </tspan>
       </text>
       <path
@@ -72,4 +72,4 @@ IProps) => {
   );
 };
 
-export default SvgIconMOD12;
+export default SvgIconMODRange;

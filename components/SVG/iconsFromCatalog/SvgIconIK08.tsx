@@ -36,30 +36,11 @@ IProps) => {
       <text
         x="4.583"
         y="90.299"
-        style={{
-          fontVariantCaps: 'normal',
-          fontVariantEastAsian: 'normal',
-          fontVariantLigatures: 'normal',
-          fontVariantNumeric: 'normal',
-        }}
-        strokeWidth="3.448"
         fontFamily="Arial"
-        fontSize="23.449"
+        className="text-[1.25rem] tracking-[0.0525rem]"
         fill={colorFG ? colorFG : '#fff'}
       >
-        <tspan
-          // x="4.5829334 10.609354 26.414055 41.116653"
-          y="90.299"
-          style={{
-            fontVariantCaps: 'normal',
-            fontVariantEastAsian: 'normal',
-            fontVariantLigatures: 'normal',
-            fontVariantNumeric: 'normal',
-          }}
-        >
-          {/* {ID} */}
-          IK08
-        </tspan>
+        IK08
       </text>
       {/*
         ------------------------------------------------------------------------

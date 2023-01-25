@@ -246,6 +246,11 @@ const zIndex = {
   header: 'z-[500]',
   sideMenu: 'z-[400]',
 };
+
+const textLabels = {
+  kategoriePage: { l1: 'Szczegóły techniczne', l2: 'Materiał wykonania' },
+};
+/**...............**/
 export {
   pagesUrl,
   corpoColors,
@@ -258,4 +263,6 @@ export {
   linksToInstantContactData,
   closeOverlay,
   zIndex,
+  //___
+  textLabels,
 };
