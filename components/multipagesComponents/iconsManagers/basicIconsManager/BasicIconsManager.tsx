@@ -11,7 +11,7 @@ import { corpoColors } from '../../../../data/_data';
 /**-----------------------------------------------------------**/
 const BasicIconsManager: React.FunctionComponent<{
   svgIcons: string[];
-  labeledIcons: string[];
+  labeledIcons: string[] | undefined;
   iconContainerStyle?: string;
   isHoverabled?: boolean;
 }> = ({ svgIcons, labeledIcons, iconContainerStyle, isHoverabled = true }) => {
