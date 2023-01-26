@@ -72,21 +72,22 @@ const BasicIconsManager: React.FunctionComponent<{
             );
           }
         })}
-        {labeledIcons.map(id => (
-          <motion.div
-            id={id}
-            onHoverStart={onHoverStartHandler}
-            onHoverEnd={onHoverEndHandler}
-            key={id}
-            className={
-              iconContainerStyle ? iconContainerStyle : 'fc w-[50px] h-[50px]'
-            }
-          >
-            <CardFrame>
-              <p className="text-grey text-[1.25rem]">{id}</p>
-            </CardFrame>
-          </motion.div>
-        ))}
+        {labeledIcons &&
+          labeledIcons.map(id => (
+            <motion.div
+              id={id}
+              onHoverStart={onHoverStartHandler}
+              onHoverEnd={onHoverEndHandler}
+              key={id}
+              className={
+                iconContainerStyle ? iconContainerStyle : 'fc w-[50px] h-[50px]'
+              }
+            >
+              <CardFrame>
+                <p className="text-grey text-[1.25rem]">{id}</p>
+              </CardFrame>
+            </motion.div>
+          ))}
       </div>
       <div className="flex h-[1rem] lg:h-full  leading-none">
         <IconsDescription iconState={iconState} />

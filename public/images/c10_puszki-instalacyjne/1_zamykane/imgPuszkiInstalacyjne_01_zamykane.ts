@@ -19,7 +19,29 @@ import img1_b from './10.1_b_01_3062.webp';
 import img2_b from './10.1_b_02_3063.webp';
 import img3_b from './10.1_b_03_3071.webp';
 import img4_b from './10.1_b_04_3042.webp';
-import img5_b from './10.1_b_05_3072.webp';
+import img5_b from './10.1_b_01_3062.webp';
+import img6_b from './10.1_b_06_3043.webp';
+import img7_b from './10.1_b_07_3073.webp';
+import img8_b from './10.1_b_08_3044.webp';
+import img9_b from './10.1_b_09_3074.webp';
+import img10_b from './10.1_b_10_3045.webp';
+import img11_b from './10.1_b_11_3075.webp';
+import img12_b from './10.1_bb_12_3005.webp';
+
+import img13_bx from './10.1_bx_01_3955.webp';
+import img14_bx from './10.1_bx_02_3956.webp';
+import img15_bx from './10.1_bx_03_3953.webp';
+import img16_bx from './10.1_bx_04_3954.webp';
+
+import img17_by from './10.1_by_01_3092.webp';
+import img18_by from './10.1_by_02_3084.webp';
+import img19_by from './10.1_by_03_3085.webp';
+import img20_by from './10.1_by_04_3086.webp';
+
+import img1_c from './10.1_c_05_3067.webp';
+import img2_c from './10.1_c_02_3064.webp';
+import img3_c from './10.1_c_03_3065.webp';
+import img4_c from './10.1_c_04_3066.webp';
 import img5_c from './10.1_c_05_3067.webp';
 import img6_c from './10.1_c_06_3069.webp';
 
@@ -50,6 +72,28 @@ const imgPuszkiInstalacyjne_01_zamykane: IF_ImgStaticData[] = [
   { image: img3_b },
   { image: img4_b },
   { image: img5_b },
+  { image: img6_b },
+  { image: img7_b },
+  { image: img8_b },
+  { image: img9_b },
+  { image: img10_b },
+  { image: img11_b },
+  { image: img12_b },
+
+  { image: img13_bx },
+  { image: img14_bx },
+  { image: img15_bx },
+  { image: img16_bx },
+
+  { image: img17_by },
+  { image: img18_by },
+  { image: img19_by },
+  { image: img20_by },
+
+  { image: img1_c },
+  { image: img2_c },
+  { image: img3_c },
+  { image: img4_c },
   { image: img5_c },
   { image: img6_c },
 ];

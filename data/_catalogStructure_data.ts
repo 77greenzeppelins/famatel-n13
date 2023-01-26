@@ -338,7 +338,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     svgIcons: ['IP65', 'IK08', 'FREE', 'UV', 'IZO', 'MODR'],
     labeledIcons: ['16A', '32A'],
   },
-  //_____category__10
+  //_____category__10__puszki-instalacyjne
   {
     mainCategoryIndex: 9,
     mainCategoryName: mainCategoriesNames[9],
@@ -347,8 +347,8 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     subCategoriesNames: [...puszkiInstalacyjneSubCategoryNames],
     subCategoriesUrls: [...puszkiInstalacyjneSubCategoryUrls],
     imageData: imgSubCategoryCatalogs[9],
-    svgIcons: ['IP65', 'IK08', 'FREE', 'UV', 'IZO', 'MODR'],
-    labeledIcons: ['16A', '32A'],
+    svgIcons: ['IP20', 'IP44', 'IP55', 'IP65', 'IK07', 'FREE', 'UV', 'IZO'],
+    // labeledIcons: [''],
   },
   //_____category__11
   {

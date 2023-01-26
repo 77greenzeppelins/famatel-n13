@@ -34,7 +34,7 @@ interface IF_CatalogStructureData {
   imageData: IF_ImgStaticData[];
   //___
   svgIcons: string[];
-  labeledIcons: string[];
+  labeledIcons?: string[];
 }
 
 /**
