@@ -11,6 +11,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3519',
     shortId: 'Rozdzielnice modułowe Nuova+ ',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3519'],
@@ -19,6 +20,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3719',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3719'],
@@ -27,6 +29,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3537',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3537'],
@@ -35,6 +38,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3737',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3737'],
@@ -43,6 +47,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3554',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3554'],
@@ -51,6 +56,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3754',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3754'],
@@ -59,6 +65,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3572',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3572'],
@@ -68,6 +75,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3772',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3772'],
@@ -77,6 +85,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3637',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3637'],
@@ -85,6 +94,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3837',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3837'],
@@ -93,6 +103,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3654',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3654'],
@@ -101,6 +112,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 11,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3854',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3854'],
@@ -110,6 +122,7 @@ const productCardsData: IF_ProductCardData[] = [
 
   {
     arrayIndex: 12,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3672',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3672'],
@@ -118,6 +131,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 13,
+    path: '/',
     productId: 'Rozdzielnice modułowe Nuova+ / Model: 3872',
     shortId: 'Rozdzielnice modułowe Nuova+',
     productName: ['Rozdzielnica modułowa Nuova+', 'Model: 3872'],

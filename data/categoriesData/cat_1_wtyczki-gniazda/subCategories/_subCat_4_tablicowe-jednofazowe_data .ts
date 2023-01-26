@@ -18,9 +18,7 @@ const catalogVersion = [
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
-    // productId: 'Gniazda tablicowe Schuko połączenie / wertykalne IP54 / 16A',
-    // shortId: 'Gniazda tablicowe Schuko połączenie / wertykalne IP54 / 16A',
-    // productName: 'Gniazda tablicowe Schuko połączenie / wertykalne',
+    path: '/',
     textIcons: ['IP54', '16A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[0],
     type: 'Typ: Gniazda tablicowe Schuko / połączenie wertykalne',
@@ -28,11 +26,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
-    // productId:
-    //   'Gniazda tablicowe Schuko połączenie horyzontalne IP54 / 10A / 16A / 20A',
-    // shortId:
-    //   'Gniazda tablicowe Schuko połączenie horyzontalne IP54 / 10A / 16A / 20A',
-    // productName: 'Gniazda tablicowe Schuko połączenie horyzontalne',
+    path: '/',
     textIcons: ['IP54', '10A', '16A', '20A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[1],
     type: 'Typ: Gniazda tablicowe Schuko / połączenie horyzontalne',
@@ -40,11 +34,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
-    // productId:
-    //   'Gniazda tablicowe Schuko podwójne połączenie wertykalne IP54 / 16A',
-    // shortId:
-    //   'Gniazda tablicowe Schuko podwójne połączenie wertykalne IP54 / 16A',
-    // productName: 'Gniazda tablicowe Schuko podwójne połączenie wertykalne',
+    path: '/',
     textIcons: ['IP54', '16A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[2],
     type: 'Typ: Gniazda tablicowe Schuko / podwójne połączenie wertykalne',
@@ -52,11 +42,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
-    // productId:
-    //   'Gniazda tablicowe Schuko podwójne połączenie horyzontalne IP54 / 16A',
-    // shortId:
-    //   'Gniazda tablicowe Schuko podwójne połączenie horyzontalne IP54 / 16A',
-    // productName: 'Gniazda tablicowe Schuko podwójne połączenie horyzontalne',
+    path: '/',
     textIcons: ['IP54', '16A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[3],
     type: 'Typ: Gniazda tablicowe Schuko / podwójne połączenie horyzontalne',
@@ -64,9 +50,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
-    // productId: 'Gniazda tablicowe Schuko IP67 / 16A / EU',
-    // shortId: 'Gniazda tablicowe Schuko IP67 / 16A / EU',
-    // productName: 'Gniazda tablicowe Schuko',
+    path: '/',
     textIcons: ['IP67', '16A', '2P+TTL', 'EU'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[4],
     type: 'Typ: Gniazda tablicowe Schuko',
@@ -75,9 +59,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
-    // productId: 'Gniazda tablicowe Schuko IP67 / 16A / F',
-    // shortId: 'Gniazda tablicowe Schuko IP67 / 16A / F',
-    // productName: 'Gniazda tablicowe Schuko',
+    path: '/',
     textIcons: ['IP67', '16A', '2P+TTL', 'F'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[5],
     type: 'Typ: Gniazda tablicowe Schuko',
@@ -86,9 +68,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
-    // productId: 'Wtyczka Schuko połączenie IP67 / 16A',
-    // shortId: 'Wtyczka Schuko IP67 / 16A',
-    // productName: 'Wtyczka Schuko',
+    path: '/',
     textIcons: ['IP67', '16A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[6],
     type: 'Typ: Wtyczka Schuko',
@@ -97,9 +77,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
-    productId: 'Gniazdo Schuko połączenie IP67 / 16A',
-    shortId: 'Gniazdo Schuko IP67 / 16A',
-    productName: 'Gniazdo Schuko',
+    path: '/',
     textIcons: ['IP67', '16A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[7],
     type: 'Typ: Gniazdo Schuko',
@@ -108,22 +86,12 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
-    // productId: 'Box',
-    // shortId: 'Box',
-    // productName: 'Box',
+    path: '/',
     textIcons: ['Format: 50x50'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[8],
     type: 'Typ: Box Schuko',
     model: 'Model: 13955',
   },
-  // {
-  //   arrayIndex: 8,
-  //   productId: 'Zatyczka',
-  //   shortId: 'Zatyczka',
-  //   productName: 'Zatyczka',
-  //   textIcons: ['Wymiar: 50x50'],
-  //   imageData: imgWtyczkiGniazda_04_tablicowe_schuko[8],
-  // },
 ];
 
 export { productCardsData };

@@ -11,6 +11,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     textIcons: ['IP54', '16A', '32A', 'Moduły: 4'],
     imageData: imgGniazdaBlokada_03_z_komponentami[0],
     type: 'Typ: Gniazdo tablicowe z blokadą i szyną DIN',
@@ -18,6 +19,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[1],
     type: 'Typ: Gniazdo tablicowe z blokadą i szyną DIN',
@@ -25,6 +27,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[2],
     type: 'Typ: Gniazdo stałe z blokadą i szyną DIN',
@@ -32,6 +35,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[3],
     type: 'Typ: Gniazdo stałe z blokadą i szyną DIN',
@@ -39,6 +43,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
+    path: '/',
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[4],
     type: 'Typ: Gniazdo stałe z blokadą i szyną DIN',
@@ -46,6 +51,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     textIcons: ['IP67', '63A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[5],
     type: 'Typ: Gniazdo tablicowe z blokadą i zabezpieczeniem MCB',
@@ -53,6 +59,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     textIcons: ['IP67', '63A', 'Opcja: MCB'],
     imageData: imgGniazdaBlokada_03_z_komponentami[6],
     type: 'Typ: Gniazdo stałe z blokadą i szyną DIN',
@@ -60,6 +67,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     textIcons: ['IP67', '63A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[7],
     type: 'Typ: Gniazdo stałe z blokadą i zabezpieczeniem MCB',
@@ -67,6 +75,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
+    path: '/',
     textIcons: ['IP67', '125A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[8],
     type: 'Typ: Gniazdo stałe z blokadą ',

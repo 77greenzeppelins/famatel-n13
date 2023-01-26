@@ -3,9 +3,11 @@ import React from 'react';
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**FramerMotion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
-/**Basic Data*/
-import { mainCategories } from '../../../../data/_data';
 import { opacityScaleYVariants } from '../../../../utils/framerMotion/framerMotionUtils';
+/**Basic Data*/
+// import { mainCategories } from '../../../../data/_data';
+
+import { catalogStructureData } from '../../../../data/_catalogStructure_data';
 
 /**----------------------------------------**/
 const CategoriesCounter: React.FunctionComponent<{
@@ -62,7 +64,7 @@ const CategoriesCounter: React.FunctionComponent<{
         }
       >
         <p className={digitStyle ? digitStyle : digitDefaultStyle}>
-          {mainCategories.length - 1}
+          {catalogStructureData.length - 1}
         </p>
       </div>
     </div>

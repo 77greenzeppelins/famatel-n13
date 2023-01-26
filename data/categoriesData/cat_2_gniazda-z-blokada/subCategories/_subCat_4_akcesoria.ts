@@ -12,7 +12,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
-
+    path: '/',
     textIcons: ['Wymiary: 115 × 115 × 90'],
     imageData: imgGniazdaBlokada_04_akcesoria[0],
     type: 'Typ: Junction box for 1 socket',
@@ -20,7 +20,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
-
+    path: '/',
     textIcons: ['Wymiary: 115 × 230 × 90'],
     imageData: imgGniazdaBlokada_04_akcesoria[1],
     type: 'Typ: Junction box for 2 sockets',
@@ -30,6 +30,7 @@ const productCardsData: IF_ProductCardData[] = [
     arrayIndex: 2,
     productId: '',
     shortId: '',
+    path: '/',
     productName: ['Model: 25056'],
     textIcons: ['Wymiary: 115 × 400 × 18'],
     imageData: imgGniazdaBlokada_04_akcesoria[2],

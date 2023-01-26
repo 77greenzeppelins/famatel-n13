@@ -11,6 +11,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP33 / Model: 3231-E',
     shortId: 'Rozdzielnice metalowe IP33 ',
     productName: ['Rozdzielnica metalowa ICT', 'Model: 3231-E'],
@@ -19,6 +20,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP33 / Model: 3232-E',
     shortId: 'Rozdzielnice metalowe IP33',
     productName: ['Rozdzielnica metalowa ICT', 'Model: 3232-E'],
@@ -27,6 +29,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP33 / Model: 3234-E',
     shortId: 'Rozdzielnice metalowe IP33',
     productName: ['Rozdzielnica metalowa ICT', 'Model: 3234-E'],
@@ -35,6 +38,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP33 / Model: 3235',
     shortId: 'Rozdzielnice metalowe IP33',
     productName: ['Rozdzielnica metalowa ICT', 'Model: 3235'],
@@ -43,6 +47,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP33 / Model: 3241',
     shortId: 'Rozdzielnice metalowe IP33 ',
     productName: ['Rozdzielnica metalowa ICT', 'Model: 3241'],
@@ -51,6 +56,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP33 / Model: 3242',
     shortId: 'Rozdzielnice metalowe IP33',
     productName: ['Rozdzielnica metalowa ICT', 'Model: 3242'],
@@ -59,6 +65,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP33 / Model: 3244',
     shortId: 'Rozdzielnice metalowe IP33',
     productName: ['Rozdzielnica metalowa ICT', 'Model: 3244'],
@@ -67,6 +74,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP33 / Model: 3239-E',
     shortId: 'Rozdzielnice metalowe IP33',
     productName: ['Rozdzielnica metalowa ICT', 'Model: 3239-E'],
@@ -75,6 +83,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP33 / Model: 3239-S',
     shortId: 'Rozdzielnice metalowe IP33',
     productName: ['Rozdzielnica metalowa ICT', 'Model: 3239-S'],

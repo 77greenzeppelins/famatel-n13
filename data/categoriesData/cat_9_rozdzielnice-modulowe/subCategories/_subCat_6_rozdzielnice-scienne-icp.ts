@@ -11,6 +11,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     productId: 'Obudowy ścienne IP40 / Model: 3452',
     shortId: 'Obudowy ścienne IP40 ',
     productName: ['Rozdzielnica ścienna', 'Model: 3452'],
@@ -19,6 +20,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     productId: 'Obudowy ścienne IP40 / Model: 3454',
     shortId: 'Obudowy ścienne IP40',
     productName: ['Rozdzielnica ścienna', 'Model: 3454'],
@@ -27,6 +29,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     productId: 'Obudowy ścienne IP40 / Model: 3404',
     shortId: 'Obudowy ścienne IP40',
     productName: ['Rozdzielnica ścienna', 'Model: 3404'],
@@ -35,6 +38,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     productId: 'Obudowy ścienne IP40 / Model: 3403',
     shortId: 'Obudowy ścienne IP40',
     productName: ['Rozdzielnica ścienna', 'Model: 3403'],
@@ -43,6 +47,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
+    path: '/',
     productId: 'Obudowy ścienne IP40 / Model: 3411',
     shortId: 'Obudowy ścienne IP40',
     productName: ['Rozdzielnica ścienna', 'Model: 3411'],
@@ -51,6 +56,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     productId: 'Obudowy ścienne IP40 / Model: 3401',
     shortId: 'Obudowy ścienne IP40',
     productName: ['Rozdzielnica ścienna', 'Model: 3401'],
@@ -59,6 +65,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     productId: 'Obudowy ścienne IP40 / Model: 3421',
     shortId: 'Obudowy ścienne IP40',
     productName: ['Rozdzielnica ścienna', 'Model: 3421'],
@@ -68,6 +75,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     productId: 'Obudowy ścienne IP40 / Model: 3413',
     shortId: 'Obudowy ścienne IP40',
     productName: ['Rozdzielnica ścienna', 'Model: 3413'],

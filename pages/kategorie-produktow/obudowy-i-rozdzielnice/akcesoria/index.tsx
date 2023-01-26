@@ -4,8 +4,8 @@ import Layout from '../../../../components/layouts/rootLayout/Layout';
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
-import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
-import { productCardsData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_8_estradowe';
+import { obudowyRozdzielniceSubCategoriesData } from '../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/_cat8_obudowy-i-rozdzielnice_data';
+import { productCardsData } from '../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_4_akcesoria';
 
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';
@@ -14,7 +14,7 @@ import type { NextPageWithLayout } from '../../../_app';
 const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <SubCategoryPageTemplate
-      subCategoryData={wtyczkiGniazdaSubCategoriesData[7]}
+      subCategoryData={obudowyRozdzielniceSubCategoriesData[3]}
       productCardsData={productCardsData}
     />
   );

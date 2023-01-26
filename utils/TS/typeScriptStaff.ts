@@ -92,12 +92,13 @@ interface IF_MainPagesItem {
  */
 interface IF_ProductCardData {
   arrayIndex: number;
+  path: string;
   imageData: IF_ImgStaticData;
   productId?: string;
   shortId?: string;
   productName?: string | string[] | undefined;
   //___
-  textIcons: string[];
+  textIcons?: string[];
   largeTextIcons?: string[];
   //___
   type?: string;

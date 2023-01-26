@@ -30,6 +30,7 @@ const catalogVersion = [
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[0],
     type: 'Typ: Wtyczki stałe 90°',
@@ -38,6 +39,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[1],
     type: 'Typ: Wtyczki stałe 90°',
@@ -46,6 +48,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     textIcons: ['IP54', '16A'],
     imageData: imgWtyczkiGniazda_03_scienne[2],
     type: 'Typ: Wtyczki stałe 90° ',
@@ -54,6 +57,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     textIcons: ['IP54', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[3],
     type: 'Typ: Wtyczki stałe 12°',
@@ -62,6 +66,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
+    path: '/',
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[4],
     type: 'Typ: Wtyczki stałe',
@@ -70,6 +75,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     textIcons: ['IP67', '63A'],
     imageData: imgWtyczkiGniazda_03_scienne[5],
     type: 'Typ: Wtyczki stałe',
@@ -78,6 +84,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     textIcons: ['IP67', '125A'],
     imageData: imgWtyczkiGniazda_03_scienne[6],
     type: 'Typ: Wtyczki stałe',
@@ -86,6 +93,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[7],
     type: 'Typ: Gniazda stałe 90°',
@@ -94,6 +102,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
+    path: '/',
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[8],
     type: 'Typ: Gniazda stałe 90°',
@@ -102,6 +111,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
+    path: '/',
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[9],
     type: 'Typ: Gniazda stałe ECO',
@@ -110,6 +120,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
+    path: '/',
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[10],
     type: 'Typ: Gniazda stałe',
@@ -118,6 +129,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 11,
+    path: '/',
     textIcons: ['IP54', '16A'],
     imageData: imgWtyczkiGniazda_03_scienne[11],
     type: 'Typ: Gniazda stałe',
@@ -126,6 +138,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 12,
+    path: '/',
     textIcons: ['IP54', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[12],
     type: 'Typ: Gniazda stałe',
@@ -134,6 +147,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 13,
+    path: '/',
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[13],
     type: 'Typ: Gniazda stałe',
@@ -142,6 +156,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 14,
+    path: '/',
     textIcons: ['IP67', '16A'],
     imageData: imgWtyczkiGniazda_03_scienne[14],
     type: 'Typ: Gniazda stałe',
@@ -150,6 +165,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 15,
+    path: '/',
     textIcons: ['IP67', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[15],
     type: 'Typ: Gniazda stałe',
@@ -158,6 +174,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 16,
+    path: '/',
     textIcons: ['IP67', '63A'],
     imageData: imgWtyczkiGniazda_03_scienne[16],
     type: 'Typ: Gniazda stałe',
@@ -166,6 +183,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 17,
+    path: '/',
     textIcons: ['IP67', '125A'],
     imageData: imgWtyczkiGniazda_03_scienne[17],
     type: 'Typ: Gniazda stałe',
@@ -174,6 +192,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 18,
+    path: '/',
     textIcons: ['IP54', '16A', '32A', 'Wymiary: 75 × 85'],
     imageData: imgWtyczkiGniazda_03_scienne[18],
     type: 'Typ: Gniazda stałe',
@@ -182,6 +201,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 19,
+    path: '/',
     textIcons: ['IP54', '16A', '32A', 'Wymiary: 75 × 85 / 80 × 95'],
     imageData: imgWtyczkiGniazda_03_scienne[19],
     type: 'Typ: Gniazda stałe',

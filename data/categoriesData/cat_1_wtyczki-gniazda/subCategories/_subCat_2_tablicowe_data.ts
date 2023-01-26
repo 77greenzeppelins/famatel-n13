@@ -20,6 +20,7 @@ const catalogVersion = [
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     textIcons: ['IP54', '16A', '32A', 'Format: 75 × 75'],
     imageData: imgWtyczkiGniazda_02_tablicowe[0],
     type: 'Typ: Wtyczki tablicowe proste',
@@ -27,6 +28,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     textIcons: ['IP54', '16A', 'Format: 55 × 55'],
     imageData: imgWtyczkiGniazda_02_tablicowe[1],
     type: 'Typ: Wtyczki tablicowe proste',
@@ -34,6 +36,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     textIcons: ['IP67', '63A'],
     imageData: imgWtyczkiGniazda_02_tablicowe[2],
     type: 'Typ: Wtyczki tablicowe proste',
@@ -41,6 +44,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     textIcons: ['IP54', '16A', '32A', 'Format: 75 × 75'],
     imageData: imgWtyczkiGniazda_02_tablicowe[3],
     type: 'Typ: Gniazda tablicowe proste',
@@ -48,6 +52,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
+    path: '/',
     textIcons: ['IP67', '16A', 'Format: 75 × 75'],
     imageData: imgWtyczkiGniazda_02_tablicowe[4],
     type: 'Typ: Gniazda tablicowe proste',
@@ -55,6 +60,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     textIcons: ['IP67', '63A', 'Format: 100 × 100'],
     imageData: imgWtyczkiGniazda_02_tablicowe[5],
     type: 'Typ: Gniazda tablicowe proste',
@@ -62,6 +68,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     textIcons: ['IP67', '63A', 'Format: 120 × 120'],
     imageData: imgWtyczkiGniazda_02_tablicowe[6],
     type: 'Typ: Gniazda tablicowe proste',
@@ -69,6 +76,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     textIcons: ['IP54', '16A', '32A', 'Format: 75 × 85 / 80 × 95'],
     imageData: imgWtyczkiGniazda_02_tablicowe[7],
     type: 'Typ: Gniazda tablicowe skośne 10°',
@@ -76,6 +84,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
+    path: '/',
     textIcons: ['IP67', '16A', '32A', 'Format: 75 × 85 / 80 × 95'],
     imageData: imgWtyczkiGniazda_02_tablicowe[8],
     type: 'Typ: Gniazda tablicowe skośne 10°',
@@ -83,6 +92,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
+    path: '/',
     textIcons: ['IP67', '63A', 'Format: 85 × 85'],
     imageData: imgWtyczkiGniazda_02_tablicowe[9],
     type: 'Typ: Gniazda tablicowe skośne 10°',
@@ -90,6 +100,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
+    path: '/',
     textIcons: ['IP67', '125A', 'Format: 120 × 120'],
     imageData: imgWtyczkiGniazda_02_tablicowe[10],
     type: 'Typ: Gniazda tablicowe skośne 15°',

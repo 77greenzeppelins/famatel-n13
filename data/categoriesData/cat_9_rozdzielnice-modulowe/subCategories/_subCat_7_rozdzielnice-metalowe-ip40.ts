@@ -12,6 +12,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP40 / Model: 3114',
     shortId: 'Rozdzielnice metalowe IP40 ',
     productName: ['Rozdzielnica metalowa', 'Model: 3114'],
@@ -20,6 +21,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP40 / Model: 3128',
     shortId: 'Rozdzielnice metalowe IP40',
     productName: ['Rozdzielnica metalowa', 'Model: 3128'],
@@ -28,6 +30,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP40 / Model: 3142',
     shortId: 'Rozdzielnice metalowe IP40',
     productName: ['Rozdzielnica metalowa', 'Model: 3142'],
@@ -36,6 +39,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     productId: 'Rozdzielnice metalowe IP40 / Model: 3156',
     shortId: 'Rozdzielnice metalowe IP40',
     productName: ['Rozdzielnica metalowa', 'Model: 3156'],

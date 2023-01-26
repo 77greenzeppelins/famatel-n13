@@ -1,7 +1,7 @@
 /*Images saff*/
-// import { imgObudowyRozdzielnice_01_obudowy_puste } from '../../../../public/images/c1_wtyczki-gniazda/8_estradowe/imgObudowyRozdzielnice_01_obudowy_puste';
 import { imgObudowyRozdzielnice_01_obudowy_puste } from '../../../../public/images/c8_obudowy-rozdzielnice/1_puste/imgObudowyRozdzielnice_01_obudowy-puste';
-
+/** */
+import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
@@ -12,10 +12,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3927',
-    // shortId: 'Obudowy puste AcquaCOMBI',
-    // productName: ['Model: 3927', 'Obudowy puste'],
-    // productName: [''],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3927`,
     textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 X 305'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[0],
     type: 'Typ: Obudowa pusta',
@@ -24,9 +21,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3950',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3950', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3950`,
     textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 X 490'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[1],
     type: 'Typ: Obudowa pusta',
@@ -35,9 +30,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3951',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3951', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3951`,
     textIcons: ['IP65', 'MCB: 8', 'wymiary: 230 X 500'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[2],
     type: 'Typ: Obudowa pusta',
@@ -46,9 +39,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3974',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3974', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3974`,
     textIcons: ['IP65', 'MCB: 16', 'wymiary: 330 X 330'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[3],
     type: 'Typ: Obudowa pusta',
@@ -57,9 +48,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3952',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3952', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3952`,
     textIcons: ['IP65', 'MCB: 16', 'wymiary: 330 X 500'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[4],
     type: 'Typ: Obudowa pusta',
@@ -68,9 +57,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3977',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3977', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3977`,
     textIcons: ['IP65', 'MCB: 32', 'wymiary: 330 X 685'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[5],
     type: 'Typ: Obudowa pusta',
@@ -79,11 +66,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3957',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3957', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3957`,
     textIcons: ['IP65', 'MCB: 9', 'wymiary: 215 X 245 / 260'],
-    // imageData: imgObudowyRozdzielnice_01_obudowy_puste[6],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[6],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -91,11 +75,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3958',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3958', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3958`,
     textIcons: ['IP65', 'MCB: 9', 'wymiary: 215 X 320 / 350'],
-    // imageData: imgObudowyRozdzielnice_01_obudowy_puste[7],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[7],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -103,9 +84,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3959',
-    // shortId: 'Obudowy puste AcquaCOMBI IP659',
-    // productName: ['Model: 3959', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3959`,
     textIcons: ['IP65', 'MCB: 12', 'wymiary: 265 X 380 / 400'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[8],
     type: 'Typ: Obudowa pusta',
@@ -114,10 +93,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
-    // productId:
-    //   'Obudowy z gotowymi otworami pod gniazda AcquaCOMBI IP65 / Model: 3928',
-    // shortId: 'Obudowy z gotowymi otworami pod gniazda AcquaCOMBI IP65',
-    // productName: ['Model 3928', 'AcquaCOMBI Knock-out boxes'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3928`,
     textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 X 305'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[9],
     type: 'Typ: Obudowa z otworami pod gniazda',
@@ -126,9 +102,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
-    // productId: 'AcquaCOMBI Knock-out boxes IP65 / Model: 3960',
-    // shortId: 'AcquaCOMBI Knock-out boxes',
-    // productName: ['Model 3960', 'AcquaCOMBI Knock-out boxes'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3960`,
     textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 X 490'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[10],
     type: 'Typ: Obudowa z otworami pod gniazda',
@@ -137,10 +111,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 11,
-    // productId:
-    //   'Obudowy z gotowymi otworami pod gniazda AcquaCOMBI IP65 / Model: 3975',
-    // shortId: 'Obudowy z gotowymi otworami pod gniazda AcquaCOMBI IP65',
-    // productName: ['Model 3975', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3975`,
     textIcons: ['IP65', 'MCB: 16'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[11],
     type: 'Typ: Obudowa z otworami pod gniazda',
@@ -150,9 +121,7 @@ const productCardsData: IF_ProductCardData[] = [
 
   {
     arrayIndex: 12,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3961',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3961', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3961`,
     textIcons: ['IP65', 'MCB: 8'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[12],
     type: 'Typ: Obudowa z otworami pod gniazda',
@@ -161,9 +130,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 13,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3962',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3962', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3962`,
     textIcons: ['IP65', 'MCB:16 '],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[13],
     type: 'Typ: Obudowa z otworami pod gniazda',
@@ -172,9 +139,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 14,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3978',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3978', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3978`,
     textIcons: ['IP65', 'MCB: 32', 'IEC: 6'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[14],
     type: 'Typ: Obudowa z otworami pod gniazda',
@@ -184,9 +149,7 @@ const productCardsData: IF_ProductCardData[] = [
   //___
   {
     arrayIndex: 15,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3963',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3963', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3963`,
     textIcons: ['IP65', 'IEC: 3'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[15],
     type: 'Typ: Obudowa z otworami pod gniazda',
@@ -195,9 +158,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 16,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3966',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3966', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3966`,
     textIcons: ['IP65', 'IEC: 6'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[16],
     type: 'Typ: Obudowa z otworami pod gniazda',
@@ -206,9 +167,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 17,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3967',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3967', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3967`,
     textIcons: ['IP65', 'MCB: 8'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[17],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
@@ -217,9 +176,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 18,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3968',
-    // shortId: 'Obudowy puste AcquaCOMBI IP659',
-    // productName: ['Model: 3968', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3968`,
     textIcons: ['IP65', 'MCB: 16'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[18],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
@@ -228,10 +185,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 19,
-    // productId:
-    //   'Obudowy z gotowymi otworami pod gniazda AcquaCOMBI IP65 / Model: 3969',
-    // shortId: 'Obudowy z gotowymi otworami pod gniazda AcquaCOMBI IP65',
-    // productName: ['Model 3969', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3969`,
     textIcons: ['IP65'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[19],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
@@ -241,9 +195,7 @@ const productCardsData: IF_ProductCardData[] = [
 
   {
     arrayIndex: 20,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3970',
-    // shortId: 'Obudowy puste AcquaCOMBI',
-    // productName: ['Model: 3970', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3970`,
     textIcons: ['IP65', 'MCB: 16'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[20],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
@@ -252,9 +204,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 21,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3979',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3979', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3979`,
     textIcons: ['IP65', 'MCB: 32'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[21],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
@@ -263,9 +213,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 22,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3973',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3973', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3973`,
     textIcons: ['IP65'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[22],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
@@ -274,9 +222,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 23,
-    // productId: 'Obudowy puste AcquaCOMBI IP65 / Model: 3964',
-    // shortId: 'Obudowy puste AcquaCOMBI IP65',
-    // productName: ['Model: 3964', 'Obudowy puste'],
+    path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3964`,
     textIcons: ['IP65', 'MCB: 13'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[23],
     type: 'Modułowe obudowy uzupełniające',

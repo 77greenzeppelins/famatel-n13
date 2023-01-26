@@ -11,6 +11,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3340',
     shortId: 'Rozdzielnice modułowe IP40 ',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3340'],
@@ -19,6 +20,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3363',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3363'],
@@ -27,6 +29,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3308-PT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3308-PT'],
@@ -35,6 +38,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3308-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3308-P'],
@@ -43,6 +47,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3312-PT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3312-PT'],
@@ -51,6 +56,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3312-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3312-P'],
@@ -59,6 +65,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3320-PT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3320-PT'],
@@ -67,6 +74,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3320-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3320-P'],
@@ -75,6 +83,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3420-PT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3420-PT'],
@@ -83,6 +92,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3420-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3420-P'],
@@ -91,6 +101,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3324-PT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3324-PT'],
@@ -99,6 +110,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 11,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3324-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3324-P'],
@@ -108,6 +120,7 @@ const productCardsData: IF_ProductCardData[] = [
   //____
   {
     arrayIndex: 12,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3344-PT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3344-PT'],
@@ -116,6 +129,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 13,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3344-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3344-P'],
@@ -124,6 +138,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 14,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3420-PT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3420-PT'],
@@ -132,6 +147,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 15,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3420-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3420-P'],
@@ -140,6 +156,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 16,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3314-PT',
     shortId: 'Rozdzielnice modułowe IP40 ',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3314-PT'],
@@ -148,6 +165,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 17,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3314-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3314-P'],
@@ -156,6 +174,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 18,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3318-PT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3318-PT'],
@@ -164,6 +183,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 19,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3318-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3318-P'],
@@ -172,6 +192,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 20,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3338-PT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3338-PT'],
@@ -180,6 +201,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 21,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3338-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3338-P'],
@@ -188,6 +210,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 22,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3360-PT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3360-PT'],
@@ -196,6 +219,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 23,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3360-P',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3360-P'],
@@ -205,6 +229,7 @@ const productCardsData: IF_ProductCardData[] = [
   //_____
   {
     arrayIndex: 24,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3340-F',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3340-F'],
@@ -213,6 +238,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 25,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3363-F',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3363-F'],
@@ -221,6 +247,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 26,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3308-FT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3308-FT'],
@@ -229,6 +256,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 27,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3312-F',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3312-F'],
@@ -237,6 +265,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 28,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3312-FT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3312-FT'],
@@ -245,6 +274,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 29,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3320-F',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3320-F'],
@@ -253,6 +283,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 30,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3320-FT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3320-FT'],
@@ -261,6 +292,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 31,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3324-F',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3324-F'],
@@ -269,6 +301,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 32,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3324-FT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3324-FT'],
@@ -277,6 +310,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 33,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3344-F',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3344-F'],
@@ -285,6 +319,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 34,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3344-FT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3344-FT'],
@@ -293,6 +328,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 35,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3314-F',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3314-F'],
@@ -301,6 +337,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 36,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3314-FT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3314-FT'],
@@ -309,6 +346,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 37,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3318-F',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3318-F'],
@@ -317,6 +355,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 38,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3318-FT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3318-FT'],
@@ -325,6 +364,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 39,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3338-F',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3338-F'],
@@ -333,6 +373,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 40,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3338-FT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3338-FT'],
@@ -341,6 +382,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 41,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3360-F',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3360-F'],
@@ -349,6 +391,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 42,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3360-FT',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Vita', 'Model: 3360-FT'],

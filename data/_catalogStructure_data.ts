@@ -127,9 +127,9 @@ const ladowarkiPojazdowSubCategoryUrls: string[] = [
 
 //_____category__8
 const obudowyAndRozdzielniceSubCategoryNames: string[] = [
-  'Obudowy puste AcquaCOMBI IP65 ',
+  'Obudowy puste',
   'Rozdzielnice przemysłowe',
-  'Obudowy gumowe IP65',
+  'Obudowy gumowe',
   'Akcesoria',
 ];
 const obudowyAndRozdzielniceSubCategoryPaths: string[] = [

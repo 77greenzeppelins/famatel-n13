@@ -12,6 +12,7 @@ const productCardsData: IF_ProductCardData[] = [
   //___minibox
   {
     arrayIndex: 0,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 43/90/39 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[0],
     type: 'Typ: Puszki instalacyjne',
@@ -20,6 +21,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 75/75/39 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[1],
     type: 'Typ: Puszki instalacyjne',
@@ -28,6 +30,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 85/85/39 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[2],
     type: 'Typ: Puszki instalacyjne',
@@ -36,6 +39,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 75/75/39 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[3],
     type: 'Typ: Puszki instalacyjne',
@@ -45,6 +49,7 @@ const productCardsData: IF_ProductCardData[] = [
   //___
   {
     arrayIndex: 4,
+    path: '/',
     textIcons: ['IP65', 'Wymiary: 45 x Ø 60'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[4],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -53,6 +58,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     textIcons: ['IP65', 'Wymiary: 45 x Ø 70'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[5],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -61,6 +67,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 65/65/45 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[6],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -69,6 +76,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 65/65/45 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[7],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -77,6 +85,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 80/80/36 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[8],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -85,6 +94,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 100/100/45 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[9],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -93,6 +103,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 103/103/55 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[10],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -101,6 +112,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 11,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 110/152/63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[11],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -109,6 +121,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 12,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 135/161/83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[12],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -117,6 +130,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 13,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 175/1225/85 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[13],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -125,6 +139,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 14,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 240/310/125 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[14],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -134,6 +149,7 @@ const productCardsData: IF_ProductCardData[] = [
   //___start
   {
     arrayIndex: 15,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 80/80/36 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[15],
     type: 'Typ: Puszki instalacyjne',
@@ -142,6 +158,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 16,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 100/100/45 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[16],
     type: 'Typ: Puszki instalacyjne',
@@ -150,6 +167,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 17,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 103/103/55 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[17],
     type: 'Typ: Puszki instalacyjne',
@@ -158,6 +176,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 18,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 110/150/63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[18],
     type: 'Typ: Puszki instalacyjne',
@@ -166,6 +185,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 19,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 110/150/63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[19],
     type: 'Typ: Puszki instalacyjne',
@@ -174,6 +194,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 20,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 135/160/83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[20],
     type: 'Typ: Puszki instalacyjne',
@@ -182,6 +203,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 21,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 135/160/83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[21],
     type: 'Typ: Puszki instalacyjne',
@@ -190,6 +212,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 22,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 175/225/85 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[22],
     type: 'Typ: Puszki instalacyjne',
@@ -198,6 +221,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 23,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 175/225/85 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[23],
     type: 'Typ: Puszki instalacyjne',
@@ -206,6 +230,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 24,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 240/310/125 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[24],
     type: 'Typ: Puszki instalacyjne',
@@ -214,6 +239,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 25,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 240/310/125 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[25],
     type: 'Typ: Puszki instalacyjne',
@@ -223,6 +249,7 @@ const productCardsData: IF_ProductCardData[] = [
   //___one strange...
   {
     arrayIndex: 26,
+    path: '/',
     textIcons: ['IP20', 'Wymiary: 240/310/125 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[26],
     type: 'Typ: Puszki instalacyjne with lamp-holder IP20',
@@ -232,6 +259,7 @@ const productCardsData: IF_ProductCardData[] = [
   //___some new type
   {
     arrayIndex: 27,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 175/330/135 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[27],
     type: 'Typ: Puszki instalacyjne',
@@ -240,6 +268,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 28,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 330/330/135 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[28],
     type: 'Typ: Puszki instalacyjne',
@@ -248,6 +277,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 29,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 500/225/135 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[29],
     type: 'Typ: Puszki instalacyjne',
@@ -256,6 +286,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 30,
+    path: '/',
     textIcons: ['IP20', 'Wymiary: 500/330/135 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[30],
     type: 'Typ: Puszki instalacyjne',
@@ -265,6 +296,7 @@ const productCardsData: IF_ProductCardData[] = [
   //___some new type = zamykane
   {
     arrayIndex: 31,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 160/150/63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[31],
     type: 'Typ: Puszki instalacyjne',
@@ -273,6 +305,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 32,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 135/160/83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[32],
     type: 'Typ: Puszki instalacyjne',
@@ -281,6 +314,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 33,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 135/160/83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[33],
     type: 'Typ: Puszki instalacyjne',
@@ -289,6 +323,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 34,
+    path: '/',
     textIcons: ['IP55', 'Wymiary: 135/160/83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[34],
     type: 'Typ: Puszki instalacyjne',
@@ -299,6 +334,7 @@ const productCardsData: IF_ProductCardData[] = [
   //___last type...
   {
     arrayIndex: 35,
+    path: '/',
     textIcons: ['IP54', 'Wymiary: 103/103/55 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[35],
     type: 'Typ: Puszki instalacyjne Pre-wired',
@@ -307,6 +343,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 36,
+    path: '/',
     textIcons: ['IP54', 'Wymiary: 110/150/63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[36],
     type: 'Typ: Puszki instalacyjne Pre-wired',
@@ -315,6 +352,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 37,
+    path: '/',
     textIcons: ['IP54', 'Wymiary: 135/160/83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[37],
     type: 'Typ: Puszki instalacyjne Pre-wired',
@@ -323,6 +361,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 38,
+    path: '/',
     textIcons: ['IP54', 'Wymiary: 175/225/85 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[38],
     type: 'Typ: Puszki instalacyjne Pre-wired',
@@ -331,6 +370,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 39,
+    path: '/',
     textIcons: ['IP54', 'Wymiary: 110/150/63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[39],
     type: 'Typ: Puszki instalacyjne Pre-wired',
@@ -339,6 +379,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 40,
+    path: '/',
     textIcons: ['IP54', 'Wymiary: 135/160/83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[40],
     type: 'Typ: Puszki instalacyjne Pre-wired',

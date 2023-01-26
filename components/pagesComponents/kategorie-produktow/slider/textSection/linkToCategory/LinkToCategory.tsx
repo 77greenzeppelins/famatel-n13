@@ -3,11 +3,8 @@ import React from 'react';
 import LinkWithArrowIcon from '../../../../../SVG/icons/LinkWithArrowIcon';
 import AriaJSLink from '../../../../../_basicComponents/links/ariaJSLink/AriaJSLink';
 /**BasicData**/
-import {
-  corpoColors,
-  pagesUrl,
-  mainCategories,
-} from '../../../../../../data/_data';
+import { corpoColors } from '../../../../../../data/_data';
+import { catalogStructureData } from '../../../../../../data/_catalogStructure_data';
 
 /**---------------------------------------**/
 const LinkToCategory: React.FunctionComponent<{ currentCategory: number }> = ({
@@ -17,7 +14,7 @@ const LinkToCategory: React.FunctionComponent<{ currentCategory: number }> = ({
   return (
     <div className="h-[36px]">
       <AriaJSLink
-        linkHref={mainCategories[currentCategory].url}
+        linkHref={catalogStructureData[currentCategory].mainCategoryUrl}
         controlsSet={{ background: corpoColors.greyTint1 }}
         controlsStart={{
           background: corpoColors.dark, //background color

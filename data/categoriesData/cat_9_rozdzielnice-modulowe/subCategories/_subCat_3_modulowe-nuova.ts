@@ -11,6 +11,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3504',
     shortId: 'Rozdzielnice modułowe IP40 ',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3504'],
@@ -19,6 +20,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3704',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3704'],
@@ -27,6 +29,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3508',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3508'],
@@ -35,6 +38,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3708',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3708'],
@@ -43,6 +47,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3512',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3512'],
@@ -51,6 +56,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3712',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3712'],
@@ -59,6 +65,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3518',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3518'],
@@ -67,6 +74,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3718',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3718'],
@@ -75,6 +83,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3524',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3524'],
@@ -83,6 +92,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3724',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3724'],
@@ -91,6 +101,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3536',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3536'],
@@ -99,6 +110,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 11,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3736',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3736'],
@@ -108,6 +120,7 @@ const productCardsData: IF_ProductCardData[] = [
   //____
   {
     arrayIndex: 12,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3604',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3604'],
@@ -116,6 +129,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 13,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3804',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3804'],
@@ -124,6 +138,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 14,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3608',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3608'],
@@ -132,6 +147,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 15,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3808',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3808'],
@@ -140,6 +156,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 16,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3612',
     shortId: 'Rozdzielnice modułowe IP40 ',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3612'],
@@ -148,6 +165,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 17,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3812',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3812'],
@@ -156,6 +174,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 18,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3618',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3618'],
@@ -164,6 +183,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 19,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3818',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3818'],
@@ -172,6 +192,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 20,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3624',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3624'],
@@ -180,6 +201,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 21,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3824',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3824'],
@@ -188,6 +210,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 22,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3636',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3636'],
@@ -196,6 +219,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 23,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3836',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3836'],
@@ -205,6 +229,7 @@ const productCardsData: IF_ProductCardData[] = [
   //_____
   {
     arrayIndex: 24,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3744',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3744'],
@@ -213,6 +238,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 25,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3548',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3548'],
@@ -221,6 +247,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 26,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3748',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3748'],
@@ -229,6 +256,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 27,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3562',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3562'],
@@ -237,6 +265,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 28,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3762',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3762'],
@@ -245,6 +274,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 29,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3568',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3568'],
@@ -253,6 +283,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 30,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3768',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3768'],
@@ -261,6 +292,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 31,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3644',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3644'],
@@ -269,6 +301,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 32,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3844',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3844'],
@@ -277,6 +310,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 33,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3648',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3648'],
@@ -285,6 +319,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 34,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3848',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3848'],
@@ -293,6 +328,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 35,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3662',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3662'],
@@ -301,6 +337,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 36,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3862',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3862'],
@@ -309,6 +346,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 37,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3668',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3668'],
@@ -317,6 +355,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 38,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP40 / Model: 3868',
     shortId: 'Rozdzielnice modułowe IP40',
     productName: ['Rozdzielnica modułowa Nuova', 'Model: 3868'],

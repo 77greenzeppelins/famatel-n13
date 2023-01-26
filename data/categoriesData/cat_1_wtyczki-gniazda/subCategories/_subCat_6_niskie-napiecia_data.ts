@@ -19,9 +19,7 @@ const catalogVersion = [
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
-    // productId: 'Wtyczki przenośne na bardzo niskie napięcia IP44 / 16A / 32A',
-    // shortId: 'Wtyczki przenośne na bardzo niskie napięcia IP44 / 16A / 32A',
-    // productName: 'Wtyczki przenośne na bardzo niskie napięcia',
+    path: '/',
     textIcons: ['IP44', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[0],
     type: 'Typ: Wtyczki przenośne na bardzo niskie napięcia',
@@ -29,9 +27,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
-    // productId: 'Wtyczki przenośne na bardzo niskie napięcia IP67 / 16A / 32A',
-    // shortId: 'Wtyczki przenośne na bardzo niskie napięcia IP67 / 16A / 32A',
-    // productName: 'Wtyczki przenośne na bardzo niskie napięcia',
+    path: '/',
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[1],
     type: 'Typ: Wtyczki przenośne na bardzo niskie napięcia',
@@ -39,9 +35,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
-    // productId: 'Gniazda przenośne na bardzo niskie napięcia IP44 / 16A / 32A',
-    // shortId: 'Gniazda przenośne na bardzo niskie napięcia IP44 / 16A / 32A',
-    // productName: 'Gniazda przenośne na bardzo niskie napięcia',
+    path: '/',
     textIcons: ['IP44', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[2],
     type: 'Typ: Gniazda przenośne na bardzo niskie napięcia',
@@ -52,6 +46,7 @@ const productCardsData: IF_ProductCardData[] = [
     // productId: 'Gniazda przenośne na bardzo niskie napięcia IP67 / 16A / 32A',
     // shortId: 'Gniazda przenośne na bardzo niskie napięcia IP67 / 16A / 32A',
     // productName: 'Gniazda przenośne na bardzo niskie napięcia',
+    path: '/',
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[3],
     type: 'Typ: Gniazda przenośne na bardzo niskie napięcia',
@@ -64,6 +59,7 @@ const productCardsData: IF_ProductCardData[] = [
     // shortId:
     //   'Gniazda tablicowe proste na bardzo niskie napięcia IP44 / 16A / 32A / wymiar: 75x85',
     // productName: 'Gniazda tablicowe proste na bardzo niskie napięcia',
+    path: '/',
     textIcons: ['IP44', '16A', '32A', 'wymiar: 75x85'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[4],
     type: 'Typ: Gniazda tablicowe proste na bardzo niskie napięcia',
@@ -76,6 +72,7 @@ const productCardsData: IF_ProductCardData[] = [
     // shortId:
     //   'Gniazda tablicowe proste na bardzo niskie napięcia IP67 / 16A / 32A / wymiar: 75x85',
     // productName: 'Gniazda tablicowe proste na bardzo niskie napięcia',
+    path: '/',
     textIcons: ['IP67', '16A', '32A', 'wymiar: 75x85'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[5],
     type: 'Typ: Gniazda tablicowe proste na bardzo niskie napięcia',
@@ -88,6 +85,7 @@ const productCardsData: IF_ProductCardData[] = [
     // shortId:
     //   'Gniazda stałe na bardzo niskie napięcia IP44 / 16A / 32A / wymiar: 75x85',
     // productName: 'Gniazda stałe na bardzo niskie napięcia',
+    path: '/',
     textIcons: ['IP44', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[6],
     type: 'Typ: Gniazda stałe na bardzo niskie napięcia',
@@ -100,6 +98,7 @@ const productCardsData: IF_ProductCardData[] = [
     // shortId:
     //   'Gniazda stałe na bardzo niskie napięcia IP67 / 16A / 32A / wymiar: 75x85',
     // productName: 'Gniazda stałe na bardzo niskie napięcia',
+    path: '/',
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[7],
     type: 'Typ: Gniazda stałe na bardzo niskie napięcia',

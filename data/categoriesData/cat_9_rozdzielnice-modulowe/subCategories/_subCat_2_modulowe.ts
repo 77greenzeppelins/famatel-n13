@@ -12,6 +12,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3902-T',
     shortId: 'Rozdzielnice modułowe IP65 ',
     productName: ['Rozdzielnica modułowa', 'Model: 3902-T'],
@@ -20,6 +21,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3904-T',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 3904-T'],
@@ -28,6 +30,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3904',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 3904'],
@@ -36,6 +39,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3908-T',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 3908-T'],
@@ -44,6 +48,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3908',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 3908'],
@@ -52,6 +57,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3912-T',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 3912-T'],
@@ -60,6 +66,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3912-T',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 3912-T'],
@@ -68,6 +75,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3926-T',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 3926-T'],
@@ -76,6 +84,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3926',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 3926'],
@@ -84,6 +93,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3942',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 3942'],
@@ -92,6 +102,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 3942',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 3942'],
@@ -100,6 +111,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 11,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 39018',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 39018'],
@@ -108,6 +120,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 12,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 39036',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 39036'],
@@ -116,6 +129,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 13,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 39054',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 39054'],
@@ -124,6 +138,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 14,
+    path: '/',
     productId: 'Rozdzielnice modułowe IP65 / Model: 39072',
     shortId: 'Rozdzielnice modułowe IP65',
     productName: ['Rozdzielnica modułowa', 'Model: 39072'],

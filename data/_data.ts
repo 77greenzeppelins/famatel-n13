@@ -1,8 +1,6 @@
-/*...*/
-import { imgOfProductsReps } from '../public/images/categories/imgOfProductsReps';
 /**TS Staff**/
 import {
-  IF_MainCategorySpecification,
+  // IF_MainCategorySpecification,
   IF_CorpoColors,
   IF_PagesUrl,
   IF_MainPagesItem,
@@ -13,8 +11,6 @@ const linksToInstantContactData = {
   phone: 'mailto:77greenzeppelins@gmail.com',
   mobile: 'tel:798-905-558',
 };
-// const businessMail = 'mailto:77greenzeppelins@gmail.com';
-// const businessPhone = 'tel:798-905-558';
 
 /**Data for Data**/
 const corpoColors: IF_CorpoColors = {
@@ -100,7 +96,6 @@ const mainCategoriesPath: string[] = [
   'puszki-instalacyjne',
   'osprzet-domowy',
 ];
-
 const mainCategoriesNames: string[] = [
   'Przemysłowe wtyczki i gniazda',
   'Gniazda z rozłącznikiem i blokadą',
@@ -114,98 +109,55 @@ const mainCategoriesNames: string[] = [
   'Puszki instalacyjne',
   'Osprzęt domowy',
 ];
-/*
-used in: layout | ... | dropDownMenu | produkty | <ProduktyDropDownMenu>
-used in: 'url" is used in _categoryName_data.ts; for instance: _wtyczki-gniazda_data.ts
-keys: arrayIndex,name, fullName, url, image
-*/
-const mainCategories: IF_MainCategorySpecification[] = [
-  {
-    arrayIndex: 0,
-    name: mainCategoriesNames[0],
-    fullName: 'Przemysłowe wtyczki i gniazda',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[0]}`,
-    image: imgOfProductsReps[0].image,
+const mainCategoriesSummaryData = {
+  wtyczkiGniazda: { categoryIndex: 0, categoryNema: mainCategoriesNames[0] },
+  gniazdaBlokada: { categoryIndex: 1, categoryNema: mainCategoriesNames[1] },
+  adapteryPrzemyslowe: {
+    categoryIndex: 2,
+    categoryNema: mainCategoriesNames[2],
   },
-  {
-    arrayIndex: 1,
-    name: mainCategoriesNames[1],
-    fullName: 'Gniazda z rozłącznikiem i blokadą ',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[1]}`,
-    image: imgOfProductsReps[1].image,
+  gniazdaPodwieszane: {
+    categoryIndex: 3,
+    categoryNema: mainCategoriesNames[3],
   },
-  {
-    arrayIndex: 2,
-    name: mainCategoriesNames[2],
-    fullName: 'Adaptery przemysłowe',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[2]}`,
-    image: imgOfProductsReps[2].image,
+  przedluzaczeBebnowe: {
+    categoryIndex: 4,
+    categoryNema: mainCategoriesNames[4],
   },
-  {
-    arrayIndex: 3,
-    name: mainCategoriesNames[3],
-    fullName: 'Gniazda podwieszane',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[3]}`,
-    image: imgOfProductsReps[3].image,
+  rozlacznikiBezpieczenstwa: {
+    categoryIndex: 5,
+    categoryNema: mainCategoriesNames[5],
   },
-  {
-    arrayIndex: 4,
-    name: mainCategoriesNames[4],
-    fullName: 'Przedłużacze bębnowe',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[4]}`,
-    image: imgOfProductsReps[4].image,
+  ladowarkiSamochodowe: {
+    categoryIndex: 6,
+    categoryNema: mainCategoriesNames[6],
   },
-  {
-    arrayIndex: 5,
-    name: mainCategoriesNames[5],
-    fullName: 'Rozłączniki bezpieczeństwa',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[5]}`,
-    image: imgOfProductsReps[5].image,
+  obudowyRozdzielnice: {
+    categoryIndex: 7,
+    categoryNema: mainCategoriesNames[7],
   },
-  {
-    arrayIndex: 6,
-    name: mainCategoriesNames[6],
-    fullName: 'Ładowarki samochodowe',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[6]}`,
-    image: imgOfProductsReps[6].image,
+  rozdzielniceModulowe: {
+    categoryIndex: 8,
+    categoryNema: mainCategoriesNames[8],
   },
-  {
-    arrayIndex: 7,
-    name: mainCategoriesNames[7],
-    fullName: 'Obudowy i rozdzielnice',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[7]}`,
-    image: imgOfProductsReps[7].image,
+  puszkiInstalacyjne: {
+    categoryIndex: 9,
+    categoryNema: mainCategoriesNames[9],
   },
-  {
-    arrayIndex: 8,
-    name: mainCategoriesNames[8],
-    fullName: 'Rozdzielnice modułowe',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[8]}`,
-    image: imgOfProductsReps[8].image,
+  osprzetDomowy: {
+    categoryIndex: 10,
+    categoryNema: mainCategoriesNames[10],
   },
-  {
-    arrayIndex: 9,
-    name: mainCategoriesNames[9],
-    fullName: 'Puszki instalacyjne',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[9]}`,
-    image: imgOfProductsReps[9].image,
-  },
-  {
-    arrayIndex: 10,
-    name: mainCategoriesNames[10],
-    // fullName: 'Wtyczki, gniazda, adaptery domowe',
-    fullName: 'Osprzęt domowy',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[10]}`,
-    image: imgOfProductsReps[10].image,
-  },
-  {
-    arrayIndex: 11,
-    name: mainCategoriesNames[11],
-    fullName: 'Himarsy i dżaweliny',
-    url: `${pagesUrl.produkty}/${mainCategoriesPath[11]}`,
-    image: imgOfProductsReps[11].image,
-  },
-];
+};
+
+const splitedPathParts = {
+  empty: 0,
+  mainPage: 1,
+  category: 2,
+  subCategory: 3,
+  product: 4,
+};
+
 /*
 in set in: layout | overlays |...| <OverlayOpener>
 is used in: pagesComponents | _nestedPages | _nestedPages | <WtyczkiGniazdaPrzenosneOverlayManager> => all >SubCategoryNameOverlayManager>s
@@ -259,7 +211,8 @@ export {
   pagesUrl,
   corpoColors,
   menuLinkLabel,
-  mainCategories,
+  mainCategoriesSummaryData,
+  // mainCategories,
   mainCategoriesPath,
   mainPages,
   mainCategoriesNames,
@@ -269,4 +222,93 @@ export {
   zIndex,
   //___
   textLabels,
+  splitedPathParts,
 };
+
+// const mainCategories: IF_MainCategorySpecification[] = [
+//   {
+//     arrayIndex: 0,
+//     name: mainCategoriesNames[0],
+//     fullName: 'Przemysłowe wtyczki i gniazda',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[0]}`,
+//     image: imgOfProductsReps[0].image,
+//   },
+//   {
+//     arrayIndex: 1,
+//     name: mainCategoriesNames[1],
+//     fullName: 'Gniazda z rozłącznikiem i blokadą ',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[1]}`,
+//     image: imgOfProductsReps[1].image,
+//   },
+//   {
+//     arrayIndex: 2,
+//     name: mainCategoriesNames[2],
+//     fullName: 'Adaptery przemysłowe',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[2]}`,
+//     image: imgOfProductsReps[2].image,
+//   },
+//   {
+//     arrayIndex: 3,
+//     name: mainCategoriesNames[3],
+//     fullName: 'Gniazda podwieszane',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[3]}`,
+//     image: imgOfProductsReps[3].image,
+//   },
+//   {
+//     arrayIndex: 4,
+//     name: mainCategoriesNames[4],
+//     fullName: 'Przedłużacze bębnowe',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[4]}`,
+//     image: imgOfProductsReps[4].image,
+//   },
+//   {
+//     arrayIndex: 5,
+//     name: mainCategoriesNames[5],
+//     fullName: 'Rozłączniki bezpieczeństwa',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[5]}`,
+//     image: imgOfProductsReps[5].image,
+//   },
+//   {
+//     arrayIndex: 6,
+//     name: mainCategoriesNames[6],
+//     fullName: 'Ładowarki samochodowe',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[6]}`,
+//     image: imgOfProductsReps[6].image,
+//   },
+//   {
+//     arrayIndex: 7,
+//     name: mainCategoriesNames[7],
+//     fullName: 'Obudowy i rozdzielnice',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[7]}`,
+//     image: imgOfProductsReps[7].image,
+//   },
+//   {
+//     arrayIndex: 8,
+//     name: mainCategoriesNames[8],
+//     fullName: 'Rozdzielnice modułowe',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[8]}`,
+//     image: imgOfProductsReps[8].image,
+//   },
+//   {
+//     arrayIndex: 9,
+//     name: mainCategoriesNames[9],
+//     fullName: 'Puszki instalacyjne',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[9]}`,
+//     image: imgOfProductsReps[9].image,
+//   },
+//   {
+//     arrayIndex: 10,
+//     name: mainCategoriesNames[10],
+//     // fullName: 'Wtyczki, gniazda, adaptery domowe',
+//     fullName: 'Osprzęt domowy',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[10]}`,
+//     image: imgOfProductsReps[10].image,
+//   },
+//   {
+//     arrayIndex: 11,
+//     name: mainCategoriesNames[11],
+//     fullName: 'Himarsy i dżaweliny',
+//     url: `${pagesUrl.produkty}/${mainCategoriesPath[11]}`,
+//     image: imgOfProductsReps[11].image,
+//   },
+// ];

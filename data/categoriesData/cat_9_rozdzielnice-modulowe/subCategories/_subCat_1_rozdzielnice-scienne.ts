@@ -13,6 +13,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39123',
     shortId: 'Obudowy ścienne IP65 ',
     productName: ['Rozdzielnica ścienna', 'Model: 39123'],
@@ -21,6 +22,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39123-T',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39123-T'],
@@ -29,6 +31,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39134',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39134'],
@@ -37,6 +40,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39134-T',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39134-T'],
@@ -45,6 +49,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39145',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39145'],
@@ -53,6 +58,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39145-T',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39145-T'],
@@ -61,6 +67,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39146-T',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39146-T'],
@@ -70,6 +77,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39146-T',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39146-T'],
@@ -79,6 +87,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39157',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39157'],
@@ -87,6 +96,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39157_T',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39157_T'],
@@ -95,6 +105,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39168',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39168'],
@@ -103,6 +114,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 11,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39168_T',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39168_T'],
@@ -111,6 +123,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 12,
+    path: '/',
     productId: 'Obudowy ścienne IP65 / Model: 39169',
     shortId: 'Obudowy ścienne IP65',
     productName: ['Rozdzielnica ścienna', 'Model: 39169'],
