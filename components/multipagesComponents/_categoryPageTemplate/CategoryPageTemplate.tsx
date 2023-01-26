@@ -21,27 +21,28 @@ const CategoryPageTemplate: React.FunctionComponent<{
       data-component="CategoryPageTemplate__container"
       className="w-screen inner-px-md-lg pt-[60px]"
     >
-      <div className="flex flex-col gap-y-6 pt-[40px]">
-        <SmallPseudoHeader text="Kategoria" />
-        <CategoryPageHeader
-          categoryIndex={mainCategoryIndex}
-          categoryName={
-            catalogStructureData[mainCategoryIndex].mainCategoryName
-          }
-        />
-        <BasicIconsManager
-          svgIcons={categoryData.svgIcons}
-          labeledIcons={categoryData.labeledIcons}
-        />
-        {/* <div className="flex w-full ">
-          <div className="w-[60%] border-t border-greyShade2" />
-        </div> */}
-        <SmallPseudoHeader
-          text="Katalog podkategorii"
-          containerStyle="pb-4 md:pb-10"
-        />
-        <SubCategoriesCatalog subCategoryData={categoryData} />
+      <div className="flex flex-col gap-y-[100px] pt-[40px]">
+        <div className="flex flex-col gap-y-4">
+          <SmallPseudoHeader text="Kategoria" />
+          <CategoryPageHeader
+            categoryIndex={mainCategoryIndex}
+            categoryName={
+              catalogStructureData[mainCategoryIndex].mainCategoryName
+            }
+          />
+          <BasicIconsManager
+            svgIcons={categoryData.svgIcons}
+            labeledIcons={categoryData.labeledIcons}
+          />
+        </div>
 
+        <div className="flex flex-col gap-y-4">
+          <SmallPseudoHeader
+            text="Katalog podkategorii"
+            containerStyle="pb-4 md:pb-10"
+          />
+          <SubCategoriesCatalog subCategoryData={categoryData} />
+        </div>
         {children}
       </div>
       <div className="fixed w-full h-[50px] top-0 bg-dark" />

@@ -106,29 +106,27 @@ const wtyczkiGniazda_daneTechniczneText = [
   ['Napięcie znamionowe', '100 V - 500 V'],
   ['Napięcie izolacji', '500 V'],
   ['Częstotliwość', '-50 / 500 Hz'],
-  ['Prąd znamionowy', '16 A - 32 A - 63 A - 125 A'],
-  ['Stopień ochrony IE(IP C / EN 60529)', 'IP54 / IP67'],
+  ['Prąd znamionowy', '16 A - 125 A'],
+  ['Stopień ochrony (IEC / EN 60529)', 'IP54 / IP67'],
   ['Maksymalna testowana temperatura robocza', '+70 °C'],
   ['Temperatura użytkowa zgodnie z normą', '-25 °C / +40 °C'],
 ];
 
-// const wtyczkiGniazda_materialText = [
-//   { t1: 'Body material',  'Poliamid6 - ABS' },
-//   { t1: 'Contact material',  'Brass - Nickel-plated brass' },
-// ];
+const wtyczkiGniazda_materialText = [
+  ['Materiał obudowy', 'Poliamid6 - ABS'],
+  ['Materiał styków', 'Brass - Nickel-plated brass'],
+];
 
-// const wtyczkiGniazda_regulationText: string[] = [
-//   'IEC/CEI/EN 60309-1 / IEC/CEI/EN 60309-2',
-// ];
+const wtyczkiGniazda_RegulationText = [
+  ['IEC/CEI/EN 60309-1 / IEC/CEI/EN 60309-2'],
+];
 
 // const textStyle: string =
 //   'text-light text-[1.5rem] xl:text-[1.75rem] xxxl:text-[2.25rem] tracking-[0.09rem] leading-normal';
 
 export {
-  pseudoHeroData,
   wtyczkiGniazdaSubCategoriesData,
   wtyczkiGniazda_daneTechniczneText,
-  // wtyczkiGniazda_materialText,
-  // wtyczkiGniazda_regulationText,
-  // textStyle,
+  wtyczkiGniazda_materialText,
+  wtyczkiGniazda_RegulationText,
 };

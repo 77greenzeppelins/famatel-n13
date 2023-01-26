@@ -50,34 +50,31 @@ const gniazdaBlokadaSubCategoriesData: ISubCategoriesItem[] = [
   },
 ];
 
-// const daneTechniczneText: IDaneTechniczneText[] = [
-//   { t1: 'Napięcie znamionowe', t2: '100 V - 500 V' },
-//   { t1: 'Napięcie izolacji', t2: '500 V' },
-//   {
-//     t1: 'Częstotliwość',
-//     t2: '-50 / 500 Hz',
-//   },
-//   { t1: 'Prąd znamionowy', t2: '16 A - 32 A - 63 A - 125 A' },
-//   { t1: 'Stopień ochrony IE(IP C / EN 60529)', t2: 'IP54 / IP61' },
-//   { t1: 'Maksymalna testowana temperatura robocza', t2: '+10 °C' },
-//   { t1: 'Temperatura użytkowa zgodnie z normą', t2: '-25 °C / +40 °C' },
-// ];
+const gniazdaBlokada_DaneTechniczneText = [
+  ['Napięcie znamionowe', '100 V - 415 V'],
+  ['Stopień ochrony IE(IP C / EN 60529)', 'IP54 / IP67'],
+  ['Odporność na uderzenia (IEC / EN 62262)', 'IK08'],
+  ['Prąd znamionowy', '16 A - 63 A '],
+  ['Częstotliwość', '50 / 60 Hz'],
+  ['Insulating resistance', '>10 MΩ'],
+  ['Temperatura użytkowa zgodnie z normą', '-25 °C / +40 °C'],
+  // ['Napięcie izolacji', '500 V'],
+  // ['Maksymalna testowana temperatura robocza', '+10 °C'],
+];
 
-// const materialText: IDaneTechniczneText[] = [
-//   { t1: 'Body material', t2: 'Poliamid6 - ABS' },
-//   { t1: 'Contact material', t2: 'Brass - Nickel-plated brass' },
-// ];
+const gniazdaBlokada_MaterialText = [
+  ['Materiał obudowy', 'Poliamid6 - ABS'],
+  ['Materiał styków', 'Brass - Nickel-plated brass'],
+];
 
-const regulationText: string[] = ['IEC/CEI/EN 60309-1 / IEC/CEI/EN 60309-2'];
-
-const textStyle: string =
-  'text-light text-[1.5rem] xl:text-[1.15rem] xxxl:text-[2.25rem] tracking-[0.09rem] leading-normal';
+const gniazdaBlokada_RegulationText = [
+  ['IEC/CEI/EN 60309-1 / IEC/CEI/EN 60309-2'],
+];
 
 export {
   pseudoHeroData,
   gniazdaBlokadaSubCategoriesData,
-  // daneTechniczneText,
-  // materialText,
-  regulationText,
-  textStyle,
+  gniazdaBlokada_DaneTechniczneText,
+  gniazdaBlokada_MaterialText,
+  gniazdaBlokada_RegulationText,
 };

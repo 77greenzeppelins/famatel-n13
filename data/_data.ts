@@ -248,7 +248,11 @@ const zIndex = {
 };
 
 const textLabels = {
-  kategoriePage: { l1: 'Szczegóły techniczne', l2: 'Materiał wykonania' },
+  kategoriePage: {
+    l1: 'Szczegóły techniczne',
+    l2: 'Materiał wykonania',
+    l3: 'Normy',
+  },
 };
 /**...............**/
 export {

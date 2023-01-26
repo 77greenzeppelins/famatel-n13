@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 /**Components**/
 import CardFrame from '../../cards/_cardFrame/CardFrame';
+import IconsDescription from '../iconsDescription/IconsDescription';
 /**Framer Motion Staff**/
 import { EventInfo, motion } from 'framer-motion';
 /**Basic Data**/
 import { svgIconsFromCatalog_data } from '../../../SVG/iconsFromCatalog/_iconsFromCatalog_data';
 import { corpoColors } from '../../../../data/_data';
-import IconsDescription from '../iconsDescription/IconsDescription';
 
 /**-----------------------------------------------------------**/
 const BasicIconsManager: React.FunctionComponent<{
@@ -44,7 +44,10 @@ const BasicIconsManager: React.FunctionComponent<{
   };
   /**JSX**/
   return (
-    <div data-component="BasicIconsManager__wrapper" className="flex flex-col">
+    <div
+      data-component="BasicIconsManager__wrapper"
+      className="flex flex-col lg:items-center lg:flex-row lg:gap-x-10 "
+    >
       <div className="flex gap-4 flex-wrap">
         {svgIconsFromCatalog_data.map(({ id, Icon }, i) => {
           if (svgIcons.includes(id)) {
@@ -85,7 +88,7 @@ const BasicIconsManager: React.FunctionComponent<{
           </motion.div>
         ))}
       </div>
-      <div className="h-[0.75rem]">
+      <div className="flex h-[1rem] lg:h-full  leading-none">
         <IconsDescription iconState={iconState} />
       </div>
     </div>

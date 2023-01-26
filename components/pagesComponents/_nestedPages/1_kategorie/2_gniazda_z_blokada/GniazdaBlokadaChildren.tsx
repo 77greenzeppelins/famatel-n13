@@ -7,20 +7,20 @@ import TableWithUnderlinedRows from '../../../../multipagesComponents/tables/tab
 /**Basic Data*/
 import { textLabels } from '../../../../../data/_data';
 import {
-  wtyczkiGniazda_daneTechniczneText,
-  wtyczkiGniazda_materialText,
-  wtyczkiGniazda_RegulationText,
-} from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
+  gniazdaBlokada_DaneTechniczneText,
+  gniazdaBlokada_MaterialText,
+  gniazdaBlokada_RegulationText,
+} from '../../../../../data/categoriesData/cat_2_gniazda-z-blokada/_cat2_gniazda-z-blokada_data';
 
 /**---------------------------------------------**/
-const WtyczkiGniazdaChildren = () => {
+const GniazdaBlokadaChildren = () => {
   /**JSX**/
   return (
     <PageContentLayout>
       <SectionContentLayout>
         <SmallPseudoHeader text={textLabels.kategoriePage.l1} />
         <TableWithUnderlinedRows
-          rowsData={wtyczkiGniazda_daneTechniczneText}
+          rowsData={gniazdaBlokada_DaneTechniczneText}
           //       tableContainerStyle= '';
           // rowContainerStyle=[];
           cellsStyles={['w-[50%]', 'w-[50%]']}
@@ -29,7 +29,7 @@ const WtyczkiGniazdaChildren = () => {
       <SectionContentLayout>
         <SmallPseudoHeader text={textLabels.kategoriePage.l2} />
         <TableWithUnderlinedRows
-          rowsData={wtyczkiGniazda_materialText}
+          rowsData={gniazdaBlokada_MaterialText}
           //       tableContainerStyle= '';
           // rowContainerStyle=[];
           cellsStyles={['w-[50%]', 'w-[50%]']}
@@ -37,15 +37,8 @@ const WtyczkiGniazdaChildren = () => {
       </SectionContentLayout>
       <SectionContentLayout>
         <SmallPseudoHeader text={textLabels.kategoriePage.l3} />
-        {/* <TableWithUnderlinedRows
-          rowsData={wtyczkiGniazda_RegulationText}
-          // tableContainerStyle= '';
-          // rowContainerStyle=[];
-          cellsStyles={['w-full']}
-        /> */}
-
         <TableWithUnderlinedRows
-          rowsData={wtyczkiGniazda_RegulationText}
+          rowsData={gniazdaBlokada_RegulationText}
           //       tableContainerStyle= '';
           // rowContainerStyle=[];
           cellsStyles={['w-full']}
@@ -56,4 +49,4 @@ const WtyczkiGniazdaChildren = () => {
   );
 };
 
-export default WtyczkiGniazdaChildren;
+export default GniazdaBlokadaChildren;

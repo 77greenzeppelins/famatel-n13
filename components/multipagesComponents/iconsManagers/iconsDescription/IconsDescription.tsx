@@ -22,14 +22,14 @@ const IconsDescription: React.FunctionComponent<{
         initial="from"
         animate="presence"
         exit="to"
-        className="flex relative"
+        className="flex items-center relative "
       >
         {iconsDescriptions.map(({ id, description }, i) => {
           if (id === iconState.id) {
             return (
               <div
                 id="IconDescription__container"
-                className="flex h-full  leading-none pt-[6px]"
+                className="flex h-full leading-none pt-[10px] lg:pt-[0px]"
                 key={i}
               >
                 {/* <div className="flex items-center h-full  pl-[0.75rem] pr-[0.75rem] ">

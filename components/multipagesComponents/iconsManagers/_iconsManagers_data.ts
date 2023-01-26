@@ -17,7 +17,11 @@ const iconsDescriptions = [
   },
   {
     id: 'MOD12',
-    description: 'Ilość modułów, typ europejski',
+    description: 'Ilość modułów; typ europejski',
+  },
+  {
+    id: 'MODR',
+    description: 'Ilość modułów / typ europejski',
   },
   { id: 'UV', description: 'Ochrona przed promieniowaniem UV' },
   //   {
