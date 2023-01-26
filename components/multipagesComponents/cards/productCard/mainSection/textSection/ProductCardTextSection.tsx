@@ -2,7 +2,7 @@ import React from 'react';
 import SmallPseudoHeader from '../../../../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 
 const ProductCardTextSection: React.FunctionComponent<{
-  textIcons: string[];
+  textIcons?: string[];
   productName: string | string[] | undefined;
   type?: string;
   collection?: string[];
@@ -80,17 +80,18 @@ const ProductCardTextSection: React.FunctionComponent<{
         className="absolute bottom-4 flex gap-2 flex-wrap "
         //___flex-wrap
       >
-        {textIcons.map((textIcon, i) => (
-          <div key={i} className="relative fc py-1 px-3">
-            <div className="absolute w-full h-full border border-light opacity-60 group-hover:opacity-100 ease-in duration-300 rounded-sm" />
-            <p
-              className="text-light text-center opacity-70 group-hover:opacity-100 ease-in duration-300 p-small "
-              //___header-link-label
-            >
-              {textIcon}
-            </p>
-          </div>
-        ))}
+        {textIcons &&
+          textIcons.map((textIcon, i) => (
+            <div key={i} className="relative fc py-1 px-3">
+              <div className="absolute w-full h-full border border-light opacity-60 group-hover:opacity-100 ease-in duration-300 rounded-sm" />
+              <p
+                className="text-light text-center opacity-70 group-hover:opacity-100 ease-in duration-300 p-small "
+                //___header-link-label
+              >
+                {textIcon}
+              </p>
+            </div>
+          ))}
       </div>
     </div>
   );

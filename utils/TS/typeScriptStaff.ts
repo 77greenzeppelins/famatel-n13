@@ -97,7 +97,7 @@ interface IF_ProductCardData {
   shortId?: string;
   productName?: string | string[] | undefined;
   //___
-  textIcons: string[];
+  textIcons?: string[];
   largeTextIcons?: string[];
   //___
   type?: string;
