@@ -346,7 +346,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     mainCategoryImage: imgMainCategories[9],
     subCategoriesNames: [...puszkiInstalacyjneSubCategoryNames],
     subCategoriesUrls: [...puszkiInstalacyjneSubCategoryUrls],
-    imageData: [...fakeSetOf36Images],
+    imageData: imgSubCategoryCatalogs[9],
     svgIcons: ['IP65', 'IK08', 'FREE', 'UV', 'IZO', 'MODR'],
     labeledIcons: ['16A', '32A'],
   },

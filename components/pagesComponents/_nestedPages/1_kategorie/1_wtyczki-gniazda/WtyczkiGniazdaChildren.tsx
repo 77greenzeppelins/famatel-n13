@@ -1,6 +1,5 @@
 import React from 'react';
 /**Components**/
-import PageContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
 import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import TableWithUnderlinedRows from '../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
@@ -16,7 +15,7 @@ import {
 const WtyczkiGniazdaChildren = () => {
   /**JSX**/
   return (
-    <PageContentLayout>
+    <>
       <SectionContentLayout>
         <SmallPseudoHeader text={textLabels.kategoriePage.l1} />
         <TableWithUnderlinedRows
@@ -52,7 +51,7 @@ const WtyczkiGniazdaChildren = () => {
         />
       </SectionContentLayout>
       <div className="h-[1vh]" />
-    </PageContentLayout>
+    </>
   );
 };
 

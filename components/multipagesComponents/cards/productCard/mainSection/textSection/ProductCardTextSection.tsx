@@ -26,28 +26,44 @@ const ProductCardTextSection: React.FunctionComponent<{
           </p>
         )}
       </div>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2">
         {model && (
           <SmallPseudoHeader
             text={model}
-            textStyle="header-link-label text-grey text-left group-hover:text-light ease-in duration-300"
+            textStyle=" p-small text-grey text-left group-hover:text-light ease-in duration-300"
+            //___header-link-label
             verticalOrnamentStyle="h-auto w-[8px] border-l border-corpo"
             // hesVerticalOrnament={false}
             // hesHorizontalOrnament={true}
           />
         )}
         {type && (
-          <div className="pl-[0px]">
-            <p className="header-link-label text-grey text-left group-hover:text-light ease-in duration-300 ">
-              {type}
-            </p>
-          </div>
+          // <div className="pl-[0px]">
+          //   <p className="header-link-label text-grey text-left group-hover:text-light ease-in duration-300 ">
+          //     {type}
+          //   </p>
+          // </div>
+
+          <SmallPseudoHeader
+            text={type}
+            textStyle="p-small text-grey text-left group-hover:text-light ease-in duration-300"
+            verticalOrnamentStyle="h-auto w-[8px] border-l border-corpo"
+            // hesVerticalOrnament={false}
+            // hesHorizontalOrnament={true}
+          />
         )}
         {collection && (
           <div className="flex gap-2 pl-[0px]">
-            <p className="header-link-label text-grey text-left group-hover:text-light ease-in duration-300">
+            {/* <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300">
               {collection[0]}
-            </p>
+            </p> */}
+            <SmallPseudoHeader
+              text={collection[0]}
+              textStyle="p-small text-grey text-left group-hover:text-light ease-in duration-300"
+              verticalOrnamentStyle="h-auto w-[8px] border-l border-corpo"
+              // hesVerticalOrnament={false}
+              // hesHorizontalOrnament={true}
+            />
             <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300 l">
               {collection[1]}
             </p>{' '}

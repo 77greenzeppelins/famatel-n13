@@ -7,7 +7,7 @@ import { imgAdapteryPrzemyslowe_subCategoryCatalog } from '../c3_adaptery-przemy
 import { imgPrzedluzaczeBebnowe_subCategoryCatalog } from '../c5_przedluzacze-bebnowe/imgPrzedluzaczeBebnowe';
 import { imgObudowyRozdzielnice_subCategoryCatalog } from '../c8_obudowy-rozdzielnice/imgObudowyRozdzielnice';
 import { imgRozdzielniceModulowe_subCategoryCatalog } from '../c9_rozdzielnice-modulowe/imgRozdzielniceModulowe';
-
+import { imgPuszkiInstalacyjne_subCategoryCatalog } from '../c10_puszki-instalacyjne/imgPuszkiInstalacyjne';
 /**TS**/
 import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
@@ -22,7 +22,7 @@ const imgSubCategoryCatalogs: IF_ImgStaticData[][] = [
   imgWtyczkiGniazda_subCategoryCatalog,
   imgObudowyRozdzielnice_subCategoryCatalog,
   imgRozdzielniceModulowe_subCategoryCatalog,
-  imgGniazdaZBlokada_subCategoryCatalog,
+  imgPuszkiInstalacyjne_subCategoryCatalog,
   imgWtyczkiGniazda_subCategoryCatalog,
   imgGniazdaZBlokada_subCategoryCatalog,
 ];

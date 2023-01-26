@@ -60,7 +60,6 @@ const TextSection: React.FunctionComponent<{
                 // variantH="h2"
               />
             </div>
-            n
           </div>
 
           <div

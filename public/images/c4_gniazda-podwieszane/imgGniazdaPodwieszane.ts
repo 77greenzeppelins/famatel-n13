@@ -6,18 +6,16 @@ import img3 from './28000.webp';
 import img4 from './28000_MA.webp';
 
 /**TS**/
-interface IF {
-  image: StaticImageData;
-}
+import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
 /**...**/
-const imgGniazdaPodwieszane: IF[] = [
+const imgGniazdaPodwieszane: IF_ImgStaticData[] = [
   { image: img1 },
   { image: img2 },
   { image: img3 },
   { image: img4 },
 ];
-const imgGniazdaPodwieszaneFake: IF[] = [
+const imgGniazdaPodwieszaneFake: IF_ImgStaticData[] = [
   { image: img1 },
   { image: img2 },
   { image: img3 },

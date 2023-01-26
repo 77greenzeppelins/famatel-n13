@@ -1,4 +1,6 @@
 /**Components**/
+import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
+import SectionContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import CategoryPageHeader from './categoryPageHeader/CategoryPageHeader';
 import SubCategoriesCatalog from './subCategoriesCatalog/SubCategoriesCatalog';
@@ -19,10 +21,10 @@ const CategoryPageTemplate: React.FunctionComponent<{
   return (
     <div
       data-component="CategoryPageTemplate__container"
-      className="w-screen inner-px-md-lg pt-[60px]"
+      className="w-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
     >
-      <div className="flex flex-col gap-y-[100px] pt-[40px]">
-        <div className="flex flex-col gap-y-4">
+      <PageContentLayout>
+        <SectionContentLayout>
           <SmallPseudoHeader text="Kategoria" />
           <CategoryPageHeader
             categoryIndex={mainCategoryIndex}
@@ -34,17 +36,17 @@ const CategoryPageTemplate: React.FunctionComponent<{
             svgIcons={categoryData.svgIcons}
             labeledIcons={categoryData.labeledIcons}
           />
-        </div>
+        </SectionContentLayout>
 
-        <div className="flex flex-col gap-y-4">
+        <SectionContentLayout>
           <SmallPseudoHeader
             text="Katalog podkategorii"
             containerStyle="pb-4 md:pb-10"
           />
           <SubCategoriesCatalog subCategoryData={categoryData} />
-        </div>
+        </SectionContentLayout>
         {children}
-      </div>
+      </PageContentLayout>
       <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>
   );

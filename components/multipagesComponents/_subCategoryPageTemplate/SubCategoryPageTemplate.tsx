@@ -1,5 +1,7 @@
 import React from 'react';
 /**Components**/
+import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
+import SectionContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import SectionKategoria from './subCategoryPageHeader/sectionKategoria/SectionKategoria';
 import SubCategoryPageHeader from './subCategoryPageHeader/SubCategoryPageHeader';
 import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
@@ -25,19 +27,25 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
       data-component="SubCategoryPageTemplate__container"
       className="w-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
     >
-      <div className="flex flex-col gap-y-6 pt-[40px]">
-        <SectionKategoria
-          parentCategoryName={parentCategoryName}
-          parentCategoryUrl={parentCategoryUrl}
-        />
-        <SmallPseudoHeader text="Podkategoria" />
-        <SubCategoryPageHeader
-          fullName={subCategoryName}
-          subCategoryIndex={arrayIndex}
-        />
-        <SmallPseudoHeader text="Katalog produktów" />
-        <ProductsCatalog productCardsData={productCardsData} />
-      </div>
+      <PageContentLayout>
+        <SectionContentLayout>
+          <SectionKategoria
+            parentCategoryName={parentCategoryName}
+            parentCategoryUrl={parentCategoryUrl}
+          />
+          {/* </SectionContentLayout>
+        <SectionContentLayout> */}
+          <SmallPseudoHeader text="Podkategoria" />
+          <SubCategoryPageHeader
+            fullName={subCategoryName}
+            subCategoryIndex={arrayIndex}
+          />
+        </SectionContentLayout>
+        <SectionContentLayout>
+          <SmallPseudoHeader text="Katalog produktów" />
+          <ProductsCatalog productCardsData={productCardsData} />
+        </SectionContentLayout>
+      </PageContentLayout>
 
       <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>

@@ -14,7 +14,7 @@ import type { NextPageWithLayout } from '../../../_app';
 const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <SubCategoryPageTemplate
-      subCategoryData={obudowyRozdzielniceSubCategoriesData[0]}
+      subCategoryData={obudowyRozdzielniceSubCategoriesData[1]}
       productCardsData={productCardsData}
     />
   );
