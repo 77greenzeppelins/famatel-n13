@@ -58,7 +58,7 @@ const productCardsData: IF_ProductCardData[] = [
     path: '/',
     textIcons: ['IP54', '16A', '32A', 'ENEC 03'],
     imageData: imgWtyczkiGniazda_01_przenosne[4],
-    type: 'Typ: Wtyczki przenośne',
+    type: 'Typ: Gniazdo przenośne',
     collection: ['Kolekcja:', 'SpeedPRO'],
   },
   {
@@ -69,7 +69,7 @@ const productCardsData: IF_ProductCardData[] = [
     path: '/',
     textIcons: ['IP67', '16A', '32A', 'ENEC 03'],
     imageData: imgWtyczkiGniazda_01_przenosne[5],
-    type: 'Typ: Wtyczki przenośne',
+    type: 'Typ: Gniazdo przenośne',
     collection: ['Kolekcja:', 'SpeedPRO'],
   },
   {
@@ -80,7 +80,7 @@ const productCardsData: IF_ProductCardData[] = [
     path: '/',
     textIcons: ['IP67', '63A', 'ENEC 03'],
     imageData: imgWtyczkiGniazda_01_przenosne[6],
-    type: 'Typ: Wtyczki przenośne',
+    type: 'Typ: Gniazdo przenośne',
     collection: ['Kolekcja:', 'SpeedPRO'],
   },
   {
@@ -91,7 +91,7 @@ const productCardsData: IF_ProductCardData[] = [
     path: '/',
     textIcons: ['IP67', '125A', 'ENEC 03'],
     imageData: imgWtyczkiGniazda_01_przenosne[7],
-    type: 'Typ: Wtyczki przenośne',
+    type: 'Typ: Gniazdo przenośne',
     collection: ['Kolekcja:', 'SpeedPRO'],
   },
   {
@@ -124,7 +124,7 @@ const productCardsData: IF_ProductCardData[] = [
     path: '/',
     textIcons: ['IP54', '16A', 'ENEC 03', 'Montaż bezśrubowy'],
     imageData: imgWtyczkiGniazda_01_przenosne[10],
-    type: 'Typ: Wtyczki przenośne',
+    type: 'Typ: Gniazdo przenośne',
     collection: ['Kolekcja:', 'TOP SpeedPRO'],
   },
   {
@@ -135,7 +135,7 @@ const productCardsData: IF_ProductCardData[] = [
     path: '/',
     textIcons: ['IP67', '16A', 'ENEC 03', 'Montaż bezśrubowy'],
     imageData: imgWtyczkiGniazda_01_przenosne[11],
-    type: 'Typ: Wtyczki przenośne',
+    type: 'Typ: Gniazdo przenośne',
     collection: ['Kolekcja:', 'TOP SpeedPRO'],
   },
   {
