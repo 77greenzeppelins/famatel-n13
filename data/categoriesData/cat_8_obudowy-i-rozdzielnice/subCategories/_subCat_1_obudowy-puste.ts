@@ -1,6 +1,6 @@
 /*Images saff*/
 import { imgObudowyRozdzielnice_01_obudowy_puste } from '../../../../public/images/c8_obudowy-rozdzielnice/1_puste/imgObudowyRozdzielnice_01_obudowy-puste';
-/** */
+/**Basic Data*/
 import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';

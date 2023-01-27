@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 /**Components**/
 import PageContentLayout from '../../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
 import SectionContentLayout from '../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
@@ -17,7 +17,13 @@ const ProductPageContent: React.FunctionComponent<{
     subCategoryUrl: string;
   };
   productData: IF_ProductCardData;
-}> = ({ catalogStructureData, obudowyPusteSubCategoryData, productData }) => {
+  children: ReactNode;
+}> = ({
+  catalogStructureData,
+  obudowyPusteSubCategoryData,
+  productData,
+  children,
+}) => {
   /**JSX**/
   return (
     <PageContentLayout>
@@ -30,9 +36,7 @@ const ProductPageContent: React.FunctionComponent<{
           productName={productData.model}
         />
       </SectionContentLayout>
-      {/* <SectionContentLayout>
-          <SmallPseudoHeader text="Product_Page_Template / part_2" />
-        </SectionContentLayout> */}
+      {children}
     </PageContentLayout>
   );
 };

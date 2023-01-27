@@ -6,11 +6,17 @@ import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
 /**BasicData**/
 import { mainCategoriesSummaryData } from '../../../../../data/_data';
-import {
-  obudowyPusteSubCategoryData,
-  productCardsData,
-} from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_1_obudowy-puste';
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
+// import {
+//   obudowyPusteSubCategoryData,
+//   productCardsData,
+// } from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_1_obudowy-puste';
+
+import {
+  rozdzielnicePrzemysloweSubCategoryData,
+  productCardsData,
+} from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_2_przemyslowe';
+
 /**TS**/
 import { NextPageWithLayout } from '../../../../_app';
 
@@ -31,7 +37,7 @@ const ObudowyPusteProductPage: NextPageWithLayout = () => {
         ]
       }
       //___data about subCategory
-      obudowyPusteSubCategoryData={obudowyPusteSubCategoryData}
+      obudowyPusteSubCategoryData={rozdzielnicePrzemysloweSubCategoryData}
       //___data about product
       productCardsData={productCardsData}
     >

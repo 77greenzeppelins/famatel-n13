@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 /**...**/
 import { useRouter } from 'next/router';
 /**Components*/
@@ -18,10 +18,12 @@ const ProductPageTemplate: React.FunctionComponent<{
     subCategoryUrl: string;
   };
   productCardsData: IF_ProductCardData[];
+  children: ReactNode;
 }> = ({
   catalogStructureData,
   obudowyPusteSubCategoryData,
   productCardsData,
+  children,
 }) => {
   /**...WTF**/
   //   console.log('catalogStructureData:', catalogStructureData);
@@ -49,7 +51,9 @@ const ProductPageTemplate: React.FunctionComponent<{
               productData={productData}
               catalogStructureData={catalogStructureData}
               obudowyPusteSubCategoryData={obudowyPusteSubCategoryData}
-            />
+            >
+              {children}
+            </ProductPageContent>
           );
         }
       })}
