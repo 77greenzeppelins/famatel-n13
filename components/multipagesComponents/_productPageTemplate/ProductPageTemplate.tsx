@@ -10,14 +10,14 @@ import {
 
 /**---------------------------------**/
 const ProductPageTemplate: React.FunctionComponent<{
-  productData: IF_ProductCardData;
+  //   productData: IF_ProductCardData;
   catalogStructureData: IF_CatalogStructureData;
-}> = ({ productData, catalogStructureData }) => {
+}> = ({ catalogStructureData }) => {
   /**...WTF**/
   console.log('catalogStructureData:', catalogStructureData);
   // if
   /**Props destructuring**/
-  const { arrayIndex, path, imageData, type, collection, model } = productData;
+  const { mainCategoryName } = catalogStructureData;
 
   /**JSX**/
   return (
@@ -27,12 +27,11 @@ const ProductPageTemplate: React.FunctionComponent<{
     >
       <PageContentLayout>
         <SectionContentLayout>
-          <SmallPseudoHeader text={` ${productData?.model}  `} />
-          <SmallPseudoHeader text={` ${productData?.model}  `} />
+          <SmallPseudoHeader text={mainCategoryName} />
         </SectionContentLayout>
-        <SectionContentLayout>
+        {/* <SectionContentLayout>
           <SmallPseudoHeader text="Product_Page_Template / part_2" />
-        </SectionContentLayout>
+        </SectionContentLayout> */}
       </PageContentLayout>
 
       <div className="fixed w-full h-[50px] top-0 bg-dark" />

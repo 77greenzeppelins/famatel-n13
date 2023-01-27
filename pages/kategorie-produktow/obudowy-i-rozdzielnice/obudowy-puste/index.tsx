@@ -6,7 +6,6 @@ import SubCategoryPageTemplate from '../../../../components/multipagesComponents
 /**BasicData*/
 import { obudowyRozdzielniceSubCategoriesData } from '../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/_cat8_obudowy-i-rozdzielnice_data';
 import { productCardsData } from '../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_1_obudowy-puste';
-
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';
 

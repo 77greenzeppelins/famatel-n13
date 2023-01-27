@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 /**Hook Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
@@ -12,9 +12,12 @@ import { productCardsData } from '../../../../../data/categoriesData/cat_8_obudo
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
+import { NextPageWithLayout } from '../../../../_app';
+import Layout from '../../../../../components/layouts/rootLayout/Layout';
+import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
 
 /**--------------------------------------**/
-const ObudowyPusteProductPage = () => {
+const ObudowyPusteProductPage: NextPageWithLayout = () => {
   /**Router Section**/
   const router = useRouter();
   //   const test1 = productCardsData[0];
@@ -22,10 +25,25 @@ const ObudowyPusteProductPage = () => {
   //   const splitedPath = test1_path.split('/');
   //   console.log('splitedPath:', splitedPath);
   /**...**/
+  //   const productData = () => {
+  //     let productSpecification: any | IF_ProductCardData;
+  //     // let productSpecification: IF_ProductCardData = {};
+  //     productCardsData.map(productData => {
+  //       const productPath = productData.path.split('/');
+
+  //       if (router.query.model === productPath[splitedPathParts.product]) {
+  //         console.log(
+  //           'router.query.model === productPath[4]:',
+  //           router.query.model === productPath[4]
+  //         );
+  //         productSpecification = productData;
+  //       }
+  //     });
+  //     return productSpecification;
+  //   };
+
   const productData = () => {
-    let productSpecification: any | IF_ProductCardData;
-    // let productSpecification: IF_ProductCardData = {};
-    productCardsData.map(productData => {
+    return productCardsData.map(productData => {
       const productPath = productData.path.split('/');
 
       if (router.query.model === productPath[splitedPathParts.product]) {
@@ -33,24 +51,40 @@ const ObudowyPusteProductPage = () => {
           'router.query.model === productPath[4]:',
           router.query.model === productPath[4]
         );
-        productSpecification = productData;
+        return productData;
       }
     });
-    return productSpecification;
   };
+
+  //   console.log(
+  //     'catalogStructureData:',
+  //     catalogStructureData[
+  //       mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
+  //     ]
+  //   );
 
   /**JSX**/
   return (
-    // <ProductPageTemplate
-    //   productData={productData()}
-    //   //___data to create "navSection"
-    //   catalogStructureData={
-    //     catalogStructureData[
-    //       mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
-    //     ]
-    //   }
-    // />
-    <div className="fc bg-corpo">....................</div>
+    // <div className="fc w-scree h-screen bg-dark ">
+    //   <p className="text-grey">ObudowyPusteProductPage</p>
+    // </div>
+    <ProductPageTemplate
+      //   productData={productData()}
+      catalogStructureData={
+        catalogStructureData[
+          mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
+        ]
+      }
+    />
+  );
+};
+
+ObudowyPusteProductPage.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {/* <NestedLayout>{page}</NestedLayout> */}
+      {page}
+    </Layout>
   );
 };
 
