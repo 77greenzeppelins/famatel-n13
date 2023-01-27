@@ -2,16 +2,13 @@ import React, { Dispatch, SetStateAction } from 'react';
 /**Components*/
 import LinkToCategory from './linkToCategory/LinkToCategory';
 import CategoriesCounter from '../../../../multipagesComponents/counters/categoriesCounter/CategoriesCounter';
-/**Hook Staff**/
-import useWindowSize from '../../../../../utils/hooks/useWindowSize';
-/**Framer Motion Staff*/
-import { motion } from 'framer-motion';
-import { opacityScaleYVariants } from '../../../../../utils/framerMotion/framerMotionUtils';
-/**Basic Data**/
-import { mainCategories } from '../../../../../data/_data';
 import PreviewButton from './previewButton/PreviewButton';
 import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import H1AnimatedPresence from '../../../../_basicComponents/componentH1/H1AnimatedPresence';
+/**Hook Staff**/
+import useWindowSize from '../../../../../utils/hooks/useWindowSize';
+/**Basic Data**/
+
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
 
 /**--------------------------------------------------------------------------------**/
