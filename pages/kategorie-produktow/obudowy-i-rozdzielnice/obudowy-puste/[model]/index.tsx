@@ -2,7 +2,7 @@ import React from 'react';
 /**Hook Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
-import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
+// import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
 /**BasicData**/
 import {
   splitedPathParts,
@@ -41,15 +41,16 @@ const ObudowyPusteProductPage = () => {
 
   /**JSX**/
   return (
-    <ProductPageTemplate
-      productData={productData()}
-      //___data to create "navSection"
-      catalogStructureData={
-        catalogStructureData[
-          mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
-        ]
-      }
-    />
+    // <ProductPageTemplate
+    //   productData={productData()}
+    //   //___data to create "navSection"
+    //   catalogStructureData={
+    //     catalogStructureData[
+    //       mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
+    //     ]
+    //   }
+    // />
+    <div className="fc bg-corpo">....................</div>
   );
 };
 
