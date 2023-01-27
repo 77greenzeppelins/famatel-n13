@@ -8,6 +8,10 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 //___catalog & www 100% mapping !!!
 // const catalogVersion = [
 // ];
+const obudowyPusteSubCategoryData = {
+  subCategoryName: catalogStructureData[7].subCategoriesNames[0],
+  subCategoryUrl: catalogStructureData[7].subCategoriesUrls[0],
+};
 
 const productCardsData: IF_ProductCardData[] = [
   {
@@ -231,4 +235,4 @@ const productCardsData: IF_ProductCardData[] = [
   },
 ];
 
-export { productCardsData };
+export { obudowyPusteSubCategoryData, productCardsData };

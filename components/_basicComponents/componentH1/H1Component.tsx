@@ -10,7 +10,7 @@ const h1DefaultStyle = `text-light text-left
 
 /**-----------------------------------------------**/
 const H1Component: React.FunctionComponent<{
-  text: string;
+  text?: string;
   hasDecoration?: boolean;
   variantH?: string;
   customeStyle?: string;

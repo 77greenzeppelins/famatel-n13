@@ -8,7 +8,7 @@ import { opacityScaleYVariants } from '../../../utils/framerMotion/framerMotionU
 /**---------------------------------------**/
 const H1AnimatedPresence: React.FunctionComponent<{
   uniqueKey: number;
-  text: string;
+  text?: string;
   variantH?: string;
   customeStyle?: string;
 }> = ({ uniqueKey, text, variantH, customeStyle }) => {

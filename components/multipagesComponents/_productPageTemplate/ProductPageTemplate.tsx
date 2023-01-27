@@ -11,12 +11,16 @@ import NavSection from './navSection/NavSection';
 
 /**---------------------------------**/
 const ProductPageTemplate: React.FunctionComponent<{
-  productData: IF_ProductCardData;
   catalogStructureData: IF_CatalogStructureData;
-}> = ({ catalogStructureData, productData }) => {
+  obudowyPusteSubCategoryData: {
+    subCategoryName: string;
+    subCategoryUrl: string;
+  };
+  //   productData: IF_ProductCardData;
+}> = ({ catalogStructureData, obudowyPusteSubCategoryData }) => {
   /**...WTF**/
-  console.log('catalogStructureData:', catalogStructureData);
-  console.log('productData:', productData);
+  //   console.log('catalogStructureData:', catalogStructureData);
+  //   console.log('productData:', productData);
 
   /**Props destructuring**/
   const {
@@ -40,6 +44,9 @@ const ProductPageTemplate: React.FunctionComponent<{
           <NavSection
             parentCategoryName={mainCategoryName}
             parentCategoryUrl={mainCategoryUrl}
+            subCategoryName={obudowyPusteSubCategoryData.subCategoryName}
+            subCategoryUrl={obudowyPusteSubCategoryData.subCategoryUrl}
+            // productName={productData.model}
           />
         </SectionContentLayout>
         {/* <SectionContentLayout>

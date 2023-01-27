@@ -3,12 +3,23 @@ import React from 'react';
 /**Components**/
 import SmallPseudoHeader from '../../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import LinkWithArrowIcon from '../../../SVG/icons/LinkWithArrowIcon';
+import H1AnimatedPresence from '../../../_basicComponents/componentH1/H1AnimatedPresence';
 
 /**---------------------------------------------**/
 const NavSection: React.FunctionComponent<{
   parentCategoryName: string;
   parentCategoryUrl: string;
-}> = ({ parentCategoryName, parentCategoryUrl }) => {
+  subCategoryName: string;
+  subCategoryUrl: string;
+  //   productName: string | undefined;
+}> = ({
+  parentCategoryName,
+  parentCategoryUrl,
+  subCategoryName,
+  subCategoryUrl,
+  //   productName,
+}) => {
+  /****/
   return (
     <>
       <div
@@ -34,10 +45,10 @@ const NavSection: React.FunctionComponent<{
       <div className="flex gap-x-4  ">
         <SmallPseudoHeader text="Podkategoria" />
         <p className="header-link-label text-grey disable">/</p>
-        <Link href={parentCategoryUrl} scroll={false}>
+        <Link href={subCategoryUrl} scroll={false}>
           <div className="flex group">
             <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300 whitespace-nowrap ">
-              {parentCategoryName}
+              {subCategoryName}
             </p>
             <div className="pl-4 ">
               <LinkWithArrowIcon
@@ -48,6 +59,8 @@ const NavSection: React.FunctionComponent<{
           </div>
         </Link>
       </div>
+      <SmallPseudoHeader text="Model" />
+      <H1AnimatedPresence uniqueKey={0} text={'....'} />
     </>
   );
 };

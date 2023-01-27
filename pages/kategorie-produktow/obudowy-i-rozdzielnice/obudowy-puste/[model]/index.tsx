@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useState } from 'react';
 /**Hook Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
@@ -9,7 +9,10 @@ import {
   splitedPathParts,
   mainCategoriesSummaryData,
 } from '../../../../../data/_data';
-import { productCardsData } from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_1_obudowy-puste';
+import {
+  obudowyPusteSubCategoryData,
+  productCardsData,
+} from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_1_obudowy-puste';
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
@@ -22,18 +25,14 @@ const ObudowyPusteProductPage: NextPageWithLayout = () => {
   //   const test1 = productCardsData[0];
   //   const test1_path = productCardsData[0].path;
   //   const splitedPath = test1_path.split('/');
-  //   console.log('splitedPath:', splitedPath);
+  console.log('obudowyPusteSubCategoryData:', obudowyPusteSubCategoryData);
   /**...**/
   const productData = () => {
     let productSpecification: any | IF_ProductCardData;
-    productCardsData.map(productData => {
+    productCardsData.map((productData, index) => {
       const productPath = productData.path.split('/');
 
       if (router.query.model === productPath[splitedPathParts.product]) {
-        //   console.log(
-        //     'router.query.model === productPath[4]:',
-        //     router.query.model === productPath[4]
-        //   );
         productSpecification = productData;
       }
     });
@@ -42,16 +41,14 @@ const ObudowyPusteProductPage: NextPageWithLayout = () => {
 
   /**JSX**/
   return (
-    // <div className="fc w-scree h-screen bg-dark ">
-    //   <p className="text-grey">ObudowyPusteProductPage</p>
-    // </div>
     <ProductPageTemplate
-      productData={productData()}
       catalogStructureData={
         catalogStructureData[
           mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
         ]
       }
+      obudowyPusteSubCategoryData={obudowyPusteSubCategoryData}
+      //   productData={productData()}
     />
   );
 };
@@ -66,39 +63,3 @@ ObudowyPusteProductPage.getLayout = function getLayout(page: ReactElement) {
 };
 
 export default ObudowyPusteProductPage;
-
-//   const productData = () => {
-//     return productCardsData.map(productSpecification => {
-//       const productPath = productSpecification.path.split('/');
-
-//       if (router.query.model === productPath[splitedPathParts.product]) {
-//         console.log(
-//           'router.query.model === productPath[4]:',
-//           router.query.model === productPath[4]
-//         );
-//         console.log('productSpecification:', productSpecification);
-//         return productSpecification;
-//       }
-//     });
-//   };
-
-//   const x = productCardsData.map(productSpecification => {
-//     const productPath = productSpecification.path.split('/');
-//     if (router.query.model !== productPath[splitedPathParts.product]) {
-//     //   console.log(
-//     //     'router.query.model === productPath[4]:',
-//     //     router.query.model === productPath[4]
-//     //   );
-//     //   console.log('productSpecification:', productSpecification);
-//     //   return productSpecification;
-//     return null
-//     }
-//     return productSpecification;
-//   });
-
-//   console.log(
-//     'catalogStructureData:',
-//     catalogStructureData[
-//       mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
-//     ]
-//   );
