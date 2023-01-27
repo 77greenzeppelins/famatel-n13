@@ -7,17 +7,27 @@ import {
   IF_ProductCardData,
   IF_CatalogStructureData,
 } from '../../../utils/TS/typeScriptStaff';
+import NavSection from './navSection/NavSection';
 
 /**---------------------------------**/
 const ProductPageTemplate: React.FunctionComponent<{
-  //   productData: IF_ProductCardData;
+  productData: IF_ProductCardData;
   catalogStructureData: IF_CatalogStructureData;
-}> = ({ catalogStructureData }) => {
+}> = ({ catalogStructureData, productData }) => {
   /**...WTF**/
   console.log('catalogStructureData:', catalogStructureData);
-  // if
+  console.log('productData:', productData);
+
   /**Props destructuring**/
-  const { mainCategoryName } = catalogStructureData;
+  const {
+    mainCategoryName,
+    mainCategoryUrl,
+    subCategoriesNames,
+    subCategoriesUrls,
+  } = catalogStructureData;
+
+  //   console.log('subCategoriesNames', subCategoriesNames);
+  //   console.log('subCategoriesUrls', subCategoriesUrls);
 
   /**JSX**/
   return (
@@ -27,7 +37,10 @@ const ProductPageTemplate: React.FunctionComponent<{
     >
       <PageContentLayout>
         <SectionContentLayout>
-          <SmallPseudoHeader text={mainCategoryName} />
+          <NavSection
+            parentCategoryName={mainCategoryName}
+            parentCategoryUrl={mainCategoryUrl}
+          />
         </SectionContentLayout>
         {/* <SectionContentLayout>
           <SmallPseudoHeader text="Product_Page_Template / part_2" />
