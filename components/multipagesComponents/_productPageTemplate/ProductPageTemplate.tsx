@@ -27,9 +27,8 @@ const ProductPageTemplate: React.FunctionComponent<{
     >
       <PageContentLayout>
         <SectionContentLayout>
-          <SmallPseudoHeader
-            text={`Product_Page_Template / ${productData?.model}  `}
-          />
+          <SmallPseudoHeader text={` ${productData?.model}  `} />
+          <SmallPseudoHeader text={` ${productData?.model}  `} />
         </SectionContentLayout>
         <SectionContentLayout>
           <SmallPseudoHeader text="Product_Page_Template / part_2" />
