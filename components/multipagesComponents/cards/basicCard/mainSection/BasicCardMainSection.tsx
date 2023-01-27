@@ -27,7 +27,12 @@ const BasicCardMainSection: React.FunctionComponent<{
         data-layout="TextSection__container"
         className={`fc ${condition ? 'h-full' : 'h-[45%]'}  w-full p-1 `}
       >
-        <p className="text-light text-center opacity-70 group-hover:opacity-100 ease-in duration-300 header-link-label">
+        <p
+          className="header-link-label text-grey text-center group-hover:text-light ease-in duration-300 "
+          // className="p-small text-grey text-center group-hover:text-light ease-in duration-300 "
+          // className="text-light text-center opacity-70 group-hover:opacity-100 ease-in duration-300 p-small "
+          // className="text-light text-center opacity-70 group-hover:opacity-100 ease-in duration-300 header-link-label"
+        >
           {label}
         </p>
       </div>

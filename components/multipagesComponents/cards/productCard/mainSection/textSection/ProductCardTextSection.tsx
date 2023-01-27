@@ -64,7 +64,7 @@ const ProductCardTextSection: React.FunctionComponent<{
               // hesVerticalOrnament={false}
               // hesHorizontalOrnament={true}
             />
-            <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300 l">
+            <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300 ">
               {collection[1]}
             </p>{' '}
           </div>
