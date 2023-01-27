@@ -1,13 +1,14 @@
 import React from 'react';
+/**...**/
+import { useRouter } from 'next/router';
 /**Components*/
-import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
-import SectionContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import ProductPageContent from './productPageContent/ProductPageContent';
+/**TS**/
 import {
   IF_ProductCardData,
   IF_CatalogStructureData,
 } from '../../../utils/TS/typeScriptStaff';
-import NavSection from './navSection/NavSection';
+import { splitedPathParts } from '../../../data/_data';
 
 /**---------------------------------**/
 const ProductPageTemplate: React.FunctionComponent<{
@@ -16,19 +17,19 @@ const ProductPageTemplate: React.FunctionComponent<{
     subCategoryName: string;
     subCategoryUrl: string;
   };
-  //   productData: IF_ProductCardData;
-}> = ({ catalogStructureData, obudowyPusteSubCategoryData }) => {
+  productCardsData: IF_ProductCardData[];
+}> = ({
+  catalogStructureData,
+  obudowyPusteSubCategoryData,
+  productCardsData,
+}) => {
   /**...WTF**/
   //   console.log('catalogStructureData:', catalogStructureData);
   //   console.log('productData:', productData);
+  const router = useRouter();
 
   /**Props destructuring**/
-  const {
-    mainCategoryName,
-    mainCategoryUrl,
-    subCategoriesNames,
-    subCategoriesUrls,
-  } = catalogStructureData;
+  const { mainCategoryName, mainCategoryUrl } = catalogStructureData;
 
   //   console.log('subCategoriesNames', subCategoriesNames);
   //   console.log('subCategoriesUrls', subCategoriesUrls);
@@ -39,20 +40,19 @@ const ProductPageTemplate: React.FunctionComponent<{
       data-component="SubCategoryPageTemplate__container"
       className="w-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
     >
-      <PageContentLayout>
-        <SectionContentLayout>
-          <NavSection
-            parentCategoryName={mainCategoryName}
-            parentCategoryUrl={mainCategoryUrl}
-            subCategoryName={obudowyPusteSubCategoryData.subCategoryName}
-            subCategoryUrl={obudowyPusteSubCategoryData.subCategoryUrl}
-            // productName={productData.model}
-          />
-        </SectionContentLayout>
-        {/* <SectionContentLayout>
-          <SmallPseudoHeader text="Product_Page_Template / part_2" />
-        </SectionContentLayout> */}
-      </PageContentLayout>
+      {productCardsData.map((productData, index) => {
+        const productPath = productData.path.split('/');
+        if (router.query.model === productPath[splitedPathParts.product]) {
+          return (
+            <ProductPageContent
+              key={index}
+              productData={productData}
+              catalogStructureData={catalogStructureData}
+              obudowyPusteSubCategoryData={obudowyPusteSubCategoryData}
+            />
+          );
+        }
+      })}
 
       <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>
@@ -60,3 +60,15 @@ const ProductPageTemplate: React.FunctionComponent<{
 };
 
 export default ProductPageTemplate;
+
+// const productData = () => {
+//   let productSpecification: any | IF_ProductCardData;
+//   productCardsData.map((productData, index) => {
+//     const productPath = productData.path.split('/');
+
+//     if (router.query.model === productPath[splitedPathParts.product]) {
+//       productSpecification = productData;
+//     }
+//   });
+//   return productSpecification;
+// };

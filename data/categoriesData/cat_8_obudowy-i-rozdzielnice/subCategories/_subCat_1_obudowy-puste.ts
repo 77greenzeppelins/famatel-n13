@@ -11,6 +11,7 @@ import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 const obudowyPusteSubCategoryData = {
   subCategoryName: catalogStructureData[7].subCategoriesNames[0],
   subCategoryUrl: catalogStructureData[7].subCategoriesUrls[0],
+  subCategoryIndex: 0,
 };
 
 const productCardsData: IF_ProductCardData[] = [

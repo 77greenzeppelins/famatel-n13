@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 /**Components**/
-import SmallPseudoHeader from '../../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
-import LinkWithArrowIcon from '../../../SVG/icons/LinkWithArrowIcon';
-import H1AnimatedPresence from '../../../_basicComponents/componentH1/H1AnimatedPresence';
+import SmallPseudoHeader from '../../../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import LinkWithArrowIcon from '../../../../SVG/icons/LinkWithArrowIcon';
+import H1AnimatedPresence from '../../../../_basicComponents/componentH1/H1AnimatedPresence';
 
 /**---------------------------------------------**/
 const NavSection: React.FunctionComponent<{
@@ -11,13 +11,13 @@ const NavSection: React.FunctionComponent<{
   parentCategoryUrl: string;
   subCategoryName: string;
   subCategoryUrl: string;
-  //   productName: string | undefined;
+  productName: string | undefined;
 }> = ({
   parentCategoryName,
   parentCategoryUrl,
   subCategoryName,
   subCategoryUrl,
-  //   productName,
+  productName,
 }) => {
   /****/
   return (
@@ -60,7 +60,7 @@ const NavSection: React.FunctionComponent<{
         </Link>
       </div>
       <SmallPseudoHeader text="Model" />
-      <H1AnimatedPresence uniqueKey={0} text={'....'} />
+      <H1AnimatedPresence uniqueKey={0} text={productName} />
     </>
   );
 };
