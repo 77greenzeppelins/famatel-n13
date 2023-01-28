@@ -45,3 +45,11 @@ const H1Component: React.FunctionComponent<{
 };
 
 export default H1Component;
+
+/*
+useCase:
+<H1Component
+variantH="custome"
+customeStyle="text-light text-left text-[2rem] xs:text-[2.5rem] xxl:text-[3rem] tracking-widest"
+/>
+*/

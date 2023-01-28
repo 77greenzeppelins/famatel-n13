@@ -5,7 +5,9 @@ const PageContentLayout: React.FunctionComponent<{ children: ReactNode }> = ({
 }) => {
   /**JSX**/
   return (
-    <div className="flex flex-col gap-y-[100px] pt-[40px]">{children}</div>
+    <div className="flex flex-col gap-y-[50px] lg:gap-y-[100px] pt-[40px]">
+      {children}
+    </div>
   );
 };
 

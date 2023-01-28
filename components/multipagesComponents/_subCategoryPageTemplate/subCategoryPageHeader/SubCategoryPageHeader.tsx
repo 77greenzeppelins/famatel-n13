@@ -13,8 +13,8 @@ const SubCategoryPageHeader: React.FunctionComponent<{
       <H1AnimatedPresence
         uniqueKey={subCategoryIndex}
         text={fullName}
-        variantH="text-light text-left 
-     lg:text-[2rem] xxl:text-[3rem] tracking-widest"
+        variantH="custome"
+        customeStyle="text-light text-left text-[2rem] xs:text-[2.5rem] xxl:text-[3rem] tracking-widest"
       />
     </div>
   );

@@ -10,7 +10,12 @@ const CategoryPageHeader: React.FunctionComponent<{
   /**JSX**/
   return (
     <div>
-      <H1AnimatedPresence uniqueKey={categoryIndex} text={categoryName} />
+      <H1AnimatedPresence
+        uniqueKey={categoryIndex}
+        text={categoryName}
+        variantH="custome"
+        customeStyle="text-light text-left text-[2rem] xs:text-[2.5rem] xxl:text-[3rem] tracking-widest"
+      />
     </div>
   );
 };
