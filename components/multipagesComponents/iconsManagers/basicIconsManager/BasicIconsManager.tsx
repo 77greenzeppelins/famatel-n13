@@ -60,7 +60,7 @@ const BasicIconsManager: React.FunctionComponent<{
                 className={
                   iconContainerStyle
                     ? iconContainerStyle
-                    : 'fc w-[50px] h-[50px] group'
+                    : 'fc w-[40px] lg:w-[50px] h-[40px] lg:h-[50px] group'
                 }
               >
                 <CardFrame>

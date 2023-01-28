@@ -6,7 +6,7 @@ import ProductCardTextSection from './textSection/ProductCardTextSection';
 // import LinkWithTextAndIcon from '../../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
 
 /**------------------------------------------------------------**/
-const ProductCardMainSection: React.FunctionComponent<{
+const ProductCardContent: React.FunctionComponent<{
   productCardData: IF_ProductCardData;
 }> = ({ productCardData }) => {
   /**...*/
@@ -41,4 +41,4 @@ const ProductCardMainSection: React.FunctionComponent<{
   );
 };
 
-export default ProductCardMainSection;
+export default ProductCardContent;
