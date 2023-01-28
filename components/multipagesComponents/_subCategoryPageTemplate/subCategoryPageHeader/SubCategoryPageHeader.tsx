@@ -14,7 +14,7 @@ const SubCategoryPageHeader: React.FunctionComponent<{
         uniqueKey={subCategoryIndex}
         text={fullName}
         variantH="text-light text-left 
-    text-[1.5rem] lg:text-[2rem] xxl:text-[3rem] tracking-widest"
+     lg:text-[2rem] xxl:text-[3rem] tracking-widest"
       />
     </div>
   );

@@ -9,7 +9,7 @@ const ProductCardTextSection: React.FunctionComponent<{
   model?: string;
 }> = ({ textIcons, productName, type, collection, model }) => {
   return (
-    <div className="relative flex flex-col gap-10 w-full h-full px-4 py-4">
+    <div className="relative flex flex-col  w-full h-full px-4 py-4">
       <div>
         {productName && Array.isArray(productName) ? (
           productName.map((line, index) => (
@@ -26,7 +26,7 @@ const ProductCardTextSection: React.FunctionComponent<{
           </p>
         )}
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 pt-2 md:pt-4">
         {model && (
           <SmallPseudoHeader
             text={model}
@@ -77,7 +77,7 @@ const ProductCardTextSection: React.FunctionComponent<{
         )} */}
       </div>
       <div
-        className="absolute bottom-4 flex gap-2 flex-wrap "
+        className="absolute bottom-2 md:bottom-4 flex gap-2 flex-wrap "
         //___flex-wrap
       >
         {textIcons &&

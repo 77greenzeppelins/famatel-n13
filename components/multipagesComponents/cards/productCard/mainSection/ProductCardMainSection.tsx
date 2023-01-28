@@ -22,13 +22,13 @@ const ProductCardMainSection: React.FunctionComponent<{
   /**JSX**/
   return (
     <div className="flex h-full ">
-      <div className=" fc w-[40%] h-full ">
+      <div className=" fc w-[50%] max-w-[200px] xs:max-w-[210px] md:max-w-[240px] h-full ">
         <ProductCardGraphicSection
           imageData={imageData}
           productIndex={arrayIndex}
         />
       </div>
-      <div className=" w-[60%] h-full">
+      <div className=" w-[50%] h-full">
         <ProductCardTextSection
           textIcons={textIcons}
           productName={productName}

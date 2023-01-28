@@ -10,7 +10,10 @@ const ProductsCatalog: React.FunctionComponent<{
 }> = ({ productCardsData }) => {
   /**JSX**/
   return (
-    <div className="flex flex-wrap gap-6 w-full  ">
+    <div
+      className="grid grid-cols-[1fr] md:grid-cols-[1fr_1fr] xl:grid-cols-[1fr_1fr_1fr] gap-6 xl:gap-10 w-full"
+      // className="flex flex-wrap gap-6 w-full"
+    >
       {productCardsData.map((productCardData, index) => (
         <ProductCard key={index} productCardData={productCardData} />
       ))}

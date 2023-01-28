@@ -31,7 +31,6 @@ const ProductCardGraphicSection: React.FunctionComponent<{
       <div className="absolute bottom-0 fc w-full h-[10%]">
         <div className="h-full w-[1px] border-l border-dark opacity-40 group-hover:opacity-100 ease-in duration-300" />
       </div>
-      {/* <div className="absolute right-1  h-[95%] w-[1px] bg-grey" /> */}
     </div>
   );
 };
