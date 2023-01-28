@@ -2,8 +2,8 @@ import React from 'react';
 /**Components**/
 import BasicCardGraphicSection from './graphicSection/BasicCardGraphicSection';
 /**Hook Staff**/
-import useWindowSize from '../../../../../utils/hooks/useWindowSize';
-import { IF_ImgStaticData } from '../../../../../utils/TS/typeScriptStaff';
+import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
+import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
 /**HardCoded Data
  * used in <ProduktyDropDownMenu>
  **/

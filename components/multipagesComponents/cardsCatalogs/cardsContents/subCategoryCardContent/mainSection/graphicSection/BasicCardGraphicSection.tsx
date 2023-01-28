@@ -1,12 +1,12 @@
 import React from 'react';
 /**Components**/
-import SquareHolder from '../../../../holders/squareHolder/SquareHolder';
+import SquareHolder from '../../../../../holders/squareHolder/SquareHolder';
 import BasicCardImageSection from './imageSection/BasicCardImageSection';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
-import { cardVariants } from '../../../../../../utils/framerMotion/framerMotionUtils';
+import { cardVariants } from '../../../../../../../utils/framerMotion/framerMotionUtils';
 /**TS**/
-import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
+import { IF_ImgStaticData } from '../../../../../../../utils/TS/typeScriptStaff';
 
 /**----------------------------------------------------------**/
 const BasicCardGraphicSection: React.FunctionComponent<{

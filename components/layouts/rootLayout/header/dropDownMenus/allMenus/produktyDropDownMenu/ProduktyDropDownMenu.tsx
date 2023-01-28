@@ -1,8 +1,9 @@
 import React from 'react';
 /**Components**/
-import BasicCard from '../../../../../../multipagesComponents/cards/basicCard/BasicCard';
+// import BasicCard from '../../../../../../multipagesComponents/cards/basicCard/BasicCard';
 /**BasicData**/
 import { catalogStructureData } from '../../../../../../../data/_catalogStructure_data';
+import Card_Basic from '../../../../../../multipagesComponents/cardsCatalogs/card_Basic/Card_Basic';
 
 /**---------------------------------------------------------------------------**/
 const ProduktyDropDownMenu: React.FunctionComponent = () => {
@@ -21,7 +22,15 @@ const ProduktyDropDownMenu: React.FunctionComponent = () => {
           mainCategoryUrl,
           mainCategoryImage,
         }) => (
-          <BasicCard
+          // <BasicCard
+          //   key={mainCategoryIndex}
+          //   url={mainCategoryUrl}
+          //   imageData={mainCategoryImage}
+          //   arrayIndex={mainCategoryIndex}
+          //   label={mainCategoryName}
+          //   heightMattersCondition={true}
+          // />
+          <Card_Basic
             key={mainCategoryIndex}
             url={mainCategoryUrl}
             imageData={mainCategoryImage}

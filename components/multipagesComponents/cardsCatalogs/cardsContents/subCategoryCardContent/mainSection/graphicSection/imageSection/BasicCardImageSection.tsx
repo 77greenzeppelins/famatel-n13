@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 /*FramerMotion Staff*/
 import { motion } from 'framer-motion';
-import { IF_ImgStaticData } from '../../../../../../../utils/TS/typeScriptStaff';
+import { IF_ImgStaticData } from '../../../../../../../../utils/TS/typeScriptStaff';
 
 /**-------------------------------------**/
 const BasicCardImageSection: React.FunctionComponent<{
