@@ -10,7 +10,12 @@ const SubCategoryPageHeader: React.FunctionComponent<{
   /**JSX**/
   return (
     <div>
-      <H1AnimatedPresence uniqueKey={subCategoryIndex} text={fullName} />
+      <H1AnimatedPresence
+        uniqueKey={subCategoryIndex}
+        text={fullName}
+        variantH="text-light text-left 
+    text-[1.5rem] lg:text-[2rem] xxl:text-[3rem] tracking-widest"
+      />
     </div>
   );
 };

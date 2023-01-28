@@ -53,6 +53,9 @@
   .disable {
     @apply select-none touch-none no-sparkling;
   }
+  .disable-soft {
+    @apply select-none no-sparkling;
+  }
   .inner-px {
     @apply px-[2%] xxs:px-[6%] xs:px-[60px];
   }
