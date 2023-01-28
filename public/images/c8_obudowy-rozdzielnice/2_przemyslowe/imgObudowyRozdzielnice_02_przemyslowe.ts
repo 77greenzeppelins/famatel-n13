@@ -5,7 +5,9 @@ import img2 from './8.2_02_6504.webp';
 import img3 from './8.2_03_6602.webp';
 import img4 from './8.2_04_3957_1.webp';
 import img5 from './8.2_05_3958_1.webp';
+import img5_1 from './8.2_06_3959.webp';
 import img6 from './8.2_06_6201.webp';
+
 import img7 from './8.2_07_6301.webp';
 import img8 from './8.2_08_6901.webp';
 import img9 from './8.2_09_6051.webp';
@@ -25,6 +27,7 @@ const imgObudowyRozdzielnice_02_przemyslowe: IF_ImgStaticData[] = [
   { image: img3 },
   { image: img4 },
   { image: img5 },
+  { image: img5_1 },
   { image: img6 },
   { image: img7 },
   { image: img8 },

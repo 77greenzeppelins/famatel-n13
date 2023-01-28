@@ -59,7 +59,7 @@ const NavSection: React.FunctionComponent<{
           </div>
         </Link>
       </div>
-      <SmallPseudoHeader text="Model" />
+      {/* <SmallPseudoHeader text="Model" /> */}
       <H1AnimatedPresence uniqueKey={0} text={productName} />
     </>
   );
