@@ -2,7 +2,7 @@ import React, { Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
 /**Components**/
 import FullScreenOverlay from '../../../multipagesComponents/overlays/fullScreenOverlay/FullScreenOverlay';
-import CardFrame from '../../../multipagesComponents/cards/_cardFrame/CardFrame';
+import CardFrame from '../../../multipagesComponents/cardsCatalogs/__cardFrame/CardFrame';
 import SmallPseudoHeader from '../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import H1AnimatedPresence from '../../../_basicComponents/componentH1/H1AnimatedPresence';
 import LinkWithArrowIcon from '../../../SVG/icons/LinkWithArrowIcon';
@@ -49,16 +49,16 @@ const ProductDescriptionOverlay: React.FunctionComponent<{
     <FullScreenOverlay
       isPreviewOpen={isPreviewOpen}
       setIsPreviewOpen={setIsProductDescriptionOpen}
-      containerStyle="absolute flex flex-col inset-0"
+      containerStyle="absolute flex flex-col inset-0 "
     >
       <div className="absolute w-[110%] h-[110%] backdrop-blur-md backdrop-brightness-50" />
-      <div className="relative flex justify-center md:justify-start w-full h-full">
-        <div className="flex flex-col justify-center gap-10 h-full md:inner-pl-md-lg">
+      <div className="relative flex justify-center md:justify-start w-full h-full inner-px-md-lg ">
+        <div className="fc flex-col  gap-10 h-full w-full inner-px-md-lg md:w-[40%] md:inner-pl-md-lg">
           {plugSpec.map(({ pseudoHeader, name, url }, index) => {
             return (
               <div
                 key={pseudoHeader}
-                className="relative w-[200px] xs:w-[360px] group"
+                className="relative w-[90%] xs:w-[300px] xl:w-[400px] group "
                 // style={{ width: 'fit-content' }}
               >
                 <Link href={url} scroll={false}>
@@ -88,7 +88,7 @@ const ProductDescriptionOverlay: React.FunctionComponent<{
             );
           })}
         </div>
-        <div className="hidden md:fc w-full max-w-[1000px] h-full pl-12">
+        <div className="hidden md:fc md:w-[60%] max-w-[1000px] pl-12">
           <div
             className="fc w-full h-full "
             //  className="fc w-[90%] h-[90%] "

@@ -2,9 +2,14 @@ import React, { ReactNode } from 'react';
 
 const SectionContentLayout: React.FunctionComponent<{
   children: ReactNode;
-}> = ({ children }) => {
+  divStyle?: string;
+}> = ({ children, divStyle }) => {
   /**JSX**/
-  return <div className="flex flex-col gap-y-4">{children}</div>;
+  return (
+    <div className={divStyle ? divStyle : 'flex flex-col gap-y-4'}>
+      {children}
+    </div>
+  );
 };
 
 export default SectionContentLayout;

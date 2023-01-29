@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 /**Components**/
-import CardFrame from '../../cards/_cardFrame/CardFrame';
+import CardFrame from '../../cardsCatalogs/__cardFrame/CardFrame';
 import IconsDescription from '../iconsDescription/IconsDescription';
 /**Framer Motion Staff**/
 import { EventInfo, motion } from 'framer-motion';
