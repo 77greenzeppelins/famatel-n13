@@ -5,6 +5,7 @@ import { MapPinIcon } from '@heroicons/react/24/solid';
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
 import { PhoneIcon } from '@heroicons/react/24/solid';
 
+const aStyle = 'flex items-center gap-6 group';
 const iconsStyle =
   'w-[30px] h-[30px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] text-dark group-hover:text-corpo group-hover:translate-x-1 ease-in duration-300  origin-center';
 const labelStyle =
@@ -24,7 +25,8 @@ const ContactContacts = () => {
         {/* <div > */}
         <a
           href="tel:601 460 307"
-          className="flex items-center gap-4 w-full h-full no-sparkling group"
+          className={aStyle}
+          style={{ width: 'fit-content' }}
         >
           <PhoneIcon className={iconsStyle} />
           <p className={labelStyle}>Telefon: +48 601 460 307</p>
@@ -34,7 +36,8 @@ const ContactContacts = () => {
         <div>
           <a
             href="mailto:biuro@famatel.pl"
-            className="flex items-center gap-4 w-full h-full no-sparkling group"
+            className={aStyle}
+            style={{ width: 'fit-content' }}
           >
             <EnvelopeIcon className={iconsStyle} />
             <p className={labelStyle}>biuro@famatel.pl</p>
@@ -43,18 +46,13 @@ const ContactContacts = () => {
         <div className="">
           <a
             href="mailto:grzegorz.kowcz@famatel.pl"
-            className="flex items-center gap-4 w-full h-full no-sparkling group"
+            className={aStyle}
+            style={{ width: 'fit-content' }}
           >
             <EnvelopeIcon className={iconsStyle} />
             <p className={labelStyle}>grzegorz.kowcz@famatel.pl</p>
           </a>
         </div>
-        {/* <div>
-          <p className="text-dark text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025">
-            Telefon: +48 601 460 307 E-mail: biuro@famatel.pl E-mail:
-            grzegorz.kowcz@famatel.pl
-          </p>{' '}
-        </div> */}
       </div>
     </SectionContentLayout>
   );
