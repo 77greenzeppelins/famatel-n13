@@ -20,6 +20,7 @@ const KontaktContent = () => {
           <ContactAddress />
         </PageContentLayout>
       </div>
+      <div className="fixed w-full h-[50px] top-0 bg-light" />
     </div>
   );
 };

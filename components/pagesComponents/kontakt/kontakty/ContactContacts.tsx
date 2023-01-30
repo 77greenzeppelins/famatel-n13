@@ -7,7 +7,7 @@ import { PhoneIcon } from '@heroicons/react/24/solid';
 
 const aStyle = 'flex items-center gap-6 group';
 const iconsStyle =
-  'w-[30px] h-[30px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] text-dark group-hover:text-corpo group-hover:translate-x-1 ease-in duration-300  origin-center';
+  'w-6 h-6 text-dark group-hover:text-corpo group-hover:translate-x-1 ease-in duration-300  origin-center';
 const labelStyle =
   'text-dark text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-corpo group-hover:-translate-x-1 ease-in duration-300  origin-center';
 
@@ -21,7 +21,7 @@ const ContactContacts = () => {
           Kontakt
         </p>{' '}
       </div>
-      <div className="flex  flex-col gap-6">
+      <div className="flex flex-col gap-6 pt-2">
         {/* <div > */}
         <a
           href="tel:601 460 307"

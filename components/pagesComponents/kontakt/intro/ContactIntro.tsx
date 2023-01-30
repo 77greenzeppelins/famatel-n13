@@ -14,8 +14,9 @@ const ContactIntro = () => {
       </div>
       <div className="flex items-center lg:w-[70%] xl:w-[50%]">
         <p className="text-2xl text-grey tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 disable-soft">
-          Jesteśmy do Twojej dyspozycji od poniedziałku do piątku w godzinach
-          8.00 do 16.00
+          Zespół Famatel Polska jest do Twojej dyspozycji od poniedziałku do
+          piątku w godzinach od 8.00 do 16.00{' '}
+          <span className="text-[1rem]">(a czasami nawet dłużej...)</span>
         </p>
       </div>
     </SectionContentLayout>
