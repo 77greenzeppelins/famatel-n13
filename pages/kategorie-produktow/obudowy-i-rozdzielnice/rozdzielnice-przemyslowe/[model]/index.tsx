@@ -30,16 +30,21 @@ const ObudowyPusteProductPage: NextPageWithLayout = () => {
   /**JSX**/
   return (
     <ProductPageTemplate
-      //___data about category
-      catalogStructureData={
+      productCardsData={productCardsData}
+      //___data for navSection => data about category
+      categoryName={
         catalogStructureData[
           mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
-        ]
+        ].mainCategoryName
       }
-      //___data about subCategory
-      obudowyPusteSubCategoryData={rozdzielnicePrzemysloweSubCategoryData}
-      //___data about product
-      productCardsData={productCardsData}
+      categoryUrl={
+        catalogStructureData[
+          mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
+        ].mainCategoryUrl
+      }
+      //___data for navSection => data about subCategory
+      subCategoryName={rozdzielnicePrzemysloweSubCategoryData.subCategoryName}
+      subCategoryUrl={rozdzielnicePrzemysloweSubCategoryData.subCategoryUrl}
     >
       <div className="fc w-screen h-[50vh]">ObudowyPusteProductPage</div>
     </ProductPageTemplate>
