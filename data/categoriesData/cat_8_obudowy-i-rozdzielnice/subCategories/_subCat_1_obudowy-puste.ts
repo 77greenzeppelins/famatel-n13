@@ -18,7 +18,7 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3927`,
-    textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 X 305'],
+    textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 × 305'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[0],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -27,7 +27,7 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 1,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3950`,
-    textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 X 490'],
+    textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 × 490'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[1],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -36,7 +36,7 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 2,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3951`,
-    textIcons: ['IP65', 'MCB: 8', 'wymiary: 230 X 500'],
+    textIcons: ['IP65', 'MCB: 8', 'wymiary: 230 × 500'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[2],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -45,7 +45,7 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 3,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3974`,
-    textIcons: ['IP65', 'MCB: 16', 'wymiary: 330 X 330'],
+    textIcons: ['IP65', 'MCB: 16', 'wymiary: 330 × 330'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[3],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -54,7 +54,7 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 4,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3952`,
-    textIcons: ['IP65', 'MCB: 16', 'wymiary: 330 X 500'],
+    textIcons: ['IP65', 'MCB: 16', 'wymiary: 330 × 500'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[4],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -63,7 +63,7 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 5,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3977`,
-    textIcons: ['IP65', 'MCB: 32', 'wymiary: 330 X 685'],
+    textIcons: ['IP65', 'MCB: 32', 'wymiary: 330 × 685'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[5],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -72,7 +72,7 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 6,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3957`,
-    textIcons: ['IP65', 'MCB: 9', 'wymiary: 215 X 245 / 260'],
+    textIcons: ['IP65', 'MCB: 9', 'wymiary: 215 × 245 / 260'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[6],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -81,7 +81,7 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 7,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3958`,
-    textIcons: ['IP65', 'MCB: 9', 'wymiary: 215 X 320 / 350'],
+    textIcons: ['IP65', 'MCB: 9', 'wymiary: 215 × 320 / 350'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[7],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -90,7 +90,7 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 8,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3959`,
-    textIcons: ['IP65', 'MCB: 12', 'wymiary: 265 X 380 / 400'],
+    textIcons: ['IP65', 'MCB: 12', 'wymiary: 265 × 380 / 400'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[8],
     type: 'Typ: Obudowa pusta',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -99,7 +99,7 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 9,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3928`,
-    textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 X 305'],
+    textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 × 305'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[9],
     type: 'Typ: Obudowa z otworami pod gniazda',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
@@ -108,11 +108,11 @@ const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 10,
     path: `${catalogStructureData[7].subCategoriesUrls[0]}/model-3960`,
-    textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 X 490'],
+    textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 × 490'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[10],
     type: 'Typ: Obudowa z otworami pod gniazda',
     collection: ['Kolekcja:', 'AcquaCOMBI'],
-    model: 'Model: 39260',
+    model: 'Model: 3960',
   },
   {
     arrayIndex: 11,

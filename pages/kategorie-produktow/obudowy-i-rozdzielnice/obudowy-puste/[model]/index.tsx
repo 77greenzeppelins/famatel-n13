@@ -1,9 +1,8 @@
 import React, { ReactElement, useState } from 'react';
-/**Hook Staff**/
-// import { useRouter } from 'next/router';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
+import ObudowyPusteContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/8.1_obudowy-puste/ObudowyPusteContent';
 /**BasicData**/
 import { mainCategoriesSummaryData } from '../../../../../data/_data';
 import {
@@ -24,18 +23,24 @@ const ObudowyPusteProductPage: NextPageWithLayout = () => {
   /**JSX**/
   return (
     <ProductPageTemplate
-      //___data about category
-      catalogStructureData={
+      //___data about product => mainly its url that is used to identify data in array
+      productCardsData={productCardsData}
+      //___data for navSection => data about category
+      categoryName={
         catalogStructureData[
           mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
-        ]
+        ].mainCategoryName
       }
-      //___data about subCategory
-      obudowyPusteSubCategoryData={obudowyPusteSubCategoryData}
-      //___data about product
-      productCardsData={productCardsData}
+      categoryUrl={
+        catalogStructureData[
+          mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
+        ].mainCategoryUrl
+      }
+      //___data for navSection => data about subCategory
+      subCategoryName={obudowyPusteSubCategoryData.subCategoryName}
+      subCategoryUrl={obudowyPusteSubCategoryData.subCategoryUrl}
     >
-      <div className="fc w-screen h-[50vh]">ObudowyPusteProductPage</div>
+      <ObudowyPusteContent productCardsData={productCardsData} />
     </ProductPageTemplate>
   );
 };

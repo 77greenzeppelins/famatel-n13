@@ -1,4 +1,5 @@
 import { StaticImageData } from 'next/image';
+import { ReactNode } from 'react';
 interface IF_ImgStaticData {
   image: StaticImageData;
 }
@@ -106,6 +107,14 @@ interface IF_ProductCardData {
   model?: string;
 }
 
+interface IF_ProductPageNavPanel {
+  categoryName: string;
+  categoryUrl: string;
+  subCategoryName: string;
+  subCategoryUrl: string;
+  productName?: string;
+}
+
 export type {
   ISubCategoriesItem,
   IF_CatalogStructureData,
@@ -116,4 +125,6 @@ export type {
   IF_PagesUrl,
   IF_MainPagesItem,
   IF_ProductCardData,
+  //___
+  IF_ProductPageNavPanel,
 };
