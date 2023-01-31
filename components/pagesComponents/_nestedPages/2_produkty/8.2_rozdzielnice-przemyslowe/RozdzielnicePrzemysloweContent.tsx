@@ -40,6 +40,17 @@ const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
         const norma = rozdzielnicePrzemysloweTechSpecData[index].norma;
         const packageDetails =
           rozdzielnicePrzemysloweTechSpecData[index].packageDetails;
+
+        const rozdzielniceBudowlaneHeader1 =
+          rozdzielnicePrzemysloweTechSpecData[index].table1Header;
+        const rozdzielniceBudowlaneTableData1 =
+          rozdzielnicePrzemysloweTechSpecData[index].table1Data;
+
+        const rozdzielniceBudowlaneHeader2 =
+          rozdzielnicePrzemysloweTechSpecData[index].table2Header;
+        const rozdzielniceBudowlaneTableData2 =
+          rozdzielnicePrzemysloweTechSpecData[index].table2Data;
+        //___
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
@@ -65,9 +76,14 @@ const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
                         ? gridTemplate8Columns
                         : gridTemplate7Columns
                     }
-                    // tablesHeaders={tablesHeaders}
-                    // tablesData={tablesWithSizes}
-                    // generalDescription={generalDescription}
+                    rozdzielniceBudowlaneHeader2={rozdzielniceBudowlaneHeader2}
+                    rozdzielniceBudowlaneTableData2={
+                      rozdzielniceBudowlaneTableData2
+                    }
+                    rozdzielniceBudowlaneHeader1={rozdzielniceBudowlaneHeader1}
+                    rozdzielniceBudowlaneTableData1={
+                      rozdzielniceBudowlaneTableData1
+                    }
                     packageDetails={packageDetails}
                     norma={norma}
                   />

@@ -1,4 +1,5 @@
 import React from 'react';
+import BasicTable from '../../../../../multipagesComponents/tables/basicTable/BasicTable';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 import RozdzielnicePrzemysloweTable from './rozdzielnicePrzemysloweTable.tsx/RozdzielnicePrzemysłoweTable';
 
@@ -21,6 +22,16 @@ const TablesSection: React.FunctionComponent<{
   tableLayout: string;
   packageDetails: string[][];
   norma: string[] | string[][];
+  //___
+  rozdzielniceBudowlaneHeader2: string | string[] | undefined;
+  rozdzielniceBudowlaneTableData2:
+    | {
+        label: string;
+        value: string;
+      }[]
+    | undefined;
+  rozdzielniceBudowlaneHeader1: string | string[] | undefined;
+  rozdzielniceBudowlaneTableData1: string[][] | undefined;
 }> = ({
   productIndex,
   tableColumnsNumber,
@@ -28,6 +39,11 @@ const TablesSection: React.FunctionComponent<{
   tableLayout,
   packageDetails,
   norma,
+  //___
+  rozdzielniceBudowlaneHeader2,
+  rozdzielniceBudowlaneTableData2,
+  rozdzielniceBudowlaneHeader1,
+  rozdzielniceBudowlaneTableData1,
 }) => {
   return (
     <div
@@ -43,7 +59,33 @@ const TablesSection: React.FunctionComponent<{
             tableLayout={tableLayout}
           />
         ) : (
-          <div className="bg-corpo h-10 w-10" />
+          <div className="flex flex-col gap-y-6">
+            <BasicTable
+              tableHeader={rozdzielniceBudowlaneHeader2}
+              tableBodyData={rozdzielniceBudowlaneTableData2}
+            />
+            <BasicTable
+              tableHeader={rozdzielniceBudowlaneHeader1}
+              tableBodyData={rozdzielniceBudowlaneTableData1}
+              multiCellsContainer={
+                'grid grid-cols-[1fr_2fr_1fr] gap-[0.125rem]  group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300'
+              }
+              multiCellsCell={[
+                'text-center relative header-link-label text-dark py-2',
+                'text-center relative header-link-label text-dark py-2',
+                'text-center relative header-link-label text-dark py-2',
+              ]}
+              specialCases={{
+                index: 0,
+                containerSpecialStyle: 'relative fc',
+                cellsSpecialStyles: [
+                  'text-center relative header-link-label text-light bg-greyShade1 h-full w-full py-2',
+                  'text-center relative header-link-label text-light bg-greyShade1 h-full w-full py-2',
+                  'text-center relative header-link-label text-light bg-greyShade1 h-full w-full py-2',
+                ],
+              }}
+            />
+          </div>
         )
       }
       <div>
@@ -52,7 +94,7 @@ const TablesSection: React.FunctionComponent<{
           tableContainerStyle="w-full flex flex-col gap-y-4 pt-4"
           textStyle={[
             'p-small text-grey group-hover:text-light ease-in duration-300 disable ',
-            'p-small text-grey text-center group-hover:text-light ease-in duration-300 disable ',
+            'p-small text-grey group-hover:text-light ease-in duration-300 disable ',
           ]}
         />
       </div>

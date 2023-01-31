@@ -11,9 +11,21 @@ const BasicTableRow: React.FunctionComponent<{
     'flex items-center h-full w-[50%] ',
     'h-full w-[50%] px-4'
   ];
+  rowIndex: number;
   multiCellsContainer?: string;
-  multiCellsCell?: string;
-}> = ({ rowData, multiCellsContainer, multiCellsCell }) => {
+  multiCellsCell?: string[];
+  specialCases?: {
+    index: number;
+    containerSpecialStyle: string;
+    cellsSpecialStyles: string[];
+  };
+}> = ({
+  rowData,
+  multiCellsContainer,
+  multiCellsCell,
+  specialCases,
+  rowIndex,
+}) => {
   /**...**/
   const createCells = () => {
     if (!Array.isArray(rowData)) {
@@ -30,34 +42,44 @@ const BasicTableRow: React.FunctionComponent<{
         </div>
       );
     } else {
-      // rowData.map((cell, index) => (
-      //   <div
-      //     className="relative fc w-[500px] py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300"
-      //     key={index}
-      //   >
-      //     <p className="relative header-link-label text-dark ">{cell}</p>
-      //   </div>
-      // ));
-      <div
-        className={
-          multiCellsContainer
-            ? multiCellsContainer
-            : 'relative fc w-[500px] py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300'
-        }
-      >
-        {rowData.map((cell, index) => (
-          <p
-            key={index}
-            className={
-              multiCellsCell
-                ? multiCellsCell
-                : 'relative header-link-label text-dark '
+      return (
+        <div
+          className={
+            multiCellsContainer
+              ? multiCellsContainer
+              : 'relative fc w-[500px] py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300'
+          }
+        >
+          {rowData.map((cell, index) => {
+            if (rowIndex === specialCases?.index) {
+              return (
+                <div
+                  key={index}
+                  className={
+                    specialCases.cellsSpecialStyles
+                      ? specialCases.cellsSpecialStyles[index]
+                      : 'relative header-link-label text-dark '
+                  }
+                >
+                  <p>{cell}</p>
+                </div>
+              );
             }
-          >
-            {cell}
-          </p>
-        ))}
-      </div>;
+            return (
+              <div
+                key={index}
+                className={
+                  multiCellsCell
+                    ? multiCellsCell[index]
+                    : 'relative header-link-label text-dark '
+                }
+              >
+                <p>{cell}</p>
+              </div>
+            );
+          })}
+        </div>
+      );
     }
   };
   return <>{createCells()}</>;
@@ -73,3 +95,12 @@ export default BasicTableRow;
   <p className="relative header-link-label text-dark ">{header}</p>
 </div>; */
 }
+
+// rowData.map((cell, index) => (
+//   <div
+//     className="relative fc w-[500px] py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300"
+//     key={index}
+//   >
+//     <p className="relative header-link-label text-dark ">{cell}</p>
+//   </div>
+// ));

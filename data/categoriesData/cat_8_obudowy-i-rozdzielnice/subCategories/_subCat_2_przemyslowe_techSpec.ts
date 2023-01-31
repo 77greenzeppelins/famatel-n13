@@ -596,7 +596,7 @@ const rozdzielnicePrzemysloweTechSpecData = [
     columnsNumber: 1,
     header: 'Wymiary',
     packageDetails: [['Opakowanie podstawowe', '1']],
-    norma: ['Norma', 'EN 61439-1 / EN 61439-3 / EN 61439-4'],
+    norma: [['Norma', 'EN 61439-1 / EN 61439-3 / EN 61439-4']],
     iconHolderData: {
       svgLabel: ['IP40', 'IK09', 'FREE', 'IZO'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
@@ -606,6 +606,7 @@ const rozdzielnicePrzemysloweTechSpecData = [
     },
     table1Header: ['Możliwe konfiguracje'],
     table1Data: [
+      ['Opcje', 'Model', 'N° de'],
       ['1', '3962', '2'],
       ['2', '3962 + 3964', '2+2'],
       ['3', '3962 + 3968', '1+1'],
@@ -626,7 +627,7 @@ const rozdzielnicePrzemysloweTechSpecData = [
     columnsNumber: 1,
     header: 'Wymiary',
     packageDetails: [['Opakowanie podstawowe', '1']],
-    norma: ['Norma', 'EN 61439-1 / EN 61439-3 / EN 61439-4'],
+    norma: [['Norma', 'EN 61439-1 / EN 61439-3 / EN 61439-4']],
     iconHolderData: {
       svgLabel: ['IP40', 'IK09', 'FREE', 'IZO'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
@@ -636,6 +637,7 @@ const rozdzielnicePrzemysloweTechSpecData = [
     },
     table1Header: ['Możliwe konfiguracje'],
     table1Data: [
+      ['Opcje', 'Model', 'N° de'],
       ['1', '3962', '1'],
       ['2', '3970', '1'],
       ['3', '3968', '1'],
@@ -650,6 +652,15 @@ const rozdzielnicePrzemysloweTechSpecData = [
       { label: 'Głębokość', value: '419' },
       { label: 'Waga(kg)', value: '11' },
     ],
+    /*
+tablesData: [
+      [
+        { label: 'Wysokość', value: '305' },
+        { label: 'Szerokość', value: '125' },
+        { label: 'Głębokość', value: '107' },
+      ],
+    ],
+*/
   },
 ];
 
