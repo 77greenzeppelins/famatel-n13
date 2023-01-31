@@ -7,7 +7,13 @@ const BasicTableRow: React.FunctionComponent<{
         label: string;
         value: string;
       };
-}> = ({ rowData }) => {
+  cellsContainersStyle?: [
+    'flex items-center h-full w-[50%] ',
+    'h-full w-[50%] px-4'
+  ];
+  multiCellsContainer?: string;
+  multiCellsCell?: string;
+}> = ({ rowData, multiCellsContainer, multiCellsCell }) => {
   /**...**/
   const createCells = () => {
     if (!Array.isArray(rowData)) {
@@ -24,14 +30,34 @@ const BasicTableRow: React.FunctionComponent<{
         </div>
       );
     } else {
-      rowData.map((cell, index) => (
-        <div
-          className="relative fc w-[500px] py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300"
-          key={index}
-        >
-          <p className="relative header-link-label text-dark ">{cell}</p>
-        </div>
-      ));
+      // rowData.map((cell, index) => (
+      //   <div
+      //     className="relative fc w-[500px] py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300"
+      //     key={index}
+      //   >
+      //     <p className="relative header-link-label text-dark ">{cell}</p>
+      //   </div>
+      // ));
+      <div
+        className={
+          multiCellsContainer
+            ? multiCellsContainer
+            : 'relative fc w-[500px] py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300'
+        }
+      >
+        {rowData.map((cell, index) => (
+          <p
+            key={index}
+            className={
+              multiCellsCell
+                ? multiCellsCell
+                : 'relative header-link-label text-dark '
+            }
+          >
+            {cell}
+          </p>
+        ))}
+      </div>;
     }
   };
   return <>{createCells()}</>;

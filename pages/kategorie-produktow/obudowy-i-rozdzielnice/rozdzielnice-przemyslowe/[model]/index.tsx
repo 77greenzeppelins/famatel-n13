@@ -19,6 +19,7 @@ import {
 
 /**TS**/
 import { NextPageWithLayout } from '../../../../_app';
+import RozdzielnicePrzemysloweContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/8.2_rozdzielnice-przemyslowe/RozdzielnicePrzemysloweContent';
 
 /**--------------------------------------**/
 const ObudowyPusteProductPage: NextPageWithLayout = () => {
@@ -46,7 +47,7 @@ const ObudowyPusteProductPage: NextPageWithLayout = () => {
       subCategoryName={rozdzielnicePrzemysloweSubCategoryData.subCategoryName}
       subCategoryUrl={rozdzielnicePrzemysloweSubCategoryData.subCategoryUrl}
     >
-      <div className="fc w-screen h-[50vh]">ObudowyPusteProductPage</div>
+      <RozdzielnicePrzemysloweContent productCardsData={productCardsData} />
     </ProductPageTemplate>
   );
 };

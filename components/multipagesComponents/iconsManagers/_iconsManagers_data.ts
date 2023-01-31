@@ -24,10 +24,10 @@ const iconsDescriptions = [
     description: 'Ilość modułów / typ europejski',
   },
   { id: 'UV', description: 'Ochrona przed promieniowaniem UV' },
-  //   {
-  //     id: 'CE',
-  //     description: 'Europejski znak Deklaracji Zgodności',
-  //   },
+  {
+    id: 'DRUT650',
+    description: 'Test rozżarzonego drutu ',
+  },
   //   {
   //     id: 'MOD8',
   //     description: 'Ilość modułów, typ europejski',

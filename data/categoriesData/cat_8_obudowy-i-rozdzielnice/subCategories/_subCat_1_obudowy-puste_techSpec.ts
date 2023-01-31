@@ -33,7 +33,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV', 'MOD6'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'MOD6', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -61,7 +61,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV', 'MOD8'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'MOD8', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -91,7 +91,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -121,7 +121,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -150,7 +150,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -179,7 +179,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -203,7 +203,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -227,7 +227,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -251,7 +251,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -275,7 +275,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -303,7 +303,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -332,7 +332,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -361,7 +361,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -390,7 +390,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -419,7 +419,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -448,7 +448,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -483,7 +483,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -518,7 +518,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -553,7 +553,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -588,7 +588,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -623,7 +623,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -658,7 +658,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -694,7 +694,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,
@@ -729,7 +729,7 @@ const obudowyPusteTechSpecData = [
     ],
     description: [...arrOfDescriptions],
     iconHolderData: {
-      svgLabel: ['IP40', 'IP65', 'IK08', 'FREE', 'IZO', 'UV'],
+      svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
       textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
       iconColorBG: iconColorBG,
       iconColorFG: iconColorFG,

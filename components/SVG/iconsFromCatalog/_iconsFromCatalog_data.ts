@@ -14,6 +14,7 @@ import SvgIconIZO from './SvgIconIZO';
 import SvgIconMOD12 from './SvgIconMOD12';
 import SvgIconMODRange from './SvgIconMODRange';
 import SvgIconUV from './SvgIconUV';
+import SvgDRUT650 from './SvgDRUT650';
 
 const svgIconsFromCatalog_data = [
   { id: 'IP20', Icon: SvgIconIP20 },
@@ -36,6 +37,7 @@ const svgIconsFromCatalog_data = [
   //   { id: 'MOD42', Icon: svgIconMOD },
   { id: 'UV', Icon: SvgIconUV },
   { id: 'ENEC', Icon: SvgIconENEC },
+  { id: 'DRUT650', Icon: SvgDRUT650 },
 ];
 
 export { svgIconsFromCatalog_data };
