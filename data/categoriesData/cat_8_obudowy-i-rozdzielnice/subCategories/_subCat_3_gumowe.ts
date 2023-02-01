@@ -14,9 +14,6 @@ const rozdzielniceGumoweSubCategoryData = {
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
-    // productId: 'Obudowa gumowa IP65 / 10 modułów / Model: 23310',
-    // shortId: 'Obudowa gumowa IP65 / 10 modułów / Model: 23310',
-    // productName: 'Model: 23310',
     path: `${catalogStructureData[7].subCategoriesUrls[2]}/model-23310`,
     textIcons: ['IP62', 'moduły: 10'],
     imageData: imgObudowyRozdzielnice_03_gumowe[0],

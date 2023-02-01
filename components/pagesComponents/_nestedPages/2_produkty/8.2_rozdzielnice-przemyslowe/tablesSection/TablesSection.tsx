@@ -68,20 +68,20 @@ const TablesSection: React.FunctionComponent<{
               tableHeader={rozdzielniceBudowlaneHeader1}
               tableBodyData={rozdzielniceBudowlaneTableData1}
               multiCellsContainer={
-                'grid grid-cols-[1fr_2fr_1fr] gap-[0.125rem]  group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300'
+                'grid grid-cols-[1fr_2fr_1fr] gap-[0.125rem]  group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300 py-2 divide-x-2 divide-dark'
               }
               multiCellsCell={[
-                'text-center relative header-link-label text-dark py-2',
-                'text-center relative header-link-label text-dark py-2',
-                'text-center relative header-link-label text-dark py-2',
+                'text-center relative header-link-label text-dark',
+                'text-center relative header-link-label text-dark',
+                'text-center relative header-link-label text-dark',
               ]}
               specialCases={{
                 index: 0,
                 containerSpecialStyle: 'relative fc',
                 cellsSpecialStyles: [
-                  'text-center relative header-link-label text-light bg-greyShade1 h-full w-full py-2',
-                  'text-center relative header-link-label text-light bg-greyShade1 h-full w-full py-2',
-                  'text-center relative header-link-label text-light bg-greyShade1 h-full w-full py-2',
+                  'text-center relative header-link-label text-dark  h-full w-full',
+                  'text-center relative header-link-label text-dark  h-full w-full',
+                  'text-center relative header-link-label text-dark  h-full w-full',
                 ],
               }}
             />

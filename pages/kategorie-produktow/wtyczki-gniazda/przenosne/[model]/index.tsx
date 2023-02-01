@@ -1,22 +1,20 @@
 import React, { ReactElement, useState } from 'react';
-/**Hook Staff**/
-// import { useRouter } from 'next/router';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
-import ObudowyGumoweContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/8.3_obudowy-gumowe/ObudowyGumoweContent';
+import WtyczkiGniazdaPrzenosneContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/1.1_wtyczki-gniazda-przenosne/WtyczkiGniazdaPrzenosneContent';
 /**BasicData**/
 import { mainCategoriesSummaryData } from '../../../../../data/_data';
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
 import {
-  rozdzielniceGumoweSubCategoryData,
+  wtyczkiGniazdaPrzenosne_SubCategory_data,
   productCardsData,
-} from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_3_gumowe';
+} from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_1_przenosne_data';
 /**TS**/
 import { NextPageWithLayout } from '../../../../_app';
 
 /**--------------------------------------**/
-const ObudowyPusteProductPage: NextPageWithLayout = () => {
+const WtyczkiGniazdaPrzenosneProductPage: NextPageWithLayout = () => {
   /**Router Section**/
   //   const router = useRouter();
   //   console.log('obudowyPusteSubCategoryData:', obudowyPusteSubCategoryData);
@@ -29,24 +27,26 @@ const ObudowyPusteProductPage: NextPageWithLayout = () => {
       //___data for navSection => data about category
       categoryName={
         catalogStructureData[
-          mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
+          mainCategoriesSummaryData.wtyczkiGniazda.categoryIndex
         ].mainCategoryName
       }
       categoryUrl={
         catalogStructureData[
-          mainCategoriesSummaryData.obudowyRozdzielnice.categoryIndex
+          mainCategoriesSummaryData.wtyczkiGniazda.categoryIndex
         ].mainCategoryUrl
       }
       //___data for navSection => data about subCategory
-      subCategoryName={rozdzielniceGumoweSubCategoryData.subCategoryName}
-      subCategoryUrl={rozdzielniceGumoweSubCategoryData.subCategoryUrl}
+      subCategoryName={wtyczkiGniazdaPrzenosne_SubCategory_data.subCategoryName}
+      subCategoryUrl={wtyczkiGniazdaPrzenosne_SubCategory_data.subCategoryUrl}
     >
-      <ObudowyGumoweContent productCardsData={productCardsData} />
+      <WtyczkiGniazdaPrzenosneContent productCardsData={productCardsData} />
     </ProductPageTemplate>
   );
 };
 
-ObudowyPusteProductPage.getLayout = function getLayout(page: ReactElement) {
+WtyczkiGniazdaPrzenosneProductPage.getLayout = function getLayout(
+  page: ReactElement
+) {
   return (
     <Layout>
       {/* <NestedLayout>{page}</NestedLayout> */}
@@ -55,4 +55,4 @@ ObudowyPusteProductPage.getLayout = function getLayout(page: ReactElement) {
   );
 };
 
-export default ObudowyPusteProductPage;
+export default WtyczkiGniazdaPrzenosneProductPage;

@@ -47,7 +47,7 @@ const BasicTableRow: React.FunctionComponent<{
           className={
             multiCellsContainer
               ? multiCellsContainer
-              : 'relative fc w-[500px] py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300'
+              : 'relative flex justify-between items-center w-full py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300 divide-x-2 divide-dark'
           }
         >
           {rowData.map((cell, index) => {

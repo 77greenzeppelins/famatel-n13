@@ -3,7 +3,6 @@ import React, { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 /**Components*/
 import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
-import SectionContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import ProductPageNavPanel from './productPageNavPanel/ProductPageNavPanel';
 /**TS**/
 import {
@@ -35,13 +34,15 @@ const ProductPageTemplate: React.FunctionComponent<{
   return (
     <div
       data-component="SubCategoryPageTemplate__container"
-      className="w-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
+      className="w-screen min-h-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh] "
     >
       <PageContentLayout>
         {/* <SectionContentLayout> */}
         {productCardsData.map((productData, index) => {
           const productPath = productData.path.split('/');
-          const productName = productData.model;
+          const productName = productData.model
+            ? productData.model
+            : productData.altName;
           const productPathPivotalPart = productPath[splitedPathParts.product];
           if (router.query.model === productPathPivotalPart) {
             return (

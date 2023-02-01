@@ -11,6 +11,7 @@ import { splitedPathParts } from '../../../../../data/_data';
 import { obudowyGumoweTechSpecData } from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_3_gumowe_techSpec';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
+import ObudowyGumoweDescription from './descriptionsSection/ObudowyGumoweDescription';
 
 // import TablesSection from './tablesSection/TablesSection';
 
@@ -35,8 +36,7 @@ const ObudowyGumoweContent: React.FunctionComponent<{
           obudowyGumoweTechSpecData[index].tablesData;
         const svgIcons = obudowyGumoweTechSpecData[index].iconHolderData;
         const norma = obudowyGumoweTechSpecData[index].norma;
-        // const packageDetails =
-        //   rozdzielnicePrzemysloweTechSpecData[index].packageDetails;
+        const description = obudowyGumoweTechSpecData[index].opis;
 
         //___
         if (router.query.model === productPathPivotalPart) {
@@ -50,7 +50,7 @@ const ObudowyGumoweContent: React.FunctionComponent<{
                 divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 "
               >
                 <div
-                  className="w-full lg:w-[50%]"
+                  className="flex flex-col gap-y-10 w-full lg:w-[50%]"
                   // className="md:col-start-1 md:row-start-1"
                 >
                   <TablesSection
@@ -58,6 +58,7 @@ const ObudowyGumoweContent: React.FunctionComponent<{
                     tableBody={rozdzielniceGumoweTableBodyData}
                     norma={norma}
                   />
+                  <ObudowyGumoweDescription description={description} />
                 </div>
                 <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto  bg-grey">
                   <SquareHolderWithImage

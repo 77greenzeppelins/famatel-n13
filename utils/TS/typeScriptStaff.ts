@@ -92,19 +92,23 @@ interface IF_MainPagesItem {
  * used in data / categoriesData / cat_1_ .... / sunCategories / subCat1_przenośne...
  */
 interface IF_ProductCardData {
+  //___crucial properties!!!
   arrayIndex: number;
   path: string;
   imageData: IF_ImgStaticData;
+  //___ should be delated...
   productId?: string;
   shortId?: string;
   productName?: string | string[] | undefined;
-  //___
+  //___ for <Card_Product> as labels with significant features
   textIcons?: string[];
   largeTextIcons?: string[];
-  //___
+  //___ for <Card_Product> as product descripions
   type?: string;
   collection?: string[];
   model?: string;
+  //___for productPage as "productModel / productName"
+  altName?: string;
 }
 
 interface IF_ProductPageNavPanel {
