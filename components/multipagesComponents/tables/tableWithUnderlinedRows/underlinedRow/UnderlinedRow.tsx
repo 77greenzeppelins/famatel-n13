@@ -17,7 +17,7 @@ const UnderlinedRow: React.FunctionComponent<{
   const createCells = () => {
     if (Array.isArray(rowData)) {
       return rowData.map((cellText, i) => {
-        //___each cell can have unique style...
+        //___if you pass "string[]", each cell can have unique style...
         const cellStyles = cellsStyles && cellsStyles[i];
         return (
           <div key={i} className={cellStyles ? cellStyles : 'w-[50%] '}>

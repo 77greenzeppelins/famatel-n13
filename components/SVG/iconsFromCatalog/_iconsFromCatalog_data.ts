@@ -2,6 +2,7 @@ import SvgIconENEC from './SvgIconENEC';
 import SvgIconFREE from './SvgIconFREE';
 import SvgIconIK06 from './SvgIconIK06';
 import SvgIconIK07 from './SvgIconIK07';
+import SvgIconIK10 from './SvgIconIK10';
 import SvgIconIK08 from './SvgIconIK08';
 import SvgIconIP20 from './SvgIconIP20';
 import SvgIconIP40 from './SvgIconIP40';
@@ -15,6 +16,7 @@ import SvgIconMOD12 from './SvgIconMOD12';
 import SvgIconMODRange from './SvgIconMODRange';
 import SvgIconUV from './SvgIconUV';
 import SvgDRUT650 from './SvgDRUT650';
+import SvgDRUT960 from './SvgDRUT960';
 
 const svgIconsFromCatalog_data = [
   { id: 'IP20', Icon: SvgIconIP20 },
@@ -26,6 +28,7 @@ const svgIconsFromCatalog_data = [
   { id: 'IP67', Icon: SvgIconIP67 },
   { id: 'IK06', Icon: SvgIconIK06 },
   { id: 'IK07', Icon: SvgIconIK07 },
+  { id: 'IK10', Icon: SvgIconIK10 },
   { id: 'IK08', Icon: SvgIconIK08 },
   { id: 'FREE', Icon: SvgIconFREE },
   //   { id: 'IK09', Icon: SvgIconIK },
@@ -38,6 +41,7 @@ const svgIconsFromCatalog_data = [
   { id: 'UV', Icon: SvgIconUV },
   { id: 'ENEC', Icon: SvgIconENEC },
   { id: 'DRUT650', Icon: SvgDRUT650 },
+  { id: 'DRUT960', Icon: SvgDRUT960 },
 ];
 
 export { svgIconsFromCatalog_data };

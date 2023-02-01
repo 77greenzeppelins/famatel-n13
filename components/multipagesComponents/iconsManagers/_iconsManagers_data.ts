@@ -4,6 +4,7 @@ const iconsDescriptions = [
   { id: 'IK06', description: 'Ochrona na udary mechaniczne' },
   { id: 'IK07', description: 'Ochrona na udary mechaniczne' },
   { id: 'IK08', description: 'Ochrona na udary mechaniczne' },
+  { id: 'IK10', description: 'Ochrona na udary mechaniczne' },
   { id: 'IP20', description: 'Ochrona przed wodą i pyłem' },
   { id: 'IP40', description: 'Ochrona przed wodą i pyłem' },
   { id: 'IP44', description: 'Ochrona przed wodą i pyłem' },
@@ -28,23 +29,10 @@ const iconsDescriptions = [
     id: 'DRUT650',
     description: 'Test rozżarzonego drutu ',
   },
-  //   {
-  //     id: 'MOD8',
-  //     description: 'Ilość modułów, typ europejski',
-  //   },
-  //   {
-  //     id: 'MOD16',
-  //     description: 'Ilość modułów, typ europejski',
-  //   },
-  //   {
-  //     id: 'MOD26',
-  //     description: 'Ilość modułów, typ europejski',
-  //   },
-  //   {
-  //     id: 'MOD42',
-  //     description: 'Ilość modułów, typ europejski',
-  //   },
-
+  {
+    id: 'DRUT960',
+    description: 'Test rozżarzonego drutu ',
+  },
   { id: '10A', description: 'Natężenie prądu: 16A' },
   { id: '16A', description: 'Natężenie prądu: 16A' },
   { id: '20A', description: 'Natężenie prądu: 16A' },

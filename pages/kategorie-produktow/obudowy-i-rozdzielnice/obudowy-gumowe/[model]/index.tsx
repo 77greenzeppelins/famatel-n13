@@ -15,6 +15,7 @@ import {
 
 /**TS**/
 import { NextPageWithLayout } from '../../../../_app';
+import ObudowyGumoweContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/8.3_obudowy-gumowe/ObudowyGumoweContent';
 
 /**--------------------------------------**/
 const ObudowyPusteProductPage: NextPageWithLayout = () => {
@@ -42,7 +43,7 @@ const ObudowyPusteProductPage: NextPageWithLayout = () => {
       subCategoryName={rozdzielniceGumoweSubCategoryData.subCategoryName}
       subCategoryUrl={rozdzielniceGumoweSubCategoryData.subCategoryUrl}
     >
-      <div className="fc w-screen h-[50vh]">ObudowyGumoweProductPage</div>
+      <ObudowyGumoweContent productCardsData={productCardsData} />
     </ProductPageTemplate>
   );
 };
