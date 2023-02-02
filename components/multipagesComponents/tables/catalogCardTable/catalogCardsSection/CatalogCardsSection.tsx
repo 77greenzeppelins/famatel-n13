@@ -7,6 +7,7 @@ const CatalogCardsSection: React.FunctionComponent<{
         headerTopData: string[][];
         headerBottomData: string[][];
         headerType: number;
+        bodyType: number;
         amper: string;
         rowsData: string[][];
       }
@@ -14,6 +15,7 @@ const CatalogCardsSection: React.FunctionComponent<{
         headerTopData: string[];
         headerBottomData: string[];
         headerType: number;
+        bodyType: number;
         amper: string;
         rowsData: (string | undefined)[][];
       }
@@ -23,7 +25,10 @@ const CatalogCardsSection: React.FunctionComponent<{
   console.log('catalogCardTablesData:', catalogCardTablesData);
   /**JSX* */
   return (
-    <div>
+    <div
+      className="flex flex-col gap-4"
+      data-component="CatalogCardsSection__container"
+    >
       {catalogCardTablesData.map((catalogCardTableData, index) => (
         <CatalogTable key={index} catalogCardTableData={catalogCardTableData} />
       ))}

@@ -44,6 +44,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_1,
         headerBottomData: headerBottomData_1,
         headerType: 1,
+        bodyType: 1,
         amper: '16',
         rowsData: [
           ['3', '10', '13100', '13200', '13304', '13404'],
@@ -56,6 +57,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: [''],
         headerBottomData: [''],
         headerType: 0,
+        bodyType: 1,
         amper: '32',
         rowsData: [
           ['3', '5', '13102', '13203', '13305', '13405'],
@@ -73,6 +75,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_1,
         headerBottomData: headerBottomData_1,
         headerType: 1,
+        bodyType: 1,
         amper: '16',
         rowsData: [
           ['3', '10', '14100', '14200', '14309', '14408'],
@@ -85,6 +88,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: [''],
         headerBottomData: [''],
         headerType: 0,
+        bodyType: 1,
         amper: '32',
         rowsData: [
           ['3', '5', '14102', '14203', '14310', '14409'],
@@ -102,8 +106,8 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_1,
         headerBottomData: headerBottomData_1,
         headerType: 1,
+        bodyType: 1,
         amper: '63',
-
         rowsData: [
           ['3', '10', '14108', '14205', '14311', '14410'],
           ['4', '10', '14109', '14206', '14304', '14404'],
@@ -120,6 +124,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_1,
         headerBottomData: headerBottomData_1,
         headerType: 1,
+        bodyType: 1,
         amper: '125',
         rowsData: [
           ['3', '2', '14110', '14212', '14312', '14411'],
@@ -137,6 +142,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_1,
         headerBottomData: headerBottomData_1,
         headerType: 1,
+        bodyType: 1,
         amper: '16',
         rowsData: [
           ['3', '10', '23100', '23200', '23304', '23404'],
@@ -149,6 +155,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: [''],
         headerBottomData: [''],
         headerType: 0,
+        bodyType: 1,
         amper: '32',
         rowsData: [
           ['3', '4', '23102', '23203', '23305', '23405'],
@@ -166,6 +173,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_1,
         headerBottomData: headerBottomData_1,
         headerType: 1,
+        bodyType: 1,
         amper: '16',
         rowsData: [
           ['3', '10', '24100', '24200', '24310', '24410'],
@@ -178,6 +186,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: [''],
         headerBottomData: [''],
         headerType: 0,
+        bodyType: 1,
         amper: '32',
         rowsData: [
           ['3', '3', '24102', '24203', '24311', '24411'],
@@ -196,6 +205,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_1,
         headerBottomData: headerBottomData_1,
         headerType: 1,
+        bodyType: 1,
         amper: '63',
         rowsData: [
           ['3', '10', '24104', '24205', '24312', '24412'],
@@ -213,6 +223,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_1,
         headerBottomData: headerBottomData_1,
         headerType: 1,
+        bodyType: 1,
         amper: '125',
         rowsData: [
           ['3', '2', '24106', '24212', '24313', '24413'],
@@ -231,6 +242,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_2,
         headerBottomData: headerBottomData_2,
         headerType: 2,
+        bodyType: 2,
         amper: '16',
         rowsData: [
           ['3', '10', '13200CR', '--'],
@@ -249,6 +261,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_2,
         headerBottomData: headerBottomData_2,
         headerType: 2,
+        bodyType: 2,
         amper: '16',
         rowsData: [
           ['3', '10', '14200CR', '--'],
@@ -267,6 +280,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_2,
         headerBottomData: headerBottomData_2,
         headerType: 2,
+        bodyType: 2,
         amper: '16',
         rowsData: [
           ['3', '10', '23200CR', '--'],
@@ -285,6 +299,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_2,
         headerBottomData: headerBottomData_2,
         headerType: 2,
+        bodyType: 2,
         amper: '16',
         rowsData: [
           ['3', '10', '24200CR', '--'],
@@ -303,6 +318,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: headerTopData_3,
         headerBottomData: headerBottomData_3,
         headerType: 3,
+        bodyType: 3,
         amper: '16',
         rowsData: [['5', '10/150', '13311']],
         // columnIndexNumbers: [2],
@@ -312,6 +328,7 @@ const wtyczkiGniazdaPrzenosne_tablesData = [
         headerTopData: [''],
         headerBottomData: [''],
         headerType: 0,
+        bodyType: 3,
         amper: '32',
         rowsData: [['5', '5/75', '13313']],
         // columnIndexNumbers: [2],

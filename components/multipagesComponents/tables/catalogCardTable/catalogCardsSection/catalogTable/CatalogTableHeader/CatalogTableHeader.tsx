@@ -19,7 +19,7 @@ const CatalogTableHeader: React.FunctionComponent<{
         return {
           containerStyle:
             'grid grid-cols-[3fr_2fr_2fr_2fr_2fr] divide-x-2 divide-dark group gap-y-2',
-          topCell_1: 'bg-dark flex flex-col border border-greyShade1 p-1',
+          topCell_1: 'bg-dark flex flex-col  p-1', //border border-greyShade1
           vatCollors: [
             'bg-[#ceae0e]',
             'bg-[#134976]',
@@ -46,7 +46,7 @@ const CatalogTableHeader: React.FunctionComponent<{
   };
 
   /**...WTF**/
-  console.log('headerTopData', headerTopData);
+  // console.log('headerTopData', headerTopData);
   /**JSX**/
   return (
     <div className={createStyles(headerType)?.containerStyle}>
@@ -86,8 +86,11 @@ const CatalogTableHeader: React.FunctionComponent<{
       {headerBottomData.map((lab, index) => {
         if (index === 0 && lab[0]) {
           return (
-            <div className="grid grid-cols-[1fr_1fr_1fr] gap-1" key={index}>
-              <div className="fc bg-greyShade1 p-1">
+            <div
+              className="grid grid-cols-[1fr_1fr_1fr] divide-x divide-dark"
+              key={index}
+            >
+              <div className="fc bg-greyShade1">
                 <p className="p-v-small text-center text-light break-all">
                   {lab[0]}
                 </p>

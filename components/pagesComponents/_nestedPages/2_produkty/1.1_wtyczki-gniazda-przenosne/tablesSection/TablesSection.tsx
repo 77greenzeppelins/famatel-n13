@@ -35,6 +35,7 @@ const TablesSection: React.FunctionComponent<{
         headerTopData: string[][];
         headerBottomData: string[][];
         headerType: number;
+        bodyType: number;
         amper: string;
         rowsData: string[][];
       }
@@ -42,6 +43,7 @@ const TablesSection: React.FunctionComponent<{
         headerTopData: string[];
         headerBottomData: string[];
         headerType: number;
+        bodyType: number;
         amper: string;
         rowsData: (string | undefined)[][];
       }

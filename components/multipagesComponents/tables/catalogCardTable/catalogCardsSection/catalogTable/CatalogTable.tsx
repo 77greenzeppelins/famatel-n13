@@ -1,4 +1,5 @@
 import React from 'react';
+import CatalogTableBody from './catalogTableBody/CatalogTableBody';
 import CatalogTableHeader from './CatalogTableHeader/CatalogTableHeader';
 
 const CatalogTable: React.FunctionComponent<{
@@ -7,6 +8,7 @@ const CatalogTable: React.FunctionComponent<{
         headerTopData: string[][];
         headerBottomData: string[][];
         headerType: number;
+        bodyType: number;
         amper: string;
         rowsData: string[][];
       }
@@ -14,6 +16,7 @@ const CatalogTable: React.FunctionComponent<{
         headerTopData: string[];
         headerBottomData: string[];
         headerType: number;
+        bodyType: number;
         amper: string;
         rowsData: (string | undefined)[][];
       };
@@ -25,7 +28,10 @@ const CatalogTable: React.FunctionComponent<{
   //   );
   /**JSX**/
   return (
-    <div className="w-full ">
+    <div
+      data-component="CatalogTable__container"
+      className="w-full flex flex-col gap-1 "
+    >
       {catalogCardTableData.headerType ? (
         // <div className="bg-corpo w-full h-full">............</div>
         <CatalogTableHeader
@@ -34,7 +40,11 @@ const CatalogTable: React.FunctionComponent<{
           headerType={catalogCardTableData.headerType}
         />
       ) : null}
-      <div>{`body of ${catalogCardTableData.amper}`}</div>
+      <CatalogTableBody
+        amper={catalogCardTableData.amper}
+        rowsData={catalogCardTableData.rowsData}
+        bodyType={catalogCardTableData.bodyType}
+      />
     </div>
   );
 };
