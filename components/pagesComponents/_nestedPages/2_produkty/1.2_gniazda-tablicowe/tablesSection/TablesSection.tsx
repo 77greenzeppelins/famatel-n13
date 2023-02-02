@@ -1,10 +1,14 @@
 import React from 'react';
 import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
-import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
-
 /**Components**/
 
 /**HardCoded Data**/
+//__containers col7
+const col7full =
+  'grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group';
+const col7half = 'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark';
+const col7short = 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark';
+
 //___ampers
 const ampsH = ' py-2 pl-2 bg-dark';
 const ampC = ' text-light p-small text-center py-2 bg-greyShade1';
@@ -30,22 +34,6 @@ const TablesSection: React.FunctionComponent<{
   connectionTypeData: string[];
   weightData: string[];
   wireData: string[];
-  catalogCardTablesData: (
-    | {
-        headerTopData: string[][];
-        headerBottomData: string[][];
-        headerType: number;
-        amper: string;
-        rowsData: string[][];
-      }
-    | {
-        headerTopData: string[];
-        headerBottomData: string[];
-        headerType: number;
-        amper: string;
-        rowsData: (string | undefined)[][];
-      }
-  )[];
 }> = ({
   productCardIndex,
   polesNumber,
@@ -55,7 +43,6 @@ const TablesSection: React.FunctionComponent<{
   bodyData,
   connectionTypeData,
   wireData,
-  catalogCardTablesData,
 }) => {
   /**...**/
   const mainStylesSwitcher = (polesNumber: number) => {
@@ -64,7 +51,8 @@ const TablesSection: React.FunctionComponent<{
         return {
           columnsPoles:
             'grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group',
-          columnsAmpers: 'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark',
+          columnsAmpers:
+            'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
           columnsConnectionType:
             'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
           animatedRowStyle: [animH, animC, animC, animC, animC, animC, animC],
@@ -75,20 +63,23 @@ const TablesSection: React.FunctionComponent<{
         return {
           columnsPoles:
             'grid grid-cols-[2fr_2fr_2fr_2fr] divide-x-2 divide-dark group',
-          columnsAmpers: 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark',
+          columnsAmpers:
+            'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
           columnsConnectionType:
             'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
           animatedRowStyle: [animH, animC, animC, animC],
           ampersStyle: [ampsH, ampC],
           polesStyle: [polesH, polesC, polesC, polesC],
           cellsContainers: [polesH, polesC, polesC, polesC],
+          // columnsWeire: 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
+          // animatedRowStyle: [animH, animC],
         };
       case 3:
         return {
           columnsPoles:
             'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
           columnsAmpers:
-            'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
+            'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
           columnsConnectionType:
             'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
           animatedRowStyle: [animH, animC, animC],
@@ -100,30 +91,28 @@ const TablesSection: React.FunctionComponent<{
   };
 
   /**Special case for SpeedPRO IP44 / index 12**/
-  const forWeirStylesSwitcher = (ampersNumber: number) => {
-    switch (ampersNumber) {
-      case 2:
-        return {
-          columnsWeire: 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
-          animatedRowStyle: [animH, animC],
-        };
-      case 3:
-        return {
-          columnsWeire:
-            'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
-          animatedRowStyle: [animH, animC, animC],
-        };
-    }
-  };
+  // const forWeirStylesSwitcher = (ampersNumber: number) => {
+  //   switch (ampersNumber) {
+  //     case 2:
+  //       return {
+  //         columnsWeire: 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
+  //         animatedRowStyle: [animH, animC],
+  //       };
+  //     case 3:
+  //       return {
+  //         columnsWeire:
+  //           'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
+  //         animatedRowStyle: [animH, animC, animC],
+  //       };
+  //   }
+  // };
 
   /**JSX**/
   return (
     <div
       data-component="TablesSection___container"
-      className="flex flex-col gap-10"
+      className="flex flex-col gap-2"
     >
-      <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
-
       <div className="flex flex-col gap-y-1 w-full ">
         <RowWithLayout
           rowData={ampersData}
@@ -157,14 +146,17 @@ const TablesSection: React.FunctionComponent<{
         />
         <RowWithLayout
           rowData={wireData}
-          containerLayout={
-            forWeirStylesSwitcher(ampersData.length)?.columnsWeire
-          }
+          containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}
           cellsContainersStyle={
-            forWeirStylesSwitcher(ampersData.length)?.animatedRowStyle
+            mainStylesSwitcher(polesNumber)?.animatedRowStyle
           }
+          // containerLayout={
+          //   forWeirStylesSwitcher(ampersData.length)?.columnsWeire
+          // }
+          // cellsContainersStyle={
+          //   forWeirStylesSwitcher(ampersData.length)?.animatedRowStyle
+          // }
         />
-
         <RowWithLayout
           rowData={weightData}
           containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
@@ -173,18 +165,6 @@ const TablesSection: React.FunctionComponent<{
           }
         />
       </div>
-      {/* <BasicTable
-        tableHeader={tableHeader}
-        tableBodyData={tableBody}
-        multiCellsContainer={
-          'grid grid-cols-[1fr_1fr] gap-[0.125rem]  group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300 py-2 divide-x-2 divide-dark'
-        }
-        multiCellsCell={[
-          'text-center relative header-link-label text-dark',
-          'text-center relative header-link-label text-dark',
-          'text-center relative header-link-label text-dark',
-        ]}
-      /> */}
       {/* <div>
         <TableWithUnderlinedRows
           rowsData={norma}

@@ -1,5 +1,7 @@
 /*Images saff*/
 import { imgWtyczkiGniazda_02_tablicowe } from '../../../../public/images/c1_wtyczki-gniazda/2_tablicowe/imgWtyczkiGniazda_02_tablicowe';
+/**Basic Data**/
+import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
@@ -17,10 +19,16 @@ const catalogVersion = [
   '24337',
 ];
 
+const gniazdaTablicowe_SubCategory_data = {
+  subCategoryName: catalogStructureData[0].subCategoriesNames[1],
+  subCategoryUrl: catalogStructureData[0].subCategoriesUrls[1],
+  subCategoryIndex: 1,
+};
+
 const productCardsData: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip54-16A-32A-75`,
     textIcons: ['IP54', '16A', '32A', 'Format: 75 × 75'],
     imageData: imgWtyczkiGniazda_02_tablicowe[0],
     type: 'Typ: Wtyczki tablicowe proste',
@@ -28,7 +36,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip54-16A-55`,
     textIcons: ['IP54', '16A', 'Format: 55 × 55'],
     imageData: imgWtyczkiGniazda_02_tablicowe[1],
     type: 'Typ: Wtyczki tablicowe proste',
@@ -36,7 +44,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip67-63A`,
     textIcons: ['IP67', '63A'],
     imageData: imgWtyczkiGniazda_02_tablicowe[2],
     type: 'Typ: Wtyczki tablicowe proste',
@@ -44,7 +52,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip54-16A-32A-75-cover`,
     textIcons: ['IP54', '16A', '32A', 'Format: 75 × 75'],
     imageData: imgWtyczkiGniazda_02_tablicowe[3],
     type: 'Typ: Gniazda tablicowe proste',
@@ -52,7 +60,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip67-16A-32A-75-cover`,
     textIcons: ['IP67', '16A', 'Format: 75 × 75'],
     imageData: imgWtyczkiGniazda_02_tablicowe[4],
     type: 'Typ: Gniazda tablicowe proste',
@@ -60,7 +68,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip67-63A-cover`,
     textIcons: ['IP67', '63A', 'Format: 100 × 100'],
     imageData: imgWtyczkiGniazda_02_tablicowe[5],
     type: 'Typ: Gniazda tablicowe proste',
@@ -68,7 +76,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip67-125A-cover`,
     textIcons: ['IP67', '63A', 'Format: 120 × 120'],
     imageData: imgWtyczkiGniazda_02_tablicowe[6],
     type: 'Typ: Gniazda tablicowe proste',
@@ -76,7 +84,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/skosne10-ip54-16A-32A-75-cover`,
     textIcons: ['IP54', '16A', '32A', 'Format: 75 × 85 / 80 × 95'],
     imageData: imgWtyczkiGniazda_02_tablicowe[7],
     type: 'Typ: Gniazda tablicowe skośne 10°',
@@ -84,7 +92,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/skosne10-ip67-16A-32A-75-cover`,
     textIcons: ['IP67', '16A', '32A', 'Format: 75 × 85 / 80 × 95'],
     imageData: imgWtyczkiGniazda_02_tablicowe[8],
     type: 'Typ: Gniazda tablicowe skośne 10°',
@@ -92,7 +100,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/skosne10-ip67-63A-75-cover`,
     textIcons: ['IP67', '63A', 'Format: 85 × 85'],
     imageData: imgWtyczkiGniazda_02_tablicowe[9],
     type: 'Typ: Gniazda tablicowe skośne 10°',
@@ -100,7 +108,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
-    path: '/',
+    path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/skosne15-ip67-125A-75-cover`,
     textIcons: ['IP67', '125A', 'Format: 120 × 120'],
     imageData: imgWtyczkiGniazda_02_tablicowe[10],
     type: 'Typ: Gniazda tablicowe skośne 15°',
@@ -108,4 +116,4 @@ const productCardsData: IF_ProductCardData[] = [
   },
 ];
 
-export { productCardsData };
+export { gniazdaTablicowe_SubCategory_data, productCardsData };

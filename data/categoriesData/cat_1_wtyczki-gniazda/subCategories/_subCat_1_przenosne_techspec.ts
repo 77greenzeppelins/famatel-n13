@@ -11,7 +11,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___1 / IP54
   {
     ampers: [' ', '16A', '32A'],
-    poles: ['BIEGUNY', '3', '4', '5', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5', '3', '4', '5'],
     bodyData: [
       ['A', '150', '150', '150', '172', '172', '172'],
       ['B', '56', '60', '73', '73', '73', '79'],
@@ -33,7 +33,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___2 / IP67
   {
     ampers: [' ', '16A', '32A'],
-    poles: ['BIEGUNY', '3', '4', '5', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5', '3', '4', '5'],
     bodyData: [
       ['A', '150', '150', '150', '172', '172', '172'],
       ['B', '71', '78', '88', '92', '92', '100'],
@@ -56,7 +56,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___3 / IP67
   {
     ampers: [' ', '63A'],
-    poles: ['BIEGUNY', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5'],
     bodyData: [
       ['A', '260', '260', '260'],
       ['B', '114', '114', '114'],
@@ -70,7 +70,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___4__IP67
   {
     ampers: [' ', '125A'],
-    poles: ['BIEGUNY', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5'],
     bodyData: [
       ['A', '296', '296', '296'],
       ['B', '130', '130', '130'],
@@ -84,7 +84,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___5__IP54
   {
     ampers: [' ', '16A', '32A'],
-    poles: ['BIEGUNY', '3', '4', '5', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5', '3', '4', '5'],
     bodyData: [
       ['A', '157', '157', '157', '178', '178', '178'],
       ['B', '85', '91', '91', '105', '105', '105'],
@@ -106,7 +106,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___6
   {
     ampers: [' ', '16A', '32A'],
-    poles: ['BIEGUNY', '3', '4', '5', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5', '3', '4', '5'],
     bodyData: [
       ['A', '157', '157', '157', '170', '170', '170'],
       ['B', '80', '85', '95', '97', '99', '106'],
@@ -128,7 +128,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___7
   {
     ampers: [' ', '63A'],
-    poles: ['BIEGUNY', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5'],
     bodyData: [
       ['A', '260', '260', '260'],
       ['B', '110', '110', '110'],
@@ -142,7 +142,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___8
   {
     ampers: [' ', '125A'],
-    poles: ['BIEGUNY', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5'],
     bodyData: [
       ['A', '316', '316', '316'],
       ['B', '122', '122', '122'],
@@ -156,7 +156,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___9
   {
     ampers: [' ', '16A'],
-    poles: ['BIEGUNY', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5'],
     bodyData: [
       ['A', '150', '150', '150'],
       ['B', '56', '60', '73'],
@@ -170,7 +170,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___10
   {
     ampers: [' ', '16A'],
-    poles: ['BIEGUNY', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5'],
     bodyData: [
       ['A', '157', '157', '157'],
       ['B', '70', '70', '70'],
@@ -184,7 +184,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___11
   {
     ampers: [' ', '16A'],
-    poles: ['BIEGUNY', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5'],
     bodyData: [
       ['A', '157', '157', '157'],
       ['B', '85', '91', '97'],
@@ -198,7 +198,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   //___12
   {
     ampers: [' ', '16A'],
-    poles: ['BIEGUNY', '3', '4', '5'],
+    poles: ['Bieguny', '3', '4', '5'],
     bodyData: [
       ['A', '157', '157', '157'],
       ['B', '70', '70', '70'],
@@ -211,8 +211,8 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
   },
   //___13
   {
-    ampers: [' ', '16A'],
-    poles: ['BIEGUNY', '5', '5'],
+    ampers: [' ', '16A', '32A'],
+    poles: ['Bieguny', '5', '5'],
     bodyData: [
       ['A', '132', '160'],
       ['B', '73', '86,4'],
@@ -237,7 +237,7 @@ Data for Components...............to delate...................
 //
 //     bodyData: {
 //       ampers: [' ',['16A', '32A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: 'A',[
 //       B ['B', '150', '172'],
 //       C ['C','150', '172'],
@@ -274,7 +274,7 @@ Data for Components...............to delate...................
 //
 //     bodyData: {
 //       ampers: [' ',['16A', '32A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: 'A',[
 //       B ['B', '150', '172'],
 //       C ['C','150', '172'],
@@ -311,7 +311,7 @@ Data for Components...............to delate...................
 //     frontHeadersData: frontHeaderWGABCDfi,
 //     bodyData: {
 //       ampers: [' ',['63A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: ['A',['260'], ['260'], ['260']],
 //       B: ['B', ['114'], ['114'], ['114']],
 //       C: ['C',['175'], ['175'], ['175']],
@@ -327,7 +327,7 @@ Data for Components...............to delate...................
 //     frontHeadersData: frontHeaderWGABCDfi,
 //     bodyData: {
 //       ampers: [' ',['125A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: ['A',['296'], ['296'], ['296']],
 //       B: ['B', ['130'], ['130'], ['130']],
 //       C: ['C',['211'], ['211'], ['211']],
@@ -344,7 +344,7 @@ Data for Components...............to delate...................
 //
 //     bodyData: {
 //       ampers: [' ',['16A', '32A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: 'A',[
 //       B ['B', '157', '178'],
 //       C ['C','157', '178'],
@@ -381,7 +381,7 @@ Data for Components...............to delate...................
 //
 //     bodyData: {
 //       ampers: [' ',['16A', '32A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: 'A',[
 //       B ['B', '150', '170'],
 //       C ['C','150', '170'],
@@ -418,7 +418,7 @@ Data for Components...............to delate...................
 //     frontHeadersData: frontHeaderWGABCDfi,
 //     bodyData: {
 //       ampers: [' ',['63A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: ['A',['260'], ['260'], ['260']],
 //       B: ['B', ['110'], ['110'], ['110']],
 //       C: ['C',['175'], ['175'], ['175']],
@@ -434,7 +434,7 @@ Data for Components...............to delate...................
 //     frontHeadersData: frontHeaderWGABCDfi,
 //     bodyData: {
 //       ampers: [' ',['125A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: ['A',['316'], ['316'], ['316']],
 //       B: ['B', ['122'], ['122'], ['122']],
 //       C: ['C',['217'], ['217'], ['217']],
@@ -451,7 +451,7 @@ Data for Components...............to delate...................
 //     frontHeadersData: frontHeaderWGABCDfi,
 //     bodyData: {
 //       ampers: [' ',['16A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: ['A',['150'], ['150'], ['150']],
 //       B: ['B', ['56'], ['60'], ['73']],
 //       C: ['C',['110'], ['110'], ['110']],
@@ -468,7 +468,7 @@ Data for Components...............to delate...................
 //     frontHeadersData: frontHeaderWGABCDfi,
 //     bodyData: {
 //       ampers: [' ',['16A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: ['A',['157'], ['157'], ['157']],
 //       B: ['B', ['70'], ['70'], ['70']],
 //       C: ['C',['110'], ['110'], ['110']],
@@ -485,7 +485,7 @@ Data for Components...............to delate...................
 //     frontHeadersData: frontHeaderWGABCDfi,
 //     bodyData: {
 //       ampers: [' ',['16A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: ['A',['157'], ['157'], ['157']],
 //       B: ['B', ['80'], ['91'], ['97']],
 //       C: ['C',['110'], ['110'], ['110']],
@@ -502,7 +502,7 @@ Data for Components...............to delate...................
 //     frontHeadersData: frontHeaderWGABCDfi,
 //     bodyData: {
 //       ampers: [' ',['16A']],
-//       poles: ['BIEGUNY','3', '4', '5'],
+//       poles: ['Bieguny','3', '4', '5'],
 //       A: ['A',['157'], ['157'], ['157']],
 //       B: ['B', ['70'], ['70'], ['70']],
 //       C: ['C',['110'], ['110'], ['110']],
@@ -518,7 +518,7 @@ Data for Components...............to delate...................
 //     frontHeadersData: frontHeaderWGABDE16A32A,
 //     bodyData: {
 //       ampers: [' ',['16A', '32A']],
-//       poles: ['BIEGUNY','5'],
+//       poles: ['Bieguny','5'],
 //       A: ['A',['132', '160']],
 //       B: ['B', ['73', '86.4']],
 //       C: ['C',['64', '64']],
