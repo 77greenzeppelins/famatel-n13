@@ -119,6 +119,57 @@ interface IF_ProductPageNavPanel {
   productName?: string;
 }
 
+interface IF_CatalogCardTableData {
+  catalogCardTableData:
+    | {
+        headerTopData: string[][];
+        headerBottomData: string[][];
+        headerType: number;
+        bodyType: number;
+        amper: string;
+        rowsData: string[][];
+      }
+    | {
+        headerTopData: string[];
+        headerBottomData: string[];
+        headerType: number;
+        bodyType: number;
+        amper: string;
+        rowsData: (string | undefined)[][];
+      };
+}
+
+interface IF_CatalogCardTablesData {
+  catalogCardTablesData: (
+    | {
+        headerTopData: string[][];
+        headerBottomData: string[][];
+        headerType: number;
+        bodyType: number;
+        amper: string;
+        rowsData: string[][];
+      }
+    | {
+        headerTopData: string[];
+        headerBottomData: string[];
+        headerType: number;
+        bodyType: number;
+        amper: string;
+        rowsData: (string | undefined)[][];
+      }
+  )[];
+}
+interface IF_ProductsTablesSection extends IF_CatalogCardTablesData {
+  productCardIndex: number;
+  polesNumber: number;
+  polesData: string[];
+  ampersData: string[];
+  bodyData?: string[][];
+  connectionTypeData: string[];
+  weightData: string[];
+  wireData: string[];
+}
+
 export type {
   ISubCategoriesItem,
   IF_CatalogStructureData,
@@ -131,4 +182,8 @@ export type {
   IF_ProductCardData,
   //___
   IF_ProductPageNavPanel,
+  //___
+  IF_CatalogCardTableData,
+  IF_CatalogCardTablesData,
+  IF_ProductsTablesSection,
 };

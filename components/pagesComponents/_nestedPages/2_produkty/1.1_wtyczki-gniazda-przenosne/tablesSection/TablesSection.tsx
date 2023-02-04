@@ -1,54 +1,18 @@
 import React from 'react';
+/**Components**/
 import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
 import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
+/**Handler**/
+import {
+  mainStylesSwitcher,
+  animH,
+  animC,
+} from '../../../../../multipagesComponents/tables/diyTable/handlers/stylesSwitcher';
+/**TS**/
+import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
 
-/**Components**/
-
-/**HardCoded Data**/
-//___ampers
-const ampsH = ' py-2 pl-2 bg-dark';
-const ampC = ' text-light p-small text-center py-2 bg-greyShade1';
-//___poles
-const polesH = 'p-small text-light py-2 pl-2 bg-greyShade1';
-const polesC = ' text-light p-small text-center py-2 bg-greyShade1';
-//___animated
-const animH =
-  'p-small text-light py-2 pl-2 bg-greyShade1 group-hover:bg-greyShade2 ease-in duration-300';
-const animC =
-  'fc text-dark p-small text-center py-2 bg-greyTint2  group-hover:bg-light ease-in duration-300';
-/*
-className="relative flex justify-between items-center w-full py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300 divide-x-2 divide-dark"
-*/
-
-/**----------------------------------**/
-const TablesSection: React.FunctionComponent<{
-  productCardIndex: number;
-  polesNumber: number;
-  polesData: string[];
-  ampersData: string[];
-  bodyData?: string[][];
-  connectionTypeData: string[];
-  weightData: string[];
-  wireData: string[];
-  catalogCardTablesData: (
-    | {
-        headerTopData: string[][];
-        headerBottomData: string[][];
-        headerType: number;
-        bodyType: number;
-        amper: string;
-        rowsData: string[][];
-      }
-    | {
-        headerTopData: string[];
-        headerBottomData: string[];
-        headerType: number;
-        bodyType: number;
-        amper: string;
-        rowsData: (string | undefined)[][];
-      }
-  )[];
-}> = ({
+/**------------------------------------------------**/
+const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
   productCardIndex,
   polesNumber,
   polesData,
@@ -60,46 +24,46 @@ const TablesSection: React.FunctionComponent<{
   catalogCardTablesData,
 }) => {
   /**...**/
-  const mainStylesSwitcher = (polesNumber: number) => {
-    switch (polesNumber) {
-      case 7:
-        return {
-          columnsPoles:
-            'grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group',
-          columnsAmpers: 'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark',
-          columnsConnectionType:
-            'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
-          animatedRowStyle: [animH, animC, animC, animC, animC, animC, animC],
-          ampersStyle: [ampsH, ampC, ampC, ampC, ampC, ampC, ampC],
-          polesStyle: [polesH, polesC, polesC, polesC, polesC, polesC, polesC],
-        };
-      case 4:
-        return {
-          columnsPoles:
-            'grid grid-cols-[2fr_2fr_2fr_2fr] divide-x-2 divide-dark group',
-          columnsAmpers: 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark',
-          columnsConnectionType:
-            'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
-          animatedRowStyle: [animH, animC, animC, animC],
-          ampersStyle: [ampsH, ampC],
-          polesStyle: [polesH, polesC, polesC, polesC],
-          cellsContainers: [polesH, polesC, polesC, polesC],
-        };
-      case 3:
-        return {
-          columnsPoles:
-            'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
-          columnsAmpers:
-            'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
-          columnsConnectionType:
-            'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
-          animatedRowStyle: [animH, animC, animC],
-          ampersStyle: [ampsH, ampC, ampC],
-          polesStyle: [polesH, polesC, polesC],
-          cellsContainers: [polesH, polesC, polesC],
-        };
-    }
-  };
+
+  //   switch (polesNumber) {
+  //     case 7:
+  //       return {
+  //         columnsPoles:
+  //           'grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group',
+  //         columnsAmpers: 'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark',
+  //         columnsConnectionType:
+  //           'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
+  //         animatedRowStyle: [animH, animC, animC, animC, animC, animC, animC],
+  //         ampersStyle: [ampsH, ampC, ampC, ampC, ampC, ampC, ampC],
+  //         polesStyle: [polesH, polesC, polesC, polesC, polesC, polesC, polesC],
+  //       };
+  //     case 4:
+  //       return {
+  //         columnsPoles:
+  //           'grid grid-cols-[2fr_2fr_2fr_2fr] divide-x-2 divide-dark group',
+  //         columnsAmpers: 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark',
+  //         columnsConnectionType:
+  //           'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
+  //         animatedRowStyle: [animH, animC, animC, animC],
+  //         ampersStyle: [ampsH, ampC],
+  //         polesStyle: [polesH, polesC, polesC, polesC],
+  //         cellsContainers: [polesH, polesC, polesC, polesC],
+  //       };
+  //     case 3:
+  //       return {
+  //         columnsPoles:
+  //           'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
+  //         columnsAmpers:
+  //           'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
+  //         columnsConnectionType:
+  //           'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
+  //         animatedRowStyle: [animH, animC, animC],
+  //         ampersStyle: [ampsH, ampC, ampC],
+  //         polesStyle: [polesH, polesC, polesC],
+  //         cellsContainers: [polesH, polesC, polesC],
+  //       };
+  //   }
+  // };
 
   /**Special case for SpeedPRO IP44 / index 12**/
   const forWeirStylesSwitcher = (ampersNumber: number) => {

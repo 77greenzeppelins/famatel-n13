@@ -1,32 +1,19 @@
 import React from 'react';
+/**Components**/
 import CatalogTable from './catalogTable/CatalogTable';
+/**TS**/
+import { IF_CatalogCardTablesData } from '../../../../../utils/TS/typeScriptStaff';
 
-const CatalogCardsSection: React.FunctionComponent<{
-  catalogCardTablesData: (
-    | {
-        headerTopData: string[][];
-        headerBottomData: string[][];
-        headerType: number;
-        bodyType: number;
-        amper: string;
-        rowsData: string[][];
-      }
-    | {
-        headerTopData: string[];
-        headerBottomData: string[];
-        headerType: number;
-        bodyType: number;
-        amper: string;
-        rowsData: (string | undefined)[][];
-      }
-  )[];
-}> = ({ catalogCardTablesData }) => {
+/**-----------------------------------------------------**/
+const CatalogCardsSection: React.FunctionComponent<
+  IF_CatalogCardTablesData
+> = ({ catalogCardTablesData }) => {
   /**...WTF**/
-  console.log('catalogCardTablesData:', catalogCardTablesData);
+  // console.log('catalogCardTablesData:', catalogCardTablesData);
   /**JSX* */
   return (
     <div
-      className="flex flex-col gap-4"
+      className="flex flex-col gap-2"
       data-component="CatalogCardsSection__container"
     >
       {catalogCardTablesData.map((catalogCardTableData, index) => (

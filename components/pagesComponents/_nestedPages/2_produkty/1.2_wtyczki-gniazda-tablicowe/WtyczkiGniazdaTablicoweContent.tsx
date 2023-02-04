@@ -4,15 +4,16 @@ import { useRouter } from 'next/router';
 /**Components**/
 import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
+import TablesSection from './tablesSection/TablesSection';
 /**Basic Data**/
 import { splitedPathParts } from '../../../../../data/_data';
 import { wtyczkiGniazdaTablicowe_tech_data } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_2_tablicowe_techSpec';
+import { wtyczkiGniazdaTablicowe_tablesData } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_2_tablicowe_prodCat';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
-import TablesSection from './tablesSection/TablesSection';
 
 /**----------------------------------------**/
-const GniazdaTablicoweContent: React.FunctionComponent<{
+const WtyczkiGniazdaTablicoweContent: React.FunctionComponent<{
   productCardsData: IF_ProductCardData[];
 }> = ({ productCardsData }) => {
   /**Router Section**/
@@ -34,6 +35,9 @@ const GniazdaTablicoweContent: React.FunctionComponent<{
         const wagaData = wtyczkiGniazdaTablicowe_tech_data[index].weight;
         const connectionTypeData =
           wtyczkiGniazdaTablicowe_tech_data[index].connectionType;
+        //___data for "catalogTable"
+        const catalogCardTablesData =
+          wtyczkiGniazdaTablicowe_tablesData[index].tablesData;
 
         //___
         if (router.query.model === productPathPivotalPart) {
@@ -51,6 +55,7 @@ const GniazdaTablicoweContent: React.FunctionComponent<{
                     connectionTypeData={connectionTypeData}
                     weightData={wagaData}
                     wireData={przewodData}
+                    catalogCardTablesData={catalogCardTablesData}
                   />
                 </div>
                 <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]  bg-grey">
@@ -70,4 +75,4 @@ const GniazdaTablicoweContent: React.FunctionComponent<{
   );
 };
 
-export default GniazdaTablicoweContent;
+export default WtyczkiGniazdaTablicoweContent;

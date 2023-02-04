@@ -7,13 +7,13 @@ import SquareHolderWithImage from '../../../../multipagesComponents/holders/squa
 import TablesSection from './tablesSection/TablesSection';
 /**Basic Data**/
 import { splitedPathParts } from '../../../../../data/_data';
-import { wtyczkiGniazdaPrzenosne_tech_data } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_1_przenosne_techspec';
-import { wtyczkiGniazdaPrzenosne_tablesData } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_1_przenosne_prodCat';
+import { wtyczkiGniazdaScienne_tech_data } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_3_scienne_techSpec';
+import { wtyczkiGniazdaScienne_tablesData } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_3_scienne_prodCat';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
 
 /**----------------------------------------**/
-const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{
+const WtyczkiGniazdaScienneContent: React.FunctionComponent<{
   productCardsData: IF_ProductCardData[];
 }> = ({ productCardsData }) => {
   /**Router Section**/
@@ -25,19 +25,18 @@ const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{
         const productPath = productData.path.split('/');
         const productPathPivotalPart = productPath[splitedPathParts.product];
         const productImage = productData.imageData;
-        //__data from "wtyczkiGniazdaPrzenosne_tech_data"
-        const ampersData = wtyczkiGniazdaPrzenosne_tech_data[index].ampers;
-        const polesNumber =
-          wtyczkiGniazdaPrzenosne_tech_data[index].poles.length;
-        const polesData = wtyczkiGniazdaPrzenosne_tech_data[index].poles;
-        const bodyData = wtyczkiGniazdaPrzenosne_tech_data[index].bodyData;
-        const przewodData = wtyczkiGniazdaPrzenosne_tech_data[index].mm;
-        const wagaData = wtyczkiGniazdaPrzenosne_tech_data[index].weight;
+        //__data from "wtyczkiGniazdaScienne_tech_data"
+        const ampersData = wtyczkiGniazdaScienne_tech_data[index].ampers;
+        const polesNumber = wtyczkiGniazdaScienne_tech_data[index].poles.length;
+        const polesData = wtyczkiGniazdaScienne_tech_data[index].poles;
+        const bodyData = wtyczkiGniazdaScienne_tech_data[index].bodyData;
+        const przewodData = wtyczkiGniazdaScienne_tech_data[index].mm;
+        const wagaData = wtyczkiGniazdaScienne_tech_data[index].weight;
         const connectionTypeData =
-          wtyczkiGniazdaPrzenosne_tech_data[index].connectionType;
-        //___data for "catalogTable"
+          wtyczkiGniazdaScienne_tech_data[index].connectionType;
+        // //___data for "catalogTable"
         const catalogCardTablesData =
-          wtyczkiGniazdaPrzenosne_tablesData[index].tablesData;
+          wtyczkiGniazdaScienne_tablesData[index].tablesData;
 
         //___
         if (router.query.model === productPathPivotalPart) {
@@ -75,4 +74,4 @@ const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{
   );
 };
 
-export default WtyczkiGniazdaPrzenosneContent;
+export default WtyczkiGniazdaScienneContent;

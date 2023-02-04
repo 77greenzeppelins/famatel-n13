@@ -33,7 +33,7 @@ const ProductPageTemplate: React.FunctionComponent<{
   /**JSX**/
   return (
     <div
-      data-component="SubCategoryPageTemplate__container"
+      data-component="ProductPageTemplate__container"
       className="w-screen min-h-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh] "
     >
       <PageContentLayout>

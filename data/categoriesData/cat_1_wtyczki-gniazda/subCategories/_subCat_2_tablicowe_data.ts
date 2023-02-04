@@ -33,6 +33,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[0],
     type: 'Typ: Wtyczki tablicowe proste',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Wtyczka tablicowa proste',
   },
   {
     arrayIndex: 1,
@@ -41,6 +42,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[1],
     type: 'Typ: Wtyczki tablicowe proste',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Wtyczka tablicowa proste',
   },
   {
     arrayIndex: 2,
@@ -49,6 +51,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[2],
     type: 'Typ: Wtyczki tablicowe proste',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Wtyczka tablicowa proste',
   },
   {
     arrayIndex: 3,
@@ -57,6 +60,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[3],
     type: 'Typ: Gniazda tablicowe proste',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Gniazdo tablicowe proste',
   },
   {
     arrayIndex: 4,
@@ -65,6 +69,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[4],
     type: 'Typ: Gniazda tablicowe proste',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Gniazdo tablicowe proste',
   },
   {
     arrayIndex: 5,
@@ -73,6 +78,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[5],
     type: 'Typ: Gniazda tablicowe proste',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Gniazdo tablicowe proste',
   },
   {
     arrayIndex: 6,
@@ -81,6 +87,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[6],
     type: 'Typ: Gniazda tablicowe proste',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Gniazdo tablicowe proste',
   },
   {
     arrayIndex: 7,
@@ -89,6 +96,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[7],
     type: 'Typ: Gniazda tablicowe skośne 10°',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Gniazdo tablicowe skośne 10°',
   },
   {
     arrayIndex: 8,
@@ -97,6 +105,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[8],
     type: 'Typ: Gniazda tablicowe skośne 10°',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Gniazdo tablicowe skośne 10°',
   },
   {
     arrayIndex: 9,
@@ -105,6 +114,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[9],
     type: 'Typ: Gniazda tablicowe skośne 10°',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Gniazdo tablicowe skośne 10°',
   },
   {
     arrayIndex: 10,
@@ -113,6 +123,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgWtyczkiGniazda_02_tablicowe[10],
     type: 'Typ: Gniazda tablicowe skośne 15°',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    altName: 'Gniazdo tablicowe skośne 15°',
   },
 ];
 

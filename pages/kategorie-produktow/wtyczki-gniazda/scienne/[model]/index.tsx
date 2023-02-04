@@ -2,28 +2,24 @@ import React, { ReactElement, useState } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
-import WtyczkiGniazdaTablicoweContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/1.2_wtyczki-gniazda-tablicowe/WtyczkiGniazdaTablicoweContent';
+import WtyczkiGniazdaScienneContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/1.3_wtyczki-gniazda-scienne/WtyczkiGniazdaScienneContent';
 /**BasicData**/
 import { mainCategoriesSummaryData } from '../../../../../data/_data';
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
+
 import {
-  gniazdaTablicowe_SubCategory_data,
-  productCardsData,
-} from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_2_tablicowe_data';
+  wtyczkiGniazdaScienne_productCards_data,
+  wtyczkiGniazdaScienne_SubCategory_data,
+} from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_3_scienne_data';
 /**TS**/
 import { NextPageWithLayout } from '../../../../_app';
 
 /**--------------------------------------**/
-const GniazdaTablicoweProductPage: NextPageWithLayout = () => {
-  /**Router Section**/
-  //   const router = useRouter();
-  //   console.log('obudowyPusteSubCategoryData:', obudowyPusteSubCategoryData);
-  /**...**/
-
+const WtyczkiGniazdaScienneProductPage: NextPageWithLayout = () => {
   /**JSX**/
   return (
     <ProductPageTemplate
-      productCardsData={productCardsData}
+      productCardsData={wtyczkiGniazdaScienne_productCards_data}
       //___data for navSection => data about category
       categoryName={
         catalogStructureData[
@@ -36,15 +32,19 @@ const GniazdaTablicoweProductPage: NextPageWithLayout = () => {
         ].mainCategoryUrl
       }
       //___data for navSection => data about subCategory
-      subCategoryName={gniazdaTablicowe_SubCategory_data.subCategoryName}
-      subCategoryUrl={gniazdaTablicowe_SubCategory_data.subCategoryUrl}
+      subCategoryName={wtyczkiGniazdaScienne_SubCategory_data.subCategoryName}
+      subCategoryUrl={wtyczkiGniazdaScienne_SubCategory_data.subCategoryUrl}
     >
-      <WtyczkiGniazdaTablicoweContent productCardsData={productCardsData} />
+      <WtyczkiGniazdaScienneContent
+        productCardsData={wtyczkiGniazdaScienne_productCards_data}
+      />
     </ProductPageTemplate>
   );
 };
 
-GniazdaTablicoweProductPage.getLayout = function getLayout(page: ReactElement) {
+WtyczkiGniazdaScienneProductPage.getLayout = function getLayout(
+  page: ReactElement
+) {
   return (
     <Layout>
       {/* <NestedLayout>{page}</NestedLayout> */}
@@ -53,4 +53,4 @@ GniazdaTablicoweProductPage.getLayout = function getLayout(page: ReactElement) {
   );
 };
 
-export default GniazdaTablicoweProductPage;
+export default WtyczkiGniazdaScienneProductPage;

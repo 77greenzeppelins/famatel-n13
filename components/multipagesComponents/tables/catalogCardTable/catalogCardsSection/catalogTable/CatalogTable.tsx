@@ -1,26 +1,13 @@
 import React from 'react';
 import CatalogTableBody from './catalogTableBody/CatalogTableBody';
 import CatalogTableHeader from './CatalogTableHeader/CatalogTableHeader';
+/**TS**/
+import { IF_CatalogCardTableData } from '../../../../../../utils/TS/typeScriptStaff';
 
-const CatalogTable: React.FunctionComponent<{
-  catalogCardTableData:
-    | {
-        headerTopData: string[][];
-        headerBottomData: string[][];
-        headerType: number;
-        bodyType: number;
-        amper: string;
-        rowsData: string[][];
-      }
-    | {
-        headerTopData: string[];
-        headerBottomData: string[];
-        headerType: number;
-        bodyType: number;
-        amper: string;
-        rowsData: (string | undefined)[][];
-      };
-}> = ({ catalogCardTableData }) => {
+/**-------------------------------------------------------------------------**/
+const CatalogTable: React.FunctionComponent<IF_CatalogCardTableData> = ({
+  catalogCardTableData,
+}) => {
   /**...WTF**/
   //   console.log(
   //     'catalogCardTableData.headerData:',
@@ -30,7 +17,7 @@ const CatalogTable: React.FunctionComponent<{
   return (
     <div
       data-component="CatalogTable__container"
-      className="w-full flex flex-col gap-1 "
+      className="w-full flex flex-col gap-2 " //divide-y-4 divide-dark
     >
       {catalogCardTableData.headerType ? (
         // <div className="bg-corpo w-full h-full">............</div>
