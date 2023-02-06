@@ -2,7 +2,7 @@ import type { ReactElement } from 'react';
 /**Components*/
 import Layout from '../../../components/layouts/rootLayout/Layout';
 import CategoryPageTemplate from '../../../components/multipagesComponents/_categoryPageTemplate/CategoryPageTemplate';
-import GniazdaBlokadaChildren from '../../../components/pagesComponents/_nestedPages/1_kategorie/2_gniazda_z_blokada/GniazdaBlokadaChildren';
+import GniazdaBlokadaChildren from '../../../components/pagesComponents/_nestedPages/0_kategorie/2_gniazda-z-blokada/GniazdaBlokadaChildren';
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';

@@ -22,6 +22,8 @@ const corpoColors: IF_CorpoColors = {
   greyTint1: '#b0b1b2',
   greyTint2: '#d7d8d8',
   dark: '#1d1d1b',
+  green: '#32754c',
+  violet: '#434592',
 };
 
 const pagesUrl: IF_PagesUrl = {

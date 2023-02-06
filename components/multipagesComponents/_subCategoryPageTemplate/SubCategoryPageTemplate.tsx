@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 /**Components**/
 import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
 import SectionContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
@@ -16,7 +16,8 @@ import {
 const SubCategoryPageTemplate: React.FunctionComponent<{
   subCategoryData: ISubCategoriesItem;
   productCardsData: IF_ProductCardData[];
-}> = ({ subCategoryData, productCardsData }) => {
+  children?: ReactNode;
+}> = ({ subCategoryData, productCardsData, children }) => {
   /**Props destructuring**/
   const { arrayIndex, parentCategoryName, parentCategoryUrl, subCategoryName } =
     subCategoryData;
@@ -33,8 +34,6 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
             parentCategoryName={parentCategoryName}
             parentCategoryUrl={parentCategoryUrl}
           />
-          {/* </SectionContentLayout>
-        <SectionContentLayout> */}
           <SmallPseudoHeader text="Podkategoria" />
           <SubCategoryPageHeader
             fullName={subCategoryName}
@@ -45,6 +44,10 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
           <SmallPseudoHeader text="Katalog produktów" />
           <ProductsCatalog productCardsData={productCardsData} />
         </SectionContentLayout>
+        {
+          //___should be wrapped into <SectionContentLayout>
+          children
+        }
       </PageContentLayout>
 
       <div className="fixed w-full h-[50px] top-0 bg-dark" />

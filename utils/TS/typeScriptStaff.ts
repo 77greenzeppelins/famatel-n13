@@ -71,6 +71,8 @@ interface IF_CorpoColors {
   greyTint1: string;
   greyTint2: string;
   dark: string;
+  green: string;
+  violet: string;
 }
 interface IF_PagesUrl {
   home: string;

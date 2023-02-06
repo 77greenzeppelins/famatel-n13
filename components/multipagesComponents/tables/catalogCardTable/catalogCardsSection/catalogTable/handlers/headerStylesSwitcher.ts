@@ -1,4 +1,4 @@
-const headerStylesSwitcher = (headerType: number) => {
+const headerStylesSwitcher = (headerType: number, index?: number) => {
   switch (headerType) {
     case 1:
       return {
@@ -13,6 +13,7 @@ const headerStylesSwitcher = (headerType: number) => {
           'bg-[#a01b29]',
           'bg-[#2c3038]',
         ],
+        vatLabel: 'text-light',
       };
 
     case 2:
@@ -24,6 +25,7 @@ const headerStylesSwitcher = (headerType: number) => {
           'grid grid-cols-[1fr_1fr_1fr]  divide-x-2 divide-dark',
 
         vatCollors: ['bg-[#134976]', 'bg-[#a01b29]'],
+        vatLabel: 'text-light',
       };
     case 3:
       return {
@@ -31,8 +33,24 @@ const headerStylesSwitcher = (headerType: number) => {
         topCell_1: 'bg-dark flex flex-col  p-1',
         bottomCell_1_container:
           'grid grid-cols-[1fr_1fr_1fr]  divide-x-2 divide-dark',
-        // bottomCell_1_container: 'bg-dark flex',
         vatCollors: ['bg-[#a01b29]'],
+        vatLabel: 'text-light',
+      };
+    //___wtyczki-gniazda-niskie-napiecia
+    case 5:
+      return {
+        containerStyle:
+          'grid grid-cols-[3fr_2fr_2fr_2fr_2fr] divide-x-2 divide-dark group ',
+        topCell_1: 'bg-dark flex flex-col p-1 ',
+        bottomCell_1_container:
+          'grid grid-cols-[1fr_1fr_1fr]  divide-x-2 divide-dark ',
+        vatCollors: [
+          'bg-[#434592]', //fiolet
+          'bg-[#fff]',
+          'bg-[#32754c]',
+          'bg-[#fff]',
+        ],
+        vatLabel: index && index % 2 ? 'text-light' : 'text-dark',
       };
   }
 };

@@ -33,6 +33,7 @@ const CatalogTableBody: React.FunctionComponent<{
           <CatalogTableRow
             rowData={rowData}
             vatColors={bodyStylesSwitcher(bodyType)?.vatColors}
+            bodyType={bodyType}
           />
         </div>
       ))}

@@ -4,6 +4,11 @@ const col7full =
   'grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group';
 const col7half = 'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group';
 const col7short = 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group';
+//__containers for col7_Table
+const col5full =
+  'grid grid-cols-[2fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group';
+const col5half = 'grid grid-cols-[2fr_2fr_2fr] divide-x-2 divide-dark group';
+const col5short = 'grid grid-cols-[2fr_4fr] divide-x-2 divide-dark group';
 //__containers for col4_Table
 const col4full =
   'grid grid-cols-[2fr_2fr_2fr_2fr] divide-x-2 divide-dark group';
@@ -30,6 +35,15 @@ const mainStylesSwitcher = (polesNumber: number) => {
         columnsPoles: col7full,
         columnsAmpers: col7half,
         columnsConnectionType: col7short,
+        animatedRowStyle: [animH, animC, animC, animC, animC, animC, animC],
+        ampersStyle: [ampsH, ampC, ampC, ampC, ampC, ampC, ampC],
+        polesStyle: [polesH, polesC, polesC, polesC, polesC, polesC, polesC],
+      };
+    case 5:
+      return {
+        columnsPoles: col5full,
+        columnsAmpers: col5half,
+        columnsConnectionType: col5short,
         animatedRowStyle: [animH, animC, animC, animC, animC, animC, animC],
         ampersStyle: [ampsH, ampC, ampC, ampC, ampC, ampC, ampC],
         polesStyle: [polesH, polesC, polesC, polesC, polesC, polesC, polesC],
