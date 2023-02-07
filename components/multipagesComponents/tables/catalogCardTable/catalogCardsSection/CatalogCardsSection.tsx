@@ -16,7 +16,7 @@ const CatalogCardsSection: React.FunctionComponent<
       className="flex flex-col gap-2"
       data-component="CatalogCardsSection__container"
     >
-      {catalogCardTablesData.map((catalogCardTableData, index) => (
+      {catalogCardTablesData?.map((catalogCardTableData, index) => (
         <CatalogTable key={index} catalogCardTableData={catalogCardTableData} />
       ))}
     </div>

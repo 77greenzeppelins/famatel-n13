@@ -25,7 +25,10 @@ const WtyczkiGniazdaNiskieNapieciaChildren = () => {
       <DIYTable tableLayout="flex flex-col gap-y-[2px]">
         <RowType_6
           rowData={niskieNapięciaSubCatTable1Data.header}
-          rowContainerStyle={'grid grid-cols-[repeat(5,1fr)_20px] '}
+          rowContainerStyle={'grid grid-cols-[repeat(5,1fr)_20px]'}
+          glitchedCellStyle={
+            'relative col-start-3 col-end-5 fc flex-col border-x-[1px] border-dark gap-y-[2px]'
+          }
           indexOfGlitch={2}
         />
 

@@ -142,24 +142,26 @@ interface IF_CatalogCardTableData {
 }
 
 interface IF_CatalogCardTablesData {
-  catalogCardTablesData: (
-    | {
-        headerTopData: string[][];
-        headerBottomData: string[][];
-        headerType: number;
-        bodyType: number;
-        amper: string;
-        rowsData: string[][];
-      }
-    | {
-        headerTopData: string[];
-        headerBottomData: string[];
-        headerType: number;
-        bodyType: number;
-        amper: string;
-        rowsData: (string | undefined)[][];
-      }
-  )[];
+  catalogCardTablesData:
+    | (
+        | {
+            headerTopData: string[][];
+            headerBottomData: string[][];
+            headerType: number;
+            bodyType: number;
+            amper: string;
+            rowsData: string[][];
+          }
+        | {
+            headerTopData: string[];
+            headerBottomData: string[];
+            headerType: number;
+            bodyType: number;
+            amper: string;
+            rowsData: (string | undefined)[][];
+          }
+      )[]
+    | undefined;
 }
 interface IF_ProductsTablesSection extends IF_CatalogCardTablesData {
   productCardIndex: number;

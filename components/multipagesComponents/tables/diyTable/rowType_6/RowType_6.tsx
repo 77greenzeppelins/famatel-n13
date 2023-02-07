@@ -3,10 +3,12 @@ import React from 'react';
 const RowType_6 = ({
   rowData,
   rowContainerStyle,
+  glitchedCellStyle,
   indexOfGlitch,
 }: {
   rowData: (string | string[])[];
   rowContainerStyle: string;
+  glitchedCellStyle: string;
   indexOfGlitch: number;
 }) => {
   /**..................**/
@@ -23,10 +25,7 @@ const RowType_6 = ({
       //___niskie napięcia table; last column in other / dark color
       case 1:
         return (
-          <div
-            key={arrayIndex}
-            className="relative col-start-3 col-end-5 fc flex-col border-x-[1px] border-dark gap-y-[2px]"
-          >
+          <div key={arrayIndex} className={glitchedCellStyle}>
             <div className="fc row-start-1 row-end-2 w-full bg-greyShade1 py-2">
               <p className="p-small text-center pointer-events-none text-light">
                 {label[0]}

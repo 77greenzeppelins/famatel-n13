@@ -2,7 +2,7 @@ import React, { ReactElement, useState } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
-import GniazdaBlokadaStaleContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/2.2_gniazda-blokada-stale/GniazdaBlokadaStaleContent';
+import AdapteryPrzemysloweWielokrotneContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/3.2_adaptery-przemuslowe-wielokrotne/AdapteryPrzemysloweWielokrotneContent';
 /**BasicData**/
 import { mainCategoriesSummaryData } from '../../../../../data/_data';
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
@@ -24,7 +24,7 @@ const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
   return (
     <ProductPageTemplate
       productCardsData={adapteryPrzemysloweWielokrotne_productCards_data}
-      //___data for navSection => data about category
+      //___data for <ProductPageNavPanel> => data about category
       categoryName={
         catalogStructureData[
           mainCategoriesSummaryData.adapteryPrzemyslowe.categoryIndex
@@ -35,7 +35,7 @@ const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
           mainCategoriesSummaryData.adapteryPrzemyslowe.categoryIndex
         ].mainCategoryUrl
       }
-      //___data for navSection => data about subCategory
+      //___data for <ProductPageNavPanel> => data about subCategory
       subCategoryName={
         adapteryPrzemysloweWielokrotne_SubCategory_data.subCategoryName
       }
@@ -43,9 +43,9 @@ const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
         adapteryPrzemysloweWielokrotne_SubCategory_data.subCategoryUrl
       }
     >
-      {/* <GniazdaBlokadaStaleContent
+      <AdapteryPrzemysloweWielokrotneContent
         productCardsData={adapteryPrzemysloweWielokrotne_productCards_data}
-      /> */}
+      />
     </ProductPageTemplate>
   );
 };
