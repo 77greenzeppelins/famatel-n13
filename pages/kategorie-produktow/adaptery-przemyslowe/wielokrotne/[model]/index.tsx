@@ -43,9 +43,9 @@ const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
         adapteryPrzemysloweWielokrotne_SubCategory_data.subCategoryUrl
       }
     >
-      <GniazdaBlokadaStaleContent
+      {/* <GniazdaBlokadaStaleContent
         productCardsData={adapteryPrzemysloweWielokrotne_productCards_data}
-      />
+      /> */}
     </ProductPageTemplate>
   );
 };
