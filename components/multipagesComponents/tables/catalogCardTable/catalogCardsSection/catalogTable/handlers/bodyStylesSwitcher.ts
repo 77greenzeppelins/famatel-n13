@@ -67,6 +67,25 @@ const bodyStylesSwitcher = (bodyType: number, index?: number) => {
         amperStyle:
           'fc col-start-1 col-end-2 row-span-full bg-greyShade1 border-t-2 border-dark',
       };
+    case 6:
+      return {
+        containerStyle:
+          //___concept: ampers + rest of table...
+          'grid grid-cols-[1fr_8fr] grid-rows-[1fr_1fr_1fr] group divide-y-2 divide-dark ',
+        //___concept: all cells but ampers
+        rowContainerStyle:
+          'col-start-2 grid grid-cols-[1fr_1fr_2fr_2fr_2fr] border-l-[2px]',
+        vatColors: [
+          'bg-grey',
+          'bg-grey',
+          'bg-[#ceae0e]',
+          'bg-[#134976]',
+          'bg-[#a01b29]',
+        ],
+        vatLabel: 'text-light',
+        amperStyle:
+          'fc col-start-1 col-end-2 row-span-full bg-greyShade1 border-t-2 border-dark',
+      };
   }
 };
 

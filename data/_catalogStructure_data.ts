@@ -17,7 +17,7 @@ const wtyczkiGniazdaSubCategoryNames: string[] = [
   'Wtyczki i gniazda tablicowe jednofazowe (Schuko)',
   'Wtyczki i gniazda jednofazowe (Schuko)',
   'Wtyczki i gniazda na bardzo niskie napięcia',
-  'Wtyczki i gniazda do kontenerów chłodniczych',
+  'Wtyczki i gniazda do kontenerów',
   'Wtyczki i gniazda do sprzętu estradowego',
   'Wtyczki i gniazda campingowe',
 ];
@@ -28,7 +28,7 @@ const wtyczkiGniazdaSubCategoryPaths: string[] = [
   `tablicowe-jednofazowe`,
   `jednofazowe`,
   `niskie-napiecia`,
-  `chlodnicze`,
+  `kontenerowe`,
   `estradowe`,
   `campingowe`,
 ];
@@ -73,9 +73,9 @@ const adapteryPrzemysloweSubCategoryNames: string[] = [
   'Adaptery wielokrotne przemysłowe z przewodem',
 ];
 const adapteryPrzemysloweSubCategoryPaths: string[] = [
-  `adaptery-przemyslowe-schuko`,
-  `adaptery-wielokrotne-przemyslowe`,
-  `adaptery-wielokrotne-przemyslowe-z-przewodem`,
+  `schuko`,
+  `wielokrotne`,
+  `wielokrotne-z-przewodem`,
 ];
 
 const adapteryPrzemysloweSubCategoryUrls: string[] = [

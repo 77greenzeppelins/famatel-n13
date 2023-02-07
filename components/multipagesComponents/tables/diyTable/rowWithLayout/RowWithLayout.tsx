@@ -1,13 +1,3 @@
-// import React from 'react'
-
-// const RowWithLayout = () => {
-//   return (
-//     <div>RowWithLayout</div>
-//   )
-// }
-
-// export default RowWithLayout
-
 import React from 'react';
 
 const RowWithLayout: React.FunctionComponent<{
@@ -15,6 +5,7 @@ const RowWithLayout: React.FunctionComponent<{
   rowData: string[];
   cellsContainersStyle?: string[];
 }> = ({ rowData, cellsContainersStyle, containerLayout }) => {
+  /**JSX**/
   return (
     <div className={containerLayout}>
       {rowData.map((cellData, index) => (

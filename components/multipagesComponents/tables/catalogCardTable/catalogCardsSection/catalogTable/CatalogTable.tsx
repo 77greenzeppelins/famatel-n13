@@ -1,6 +1,6 @@
 import React from 'react';
-import CatalogTableBody from './catalogTableBody/CatalogTableBody';
 import CatalogTableHeader from './CatalogTableHeader/CatalogTableHeader';
+import CatalogTableBody from './catalogTableBody/CatalogTableBody';
 /**TS**/
 import { IF_CatalogCardTableData } from '../../../../../../utils/TS/typeScriptStaff';
 

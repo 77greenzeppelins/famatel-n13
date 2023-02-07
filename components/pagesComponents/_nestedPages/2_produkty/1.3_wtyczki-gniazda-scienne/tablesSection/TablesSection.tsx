@@ -23,7 +23,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
   return (
     <div
       data-component="TablesSection___container"
-      className="flex flex-col gap-6"
+      className="flex flex-col gap-10"
     >
       <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
       <div className="flex flex-col gap-y-1 w-full ">
@@ -63,13 +63,15 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
             mainStylesSwitcher(polesNumber)?.animatedRowStyle
           }
         />
-        <RowWithLayout
-          rowData={weightData}
-          containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
-          cellsContainersStyle={
-            mainStylesSwitcher(polesNumber)?.animatedRowStyle
-          }
-        />
+        {weightData && (
+          <RowWithLayout
+            rowData={weightData}
+            containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
+            cellsContainersStyle={
+              mainStylesSwitcher(polesNumber)?.animatedRowStyle
+            }
+          />
+        )}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import SubCategoryPageTemplate from '../../../../components/multipagesComponents
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { gniazdaBlokadaSubCategoriesData } from '../../../../data/categoriesData/cat_2_gniazda-z-blokada/_cat2_gniazda-z-blokada_data';
-import { productCardsData } from '../../../../data/categoriesData/cat_2_gniazda-z-blokada/subCategories/_subCat_4_akcesoria';
+import { gniazdaBlokadaAkcesoria_productCards_data } from '../../../../data/categoriesData/cat_2_gniazda-z-blokada/subCategories/_subCat_4_akcesoria_data';
 
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';
@@ -15,7 +15,7 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <SubCategoryPageTemplate
       subCategoryData={gniazdaBlokadaSubCategoriesData[3]}
-      productCardsData={productCardsData}
+      productCardsData={gniazdaBlokadaAkcesoria_productCards_data}
     />
   );
 };

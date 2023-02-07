@@ -168,7 +168,7 @@ interface IF_ProductsTablesSection extends IF_CatalogCardTablesData {
   ampersData: string[];
   bodyData?: string[][];
   connectionTypeData: string[];
-  weightData: string[];
+  weightData?: string[];
   wireData: string[];
 }
 

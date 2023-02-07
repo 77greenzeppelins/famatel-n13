@@ -1,14 +1,14 @@
 import React from 'react';
 /**Components**/
+import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
 import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
 import DIYTable from '../../../../../multipagesComponents/tables/diyTable/DIYTable';
-import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
 /**Handler**/
 import { mainStylesSwitcher } from '../../../../../multipagesComponents/tables/diyTable/handlers/stylesSwitcher';
 /**TS**/
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
 
-/**----------------------------------**/
+/**------------------------------------------------**/
 const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
   productCardIndex,
   polesNumber,
@@ -27,6 +27,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
       className="flex flex-col gap-10"
     >
       <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
+
       <DIYTable tableLayout={'flex flex-col gap-y-1 w-full '}>
         <RowWithLayout
           rowData={ampersData}
@@ -79,32 +80,3 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
 };
 
 export default TablesSection;
-
-// {
-//   productCardIndex: number;
-//   polesNumber: number;
-//   polesData: string[];
-//   ampersData: string[];
-//   bodyData?: string[][];
-//   connectionTypeData: string[];
-//   weightData: string[];
-//   wireData: string[];
-//   catalogCardTablesData: (
-//     | {
-//         headerTopData: string[][];
-//         headerBottomData: string[][];
-//         headerType: number;
-//         bodyType: number;
-//         amper: string;
-//         rowsData: string[][];
-//       }
-//     | {
-//         headerTopData: string[];
-//         headerBottomData: string[];
-//         headerType: number;
-//         bodyType: number;
-//         amper: string;
-//         rowsData: (string | undefined)[][];
-//       }
-//   )[];
-// }

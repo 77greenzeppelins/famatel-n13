@@ -130,14 +130,15 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
             forWeirStylesSwitcher(ampersData.length)?.animatedRowStyle
           }
         />
-
-        <RowWithLayout
-          rowData={weightData}
-          containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
-          cellsContainersStyle={
-            mainStylesSwitcher(polesNumber)?.animatedRowStyle
-          }
-        />
+        {weightData && (
+          <RowWithLayout
+            rowData={weightData}
+            containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
+            cellsContainersStyle={
+              mainStylesSwitcher(polesNumber)?.animatedRowStyle
+            }
+          />
+        )}
       </div>
       {/* <BasicTable
         tableHeader={tableHeader}

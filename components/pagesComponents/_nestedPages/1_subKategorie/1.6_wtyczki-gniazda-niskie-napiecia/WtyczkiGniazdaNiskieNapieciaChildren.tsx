@@ -3,101 +3,13 @@ import React from 'react';
 /**Components**/
 import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import DIYTable from '../../../../multipagesComponents/tables/diyTable/DIYTable';
+import RowType_5 from '../../../../multipagesComponents/tables/diyTable/rowType_5/RowType_5';
 /**BasicData*/
 import { niskieNapięciaSubCatTable1Data } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_6_niskie-napiecia_data';
 import { corpoColors } from '../../../../../data/_data';
-
-const TableRow = ({
-  rowData,
-  rowContainerStyle,
-  labelStyle,
-  bgColor,
-}: {
-  rowData: string[];
-  rowContainerStyle: string;
-  labelStyle?: string;
-  bgColor?: string;
-}) => {
-  return (
-    <div data-component="TableRow__container" className={rowContainerStyle}>
-      {rowData.map((label, index) => (
-        <div
-          className={`relative fc py-2 border-x-[1px] border-dark`}
-          key={index}
-        >
-          <motion.div
-            whileHover={{
-              opacity: 0.7,
-              transition: { duration: 0.4, delay: 0.2 },
-            }}
-            className={`${
-              index < rowData.length - 1 ? bgColor : 'bg-dark'
-            } absolute inset-0`}
-          />
-          <p
-            className={
-              labelStyle
-                ? labelStyle
-                : `relative p-small text-center pointer-events-none text-light `
-            }
-          >
-            {label}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-const Header = ({ rowData }: { rowData: (string | string[])[] }) => {
-  return (
-    <div
-      data-component="TableRow__container"
-      className="grid grid-cols-[repeat(5,1fr)_20px] "
-    >
-      {rowData.map((label, index) => {
-        if (index === 2 && Array.isArray(label)) {
-          return (
-            <div
-              key={index}
-              className="relative col-start-3 col-end-5 fc flex-col border-x-[1px] border-dark gap-y-[2px]"
-            >
-              <div className="fc row-start-1 row-end-2 w-full bg-greyShade1 py-2">
-                <p className="p-small text-center pointer-events-none text-light">
-                  {label[0]}
-                </p>
-              </div>
-              <div className="flex  row-start-2 row-end-3 w-full gap-x-[2px]">
-                <div className="fc w-full bg-greyShade1 py-2">
-                  <p className="p-small text-center pointer-events-none text-light">
-                    {label[1]}
-                  </p>
-                </div>
-                <div className="fc w-full bg-greyShade1 py-2">
-                  <p className="p-small text-center pointer-events-none text-light">
-                    {label[2]}
-                  </p>
-                </div>
-              </div>
-            </div>
-          );
-        }
-
-        return (
-          <div
-            className={`relative fc py-2 border-x-[1px] border-dark`}
-            key={index}
-          >
-            <div className="absolute inset-0 bg-greyShade1" />
-            <p className="relative p-small text-center pointer-events-none text-light">
-              {label}
-            </p>
-          </div>
-        );
-      })}
-    </div>
-  );
-};
+import RowType_6 from '../../../../multipagesComponents/tables/diyTable/rowType_6/RowType_6';
+/**...........experiments*/
 
 const WtyczkiGniazdaNiskieNapieciaChildren = () => {
   /**JSX**/
@@ -110,19 +22,30 @@ const WtyczkiGniazdaNiskieNapieciaChildren = () => {
           odróżnienia napięcia i częstotliwości - szczegóły w tabeli
         </p>
       </div>
-      <div className="flex flex-col gap-y-[2px]">
-        <Header rowData={niskieNapięciaSubCatTable1Data.header} />
-        {niskieNapięciaSubCatTable1Data.sectionsRow1.map((rowData, index) => (
-          <TableRow
-            key={index}
-            rowContainerStyle="grid grid-cols-[repeat(5,1fr)_20px] "
-            rowData={rowData}
-            labelStyle={`relative p-small text-center pointer-events-none ${
-              index % 2 ? 'text-dark' : 'text-light'
-            }  `}
-            bgColor={index === 0 ? `bg-[${corpoColors.violet}]` : ' bg-light'}
-          />
-        ))}
+      <DIYTable tableLayout="flex flex-col gap-y-[2px]">
+        <RowType_6
+          rowData={niskieNapięciaSubCatTable1Data.header}
+          rowContainerStyle={'grid grid-cols-[repeat(5,1fr)_20px] '}
+          indexOfGlitch={2}
+        />
+
+        {niskieNapięciaSubCatTable1Data.sectionsRow1.map((rowData, index) => {
+          //___thera are two rows; one should be "violet" and the second one "white" in color...
+          const mainColor =
+            index === 0 ? `bg-[${corpoColors.violet}]` : ' bg-light';
+          return (
+            <RowType_5
+              key={index}
+              backGroundStyleCase={2}
+              rowContainerStyle="grid grid-cols-[repeat(5,1fr)_20px] "
+              rowData={rowData}
+              labelStyle={`relative p-small text-center pointer-events-none ${
+                index % 2 ? 'text-dark' : 'text-light'
+              }  `}
+              bgColors={[mainColor, 'bg-dark']}
+            />
+          );
+        })}
         {/* </div> */}
         <div className="grid grid-cols-[repeat(5,1fr)_20px] grid-rows-[repeat(4,1fr)] gap-y-[2px]">
           <div className="relative col-start-1 col-end-2 row-span-full fc flex-col  border-x-[1px] border-dark">
@@ -142,23 +65,25 @@ const WtyczkiGniazdaNiskieNapieciaChildren = () => {
           </div>
           {niskieNapięciaSubCatTable1Data.greenSectionRows.map(
             (rowData, index) => (
-              <TableRow
+              <RowType_5
                 key={index}
+                backGroundStyleCase={2}
                 rowContainerStyle="grid grid-cols-[repeat(4,1fr)_20px] col-start-2 col-span-full"
                 rowData={rowData}
                 labelStyle="relative p-small text-center pointer-events-none text-light"
-                bgColor={` bg-[${corpoColors.green}]`}
+                bgColors={[` bg-[${corpoColors.green}]`]}
               />
             )
           )}
         </div>
-        <TableRow
+        <RowType_5
+          backGroundStyleCase={2}
           rowContainerStyle="grid grid-cols-[repeat(5,1fr)_20px] "
           rowData={niskieNapięciaSubCatTable1Data.dcLine}
           labelStyle="relative p-small text-center pointer-events-none text-dark"
-          bgColor="bg-light"
+          bgColors={['bg-light']}
         />
-      </div>
+      </DIYTable>
       <div>
         <p className="p-small text-grey">* Dostępne na życzenie</p>
       </div>
