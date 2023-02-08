@@ -1,16 +1,6 @@
 /*Basic Data*/
 import { ISubCategoriesItem } from '../../../utils/TS/typeScriptStaff';
-import { corpoColors } from '../../_data';
 import { catalogStructureData } from '../../_catalogStructure_data';
-
-/*
-Data for data
-*/
-const gniazdaBlokadaStale_SubCategory_data = {
-  subCategoryName: catalogStructureData[1].subCategoriesNames[1],
-  subCategoryUrl: catalogStructureData[1].subCategoriesUrls[1],
-  subCategoryIndex: 1,
-};
 
 const adapteryPrzemysloweSubCategoriesData: ISubCategoriesItem[] = [
   //___1__adaptery-przemyslowe-schuko

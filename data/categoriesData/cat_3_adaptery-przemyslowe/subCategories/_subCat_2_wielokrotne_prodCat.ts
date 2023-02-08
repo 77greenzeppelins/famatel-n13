@@ -17,7 +17,7 @@ const headerBottomData_1 = [
 /*
 Data for Components
 */
-const adapteryPrzemysloweWielokrotne_tablesData = [
+const adapteryPrzemysloweWielokrotne_1_tablesData = [
   //___1
   {
     tablesData: [
@@ -88,7 +88,7 @@ const adapteryPrzemysloweWielokrotne_tablesData = [
         headerTopData: headerTopData_1,
         headerBottomData: headerBottomData_1,
         headerType: 1,
-        bodyType: 1,
+        bodyType: 7,
         amper: '16',
         rowsData: [
           ['3', '4', '15032', '15000', '15036', '15039'],
@@ -104,7 +104,7 @@ const adapteryPrzemysloweWielokrotne_tablesData = [
         headerTopData: headerTopData_1,
         headerBottomData: headerBottomData_1,
         headerType: 1,
-        bodyType: 1,
+        bodyType: 7,
         amper: '16',
         rowsData: [
           ['3', '4', '16032', '16000', '16036', '16039'],
@@ -113,41 +113,48 @@ const adapteryPrzemysloweWielokrotne_tablesData = [
       },
     ],
   },
+];
+
+const adapteryPrzemysloweWielokrotne_2_tablesData = [
   //___5_____inne
   {
-    row1: '',
-    // tablesData: [
-    //   {
-    //     headerTopData: headerTopData_1,
-    //     headerBottomData: headerBottomData_1,
-    //     headerType: 1,
-    //     bodyType: 1,
-    //     amper: '63',
-    //     rowsData: [
-    //       ['3', '10', '24180', '24280', '24380', '24480'],
-    //       ['4', '10', '24181', '24281', '24375', '24481'],
-    //       ['5', '10', '24182', '24282', '24374', '24482'],
-    //     ],
-    //   },
-    // ],
+    tablesData: [
+      ['Wejście / Input: 400V', 'Wtyczka / Plug 16A 3P+T+N 400 V IP67'],
+      ['Ampery', 'Opakowanie'],
+      ['Podwójny adapter przemysłowy IP44'],
+      ['Wejście 1'],
+      ['1 Gniazdo', '3P+T 400V'],
+      ['1 Gniazdo', '2P+T 230V'],
+      ['1 Gniazdo', '3P+T 400V'],
+      ['Wejście 2'],
+      ['1 Gniazdo', '2P+T 220V'],
+      ['1 Gniazdo', '2P+T 230V'],
+      ['1 Gniazdo', '3P+T 400V'],
+      ['16', '4'],
+      ['15003', '15004', '15005'],
+    ],
   },
-  //___6___inne
+  //___6_____inne
   {
     tablesData: [
-      {
-        headerTopData: headerTopData_1,
-        headerBottomData: headerBottomData_1,
-        headerType: 1,
-        bodyType: 1,
-        amper: '125',
-        rowsData: [
-          ['3', '2', '24174', '24274', '24381', '24483'],
-          ['4', '2', '24184', '24284', '24376', '24484'],
-          ['5', '2', '24185', '24285', '24377', '24485'],
-        ],
-      },
+      ['Wejście / Input: 400V', 'Wtyczka / Plug 16A 3P+T+N 400 V IP67'],
+      ['Ampery', 'Opakowanie'],
+      ['Podwójny adapter przemysłowy IP67'],
+      ['Wejście 1'],
+      ['1 Gniazdo', '3P+T 400V'],
+      ['1 Gniazdo', '2P+T 230V'],
+      ['1 Gniazdo', '3P+T 400V'],
+      ['Wejście 2'],
+      ['1 Gniazdo', '2P+T 220V'],
+      ['1 Gniazdo', '2P+T 230V'],
+      ['1 Gniazdo', '3P+T 400V'],
+      ['16', '4'],
+      ['16006', '16007', '16008'],
     ],
   },
 ];
 
-export { adapteryPrzemysloweWielokrotne_tablesData };
+export {
+  adapteryPrzemysloweWielokrotne_1_tablesData,
+  adapteryPrzemysloweWielokrotne_2_tablesData,
+};

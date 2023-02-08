@@ -73,6 +73,10 @@ interface IF_CorpoColors {
   dark: string;
   green: string;
   violet: string;
+  vYellow: string;
+  vBlue: string;
+  vRed: string;
+  vDark: string;
 }
 interface IF_PagesUrl {
   home: string;

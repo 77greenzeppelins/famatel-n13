@@ -20,8 +20,6 @@ const WtyczkiGniazdaChildren = () => {
         <SmallPseudoHeader text={textLabels.kategoriePage.l1} />
         <TableWithUnderlinedRows
           rowsData={wtyczkiGniazda_daneTechniczneText}
-          //       tableContainerStyle= '';
-          // rowContainerStyle=[];
           cellsStyles={['w-[50%]', 'w-[50%]']}
         />
       </SectionContentLayout>
@@ -29,24 +27,13 @@ const WtyczkiGniazdaChildren = () => {
         <SmallPseudoHeader text={textLabels.kategoriePage.l2} />
         <TableWithUnderlinedRows
           rowsData={wtyczkiGniazda_materialText}
-          //       tableContainerStyle= '';
-          // rowContainerStyle=[];
           cellsStyles={['w-[50%]', 'w-[50%]']}
         />
       </SectionContentLayout>
       <SectionContentLayout>
         <SmallPseudoHeader text={textLabels.kategoriePage.l3} />
-        {/* <TableWithUnderlinedRows
-          rowsData={wtyczkiGniazda_RegulationText}
-          // tableContainerStyle= '';
-          // rowContainerStyle=[];
-          cellsStyles={['w-full']}
-        /> */}
-
         <TableWithUnderlinedRows
           rowsData={wtyczkiGniazda_RegulationText}
-          //       tableContainerStyle= '';
-          // rowContainerStyle=[];
           cellsStyles={['w-full']}
         />
       </SectionContentLayout>

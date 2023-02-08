@@ -24,7 +24,7 @@
     --corpo-grey-tint-1: #b0b1b2;
     --corpo-grey-tint-2: #d7d8d8;
     --corpo-grey-shade-1: #6d6e6f;
-    --corpo-grey-shade-2: #2f2f2f;
+    --corpo-grey-shade-2: #4e4f4f;
     --corpo-grey50: lighter(#9d9e9f, 50);
     /*
     Tints: #1d1d1b #2d2d2c #4a4a48 #60605f #777776 #8e8e8d #a4a4a3 #bbbbba #d1d1d1 #e8e8e8 #ffffff
@@ -33,6 +33,9 @@
     */
     --corpo-dark: #1d1d1b;
     --light: #ffffff;
+    --vYellow: #ceae0e;
+    --vRed: #a01b29;
+    --vBlue: #134976;
   }
 }
 

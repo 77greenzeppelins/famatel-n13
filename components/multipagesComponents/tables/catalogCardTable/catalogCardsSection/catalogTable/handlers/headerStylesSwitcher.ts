@@ -7,12 +7,7 @@ const headerStylesSwitcher = (headerType: number, index?: number) => {
         topCell_1: 'bg-dark flex flex-col p-1 ',
         bottomCell_1_container:
           'grid grid-cols-[1fr_1fr_1fr]  divide-x-2 divide-dark ',
-        vatCollors: [
-          'bg-[#ceae0e]',
-          'bg-[#134976]',
-          'bg-[#a01b29]',
-          'bg-[#2c3038]',
-        ],
+        vatCollors: ['bg-vY', 'bg-vB', 'bg-vR', 'bg-[#2c3038]'],
         vatLabel: 'text-light',
       };
 

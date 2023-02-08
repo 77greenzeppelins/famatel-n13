@@ -39,22 +39,33 @@ const ProductPageNavPanel: React.FunctionComponent<IF_ProductPageNavPanel> = ({
           </div>
         </Link>
       </div>
+
       <div className="flex gap-x-4  ">
         <SmallPseudoHeader text="Podkategoria" />
-        <p className="header-link-label text-grey disable">/</p>
-        <Link href={subCategoryUrl} scroll={false}>
-          <div className="flex group">
-            <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300 whitespace-nowrap ">
-              {subCategoryName}
-            </p>
-            <div className="pl-4 ">
-              <LinkWithArrowIcon
-                containerStyle="fc h-full aspect-square stroke-grey group-hover:stroke-corpo  ease-in duration-300  origin-center"
-                //___group-hover:translate-x-1
-              />
-            </div>
-          </div>
-        </Link>
+        {
+          /*
+        why this condition?
+        przedlużacze bębnowe kończą się na subcategoriach; nie idą do poziomu produkt / model
+        */
+          subCategoryName && (
+            <>
+              <p className="header-link-label text-grey disable">/</p>
+              <Link href={subCategoryUrl} scroll={false}>
+                <div className="flex group">
+                  <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300 whitespace-nowrap ">
+                    {subCategoryName}
+                  </p>
+                  <div className="pl-4 ">
+                    <LinkWithArrowIcon
+                      containerStyle="fc h-full aspect-square stroke-grey group-hover:stroke-corpo  ease-in duration-300  origin-center"
+                      //___group-hover:translate-x-1
+                    />
+                  </div>
+                </div>
+              </Link>
+            </>
+          )
+        }
       </div>
       {/* <SmallPseudoHeader text="Model" /> */}
       <H1AnimatedPresence uniqueKey={0} text={productName} />

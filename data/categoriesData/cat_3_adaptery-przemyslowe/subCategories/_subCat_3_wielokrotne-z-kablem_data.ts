@@ -53,7 +53,7 @@ const adapteryPrzemysloweWielokrotneKabel_productCards_data: IF_ProductCardData[
       altName: 'Potrójny adapter przemysłowy IP67',
     },
     {
-      arrayIndex: 0,
+      arrayIndex: 4,
       path: `${adapteryPrzemysloweWielokrotneKabel_SubCategory_data.subCategoryUrl}/poczworny-ip54-16A`,
       textIcons: ['IP54', '16A'],
       imageData: imgAdapteryPrzemyslowe_03_wielokrotneKabel[4],

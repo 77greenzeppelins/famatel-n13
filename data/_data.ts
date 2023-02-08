@@ -24,6 +24,10 @@ const corpoColors: IF_CorpoColors = {
   dark: '#1d1d1b',
   green: '#32754c',
   violet: '#434592',
+  vYellow: '#134976',
+  vBlue: '#134976',
+  vRed: '#a01b29',
+  vDark: '#2c3038',
 };
 
 const pagesUrl: IF_PagesUrl = {
@@ -159,39 +163,6 @@ const splitedPathParts = {
   subCategory: 3,
   product: 4,
 };
-
-/*
-in set in: layout | overlays |...| <OverlayOpener>
-is used in: pagesComponents | _nestedPages | _nestedPages | <WtyczkiGniazdaPrzenosneOverlayManager> => all >SubCategoryNameOverlayManager>s
-*/
-/*
-//___yellow rgb:(217, 187, 30)
-//___blue rgb:(19, 73, 118)
-//___red rgb:(160, 27, 41)
-//___grey rgb:(44, 48,56)
-*/
-// const vatColorsVivid: IVatColors = {
-//   110: '#d9bb1e',
-//   230: '#134976',
-//   400: '#a01b29',
-//   500: '#2c3038',
-// };
-// const vatColorsPale: IVatColorsPale = {
-//   allColors: ['#eedd83', '#768baf', '#d08f78', '#969499'],
-//   110: '#eedd83',
-//   230: '#768baf',
-//   400: '#d08f78',
-//   500: '#969499',
-//   paleGrey: '#CECFCF',
-//   leftSideBody: '#CECFCF', //some light grey
-// };
-// const vatLowColors: IVatLowColors = {
-//   allPaleColors: ['#9c93d1', '#ffffff', '#9cb598', '#ffffff'],
-//   violetVivid: '#4b4eaa',
-//   violetPale: '#9c93d1',
-//   greenVivid: '#458053',
-//   greenPale: '#9cb598',
-// };
 
 /**Aria staff*/
 const closeOverlay = 'przycisk: zamknij okno';

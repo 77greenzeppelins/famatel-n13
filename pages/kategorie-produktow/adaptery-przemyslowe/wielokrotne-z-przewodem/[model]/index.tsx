@@ -2,7 +2,7 @@ import React, { ReactElement, useState } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
-import GniazdaBlokadaStaleContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/2.2_gniazda-blokada-stale/GniazdaBlokadaStaleContent';
+import AdapteryPrzemysloweWielokrotneKabelContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/3.3_adaptery-przemyslowe-wielokrotne-kabel/AdapteryPrzemysloweWielokrotneKabelContent';
 /**BasicData**/
 import { mainCategoriesSummaryData } from '../../../../../data/_data';
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
@@ -43,9 +43,9 @@ const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
         adapteryPrzemysloweWielokrotneKabel_SubCategory_data.subCategoryUrl
       }
     >
-      {/* <GniazdaBlokadaStaleContent
+      <AdapteryPrzemysloweWielokrotneKabelContent
         productCardsData={adapteryPrzemysloweWielokrotneKabel_productCards_data}
-      /> */}
+      />
     </ProductPageTemplate>
   );
 };

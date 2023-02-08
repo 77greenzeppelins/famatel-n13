@@ -4,17 +4,19 @@ import { useRouter } from 'next/router';
 /**Components**/
 import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
-import CatalogCardsSection from '../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
+import CatalogCardsTables from './catalogCardsTables/CatalogCardsTables';
 import DIYTable from '../../../../multipagesComponents/tables/diyTable/DIYTable';
 import RowType_6 from '../../../../multipagesComponents/tables/diyTable/rowType_6/RowType_6';
 import RowType_5 from '../../../../multipagesComponents/tables/diyTable/rowType_5/RowType_5';
 /**Basic Data**/
 import { splitedPathParts } from '../../../../../data/_data';
-import { adapteryPrzemysloweWielokrotne_tablesData } from '../../../../../data/categoriesData/cat_3_adaptery-przemyslowe/subCategories/_subCat_2_wielokrotne_prodCat';
+import {
+  adapteryPrzemysloweWielokrotne_1_tablesData,
+  adapteryPrzemysloweWielokrotne_2_tablesData,
+} from '../../../../../data/categoriesData/cat_3_adaptery-przemyslowe/subCategories/_subCat_2_wielokrotne_prodCat';
 import { adapteryPrzemysloweWielokrotne_tech_data } from '../../../../../data/categoriesData/cat_3_adaptery-przemyslowe/subCategories/_subCat_2_wielokrotne_techSpec';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
-import CatalogCardsTables from './catalogCardsTables/CatalogCardsTables';
 
 /**----------------------------------------**/
 const AdapteryPrzemysloweWielokrotneContent: React.FunctionComponent<{
@@ -32,9 +34,13 @@ const AdapteryPrzemysloweWielokrotneContent: React.FunctionComponent<{
         const productImage = productData.imageData;
 
         // //___data for "catalogTable"
-        const catalogCardTablesData =
-          index < 5 &&
-          adapteryPrzemysloweWielokrotne_tablesData[index].tablesData;
+        const catalogCardTablesData_1 =
+          index < 4 &&
+          adapteryPrzemysloweWielokrotne_1_tablesData[index].tablesData;
+
+        const catalogCardTablesData_2 =
+          index >= 4 &&
+          adapteryPrzemysloweWielokrotne_2_tablesData[index - 4].tablesData;
 
         //___
         if (router.query.model === productPathPivotalPart) {
@@ -43,16 +49,11 @@ const AdapteryPrzemysloweWielokrotneContent: React.FunctionComponent<{
               <SectionContentLayout divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 ">
                 <div className="flex flex-col gap-y-10 w-full lg:w-[50%] ">
                   <div className="flex flex-col gap-10">
-                    {/* <CatalogCardsSection
-                      catalogCardTablesData={
-                        adapteryPrzemysloweWielokrotne_tablesData[index]
-                          .tablesData
-                      }
-                    /> */}
-
-                    {/* <CatalogCardsTables
-                      catalogCardTablesData={catalogCardTablesData}
-                    /> */}
+                    <CatalogCardsTables
+                      index={index}
+                      catalogCardTablesData_1={catalogCardTablesData_1}
+                      catalogCardTablesData_2={catalogCardTablesData_2}
+                    />
 
                     <DIYTable tableLayout="flex flex-col gap-y-[4px]">
                       <RowType_6

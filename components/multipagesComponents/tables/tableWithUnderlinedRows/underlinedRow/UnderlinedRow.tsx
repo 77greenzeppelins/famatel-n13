@@ -55,10 +55,9 @@ const UnderlinedRow: React.FunctionComponent<{
   return (
     <div
       data-component="UnderlinedRow__container"
-      className={rowContainerStyle ? rowContainerStyle : 'relative flex group '}
+      className={rowContainerStyle ? rowContainerStyle : 'relative flex group'}
     >
       {createCells()}
-
       <div
         className={
           fakeUnderline
