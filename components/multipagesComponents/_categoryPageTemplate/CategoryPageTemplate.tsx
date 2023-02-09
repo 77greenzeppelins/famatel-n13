@@ -3,7 +3,6 @@ import { ReactNode } from 'react';
 import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
 import SectionContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
-import CategoryPageHeader from './categoryPageHeader/CategoryPageHeader';
 import SubCategoriesCatalog from './subCategoriesCatalog/SubCategoriesCatalog';
 import BasicIconsManager from '../iconsManagers/basicIconsManager/BasicIconsManager';
 /**Basic Data**/
