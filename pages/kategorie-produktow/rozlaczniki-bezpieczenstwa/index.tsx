@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react';
 /**Components*/
 import Layout from '../../../components/layouts/rootLayout/Layout';
-import CategoryPageTemplate from '../../../components/multipagesComponents/_categoryPageTemplate/CategoryPageTemplate';
+import RozlacznikiBezpieczenstwaContent from '../../../components/pagesComponents/_nestedPages/0_kategorie/6_rozlacznikiBezpieczenstwa/RozlacznikiBezpieczenstwaCatContent';
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
@@ -11,9 +11,10 @@ import type { NextPageWithLayout } from '../../_app';
 /**----------------------------------------------------------**/
 const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
-    <div className="fc flex-col w-screen min-h-screen bg-dark">
-      <CategoryPageTemplate
-        mainCategoryIndex={catalogStructureData[5].mainCategoryIndex}
+    <div className="flex flex-col w-screen min-h-screen bg-dark">
+      <RozlacznikiBezpieczenstwaContent
+        uniqueKey={0}
+        nategoryName={catalogStructureData[5].mainCategoryName}
       />
     </div>
   );

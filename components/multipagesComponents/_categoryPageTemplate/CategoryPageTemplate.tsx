@@ -8,6 +8,7 @@ import SubCategoriesCatalog from './subCategoriesCatalog/SubCategoriesCatalog';
 import BasicIconsManager from '../iconsManagers/basicIconsManager/BasicIconsManager';
 /**Basic Data**/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
+import H1AnimatedPresence from '../../_basicComponents/componentH1/H1AnimatedPresence';
 
 /**---------------------------------------------------------**/
 const CategoryPageTemplate: React.FunctionComponent<{
@@ -26,12 +27,18 @@ const CategoryPageTemplate: React.FunctionComponent<{
       <PageContentLayout>
         <SectionContentLayout>
           <SmallPseudoHeader text="Kategoria" />
-          <CategoryPageHeader
+          <H1AnimatedPresence
+            uniqueKey={mainCategoryIndex}
+            text={catalogStructureData[mainCategoryIndex].mainCategoryName}
+            variantH="custome"
+            customeStyle="text-light text-left text-[2rem] xs:text-[2.5rem] xxl:text-[3rem] tracking-widest"
+          />
+          {/* <CategoryPageHeader
             categoryIndex={mainCategoryIndex}
             categoryName={
               catalogStructureData[mainCategoryIndex].mainCategoryName
             }
-          />
+          /> */}
           <BasicIconsManager
             svgIcons={categoryData.svgIcons}
             labeledIcons={categoryData.labeledIcons}

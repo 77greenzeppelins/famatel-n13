@@ -90,18 +90,6 @@ const wtyczkiGniazdaSubCategoriesData: ISubCategoriesItem[] = [
   },
 ];
 
-// const wtyczkiGniazda_daneTechniczneText = [
-//   { t1: 'Napięcie znamionowe',  '100 V - 500 V' },
-//   { t1: 'Napięcie izolacji',  '500 V' },
-//   {
-//     t1: 'Częstotliwość',
-//      '-50 / 500 Hz',
-//   },
-//   { t1: 'Prąd znamionowy',  '16 A - 32 A - 63 A - 125 A' },
-//   { t1: 'Stopień ochrony IE(IP C / EN 60529)',  'IP54 / IP67' },
-//   { t1: 'Maksymalna testowana temperatura robocza',  '+70 °C' },
-//   { t1: 'Temperatura użytkowa zgodnie z normą',  '-25 °C / +40 °C' },
-// ];
 const wtyczkiGniazda_daneTechniczneText = [
   ['Napięcie znamionowe', '100 V - 500 V'],
   ['Napięcie izolacji', '500 V'],
