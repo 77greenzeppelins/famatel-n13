@@ -79,7 +79,8 @@ const catalogTable_1_data = {
 };
 
 const catalogTable_2_data = {
-  sideHeader: ['Range of use', 'AC23A', 'AC22A', 'AC21A'],
+  topHeaderLeftCol: 'Range of use',
+  sideHeader: ['AC23A', 'AC22A', 'AC21A'],
   topHeaderLine1: ['Rating use', 'Nominal current of use A'],
   topHeaderLine2: ['Nominal current of use A'],
   topHeaderLine3: ['16', '20', '25', '32', '40'],

@@ -32,12 +32,6 @@ const CategoryPageTemplate: React.FunctionComponent<{
             variantH="custome"
             customeStyle="text-light text-left text-[2rem] xs:text-[2.5rem] xxl:text-[3rem] tracking-widest"
           />
-          {/* <CategoryPageHeader
-            categoryIndex={mainCategoryIndex}
-            categoryName={
-              catalogStructureData[mainCategoryIndex].mainCategoryName
-            }
-          /> */}
           <BasicIconsManager
             svgIcons={categoryData.svgIcons}
             labeledIcons={categoryData.labeledIcons}
