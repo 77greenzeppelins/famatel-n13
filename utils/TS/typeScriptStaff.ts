@@ -145,6 +145,9 @@ interface IF_CatalogCardTableData {
       };
 }
 
+/**
+ * used in: category "wtyczki-gniazda" / subcategory 1, 2, 3
+ */
 interface IF_CatalogCardTablesData {
   catalogCardTablesData:
     | (
@@ -168,7 +171,7 @@ interface IF_CatalogCardTablesData {
     | undefined;
 }
 interface IF_ProductsTablesSection extends IF_CatalogCardTablesData {
-  productCardIndex: number;
+  productCardIndex?: number;
   polesNumber: number;
   polesData: string[];
   ampersData: string[];
@@ -176,6 +179,93 @@ interface IF_ProductsTablesSection extends IF_CatalogCardTablesData {
   connectionTypeData: string[];
   weightData?: string[];
   wireData: string[];
+}
+/**
+ * used in: wtyczki-gniazda / jednofazowe-tablicowe aka. schuko-tablicowe
+ *
+ */
+interface IF_ProductTechDataSchucoTablicowe {
+  productTechData:
+    | {
+        line1: string[];
+        line2: string[];
+        connectionType: string[];
+        mm: string[];
+        weight: string[];
+      }
+    | {
+        line1?: undefined;
+        line2?: undefined;
+        connectionType?: undefined;
+        mm?: undefined;
+        weight?: undefined;
+      }
+    | {
+        line1: string[];
+        line2: string[];
+        weight: string[];
+        connectionType?: undefined;
+        mm?: undefined;
+      };
+}
+
+interface IFProdCatDataSchukoTablicowe {
+  line1?: {
+    label: string;
+    value: string;
+  };
+  line2?: {
+    label: string;
+    value: string;
+  };
+  line3?: {
+    label: string;
+    value: string;
+  };
+  line4?: {
+    label: string;
+    value: string;
+  };
+  line5?: {
+    label: string;
+    value: string;
+  };
+  line6?: {
+    label: string;
+    value: string;
+  };
+}
+interface IFProdCatDataSchuko {
+  line1?: {
+    label: string;
+    value: string;
+  };
+  line2?: string[];
+  line3?: string[];
+  line4?: string[];
+  line5?: string[];
+}
+interface IFProdCatDataSchuko2 {
+  line1?: {
+    label: string;
+    value: string;
+  };
+  line2?: {
+    label: string;
+    value: string[];
+  };
+  line3?: {
+    label: string;
+    value: string[];
+  };
+  line4?: {
+    label: string;
+    value: string[];
+  };
+  line5?: {
+    label: string;
+    value: string[];
+  };
 }
 
 export type {
@@ -194,4 +284,9 @@ export type {
   IF_CatalogCardTableData,
   IF_CatalogCardTablesData,
   IF_ProductsTablesSection,
+  //___
+  IF_ProductTechDataSchucoTablicowe,
+  IFProdCatDataSchukoTablicowe,
+  IFProdCatDataSchuko,
+  IFProdCatDataSchuko2,
 };

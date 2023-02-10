@@ -2,6 +2,7 @@
 import { imgWtyczkiGniazda_05_jednofazowe } from '../../../../public/images/c1_wtyczki-gniazda/5_jednofazowe/imgWtyczkiGniazda_05_jednofazowe';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
+import { catalogStructureData } from '../../../_catalogStructure_data';
 
 const catalogVersion = [
   '1167',
@@ -15,13 +16,16 @@ const catalogVersion = [
   '2998',
 ];
 
-const productCardsData: IF_ProductCardData[] = [
+const wtyczkiGniazdaSchuko_SubCategory_data = {
+  subCategoryName: catalogStructureData[0].subCategoriesNames[4],
+  subCategoryUrl: catalogStructureData[0].subCategoriesUrls[4],
+  subCategoryIndex: 4,
+};
+
+const wtyczkiGniazdaSchuko_productCards_data: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
-    // productId: 'Wtyczka gumowa IP54 / 16A / Model: 1167',
-    // shortId: 'Wtyczka gumowa IP54 / 16A',
-    // productName: 'Wtyczka gumowa / Model: 1167',
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[4]}/model-1167`,
     textIcons: ['IP54', '16A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_05_jednofazowe[0],
     type: 'Typ: Wtyczka gumowa Schuko',
@@ -30,10 +34,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
-    // productId: 'Wtyczka gumowa IP54 / 16A / Model: 2167',
-    // shortId: 'Wtyczka gumowa IP54 / 16A',
-    // productName: 'Wtyczka gumowa / Model: 2167',
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[4]}/model-2167`,
     textIcons: ['IP54', '16A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_05_jednofazowe[1],
     type: 'Typ: Gniazdo gumowe Schuko',
@@ -42,10 +43,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
-    // productId: 'Wtyczka gumowa IP54 / 16A / Model: 2167 F',
-    // shortId: 'Wtyczka gumowa IP54 / 16A',
-    // productName: 'Wtyczka gumowa / Model: 2167 F',
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[4]}/model-2167F`,
     textIcons: ['IP54', '16A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_05_jednofazowe[2],
     type: 'Typ: Gniazdo gumowe Schuko',
@@ -54,10 +52,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
-    // productId: 'Wtyczka IP54 / 16A / Model: 1165',
-    // shortId: 'Wtyczka IP54 / 16A',
-    // productName: 'Wtyczka / Model: 1165',
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[4]}/model-1165`,
     textIcons: ['IP54', '16A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_05_jednofazowe[3],
     type: 'Typ: Wtyczka gumowa Schuko',
@@ -66,10 +61,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
-    // productId: 'Gniazdo przenośne z gumową zatyczką IP54 / 16A / Model: 2165',
-    // shortId: 'Wtyczka gumowa IP54 / 16A',
-    // productName: 'Gniazdo przenośne z gumową zatyczką / Model: 2165',
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[4]}/model-2165`,
     textIcons: ['IP67', '16A', '2P+TTL', 'EU'],
     imageData: imgWtyczkiGniazda_05_jednofazowe[4],
     type: 'Typ: Gniazdo przenośne z gumową zatyczką',
@@ -78,10 +70,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
-    // productId: 'Gniazdo przenośne z gumową zatyczką IP54 / 16A / Model: 2165 F',
-    // shortId: 'Wtyczka gumowa IP54 / 16A',
-    // productName: 'Gniazdo przenośne z gumową zatyczką / Model: 2165 F',
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[4]}/model-1165F`,
     textIcons: ['IP67', '16A', '2P+TTL', 'F'],
     imageData: imgWtyczkiGniazda_05_jednofazowe[5],
     type: 'Typ: Gniazdo przenośne z gumową zatyczką',
@@ -90,10 +79,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
-    // productId: 'Rozgałęźnik potrójny / 16A / Model: 187',
-    // shortId: 'Rozgałęźnik potrójny / 16A ',
-    // productName: 'Rozgałęźnik potrójny / Model: 187',
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[4]}/model-187`,
     textIcons: ['IP67', '16A'],
     imageData: imgWtyczkiGniazda_05_jednofazowe[6],
     type: 'Typ: Rozgałęźnik potrójny',
@@ -102,10 +88,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
-    // productId: 'Rozgałęźnik potrójny / 16A / Model: 188',
-    // shortId: 'Rozgałęźnik potrójny / 16A ',
-    // productName: 'Rozgałęźnik potrójny / Model: 188',
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[4]}/model-188`,
     textIcons: ['IP67', '16A'],
     imageData: imgWtyczkiGniazda_05_jednofazowe[7],
     type: 'Typ: Rozgałęźnik potrójny',
@@ -114,10 +97,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
-    // productId: 'Kabel / 16A / Model: 2998',
-    // shortId: 'Kabel / 16A ',
-    // productName: 'Kabel / Model: 2998',
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[4]}/model-2998`,
     textIcons: ['IP67', '15m', 'H07RN-F 3G 1,5 mm²'],
     imageData: imgWtyczkiGniazda_05_jednofazowe[8],
     type: 'Typ: Kabel',
@@ -126,4 +106,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
 ];
 
-export { productCardsData };
+export {
+  wtyczkiGniazdaSchuko_SubCategory_data,
+  wtyczkiGniazdaSchuko_productCards_data,
+};

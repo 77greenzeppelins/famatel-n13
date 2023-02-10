@@ -1,7 +1,9 @@
 import React from 'react';
 /**Components**/
-import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
 import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
+import DIYTable from '../../../../../multipagesComponents/tables/diyTable/DIYTable';
+import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
+
 /**Handler**/
 import {
   mainStylesSwitcher,
@@ -13,7 +15,6 @@ import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptS
 
 /**------------------------------------------------**/
 const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
-  productCardIndex,
   polesNumber,
   polesData,
   ampersData,
@@ -23,48 +24,6 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
   wireData,
   catalogCardTablesData,
 }) => {
-  /**...**/
-
-  //   switch (polesNumber) {
-  //     case 7:
-  //       return {
-  //         columnsPoles:
-  //           'grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group',
-  //         columnsAmpers: 'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark',
-  //         columnsConnectionType:
-  //           'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
-  //         animatedRowStyle: [animH, animC, animC, animC, animC, animC, animC],
-  //         ampersStyle: [ampsH, ampC, ampC, ampC, ampC, ampC, ampC],
-  //         polesStyle: [polesH, polesC, polesC, polesC, polesC, polesC, polesC],
-  //       };
-  //     case 4:
-  //       return {
-  //         columnsPoles:
-  //           'grid grid-cols-[2fr_2fr_2fr_2fr] divide-x-2 divide-dark group',
-  //         columnsAmpers: 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark',
-  //         columnsConnectionType:
-  //           'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
-  //         animatedRowStyle: [animH, animC, animC, animC],
-  //         ampersStyle: [ampsH, ampC],
-  //         polesStyle: [polesH, polesC, polesC, polesC],
-  //         cellsContainers: [polesH, polesC, polesC, polesC],
-  //       };
-  //     case 3:
-  //       return {
-  //         columnsPoles:
-  //           'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
-  //         columnsAmpers:
-  //           'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
-  //         columnsConnectionType:
-  //           'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
-  //         animatedRowStyle: [animH, animC, animC],
-  //         ampersStyle: [ampsH, ampC, ampC],
-  //         polesStyle: [polesH, polesC, polesC],
-  //         cellsContainers: [polesH, polesC, polesC],
-  //       };
-  //   }
-  // };
-
   /**Special case for SpeedPRO IP44 / index 12**/
   const forWeirStylesSwitcher = (ampersNumber: number) => {
     switch (ampersNumber) {
@@ -89,8 +48,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
       className="flex flex-col gap-10"
     >
       <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
-
-      <div className="flex flex-col gap-y-1 w-full ">
+      <DIYTable tableLayout={'flex flex-col gap-y-1 w-full '}>
         <RowWithLayout
           rowData={ampersData}
           containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}
@@ -139,7 +97,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
             }
           />
         )}
-      </div>
+      </DIYTable>
       {/* <BasicTable
         tableHeader={tableHeader}
         tableBodyData={tableBody}
@@ -167,3 +125,45 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
 };
 
 export default TablesSection;
+
+/**...**/
+
+//   switch (polesNumber) {
+//     case 7:
+//       return {
+//         columnsPoles:
+//           'grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group',
+//         columnsAmpers: 'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark',
+//         columnsConnectionType:
+//           'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
+//         animatedRowStyle: [animH, animC, animC, animC, animC, animC, animC],
+//         ampersStyle: [ampsH, ampC, ampC, ampC, ampC, ampC, ampC],
+//         polesStyle: [polesH, polesC, polesC, polesC, polesC, polesC, polesC],
+//       };
+//     case 4:
+//       return {
+//         columnsPoles:
+//           'grid grid-cols-[2fr_2fr_2fr_2fr] divide-x-2 divide-dark group',
+//         columnsAmpers: 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark',
+//         columnsConnectionType:
+//           'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
+//         animatedRowStyle: [animH, animC, animC, animC],
+//         ampersStyle: [ampsH, ampC],
+//         polesStyle: [polesH, polesC, polesC, polesC],
+//         cellsContainers: [polesH, polesC, polesC, polesC],
+//       };
+//     case 3:
+//       return {
+//         columnsPoles:
+//           'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
+//         columnsAmpers:
+//           'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group',
+//         columnsConnectionType:
+//           'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group',
+//         animatedRowStyle: [animH, animC, animC],
+//         ampersStyle: [ampsH, ampC, ampC],
+//         polesStyle: [polesH, polesC, polesC],
+//         cellsContainers: [polesH, polesC, polesC],
+//       };
+//   }
+// };

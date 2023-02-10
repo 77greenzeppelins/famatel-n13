@@ -58,8 +58,6 @@ const ProductPageTemplate: React.FunctionComponent<{
           }
         })}
         {children}
-        {/* </SectionContentLayout> */}
-        {/* {children} */}
       </PageContentLayout>
 
       <div className="fixed w-full h-[50px] top-0 bg-dark" />

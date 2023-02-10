@@ -1,5 +1,7 @@
 /*Images saff*/
 import { imgWtyczkiGniazda_04_tablicowe_schuko } from '../../../../public/images/c1_wtyczki-gniazda/4_tablicowe-jednofazowe/imgWtyczkiGniazda_04_tablicowe-jednofazowe';
+/**Basic Data**/
+import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
@@ -14,53 +16,66 @@ const catalogVersion = [
   '13955',
   '3905', //?no on www
 ];
+const wtyczkiGniazdaSchukoTablicowe_SubCategory_data = {
+  subCategoryName: catalogStructureData[0].subCategoriesNames[3],
+  subCategoryUrl: catalogStructureData[0].subCategoriesUrls[3],
+  subCategoryIndex: 3,
+};
 
-const productCardsData: IF_ProductCardData[] = [
+const wtyczkiGniazdaSchukoTablicowe_productCards_data: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
-    path: '/',
-    textIcons: ['IP54', '16A', '2P+TTL'],
+    path: `${catalogStructureData[0].subCategoriesUrls[3]}/gniazdo-ip54-vert`,
+    textIcons: ['IP54', '16A', '2P+TTL', 'EU / PL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[0],
     type: 'Typ: Gniazda tablicowe Schuko / połączenie wertykalne',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    model: 'Model: 13953 / 13953F',
+    altName: 'Gniazdo tablicowe Schuko IP54 / połączenie wertykalne',
   },
   {
     arrayIndex: 1,
-    path: '/',
-    textIcons: ['IP54', '10A', '16A', '20A', '2P+TTL'],
+    path: `${catalogStructureData[0].subCategoriesUrls[3]}/gniazdo-ip54-hor`,
+    textIcons: ['IP54', '16A', '2P+TTL', 'EU / PL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[1],
     type: 'Typ: Gniazda tablicowe Schuko / połączenie horyzontalne',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    model: 'Model: 13950 / 13950F',
+    altName: 'Gniazdo tablicowe Schuko IP54 / połączenie horyzontalne',
   },
   {
     arrayIndex: 2,
-    path: '/',
-    textIcons: ['IP54', '16A', '2P+TTL'],
+    path: `${catalogStructureData[0].subCategoriesUrls[3]}/gniazdo-ip54-d-vert`,
+    textIcons: ['IP54', '16A', '2P+TTL', 'EU / PL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[2],
     type: 'Typ: Gniazda tablicowe Schuko / podwójne połączenie wertykalne',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    model: 'Model: 13957 / 13957F',
+    altName: 'Gniazdo tablicowe Schuko IP54 / podwójne połączenie wertykalne',
   },
   {
     arrayIndex: 3,
-    path: '/',
-    textIcons: ['IP54', '16A', '2P+TTL'],
+    path: `${catalogStructureData[0].subCategoriesUrls[3]}/gniazdo-ip54-d-hor`,
+    textIcons: ['IP54', '16A', '2P+TTL', 'EU / PL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[3],
     type: 'Typ: Gniazda tablicowe Schuko / podwójne połączenie horyzontalne',
     collection: ['Kolekcja:', 'SpeedPRO'],
+    model: 'Model: 13956 / 13956F',
+    altName: 'Gniazdo tablicowe Schuko IP54 / podwójne połączenie horyzontalne',
   },
   {
     arrayIndex: 4,
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[3]}/gniazdo-ip67-eu`,
     textIcons: ['IP67', '16A', '2P+TTL', 'EU'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[4],
     type: 'Typ: Gniazda tablicowe Schuko',
     collection: ['Kolekcja:', 'SpeedPRO'],
-    model: 'Model 13960',
+    model: 'Model: 13960',
   },
   {
     arrayIndex: 5,
-    path: '/',
-    textIcons: ['IP67', '16A', '2P+TTL', 'F'],
+    path: `${catalogStructureData[0].subCategoriesUrls[3]}/gniazdo-ip67-pl`,
+    textIcons: ['IP67', '16A', '2P+TTL', 'PL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[5],
     type: 'Typ: Gniazda tablicowe Schuko',
     collection: ['Kolekcja:', 'SpeedPRO'],
@@ -68,7 +83,7 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
-    path: '/',
+    path: `${catalogStructureData[0].subCategoriesUrls[3]}/wtyczka-23960`,
     textIcons: ['IP67', '16A', '2P+TTL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[6],
     type: 'Typ: Wtyczka Schuko',
@@ -76,22 +91,33 @@ const productCardsData: IF_ProductCardData[] = [
     model: 'Model: 23960',
   },
   {
-    arrayIndex: 6,
-    path: '/',
-    textIcons: ['IP67', '16A', '2P+TTL'],
+    arrayIndex: 7,
+    path: `${catalogStructureData[0].subCategoriesUrls[3]}/gniazdo-24960-24961`,
+    textIcons: ['IP67', '16A', '2P+TTL', 'EU / PL'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[7],
     type: 'Typ: Gniazdo Schuko',
     collection: ['Kolekcja:', 'SpeedPRO'],
     model: 'Modele: 24960 / 24961',
   },
   {
-    arrayIndex: 7,
-    path: '/',
+    arrayIndex: 8,
+    path: `${catalogStructureData[0].subCategoriesUrls[3]}/box-13955`,
     textIcons: ['Format: 50x50'],
     imageData: imgWtyczkiGniazda_04_tablicowe_schuko[8],
     type: 'Typ: Box Schuko',
     model: 'Model: 13955',
   },
+  {
+    arrayIndex: 9,
+    path: `${catalogStructureData[0].subCategoriesUrls[3]}/cover-3905`,
+    textIcons: ['Format: 50x50'],
+    imageData: imgWtyczkiGniazda_04_tablicowe_schuko[8],
+    type: 'Typ: Socket Cover 50 × 50 ',
+    model: 'Model: 3905',
+  },
 ];
 
-export { productCardsData };
+export {
+  wtyczkiGniazdaSchukoTablicowe_SubCategory_data,
+  wtyczkiGniazdaSchukoTablicowe_productCards_data,
+};
