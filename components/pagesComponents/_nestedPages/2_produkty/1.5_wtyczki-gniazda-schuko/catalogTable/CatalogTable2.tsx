@@ -23,7 +23,7 @@ const CatalogTable2: React.FunctionComponent<{
   return (
     <div
       data-component="TablesSection___container"
-      className={`flex flex-col ${horizGap} `}
+      className={`flex flex-col  ${horizGap} `}
     >
       {catalogData.line1 ? (
         <div className={mainGrid}>

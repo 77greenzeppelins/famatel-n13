@@ -76,8 +76,8 @@ const wtyczkiGniazdaSchuko_catalog_2_data: IFProdCatDataSchuko2[] = [
     line2: {
       label: '187G',
       value: [
-        'Triple adaptor Schuko',
-        'standard 3P terminal block',
+        'Rozgałęźnik potrójny Schuko EU',
+        ' 3P terminal block',
         'Rubber',
         'Earth | 16A | 250V',
       ],
@@ -85,8 +85,8 @@ const wtyczkiGniazdaSchuko_catalog_2_data: IFProdCatDataSchuko2[] = [
     line3: {
       label: '187G-5',
       value: [
-        'Triple adaptor Schuko',
-        'standard 5P terminal block',
+        'Rozgałęźnik potrójny Schuko EU',
+        '5P terminal block',
         'Rubber',
         'Earth | 16A | 250V',
       ],
@@ -94,8 +94,8 @@ const wtyczkiGniazdaSchuko_catalog_2_data: IFProdCatDataSchuko2[] = [
     line4: {
       label: '187G-5',
       value: [
-        'Triple adaptor French',
-        'standard 3P terminal block',
+        'Rozgałęźnik potrójny Schuko PL',
+        '3P terminal block',
         'Rubber',
         'Earth | 16A | 250V',
       ],
@@ -103,8 +103,8 @@ const wtyczkiGniazdaSchuko_catalog_2_data: IFProdCatDataSchuko2[] = [
     line5: {
       label: '187G-5',
       value: [
-        'Triple adaptor French',
-        'standard 5P terminal block',
+        'Rozgałęźnik potrójny Schuko PL',
+        '5P terminal block',
         'Rubber',
         'Earth | 16A | 250V',
       ],
@@ -115,8 +115,8 @@ const wtyczkiGniazdaSchuko_catalog_2_data: IFProdCatDataSchuko2[] = [
     line2: {
       label: '188G',
       value: [
-        'Triple adaptor Schuko',
-        'standard 3P terminal block',
+        'Rozgałęźnik potrójny Schuko EU',
+        '3P terminal block',
         'Rubber',
         'Earth | 16A | 250V',
       ],
@@ -124,8 +124,8 @@ const wtyczkiGniazdaSchuko_catalog_2_data: IFProdCatDataSchuko2[] = [
     line3: {
       label: '188G-5',
       value: [
-        'Triple adaptor Schuko',
-        'standard 5P terminal block',
+        'Rozgałęźnik potrójny Schuko EU',
+        '5P terminal block',
         'Rubber',
         'Earth | 16A | 250V',
       ],
@@ -133,8 +133,8 @@ const wtyczkiGniazdaSchuko_catalog_2_data: IFProdCatDataSchuko2[] = [
     line4: {
       label: '188G-5',
       value: [
-        'Triple adaptor French',
-        'standard 3P terminal block',
+        'Rozgałęźnik potrójny Schuko PL',
+        '3P terminal block',
         'Rubber',
         'Earth | 16A | 250V',
       ],
@@ -142,8 +142,8 @@ const wtyczkiGniazdaSchuko_catalog_2_data: IFProdCatDataSchuko2[] = [
     line5: {
       label: '188G-5',
       value: [
-        'Triple adaptor French',
-        'standard 5P terminal block',
+        'Rozgałęźnik potrójny Schuko PL',
+        '5P terminal block',
         'Rubber',
         'Earth | 16A | 250V',
       ],
@@ -153,7 +153,7 @@ const wtyczkiGniazdaSchuko_catalog_2_data: IFProdCatDataSchuko2[] = [
     line1: { label: 'Model', value: 'Opis' },
     line2: {
       label: '188G',
-      value: ['TT | 16A | 250V', 'Cable 3x1,5 mm2', 'H07RN-F | 15m'],
+      value: ['TT | 16A | 250V', 'Cabel 3x1,5 mm²', 'H07RN-F | 15m'],
     },
   },
 ];

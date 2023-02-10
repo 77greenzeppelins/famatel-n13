@@ -45,6 +45,7 @@ const ProductPageTemplate: React.FunctionComponent<{
             : productData.altName;
           const productPathPivotalPart = productPath[splitedPathParts.product];
           if (router.query.model === productPathPivotalPart) {
+            // console.log('ProductPageTemplate________________');
             return (
               <ProductPageNavPanel
                 key={index}
