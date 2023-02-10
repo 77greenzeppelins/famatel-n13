@@ -61,24 +61,99 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
     ['Waga', '335'],
   ],
   //___5__IP54
+  [
+    [' ', '32A'],
+    ['Bieguny', '4'],
+    ['A', '90'],
+    ['B', '180'],
+    ['C', '169'],
+    ['D', '79'],
+    ['e', '114'],
+    ['f', '63'],
+    ['G', '108'],
 
+    ['Rodzaj połączenia', 'Zaciski śrubowe'],
+    ['Przewód giętki (mm²)', '2.5 - 6'],
+    ['Waga', '455'],
+  ],
   //___6
+  [
+    [' ', '32A'],
+    ['Bieguny', '4'],
+    ['A', '90'],
+    ['B', '180'],
+    ['C', '169'],
+    ['D', '79'],
+    ['e', '114'],
+    ['f', '63'],
+    ['G', '108'],
 
-  //___7
+    ['Rodzaj połączenia', 'Zaciski śrubowe'],
+    ['Przewód giętki (mm²)', '2.5 - 6'],
+    ['Waga', '455'],
+  ],
+  //___7__s.72
+  [
+    [' ', '32A'],
+    ['Bieguny', '4'],
+    ['A', '155'],
+    ['B', '115'],
+    ['C', '98'],
+    ['D', '138'],
+    ['e', '104'],
+    ['f', '70'],
+    ['G', '92'],
 
+    ['Rodzaj połączenia', 'Zaciski śrubowe'],
+    ['Przewód giętki (mm²)', '2.5 - 6'],
+    ['Waga', '499'],
+  ],
   //___8
-  // {
-  //   ampers: [' ', '16A', '32A'],
-  //   poles: ['Bieguny', '2', '3', '2', '3'],
-  //   bodyData: [
-  //     ['A', '80', '80', '80', '80'],
-  //     ['B', '143', '143', '143', '143'],
-  //     ['C', '95', '95', '95', '95'],
-  //   ],
-  //   connectionType: ['Rodzaj połączenia', 'Zaciski śrubowe'],
-  //   mm: ['Przewód giętki (mm²)', '1 - 10', '1 - 10'],
-  //   weight: ['Waga', '231', '251', '231', '251'],
-  // },
+  [
+    [' ', '32A'],
+    ['Bieguny', '4'],
+    ['A', '155'],
+    ['B', '115'],
+    ['C', '98'],
+    ['D', '118'],
+    ['e', '118'],
+    ['f', '70'],
+    ['G', '92'],
+
+    ['Rodzaj połączenia', 'Zaciski śrubowe'],
+    ['Przewód giętki (mm²)', '2.5 - 6'],
+    ['Waga', '614'],
+  ],
+  //___9
+  [
+    [' ', '32A'],
+    ['Bieguny', '4'],
+    ['A', '73.5'],
+    ['G', '98'],
+    ['Rodzaj połączenia', 'Zaciski śrubowe'],
+    ['Przewód giętki (mm²)', '2.5 - 6'],
+    ['Waga', '822'],
+  ],
+  //___10
+  [
+    [' ', '32A'],
+    ['Bieguny', '4'],
+    ['A', '73.5'],
+    ['G', '98'],
+    ['Rodzaj połączenia', 'Zaciski śrubowe'],
+    ['Przewód giętki (mm²)', '2.5 - 6'],
+    ['Waga', '822'],
+  ],
+  //___11
+  [
+    [' ', '32A'],
+    ['Bieguny', '4'],
+    ['A', '250'],
+    ['G', '142'],
+    ['Rodzaj połączenia', 'Zaciski śrubowe'],
+    ['Przewód giętki (mm²)', '2.5 - 6'],
+    ['Waga', '971'],
+  ],
 ];
 
 export { wtyczkiGniazdaKontenerowe_tech_data };

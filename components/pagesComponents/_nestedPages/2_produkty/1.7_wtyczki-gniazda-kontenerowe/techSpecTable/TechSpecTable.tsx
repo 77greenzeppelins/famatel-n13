@@ -1,18 +1,8 @@
 import React from 'react';
 /**Components**/
 import TechSpecTableRow from './row/TechSpecTableRow';
-/**TS**/
-import { IFProdCatDataSchukoTablicowe } from '../../../../../../utils/TS/typeScriptStaff';
-import {
-  vertGap,
-  horizGap,
-  horizGapL,
-  topHeaderCell,
-  sideHeaderCell,
-  bodyCell,
-} from '../../../../../../utils/tailwindStyles';
-/**HardCoded Data**/
-const mainGrid = `grid grid-cols-[repeat(2,1fr)] ${vertGap} group`;
+/**Tailwind Styles**/
+import { horizGap } from '../../../../../../utils/tailwindStyles';
 
 /**-------------------------------**/
 const TechSpecTable: React.FunctionComponent<{

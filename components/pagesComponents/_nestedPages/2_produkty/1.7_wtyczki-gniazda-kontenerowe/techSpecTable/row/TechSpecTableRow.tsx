@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   vertGap,
-  horizGap,
-  horizGapL,
   topHeaderCell,
   sideHeaderCell,
   bodyCell,
