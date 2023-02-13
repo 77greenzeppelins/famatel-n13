@@ -24,6 +24,7 @@ const headerBottomData_2 = [
   ['Bieguny: 3P 4P 5P', 'Godz.P: 6h 9h 9h'],
   ['Bieguny: 3P 4P 5P', 'Godz.P: 9h 6h 6h'],
 ];
+//___wtyczki-gniazda-przenosne / 13311
 const headerTopData_3 = [
   ['3P = 2P + T', '4P = 3P + T', '5P = 3P + T + N'],
   ['400V', '50/60Hz'],

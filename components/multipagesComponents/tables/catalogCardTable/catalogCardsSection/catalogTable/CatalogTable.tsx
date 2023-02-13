@@ -17,10 +17,9 @@ const CatalogTable: React.FunctionComponent<IF_CatalogCardTableData> = ({
   return (
     <div
       data-component="CatalogTable__container"
-      className="w-full flex flex-col gap-2 " //divide-y-4 divide-dark
+      className="w-full flex flex-col gap-2"
     >
       {catalogCardTableData.headerType ? (
-        // <div className="bg-corpo w-full h-full">............</div>
         <CatalogTableHeader
           headerTopData={catalogCardTableData.headerTopData}
           headerBottomData={catalogCardTableData.headerBottomData}

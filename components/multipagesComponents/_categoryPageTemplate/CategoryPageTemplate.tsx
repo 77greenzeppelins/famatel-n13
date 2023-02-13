@@ -25,7 +25,11 @@ const CategoryPageTemplate: React.FunctionComponent<{
     >
       <PageContentLayout>
         <SectionContentLayout>
-          <SmallPseudoHeader text="Kategoria" />
+          <SmallPseudoHeader
+            text="Kategoria"
+            hasBox={true}
+            hasVerticalOrnament={false}
+          />
           <H1AnimatedPresence
             uniqueKey={mainCategoryIndex}
             text={catalogStructureData[mainCategoryIndex].mainCategoryName}
@@ -42,6 +46,8 @@ const CategoryPageTemplate: React.FunctionComponent<{
           <SmallPseudoHeader
             text="Katalog podkategorii"
             containerStyle="pb-4 md:pb-10"
+            hasBox={true}
+            hasVerticalOrnament={false}
           />
           <SubCategoriesCatalog subCategoryData={categoryData} />
         </SectionContentLayout>

@@ -34,11 +34,18 @@
     --corpo-dark: #1d1d1b;
     --light: #ffffff;
     --vYellow: #ceae0e;
-    --vTintYellow: #f0cd1f;
-    --vRed: #a01b29;
-    --vTintRed: #cc2234;
+    --vTintYellow: #a48b0b;
     --vBlue: #134976;
     --vTintBlue: #217dca;
+    --vRed: #a01b29;
+    --vTintRed: #cc2234;
+    --vDark: #2c3038;
+    --vTintDark: #23262c;
+    --vViolet: #434592;
+    --vModViolet: #523799;
+    --vGreen: #32754c;
+    --vModGreen: #1f804b;
+    --vModLight: #fff8f7;
   }
 }
 

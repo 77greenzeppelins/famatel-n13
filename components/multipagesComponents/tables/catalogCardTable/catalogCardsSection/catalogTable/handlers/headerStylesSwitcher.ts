@@ -7,7 +7,7 @@ const headerStylesSwitcher = (headerType: number, index?: number) => {
         topCell_1: 'bg-dark flex flex-col p-1 ',
         bottomCell_1_container:
           'grid grid-cols-[1fr_1fr_1fr]  divide-x-2 divide-dark ',
-        vatCollors: ['bg-vY', 'bg-vB', 'bg-vR', 'bg-[#2c3038]'],
+        vatCollors: ['bg-vY', 'bg-vB', 'bg-vR', 'bg-vD'],
         vatLabel: 'text-light',
       };
 
@@ -18,8 +18,7 @@ const headerStylesSwitcher = (headerType: number, index?: number) => {
         topCell_1: 'bg-dark flex flex-col p-1 ',
         bottomCell_1_container:
           'grid grid-cols-[1fr_1fr_1fr]  divide-x-2 divide-dark',
-
-        vatCollors: ['bg-[#134976]', 'bg-[#a01b29]'],
+        vatCollors: ['bg-vB]', 'bg-vR'],
         vatLabel: 'text-light',
       };
     case 3:
@@ -28,7 +27,7 @@ const headerStylesSwitcher = (headerType: number, index?: number) => {
         topCell_1: 'bg-dark flex flex-col  p-1',
         bottomCell_1_container:
           'grid grid-cols-[1fr_1fr_1fr]  divide-x-2 divide-dark',
-        vatCollors: ['bg-[#a01b29]'],
+        vatCollors: ['bg-vR'],
         vatLabel: 'text-light',
       };
     //___wtyczki-gniazda-niskie-napiecia
@@ -39,12 +38,7 @@ const headerStylesSwitcher = (headerType: number, index?: number) => {
         topCell_1: 'bg-dark flex flex-col p-1 ',
         bottomCell_1_container:
           'grid grid-cols-[1fr_1fr_1fr]  divide-x-2 divide-dark ',
-        vatCollors: [
-          'bg-[#434592]', //fiolet
-          'bg-[#fff]',
-          'bg-[#32754c]',
-          'bg-[#fff]',
-        ],
+        vatCollors: ['bg-vV', 'bg-light', 'bg-vG', 'bg-light'],
         vatLabel: index && index % 2 ? 'text-light' : 'text-dark',
       };
     //__gniazda-z-blokada-
@@ -55,9 +49,20 @@ const headerStylesSwitcher = (headerType: number, index?: number) => {
         topCell_1: 'bg-dark flex flex-col p-1 ',
         bottomCell_1_container:
           'grid grid-cols-[1fr_1fr_1fr]  divide-x-2 divide-dark ',
-        vatCollors: ['bg-[#ceae0e]', 'bg-[#134976]', 'bg-[#a01b29]'],
+        vatCollors: ['bg-vY', 'bg-vB', 'bg-vR'],
         vatLabel: 'text-light',
       };
+    //__wtyczki-gniazda / estradowe
+    // case 7:
+    //   return {
+    //     containerStyle:
+    //       'grid grid-cols-[6fr_4fr] divide-x-2 divide-dark group ',
+    //     topCell_1: 'bg-dark',
+    //     bottomCell_1_container:
+    //       'grid grid-cols-[1fr_1fr_1fr]  divide-x-2 divide-dark ',
+    //     vatCollors: ['bg-[#ceae0e]'],
+    //     vatLabel: 'text-light',
+    //   };
   }
 };
 

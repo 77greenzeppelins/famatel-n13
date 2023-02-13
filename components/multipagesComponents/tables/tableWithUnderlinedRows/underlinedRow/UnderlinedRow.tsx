@@ -26,7 +26,7 @@ const UnderlinedRow: React.FunctionComponent<{
               className={
                 textStyle
                   ? textStyle[i]
-                  : 'header-link-label text-grey group-hover:text-light ease-in duration-300 disable '
+                  : 'p-small text-grey group-hover:text-light ease-in duration-300 disable'
               }
             >
               {cellText}

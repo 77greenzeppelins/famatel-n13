@@ -1,3 +1,15 @@
+import { corpoColors } from '../../../../../../../data/_data';
+const {
+  grey,
+  vModYellow,
+  vModBlue,
+  vModRed,
+  vModDark,
+  vModViolet,
+  vModGreen,
+  vModLight,
+} = corpoColors;
+
 const bodyStylesSwitcher = (bodyType: number, index?: number) => {
   switch (bodyType) {
     case 1:
@@ -8,14 +20,8 @@ const bodyStylesSwitcher = (bodyType: number, index?: number) => {
         //___concept: all cells but ampers
         rowContainerStyle:
           'col-start-2 grid grid-cols-[1fr_1fr_2fr_2fr_2fr_2fr] border-l-[2px]',
-        vatColors: [
-          'bg-grey',
-          'bg-grey',
-          'bg-[#ceae0e]',
-          'bg-[#134976]',
-          'bg-[#a01b29]',
-          'bg-[#2c3038]',
-        ],
+        vatColors: ['bg-grey', 'bg-grey', 'bg-vY', 'bg-vB', 'bg-vR', 'bg-vD'],
+        vatTintColors: [grey, grey, vModYellow, vModBlue, vModRed, vModDark],
         vatLabel: 'text-light',
         amperStyle:
           'fc col-start-1 col-end-2 row-span-full bg-greyShade1 border-t-2 border-dark',
@@ -27,7 +33,8 @@ const bodyStylesSwitcher = (bodyType: number, index?: number) => {
           'grid grid-cols-[1fr_8fr] grid-rows-[1fr_1fr_1fr] group divide-y-2 divide-dark',
         rowContainerStyle:
           'col-start-2 grid grid-cols-[1fr_1fr_3fr_3fr] border-l-[2px]',
-        vatColors: ['bg-grey', 'bg-grey', 'bg-[#134976]', 'bg-[#a01b29]'],
+        vatColors: ['bg-grey', 'bg-grey', 'bg-vB', 'bg-vR'],
+        vatTintColors: [grey, grey, vModBlue, vModRed],
         vatLabel: 'text-light',
         amperStyle:
           'fc col-start-1 col-end-2 row-span-full bg-greyShade1 border-t-2  border-dark',
@@ -38,7 +45,8 @@ const bodyStylesSwitcher = (bodyType: number, index?: number) => {
           'grid grid-cols-[1fr_5fr] divide-x-2 divide-dark group ',
         rowContainerStyle:
           'col-start-2 grid grid-cols-[1fr_1fr_3fr] border-l-[2px]',
-        vatColors: ['bg-grey', 'bg-grey', 'bg-[#a01b29]'],
+        vatColors: ['bg-grey', 'bg-grey', 'bg-vR'],
+        vatTintColors: [grey, grey, vModRed],
         vatLabel: 'text-light',
         amperStyle: 'fc col-start-1 col-end-2 row-span-full bg-greyShade1 ',
       };
@@ -53,10 +61,18 @@ const bodyStylesSwitcher = (bodyType: number, index?: number) => {
         vatColors: [
           'bg-grey',
           'bg-grey',
-          'bg-[#434592]', //fiolet
-          'bg-[#fff]',
-          'bg-[#32754c]',
-          'bg-[#fff]',
+          'bg-vV',
+          'bg-light',
+          'bg-vG',
+          'bg-light',
+        ],
+        vatTintColors: [
+          grey,
+          grey,
+          vModViolet,
+          vModLight,
+          vModGreen,
+          vModLight,
         ],
         vatLabel:
           index && index > 1
@@ -75,13 +91,8 @@ const bodyStylesSwitcher = (bodyType: number, index?: number) => {
         //___concept: all cells but ampers
         rowContainerStyle:
           'col-start-2 grid grid-cols-[1fr_1fr_2fr_2fr_2fr] border-l-[2px]',
-        vatColors: [
-          'bg-grey',
-          'bg-grey',
-          'bg-[#ceae0e]',
-          'bg-[#134976]',
-          'bg-[#a01b29]',
-        ],
+        vatColors: ['bg-grey', 'bg-grey', 'bg-vY', 'bg-vB', 'bg-vR'],
+        vatTintColors: [grey, grey, vModYellow, vModBlue, vModRed],
         vatLabel: 'text-light',
         amperStyle:
           'fc col-start-1 col-end-2 row-span-full bg-greyShade1 border-t-2 border-dark',
@@ -95,19 +106,13 @@ const bodyStylesSwitcher = (bodyType: number, index?: number) => {
         //___concept: all cells but ampers
         rowContainerStyle:
           'col-start-2 grid grid-cols-[1fr_1fr_2fr_2fr_2fr_2fr] border-l-[2px]',
-        vatColors: [
-          'bg-grey',
-          'bg-grey',
-          'bg-[#ceae0e]',
-          'bg-[#134976]',
-          'bg-[#a01b29]',
-          'bg-[#2c3038]',
-        ],
+        vatColors: ['bg-grey', 'bg-grey', 'bg-vY', 'bg-vB', 'bg-vR', 'bg-vD'],
+        vatTintColors: [grey, grey, vModYellow, vModBlue, vModRed, vModDark],
         vatLabel: 'text-light',
         amperStyle:
           'fc col-start-1 col-end-2 row-span-full bg-greyShade1 border-t-2 border-dark',
       };
-    //___used in adapteryPrzemyslowe; similar to case_1 / 6 but has grid with 1 row
+    //___used in adapteryPrzemyslowe / poczwórne adaptery...=> similar to case_1 / 6 but has grid with 1 row
     case 8:
       return {
         containerStyle:
@@ -116,14 +121,8 @@ const bodyStylesSwitcher = (bodyType: number, index?: number) => {
         //___concept: all cells but ampers
         rowContainerStyle:
           'col-start-2 grid grid-cols-[1fr_1fr_2fr_2fr_2fr_2fr] border-l-[2px]',
-        vatColors: [
-          'bg-grey',
-          'bg-grey',
-          'bg-[#ceae0e]',
-          'bg-[#134976]',
-          'bg-[#a01b29]',
-          'bg-[#2c3038]',
-        ],
+        vatColors: ['bg-grey', 'bg-grey', 'bg-vY', 'bg-vB', 'bg-vR', 'bg-vD'],
+        vatTintColors: [grey, grey, vModYellow, vModBlue, vModRed, vModDark],
         vatLabel: 'text-light',
         amperStyle:
           'fc col-start-1 col-end-2 row-span-full bg-greyShade1 border-t-2 border-dark',

@@ -34,14 +34,33 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
             parentCategoryName={parentCategoryName}
             parentCategoryUrl={parentCategoryUrl}
           />
-          <SmallPseudoHeader text="Podkategoria" />
+          <SmallPseudoHeader
+            text="Podkategoria"
+            hasBox={true}
+            hasVerticalOrnament={false}
+          />
           <SubCategoryPageHeader
             fullName={subCategoryName}
             subCategoryIndex={arrayIndex}
           />
         </SectionContentLayout>
+        {/* <SectionContentLayout>
+          <SmallPseudoHeader
+            text="Podkategoria"
+            hasBox={true}
+            hasVerticalOrnament={false}
+          />
+          <SubCategoryPageHeader
+            fullName={subCategoryName}
+            subCategoryIndex={arrayIndex}
+          />
+        </SectionContentLayout> */}
         <SectionContentLayout>
-          <SmallPseudoHeader text="Katalog produktów" />
+          <SmallPseudoHeader
+            text="Katalog produktów"
+            hasBox={true}
+            hasVerticalOrnament={false}
+          />
           <ProductsCatalog productCardsData={productCardsData} />
         </SectionContentLayout>
         {

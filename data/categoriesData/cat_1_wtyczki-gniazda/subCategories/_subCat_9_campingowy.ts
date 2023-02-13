@@ -1,19 +1,15 @@
 /*Images saff*/
 import { imgWtyczkiGniazda_09_campingowe } from '../../../../public/images/c1_wtyczki-gniazda/9_camping/imgWtyczkiGniazda_09_campingowe';
-
-//
+/**Basic Data**/
+import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
-const catalogVersion = [
-  '13912',
-  '13913',
-  '13919',
-  '13000',
-  '13011', //...temporaily
-  '13917',
-  //...skip the rest
-];
+const wtyczkiGniazdaCampingowe_SubCategory_data = {
+  subCategoryName: catalogStructureData[0].subCategoriesNames[8],
+  subCategoryUrl: catalogStructureData[0].subCategoriesUrls[8],
+  subCategoryIndex: 8,
+};
 
 const productCardsData: IF_ProductCardData[] = [
   {
@@ -64,4 +60,4 @@ const productCardsData: IF_ProductCardData[] = [
   },
 ];
 
-export { productCardsData };
+export { wtyczkiGniazdaCampingowe_SubCategory_data, productCardsData };

@@ -5,19 +5,19 @@ import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
-const catalogVersion = [
-  '14308',
-  '24308',
-  '24339',
-  '24398',
-  '25053',
-  '26028',
-  '25074',
-  '25136',
-  '25727',
-  '26327',
-  '26514',
-];
+// const catalogVersion = [
+//   '14308',
+//   '24308',
+//   '24339',
+//   '24398',
+//   '25053',
+//   '26028',
+//   '25074',
+//   '25136',
+//   '25727',
+//   '26327',
+//   '26514',
+// ];
 const wtyczkiGniazdaKontenerowe_SubCategory_data = {
   subCategoryName: catalogStructureData[0].subCategoriesNames[6],
   subCategoryUrl: catalogStructureData[0].subCategoriesUrls[6],

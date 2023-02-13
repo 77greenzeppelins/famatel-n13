@@ -23,7 +23,11 @@ const ProductPageNavPanel: React.FunctionComponent<IF_ProductPageNavPanel> = ({
         className="flex gap-x-4  "
         // className="flex flex-col gap-y-4"
       >
-        <SmallPseudoHeader text="Kategoria" />
+        <SmallPseudoHeader
+          text="Kategoria"
+          hasBox={true}
+          hasVerticalOrnament={false}
+        />
         <p className="header-link-label text-grey disable">/</p>
         <Link href={categoryUrl} scroll={false}>
           <div className="flex group">
@@ -41,7 +45,11 @@ const ProductPageNavPanel: React.FunctionComponent<IF_ProductPageNavPanel> = ({
       </div>
 
       <div className="flex gap-x-4  ">
-        <SmallPseudoHeader text="Podkategoria" />
+        <SmallPseudoHeader
+          text="Podkategoria"
+          hasBox={true}
+          hasVerticalOrnament={false}
+        />
         {
           /*
         why this condition?

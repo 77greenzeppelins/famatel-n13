@@ -1,31 +1,36 @@
 import React from 'react';
 /**Hardcoded Data**/
 const containerDefaultStyle = '';
-const textDefaultStyle = 'header-link-label text-grey';
-const verticalOrnamentDefaultStyle = 'h-auto w-[10px] border-l border-corpo';
+const textDefaultStyle =
+  'header-link-label text-grey align-middle leading-none';
+const verticalOrnamentDefaultStyle = 'h-[16px] w-[10px] border-l border-corpo';
+const boxDefaultStyle = 'h-[16px] aspect-square bg-corpo';
 
+/**-----------------------------------------------------**/
 const SmallPseudoHeader: React.FunctionComponent<{
   text: string;
   containerStyle?: string;
   textStyle?: string;
   verticalOrnamentStyle?: string;
-  hesVerticalOrnament?: boolean;
-  hesHorizontalOrnament?: boolean;
+  hasVerticalOrnament?: boolean;
+  hasHorizontalOrnament?: boolean;
+  hasBox?: boolean;
 }> = ({
   text,
   containerStyle,
   textStyle,
   verticalOrnamentStyle,
-  hesVerticalOrnament = true,
-  hesHorizontalOrnament = false,
+  hasVerticalOrnament = true,
+  hasHorizontalOrnament = false,
+  hasBox = false,
 }) => {
   return (
     <div
       className={`${
         containerStyle ? containerStyle : containerDefaultStyle
-      }relative flex disable`}
+      } relative flex items-center disable-soft ${hasBox ? 'gap-4' : 'gap-0'} `}
     >
-      {hesVerticalOrnament && (
+      {hasVerticalOrnament && (
         <div
           className={
             verticalOrnamentStyle
@@ -34,12 +39,13 @@ const SmallPseudoHeader: React.FunctionComponent<{
           }
         />
       )}
-      {hesHorizontalOrnament && (
+      {hasHorizontalOrnament && (
         <div className="absolute bottom-0 h-[1px] w-full border-b border-corpo" />
       )}
-      {hesHorizontalOrnament && (
+      {hasHorizontalOrnament && (
         <div className="absolute top-0 h-[1px] w-full border-b border-corpo" />
       )}
+      {hasBox && <div className={boxDefaultStyle} />}
       <p className={textStyle ? textStyle : textDefaultStyle}>{text}</p>
     </div>
   );

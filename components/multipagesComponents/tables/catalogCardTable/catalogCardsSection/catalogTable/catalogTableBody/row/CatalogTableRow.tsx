@@ -5,8 +5,9 @@ import { bodyStylesSwitcher } from '../../handlers/bodyStylesSwitcher';
 const CatalogTableRow: React.FunctionComponent<{
   rowData: string[] | (string | undefined)[];
   vatColors?: string[];
+  vatTintColors?: string[];
   bodyType: number;
-}> = ({ rowData, vatColors, bodyType }) => {
+}> = ({ rowData, vatColors, vatTintColors, bodyType }) => {
   return (
     <>
       {rowData.map((label, index) => (
@@ -18,11 +19,19 @@ const CatalogTableRow: React.FunctionComponent<{
         >
           <motion.div
             whileHover={
-              index > 1
-                ? { opacity: 0.5, transition: { duration: 0.4 } }
+              index > 1 && vatTintColors
+                ? // ? { opacity: 0.5, transition: { duration: 0.4 } }
+                  // : { opacity: 1 }
+                  {
+                    backgroundColor: vatTintColors && vatTintColors[index],
+                    transition: { duration: 0.4 },
+                  }
                 : { opacity: 1 }
             }
-            className={`absolute inset-0 ${vatColors && vatColors[index]} `} //___group-hover:opacity-50 //___ bodyStylesSwitcher(bodyType)?.vatColors[index]
+            className={`absolute inset-0 ${vatColors && vatColors[index]} `}
+            //___hover:${vatTintColors && vatTintColors[4]}
+            //__hover:opacity-${vatTintColors[index]}
+            //___group-hover:opacity-50 //___ bodyStylesSwitcher(bodyType)?.vatColors[index]
           />
           <p
             className={`relative p-small text-center pointer-events-none ${
@@ -30,6 +39,7 @@ const CatalogTableRow: React.FunctionComponent<{
             } `}
           >
             {label}
+            {/* {index} */}
           </p>
         </motion.div>
       ))}

@@ -7,7 +7,7 @@ import img4 from './1_przenosne/1.1_03_14304.webp';
 import img5 from './5_jednofazowe/1.5_08_188G.webp';
 import img6 from './6_niskie-napiecia/1.6_07_23072.webp';
 import img7 from './7_chlodnicze/1.7_04_24398.webp';
-import img8 from './8_estradowe/1.8_08_17020.webp';
+import img8 from './8_estradowe/1.8_08_17122.webp';
 import img9 from './9_camping/1.9_04_13000.webp';
 
 /**TS**/

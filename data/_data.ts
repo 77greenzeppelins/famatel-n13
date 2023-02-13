@@ -14,20 +14,31 @@ const linksToInstantContactData = {
 
 /**Data for Data**/
 const corpoColors: IF_CorpoColors = {
+  //___basic
   light: '#ffffff',
   orange: '#e74124',
   grey: '#9d9e9f',
+  dark: '#1d1d1b',
+  //___grey modifications
   greyShade1: '#6d6e6f',
   greyShade2: '#2f2f2f',
   greyTint1: '#b0b1b2',
   greyTint2: '#d7d8d8',
-  dark: '#1d1d1b',
-  green: '#32754c',
-  violet: '#434592',
-  vYellow: '#134976',
+  //___vat collors
+  vYellow: '#ceae0e',
   vBlue: '#134976',
   vRed: '#a01b29',
   vDark: '#2c3038',
+  green: '#32754c',
+  violet: '#434592',
+  //___vat collors mod
+  vModYellow: '#a48b0b',
+  vModBlue: '#217dca',
+  vModRed: '#cc2234',
+  vModDark: '#23262c',
+  vModViolet: '#2A1764',
+  vModGreen: '#02681d',
+  vModLight: '#eaeaea',
 };
 
 const pagesUrl: IF_PagesUrl = {
