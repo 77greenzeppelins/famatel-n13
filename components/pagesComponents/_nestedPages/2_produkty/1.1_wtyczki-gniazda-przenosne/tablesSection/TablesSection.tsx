@@ -64,7 +64,9 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
           hasBox={true}
           hasVerticalOrnament={false}
         />
-        <DIYTable tableLayout={'flex flex-col gap-y-1 w-full '}>
+        <DIYTable
+          tableLayout={'flex flex-col divide-y-[2px] divide-dark w-full '}
+        >
           <RowWithLayout
             rowData={ampersData}
             containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}

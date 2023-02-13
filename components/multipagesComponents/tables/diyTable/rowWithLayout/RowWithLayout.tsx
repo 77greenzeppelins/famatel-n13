@@ -1,5 +1,8 @@
 import React from 'react';
-
+/**
+used in: wtyczki-gniazda / all tech tables; intensively used!
+*/
+/**--------------------------------------------------**/
 const RowWithLayout: React.FunctionComponent<{
   containerLayout?: string;
   rowData: string[];

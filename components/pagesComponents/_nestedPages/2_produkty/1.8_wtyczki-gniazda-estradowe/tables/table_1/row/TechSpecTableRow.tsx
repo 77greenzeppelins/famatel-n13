@@ -11,7 +11,7 @@ const defaultHeaderGrid = `col-start-2 row-start-1 col-span-full ${topHeaderCell
 
 /**-----------------------------------------------------**/
 const TechSpecTableRow: React.FunctionComponent<{
-  rowIndex: number;
+  rowIndex: number; //__for extracting header or any specialRow...
   labels: string[];
   mainGrid?: string;
   headerGrid?: string;

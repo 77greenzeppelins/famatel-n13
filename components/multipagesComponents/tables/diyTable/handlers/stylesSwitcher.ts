@@ -24,7 +24,7 @@ const polesH = 'p-small text-light py-2 pl-2 bg-greyShade1';
 const polesC = ' text-light p-small text-center py-2 bg-greyShade1';
 //___animated
 const animH =
-  'p-small text-light py-2 pl-2 bg-greyShade1 group-hover:bg-greyShade2 ease-in duration-300 select-none';
+  'p-small text-light py-2 pl-2 bg-greyShade1 group-hover:bg-corpo ease-in duration-300 select-none';
 const animC =
   'fc text-dark p-small text-center py-2 bg-greyTint2  group-hover:bg-light ease-in duration-300 select-none';
 
