@@ -4,17 +4,22 @@ import { useRouter } from 'next/router';
 /**Components**/
 import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
-import TechSpecTable from './techSpecTable/TechSpecTable';
+import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import CatalogTable from './catalogTable/CatalogTable';
+import CatalogTable2 from './catalogTable/CatalogTable2';
 /**Basic Data**/
-import { splitedPathParts } from '../../../../../data/_data';
+import {
+  smallPseudoHeaders,
+  splitedPathParts,
+} from '../../../../../data/_data';
 import {
   wtyczkiGniazdaSchuko_catalog_data,
   wtyczkiGniazdaSchuko_catalog_2_data,
 } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_5_jednofazowe_prodCat';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
-import CatalogTable2 from './catalogTable/CatalogTable2';
+/**Tailwind Styles**/
+import { productPagesSectionContentLayout } from '../../../../../utils/tailwindStyles';
 
 /**----------------------------------------**/
 const WtyczkiGniazdaSchukoContent: React.FunctionComponent<{
@@ -38,12 +43,20 @@ const WtyczkiGniazdaSchukoContent: React.FunctionComponent<{
           return (
             <React.Fragment key={index}>
               {/* <SectionContentLayout></SectionContentLayout> */}
-              <SectionContentLayout divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 ">
+              <SectionContentLayout divStyle={productPagesSectionContentLayout}>
                 <div className="flex flex-col gap-y-10 w-full lg:w-[50%] ">
-                  <CatalogTable catalogData={catalogData} />
-                  <CatalogTable2 catalogData={catalogData2} />
+                  <SectionContentLayout divStyle="flex flex-col gap-y-6">
+                    <SmallPseudoHeader
+                      text={smallPseudoHeaders.l1}
+                      hasBox={true}
+                      hasVerticalOrnament={false}
+                    />
+
+                    <CatalogTable catalogData={catalogData} />
+                    <CatalogTable2 catalogData={catalogData2} />
+                  </SectionContentLayout>
                 </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]  bg-grey">
+                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]">
                   <SquareHolderWithImage
                     imageData={productImage}
                     squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"

@@ -190,6 +190,10 @@ const textLabels = {
     l3: 'Normy',
   },
 };
+const smallPseudoHeaders = {
+  l1: 'Karta katalogowa',
+  l2: 'Specyfikacja techniczna',
+};
 /**...............**/
 export {
   pagesUrl,
@@ -207,6 +211,7 @@ export {
   //___
   textLabels,
   splitedPathParts,
+  smallPseudoHeaders,
 };
 
 // const mainCategories: IF_MainCategorySpecification[] = [

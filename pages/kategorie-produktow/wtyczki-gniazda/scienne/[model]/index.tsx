@@ -6,7 +6,6 @@ import WtyczkiGniazdaScienneContent from '../../../../../components/pagesCompone
 /**BasicData**/
 import { mainCategoriesSummaryData } from '../../../../../data/_data';
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
-
 import {
   wtyczkiGniazdaScienne_productCards_data,
   wtyczkiGniazdaScienne_SubCategory_data,

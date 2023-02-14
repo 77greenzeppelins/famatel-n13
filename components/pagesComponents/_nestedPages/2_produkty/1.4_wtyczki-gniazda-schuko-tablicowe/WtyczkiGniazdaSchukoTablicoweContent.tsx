@@ -4,15 +4,21 @@ import { useRouter } from 'next/router';
 /**Components**/
 import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
+import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import TechSpecTable from './techSpecTable/TechSpecTable';
 import CatalogTable from './catalogTable/CatalogTable';
+import ProtectionSection from './protectionSection/ProtectionSection';
 /**Basic Data**/
-import { splitedPathParts } from '../../../../../data/_data';
+import {
+  smallPseudoHeaders,
+  splitedPathParts,
+} from '../../../../../data/_data';
 import { wtyczkiGniazdaSchukoTablicowe_tech_data } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_4_tablicowe-jednofazowe_techSpec';
 import { wtyczkiGniazdaSchukoTablicowe_catalog_data } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_4_tablicowe-jednofazowe_prodCat';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
-import ProtectionSection from './protectionSection/ProtectionSection';
+/**Tailwind Styles**/
+import { productPagesSectionContentLayout } from '../../../../../utils/tailwindStyles';
 
 /**----------------------------------------**/
 const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
@@ -34,12 +40,26 @@ const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
           return (
             <React.Fragment key={index}>
               {/* <SectionContentLayout></SectionContentLayout> */}
-              <SectionContentLayout divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 ">
-                <div className="flex flex-col gap-y-10 w-full lg:w-[50%] ">
-                  <CatalogTable catalogData={catalogData} />
-                  <TechSpecTable productTechData={productTechData} />
+              <SectionContentLayout divStyle={productPagesSectionContentLayout}>
+                <div className="flex flex-col gap-y-10 lg:gap-y-20 w-full lg:w-[50%] ">
+                  <SectionContentLayout divStyle="flex flex-col gap-y-6">
+                    <SmallPseudoHeader
+                      text={smallPseudoHeaders.l1}
+                      hasBox={true}
+                      hasVerticalOrnament={false}
+                    />
+                    <CatalogTable catalogData={catalogData} />
+                  </SectionContentLayout>
+                  <SectionContentLayout divStyle="flex flex-col gap-y-6">
+                    <SmallPseudoHeader
+                      text={smallPseudoHeaders.l2}
+                      hasBox={true}
+                      hasVerticalOrnament={false}
+                    />
+                    <TechSpecTable productTechData={productTechData} />
+                  </SectionContentLayout>
                 </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]  bg-grey">
+                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]">
                   <SquareHolderWithImage
                     imageData={productImage}
                     squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
@@ -48,7 +68,7 @@ const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
                   />
                 </div>
               </SectionContentLayout>
-              {index < 3 ? <ProtectionSection /> : null}
+              {index < 6 ? <ProtectionSection /> : null}
             </React.Fragment>
           );
         }

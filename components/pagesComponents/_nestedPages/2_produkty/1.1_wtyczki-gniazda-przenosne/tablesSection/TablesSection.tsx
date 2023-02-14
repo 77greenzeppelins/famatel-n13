@@ -14,6 +14,8 @@ import {
 } from '../../../../../multipagesComponents/tables/diyTable/handlers/stylesSwitcher';
 /**TS**/
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
+/**Tailwind Styles*/
+import { horizGap } from '../../../../../../utils/tailwindStyles';
 
 /**------------------------------------------------**/
 const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
@@ -64,9 +66,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
           hasBox={true}
           hasVerticalOrnament={false}
         />
-        <DIYTable
-          tableLayout={'flex flex-col divide-y-[2px] divide-dark w-full '}
-        >
+        <DIYTable tableLayout={`flex flex-col ${horizGap} `}>
           <RowWithLayout
             rowData={ampersData}
             containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}

@@ -124,12 +124,27 @@ interface IF_ProductCardData {
   altName?: string;
 }
 
-interface IF_ProductPageNavPanel {
-  categoryName: string;
-  categoryUrl: string;
-  subCategoryName: string;
-  subCategoryUrl: string;
-  productName?: string;
+///___ IF_ProductPageNavPanel should be replaced by IF_CatalogNavPanel
+// interface IF_ProductPageNavPanel {
+//   categoryName: string;
+//   categoryUrl: string;
+//   subCategoryName: string;
+//   subCategoryUrl: string;
+//   productName?: string;
+// }
+
+interface IF_CatalogNavPanel {
+  // categoryName: string;
+  // categoryUrl: string;
+  // subCategoryName?: string;
+  // subCategoryUrl?: string;
+  // productName?: string;
+  labels: string[];
+  namesLevels: string[];
+  urlsLevels: string[];
+  // productName?: string;
+  lastLevelName?: string;
+  lastLevelLab: string;
 }
 
 interface IF_CatalogCardTableData {
@@ -286,7 +301,7 @@ export type {
   IF_MainPagesItem,
   IF_ProductCardData,
   //___
-  IF_ProductPageNavPanel,
+  // IF_ProductPageNavPanel,
   //___
   IF_CatalogCardTableData,
   IF_CatalogCardTablesData,
@@ -296,4 +311,6 @@ export type {
   IFProdCatDataSchukoTablicowe,
   IFProdCatDataSchuko,
   IFProdCatDataSchuko2,
+  //___
+  IF_CatalogNavPanel,
 };

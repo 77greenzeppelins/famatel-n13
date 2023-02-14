@@ -10,21 +10,12 @@ import { splitedPathParts } from '../../../data/_data';
 import { IF_ProductCardData } from '../../../utils/TS/typeScriptStaff';
 
 /**---------------------------------**/
-const ProductPageTemplate: React.FunctionComponent<{
+const ProductPageTemplateShort: React.FunctionComponent<{
   categoryName: string;
   categoryUrl: string;
-  subCategoryName: string;
-  subCategoryUrl: string;
   productCardsData: IF_ProductCardData[];
   children: ReactNode;
-}> = ({
-  categoryName,
-  categoryUrl,
-  subCategoryName,
-  subCategoryUrl,
-  productCardsData,
-  children,
-}) => {
+}> = ({ categoryName, categoryUrl, productCardsData, children }) => {
   /**Router Section**/
   const router = useRouter();
 
@@ -47,11 +38,11 @@ const ProductPageTemplate: React.FunctionComponent<{
             return (
               <CatalogNavPanel
                 key={index}
-                labels={['Kategoria', 'Podkategoria']}
-                namesLevels={[categoryName, subCategoryName]}
-                urlsLevels={[categoryUrl, subCategoryUrl]}
+                labels={['Kategoria']}
+                namesLevels={[categoryName]}
+                urlsLevels={[categoryUrl]}
                 lastLevelName={productName}
-                lastLevelLab="Produkt:"
+                lastLevelLab="Podkategoria:"
               />
             );
           }
@@ -64,7 +55,7 @@ const ProductPageTemplate: React.FunctionComponent<{
   );
 };
 
-export default ProductPageTemplate;
+export default ProductPageTemplateShort;
 
 // <ProductPageContent
 //   key={index}

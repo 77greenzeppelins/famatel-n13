@@ -3,7 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 /**Handler**/
 import { createBackgroundStyle } from '../handlers/rowType_5_createBackgroundStyle';
-
+/**
+ * used in "Adaptery przemyslowe"
+ * used in "Niskie Napięcia Table"
+ */
 /**---------------------------**/
 const RowType_5 = ({
   rowData,
@@ -34,7 +37,7 @@ const RowType_5 = ({
         >
           <motion.div
             whileHover={{
-              opacity: 0.7,
+              backgroundColor: '#ffffff',
               transition: { duration: 0.4, delay: 0.2 },
             }}
             className={`${createBackgroundStyle({

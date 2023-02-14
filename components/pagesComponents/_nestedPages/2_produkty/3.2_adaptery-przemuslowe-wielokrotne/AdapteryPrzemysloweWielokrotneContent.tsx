@@ -55,16 +55,17 @@ const AdapteryPrzemysloweWielokrotneContent: React.FunctionComponent<{
                       catalogCardTablesData_2={catalogCardTablesData_2}
                     />
 
-                    <DIYTable tableLayout="flex flex-col gap-y-[4px]">
+                    <DIYTable tableLayout="flex flex-col gap-y-[2px]">
                       <RowType_6
                         rowData={
                           adapteryPrzemysloweWielokrotne_tech_data[index].header
                         }
                         rowContainerStyle={'grid grid-cols-[repeat(5,1fr)]'}
                         glitchedCellStyle={
-                          'relative col-start-1 col-end-3 fc flex-col border-x-[1px] border-dark gap-y-[1px]'
+                          'relative col-start-1 col-end-3 fc flex-col border-x-[1px] border-dark gap-y-[2px]'
                         }
                         indexOfGlitch={0}
+                        typeOfGlitch={1}
                       />
                       <div className="flex flex-col gap-y-[2px]">
                         {adapteryPrzemysloweWielokrotne_tech_data[

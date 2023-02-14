@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react';
 /**Components**/
 import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
 import SectionContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SectionKategoria from './subCategoryPageHeader/sectionKategoria/SectionKategoria';
 import SubCategoryPageHeader from './subCategoryPageHeader/SubCategoryPageHeader';
 import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import ProductsCatalog from './productsCatalog/ProductsCatalog';
@@ -11,6 +10,8 @@ import {
   IF_ProductCardData,
   ISubCategoriesItem,
 } from '../../../utils/TS/typeScriptStaff';
+import CatalogNavPanel from '../navigations/catalogNavPanel/CatalogNavPanel';
+import H1AnimatedPresence from '../../_basicComponents/componentH1/H1AnimatedPresence';
 
 /**-----------------------------------------------------------------**/
 const SubCategoryPageTemplate: React.FunctionComponent<{
@@ -30,31 +31,29 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
     >
       <PageContentLayout>
         <SectionContentLayout>
-          <SectionKategoria
-            parentCategoryName={parentCategoryName}
-            parentCategoryUrl={parentCategoryUrl}
+          <CatalogNavPanel
+            labels={['Kategoria']}
+            namesLevels={[parentCategoryName]}
+            urlsLevels={[parentCategoryUrl]}
+            lastLevelName={subCategoryName}
+            lastLevelLab="Podkategoria:"
           />
-          <SmallPseudoHeader
+          {/* <SmallPseudoHeader
             text="Podkategoria"
             hasBox={true}
             hasVerticalOrnament={false}
           />
-          <SubCategoryPageHeader
+          <H1AnimatedPresence
+            uniqueKey={arrayIndex}
+            text={subCategoryName}
+            variantH="custome"
+            customeStyle="text-light text-left text-[2rem] xs:text-[2.5rem] xxl:text-[3rem] tracking-widest"
+          /> */}
+          {/* <SubCategoryPageHeader
             fullName={subCategoryName}
             subCategoryIndex={arrayIndex}
-          />
+          /> */}
         </SectionContentLayout>
-        {/* <SectionContentLayout>
-          <SmallPseudoHeader
-            text="Podkategoria"
-            hasBox={true}
-            hasVerticalOrnament={false}
-          />
-          <SubCategoryPageHeader
-            fullName={subCategoryName}
-            subCategoryIndex={arrayIndex}
-          />
-        </SectionContentLayout> */}
         <SectionContentLayout>
           <SmallPseudoHeader
             text="Katalog produktów"

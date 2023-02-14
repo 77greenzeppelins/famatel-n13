@@ -13,6 +13,10 @@ const blueHeaderStyle =
 const blueCellStyle =
   'fc bg-vB py-2 px-[1px] text-light text-center p-small hover:bg-vtB delay-100 ease-in duration-300 select-none';
 
+const productPagesSectionContentLayout =
+  //___"gap-y-12" => gap between image and "tablessection" on mobile
+  'flex flex-col-reverse gap-y-12 lg:flex-row lg:gap-y-0 lg:gap-x-10';
+
 export {
   vertGap,
   horizGap,
@@ -22,4 +26,6 @@ export {
   bodyCell,
   blueHeaderStyle,
   blueCellStyle,
+  //___ for <SectionContentLayout> at productLevel
+  productPagesSectionContentLayout,
 };

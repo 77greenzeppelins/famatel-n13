@@ -1,10 +1,14 @@
 import React from 'react';
 /**Components**/
+import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
 import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
+import SmallPseudoHeader from '../../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import DIYTable from '../../../../../multipagesComponents/tables/diyTable/DIYTable';
 /**Handler**/
 import { mainStylesSwitcher } from '../../../../../multipagesComponents/tables/diyTable/handlers/stylesSwitcher';
+/**Basic Data**/
+import { smallPseudoHeaders } from '../../../../../../data/_data';
 /**TS**/
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
 
@@ -24,58 +28,73 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
   return (
     <div
       data-component="TablesSection___container"
-      className="flex flex-col gap-10"
+      className="flex flex-col gap-16"
     >
-      <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
+      <SectionContentLayout divStyle="flex flex-col gap-y-8">
+        <SmallPseudoHeader
+          text={smallPseudoHeaders.l1}
+          hasBox={true}
+          hasVerticalOrnament={false}
+        />
+        <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
+      </SectionContentLayout>
 
-      <DIYTable tableLayout={'flex flex-col gap-y-1 w-full '}>
-        <RowWithLayout
-          rowData={ampersData}
-          containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}
-          cellsContainersStyle={mainStylesSwitcher(polesNumber)?.ampersStyle}
+      <SectionContentLayout divStyle="flex flex-col gap-y-8">
+        <SmallPseudoHeader
+          text={smallPseudoHeaders.l2}
+          hasBox={true}
+          hasVerticalOrnament={false}
         />
-        <RowWithLayout
-          rowData={polesData}
-          containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
-          cellsContainersStyle={mainStylesSwitcher(polesNumber)?.polesStyle}
-        />
-        {bodyData?.map((rowData, index) => (
+
+        <DIYTable tableLayout={'flex flex-col gap-y-1 w-full '}>
           <RowWithLayout
-            key={index}
-            rowData={rowData}
-            // containerLayout="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group"
+            rowData={ampersData}
+            containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}
+            cellsContainersStyle={mainStylesSwitcher(polesNumber)?.ampersStyle}
+          />
+          <RowWithLayout
+            rowData={polesData}
             containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
+            cellsContainersStyle={mainStylesSwitcher(polesNumber)?.polesStyle}
+          />
+          {bodyData?.map((rowData, index) => (
+            <RowWithLayout
+              key={index}
+              rowData={rowData}
+              // containerLayout="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group"
+              containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
+              cellsContainersStyle={
+                mainStylesSwitcher(polesNumber)?.animatedRowStyle
+              }
+            />
+          ))}
+          <RowWithLayout
+            rowData={connectionTypeData}
+            containerLayout={
+              mainStylesSwitcher(polesNumber)?.columnsConnectionType
+            }
             cellsContainersStyle={
               mainStylesSwitcher(polesNumber)?.animatedRowStyle
             }
           />
-        ))}
-        <RowWithLayout
-          rowData={connectionTypeData}
-          containerLayout={
-            mainStylesSwitcher(polesNumber)?.columnsConnectionType
-          }
-          cellsContainersStyle={
-            mainStylesSwitcher(polesNumber)?.animatedRowStyle
-          }
-        />
-        <RowWithLayout
-          rowData={wireData}
-          containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}
-          cellsContainersStyle={
-            mainStylesSwitcher(polesNumber)?.animatedRowStyle
-          }
-        />
-        {weightData && (
           <RowWithLayout
-            rowData={weightData}
-            containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
+            rowData={wireData}
+            containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}
             cellsContainersStyle={
               mainStylesSwitcher(polesNumber)?.animatedRowStyle
             }
           />
-        )}
-      </DIYTable>
+          {weightData && (
+            <RowWithLayout
+              rowData={weightData}
+              containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
+              cellsContainersStyle={
+                mainStylesSwitcher(polesNumber)?.animatedRowStyle
+              }
+            />
+          )}
+        </DIYTable>
+      </SectionContentLayout>
     </div>
   );
 };

@@ -1,15 +1,22 @@
 import React from 'react';
-
+/**
+ * used in "Adaptery przemyslowe"
+ * used in "Niskie Napięcia Table"
+ * concept: row witch some anomaly / glitch => one strange column
+ */
+/**---------------------------**/
 const RowType_6 = ({
   rowData,
   rowContainerStyle,
   glitchedCellStyle,
   indexOfGlitch,
+  typeOfGlitch,
 }: {
   rowData: (string | string[])[];
   rowContainerStyle: string;
   glitchedCellStyle: string;
   indexOfGlitch: number;
+  typeOfGlitch: number;
 }) => {
   /**..................**/
   const createBackgroundStyle = ({
@@ -56,7 +63,7 @@ const RowType_6 = ({
       {rowData.map((label, index) => {
         if (index === indexOfGlitch && Array.isArray(label)) {
           return createBackgroundStyle({
-            glitchType: 1,
+            glitchType: typeOfGlitch,
             arrayIndex: index,
             label,
           });

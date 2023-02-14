@@ -11,6 +11,8 @@ import { wtyczkiGniazdaPrzenosne_tech_data } from '../../../../../data/categorie
 import { wtyczkiGniazdaPrzenosne_tablesData } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_1_przenosne_prodCat';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
+/**Tailwind Styles**/
+import { productPagesSectionContentLayout } from '../../../../../utils/tailwindStyles';
 
 /**----------------------------------------**/
 const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{
@@ -44,7 +46,7 @@ const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{
           return (
             <React.Fragment key={index}>
               {/* <SectionContentLayout></SectionContentLayout> */}
-              <SectionContentLayout divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 ">
+              <SectionContentLayout divStyle={productPagesSectionContentLayout}>
                 <div className="flex flex-col gap-y-10 w-full lg:w-[50%] ">
                   <TablesSection
                     polesNumber={polesNumber}
@@ -57,7 +59,7 @@ const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{
                     catalogCardTablesData={catalogCardTablesData}
                   />
                 </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]  bg-grey">
+                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]">
                   <SquareHolderWithImage
                     imageData={productImage}
                     squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
