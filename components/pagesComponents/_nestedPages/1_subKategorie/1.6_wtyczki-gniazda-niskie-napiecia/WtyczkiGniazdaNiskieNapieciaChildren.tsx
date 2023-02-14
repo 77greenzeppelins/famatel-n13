@@ -30,12 +30,14 @@ const WtyczkiGniazdaNiskieNapieciaChildren = () => {
             'relative col-start-3 col-end-5 fc flex-col border-x-[1px] border-dark gap-y-[2px]'
           }
           indexOfGlitch={2}
+          typeOfGlitch={1}
         />
 
         {niskieNapięciaSubCatTable1Data.sectionsRow1.map((rowData, index) => {
           //___thera are two rows; one should be "violet" and the second one "white" in color...
-          const mainColor =
-            index === 0 ? `bg-[${corpoColors.violet}]` : ' bg-light';
+          const mainColor = index === 0 ? 'bg-vV' : ' bg-light';
+          const hoverColor =
+            index === 0 ? corpoColors.vModViolet : corpoColors.vModLight;
           return (
             <RowType_5
               key={index}
@@ -46,18 +48,19 @@ const WtyczkiGniazdaNiskieNapieciaChildren = () => {
                 index % 2 ? 'text-dark' : 'text-light'
               }  `}
               bgColors={[mainColor, 'bg-dark']}
+              hoverColor={hoverColor}
             />
           );
         })}
-        {/* </div> */}
+        {/*green column_1*/}
         <div className="grid grid-cols-[repeat(5,1fr)_20px] grid-rows-[repeat(4,1fr)] gap-y-[2px]">
           <div className="relative col-start-1 col-end-2 row-span-full fc flex-col  border-x-[1px] border-dark">
             <motion.div
               whileHover={{
-                opacity: 0.7,
+                backgroundColor: corpoColors.vModGreen,
                 transition: { duration: 0.4, delay: 0.2 },
               }}
-              className={`absolute inset-0 bg-[${corpoColors.green}]`}
+              className={`absolute inset-0 bg-vG`}
             />
             <p className="relative p-small text-center text-light pointer-events-none">
               20-25 i{' '}
@@ -74,7 +77,8 @@ const WtyczkiGniazdaNiskieNapieciaChildren = () => {
                 rowContainerStyle="grid grid-cols-[repeat(4,1fr)_20px] col-start-2 col-span-full"
                 rowData={rowData}
                 labelStyle="relative p-small text-center pointer-events-none text-light"
-                bgColors={[` bg-[${corpoColors.green}]`]}
+                bgColors={[`bg-vG`, `bg-dark`]}
+                hoverColor={corpoColors.vModGreen}
               />
             )
           )}

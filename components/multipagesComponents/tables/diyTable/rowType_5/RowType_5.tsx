@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { createBackgroundStyle } from '../handlers/rowType_5_createBackgroundStyle';
 /**
  * used in "Adaptery przemyslowe"
- * used in "Niskie Napięcia Table"
+ * used in "Niskie Napięcia Table" / podkateforie page level
  */
 /**---------------------------**/
 const RowType_5 = ({
@@ -15,6 +15,7 @@ const RowType_5 = ({
   bgColors,
   cellContainerStyle,
   labelStyle,
+  hoverColor = '#ffffff',
 }: {
   rowData: string[];
   backGroundStyleCase: number;
@@ -22,6 +23,7 @@ const RowType_5 = ({
   bgColors: string[];
   cellContainerStyle?: string;
   labelStyle?: string;
+  hoverColor?: string;
 }) => {
   /**JSX**/
   return (
@@ -37,7 +39,7 @@ const RowType_5 = ({
         >
           <motion.div
             whileHover={{
-              backgroundColor: '#ffffff',
+              backgroundColor: hoverColor,
               transition: { duration: 0.4, delay: 0.2 },
             }}
             className={`${createBackgroundStyle({
