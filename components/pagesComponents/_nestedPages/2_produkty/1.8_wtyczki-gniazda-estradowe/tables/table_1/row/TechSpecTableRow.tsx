@@ -7,15 +7,22 @@ import {
 } from '../../../../../../../../utils/tailwindStyles';
 /**HardCoded Data**/
 const defaultMainGrid = `grid grid-cols-[repeat(2,1fr)] ${vertGap} group`;
-const defaultHeaderGrid = `col-start-2 row-start-1 col-span-full ${topHeaderCell} `;
+const defaultHeadersCellsStyles = [
+  'col-start-1 row-start-1 col-span-full',
+  `col-start-2 row-start-1 col-span-full ${topHeaderCell} `,
+];
 
+/**
+ * used in "wtyczki-gniazda-estradowe" / layoput_1 /
+ *
+ */
 /**-----------------------------------------------------**/
 const TechSpecTableRow: React.FunctionComponent<{
   rowIndex: number; //__for extracting header or any specialRow...
   labels: string[];
   mainGrid?: string;
-  headerGrid?: string;
-}> = ({ rowIndex, labels, mainGrid, headerGrid }) => {
+  headerCellsStyles?: string[];
+}> = ({ rowIndex, labels, mainGrid, headerCellsStyles }) => {
   /**JSX**/
   return (
     <div className={mainGrid ? mainGrid : defaultMainGrid}>
@@ -26,9 +33,13 @@ const TechSpecTableRow: React.FunctionComponent<{
             <div
               key={i}
               //  className={i ? topHeaderCell : 'bg-dark'}
-              className={headerGrid ? headerGrid : defaultHeaderGrid}
+              className={
+                headerCellsStyles
+                  ? headerCellsStyles[i]
+                  : defaultHeadersCellsStyles[i]
+              }
             >
-              {label}{' '}
+              <p>{label}</p>{' '}
             </div>
           );
         }

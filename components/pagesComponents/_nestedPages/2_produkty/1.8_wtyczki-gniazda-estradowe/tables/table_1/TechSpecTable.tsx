@@ -8,10 +8,9 @@ import { horizGap } from '../../../../../../../utils/tailwindStyles';
 const TechSpecTable: React.FunctionComponent<{
   tableData: string[][];
   mainGrid?: string;
-  headerGrid?: string;
-}> = ({ tableData, mainGrid, headerGrid }) => {
+  headerCellsStyles?: string[];
+}> = ({ tableData, mainGrid, headerCellsStyles }) => {
   /**...**/
-
   /**JSX*/
   return (
     <div
@@ -24,7 +23,7 @@ const TechSpecTable: React.FunctionComponent<{
           labels={rowData}
           rowIndex={i}
           mainGrid={mainGrid}
-          headerGrid={headerGrid}
+          headerCellsStyles={headerCellsStyles}
         />
       ))}
     </div>

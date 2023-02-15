@@ -111,7 +111,7 @@ const wtyczkiGniazdaSchukoTablicowe_productCards_data: IF_ProductCardData[] = [
     arrayIndex: 9,
     path: `${catalogStructureData[0].subCategoriesUrls[3]}/cover-3905`,
     textIcons: ['Format: 50x50'],
-    imageData: imgWtyczkiGniazda_04_tablicowe_schuko[8],
+    imageData: imgWtyczkiGniazda_04_tablicowe_schuko[9],
     type: 'Typ: Socket Cover 50 × 50 ',
     model: 'Model: 3905',
   },

@@ -13,7 +13,8 @@ import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
 /**...**/
 const imgSubCategoryCatalogs: IF_ImgStaticData[][] = [
-  imgWtyczkiGniazda_subCategoryCatalog,
+  // imgWtyczkiGniazda_subCategoryCatalog,
+  imgGniazdaZBlokada_subCategoryCatalog,
   imgGniazdaZBlokada_subCategoryCatalog,
   imgAdapteryPrzemyslowe_subCategoryCatalog,
   imgGniazdaZBlokada_subCategoryCatalog,

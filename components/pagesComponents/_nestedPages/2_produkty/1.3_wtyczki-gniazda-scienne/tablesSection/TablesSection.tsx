@@ -11,6 +11,8 @@ import { mainStylesSwitcher } from '../../../../../multipagesComponents/tables/d
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles*/
 import { horizGap } from '../../../../../../utils/tailwindStyles';
+/**Basic Data*/
+import { smallPseudoHeaders } from '../../../../../../data/_data';
 
 /**----------------------------------**/
 const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
@@ -32,7 +34,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
     >
       <SectionContentLayout divStyle="flex flex-col gap-y-8">
         <SmallPseudoHeader
-          text="Karta Katalogowa"
+          text={smallPseudoHeaders.l1}
           hasBox={true}
           hasVerticalOrnament={false}
         />
@@ -41,7 +43,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
 
       <SectionContentLayout divStyle="flex flex-col gap-y-8">
         <SmallPseudoHeader
-          text="Specyfikacja Techniczna"
+          text={smallPseudoHeaders.l2}
           hasBox={true}
           hasVerticalOrnament={false}
         />
