@@ -12,9 +12,6 @@ import img9 from './9_camping/1.9_05_13011.webp';
 
 /**TS**/
 import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
-// interface IF_ImgStaticData {
-//   image: StaticImageData;
-// }
 
 /**...**/
 const imgWtyczkiGniazda: IF_ImgStaticData[] = [

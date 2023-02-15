@@ -15,7 +15,8 @@ import { imgRozdzielniceModuloweSlider } from '../../../../../../../../../public
 import { imgPuszkiInstalacyjneSlider } from '../../../../../../../../../public/images/c10_puszki-instalacyjne/imgPuszkiInstalacyjne';
 import { imgDomoweSlider } from '../../../../../../../../../public/images/c11_domowe/imgDomowe';
 const arrOfImages = [
-  imgWtyczkiGniazda,
+  // imgWtyczkiGniazda,
+  imgGniazdaZBlokadaSlides,
   imgGniazdaZBlokadaSlides,
   imgAdapteryPrzemysloweSlides,
   imgGniazdaPodwieszaneFake,
