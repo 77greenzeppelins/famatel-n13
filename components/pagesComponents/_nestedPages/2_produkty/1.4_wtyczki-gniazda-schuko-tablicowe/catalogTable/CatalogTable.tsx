@@ -1,20 +1,20 @@
 import React from 'react';
 /**Components**/
 import CatalogTableRow from './row/CatalogTableRow';
-import SvgTypeEU from './svgSection/SvgTypeEU';
-import SvgTypePl from './svgSection/SvgTypePl';
+import SvgTypePl from '../../../../../SVG/flags/SvgTypePl';
+import SvgTypeEU from '../../../../../SVG/flags/SvgTypeEU';
 /**TS**/
 import { IFProdCatDataSchukoTablicowe } from '../../../../../../utils/TS/typeScriptStaff';
+/**Tailwind Styles**/
+import {
+  vertGap,
+  horizGap,
+  sideHeaderCellCenter,
+  bodyCell as bodyCellStyle,
+} from '../../../../../../utils/tailwindStyles';
+
 /**HardCoded Data**/
-const vertGap = 'divide-x-[2px] divide-dark';
-const horGap = 'divide-y-[2px] divide-dark';
 const mainGrid = `grid grid-cols-[repeat(2,1fr)] ${vertGap} group`;
-const topHeaderCellStyle =
-  'fc bg-greyShade1 py-2 px-[1px] text-light text-center p-small select-none';
-const headerCellStyle =
-  'fc py-2 px-[1px] bg-greyShade1 text-light text-center p-small group-hover:bg-corpo delay-100 ease-in duration-300 select-none';
-const bodyCellStyle =
-  'fc py-2 px-[1px] bg-greyTint1 text-dark text-center p-small group-hover:bg-light delay-100 ease-in duration-300 select-none';
 
 /**-------------------------------**/
 const CatalogTable: React.FunctionComponent<{
@@ -26,11 +26,11 @@ const CatalogTable: React.FunctionComponent<{
   return (
     <div
       data-component="TablesSection___container"
-      className={`flex flex-col ${horGap} `}
+      className={`flex flex-col ${horizGap} `}
     >
       {catalogData.line1 ? (
         <div className={mainGrid}>
-          <div className={headerCellStyle}>{catalogData.line1.label} </div>
+          <div className={sideHeaderCellCenter}>{catalogData.line1.label} </div>
           <div>
             {catalogData.line1?.value === 'PL' ? <SvgTypePl /> : <SvgTypeEU />}{' '}
           </div>
@@ -38,7 +38,7 @@ const CatalogTable: React.FunctionComponent<{
       ) : null}
       {catalogData.line2 ? (
         <div className={mainGrid}>
-          <div className={headerCellStyle}>{catalogData.line2.label} </div>
+          <div className={sideHeaderCellCenter}>{catalogData.line2.label} </div>
           <div>
             {catalogData.line2?.value === 'PL' ? <SvgTypePl /> : <SvgTypeEU />}{' '}
           </div>
@@ -47,7 +47,7 @@ const CatalogTable: React.FunctionComponent<{
       {catalogData.line3 ? (
         <CatalogTableRow
           mainGrid={mainGrid}
-          headerCellStyle={headerCellStyle}
+          headerCellStyle={sideHeaderCellCenter}
           bodyCellStyle={bodyCellStyle}
           label={catalogData.line3.label}
           value={catalogData.line3.value}
@@ -56,7 +56,7 @@ const CatalogTable: React.FunctionComponent<{
       {catalogData.line4 ? (
         <CatalogTableRow
           mainGrid={mainGrid}
-          headerCellStyle={headerCellStyle}
+          headerCellStyle={sideHeaderCellCenter}
           bodyCellStyle={bodyCellStyle}
           label={catalogData.line4.label}
           value={catalogData.line4.value}
@@ -65,7 +65,7 @@ const CatalogTable: React.FunctionComponent<{
       {catalogData.line5 ? (
         <CatalogTableRow
           mainGrid={mainGrid}
-          headerCellStyle={headerCellStyle}
+          headerCellStyle={sideHeaderCellCenter}
           bodyCellStyle={bodyCellStyle}
           label={catalogData.line5.label}
           value={catalogData.line5.value}
@@ -74,7 +74,7 @@ const CatalogTable: React.FunctionComponent<{
       {catalogData.line6 ? (
         <CatalogTableRow
           mainGrid={mainGrid}
-          headerCellStyle={headerCellStyle}
+          headerCellStyle={sideHeaderCellCenter}
           bodyCellStyle={bodyCellStyle}
           label={catalogData.line6.label}
           value={catalogData.line6.value}

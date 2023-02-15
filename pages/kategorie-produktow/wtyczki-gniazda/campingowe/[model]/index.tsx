@@ -9,7 +9,7 @@ import { catalogStructureData } from '../../../../../data/_catalogStructure_data
 import {
   wtyczkiGniazdaCampingowe_SubCategory_data,
   wtyczkiGniazdaCampingowe_productCard_data,
-} from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_9_campingowy_data';
+} from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_9_campingowe_data';
 /**TS**/
 import { NextPageWithLayout } from '../../../../_app';
 

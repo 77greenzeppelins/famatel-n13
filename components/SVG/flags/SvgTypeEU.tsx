@@ -1,8 +1,7 @@
 import React from 'react';
-
 /**Components**/
-import SvgTechFlagEU from '../../../../../../SVG/techDrawings/1_wtyczki-gniazda/1.4_schuko-tablicowe/SvgTechFlagEU';
-import SvgTechSocketEU from '../../../../../../SVG/techDrawings/1_wtyczki-gniazda/1.4_schuko-tablicowe/SvgTechSocketEU';
+import SvgTechSocketEU from '../techDrawingsDetails/SvgTechSocketEU';
+import SvgTechFlagEU from './SvgTechFlagEU';
 
 /**----------------------------------**/
 const SvgTypeEU = () => {

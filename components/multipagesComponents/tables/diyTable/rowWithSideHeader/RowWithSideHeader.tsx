@@ -7,7 +7,7 @@ const RowWithSideHeader = ({
   customeCell,
   customeHeader,
 }: {
-  rowData: string[] | undefined;
+  rowData?: string[];
   customeCell?: string;
   customeHeader?: string;
 }) => {

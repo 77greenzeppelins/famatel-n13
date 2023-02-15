@@ -5,7 +5,7 @@ import SubCategoryPageTemplate from '../../../../components/multipagesComponents
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
-import { wtyczkiGniazdaCampingowe_productCard_data } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_9_campingowy_data';
+import { wtyczkiGniazdaCampingowe_productCard_data } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_9_campingowe_data';
 
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';

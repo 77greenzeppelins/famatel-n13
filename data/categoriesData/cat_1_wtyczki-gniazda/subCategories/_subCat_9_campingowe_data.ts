@@ -35,8 +35,7 @@ const wtyczkiGniazdaCampingowe_productCard_data: IF_ProductCardData[] = [
     path: `${wtyczkiGniazdaCampingowe_SubCategory_data.subCategoryUrl}/model-13919`,
     textIcons: ['16A', '2P + T (6h)'],
     imageData: imgWtyczkiGniazda_09_campingowe[2],
-    //___Typ: Gniazdo tablicowe skośne 10° / Wersja kontenerowa
-    type: 'Typ: Przemysłowe gniazdo 90° z gmiazdem Schuko',
+    type: 'Typ: Przemysłowe gniazdo 90° z gniazdem Schuko',
     collection: ['Kolekcja:', 'SpeedPRO'],
     model: 'Model: 13919',
   },

@@ -4,9 +4,14 @@ import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipages
 import SmallPseudoHeader from '../../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
-/**Basic Data**/
+/**Basic Data*/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
-/**Tailwind Styles**/
+import {
+  wtyczkiGniazdaCampingowe_l5_tech_data,
+  wtyczkiGniazdaCampingowe_l5_rest_data,
+} from '../../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_9_campingowe_techSpec';
+
+/**Tailwind Styles*/
 import {
   vertGap,
   sideHeaderCellCenter,
@@ -15,15 +20,8 @@ import {
   undelinedTableTextStyle,
 } from '../../../../../../utils/tailwindStyles';
 
-/**-----------------------------------------**/
-const Layout4: React.FunctionComponent<{
-  tableData: {
-    tableHeader: string[];
-    tableBody1: string[][];
-    tableBody2: string[][];
-  };
-  underlinedTableData: string[][];
-}> = ({ tableData, underlinedTableData }) => {
+/**-------------------------------**/
+const Layout5 = () => {
   /**JSX**/
   return (
     <div className="flex flex-col gap-10">
@@ -34,14 +32,7 @@ const Layout4: React.FunctionComponent<{
           hasVerticalOrnament={false}
         />
         <div className={`flex flex-col  ${horizGap}`}>
-          <div className={`grid grid-cols-[3fr_repeat(3,2fr)] ${vertGap}`}>
-            <RowWithSideHeader
-              rowData={tableData.tableHeader}
-              customeHeader={'bg-dark'}
-              customeCell={sideHeaderCellCenter}
-            />
-          </div>
-          {tableData.tableBody2.map((rowData, i) => (
+          {wtyczkiGniazdaCampingowe_l5_tech_data.map((rowData, i) => (
             <div
               key={i}
               className={`grid grid-cols-[3fr_6fr] ${vertGap} group`}
@@ -53,37 +44,6 @@ const Layout4: React.FunctionComponent<{
               />
             </div>
           ))}
-          <div
-            className={`grid grid-cols-[3fr_6fr] grid-rows-[1fr_1fr] ${vertGap} group`}
-          >
-            <div className="col-start-1 row-start-1 row-end-3">
-              <div className={`${sideHeaderCellCenter} h-full`}>
-                {tableData.tableBody1[0]}
-              </div>
-            </div>
-            <div
-              className={`col-start-2 col-span-full row-start-1 row-span-full ${horizGap}`}
-            >
-              <div
-                className={`grid grid-cols-[repeat(3,2fr)] ${vertGap} group`}
-              >
-                <RowWithSideHeader
-                  rowData={tableData.tableBody1[1]}
-                  customeHeader={bodyCell}
-                  customeCell={bodyCell}
-                />
-              </div>
-              <div
-                className={`grid grid-cols-[repeat(3,2fr)] ${vertGap} group`}
-              >
-                <RowWithSideHeader
-                  rowData={tableData.tableBody1[2]}
-                  customeHeader={bodyCell}
-                  customeCell={bodyCell}
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </SectionContentLayout>
       <SectionContentLayout divStyle="flex flex-col gap-y-8">
@@ -93,7 +53,7 @@ const Layout4: React.FunctionComponent<{
           hasVerticalOrnament={false}
         />
         <TableWithUnderlinedRows
-          rowsData={underlinedTableData}
+          rowsData={wtyczkiGniazdaCampingowe_l5_rest_data}
           cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
           textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
         />
@@ -102,4 +62,4 @@ const Layout4: React.FunctionComponent<{
   );
 };
 
-export default Layout4;
+export default Layout5;
