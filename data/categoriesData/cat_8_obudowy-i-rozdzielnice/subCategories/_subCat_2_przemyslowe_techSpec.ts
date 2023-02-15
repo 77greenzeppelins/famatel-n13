@@ -667,7 +667,7 @@ tablesData: [
 /*
 data for specTable
 */
-// const headerLabelStyle = 'text-[0.625rem]  xxl:text-[0.75rem] text-light';
+const headerLabelStyle = 'text-[0.625rem]  xxl:text-[0.75rem] text-light';
 // const headerCellStyle = 'bg-greyShade1 opacity-[0.8] py-[0.3rem]';
 // const headerSocketCellStyle = 'bg-light opacity-[0.8] py-[0.3rem]';
 // const bodyLabelStyle =
@@ -688,7 +688,7 @@ const gridTemplate8Columns =
   'grid grid-template-columns: repeat(8, 1fr) gap-[0.125rem] w-full';
 export {
   rozdzielnicePrzemysloweTechSpecData,
-  // headerLabelStyle,
+  headerLabelStyle,
   // headerSocketCellStyle,
   // headerCellStyle,
   // bodyLabelStyle,
