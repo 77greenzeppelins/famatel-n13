@@ -1,8 +1,14 @@
 import React from 'react';
 /**Components**/
-import BasicTableBody from './body/BasicTableBody';
 import BasicTableHeader from './header/BasicTableHeader';
+import BasicTableBody from './body/BasicTableBody';
+/**Tailwind Styles*/
+import { horizGap } from '../../../../utils/tailwindStyles';
 
+/**
+ * used in: 8.1_obudowy-puste / TablesSection / ...
+ *
+ */
 /**---------------------------------------------------------------------**/
 const BasicTable: React.FunctionComponent<{
   tableHeader?: string | string[];
@@ -27,7 +33,7 @@ const BasicTable: React.FunctionComponent<{
   specialCases,
 }) => {
   return (
-    <div>
+    <div className={`${horizGap}`}>
       <BasicTableHeader tableHeader={tableHeader} />{' '}
       <BasicTableBody
         tableBodyData={tableBodyData}

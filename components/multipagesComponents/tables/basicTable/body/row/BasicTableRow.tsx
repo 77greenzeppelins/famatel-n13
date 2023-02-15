@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+  bodyCell,
+  horizGap,
+  sideHeaderCellCenter,
+  vertGap,
+} from '../../../../../../utils/tailwindStyles';
 
 const BasicTableRow: React.FunctionComponent<{
   rowData:
@@ -26,19 +32,14 @@ const BasicTableRow: React.FunctionComponent<{
   specialCases,
   rowIndex,
 }) => {
-  /**...**/
+  /**Handler**/
   const createCells = () => {
     if (!Array.isArray(rowData)) {
+      //___if rowData haz type "string[]""
       return (
-        <div className="relative flex justify-between items-center w-full py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300 divide-x-2 divide-dark">
-          <div className="flex items-center h-full w-[50%] ">
-            <p className="header-link-label text-dark px-6 ">{rowData.label}</p>
-          </div>
-          <div className="h-full w-[50%] px-4">
-            <p className="fc header-link-label text-dark text-center">
-              {rowData.value}
-            </p>
-          </div>
+        <div className={`grid grid-cols-[1fr_1fr] ${vertGap}  group`}>
+          <div className={sideHeaderCellCenter}>{rowData.label} </div>
+          <div className={bodyCell}> {rowData.value}</div>
         </div>
       );
     } else {
@@ -82,6 +83,8 @@ const BasicTableRow: React.FunctionComponent<{
       );
     }
   };
+
+  /**JSX**/
   return <>{createCells()}</>;
 };
 

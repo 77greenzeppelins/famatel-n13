@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 /*Components*/
-// import InteractiveBodyCell from './interacticeCell/InteractiveBodyCell';
+import InteractiveBodyCell from '../interacticeCell/InteractiveBodyCell';
 /*Basic Data*/
 import {
   headerLabelStyle,
@@ -12,7 +12,8 @@ import {
 
 /*Framer Motion Staff*/
 import { motion } from 'framer-motion';
-import InteractiveBodyCell from '../interacticeCell/InteractiveBodyCell';
+/**BasicData**/
+import { corpoColors } from '../../../../../../../../../data/_data';
 
 /****************************************************************************/
 const Body8Columns: React.FunctionComponent<{
@@ -33,8 +34,8 @@ const Body8Columns: React.FunctionComponent<{
   Framer Motion Section
   */
   const variants = {
-    initial: { opacity: 0.35 },
-    hoverd: { opacity: 0.1 },
+    initial: { backgroundColor: corpoColors.greyShade1 },
+    hoverd: { backgroundColor: corpoColors.orange },
   };
 
   /*
@@ -44,22 +45,27 @@ const Body8Columns: React.FunctionComponent<{
     <>
       {dataLines?.map((dataLine, index) => (
         <React.Fragment key={index}>
+          {/**_______________rowSideHeader*___________________________*/}
           <motion.div
-            className="col-end-2"
             onHoverStart={() => setCurrentLineIndex(index)}
             onHoverEnd={() => setCurrentLineIndex(77)}
           >
-            <div className="relative py-[0.3rem]">
+            <div className="relative px-2 py-2">
               <motion.div
-                className={`${'absolute inset-0 bg-light'}`}
+                className={`${'absolute inset-0'}`}
                 animate={currentLineIndex === index ? 'hoverd' : 'initial'}
                 variants={variants}
+                transition={{ duration: 0.3, delay: 0.1 }}
               />
-              <p className={`${headerLabelStyle} relative fc h-full`}>
+              <p
+                className={'p-small text-light relative fc h-full disable-soft'}
+              >
                 <span>{dataLine.model}</span>
               </p>
             </div>
           </motion.div>
+
+          {/**_______________rowCell*___________________________*/}
           <div className="col-span-7 col-start-2">
             <div className={`${grid4fr3frStyle}`}>
               {
@@ -72,7 +78,9 @@ const Body8Columns: React.FunctionComponent<{
                     label={label}
                     index={index}
                     activeIndex={currentLineIndex}
-                    bodyLabelStyle={bodyLabelStyle}
+                    bodyLabelStyle={
+                      'p-small text-dark relative fc h-full disable-soft'
+                    }
                     setCurrentLineIndex={setCurrentLineIndex}
                   />
                 ))}
@@ -87,7 +95,9 @@ const Body8Columns: React.FunctionComponent<{
                     label={label}
                     index={index}
                     activeIndex={currentLineIndex}
-                    bodyLabelStyle={bodyLabelStyle}
+                    bodyLabelStyle={
+                      'p-small text-dark relative fc h-full disable-soft'
+                    }
                     setCurrentLineIndex={setCurrentLineIndex}
                   />
                 ))}

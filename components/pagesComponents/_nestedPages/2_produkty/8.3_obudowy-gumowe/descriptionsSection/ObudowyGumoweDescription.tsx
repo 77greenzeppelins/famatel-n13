@@ -9,7 +9,11 @@ const ObudowyGumoweDescription: React.FunctionComponent<{
   /**JSX**/
   return (
     <div className="flex flex-col gap-y-4">
-      <SmallPseudoHeader text="Opis" />
+      <SmallPseudoHeader
+        text="Opis"
+        hasVerticalOrnament={false}
+        hasBox={true}
+      />
       {description.map((desc, index) => (
         <div key={index}>
           <p className="p-small text-grey text-justify hover:text-light ease-in duration-300  ">

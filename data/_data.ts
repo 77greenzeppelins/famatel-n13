@@ -194,6 +194,7 @@ const smallPseudoHeaders = {
   l1: 'Karta katalogowa',
   l2: 'Specyfikacja techniczna',
   l3: 'Charakterystyka ogólna',
+  l4: 'Normy',
 };
 /**...............**/
 export {

@@ -10,12 +10,8 @@ import {
 } from '../../../../../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_2_przemyslowe_techSpec';
 /*Framer Motion*/
 import { motion } from 'framer-motion';
-/*TS*/
-// import { IDataLines } from '../../../../../../_rozdzielnice-przemyslowe__TS';
-// interface IBodySevenColumns {
-//   dataLines: IDataLines[] | undefined;
-// }
-/*TS*/
+/**BasicData**/
+import { corpoColors } from '../../../../../../../../../data/_data';
 
 /****************************************************************************/
 const Body7Columns: React.FunctionComponent<{
@@ -32,14 +28,12 @@ const Body7Columns: React.FunctionComponent<{
   ...
   */
   const [currentLineIndex, setCurrentLineIndex] = useState(77);
-
-  // useEffect(() => {
-  //   console.log('...currentLineIndex', currentLineIndex);
-  // }, [currentLineIndex]);
-
+  /*
+  Framer Motion Section
+  */
   const variants = {
-    initial: { opacity: 0.35 },
-    hoverd: { opacity: 0.1 },
+    initial: { backgroundColor: corpoColors.greyShade1 },
+    hoverd: { backgroundColor: corpoColors.orange },
   };
 
   /*
@@ -49,19 +43,22 @@ const Body7Columns: React.FunctionComponent<{
     <>
       {dataLines?.map((dataLine, index) => (
         <React.Fragment key={index}>
+          {/**_______________rowSideHeader*___________________________*/}
           <motion.div
-            className="col-end-2"
             onHoverStart={() => setCurrentLineIndex(index)}
             onHoverEnd={() => setCurrentLineIndex(77)}
           >
-            <div className="relative py-[0.3rem]">
+            <div className="relative px-2 py-2">
               <motion.div
-                className={`${'absolute inset-0 bg-light'}`}
+                className={`${'absolute inset-0'}`}
                 animate={currentLineIndex === index ? 'hoverd' : 'initial'}
                 variants={variants}
+                transition={{ duration: 0.3, delay: 0.1 }}
               />
-              <p className={`${headerLabelStyle} relative fc h-full`}>
-                <span>{dataLine.model}</span>
+              <p
+                className={'p-small text-light relative fc h-full disable-soft'}
+              >
+                {dataLine.model}
               </p>
             </div>
           </motion.div>
@@ -77,7 +74,9 @@ const Body7Columns: React.FunctionComponent<{
                     label={label}
                     index={index}
                     activeIndex={currentLineIndex}
-                    bodyLabelStyle={bodyLabelStyle}
+                    bodyLabelStyle={
+                      'p-small text-dark relative fc h-full disable-soft'
+                    }
                     setCurrentLineIndex={setCurrentLineIndex}
                   />
                 ))}
@@ -92,7 +91,9 @@ const Body7Columns: React.FunctionComponent<{
                     label={label}
                     index={index}
                     activeIndex={currentLineIndex}
-                    bodyLabelStyle={bodyLabelStyle}
+                    bodyLabelStyle={
+                      'p-small text-dark relative fc h-full disable-soft'
+                    }
                     setCurrentLineIndex={setCurrentLineIndex}
                   />
                 ))}
@@ -107,7 +108,9 @@ const Body7Columns: React.FunctionComponent<{
                     label={label}
                     index={index}
                     activeIndex={currentLineIndex}
-                    bodyLabelStyle={bodyLabelStyle}
+                    bodyLabelStyle={
+                      'p-small text-dark relative fc h-full disable-soft'
+                    }
                     setCurrentLineIndex={setCurrentLineIndex}
                   />
                 ))}

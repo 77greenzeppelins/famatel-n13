@@ -7,20 +7,20 @@ const iconColorFG = corpoColors.light;
 const iconContainerSize = 50;
 const textLabelStyle = 'text-light text-[0.75rem]';
 
-const iconsForIP44 = {
-  svgLabel: ['IP44', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-  textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-  iconColorBG: iconColorBG,
-  iconColorFG: iconColorFG,
-  iconSize: iconContainerSize,
-};
-const iconsForIP65 = {
-  svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-  textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-  iconColorBG: iconColorBG,
-  iconColorFG: iconColorFG,
-  iconSize: iconContainerSize,
-};
+// const iconsForIP44 = {
+//   svgLabel: ['IP44', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
+//   textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
+//   iconColorBG: iconColorBG,
+//   iconColorFG: iconColorFG,
+//   iconSize: iconContainerSize,
+// };
+// const iconsForIP65 = {
+//   svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
+//   textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
+//   iconColorBG: iconColorBG,
+//   iconColorFG: iconColorFG,
+//   iconSize: iconContainerSize,
+// };
 
 const ip54svgLabel = ['IP54', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'];
 const ip65svgLabel = ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'];
@@ -667,13 +667,12 @@ tablesData: [
 /*
 data for specTable
 */
-const headerLabelStyle = 'text-[0.625rem]  xxl:text-[0.75rem] text-light';
-const headerCellStyle = 'bg-greyShade1 opacity-[0.8] py-[0.3rem]';
-const headerSocketCellStyle = 'bg-light opacity-[0.8] py-[0.3rem]';
-
-const bodyLabelStyle =
-  'text-[0.625rem]  xxl:text-[0.75rem] text-dark text-center';
-const bodyCellStyle = 'py-[0.3rem] bg-greyTint2';
+// const headerLabelStyle = 'text-[0.625rem]  xxl:text-[0.75rem] text-light';
+// const headerCellStyle = 'bg-greyShade1 opacity-[0.8] py-[0.3rem]';
+// const headerSocketCellStyle = 'bg-light opacity-[0.8] py-[0.3rem]';
+// const bodyLabelStyle =
+//   'text-[0.625rem]  xxl:text-[0.75rem] text-dark text-center';
+// const bodyCellStyle = 'py-[0.3rem] bg-greyTint2';
 const grid1colsStyle = 'grid grid-cols-[1fr] gap-[0.125rem]';
 const grid2colsStyle = 'grid grid-cols-[1fr_1fr] gap-[0.125rem]';
 const grid3colsStyle = 'grid grid-cols-[1fr_1fr_1fr] gap-[0.125rem]';
@@ -689,11 +688,11 @@ const gridTemplate8Columns =
   'grid grid-template-columns: repeat(8, 1fr) gap-[0.125rem] w-full';
 export {
   rozdzielnicePrzemysloweTechSpecData,
-  headerLabelStyle,
-  headerSocketCellStyle,
-  headerCellStyle,
-  bodyLabelStyle,
-  bodyCellStyle,
+  // headerLabelStyle,
+  // headerSocketCellStyle,
+  // headerCellStyle,
+  // bodyLabelStyle,
+  // bodyCellStyle,
   grid1colsStyle,
   grid2colsStyle,
   grid3colsStyle,

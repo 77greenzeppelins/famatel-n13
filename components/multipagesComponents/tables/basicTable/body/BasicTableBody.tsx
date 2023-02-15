@@ -1,6 +1,10 @@
 import React from 'react';
+/**Components**/
 import BasicTableRow from './row/BasicTableRow';
+/**Tailwind Styles**/
+import { horizGap } from '../../../../../utils/tailwindStyles';
 
+/**-------------------------------------------------**/
 const BasicTableBody: React.FunctionComponent<{
   tableBodyData?:
     | {
@@ -18,7 +22,7 @@ const BasicTableBody: React.FunctionComponent<{
 }> = ({ tableBodyData, multiCellsContainer, multiCellsCell, specialCases }) => {
   /**JSX**/
   return (
-    <div>
+    <div className={`${horizGap}`}>
       {tableBodyData?.map((rowData, index) => (
         <BasicTableRow
           key={index}

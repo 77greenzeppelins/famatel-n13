@@ -1,8 +1,16 @@
 import React from 'react';
+/**Components**/
 import BasicTable from '../../../../../multipagesComponents/tables/basicTable/BasicTable';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 import RozdzielnicePrzemysloweTable from './rozdzielnicePrzemysloweTable.tsx/RozdzielnicePrzemysłoweTable';
+/**Tailwind Styles*/
+import {
+  vertGap,
+  bodyCell,
+  undelinedTableTextStyle,
+} from '../../../../../../utils/tailwindStyles';
 
+/**--------------------------------------------------**/
 const TablesSection: React.FunctionComponent<{
   productIndex: number;
   tableColumnsNumber: number;
@@ -45,6 +53,7 @@ const TablesSection: React.FunctionComponent<{
   rozdzielniceBudowlaneHeader1,
   rozdzielniceBudowlaneTableData1,
 }) => {
+  /**JSX**/
   return (
     <div
       data-component="TablesSection___container"
@@ -67,23 +76,8 @@ const TablesSection: React.FunctionComponent<{
             <BasicTable
               tableHeader={rozdzielniceBudowlaneHeader1}
               tableBodyData={rozdzielniceBudowlaneTableData1}
-              multiCellsContainer={
-                'grid grid-cols-[1fr_2fr_1fr] gap-[0.125rem]  group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300 py-2 divide-x-2 divide-dark'
-              }
-              multiCellsCell={[
-                'text-center relative header-link-label text-dark',
-                'text-center relative header-link-label text-dark',
-                'text-center relative header-link-label text-dark',
-              ]}
-              specialCases={{
-                index: 0,
-                containerSpecialStyle: 'relative fc',
-                cellsSpecialStyles: [
-                  'text-center relative header-link-label text-dark  h-full w-full',
-                  'text-center relative header-link-label text-dark  h-full w-full',
-                  'text-center relative header-link-label text-dark  h-full w-full',
-                ],
-              }}
+              multiCellsContainer={`grid grid-cols-[1fr_2fr_1fr] gap-[0.125rem] ${vertGap}  group bg-greyTint2 `}
+              multiCellsCell={[bodyCell, bodyCell, bodyCell]}
             />
           </div>
         )
@@ -92,20 +86,14 @@ const TablesSection: React.FunctionComponent<{
         <TableWithUnderlinedRows
           rowsData={norma}
           tableContainerStyle="w-full flex flex-col gap-y-4 pt-4"
-          textStyle={[
-            'p-small text-grey group-hover:text-light ease-in duration-300 disable ',
-            'p-small text-grey group-hover:text-light ease-in duration-300 disable ',
-          ]}
+          textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
         />
       </div>
       <div>
         <TableWithUnderlinedRows
           rowsData={packageDetails}
           tableContainerStyle="w-full flex flex-col gap-y-4 pt-4"
-          textStyle={[
-            'p-small text-grey  group-hover:text-light ease-in duration-300 disable ',
-            'p-small text-grey text-center group-hover:text-light ease-in duration-300 disable ',
-          ]}
+          textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
         />
       </div>
     </div>

@@ -1,7 +1,9 @@
 import React from 'react';
+/**Components**/
 import BasicTable from '../../../../../multipagesComponents/tables/basicTable/BasicTable';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 
+/**------------------------------------------------**/
 const TablesSection: React.FunctionComponent<{
   tablesHeaders: string[];
   tablesData: {
@@ -16,7 +18,7 @@ const TablesSection: React.FunctionComponent<{
   return (
     <div
       data-component="TablesSection__container"
-      className="flex flex-col gap-2"
+      className="flex flex-col gap-6"
     >
       {tablesHeaders.map((header, index) => (
         <BasicTable

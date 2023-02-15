@@ -18,10 +18,10 @@ const blueCellStyle =
 const productPagesSectionContentLayout =
   //___"gap-y-12" => gap between image and "tablessection" on mobile
   'flex flex-col-reverse gap-y-12 lg:flex-row lg:gap-y-0 lg:gap-x-10';
-
+//__flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10
 //___used in <UmnderlinedTable>
 const undelinedTableTextStyle =
-  'p-small text-grey group-hover:text-light ease-in duration-300 disable';
+  'p-small text-grey group-hover:text-light ease-in duration-300 disable-soft';
 
 export {
   vertGap,

@@ -6,12 +6,12 @@ import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLay
 import BasicIconsManager from '../../../../multipagesComponents/iconsManagers/basicIconsManager/BasicIconsManager';
 import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
 import TablesSection from '../8.3_obudowy-gumowe/tablesSection/TablesSection';
+import ObudowyGumoweDescription from './descriptionsSection/ObudowyGumoweDescription';
 /**Basic Data**/
 import { splitedPathParts } from '../../../../../data/_data';
 import { obudowyGumoweTechSpecData } from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_3_gumowe_techSpec';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
-import ObudowyGumoweDescription from './descriptionsSection/ObudowyGumoweDescription';
 
 // import TablesSection from './tablesSection/TablesSection';
 
@@ -36,6 +36,7 @@ const ObudowyGumoweContent: React.FunctionComponent<{
           obudowyGumoweTechSpecData[index].tablesData;
         const svgIcons = obudowyGumoweTechSpecData[index].iconHolderData;
         const norma = obudowyGumoweTechSpecData[index].norma;
+        const features = obudowyGumoweTechSpecData[index].features;
         const description = obudowyGumoweTechSpecData[index].opis;
 
         //___
@@ -45,18 +46,13 @@ const ObudowyGumoweContent: React.FunctionComponent<{
               <SectionContentLayout>
                 <BasicIconsManager svgIcons={svgIcons} />
               </SectionContentLayout>
-              <SectionContentLayout
-                // divStyle="grid grid-cols-[1fr] gap-4 md:grid-cols-[1fr_1fr] md:grid-rows-3"
-                divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 "
-              >
-                <div
-                  className="flex flex-col gap-y-10 w-full lg:w-[50%]"
-                  // className="md:col-start-1 md:row-start-1"
-                >
+              <SectionContentLayout divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 ">
+                <div className="flex flex-col gap-y-10 w-full lg:w-[50%]">
                   <TablesSection
                     tableHeader={rozdzielniceGumoweHeaderData}
                     tableBody={rozdzielniceGumoweTableBodyData}
                     norma={norma}
+                    features={features}
                   />
                   <ObudowyGumoweDescription description={description} />
                 </div>
