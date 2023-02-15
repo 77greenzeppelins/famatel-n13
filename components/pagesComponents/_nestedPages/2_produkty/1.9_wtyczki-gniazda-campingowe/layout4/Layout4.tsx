@@ -8,11 +8,11 @@ const Layout4: React.FunctionComponent<{ tableData: string[][] }> = ({
   return (
     <div className="flex flex-col gap-10">
       {' '}
-      <TechSpecTable
+      {/* <TechSpecTable
         tableData={tableData}
         mainGrid={`grid grid-cols-[repeat(4,1fr)] ${vertGap} group`}
         headerGrid={''}
-      />
+      /> */}
     </div>
   );
 };
