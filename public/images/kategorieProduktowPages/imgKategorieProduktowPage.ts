@@ -1,5 +1,7 @@
 /**
  * used in: _catalogStructure_data.ts
+ * is distributed to all "catalogCategories" through property: "imageData: imgSubCategoryCatalogs[0]"
+ *
  **/
 import { imgWtyczkiGniazda_subCategoryCatalog } from '../c1_wtyczki-gniazda/imgWtyczkiGniazda';
 import { imgGniazdaZBlokada_subCategoryCatalog } from '../c2_gniazda-z-blokada/imgGniazdaZBlokada';
@@ -13,20 +15,28 @@ import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
 /**...**/
 const imgSubCategoryCatalogs: IF_ImgStaticData[][] = [
+  //__category__1
   imgWtyczkiGniazda_subCategoryCatalog,
+  //__category__2
   imgGniazdaZBlokada_subCategoryCatalog,
+  //__category__3
   imgAdapteryPrzemyslowe_subCategoryCatalog,
+  //__category__4__fake
   imgGniazdaZBlokada_subCategoryCatalog,
+  //__category__5
   imgPrzedluzaczeBebnowe_subCategoryCatalog,
+  //__category__6__fake
   imgGniazdaZBlokada_subCategoryCatalog,
-  // imgWtyczkiGniazda_subCategoryCatalog,
+  //__category__7__fake
   imgRozdzielniceModulowe_subCategoryCatalog,
+  //__category__8
   imgObudowyRozdzielnice_subCategoryCatalog,
+  //__category__9
   imgRozdzielniceModulowe_subCategoryCatalog,
+  //__category__10
   imgPuszkiInstalacyjne_subCategoryCatalog,
-  // imgWtyczkiGniazda_subCategoryCatalog,
+  //__category__11__fake
   imgRozdzielniceModulowe_subCategoryCatalog,
-  imgGniazdaZBlokada_subCategoryCatalog,
 ];
 
 export { imgSubCategoryCatalogs };

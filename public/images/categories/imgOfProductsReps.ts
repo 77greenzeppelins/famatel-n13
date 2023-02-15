@@ -15,21 +15,11 @@ import category12 from './12_puszki-polaczeniowe.webp';
 /**TS Staff**/
 import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
-/**------------------------------------------------------------------------------------------**/
-const imgOfProductsReps: IF_ImgStaticData[] = [
-  { image: category1 },
-  { image: category2 },
-  { image: category3 },
-  { image: category4 },
-  { image: category5 },
-  { image: category6 },
-  { image: category7 },
-  { image: category8 },
-  { image: category9 },
-  { image: category10 },
-  { image: category11 },
-  { image: category12 },
-];
+/**
+ * used in: _catalogStructure_data.ts
+ * is distributed to all "catalogCategories" through property: "mainCategoryImage: imgMainCategories[someIndexNumber],"
+ * then it is used in <ProduktyDropDownMenu>
+ **/
 const imgMainCategories: IF_ImgStaticData[] = [
   { image: category1 },
   { image: category2 },
@@ -45,43 +35,58 @@ const imgMainCategories: IF_ImgStaticData[] = [
   { image: category12 },
 ];
 
-const fakeSetOf36Images: IF_ImgStaticData[] = [
-  { image: category1 },
-  { image: category2 },
-  { image: category3 },
-  { image: category4 },
-  { image: category5 },
-  { image: category6 },
-  { image: category7 },
-  { image: category8 },
-  { image: category9 },
-  { image: category10 },
-  { image: category11 },
-  { image: category12 },
-  { image: category1 },
-  { image: category2 },
-  { image: category3 },
-  { image: category4 },
-  { image: category5 },
-  { image: category6 },
-  { image: category7 },
-  { image: category8 },
-  { image: category9 },
-  { image: category10 },
-  { image: category11 },
-  { image: category12 },
-  { image: category1 },
-  { image: category2 },
-  { image: category3 },
-  { image: category4 },
-  { image: category5 },
-  { image: category6 },
-  { image: category7 },
-  { image: category8 },
-  { image: category9 },
-  { image: category10 },
-  { image: category11 },
-  { image: category12 },
-];
+export { imgMainCategories };
+/**------------------------------------------------------------------------------------------**/
+// const imgOfProductsReps: IF_ImgStaticData[] = [
+//   { image: category1 },
+//   { image: category2 },
+//   { image: category3 },
+//   { image: category4 },
+//   { image: category5 },
+//   { image: category6 },
+//   { image: category7 },
+//   { image: category8 },
+//   { image: category9 },
+//   { image: category10 },
+//   { image: category11 },
+//   { image: category12 },
+// ];
 
-export { imgOfProductsReps, imgMainCategories, fakeSetOf36Images };
+// const fakeSetOf36Images: IF_ImgStaticData[] = [
+//   { image: category1 },
+//   { image: category2 },
+//   { image: category3 },
+//   { image: category4 },
+//   { image: category5 },
+//   { image: category6 },
+//   { image: category7 },
+//   { image: category8 },
+//   { image: category9 },
+//   { image: category10 },
+//   { image: category11 },
+//   { image: category12 },
+//   { image: category1 },
+//   { image: category2 },
+//   { image: category3 },
+//   { image: category4 },
+//   { image: category5 },
+//   { image: category6 },
+//   { image: category7 },
+//   { image: category8 },
+//   { image: category9 },
+//   { image: category10 },
+//   { image: category11 },
+//   { image: category12 },
+//   { image: category1 },
+//   { image: category2 },
+//   { image: category3 },
+//   { image: category4 },
+//   { image: category5 },
+//   { image: category6 },
+//   { image: category7 },
+//   { image: category8 },
+//   { image: category9 },
+//   { image: category10 },
+//   { image: category11 },
+//   { image: category12 },
+// ];

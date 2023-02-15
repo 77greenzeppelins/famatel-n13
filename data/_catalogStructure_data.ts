@@ -1,8 +1,5 @@
 /**ImagesStaff**/
-import {
-  fakeSetOf36Images,
-  imgMainCategories,
-} from '../public/images/categories/imgOfProductsReps';
+import { imgMainCategories } from '../public/images/categories/imgOfProductsReps';
 import { imgSubCategoryCatalogs } from '../public/images/kategorieProduktowPages/imgKategorieProduktowPage';
 /**TS**/
 import { IF_CatalogStructureData } from '../utils/TS/typeScriptStaff';
@@ -278,7 +275,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     mainCategoryImage: imgMainCategories[3],
     subCategoriesNames: [...gniazdaPodwieszaneSubCategoryNames],
     subCategoriesUrls: [...gniazdaPodwieszaneSubCategoryUrls],
-    imageData: [...fakeSetOf36Images],
+    imageData: imgSubCategoryCatalogs[3], //___fake
     svgIcons: ['IP65', 'IK07'],
     labeledIcons: ['16A', '32A', '63A', '125A'],
   },
@@ -302,7 +299,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     mainCategoryImage: imgMainCategories[5],
     subCategoriesNames: [...rozlacznikiBezpieczenstwaSubCategoryNames],
     subCategoriesUrls: [...rozlacznikiBezpieczenstwaSubCategoryUrls],
-    imageData: [...fakeSetOf36Images],
+    imageData: imgSubCategoryCatalogs[5], //___fake
     svgIcons: ['IP67', 'IK08'],
     labeledIcons: ['16A', '20A', '25A', '32A', '40A'],
   },
@@ -314,7 +311,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     mainCategoryImage: imgMainCategories[6],
     subCategoriesNames: [...ladowarkiPojazdowSubCategoryNames],
     subCategoriesUrls: [...ladowarkiPojazdowSubCategoryUrls],
-    imageData: [...fakeSetOf36Images],
+    imageData: imgSubCategoryCatalogs[6], //___fake
     svgIcons: ['IP54', 'IK08'],
     labeledIcons: ['16A', '32A'],
   },
@@ -362,7 +359,7 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     mainCategoryImage: imgMainCategories[10],
     subCategoriesNames: [...osprzetDomowySubCategoryNames],
     subCategoriesUrls: [...osprzetDomowySubCategoryUrls],
-    imageData: [...fakeSetOf36Images],
+    imageData: imgSubCategoryCatalogs[10], //___fake
     svgIcons: ['IP65', 'IK08', 'FREE', 'UV', 'IZO', 'MODR'],
     labeledIcons: ['16A', '32A'],
   },

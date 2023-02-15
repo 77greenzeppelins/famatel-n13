@@ -13,16 +13,18 @@ import img9 from './9_camping/1.9_05_13011.webp';
 /**TS**/
 import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
-/**...**/
-const imgWtyczkiGniazda: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img1 },
-  { image: img2 },
-  { image: img2 },
+/**
+ * used in <ImageContnent>... deep in slider / graphicSection / ...
+ **/
+const imgWtyczkiGniazdaSlides: IF_ImgStaticData[] = [
   { image: img3 },
   { image: img3 },
   { image: img4 },
   { image: img4 },
+  { image: img1 },
+  { image: img1 },
+  { image: img2 },
+  { image: img2 },
   //___
   { image: img8 },
   { image: img8 },
@@ -32,9 +34,6 @@ const imgWtyczkiGniazda: IF_ImgStaticData[] = [
   { image: img6 },
   { image: img5 },
   { image: img5 },
-  //___
-  // { image: img8 },
-  // { image: img9 },
 ];
 
 /**
@@ -51,4 +50,4 @@ const imgWtyczkiGniazda_subCategoryCatalog: IF_ImgStaticData[] = [
   { image: img8 },
   { image: img9 },
 ];
-export { imgWtyczkiGniazda, imgWtyczkiGniazda_subCategoryCatalog };
+export { imgWtyczkiGniazdaSlides, imgWtyczkiGniazda_subCategoryCatalog };

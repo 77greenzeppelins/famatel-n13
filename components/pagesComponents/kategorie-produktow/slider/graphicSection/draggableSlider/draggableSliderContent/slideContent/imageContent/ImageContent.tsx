@@ -3,7 +3,7 @@ import Image, { StaticImageData } from 'next/image';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
 /**Basic Data / arrays of images for each category **/
-import { imgWtyczkiGniazda } from '../../../../../../../../../public/images/c1_wtyczki-gniazda/imgWtyczkiGniazda';
+import { imgWtyczkiGniazdaSlides } from '../../../../../../../../../public/images/c1_wtyczki-gniazda/imgWtyczkiGniazda';
 import { imgGniazdaZBlokadaSlides } from '../../../../../../../../../public/images/c2_gniazda-z-blokada/imgGniazdaZBlokada';
 import { imgAdapteryPrzemysloweSlides } from '../../../../../../../../../public/images/c3_adaptery-przemyslowe/imgAdapteryPrzemyslowe';
 import { imgGniazdaPodwieszaneFake } from '../../../../../../../../../public/images/c4_gniazda-podwieszane/imgGniazdaPodwieszane';
@@ -15,8 +15,7 @@ import { imgRozdzielniceModuloweSlider } from '../../../../../../../../../public
 import { imgPuszkiInstalacyjneSlider } from '../../../../../../../../../public/images/c10_puszki-instalacyjne/imgPuszkiInstalacyjne';
 import { imgDomoweSlider } from '../../../../../../../../../public/images/c11_domowe/imgDomowe';
 const arrOfImages = [
-  // imgWtyczkiGniazda,
-  imgGniazdaZBlokadaSlides,
+  imgWtyczkiGniazdaSlides,
   imgGniazdaZBlokadaSlides,
   imgAdapteryPrzemysloweSlides,
   imgGniazdaPodwieszaneFake,
