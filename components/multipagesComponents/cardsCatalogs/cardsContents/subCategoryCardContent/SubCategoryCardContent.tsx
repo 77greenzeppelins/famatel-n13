@@ -1,10 +1,9 @@
 import React from 'react';
 /**Components**/
-// import BasicCardMainSection from '../../../cards/basicCard/mainSection/BasicCardMainSection';
+import BasicCardMainSection from './mainSection/BasicCardMainSection';
 import CardCounter from '../../__cardCounter/CardCounter';
 /**TS**/
 import { IF_ImgStaticData } from '../../../../../utils/TS/typeScriptStaff';
-import BasicCardMainSection from './mainSection/BasicCardMainSection';
 
 /**----------------------------------------------------------**/
 const SubCategoryCardContent: React.FunctionComponent<{
