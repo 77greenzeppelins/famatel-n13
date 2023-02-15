@@ -14,20 +14,19 @@ import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 /**...**/
 const imgSubCategoryCatalogs: IF_ImgStaticData[][] = [
   // imgWtyczkiGniazda_subCategoryCatalog,
+  imgRozdzielniceModulowe_subCategoryCatalog,
   imgGniazdaZBlokada_subCategoryCatalog,
   imgAdapteryPrzemyslowe_subCategoryCatalog,
   imgGniazdaZBlokada_subCategoryCatalog,
   imgPrzedluzaczeBebnowe_subCategoryCatalog,
   imgGniazdaZBlokada_subCategoryCatalog,
   // imgWtyczkiGniazda_subCategoryCatalog,
+  imgRozdzielniceModulowe_subCategoryCatalog,
   imgObudowyRozdzielnice_subCategoryCatalog,
   imgRozdzielniceModulowe_subCategoryCatalog,
   imgPuszkiInstalacyjne_subCategoryCatalog,
   // imgWtyczkiGniazda_subCategoryCatalog,
-  imgGniazdaZBlokada_subCategoryCatalog,
-  //___________________
-  imgGniazdaZBlokada_subCategoryCatalog,
-  imgGniazdaZBlokada_subCategoryCatalog,
+  imgRozdzielniceModulowe_subCategoryCatalog,
   imgGniazdaZBlokada_subCategoryCatalog,
 ];
 
