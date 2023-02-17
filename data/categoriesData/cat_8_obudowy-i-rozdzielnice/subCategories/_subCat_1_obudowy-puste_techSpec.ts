@@ -34,10 +34,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'MOD6', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__2
@@ -62,10 +58,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'MOD8', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__3
@@ -92,10 +84,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__4
@@ -122,10 +110,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__5
@@ -151,10 +135,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__6
@@ -180,10 +160,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__7
@@ -204,10 +180,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__8
@@ -228,10 +200,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   // //__9
@@ -252,10 +220,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   // //__10
@@ -276,10 +240,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__11
@@ -304,10 +264,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__12
@@ -333,10 +289,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__13
@@ -362,10 +314,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   // //__14
@@ -391,10 +339,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   // //__15
@@ -420,10 +364,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   // //__16
@@ -449,10 +389,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   // //__17
@@ -484,10 +420,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   // //__18
@@ -519,10 +451,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   // //__19
@@ -554,10 +482,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   // //__20
@@ -589,10 +513,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__21
@@ -624,10 +544,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__22
@@ -659,10 +575,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__23
@@ -695,10 +607,6 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
   //__24
@@ -730,28 +638,8 @@ const obudowyPusteTechSpecData = [
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
-      textLabel: [{ label: '650°C', textStyle: textLabelStyle }],
-      iconColorBG: iconColorBG,
-      iconColorFG: iconColorFG,
-      iconSize: iconContainerSize,
     },
   },
 ];
-/*
-data for specTable
-*/
-// const gridTemplate = 'grid gap-[0.125rem] grid-cols-[1fr_1fr] w-full';
-// const headerLabelStyle = 'text-[0.625rem]  xxl:text-[0.875rem] text-light';
-// const headerCellStyle = 'bg-grey px-1 py-[0.4rem]';
-// const bodyLabelStyle =
-//   'text-[0.625rem]  xxl:text-[0.875rem] text-dark text-center';
-// const bodyCellStyle = ' px-1 py-[0.4rem]';
 
-export {
-  obudowyPusteTechSpecData,
-  // gridTemplate,
-  // headerLabelStyle,
-  // headerCellStyle,
-  // bodyLabelStyle,
-  // bodyCellStyle,
-};
+export { obudowyPusteTechSpecData };

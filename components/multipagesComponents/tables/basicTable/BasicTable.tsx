@@ -19,6 +19,7 @@ const BasicTable: React.FunctionComponent<{
       }[]
     | string[][];
   multiCellsContainer?: string;
+  headerContainerGrid?: string;
   multiCellsCell?: string[];
   specialCases?: {
     index: number;
@@ -29,12 +30,16 @@ const BasicTable: React.FunctionComponent<{
   tableHeader,
   tableBodyData,
   multiCellsContainer,
+  headerContainerGrid,
   multiCellsCell,
   specialCases,
 }) => {
   return (
     <div className={`${horizGap}`}>
-      <BasicTableHeader tableHeader={tableHeader} />{' '}
+      <BasicTableHeader
+        tableHeader={tableHeader}
+        headerContainerGrid={headerContainerGrid}
+      />{' '}
       <BasicTableBody
         tableBodyData={tableBodyData}
         multiCellsContainer={multiCellsContainer}

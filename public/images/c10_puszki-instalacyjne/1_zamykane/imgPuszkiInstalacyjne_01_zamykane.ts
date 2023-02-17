@@ -45,6 +45,10 @@ import img4_c from './10.1_c_04_3066.webp';
 import img5_c from './10.1_c_05_3067.webp';
 import img6_c from './10.1_c_06_3069.webp';
 
+import img1_d from './10.1_d_01_3934-3944.webp';
+import img2_d from './10.1_d_02_3057.webp';
+import img3_d from './10.1_d_03_3054.webp';
+
 /**TS**/
 import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
 
@@ -96,5 +100,9 @@ const imgPuszkiInstalacyjne_01_zamykane: IF_ImgStaticData[] = [
   { image: img4_c },
   { image: img5_c },
   { image: img6_c },
+
+  { image: img1_d },
+  { image: img2_d },
+  { image: img3_d },
 ];
 export { imgPuszkiInstalacyjne_01_zamykane };

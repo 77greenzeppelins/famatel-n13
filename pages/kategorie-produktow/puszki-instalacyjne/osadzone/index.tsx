@@ -6,7 +6,7 @@ import SubCategoryPageTemplate from '../../../../components/multipagesComponents
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { puszkiInstalacyjneSubCategoriesData } from '../../../../data/categoriesData/cat_10_puszki-instalacyjne/_cat10_puszki-instalacyjne_data';
-import { productCardsData } from '../../../../data/categoriesData/cat_10_puszki-instalacyjne/subCategories/_subCat_1_puszki-zamykane';
+import { productCardsData } from '../../../../data/categoriesData/cat_10_puszki-instalacyjne/subCategories/_subCat_1_puszki-zamykane_data';
 
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';

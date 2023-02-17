@@ -11,7 +11,7 @@ const SmallPseudoHeader: React.FunctionComponent<{
   text: string;
   containerStyle?: string;
   textStyle?: string;
-  verticalOrnamentStyle?: string;
+  // verticalOrnamentStyle?: string;
   hasVerticalOrnament?: boolean;
   hasHorizontalOrnament?: boolean;
   hasBox?: boolean;
@@ -19,7 +19,7 @@ const SmallPseudoHeader: React.FunctionComponent<{
   text,
   containerStyle,
   textStyle,
-  verticalOrnamentStyle,
+  // verticalOrnamentStyle,
   hasVerticalOrnament = true,
   hasHorizontalOrnament = false,
   hasBox = false,
@@ -30,15 +30,6 @@ const SmallPseudoHeader: React.FunctionComponent<{
         containerStyle ? containerStyle : containerDefaultStyle
       } relative flex items-center disable-soft ${hasBox ? 'gap-4' : 'gap-0'} `}
     >
-      {hasVerticalOrnament && (
-        <div
-          className={
-            verticalOrnamentStyle
-              ? verticalOrnamentStyle
-              : verticalOrnamentDefaultStyle
-          }
-        />
-      )}
       {hasHorizontalOrnament && (
         <div className="absolute bottom-0 h-[1px] w-full border-b border-corpo" />
       )}
@@ -46,7 +37,14 @@ const SmallPseudoHeader: React.FunctionComponent<{
         <div className="absolute top-0 h-[1px] w-full border-b border-corpo" />
       )}
       {hasBox && <div className={boxDefaultStyle} />}
-      <p className={textStyle ? textStyle : textDefaultStyle}>{text}</p>
+      {/* <p className={textStyle ? textStyle : textDefaultStyle}>{text}</p> */}
+      <p
+        className={`${textStyle ? textStyle : textDefaultStyle} ${
+          hasVerticalOrnament ? 'border-l border-corpo pl-4' : ''
+        } `}
+      >
+        {text}
+      </p>
     </div>
   );
 };

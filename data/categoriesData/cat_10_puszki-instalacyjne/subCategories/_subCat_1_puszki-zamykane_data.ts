@@ -1,19 +1,22 @@
 /*Images saff*/
 import { imgPuszkiInstalacyjne_01_zamykane } from '../../../../public/images/c10_puszki-instalacyjne/1_zamykane/imgPuszkiInstalacyjne_01_zamykane';
-
+/**Basic Data**/
+import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
-//___catalog & www 100% mapping !!!
-// const catalogVersion = [
-// ];
+const puszkiZamykane_SubCategory_data = {
+  subCategoryName: catalogStructureData[9].subCategoriesNames[0],
+  subCategoryUrl: catalogStructureData[9].subCategoriesUrls[0],
+  subCategoryIndex: 0,
+};
 
-const productCardsData: IF_ProductCardData[] = [
+const puszkiZamykane_productCard_data: IF_ProductCardData[] = [
   //___minibox
   {
     arrayIndex: 0,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 43/90/39 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3050`,
+    textIcons: ['IP55', 'Wymiary: 43 × 90 × 39 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[0],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'MiniBox'],
@@ -21,8 +24,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 75/75/39 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3051`,
+    textIcons: ['IP55', 'Wymiary: 75 × 75 × 39 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[1],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'MiniBox'],
@@ -30,8 +33,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 85/85/39 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3052`,
+    textIcons: ['IP55', 'Wymiary: 85 × 85 × 39 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[2],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'MiniBox'],
@@ -39,8 +42,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 75/75/39 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3056-3059`,
+    textIcons: ['IP55', 'Wymiary: 75 × 75 × 39 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[3],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'MiniBox'],
@@ -49,7 +52,7 @@ const productCardsData: IF_ProductCardData[] = [
   //___
   {
     arrayIndex: 4,
-    path: '/',
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3025`,
     textIcons: ['IP65', 'Wymiary: 45 x Ø 60'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[4],
     type: 'Typ: Puszki instalacyjne z dławicami',
@@ -58,8 +61,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 5,
-    path: '/',
-    textIcons: ['IP65', 'Wymiary: 45 x Ø 70'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3027`,
+    textIcons: ['IP65', 'Wymiary: 45 × Ø 70'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[5],
     type: 'Typ: Puszki instalacyjne z dławicami',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -67,8 +70,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 65/65/45 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3026`,
+    textIcons: ['IP55', 'Wymiary: 65 × 65 × 45 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[6],
     type: 'Typ: Puszki instalacyjne z dławicami',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -76,8 +79,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 65/65/45 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3028`,
+    textIcons: ['IP55', 'Wymiary: 65 × 65 × 45 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[7],
     type: 'Typ: Puszki instalacyjne z dławicami',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -85,8 +88,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 80/80/36 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3002-gl`,
+    textIcons: ['IP55', 'Żel izolujący', 'Wymiary: 80 × 80 × 36 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[8],
     type: 'Typ: Puszki instalacyjne z dławicami',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -94,8 +97,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 9,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 100/100/45 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3003`,
+    textIcons: ['IP55', 'Wymiary: 100 × 100 × 45 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[9],
     type: 'Typ: Puszki instalacyjne z dławicami',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -103,8 +106,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 10,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 103/103/55 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3011`,
+    textIcons: ['IP55', 'Wymiary: 103 × 103 × 55 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[10],
     type: 'Typ: Puszki instalacyjne z dławicami',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -112,8 +115,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 11,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 110/152/63 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3012`,
+    textIcons: ['IP55', 'Wymiary: 110 × 152 × 63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[11],
     type: 'Typ: Puszki instalacyjne z dławicami',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -121,8 +124,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 12,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 135/161/83 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3013`,
+    textIcons: ['IP55', 'Wymiary: 135 × 161 × 83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[12],
     type: 'Typ: Puszki instalacyjne z dławicami',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -130,8 +133,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 13,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 175/1225/85 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3014`,
+    textIcons: ['IP55', 'Wymiary: 175 × 225 × 85 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[13],
     type: 'Typ: Puszki instalacyjne z dławicami',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -139,8 +142,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 14,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 240/310/125 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3015`,
+    textIcons: ['IP55', 'Wymiary: 240 × 310 × 125 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[14],
     type: 'Typ: Puszki instalacyjne z dławicami',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -149,8 +152,8 @@ const productCardsData: IF_ProductCardData[] = [
   //___start
   {
     arrayIndex: 15,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 80/80/36 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3062`,
+    textIcons: ['IP55', 'Wymiary: 80 × 80 × 36 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[15],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -158,8 +161,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 16,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 100/100/45 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3063`,
+    textIcons: ['IP55', 'Wymiary: 100 × 100 × 45 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[16],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -167,8 +170,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 17,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 103/103/55 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3071`,
+    textIcons: ['IP55', 'Wymiary: 103 × 103 × 55 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[17],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -176,8 +179,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 18,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 110/150/63 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3042`,
+    textIcons: ['IP55', 'Wymiary: 110 × 150 × 63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[18],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -185,8 +188,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 19,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 110/150/63 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3072`,
+    textIcons: ['IP55', 'Wymiary: 110 × 150 × 63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[19],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -194,8 +197,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 20,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 135/160/83 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3043`,
+    textIcons: ['IP55', 'Wymiary: 135 × 160 × 83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[20],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -203,8 +206,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 21,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 135/160/83 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3073`,
+    textIcons: ['IP55', 'Wymiary: 135 × 160 × 83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[21],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -212,8 +215,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 22,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 175/225/85 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3044`,
+    textIcons: ['IP55', 'Wymiary: 175 × 225 × 85 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[22],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -221,8 +224,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 23,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 175/225/85 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3074`,
+    textIcons: ['IP55', 'Wymiary: 175 × 225 × 85 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[23],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -230,8 +233,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 24,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 240/310/125 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3045`,
+    textIcons: ['IP55', 'Wymiary: 240 × 310 × 125 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[24],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -239,8 +242,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 25,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 240/310/125 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3075`,
+    textIcons: ['IP55', 'Wymiary: 240 × 310 × 125 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[25],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -249,8 +252,8 @@ const productCardsData: IF_ProductCardData[] = [
   //___one strange...
   {
     arrayIndex: 26,
-    path: '/',
-    textIcons: ['IP20', 'Wymiary: 240/310/125 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3005`,
+    textIcons: ['IP20', 'Wymiary: 240 × 310 × 125 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[26],
     type: 'Typ: Puszki instalacyjne with lamp-holder IP20',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -259,8 +262,8 @@ const productCardsData: IF_ProductCardData[] = [
   //___some new type
   {
     arrayIndex: 27,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 175/330/135 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3955`,
+    textIcons: ['IP55', 'Wymiary: 175 × 330 × 135 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[27],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -268,8 +271,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 28,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 330/330/135 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3956`,
+    textIcons: ['IP55', 'Wymiary: 330 × 330 × 135 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[28],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -277,8 +280,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 29,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 500/225/135 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3953`,
+    textIcons: ['IP55', 'Wymiary: 500 × 225 × 135 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[29],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -286,8 +289,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 30,
-    path: '/',
-    textIcons: ['IP20', 'Wymiary: 500/330/135 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3954`,
+    textIcons: ['IP20', 'Wymiary: 500 × 330 × 135 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[30],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -296,8 +299,8 @@ const productCardsData: IF_ProductCardData[] = [
   //___some new type = zamykane
   {
     arrayIndex: 31,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 160/150/63 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3992`,
+    textIcons: ['IP55', 'Wymiary: 160 × 150 × 63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[31],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -305,8 +308,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 32,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 135/160/83 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3984`,
+    textIcons: ['IP55', 'Wymiary: 135 × 160 × 83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[32],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -314,8 +317,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 33,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 135/160/83 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3985`,
+    textIcons: ['IP55', 'Wymiary: 135 × 160 × 83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[33],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -323,8 +326,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 34,
-    path: '/',
-    textIcons: ['IP55', 'Wymiary: 135/160/83 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3986`,
+    textIcons: ['IP55', 'Wymiary: 135 × 160 × 83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[34],
     type: 'Typ: Puszki instalacyjne',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -334,8 +337,8 @@ const productCardsData: IF_ProductCardData[] = [
   //___last type...
   {
     arrayIndex: 35,
-    path: '/',
-    textIcons: ['IP54', 'Wymiary: 103/103/55 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3061`,
+    textIcons: ['IP54', 'Wymiary: 103 × 103 × 55 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[35],
     type: 'Typ: Puszki instalacyjne Pre-wired',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -343,8 +346,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 36,
-    path: '/',
-    textIcons: ['IP54', 'Wymiary: 110/150/63 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3064`,
+    textIcons: ['IP54', 'Wymiary: 110 × 150 × 63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[36],
     type: 'Typ: Puszki instalacyjne Pre-wired',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -352,8 +355,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 37,
-    path: '/',
-    textIcons: ['IP54', 'Wymiary: 135/160/83 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3065`,
+    textIcons: ['IP54', 'Wymiary: 135 × 160 × 83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[37],
     type: 'Typ: Puszki instalacyjne Pre-wired',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -361,8 +364,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 38,
-    path: '/',
-    textIcons: ['IP54', 'Wymiary: 175/225/85 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3066`,
+    textIcons: ['IP54', 'Wymiary: 175 × 225 × 85 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[38],
     type: 'Typ: Puszki instalacyjne Pre-wired',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -370,8 +373,8 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 39,
-    path: '/',
-    textIcons: ['IP54', 'Wymiary: 110/150/63 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3067-1`,
+    textIcons: ['IP54', 'Wymiary: 110 × 150 × 63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[39],
     type: 'Typ: Puszki instalacyjne Pre-wired',
     collection: ['Kolekcja:', 'AcquaBox'],
@@ -379,13 +382,41 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 40,
-    path: '/',
-    textIcons: ['IP54', 'Wymiary: 135/160/83 (w/s/g)'],
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3069-1`,
+    textIcons: ['IP54', 'Wymiary: 135 × 160 × 83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[40],
     type: 'Typ: Puszki instalacyjne Pre-wired',
     collection: ['Kolekcja:', 'AcquaBox'],
     model: 'Model: 3069 / 3069-1',
   },
+  //___akcespria
+  {
+    arrayIndex: 41,
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3934-3944`,
+    textIcons: ['IP54', 'Wymiary: 175 × 225 × 85 (w/s/g)'],
+    imageData: imgPuszkiInstalacyjne_01_zamykane[41],
+    type: 'Typ: Dławnice kablowe',
+    // collection: ['Kolekcja:', 'AcquaBox'],
+    model: 'Model: 3934-3944',
+  },
+  {
+    arrayIndex: 42,
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3057`,
+    textIcons: ['IP54', 'Wymiary: 110 × 150 × 63 (w/s/g)'],
+    imageData: imgPuszkiInstalacyjne_01_zamykane[42],
+    type: 'Typ: Szyna DIN',
+    // collection: ['Kolekcja:', 'AcquaBox'],
+    model: 'Model: 3057',
+  },
+  {
+    arrayIndex: 43,
+    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3054`,
+    textIcons: ['IP54', 'Wymiary: 135 × 160 × 83 (w/s/g)'],
+    imageData: imgPuszkiInstalacyjne_01_zamykane[43],
+    type: 'Typ: Płyta stalowa ocynkowana',
+    // collection: ['Kolekcja:', 'AcquaBox'],
+    model: 'Model: 3054',
+  },
 ];
 
-export { productCardsData };
+export { puszkiZamykane_productCard_data, puszkiZamykane_SubCategory_data };

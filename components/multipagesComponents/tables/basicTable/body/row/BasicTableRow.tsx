@@ -1,11 +1,15 @@
 import React from 'react';
+/**Tailwind Styles*/
 import {
   bodyCell,
   horizGap,
   sideHeaderCellCenter,
   vertGap,
 } from '../../../../../../utils/tailwindStyles';
+/**HardCoded Data*/
+const basicGrid = `grid grid-cols-[1fr_1fr] ${vertGap}  group`;
 
+/**---------------------------------------------**/
 const BasicTableRow: React.FunctionComponent<{
   rowData:
     | string[]
@@ -13,10 +17,7 @@ const BasicTableRow: React.FunctionComponent<{
         label: string;
         value: string;
       };
-  cellsContainersStyle?: [
-    'flex items-center h-full w-[50%] ',
-    'h-full w-[50%] px-4'
-  ];
+
   rowIndex: number;
   multiCellsContainer?: string;
   multiCellsCell?: string[];
@@ -35,7 +36,7 @@ const BasicTableRow: React.FunctionComponent<{
   /**Handler**/
   const createCells = () => {
     if (!Array.isArray(rowData)) {
-      //___if rowData haz type "string[]""
+      //___if rowData has type "{label: string, value: string}""
       return (
         <div className={`grid grid-cols-[1fr_1fr] ${vertGap}  group`}>
           <div className={sideHeaderCellCenter}>{rowData.label} </div>
@@ -48,7 +49,7 @@ const BasicTableRow: React.FunctionComponent<{
           className={
             multiCellsContainer
               ? multiCellsContainer
-              : 'relative flex justify-between items-center w-full py-2 group bg-greyTint2 border-y-2 border-dark hover:border-light hover:bg-light ease-in duration-300 divide-x-2 divide-dark'
+              : `grid grid-cols-[1fr_1fr] ${vertGap} group`
           }
         >
           {rowData.map((cell, index) => {
@@ -69,11 +70,7 @@ const BasicTableRow: React.FunctionComponent<{
             return (
               <div
                 key={index}
-                className={
-                  multiCellsCell
-                    ? multiCellsCell[index]
-                    : 'relative header-link-label text-dark '
-                }
+                className={index === 0 ? sideHeaderCellCenter : bodyCell}
               >
                 <p>{cell}</p>
               </div>
@@ -89,6 +86,11 @@ const BasicTableRow: React.FunctionComponent<{
 };
 
 export default BasicTableRow;
+
+// cellsContainersStyle?: [
+//   'flex items-center h-full w-[50%] ',
+//   'h-full w-[50%] px-4'
+// ];
 
 {
   /* <div

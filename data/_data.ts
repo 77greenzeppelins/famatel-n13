@@ -195,6 +195,13 @@ const smallPseudoHeaders = {
   l2: 'Specyfikacja techniczna',
   l3: 'Charakterystyka ogólna',
   l4: 'Normy',
+  l5: 'Katalog produktów',
+  l6: 'Katalog podkategorii',
+  //___for "katalog navigation"
+  n1: 'Kategoria',
+  n2: 'Podkategoria',
+  nl1: 'Produkt:',
+  nl2: 'Podkategoria:',
 };
 /**...............**/
 export {

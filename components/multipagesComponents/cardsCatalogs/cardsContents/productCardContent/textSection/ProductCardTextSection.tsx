@@ -31,45 +31,25 @@ const ProductCardTextSection: React.FunctionComponent<{
           <SmallPseudoHeader
             text={model}
             textStyle=" p-small text-grey text-left group-hover:text-light ease-in duration-300"
-            //___header-link-label
-            verticalOrnamentStyle="h-auto w-[8px] border-l border-corpo"
-            // hesVerticalOrnament={false}
-            // hesHorizontalOrnament={true}
           />
         )}
         {type && (
-          // <div className="pl-[0px]">
-          //   <p className="header-link-label text-grey text-left group-hover:text-light ease-in duration-300 ">
-          //     {type}
-          //   </p>
-          // </div>
-
           <SmallPseudoHeader
             text={type}
             textStyle="p-small text-grey text-left group-hover:text-light ease-in duration-300"
-            verticalOrnamentStyle="h-auto w-[8px] border-l border-corpo"
-            // hesVerticalOrnament={false}
-            // hesHorizontalOrnament={true}
           />
         )}
         {collection && (
           <div className="flex gap-2 pl-[0px]">
-            {/* <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300">
-              {collection[0]}
-            </p> */}
             <SmallPseudoHeader
               text={collection[0]}
               textStyle="p-small text-grey text-left group-hover:text-light ease-in duration-300"
-              verticalOrnamentStyle="h-auto w-[8px] border-l border-corpo"
-              // hesVerticalOrnament={false}
-              // hesHorizontalOrnament={true}
             />
             <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300 ">
               {collection[1]}
             </p>{' '}
           </div>
         )}
-
         {/* {model && (
           <div>
             <p className="text-light text-left header-link-label">{model}</p>

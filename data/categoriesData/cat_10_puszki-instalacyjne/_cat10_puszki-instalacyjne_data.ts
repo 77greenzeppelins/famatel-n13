@@ -7,14 +7,6 @@ import { catalogStructureData } from '../../_catalogStructure_data';
 Data for data
 */
 
-const pseudoHeroData = {
-  svgIcons: ['IP54', 'IP69'],
-  labeledIcons: ['16A', '32A', '63A', '125A'],
-  iconColorBG: corpoColors.dark,
-  iconColorFG: corpoColors.grey,
-  iconSize: 90,
-};
-
 const puszkiInstalacyjneSubCategoriesData: ISubCategoriesItem[] = [
   //___1__puszki-instalacyjne__zamykane
   {
@@ -66,7 +58,6 @@ const puszkiInstalacyjneSubCategoriesData: ISubCategoriesItem[] = [
 //   'text-light text-[1.5rem] xl:text-[1.95rem] xxxl:text-[2.25rem] tracking-[0.09rem] leading-normal';
 
 export {
-  pseudoHeroData,
   puszkiInstalacyjneSubCategoriesData,
   // daneTechniczneText,
   // materialText,

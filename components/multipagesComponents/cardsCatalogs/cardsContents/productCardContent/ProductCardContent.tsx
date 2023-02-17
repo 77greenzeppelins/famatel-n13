@@ -1,9 +1,9 @@
 import React from 'react';
-/**TS**/
-import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
+/**Components**/
 import ProductCardGraphicSection from './graphicSection/ProductCardGraphicSection';
 import ProductCardTextSection from './textSection/ProductCardTextSection';
-// import LinkWithTextAndIcon from '../../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
+/**TS**/
+import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
 
 /**------------------------------------------------------------**/
 const ProductCardContent: React.FunctionComponent<{

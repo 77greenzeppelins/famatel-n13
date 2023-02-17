@@ -652,15 +652,6 @@ const rozdzielnicePrzemysloweTechSpecData = [
       { label: 'Głębokość', value: '419' },
       { label: 'Waga(kg)', value: '11' },
     ],
-    /*
-tablesData: [
-      [
-        { label: 'Wysokość', value: '305' },
-        { label: 'Szerokość', value: '125' },
-        { label: 'Głębokość', value: '107' },
-      ],
-    ],
-*/
   },
 ];
 
