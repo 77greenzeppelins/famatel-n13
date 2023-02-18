@@ -202,6 +202,9 @@ const smallPseudoHeaders = {
   n2: 'Podkategoria',
   nl1: 'Produkt:',
   nl2: 'Podkategoria:',
+  //__for productCard
+  // p1: 'Produkt aktualnie niedostępny',
+  p1: 'PRODUKT AKTUALNIE NIEDOSTĘPNY',
 };
 /**...............**/
 export {

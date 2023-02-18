@@ -6,7 +6,7 @@ import SubCategoryPageTemplate from '../../../../components/multipagesComponents
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { puszkiInstalacyjneSubCategoriesData } from '../../../../data/categoriesData/cat_10_puszki-instalacyjne/_cat10_puszki-instalacyjne_data';
-import { puszkiZamykane_productCard_data } from '../../../../data/categoriesData/cat_10_puszki-instalacyjne/subCategories/_subCat_1_puszki-zamykane_data';
+import { puszkiDrywall_productCard_data } from '../../../../data/categoriesData/cat_10_puszki-instalacyjne/subCategories/_subCat_2_puszki-drywall_data';
 
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';
@@ -16,7 +16,7 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <SubCategoryPageTemplate
       subCategoryData={puszkiInstalacyjneSubCategoriesData[1]}
-      productCardsData={puszkiZamykane_productCard_data}
+      productCardsData={puszkiDrywall_productCard_data}
     />
   );
 };

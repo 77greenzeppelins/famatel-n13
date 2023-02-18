@@ -5,23 +5,14 @@ import img2 from './10.3_02_3102_1.webp';
 import img3 from './10.3_03_3210.webp';
 import img4 from './10.3_04_3211.webp';
 import img5 from './10.3_05_3201.webp';
-import img6 from './10.3_06_3201T.webp';
+// import img6 from './10.3_06_3201T.webp';
+import img6 from './10.3_06_.webp';
 import img7 from './10.3_07_3202.webp';
 import img8 from './10.3_08_3202T.webp';
-// import img9 from './10.2_09_3251.webp';
-// import img10 from './10.2_10_3252.webp';
-// import img11 from './10.2_11_3253.webp';
-// import img12 from './10.2_12_3254.webp';
-// import img13 from './10.2_13_T-3251.webp';
-// import img14 from './10.1_14_3014.webp';
-// import img15 from './10.1_15_3015.webp';
-// import img1_b from './10.1_b_01_3062.webp';
-// import img2_b from './10.1_b_02_3063.webp';
-// import img3_b from './10.1_b_03_3071.webp';
-// import img4_b from './10.1_b_04_3042.webp';
-// import img5_b from './10.1_b_05_3072.webp';
-// import img5_c from './10.1_c_05_3067.webp';
-// import img6_c from './10.1_c_06_3069.webp';
+import img9 from './10.3_09_3203.webp';
+import img10 from './10.3_10_3203T.webp';
+import img11 from './10.3_11_3204.webp';
+import img12 from './10.3_11_3204T.webp';
 
 /**TS**/
 import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
@@ -29,7 +20,7 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
 /**
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
-const imgPuszkiInstalacyjne_02_dryWall: IF_ImgStaticData[] = [
+const imgPuszkiInstalacyjne_03_osadzone: IF_ImgStaticData[] = [
   { image: img1 },
   { image: img2 },
   { image: img3 },
@@ -38,19 +29,9 @@ const imgPuszkiInstalacyjne_02_dryWall: IF_ImgStaticData[] = [
   { image: img6 },
   { image: img7 },
   { image: img8 },
-  // { image: img9 },
-  // { image: img10 },
-  // { image: img11 },
-  // { image: img12 },
-  // { image: img13 },
-  // { image: img14 },
-  // { image: img15 },
-  // { image: img1_b },
-  // { image: img2_b },
-  // { image: img3_b },
-  // { image: img4_b },
-  // { image: img5_b },
-  // { image: img5_c },
-  // { image: img6_c },
+  { image: img9 },
+  { image: img10 },
+  { image: img11 },
+  { image: img12 },
 ];
-export { imgPuszkiInstalacyjne_02_dryWall };
+export { imgPuszkiInstalacyjne_03_osadzone };
