@@ -13,7 +13,7 @@ const CatalogCardsSection: React.FunctionComponent<
   /**JSX* */
   return (
     <div
-      className="flex flex-col gap-2"
+      className="flex flex-col divide-[2px] "
       data-component="CatalogCardsSection__container"
     >
       {catalogCardTablesData?.map((catalogCardTableData, index) => (

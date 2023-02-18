@@ -8,16 +8,11 @@ import { IF_CatalogCardTableData } from '../../../../../../utils/TS/typeScriptSt
 const CatalogTable: React.FunctionComponent<IF_CatalogCardTableData> = ({
   catalogCardTableData,
 }) => {
-  /**...WTF**/
-  //   console.log(
-  //     'catalogCardTableData.headerData:',
-  //     catalogCardTableData.headerData
-  //   );
   /**JSX**/
   return (
     <div
       data-component="CatalogTable__container"
-      className="w-full flex flex-col gap-2"
+      className="w-full flex flex-col divide-[2px] "
     >
       {catalogCardTableData.headerType ? (
         <CatalogTableHeader

@@ -3,7 +3,8 @@ import React from 'react';
 import CatalogTableRow from './row/CatalogTableRow';
 /**Handler**/
 import { bodyStylesSwitcher } from '../handlers/bodyStylesSwitcher';
-
+/**Tailwind Styles*/
+import { tableTextL } from '../../../../../../../utils/tailwindStyles';
 /**------------------------------------------------------**/
 const CatalogTableBody: React.FunctionComponent<{
   amper: string;
@@ -22,7 +23,7 @@ const CatalogTableBody: React.FunctionComponent<{
     <div className={bodyStylesSwitcher(bodyType)?.containerStyle}>
       {/*ampers*/}
       <div className={bodyStylesSwitcher(bodyType)?.amperStyle}>
-        <p className="p-medium text-center text-light">{amper}</p>
+        <p className={`${tableTextL} text-center text-light`}>{amper}</p>
       </div>
       {/*rest of table*/}
       {rowsData.map((rowData, index) => (

@@ -20,6 +20,13 @@ const productPagesSectionContentLayout =
 //___used in <UnderlinedTable>
 const undelinedTableTextStyle =
   'p-small text-grey group-hover:text-light ease-in duration-300 disable-soft';
+//___styles for tables Text
+const tableTextS =
+  'text-[0.625rem] lg:text-[0.75rem] xxl:text-[0.625rem] xxxl:text-[0.75rem] tracking-[0.125rem] xxl:tracking-[1.25px] xxxl:tracking-[0.125rem] word-spacing-01 xxl:word-spacing-0125';
+const tableTextM =
+  'text-[0.75rem] xs:text-[0.825rem] xxl:text-[0.75rem] xxxl:text-[0.825rem] tracking-[0.125rem] word-spacing-01 lg:word-spacing-0125';
+const tableTextL =
+  'text-[1rem] xs:text-[1.125rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025';
 
 export {
   vertGap,
@@ -35,4 +42,8 @@ export {
   productPagesSectionContentLayout,
   //___used in <UmnderlinedTable>
   undelinedTableTextStyle,
+  //___
+  tableTextS,
+  tableTextM,
+  tableTextL,
 };

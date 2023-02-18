@@ -1,3 +1,10 @@
+/**Tailwind Styles*/
+import {
+  tableTextS,
+  tableTextM,
+  tableTextL,
+} from '../../../../../utils/tailwindStyles';
+
 /**HardCoded Data**/
 //__containers for col7_Table
 const col7full =
@@ -17,16 +24,14 @@ const col4half = 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group';
 const col3full = 'grid grid-cols-[2fr_3fr_3fr] divide-x-2 divide-dark group';
 const col3half = 'grid grid-cols-[2fr_6fr] divide-x-2 divide-dark group';
 //___ampers
-const ampsH = ' py-2 pl-2 bg-dark';
-const ampC = ' text-light p-small text-center py-2 bg-greyShade1';
+const ampsH = 'py-2 pl-2 bg-dark';
+const ampC = `text-light ${tableTextL} text-center py-2 bg-greyShade1`;
 //___poles
-const polesH = 'p-small text-light py-2 pl-2 bg-greyShade1';
-const polesC = ' text-light p-small text-center py-2 bg-greyShade1';
+const polesH = `${tableTextM} text-light py-2 pl-2 bg-greyShade1`;
+const polesC = `text-light ${tableTextM} text-center py-2 bg-greyShade1`;
 //___animated
-const animH =
-  'p-small text-light py-2 pl-2 bg-greyShade1 group-hover:bg-corpo ease-in duration-300 select-none';
-const animC =
-  'fc text-dark p-small text-center py-2 bg-greyTint2  group-hover:bg-light ease-in duration-300 select-none';
+const animH = `${tableTextM} text-light py-2 pl-2 bg-greyShade1 group-hover:bg-corpo ease-in duration-300 select-none`;
+const animC = `fc text-dark ${tableTextM} text-center py-2 bg-greyTint2  group-hover:bg-light ease-in duration-300 select-none`;
 
 const mainStylesSwitcher = (polesNumber: number) => {
   switch (polesNumber) {

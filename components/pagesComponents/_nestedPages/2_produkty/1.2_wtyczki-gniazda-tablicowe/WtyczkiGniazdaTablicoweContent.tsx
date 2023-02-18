@@ -46,8 +46,8 @@ const WtyczkiGniazdaTablicoweContent: React.FunctionComponent<{
           return (
             <React.Fragment key={index}>
               {/* <SectionContentLayout></SectionContentLayout> */}
-              <SectionContentLayout divStyle={productPagesSectionContentLayout}>
-                <div className="flex flex-col gap-y-10 w-full lg:w-[50%] ">
+              <SectionContentLayout divStyle="flex flex-col-reverse gap-y-12 xxl:flex-row xxl:gap-y-0 xxl:gap-x-10">
+                <div className="flex flex-col gap-y-10 w-full xxl:w-[55%]">
                   <TablesSection
                     productCardIndex={index}
                     polesNumber={polesNumber}
@@ -60,7 +60,7 @@ const WtyczkiGniazdaTablicoweContent: React.FunctionComponent<{
                     catalogCardTablesData={catalogCardTablesData}
                   />
                 </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]">
+                <div className="w-full h-[40vh] sm:h-[50vh] xxl:w-[45%] xxl:h-auto xxl:min-h-[400px]">
                   <SquareHolderWithImage
                     imageData={productImage}
                     squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
