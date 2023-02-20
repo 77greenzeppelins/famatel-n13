@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 // const categoryNameContainerStyle = 'h-[1rem] lg:h-[2rem] lg:h-[4.6rem] xxl:h-[6rem] ';
 // const categoryNameContainerStyle = '';
 const h1DefaultStyle = `text-light text-left 
-    text-[1rem] lg:text-[2rem] xxl:text-[3rem] tracking-widest
+    text-[2rem] md:text-[2.5rem] xxl:text-[3rem] tracking-widest
    `;
 
 /**-----------------------------------------------**/

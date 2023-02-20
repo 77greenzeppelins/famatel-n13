@@ -7,6 +7,7 @@ import SquareHolderWithImage from '../../../../multipagesComponents/holders/squa
 import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import TechSpecTable from './techSpecTable/TechSpecTable';
 import CatalogTable from './catalogTable/CatalogTable';
+import TableWithUnderlinedRows from '../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 import ProtectionSection from './protectionSection/ProtectionSection';
 /**Basic Data**/
 import {
@@ -18,7 +19,10 @@ import { wtyczkiGniazdaSchukoTablicowe_catalog_data } from '../../../../../data/
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles**/
-import { productPagesSectionContentLayout } from '../../../../../utils/tailwindStyles';
+import {
+  productPagesSectionContentLayout,
+  undelinedTableTextStyle,
+} from '../../../../../utils/tailwindStyles';
 
 /**----------------------------------------**/
 const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
@@ -42,22 +46,88 @@ const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
               {/* <SectionContentLayout></SectionContentLayout> */}
               <SectionContentLayout divStyle={productPagesSectionContentLayout}>
                 <div className="flex flex-col gap-y-10 lg:gap-y-20 w-full lg:w-[50%] ">
-                  <SectionContentLayout divStyle="flex flex-col gap-y-6">
-                    <SmallPseudoHeader
-                      text={smallPseudoHeaders.l1}
-                      hasBox={true}
-                      hasVerticalOrnament={false}
-                    />
-                    <CatalogTable catalogData={catalogData} />
-                  </SectionContentLayout>
-                  <SectionContentLayout divStyle="flex flex-col gap-y-6">
-                    <SmallPseudoHeader
-                      text={smallPseudoHeaders.l2}
-                      hasBox={true}
-                      hasVerticalOrnament={false}
-                    />
-                    <TechSpecTable productTechData={productTechData} />
-                  </SectionContentLayout>
+                  {index < 6 && (
+                    <>
+                      <SectionContentLayout divStyle="flex flex-col gap-y-6">
+                        <SmallPseudoHeader
+                          text={smallPseudoHeaders.l1}
+                          hasBox={true}
+                          hasVerticalOrnament={false}
+                        />
+                        <CatalogTable catalogData={catalogData} />
+                      </SectionContentLayout>
+                      <SectionContentLayout divStyle="flex flex-col gap-y-6">
+                        <SmallPseudoHeader
+                          text={smallPseudoHeaders.l2}
+                          hasBox={true}
+                          hasVerticalOrnament={false}
+                        />
+                        <TechSpecTable productTechData={productTechData} />
+                      </SectionContentLayout>
+                    </>
+                  )}
+                  {index > 5 && index < 8 && (
+                    <SectionContentLayout divStyle="flex flex-col gap-y-6">
+                      <SmallPseudoHeader
+                        text={smallPseudoHeaders.l1}
+                        hasBox={true}
+                        hasVerticalOrnament={false}
+                      />
+                      <CatalogTable catalogData={catalogData} />
+                    </SectionContentLayout>
+                  )}
+                  {index === 8 && (
+                    <>
+                      <SectionContentLayout divStyle="flex flex-col gap-y-6">
+                        <SmallPseudoHeader
+                          text={smallPseudoHeaders.l2}
+                          hasBox={true}
+                          hasVerticalOrnament={false}
+                        />
+                        <TechSpecTable productTechData={productTechData} />
+                      </SectionContentLayout>
+                      <SectionContentLayout divStyle="flex flex-col gap-y-8">
+                        <SmallPseudoHeader
+                          text={smallPseudoHeaders.l3}
+                          hasBox={true}
+                          hasVerticalOrnament={false}
+                        />
+                        <TableWithUnderlinedRows
+                          rowsData={
+                            wtyczkiGniazdaSchukoTablicowe_tech_data[index]
+                              .features
+                          }
+                          cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+                          textStyle={[
+                            undelinedTableTextStyle,
+                            undelinedTableTextStyle,
+                          ]}
+                        />
+                      </SectionContentLayout>
+                    </>
+                  )}
+                  {index === 9 && (
+                    <>
+                      <SectionContentLayout divStyle="flex flex-col gap-y-8">
+                        <SmallPseudoHeader
+                          text={smallPseudoHeaders.l3}
+                          hasBox={true}
+                          hasVerticalOrnament={false}
+                        />
+                        <TableWithUnderlinedRows
+                          rowsData={
+                            wtyczkiGniazdaSchukoTablicowe_tech_data[index]
+                              .features
+                          }
+                          cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+                          textStyle={[
+                            undelinedTableTextStyle,
+                            undelinedTableTextStyle,
+                          ]}
+                        />
+                      </SectionContentLayout>
+                    </>
+                  )}
                 </div>
                 <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]">
                   <SquareHolderWithImage

@@ -1,17 +1,15 @@
 import React from 'react';
 /**Tailwind Styles**/
 import {
-  vertGap,
   horizGap,
-  horizGapL,
-  topHeaderCell,
-  sideHeaderCell,
-  bodyCell,
+  aTopHeaderCell,
+  aSideHeaderCellCenter,
+  aBodyCell,
 } from '../../../../../../utils/tailwindStyles';
 /**TS**/
 import { IFProdCatDataSchuko2 } from '../../../../../../utils/TS/typeScriptStaff';
 /**HardCoded Data**/
-const mainGrid = `grid grid-cols-[2fr_8fr] ${vertGap}`;
+const mainGrid = `grid grid-cols-[2fr_8fr]`;
 
 /**-------------------------------**/
 const CatalogTable2: React.FunctionComponent<{
@@ -27,20 +25,21 @@ const CatalogTable2: React.FunctionComponent<{
     >
       {catalogData.line1 ? (
         <div className={mainGrid}>
-          <div className={topHeaderCell}>{catalogData.line1.label} </div>
-          <div>
-            <div className={topHeaderCell}>{catalogData.line1.value} </div>
-          </div>
+          <div className={aTopHeaderCell}>{catalogData.line1.label} </div>
+
+          <div className={aTopHeaderCell}>{catalogData.line1.value} </div>
         </div>
       ) : null}
       <div className={`${mainGrid} group`}>
         {catalogData.line2 ? (
           <>
-            <div className={sideHeaderCell}>{catalogData.line2.label} </div>
+            <div className={aSideHeaderCellCenter}>
+              {catalogData.line2.label}{' '}
+            </div>
             <div className={`flex flex-col ${horizGap}`}>
               {catalogData.line2?.value.map((label, i) => (
                 <div key={i}>
-                  <div className={bodyCell}>{label}</div>
+                  <div className={aBodyCell}>{label}</div>
                 </div>
               ))}
             </div>
@@ -50,11 +49,13 @@ const CatalogTable2: React.FunctionComponent<{
       <div className={`${mainGrid} group`}>
         {catalogData.line3 ? (
           <>
-            <div className={sideHeaderCell}>{catalogData.line3.label} </div>
+            <div className={aSideHeaderCellCenter}>
+              {catalogData.line3.label}{' '}
+            </div>
             <div className={`flex flex-col ${horizGap}`}>
               {catalogData.line3?.value.map((label, i) => (
                 <div key={i}>
-                  <div className={bodyCell}>{label}</div>
+                  <div className={aBodyCell}>{label}</div>
                 </div>
               ))}
             </div>
@@ -64,11 +65,13 @@ const CatalogTable2: React.FunctionComponent<{
       <div className={`${mainGrid} group`}>
         {catalogData.line4 ? (
           <>
-            <div className={sideHeaderCell}>{catalogData.line4.label} </div>
+            <div className={aSideHeaderCellCenter}>
+              {catalogData.line4.label}{' '}
+            </div>
             <div className={`flex flex-col ${horizGap}`}>
               {catalogData.line4?.value.map((label, i) => (
                 <div key={i}>
-                  <div className={bodyCell}>{label}</div>
+                  <div className={aBodyCell}>{label}</div>
                 </div>
               ))}
             </div>
@@ -78,11 +81,13 @@ const CatalogTable2: React.FunctionComponent<{
       <div className={`${mainGrid} group`}>
         {catalogData.line5 ? (
           <>
-            <div className={sideHeaderCell}>{catalogData.line5.label} </div>
+            <div className={aSideHeaderCellCenter}>
+              {catalogData.line5.label}{' '}
+            </div>
             <div className={`flex flex-col ${horizGap}`}>
               {catalogData.line5?.value.map((label, i) => (
                 <div key={i}>
-                  <div className={bodyCell}>{label}</div>
+                  <div className={aBodyCell}>{label}</div>
                 </div>
               ))}
             </div>

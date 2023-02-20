@@ -11,8 +11,6 @@ import { wtyczkiGniazdaPrzenosne_tech_data } from '../../../../../data/categorie
 import { wtyczkiGniazdaPrzenosne_tablesData } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_1_przenosne_prodCat';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
-/**Tailwind Styles**/
-import { productPagesSectionContentLayout } from '../../../../../utils/tailwindStyles';
 
 /**----------------------------------------**/
 const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{

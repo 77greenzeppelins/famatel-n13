@@ -29,7 +29,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP44', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[0],
     type: 'Typ: Wtyczki przenośne na bardzo niskie napięcia',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: 'Kolekcja: SpeedPRO',
     altName: 'Wtyczka przenośna na bardzo niskie napięcia IP44',
   },
   {
@@ -38,7 +38,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[1],
     type: 'Typ: Wtyczki przenośne na bardzo niskie napięcia',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: 'Kolekcja: SpeedPRO',
     altName: 'Wtyczka przenośna na bardzo niskie napięcia IP67',
   },
   {
@@ -47,7 +47,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP44', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[2],
     type: 'Typ: Gniazda przenośne na bardzo niskie napięcia',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: 'Kolekcja: SpeedPRO',
     altName: 'Gniazdo przenośne na bardzo niskie napięcia IP44',
   },
   //__s.64
@@ -57,7 +57,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[3],
     type: 'Typ: Gniazda przenośne na bardzo niskie napięcia',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: 'Kolekcja: SpeedPRO',
     altName: 'Gniazdo przenośne na bardzo niskie napięcia IP67',
   },
   {
@@ -66,7 +66,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP44', '16A', '32A', 'wymiar: 75x85'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[4],
     type: 'Typ: Gniazda tablicowe proste na bardzo niskie napięcia',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: 'Kolekcja: SpeedPRO',
     altName: 'Gniazdo tablicowe na bardzo niskie napięcia IP44',
   },
   {
@@ -75,7 +75,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP67', '16A', '32A', 'wymiar: 75x85'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[5],
     type: 'Typ: Gniazda tablicowe proste na bardzo niskie napięcia',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: 'Kolekcja: SpeedPRO',
     altName: 'Gniazdo tablicowe na bardzo niskie napięcia IP67',
   },
   //__s.66
@@ -85,7 +85,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP44', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[6],
     type: 'Typ: Gniazda stałe na bardzo niskie napięcia',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: 'Kolekcja: SpeedPRO',
     altName: 'Gniazdo stałe na bardzo niskie napięcia IP44',
   },
   {
@@ -94,7 +94,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_06_niskie_napiecia[7],
     type: 'Typ: Gniazda stałe na bardzo niskie napięcia',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: 'Kolekcja: SpeedPRO',
     altName: 'Gniazdo stałe na bardzo niskie napięcia IP67',
   },
 ];

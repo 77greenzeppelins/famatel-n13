@@ -22,7 +22,7 @@ const ProductCardContent: React.FunctionComponent<{
   /**JSX**/
   return (
     <div className="flex h-full ">
-      <div className=" fc w-[50%] max-w-[200px] xs:max-w-[210px] md:max-w-[240px] h-full ">
+      <div className=" fc w-[50%]  xs:w-[50%] md:max-w-[240px] h-full ">
         <ProductCardGraphicSection
           imageData={imageData}
           productIndex={arrayIndex}

@@ -8,7 +8,7 @@ const boxDefaultStyle = 'h-[16px] aspect-square bg-corpo';
 
 /**-----------------------------------------------------**/
 const SmallPseudoHeader: React.FunctionComponent<{
-  text: string;
+  text?: string;
   containerStyle?: string;
   textStyle?: string;
   // verticalOrnamentStyle?: string;

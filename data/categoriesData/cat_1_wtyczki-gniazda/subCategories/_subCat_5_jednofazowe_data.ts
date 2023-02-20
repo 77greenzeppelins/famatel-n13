@@ -4,18 +4,6 @@ import { imgWtyczkiGniazda_05_jednofazowe } from '../../../../public/images/c1_w
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 import { catalogStructureData } from '../../../_catalogStructure_data';
 
-const catalogVersion = [
-  '1167',
-  '2167',
-  '2167F',
-  '1165',
-  '2165',
-  '2165F',
-  '187G',
-  '188G',
-  '2998',
-];
-
 const wtyczkiGniazdaSchuko_SubCategory_data = {
   subCategoryName: catalogStructureData[0].subCategoriesNames[4],
   subCategoryUrl: catalogStructureData[0].subCategoriesUrls[4],

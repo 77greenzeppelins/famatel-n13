@@ -116,7 +116,7 @@ const WtyczkiGniazdaCampingoweContent: React.FunctionComponent<{
                           <Layout3 key={i} tableData={tableData} />
                         )
                       )}
-                    <SectionContentLayout divStyle="flex flex-col gap-y-8">
+                    {/* <SectionContentLayout divStyle="flex flex-col gap-y-8">
                       <SmallPseudoHeader
                         text={smallPseudoHeaders.l3}
                         hasBox={true}
@@ -130,7 +130,7 @@ const WtyczkiGniazdaCampingoweContent: React.FunctionComponent<{
                           undelinedTableTextStyle,
                         ]}
                       />
-                    </SectionContentLayout>
+                    </SectionContentLayout> */}
                   </div>
                 </div>
                 <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]  bg-grey">

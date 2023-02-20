@@ -279,6 +279,7 @@ const wtyczkiGniazdaScienne_tech_data = [
     connectionType: ['Rodzaj połączenia', 'Zaciski śrubowe'],
     mm: ['Przewód giętki (mm²)', '6 - 16'],
     weight: ['Waga', '1745', '1752', '1852'],
+    features: [['']],
   },
   //___19__akcesoria
   {
@@ -288,6 +289,11 @@ const wtyczkiGniazdaScienne_tech_data = [
     connectionType: [''],
     mm: [''],
     weight: [''],
+    features: [
+      ['Stopień Ochrony', 'IP54 / 67'],
+      ['Format', '75×85'],
+      ['Opakowanie', '4'],
+    ],
   },
   //___20__
   {
@@ -297,6 +303,11 @@ const wtyczkiGniazdaScienne_tech_data = [
     connectionType: [''],
     mm: [''],
     weight: [''],
+    features: [
+      ['Stopień Ochrony', 'IP54 / 67'],
+      ['Format', '75×85 / 75×85'],
+      ['Opakowanie', '3'],
+    ],
   },
 ];
 

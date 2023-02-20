@@ -11,6 +11,8 @@ import { mainStylesSwitcher } from '../../../../../multipagesComponents/tables/d
 import { smallPseudoHeaders } from '../../../../../../data/_data';
 /**TS**/
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
+/**Tailwind Styles**/
+import { horizGap } from '../../../../../../utils/tailwindStyles';
 
 /**------------------------------------------------**/
 const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
@@ -46,7 +48,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
           hasVerticalOrnament={false}
         />
 
-        <DIYTable tableLayout={'flex flex-col gap-y-1 w-full '}>
+        <DIYTable tableLayout={`flex flex-col ${horizGap} `}>
           <RowWithLayout
             rowData={ampersData}
             containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}
@@ -61,7 +63,6 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
             <RowWithLayout
               key={index}
               rowData={rowData}
-              // containerLayout="grid grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr_1fr] divide-x-2 divide-dark group"
               containerLayout={mainStylesSwitcher(polesNumber)?.columnsPoles}
               cellsContainersStyle={
                 mainStylesSwitcher(polesNumber)?.animatedRowStyle

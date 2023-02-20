@@ -5,29 +5,6 @@ import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
-// const catalogVersion = [
-//   '13250',
-//   '14353',
-//   '13297',
-//   '13397',
-//   '13761',
-//   '14355',
-//   '14381',
-//   '23250',
-//   '24353',
-//   '23397',
-//   '23290',
-//   '23609', //?
-//   '23626',
-//   '24290',
-//   '24609', //*
-//   '24626',
-//   '24395',
-//   '24396',
-//   '23000',
-//   '23001',
-// ];
-
 const wtyczkiGniazdaScienne_SubCategory_data = {
   subCategoryName: catalogStructureData[0].subCategoriesNames[2],
   subCategoryUrl: catalogStructureData[0].subCategoriesUrls[2],
@@ -41,7 +18,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[0],
     type: 'Typ: Wtyczki stałe 90°',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Wtyczka stała 90°',
   },
   {
@@ -50,7 +27,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[1],
     type: 'Typ: Wtyczki stałe 90°',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Wtyczka stała 90°',
   },
   {
@@ -59,7 +36,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP54', '16A'],
     imageData: imgWtyczkiGniazda_03_scienne[2],
     type: 'Typ: Wtyczki stałe 90° ',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Wtyczka stała 90°',
   },
   {
@@ -68,7 +45,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP54', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[3],
     type: 'Typ: Wtyczki stałe 12°',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Wtyczka stała 12°',
   },
   {
@@ -77,7 +54,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[4],
     type: 'Typ: Wtyczki stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Wtyczka stała',
   },
   {
@@ -86,7 +63,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP67', '63A'],
     imageData: imgWtyczkiGniazda_03_scienne[5],
     type: 'Typ: Wtyczki stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Wtyczka stała',
   },
   {
@@ -95,7 +72,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP67', '125A'],
     imageData: imgWtyczkiGniazda_03_scienne[6],
     type: 'Typ: Wtyczki stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Wtyczka stała',
   },
   //__s.46
@@ -105,7 +82,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[7],
     type: 'Typ: Gniazda stałe 90°',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe 90°',
   },
   {
@@ -114,7 +91,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[8],
     type: 'Typ: Gniazda stałe 90°',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe 90°',
   },
   //__s.48
@@ -124,7 +101,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[9],
     type: 'Typ: Gniazda stałe ECO',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe ECO',
   },
   {
@@ -133,7 +110,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP54', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[10],
     type: 'Typ: Gniazda stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe',
   },
   {
@@ -142,7 +119,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP54', '16A'],
     imageData: imgWtyczkiGniazda_03_scienne[11],
     type: 'Typ: Gniazda stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe',
   },
   {
@@ -151,7 +128,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP54', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[12],
     type: 'Typ: Gniazda stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe',
   },
   //__s.50
@@ -161,7 +138,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[13],
     type: 'Typ: Gniazda stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe',
   },
   {
@@ -170,7 +147,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP67', '16A'],
     imageData: imgWtyczkiGniazda_03_scienne[14],
     type: 'Typ: Gniazda stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe',
   },
   {
@@ -179,7 +156,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP67', '32A'],
     imageData: imgWtyczkiGniazda_03_scienne[15],
     type: 'Typ: Gniazda stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe',
   },
   //___s.52
@@ -189,7 +166,7 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP67', '63A'],
     imageData: imgWtyczkiGniazda_03_scienne[16],
     type: 'Typ: Gniazda stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe',
   },
   {
@@ -198,25 +175,25 @@ const wtyczkiGniazdaScienne_productCards_data: IF_ProductCardData[] = [
     textIcons: ['IP67', '125A'],
     imageData: imgWtyczkiGniazda_03_scienne[17],
     type: 'Typ: Gniazda stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     altName: 'Gniazdo stałe',
   },
   {
     arrayIndex: 18,
     path: `${wtyczkiGniazdaScienne_SubCategory_data.subCategoryUrl}/23000`,
-    textIcons: ['IP54', '16A', '32A', 'Wymiary: 75 × 85'],
+    // textIcons: ['IP54', '16A', '32A', 'Wymiary: 75 × 85'],
     imageData: imgWtyczkiGniazda_03_scienne[18],
     type: 'Typ: Gniazda stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     model: 'Model: 23000',
   },
   {
     arrayIndex: 19,
     path: `${wtyczkiGniazdaScienne_SubCategory_data.subCategoryUrl}/23001`,
-    textIcons: ['IP54', '16A', '32A', 'Wymiary: 75 × 85 / 80 × 95'],
+    // textIcons: ['IP54', '16A', '32A', 'Wymiary: 75 × 85 / 80 × 95'],
     imageData: imgWtyczkiGniazda_03_scienne[19],
     type: 'Typ: Gniazda stałe',
-    collection: ['Kolekcja:', 'SpeedPRO'],
+    collection: ['Kolekcja: SpeedPRO'],
     model: 'Modele: 23001  / 23002',
   },
 ];

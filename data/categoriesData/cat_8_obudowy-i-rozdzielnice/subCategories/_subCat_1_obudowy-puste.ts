@@ -21,7 +21,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 × 305'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[0],
     type: 'Typ: Obudowa pusta',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3927',
   },
   {
@@ -30,7 +30,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 × 490'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[1],
     type: 'Typ: Obudowa pusta',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3950',
   },
   {
@@ -39,7 +39,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 8', 'wymiary: 230 × 500'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[2],
     type: 'Typ: Obudowa pusta',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3951',
   },
   {
@@ -48,7 +48,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 16', 'wymiary: 330 × 330'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[3],
     type: 'Typ: Obudowa pusta',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3974',
   },
   {
@@ -57,7 +57,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 16', 'wymiary: 330 × 500'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[4],
     type: 'Typ: Obudowa pusta',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3952',
   },
   {
@@ -66,7 +66,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 32', 'wymiary: 330 × 685'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[5],
     type: 'Typ: Obudowa pusta',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3977',
   },
   {
@@ -75,7 +75,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 9', 'wymiary: 215 × 245 / 260'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[6],
     type: 'Typ: Obudowa pusta',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3957',
   },
   {
@@ -84,7 +84,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 9', 'wymiary: 215 × 320 / 350'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[7],
     type: 'Typ: Obudowa pusta',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3958',
   },
   {
@@ -93,7 +93,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 12', 'wymiary: 265 × 380 / 400'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[8],
     type: 'Typ: Obudowa pusta',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3959',
   },
   {
@@ -102,7 +102,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 × 305'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[9],
     type: 'Typ: Obudowa z otworami pod gniazda',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3928 ',
   },
   {
@@ -111,7 +111,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 6', 'wymiary: 125 × 490'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[10],
     type: 'Typ: Obudowa z otworami pod gniazda',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3960',
   },
   {
@@ -120,7 +120,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 16'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[11],
     type: 'Typ: Obudowa z otworami pod gniazda',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3975',
   },
 
@@ -130,7 +130,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 8'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[12],
     type: 'Typ: Obudowa z otworami pod gniazda',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3961',
   },
   {
@@ -139,7 +139,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB:16 '],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[13],
     type: 'Typ: Obudowa z otworami pod gniazda',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3962',
   },
   {
@@ -148,7 +148,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 32', 'IEC: 6'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[14],
     type: 'Typ: Obudowa z otworami pod gniazda',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3978',
   },
   //___
@@ -158,7 +158,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'IEC: 3'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[15],
     type: 'Typ: Obudowa z otworami pod gniazda',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3963',
   },
   {
@@ -167,7 +167,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'IEC: 6'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[16],
     type: 'Typ: Obudowa z otworami pod gniazda',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3966',
   },
   {
@@ -176,7 +176,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 8'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[17],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3967',
   },
   {
@@ -185,7 +185,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 16'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[18],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3968',
   },
   {
@@ -194,7 +194,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[19],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3969',
   },
 
@@ -204,7 +204,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 16'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[20],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3970',
   },
   {
@@ -213,7 +213,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 32'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[21],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3979',
   },
   {
@@ -222,7 +222,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[22],
     type: 'Typ: Obudowa z otworami pod gniazda z blokadą mechaniczną',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3973',
   },
   {
@@ -231,7 +231,7 @@ const productCardsData: IF_ProductCardData[] = [
     textIcons: ['IP65', 'MCB: 13'],
     imageData: imgObudowyRozdzielnice_01_obudowy_puste[23],
     type: 'Modułowe obudowy uzupełniające',
-    collection: ['Kolekcja:', 'AcquaCOMBI'],
+    collection: ['Kolekcja: AcquaCOMBI'],
     model: 'Model: 3964',
   },
 ];

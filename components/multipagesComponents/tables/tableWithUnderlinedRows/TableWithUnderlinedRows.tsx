@@ -4,7 +4,7 @@ import UnderlinedRow from './underlinedRow/UnderlinedRow';
 
 /**-------------------------------------------------------**/
 const TableWithUnderlinedRows: React.FunctionComponent<{
-  rowsData: string[][] | string[];
+  rowsData?: string[][] | string[];
   tableContainerStyle?: string;
   rowContainerStyle?: string;
   cellsStyles?: string[];
@@ -26,7 +26,7 @@ const TableWithUnderlinedRows: React.FunctionComponent<{
           : 'w-full flex flex-col gap-y-4 '
       }
     >
-      {rowsData.map((rowData, i) => (
+      {rowsData?.map((rowData, i) => (
         <UnderlinedRow
           key={i}
           rowData={rowData}

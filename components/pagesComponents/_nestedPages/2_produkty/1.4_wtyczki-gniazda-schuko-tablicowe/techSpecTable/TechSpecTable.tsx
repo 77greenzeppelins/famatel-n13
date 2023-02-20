@@ -1,5 +1,6 @@
 import React from 'react';
 /**Components**/
+import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 /**TS**/
 import { IF_ProductTechDataSchucoTablicowe } from '../../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles**/
@@ -9,7 +10,6 @@ import {
   sideHeaderCellCenter,
   bodyCell,
 } from '../../../../../../utils/tailwindStyles';
-import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 
 /**----------------------------------**/
 const TechSpecTable: React.FunctionComponent<
@@ -23,7 +23,7 @@ const TechSpecTable: React.FunctionComponent<
     >
       <div className={`flex flex-col w-full ${horizGap}`}>
         {productTechData.line1 ? (
-          <div className={`grid grid-cols-[2fr_repeat(6,1fr)] ${vertGap}`}>
+          <div className={`grid grid-cols-[2fr_repeat(6,1fr)] ${vertGap} `}>
             <RowWithSideHeader
               rowData={productTechData.line1}
               customeHeader={'bg-dark'}

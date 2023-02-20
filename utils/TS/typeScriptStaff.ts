@@ -118,7 +118,7 @@ interface IF_ProductCardData {
   largeTextIcons?: string[];
   //___ for <Card_Product> as product descripions
   type?: string;
-  collection?: string[];
+  collection?: string[] | string;
   model?: string;
   //___for productPage as "productModel / productName"
   altName?: string;
