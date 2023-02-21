@@ -7,7 +7,15 @@ Data for data
 Data for component
 */
 
-const wtyczkiGniazdaPrzenosne_tech_data = [
+const wtyczkiGniazdaPrzenosne_tech_data: {
+  ampers: string[];
+  poles: string[];
+  bodyData: string[][];
+  connectionType: string[];
+  mm: string[];
+  weight: string[];
+  tableType?: number;
+}[] = [
   //___1 / IP54
   {
     ampers: [' ', '16A', '32A'],
@@ -222,6 +230,7 @@ const wtyczkiGniazdaPrzenosne_tech_data = [
     connectionType: ['Rodzaj połączenia', 'Zaciski śrubowe'],
     mm: ['Przewód giętki (mm²)', '1 - 2.5', '2.5 - 6'],
     weight: ['Waga', '157', '258'],
+    tableType: 3.1, //for special cese in techSpecTable...
   },
 ];
 

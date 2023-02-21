@@ -15,6 +15,7 @@ import {
 } from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_2_przemyslowe_techSpec';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
+import ImagesSection from '../_imgSection/ImagesSection';
 
 /**----------------------------------------**/
 const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
@@ -59,10 +60,10 @@ const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
               </SectionContentLayout>
               <SectionContentLayout
                 // divStyle="grid grid-cols-[1fr] gap-4 md:grid-cols-[1fr_1fr] md:grid-rows-3"
-                divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 "
+                divStyle="flex flex-col-reverse gap-y-4 xl:flex-row xl:gap-x-10 "
               >
                 <div
-                  className="w-full lg:w-[50%]"
+                  className="w-full xl:w-[50%]"
                   // className="md:col-start-1 md:row-start-1"
                 >
                   <TablesSection
@@ -88,13 +89,14 @@ const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
                     norma={norma}
                   />
                 </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto  bg-grey">
-                  <SquareHolderWithImage
+                <div className="w-full h-[40vh] sm:h-[50vh] xl:w-[50%] xl:h-auto">
+                  {/* <SquareHolderWithImage
                     imageData={productImage}
                     squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
                     //___items-start
                     squareHolderInnerContainer="relative overflow-hidden bg-light p-4"
-                  />
+                  /> */}
+                  <ImagesSection imageData={productImage} />
                 </div>
               </SectionContentLayout>
             </React.Fragment>

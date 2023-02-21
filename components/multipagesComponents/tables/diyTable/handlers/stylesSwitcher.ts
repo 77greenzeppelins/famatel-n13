@@ -33,8 +33,11 @@ const polesC = `text-light ${tableTextM} text-center py-2 bg-greyShade2`;
 const animH = `${tableTextM} text-light py-2 pl-2 bg-greyShade2 group-hover:bg-corpo ease-in duration-300 select-none`;
 const animC = `fc text-dark ${tableTextM} text-center py-2 bg-greyTint2  group-hover:bg-light ease-in duration-300 select-none`;
 
-const mainStylesSwitcher = (polesNumber: number) => {
-  switch (polesNumber) {
+const mainStylesSwitcher = (tableType: number) => {
+  /*
+  ___1. initially base on polesNumber; but the problem is 
+  */
+  switch (tableType) {
     //___for table with full 16A & 32A
     case 7:
       return {
@@ -68,6 +71,15 @@ const mainStylesSwitcher = (polesNumber: number) => {
       return {
         columnsPoles: col3full,
         columnsAmpers: col3half,
+        columnsConnectionType: col3half,
+        animatedRowStyle: [animH, animC, animC],
+        ampersStyle: [ampsH, ampC, ampC],
+        polesStyle: [polesH, polesC, polesC],
+      };
+    case 3.1:
+      return {
+        columnsPoles: col3full,
+        columnsAmpers: col3full,
         columnsConnectionType: col3half,
         animatedRowStyle: [animH, animC, animC],
         ampersStyle: [ampsH, ampC, ampC],

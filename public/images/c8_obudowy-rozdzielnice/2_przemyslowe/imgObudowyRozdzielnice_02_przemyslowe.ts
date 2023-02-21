@@ -1,4 +1,4 @@
-// import { StaticImageData } from 'next/image';
+// import { StaticImageData , model: '666'} from 'next/image';
 /**Images**/
 import img1 from './8.2_01_6401.webp';
 import img2 from './8.2_02_6504.webp';
@@ -22,18 +22,18 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgObudowyRozdzielnice_02_przemyslowe: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-  { image: img5 },
-  { image: img5_1 },
-  { image: img6 },
-  { image: img7 },
-  { image: img8 },
-  { image: img9 },
-  { image: img10 },
-  { image: img11 },
-  { image: img12 },
+  { image: img1, model: '6401' },
+  { image: img2, model: '6504' },
+  { image: img3, model: '6602' },
+  { image: img4, model: '3957' },
+  { image: img5, model: '3958' },
+  { image: img5_1, model: '3959' },
+  { image: img6, model: '6201' },
+  { image: img7, model: '6301' },
+  { image: img8, model: '6901' },
+  { image: img9, model: '6051' },
+  { image: img10, model: '6054' },
+  { image: img11, model: '3980' },
+  { image: img12, model: '3980 P' },
 ];
 export { imgObudowyRozdzielnice_02_przemyslowe };

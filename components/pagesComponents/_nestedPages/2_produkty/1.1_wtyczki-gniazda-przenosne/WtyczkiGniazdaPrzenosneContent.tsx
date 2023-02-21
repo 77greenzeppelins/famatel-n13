@@ -29,6 +29,7 @@ const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{
         const ampersData = wtyczkiGniazdaPrzenosne_tech_data[index].ampers;
         const polesNumber =
           wtyczkiGniazdaPrzenosne_tech_data[index].poles.length;
+        const tableType = wtyczkiGniazdaPrzenosne_tech_data[index]?.tableType;
         const polesData = wtyczkiGniazdaPrzenosne_tech_data[index].poles;
         const bodyData = wtyczkiGniazdaPrzenosne_tech_data[index].bodyData;
         const przewodData = wtyczkiGniazdaPrzenosne_tech_data[index].mm;
@@ -47,7 +48,7 @@ const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{
               <SectionContentLayout divStyle="flex flex-col-reverse gap-y-12 xxl:flex-row xxl:gap-y-0 xxl:gap-x-10">
                 <div className="flex flex-col gap-y-10 w-full xxl:w-[50%]">
                   <TablesSection
-                    polesNumber={polesNumber}
+                    polesNumber={tableType ? tableType : polesNumber}
                     polesData={polesData}
                     ampersData={ampersData}
                     bodyData={bodyData}

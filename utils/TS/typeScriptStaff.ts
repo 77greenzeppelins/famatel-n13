@@ -2,6 +2,7 @@ import { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
 interface IF_ImgStaticData {
   image: StaticImageData;
+  model?: string;
 }
 /**
  * used in some _data files in "data / categoriesData"
