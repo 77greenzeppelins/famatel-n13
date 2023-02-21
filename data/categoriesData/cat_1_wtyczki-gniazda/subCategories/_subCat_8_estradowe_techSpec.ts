@@ -65,6 +65,7 @@ const wtyczkiGniazdaEstradowe_l1_feat2_data = [
   ['Norma: ', 'EN 60309-1 / EN 60309-2'],
 ];
 
+//__________________________________________________________data for rozgałęźniki....
 const wtyczkiGniazdaEstradowe_l3_prodCat_data: {
   line1: string[];
   line2: string[];
@@ -121,17 +122,38 @@ const wtyczkiGniazdaEstradowe_l3_feat1_data: string[][][] = [
   ],
 ];
 
-const wtyczkiGniazdaEstradowe_l4_tab1_data: string[][] = [
-  ['', 'Wymiary'],
-  ['Model', 'A', 'B', 'C'],
-  ['39103', '400', '350', '340'],
-  ['39104', '560', '350', '340*'],
-  ['39105', '600', '400', '545*'],
-  ['39106', '600', '400', '670*'],
+//_______________________________________________________________data for skrzynia
+const wtyczkiGniazdaEstradowe_l4_tab1_data: {
+  line1: string[];
+  line2: string[];
+  tableBody: string[][];
+} = {
+  line1: ['Wymiary'],
+  line2: ['Model', 'A', 'B', 'C'],
+  tableBody: [
+    ['39103', '400', '350', '340'],
+    ['39104', '560', '350', '340*'],
+    ['39105', '600', '400', '545*'],
+    ['39106', '600', '400', '670*'],
+  ],
+};
+const wtyczkiGniazdaEstradowe_l4_feat_data: string[][] = [
+  ['Stopień ochrony: ', 'IP54'],
+  ['Odporność na uderzenie: ', 'IK10'],
 ];
 
-//
+//_______________________________________________________________data for stojak
+const wtyczkiGniazdaEstradowe_l5_feat_data: string[][] = [
+  ['Model stojaka: 1830', 'Model skrzyni: 39103 / 39104'],
+  ['Model stojaka: 1832', 'Model skrzyni: 39105 / 39106'],
+];
 
+//_______________________________________________________________data for wózek
+const wtyczkiGniazdaEstradowe_l6_feat_data: string[][] = [
+  ['Koła: ', '4 szt.'],
+  ['Koła z hamulcem ', '2 szt.'],
+];
+//
 export {
   wtyczkiGniazdaEstradowe_l1_tech1_data,
   wtyczkiGniazdaEstradowe_l1_feat1_data,
@@ -139,85 +161,7 @@ export {
   wtyczkiGniazdaEstradowe_l3_prodCat_data,
   wtyczkiGniazdaEstradowe_l3_feat1_data,
   wtyczkiGniazdaEstradowe_l4_tab1_data,
+  wtyczkiGniazdaEstradowe_l4_feat_data,
+  wtyczkiGniazdaEstradowe_l5_feat_data,
+  wtyczkiGniazdaEstradowe_l6_feat_data,
 };
-
-// const wtyczkiGniazdaEstradowe_l3_prodCat_data = [
-//   //__index
-//   {
-//     tablesData: [
-//       //___for 16A
-//       {
-//         headerTopData: headerTopData_1,
-//         headerBottomData: headerBottomData_1,
-//         headerType: 3,
-//         bodyType: 3,
-//         amper: '16',
-//         rowsData: [['3P (2x)', '8', '17220']],
-//       },
-//     ],
-//   },
-//   {
-//     tablesData: [
-//       //___for 16A
-//       {
-//         headerTopData: headerTopData_1,
-//         headerBottomData: headerBottomData_1,
-//         headerType: 3,
-//         bodyType: 3,
-//         amper: '16',
-//         rowsData: [['3P (2x)', '8', '13311']],
-//       },
-//     ],
-//   },
-//   {
-//     tablesData: [
-//       //___for 16A
-//       {
-//         headerTopData: headerTopData_1,
-//         headerBottomData: headerBottomData_1,
-//         headerType: 3,
-//         bodyType: 3,
-//         amper: '16',
-//         rowsData: [['3P (2x)', '8', '13311']],
-//       },
-//     ],
-//   },
-//   {
-//     tablesData: [
-//       //___for 16A
-//       {
-//         headerTopData: headerTopData_1,
-//         headerBottomData: headerBottomData_1,
-//         headerType: 3,
-//         bodyType: 3,
-//         amper: '16',
-//         rowsData: [['3P (2x)', '4', '13311']],
-//       },
-//     ],
-//   },
-//   {
-//     tablesData: [
-//       //___for 16A
-//       {
-//         headerTopData: headerTopData_1,
-//         headerBottomData: headerBottomData_1,
-//         headerType: 3,
-//         bodyType: 3,
-//         amper: '16',
-//         rowsData: [['3P (1x)', '8', '17020']],
-//       },
-//     ],
-//   },
-// ];
-
-// ['Wymiary (sz × w × g)', '96,5 x 131 x 105,50 mm'],
-// ['Norma: ', 'CEI EN 60947-3'],
-//___
-// ['Laying temperature: ', '-5°C +40°C'],
-// ['Test rozżarzonego drutu: ', '650°C '],
-// ['Bieguny: ', '2P - 3P - 4P'],
-// ['Napięcie izolacji: ', '690 V'],
-// ['Rated voltage pulses: ', '6 KV'],
-// ['Rated conditional short-circuit: ', '10 KA'],
-// ['Częstotliwość: ', '50/60 Hz'],
-// ['Connecting conductors flexible / solid mm²: ', '1.5 / 10']

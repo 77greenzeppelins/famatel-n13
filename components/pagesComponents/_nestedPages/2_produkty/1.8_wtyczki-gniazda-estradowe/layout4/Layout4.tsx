@@ -1,20 +1,100 @@
 import React from 'react';
-import TechSpecTable from '../tables/table_1/TechSpecTable';
-import { vertGap } from '../../../../../../utils/tailwindStyles';
+/**Components**/
+import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
+import SmallPseudoHeader from '../../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
+import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
+/**Basic Data**/
+import { smallPseudoHeaders } from '../../../../../../data/_data';
+import { wtyczkiGniazdaEstradowe_l4_feat_data } from '../../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_8_estradowe_techSpec';
+/**Tailwind Styles*/
+import {
+  tableTextM_Lg,
+  horizGap,
+  aTopH_Lg,
+  aSideHCenter_Lg,
+  aBodyCell_Lg,
+  undelinedTableTextStyle,
+} from '../../../../../../utils/tailwindStyles';
+/**Hardcoded Staff**/
+const headerGrid = 'grid grid-cols-[1fr_3fr]';
+const mainGrid = 'grid grid-cols-[repeat(4,1fr)]';
 
-const Layout4: React.FunctionComponent<{ tableData: string[][] }> = ({
-  tableData,
-}) => {
+/**-----------------------------------------------------------------------**/
+const Layout4: React.FunctionComponent<{
+  tableData: {
+    line1: string[];
+    line2: string[];
+    tableBody: string[][];
+  };
+}> = ({ tableData }) => {
+  /**JSX**/
   return (
-    <div className="flex flex-col gap-10">
-      {' '}
-      {/* <TechSpecTable
-        tableData={tableData}
-        mainGrid={`grid grid-cols-[repeat(4,1fr)] ${vertGap} group`}
-        headerGrid={''}
-      /> */}
-    </div>
+    <>
+      <SectionContentLayout divStyle="flex flex-col gap-y-6">
+        <SmallPseudoHeader
+          text={smallPseudoHeaders.l1}
+          hasBox={true}
+          hasVerticalOrnament={false}
+        />
+        <div
+          data-component="Layout4__container"
+          className={`flex flex-col ${horizGap}`}
+        >
+          <div className={headerGrid}>
+            <div className="col-start-2">
+              <div className={aTopH_Lg}>{tableData.line1}</div>
+            </div>
+          </div>
+          <div className={mainGrid}>
+            <RowWithSideHeader
+              rowData={tableData.line2}
+              customeHeader={aSideHCenter_Lg}
+              customeCell={aSideHCenter_Lg}
+            />
+          </div>
+          {tableData.tableBody.map((rowData, i) => (
+            <div key={i} className={mainGrid}>
+              <RowWithSideHeader
+                rowData={rowData}
+                customeHeader={aSideHCenter_Lg}
+                customeCell={aBodyCell_Lg}
+              />
+            </div>
+          ))}
+        </div>
+        <div>
+          <p
+            className={`${tableTextM_Lg} text-grey hover:text-light delay-100 duration-300 ease-in`}
+          >
+            * Możliwość montażu urządzeń na panelu przednim i tylnym. Śruby
+            montażowe do panelu przedniego i tylnego wkręcane w metalowe gwinty
+            co umożliwia wielokrotne odkręcanie
+          </p>
+        </div>
+      </SectionContentLayout>
+      <SectionContentLayout divStyle="flex flex-col gap-y-8">
+        <SmallPseudoHeader
+          text={smallPseudoHeaders.l3}
+          hasBox={true}
+          hasVerticalOrnament={false}
+        />
+        <TableWithUnderlinedRows
+          rowsData={wtyczkiGniazdaEstradowe_l4_feat_data}
+          cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+          textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
+        />
+      </SectionContentLayout>
+    </>
   );
 };
 
 export default Layout4;
+
+{
+  /* <TableWithUnderlinedRows
+  rowsData={wtyczkiGniazdaEstradowe_l1_feat1_data}
+  cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+  textStyle={[tableTextStyle, tableTextStyle]}
+/>; */
+}

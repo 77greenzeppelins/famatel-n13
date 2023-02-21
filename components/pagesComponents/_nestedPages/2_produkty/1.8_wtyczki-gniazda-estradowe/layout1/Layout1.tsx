@@ -3,6 +3,7 @@ import {
   wtyczkiGniazdaEstradowe_l1_feat1_data,
   wtyczkiGniazdaEstradowe_l1_feat2_data,
 } from '../../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_8_estradowe_techSpec';
+import { undelinedTableTextStyle } from '../../../../../../utils/tailwindStyles';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 /**Components**/
 import TechSpecTable from '../tables/table_1/TechSpecTable';
@@ -24,13 +25,13 @@ const Layout1: React.FunctionComponent<{
         <TableWithUnderlinedRows
           rowsData={wtyczkiGniazdaEstradowe_l1_feat1_data}
           cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
-          textStyle={[tableTextStyle, tableTextStyle]}
+          textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
         />
       ) : (
         <TableWithUnderlinedRows
           rowsData={wtyczkiGniazdaEstradowe_l1_feat2_data}
           cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
-          textStyle={[tableTextStyle, tableTextStyle]}
+          textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
         />
       )}
     </div>

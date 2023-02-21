@@ -6,6 +6,8 @@ import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/
 import TechSpecTable from '../tables/table_1/TechSpecTable';
 /**Basic Data*/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
+import SvgTypeEU from '../../../../../SVG/flags/SvgTypeEU';
+import { aTopH_Lg } from '../../../../../../utils/tailwindStyles';
 /**HardCoded Data**/
 const tableTextStyle =
   'p-small text-grey group-hover:text-light ease-in duration-300 disable';
@@ -21,14 +23,14 @@ const Layout1: React.FunctionComponent<{
   index,
   tableHeaderData,
   tableBodyData,
-  headerType,
+  // headerType, /'EU-IT' or 'EU'
   underlinedTableData,
 }) => {
   /**JSX**/
   return (
     <div>
       {/**________Header section*/}
-      {/* <div className="w-full h-10 bg-vY" /> */}
+
       {/**________Table section*/}
       <div className="flex flex-col gap-10">
         <SectionContentLayout divStyle="flex flex-col gap-y-8">
@@ -37,10 +39,21 @@ const Layout1: React.FunctionComponent<{
             hasBox={true}
             hasVerticalOrnament={false}
           />
-          <TechSpecTable
-            tableHeaderData={tableHeaderData}
-            tableBodyData={tableBodyData}
-          />
+          <div>
+            <div className="grid grid-cols-[repeat(3,1fr)]">
+              <div className="col-start-1 col-end-2">
+                <div className={`${aTopH_Lg} h-full`}>Standard:</div>
+              </div>
+              <div className="col-start-2 col-end-4 border-x-1 border-dark">
+                {' '}
+                <SvgTypeEU />
+              </div>
+            </div>
+            <TechSpecTable
+              tableHeaderData={tableHeaderData}
+              tableBodyData={tableBodyData}
+            />
+          </div>
         </SectionContentLayout>{' '}
         <SectionContentLayout divStyle="flex flex-col gap-y-8">
           <SmallPseudoHeader
