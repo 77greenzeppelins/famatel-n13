@@ -3,8 +3,8 @@ import React from 'react';
 import { useRouter } from 'next/router';
 /**Components**/
 import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
-import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import SectionWithImages from '../_sectionWithImages/SectionWithImages';
+import SectionWithTable from '../_sectionWithTable/SectionWithTable';
 import CatalogTable from './catalogTable/CatalogTable';
 import CatalogTable2 from './catalogTable/CatalogTable2';
 /**Basic Data**/
@@ -34,7 +34,6 @@ const WtyczkiGniazdaSchukoContent: React.FunctionComponent<{
         const productPath = productData.path.split('/');
         const productPathPivotalPart = productPath[splitedPathParts.product];
         const productImage = productData.imageData;
-        // const productTechData = wtyczkiGniazdaSchukoTablicowe_tech_data[index];
         const catalogData = wtyczkiGniazdaSchuko_catalog_data[index];
         const catalogData2 = wtyczkiGniazdaSchuko_catalog_2_data[index];
 
@@ -45,24 +44,13 @@ const WtyczkiGniazdaSchukoContent: React.FunctionComponent<{
               {/* <SectionContentLayout></SectionContentLayout> */}
               <SectionContentLayout divStyle={productPagesSectionContentLayout}>
                 <div className="flex flex-col gap-y-10 w-full lg:w-[50%] ">
-                  <SectionContentLayout divStyle="flex flex-col gap-y-6">
-                    <SmallPseudoHeader
-                      text={smallPseudoHeaders.l1}
-                      hasBox={true}
-                      hasVerticalOrnament={false}
-                    />
-
+                  <SectionWithTable label={smallPseudoHeaders.l1}>
                     <CatalogTable catalogData={catalogData} />
                     <CatalogTable2 catalogData={catalogData2} />
-                  </SectionContentLayout>
+                  </SectionWithTable>
                 </div>
                 <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]">
-                  <SquareHolderWithImage
-                    imageData={productImage}
-                    squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
-                    //___items-start
-                    squareHolderInnerContainer="relative overflow-hidden bg-light p-4"
-                  />
+                  <SectionWithImages imageData={productImage} />
                 </div>
               </SectionContentLayout>
             </React.Fragment>

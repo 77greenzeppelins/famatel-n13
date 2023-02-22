@@ -1,7 +1,6 @@
 import React from 'react';
 /**Components**/
-import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SmallPseudoHeader from '../../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
 import DIYTable from '../../../../../multipagesComponents/tables/diyTable/DIYTable';
 import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
 import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
@@ -10,13 +9,15 @@ import { mainStylesSwitcher } from '../../../../../multipagesComponents/tables/d
 /**TS**/
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles*/
-import { horizGap } from '../../../../../../utils/tailwindStyles';
+import {
+  horizGap,
+  tablesSectionContainer,
+} from '../../../../../../utils/tailwindStyles';
 /**Basic Data*/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
 
 /**----------------------------------**/
 const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
-  productCardIndex,
   polesNumber,
   polesData,
   ampersData,
@@ -30,23 +31,12 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
   return (
     <div
       data-component="TablesSection___container"
-      className="flex flex-col gap-10"
+      className={`${tablesSectionContainer}`}
     >
-      <SectionContentLayout divStyle="flex flex-col gap-y-8">
-        <SmallPseudoHeader
-          text={smallPseudoHeaders.l1}
-          hasBox={true}
-          hasVerticalOrnament={false}
-        />
+      <SectionWithTable label={smallPseudoHeaders.l1}>
         <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
-      </SectionContentLayout>
-
-      <SectionContentLayout divStyle="flex flex-col gap-y-8">
-        <SmallPseudoHeader
-          text={smallPseudoHeaders.l2}
-          hasBox={true}
-          hasVerticalOrnament={false}
-        />
+      </SectionWithTable>
+      <SectionWithTable label={smallPseudoHeaders.l2}>
         <DIYTable tableLayout={`flex flex-col ${horizGap}`}>
           <RowWithLayout
             rowData={ampersData}
@@ -94,7 +84,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
             />
           )}
         </DIYTable>
-      </SectionContentLayout>
+      </SectionWithTable>
     </div>
   );
 };

@@ -2,8 +2,7 @@ import React from 'react';
 /**Router Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
-import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
+import ProductContentLayout_A from '../__productContentLayout/ProductContentLayout_A';
 import TablesSection from './tablesSection/TablesSection';
 /**Basic Data**/
 import { splitedPathParts } from '../../../../../data/_data';
@@ -44,29 +43,18 @@ const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
-              {/* <SectionContentLayout></SectionContentLayout> */}
-              <SectionContentLayout divStyle="flex flex-col-reverse gap-y-12 xxl:flex-row xxl:gap-y-0 xxl:gap-x-10">
-                <div className="flex flex-col gap-y-10 w-full xxl:w-[50%]">
-                  <TablesSection
-                    polesNumber={tableType ? tableType : polesNumber}
-                    polesData={polesData}
-                    ampersData={ampersData}
-                    bodyData={bodyData}
-                    connectionTypeData={connectionTypeData}
-                    weightData={wagaData}
-                    wireData={przewodData}
-                    catalogCardTablesData={catalogCardTablesData}
-                  />
-                </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] xxl:w-[50%] xxl:h-auto xxl:min-h-[400px]">
-                  <SquareHolderWithImage
-                    imageData={productImage}
-                    squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
-                    //___items-start
-                    squareHolderInnerContainer="relative overflow-hidden bg-light p-4"
-                  />
-                </div>
-              </SectionContentLayout>
+              <ProductContentLayout_A imageData={productImage}>
+                <TablesSection
+                  polesNumber={tableType ? tableType : polesNumber}
+                  polesData={polesData}
+                  ampersData={ampersData}
+                  bodyData={bodyData}
+                  connectionTypeData={connectionTypeData}
+                  weightData={wagaData}
+                  wireData={przewodData}
+                  catalogCardTablesData={catalogCardTablesData}
+                />
+              </ProductContentLayout_A>
             </React.Fragment>
           );
         }

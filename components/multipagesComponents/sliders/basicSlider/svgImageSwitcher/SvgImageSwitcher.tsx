@@ -31,10 +31,10 @@ const SvgImageSwitcher: React.FunctionComponent<{
       data-component="SvgImageSwitcher__container"
       className="relative w-full h-full"
     >
-      <div className=" w-full h-[40px]">
+      <div className=" w-full h-[40px] bg-light">
         <NavSection setBasicState={setBasicState} modelNumb={imageData.model} />
       </div>
-      <div className=" w-full h-full">
+      <div className=" w-full h-full bg-light">
         <SlidesSection
           direction={direction}
           imageData={imageData}

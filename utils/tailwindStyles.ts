@@ -50,6 +50,9 @@ const aSideH_Lg = `flex items-center border-x-[1px] border-dark px-2 py-2 bg-gre
 const aSideHCenter_Lg = `fc items-center px-2 py-2 border-x-[1px] border-dark bg-greyShade2 text-light text-center ${tableTextM_Lg} group-hover:bg-corpo delay-100 ease-in duration-300 select-none`;
 const aBodyCell_Lg = `fc py-2 px-[1px] bg-greyTint2 border-x-[1px] border-dark text-dark text-center ${tableTextM_Lg} group-hover:bg-light delay-100 ease-in duration-300 select-none`;
 
+//___used in "productPages" | scecifies horizontal layout in "TablesSections"
+const tablesSectionContainer = 'flex flex-col w-full gap-16';
+
 export {
   vertGap,
   horizGap,
@@ -81,4 +84,6 @@ export {
   aSideH_Lg,
   aSideHCenter_Lg,
   aBodyCell_Lg,
+  //___
+  tablesSectionContainer,
 };

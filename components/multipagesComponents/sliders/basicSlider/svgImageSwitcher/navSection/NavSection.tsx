@@ -16,7 +16,7 @@ const NavSection: React.FunctionComponent<{
   JSX
   */
   return (
-    <div className="relative flex items-center justify-between h-full w-full bg-light  group">
+    <div className="relative flex items-center justify-between h-full w-full bg-light">
       <div
         className={`fc h-full w-10`}
         onClick={() => {
