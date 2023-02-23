@@ -28,7 +28,9 @@ const ProductCardImageSection: React.FunctionComponent<{
     <motion.div
       ref={ref}
       data-component="ProductCardImageSection__white-container"
-      className="relative fc  overflow-hidden w-full h-full bg-light"
+      className={`relative fc  overflow-hidden w-full h-full  ${
+        state ? 'rounded-l-md bg-light' : ''
+      }`}
       //___w-[95%] aspect-square p-2 lg:p-4 xl:p-2 xxl:p-4 xxxl:p-5  rounded-sm
       variants={cardVariants}
       initial="initial"
@@ -58,7 +60,7 @@ const ProductCardImageSection: React.FunctionComponent<{
       <motion.div
         className="absolute inset-0 dark"
         animate={{ opacity: state ? 0 : 1 }}
-        transition={{ delay: 1.6, duration: 0.4, ease: 'easeIn' }}
+        transition={{ delay: 2, duration: 0.6, ease: 'easeIn' }}
       />
     </motion.div>
   );
