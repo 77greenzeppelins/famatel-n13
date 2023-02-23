@@ -16,7 +16,6 @@ const Card_SubCategory: React.FunctionComponent<IF_Card> = ({
   /**JSX**/
   return (
     <GridItemCardLayout linkHref={url}>
-      {/* <ProductCardContent productCardData={productCardData} /> */}
       <SubCategoryCardContent
         arrayIndex={arrayIndex}
         label={label}
