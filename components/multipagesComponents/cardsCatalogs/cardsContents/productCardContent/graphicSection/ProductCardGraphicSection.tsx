@@ -1,10 +1,9 @@
 import React from 'react';
 /**Components**/
 import ProductCardImageSection from '../imageSection/ProductCardImageSection';
-// import CardCounter from '../../../_cardCounter/CardCounter';
+import CardCounter from '../../../__cardCounter/CardCounter';
 /**TS**/
 import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
-import CardCounter from '../../../__cardCounter/CardCounter';
 
 /**------------------------------------------------------------**/
 const ProductCardGraphicSection: React.FunctionComponent<{
