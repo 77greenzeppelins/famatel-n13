@@ -10,7 +10,7 @@ Data for component
 const wtyczkiGniazdaKontenerowe_tech_data = [
   //___1 / IP54
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '172'],
     ['B', '92'],
@@ -22,7 +22,7 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
   ],
   //___2 / IP67
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '170'],
     ['B', '99'],
@@ -34,7 +34,7 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
   ],
   //___3 / IP67
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '80'],
     ['B', '92'],
@@ -49,7 +49,7 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
   ],
   //___4__IP67
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '81'],
     ['B', '97'],
@@ -62,7 +62,7 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
   ],
   //___5__IP54
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '90'],
     ['B', '180'],
@@ -78,7 +78,7 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
   ],
   //___6
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '90'],
     ['B', '180'],
@@ -94,7 +94,7 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
   ],
   //___7__s.72
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '155'],
     ['B', '115'],
@@ -110,7 +110,7 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
   ],
   //___8
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '155'],
     ['B', '115'],
@@ -126,7 +126,7 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
   ],
   //___9
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '73.5'],
     ['G', '98'],
@@ -136,7 +136,7 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
   ],
   //___10
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '73.5'],
     ['G', '98'],
@@ -146,7 +146,7 @@ const wtyczkiGniazdaKontenerowe_tech_data = [
   ],
   //___11
   [
-    [' ', '32A'],
+    ['32A'],
     ['Bieguny', '4'],
     ['A', '250'],
     ['G', '142'],

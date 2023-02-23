@@ -5,9 +5,13 @@ import SvgTechSection from './svgSection/SvgTechSection';
 import MainTable from './tablesSection/mainTable/MainTable';
 /**Basic Data**/
 import { przedluzaczeBebnoweMetalowe_table1_data } from '../../../../../data/categoriesData/cat_5_przedluzacze-bebnowe/subCategories/_subCat_3_metalowe_tablesData';
-
-import { przedluzaczeBebnoweGeneralFeatures_data } from '../../../../../data/categoriesData/cat_5_przedluzacze-bebnowe/cat5_przedluzaczeBebnowe_data';
-
+import {
+  przedluzaczeBebnoweGeneral_feat_data,
+  przedluzaczeBebnoweGeneral_norms_data,
+} from '../../../../../data/categoriesData/cat_5_przedluzacze-bebnowe/cat5_przedluzaczeBebnowe_data';
+import SectionWithTable from '../_sectionWithTable/SectionWithTable';
+import { smallPseudoHeaders } from '../../../../../data/_data';
+import { undelinedTableTextStyle } from '../../../../../utils/tailwindStyles';
 /**Data**/
 const { tableHeader, tableBody } = przedluzaczeBebnoweMetalowe_table1_data;
 
@@ -16,19 +20,24 @@ const PrzedluzaczeBebnoweMetaloweContent: React.FunctionComponent = () => {
   /**JSX**/
   return (
     <div>
-      <div className="fc gap-4 flex-col md:flex-row h-full ">
-        <div className="flex h-full flex-col  w-full md:w-[50%] pb-[4rem]">
-          <TableWithUnderlinedRows
-            rowsData={przedluzaczeBebnoweGeneralFeatures_data}
-            cellsStyles={['w-[50%]', 'w-[50%]']}
-            textStyle={[
-              'p-small text-grey group-hover:text-light ease-in duration-300 disable',
-              'p-small text-grey group-hover:text-light ease-in duration-300 disable',
-              'p-small text-grey group-hover:text-light ease-in duration-300 disable',
-            ]}
-          />
+      <div className="fc xl:gap-x-8 flex-col xl:flex-row h-full">
+        <div className="flex h-full flex-col gap-y-12 w-full xl:w-[50%] pb-[4rem]">
+          <SectionWithTable label={smallPseudoHeaders.l3}>
+            <TableWithUnderlinedRows
+              rowsData={przedluzaczeBebnoweGeneral_feat_data}
+              cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+              textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
+            />
+          </SectionWithTable>
+          <SectionWithTable label={smallPseudoHeaders.l4}>
+            <TableWithUnderlinedRows
+              rowsData={przedluzaczeBebnoweGeneral_norms_data}
+              cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+              textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
+            />
+          </SectionWithTable>
         </div>
-        <div className="flex h-full w-full md:w-[50%] pb-[4rem]">
+        <div className="flex h-full w-full xl:w-[50%] pb-[4rem]">
           <SvgTechSection />
         </div>
       </div>

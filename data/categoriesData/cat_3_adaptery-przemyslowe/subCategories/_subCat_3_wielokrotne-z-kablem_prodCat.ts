@@ -129,4 +129,35 @@ const adapteryPrzemysloweWielokrotneKabel_tablesData = [
   },
 ];
 
-export { adapteryPrzemysloweWielokrotneKabel_tablesData };
+const adapteryPrzemysloweWielokrotneKabel_feat_data = [
+  [
+    ['Przewód', '2 m'],
+    ['Zabezpieczenie wtyczki', 'IP44'],
+    ['Gniazda', '2 gniazda przemysłowe'],
+  ],
+  [
+    ['Przewód', '2 m'],
+    ['Zabezpieczenie wtyczki', 'IP67'],
+    ['Gniazda', '2 gniazda przemysłowe'],
+  ],
+  [
+    ['Przewód', '2 m'],
+    ['Zabezpieczenie wtyczki', 'IP44'],
+    ['Gniazda', '3 gniazda przemysłowe'],
+  ],
+  [
+    ['Przewód', '2 m'],
+    ['Zabezpieczenie wtyczki', 'IP67'],
+    ['Gniazda', '3 gniazda przemysłowe'],
+  ],
+  [
+    ['Przewód', '2 m'],
+    ['Zabezpieczenie wtyczki', 'IP54'],
+    ['Gniazda', '4 gniazda przemysłowe'],
+  ],
+];
+
+export {
+  adapteryPrzemysloweWielokrotneKabel_tablesData,
+  adapteryPrzemysloweWielokrotneKabel_feat_data,
+};

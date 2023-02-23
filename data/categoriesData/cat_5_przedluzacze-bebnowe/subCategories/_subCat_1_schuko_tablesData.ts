@@ -3,7 +3,7 @@ const przedluzaczeBebnoweSchuko_table1_data = {
     'Model',
     'Kabel',
     'Wejście / wtyczki',
-    'wyjście / gniazda',
+    'Wyjście / gniazda',
     'Prąd znamionowy / napięcie',
     'Moc maksymalna',
     'Moc maksymalna',

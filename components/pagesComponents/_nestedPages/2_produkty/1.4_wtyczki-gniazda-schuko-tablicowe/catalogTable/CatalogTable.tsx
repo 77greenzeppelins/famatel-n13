@@ -1,20 +1,16 @@
 import React from 'react';
 /**Components**/
-import CatalogTableRow from './row/CatalogTableRow';
 import SvgTypePl from '../../../../../SVG/flags/SvgTypePl';
 import SvgTypeEU from '../../../../../SVG/flags/SvgTypeEU';
 /**TS**/
 import { IFProdCatDataSchukoTablicowe } from '../../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles**/
-import {
-  vertGap,
-  horizGap,
-  sideHeaderCellCenter,
-  bodyCell as bodyCellStyle,
-} from '../../../../../../utils/tailwindStyles';
+import { horizGap } from '../../../../../../utils/tailwindStyles';
+import SideHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeader';
+import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 
 /**HardCoded Data**/
-const mainGrid = `grid grid-cols-[repeat(2,1fr)] ${vertGap} group`;
+const mainGrid = `grid grid-cols-[repeat(2,1fr)] group`;
 
 /**-------------------------------**/
 const CatalogTable: React.FunctionComponent<{
@@ -30,7 +26,7 @@ const CatalogTable: React.FunctionComponent<{
     >
       {catalogData.line1 ? (
         <div className={mainGrid}>
-          <div className={sideHeaderCellCenter}>{catalogData.line1.label} </div>
+          <SideHeader label={catalogData.line1.label} />
           <div>
             {catalogData.line1?.value === 'PL' ? <SvgTypePl /> : <SvgTypeEU />}{' '}
           </div>
@@ -38,47 +34,39 @@ const CatalogTable: React.FunctionComponent<{
       ) : null}
       {catalogData.line2 ? (
         <div className={mainGrid}>
-          <div className={sideHeaderCellCenter}>{catalogData.line2.label} </div>
+          <SideHeader label={catalogData.line2.label} />
           <div>
             {catalogData.line2?.value === 'PL' ? <SvgTypePl /> : <SvgTypeEU />}{' '}
           </div>
         </div>
       ) : null}
       {catalogData.line3 ? (
-        <CatalogTableRow
-          mainGrid={mainGrid}
-          headerCellStyle={sideHeaderCellCenter}
-          bodyCellStyle={bodyCellStyle}
-          label={catalogData.line3.label}
-          value={catalogData.line3.value}
-        />
+        <div className={mainGrid}>
+          <RowWithSideHeader
+            rowData={[catalogData.line3.label, catalogData.line3.value]}
+          />
+        </div>
       ) : null}
       {catalogData.line4 ? (
-        <CatalogTableRow
-          mainGrid={mainGrid}
-          headerCellStyle={sideHeaderCellCenter}
-          bodyCellStyle={bodyCellStyle}
-          label={catalogData.line4.label}
-          value={catalogData.line4.value}
-        />
+        <div className={mainGrid}>
+          <RowWithSideHeader
+            rowData={[catalogData.line4.label, catalogData.line4.value]}
+          />
+        </div>
       ) : null}
       {catalogData.line5 ? (
-        <CatalogTableRow
-          mainGrid={mainGrid}
-          headerCellStyle={sideHeaderCellCenter}
-          bodyCellStyle={bodyCellStyle}
-          label={catalogData.line5.label}
-          value={catalogData.line5.value}
-        />
+        <div className={mainGrid}>
+          <RowWithSideHeader
+            rowData={[catalogData.line5.label, catalogData.line5.value]}
+          />
+        </div>
       ) : null}
       {catalogData.line6 ? (
-        <CatalogTableRow
-          mainGrid={mainGrid}
-          headerCellStyle={sideHeaderCellCenter}
-          bodyCellStyle={bodyCellStyle}
-          label={catalogData.line6.label}
-          value={catalogData.line6.value}
-        />
+        <div className={mainGrid}>
+          <RowWithSideHeader
+            rowData={[catalogData.line6.label, catalogData.line6.value]}
+          />
+        </div>
       ) : null}
     </div>
   );

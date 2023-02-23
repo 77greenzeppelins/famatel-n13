@@ -19,16 +19,16 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgWtyczkiGniazda_02_tablicowe: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-  { image: img5 },
-  { image: img6 },
-  { image: img7 },
-  { image: img8 },
-  { image: img9 },
-  { image: img10 },
-  { image: img11 },
+  { image: img1, model: '13631' },
+  { image: img2, model: '13634' },
+  { image: img3, model: '13377' },
+  { image: img4, model: '23270' },
+  { image: img5, model: '24373' },
+  { image: img6, model: '24374' },
+  { image: img7, model: '24377' },
+  { image: img8, model: '23230' },
+  { image: img9, model: '24333' },
+  { image: img10, model: '24336' },
+  { image: img11, model: '24337' },
 ];
 export { imgWtyczkiGniazda_02_tablicowe };

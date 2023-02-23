@@ -11,6 +11,7 @@ import { wtyczkiGniazdaNiskieNapiecia_tablesData } from '../../../../../data/cat
 import { wtyczkiGniazdaNiskieNapiecia_tech_data } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_6_niskie-napiecia_techspec';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
+import ProductContentLayout_A from '../__productContentLayout/ProductContentLayout_A';
 
 /**----------------------------------------**/
 const WtyczkiGniazdaNiskieNapieciaContent: React.FunctionComponent<{
@@ -43,30 +44,19 @@ const WtyczkiGniazdaNiskieNapieciaContent: React.FunctionComponent<{
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
-              {/* <SectionContentLayout></SectionContentLayout> */}
-              <SectionContentLayout divStyle="flex flex-col-reverse gap-y-12 xxl:flex-row xxl:gap-y-0 xxl:gap-x-10 ">
-                <div className="flex flex-col gap-y-10 w-full xxl:w-[50%] ">
-                  <TablesSection
-                    productCardIndex={index}
-                    polesNumber={polesNumber}
-                    polesData={polesData}
-                    ampersData={ampersData}
-                    bodyData={bodyData}
-                    connectionTypeData={connectionTypeData}
-                    weightData={wagaData}
-                    wireData={przewodData}
-                    catalogCardTablesData={catalogCardTablesData}
-                  />
-                </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] xxl:w-[50%] xxl:h-auto xxl:min-h-[400px]  bg-grey">
-                  <SquareHolderWithImage
-                    imageData={productImage}
-                    squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
-                    //___items-start
-                    squareHolderInnerContainer="relative overflow-hidden bg-light p-4"
-                  />
-                </div>
-              </SectionContentLayout>
+              <ProductContentLayout_A imageData={productImage}>
+                <TablesSection
+                  productCardIndex={index}
+                  polesNumber={polesNumber}
+                  polesData={polesData}
+                  ampersData={ampersData}
+                  bodyData={bodyData}
+                  connectionTypeData={connectionTypeData}
+                  weightData={wagaData}
+                  wireData={przewodData}
+                  catalogCardTablesData={catalogCardTablesData}
+                />
+              </ProductContentLayout_A>
             </React.Fragment>
           );
         }

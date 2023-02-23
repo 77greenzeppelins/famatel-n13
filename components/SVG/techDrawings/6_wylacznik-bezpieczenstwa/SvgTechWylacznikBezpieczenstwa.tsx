@@ -8,8 +8,10 @@ const SvgTechWylacznikBezpieczenstwa = ({
   width: number;
   height: number;
 }) => {
-  /**...**/
-  const calcHeight = width * 1;
+  /*
+  ___1. why "800/800"? it's image's aspectRatio....
+  */
+  const calcHeight = width * (800 / 800);
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,29 +21,6 @@ const SvgTechWylacznikBezpieczenstwa = ({
       height={`${calcHeight}`}
       viewBox="0 0 800 800"
     >
-      {/* <defs>
-          <clipPath id="clipPath1056">
-            <path d="M15 15h612.28v858.9H15z"></path>
-          </clipPath>
-          <clipPath id="clipPath1180">
-            <path d="M15 15h612.28v858.9H15z"></path>
-          </clipPath>
-          <clipPath id="clipPath1218">
-            <path d="M15 15h612.28v858.9H15z"></path>
-          </clipPath>
-          <clipPath id="clipPath1250">
-            <path d="M15 15h612.28v858.9H15z"></path>
-          </clipPath>
-          <clipPath id="clipPath1274">
-            <path d="M15 15h612.28v858.9H15z"></path>
-          </clipPath>
-          <clipPath id="clipPath1290">
-            <path d="M15 15h612.28v858.9H15z"></path>
-          </clipPath>
-          <clipPath id="clipPath1334">
-            <path d="M15 15h612.28v858.9H15z"></path>
-          </clipPath>
-        </defs> */}
       <path
         fill="none"
         stroke="#231f20"

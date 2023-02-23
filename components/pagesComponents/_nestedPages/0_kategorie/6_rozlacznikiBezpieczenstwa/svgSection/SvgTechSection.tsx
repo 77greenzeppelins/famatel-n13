@@ -1,33 +1,27 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 /*Components*/
-import SvgTechPrzemyslowe from '../../../../../SVG/techDrawings/5_przedluzacze-bebnowe/SvgTechPrzemyslowe';
+import SvgTechWylacznikBezpieczenstwa from '../../../../../SVG/techDrawings/6_wylacznik-bezpieczenstwa/SvgTechWylacznikBezpieczenstwa';
 /*Hook*/
 import useMeasure from 'react-use-measure';
-import SvgTechWylacznikBezpieczenstwa from '../../../../../SVG/techDrawings/6_wylacznik-bezpieczenstwa/SvgTechWylacznikBezpieczenstwa';
 
 /**-----------------------------**/
 const SvgTechSection = () => {
   /*
-  Trick: how to make svg responsive; "SVGModule__container" inherits width and height from some parent; is pluged to useMeasure; value from hooks are propsed to SVG
+  Trick: how to make svg responsive; "SVGModule__container" inherits width and height from parentComponent; is pluged to useMeasure; value from hooks are propsed to SVG
   */
   const [ref, bounds] = useMeasure();
-  /*
-  ...WTF
-  */
-  // useEffect(() => {
-  //   console.log('SvgHolder / bounds:', bounds);
-  // }, [bounds]);
-  /*
-  JSX
-  */
+  /**JSX**/
   return (
     <div
-      data-component="SvgHolder__container"
+      data-component="SvgTechSection__container"
       ref={ref}
       className="fc w-full h-full bg-light"
     >
       <SvgTechWylacznikBezpieczenstwa
-        width={bounds.width}
+        /*
+        ___1. usihg calculation in "width" we can control size of svgImage
+        */
+        width={Math.min(bounds.width, 600)}
         height={bounds.height}
       />
     </div>

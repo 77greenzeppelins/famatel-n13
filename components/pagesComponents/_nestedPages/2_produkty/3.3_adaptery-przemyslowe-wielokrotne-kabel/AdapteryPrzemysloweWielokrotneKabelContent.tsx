@@ -2,15 +2,24 @@ import React from 'react';
 /**Router Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
-import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
+import ProductContentLayout_A from '../__productContentLayout/ProductContentLayout_A';
+import AllTablesContainer from '../_allTablesContainer/AllTablesContainer';
+import SectionWithTable from '../_sectionWithTable/SectionWithTable';
 import CatalogCardsSection from '../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
 /**Basic Data**/
-import { splitedPathParts } from '../../../../../data/_data';
-import { adapteryPrzemysloweWielokrotneKabel_tablesData } from '../../../../../data/categoriesData/cat_3_adaptery-przemyslowe/subCategories/_subCat_3_wielokrotne-z-kablem_prodCat';
+import {
+  smallPseudoHeaders,
+  splitedPathParts,
+} from '../../../../../data/_data';
+import {
+  adapteryPrzemysloweWielokrotneKabel_tablesData,
+  adapteryPrzemysloweWielokrotneKabel_feat_data,
+} from '../../../../../data/categoriesData/cat_3_adaptery-przemyslowe/subCategories/_subCat_3_wielokrotne-z-kablem_prodCat';
 
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
+import TableWithUnderlinedRows from '../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
+import { undelinedTableTextStyle } from '../../../../../utils/tailwindStyles';
 
 /**----------------------------------------**/
 const AdapteryPrzemysloweWielokrotneKabelContent: React.FunctionComponent<{
@@ -26,35 +35,36 @@ const AdapteryPrzemysloweWielokrotneKabelContent: React.FunctionComponent<{
         const productPath = productData.path.split('/');
         const productPathPivotalPart = productPath[splitedPathParts.product];
         const productImage = productData.imageData;
-
-        // //___data for "catalogTable"
+        //___data for "catalogTable"
         const catalogCardTablesData =
           adapteryPrzemysloweWielokrotneKabel_tablesData[index].tablesData;
-
+        //___data for underlinedTable
+        const underlinedTableData =
+          adapteryPrzemysloweWielokrotneKabel_feat_data[index];
         //___
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
-              <SectionContentLayout divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 ">
-                <div className="flex flex-col gap-y-10 w-full lg:w-[50%] ">
-                  <div className="flex flex-col gap-10">
+              <ProductContentLayout_A imageData={productImage}>
+                <AllTablesContainer>
+                  <SectionWithTable label={smallPseudoHeaders.l1}>
                     <CatalogCardsSection
-                      catalogCardTablesData={
-                        adapteryPrzemysloweWielokrotneKabel_tablesData[index]
-                          .tablesData
-                      }
+                      catalogCardTablesData={catalogCardTablesData}
                     />
-                  </div>
-                </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]  bg-grey">
-                  <SquareHolderWithImage
-                    imageData={productImage}
-                    squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
-                    //___items-start
-                    squareHolderInnerContainer="relative overflow-hidden bg-light p-4"
-                  />
-                </div>
-              </SectionContentLayout>
+                  </SectionWithTable>
+
+                  <SectionWithTable label={smallPseudoHeaders.l3}>
+                    <TableWithUnderlinedRows
+                      rowsData={underlinedTableData}
+                      cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+                      textStyle={[
+                        undelinedTableTextStyle,
+                        undelinedTableTextStyle,
+                      ]}
+                    />
+                  </SectionWithTable>
+                </AllTablesContainer>
+              </ProductContentLayout_A>
             </React.Fragment>
           );
         }

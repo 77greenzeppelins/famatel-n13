@@ -11,8 +11,8 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgGniazdaBlokada_04_akcesoria: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
+  { image: img1, model: '23021' },
+  { image: img2, model: '23022' },
+  { image: img3, model: '23023' },
 ];
 export { imgGniazdaBlokada_04_akcesoria };

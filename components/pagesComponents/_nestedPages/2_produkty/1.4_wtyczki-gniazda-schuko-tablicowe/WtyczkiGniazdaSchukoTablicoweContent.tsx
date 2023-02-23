@@ -2,9 +2,6 @@ import React from 'react';
 /**Router Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
-import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
-import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import TechSpecTable from './techSpecTable/TechSpecTable';
 import CatalogTable from './catalogTable/CatalogTable';
 import TableWithUnderlinedRows from '../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
@@ -19,10 +16,10 @@ import { wtyczkiGniazdaSchukoTablicowe_catalog_data } from '../../../../../data/
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles**/
-import {
-  productPagesSectionContentLayout,
-  undelinedTableTextStyle,
-} from '../../../../../utils/tailwindStyles';
+import { undelinedTableTextStyle } from '../../../../../utils/tailwindStyles';
+import ProductContentLayout_B from '../__productContentLayout/ProductContentLayout_B';
+import SectionWithTable from '../_sectionWithTable/SectionWithTable';
+import AllTablesContainer from '../_allTablesContainer/AllTablesContainer';
 
 /**----------------------------------------**/
 const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
@@ -43,55 +40,29 @@ const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
-              {/* <SectionContentLayout></SectionContentLayout> */}
-              <SectionContentLayout divStyle={productPagesSectionContentLayout}>
-                <div className="flex flex-col gap-y-10 lg:gap-y-20 w-full lg:w-[50%] ">
+              <ProductContentLayout_B imageData={productImage}>
+                <AllTablesContainer>
                   {index < 6 && (
                     <>
-                      <SectionContentLayout divStyle="flex flex-col gap-y-6">
-                        <SmallPseudoHeader
-                          text={smallPseudoHeaders.l1}
-                          hasBox={true}
-                          hasVerticalOrnament={false}
-                        />
+                      <SectionWithTable label={smallPseudoHeaders.l1}>
                         <CatalogTable catalogData={catalogData} />
-                      </SectionContentLayout>
-                      <SectionContentLayout divStyle="flex flex-col gap-y-6">
-                        <SmallPseudoHeader
-                          text={smallPseudoHeaders.l2}
-                          hasBox={true}
-                          hasVerticalOrnament={false}
-                        />
+                      </SectionWithTable>
+                      <SectionWithTable label={smallPseudoHeaders.l2}>
                         <TechSpecTable productTechData={productTechData} />
-                      </SectionContentLayout>
+                      </SectionWithTable>
                     </>
                   )}
                   {index > 5 && index < 8 && (
-                    <SectionContentLayout divStyle="flex flex-col gap-y-6">
-                      <SmallPseudoHeader
-                        text={smallPseudoHeaders.l1}
-                        hasBox={true}
-                        hasVerticalOrnament={false}
-                      />
+                    <SectionWithTable label={smallPseudoHeaders.l1}>
                       <CatalogTable catalogData={catalogData} />
-                    </SectionContentLayout>
+                    </SectionWithTable>
                   )}
                   {index === 8 && (
                     <>
-                      <SectionContentLayout divStyle="flex flex-col gap-y-6">
-                        <SmallPseudoHeader
-                          text={smallPseudoHeaders.l2}
-                          hasBox={true}
-                          hasVerticalOrnament={false}
-                        />
+                      <SectionWithTable label={smallPseudoHeaders.l2}>
                         <TechSpecTable productTechData={productTechData} />
-                      </SectionContentLayout>
-                      <SectionContentLayout divStyle="flex flex-col gap-y-8">
-                        <SmallPseudoHeader
-                          text={smallPseudoHeaders.l3}
-                          hasBox={true}
-                          hasVerticalOrnament={false}
-                        />
+                      </SectionWithTable>
+                      <SectionWithTable label={smallPseudoHeaders.l3}>
                         <TableWithUnderlinedRows
                           rowsData={
                             wtyczkiGniazdaSchukoTablicowe_tech_data[index]
@@ -103,41 +74,26 @@ const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
                             undelinedTableTextStyle,
                           ]}
                         />
-                      </SectionContentLayout>
+                      </SectionWithTable>
                     </>
                   )}
                   {index === 9 && (
-                    <>
-                      <SectionContentLayout divStyle="flex flex-col gap-y-8">
-                        <SmallPseudoHeader
-                          text={smallPseudoHeaders.l3}
-                          hasBox={true}
-                          hasVerticalOrnament={false}
-                        />
-                        <TableWithUnderlinedRows
-                          rowsData={
-                            wtyczkiGniazdaSchukoTablicowe_tech_data[index]
-                              .features
-                          }
-                          cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
-                          textStyle={[
-                            undelinedTableTextStyle,
-                            undelinedTableTextStyle,
-                          ]}
-                        />
-                      </SectionContentLayout>
-                    </>
+                    <SectionWithTable label={smallPseudoHeaders.l2}>
+                      <TableWithUnderlinedRows
+                        rowsData={
+                          wtyczkiGniazdaSchukoTablicowe_tech_data[index]
+                            .features
+                        }
+                        cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+                        textStyle={[
+                          undelinedTableTextStyle,
+                          undelinedTableTextStyle,
+                        ]}
+                      />
+                    </SectionWithTable>
                   )}
-                </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]">
-                  <SquareHolderWithImage
-                    imageData={productImage}
-                    squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
-                    //___items-start
-                    squareHolderInnerContainer="relative overflow-hidden bg-light p-4"
-                  />
-                </div>
-              </SectionContentLayout>
+                </AllTablesContainer>
+              </ProductContentLayout_B>
               {index < 6 ? <ProtectionSection /> : null}
             </React.Fragment>
           );

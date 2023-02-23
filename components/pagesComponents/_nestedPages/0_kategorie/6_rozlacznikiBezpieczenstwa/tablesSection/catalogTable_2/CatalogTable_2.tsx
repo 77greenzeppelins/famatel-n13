@@ -1,19 +1,14 @@
 import React from 'react';
 /**BasicData**/
 import { catalogTable_2_data } from '../../../../../../../data/categoriesData/cat_6_rozlacznikiBezpieczenstwa/cat6_rozlacznikBezpieczenstwa_data';
+
+import SideHeaderCenter from '../../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeaderCenter';
+import TopHeader from '../../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
 import BodyRow from './bodyRow/BodyRow';
-
-/**HardCoded Data*/
-const yGapLarge = 'gap-y-[4px]';
-const yGapMedium = 'gap-y-[2px]';
-const xGapLarge = 'gap-x-[4px]';
-const xGapMedium = 'gap-x-[2px]';
-const horizontalContainer = `flex flex-col ${yGapLarge}`;
-const mainGridStyle = `grid grid-cols-[repeat(12,1fr)] grid-rows-[repeat(8,1fr)] ${xGapMedium}`;
-const topHeaderStyle = `grid grid-cols-[repeat(12,1fr)] grid-rows-[repeat(4,1fr)] ${xGapMedium}`;
-const bodyStyle = `grid grid-cols-[repeat(12,1fr)] grid-rows-[repeat(4,1fr)] ${xGapMedium} ${yGapMedium}`;
-const bodyRowStyle = `col-start-3 col-span-full grid grid-cols-[repeat(10,1fr)] ${xGapMedium} group`;
-
+/**Tailwind Staff**/
+import { horizGap } from '../../../../../../../utils/tailwindStyles';
+import BodyCell from '../../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
+import RowWithSideHeader from '../../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 //__
 const {
   topHeaderLeftCol,
@@ -26,101 +21,93 @@ const {
 
 const CatalogTable_2 = () => {
   return (
-    <div className={horizontalContainer}>
-      <div className={topHeaderStyle}>
-        <div className="col-start-1 col-span-2 row-start-1 row-span-full fc bg-greyShade1 py-2">
-          <p className="text-light p-medium">{topHeaderLeftCol}</p>
-        </div>{' '}
-        <div className="col-start-3 col-span-full row-start-1 row-span-2">
-          {topHeaderLine1.map((label, i) => (
-            <div key={i} className="fc bg-greyShade1 py-2">
-              <p className="text-light p-medium">{label}</p>
-            </div>
-          ))}
-        </div>
-        <div className="col-start-3 col-span-full row-start-3 row-span-1 fc">
-          <p className="text-light p-medium"> {topHeaderLine2}</p>
-        </div>
+    <div className="flex flex-col">
+      {/*
+       ________________________________________________header
+      */}
+      <div
+        className={`grid grid-cols-[1fr_5fr] grid-rows-[repeat(3, 1fr)] ${horizGap}`}
+      >
+        <SideHeaderCenter
+          label={topHeaderLeftCol}
+          containerStyle="col-start-1 col-end-2 row-start-1 row-end-4 border-t-[2px] border-dark"
+          //___border-t-[1px] border-dark
+        />
+        <SideHeaderCenter
+          label={topHeaderLine1}
+          containerStyle="col-start-2 col-span-full row-start-1 row-span-1 "
+        />
+        <SideHeaderCenter
+          label={topHeaderLine2}
+          containerStyle="col-start-2 col-span-full row-start-2 row-span-1 "
+        />
         <div
-          className={`col-start-3 col-span-full row-start-4 row-span-1 grid grid-cols-[repeat(5,1fr)] ${xGapMedium}`}
+          data-layout="headerContainer"
+          className="col-start-2 col-span-full row-start-3 row-span-1  grid grid-cols-[repeat(5,1fr)]"
         >
-          {topHeaderLine3.map((label, i) => (
-            <div key={i} className="fc bg-greyShade1 py-2">
-              <p className="text-light p-medium">{label}</p>
-            </div>
+          {topHeaderLine3.map((label, index) => (
+            <TopHeader key={index} label={label} />
           ))}
         </div>
       </div>
-      <div className={bodyStyle}>
-        <div className="col-start-1 col-span-2 row-start-1 row-span-2 fc bg-greyShade1 py-2">
-          <p className="text-light p-medium">{sideHeader[0]}</p>
-        </div>{' '}
-        <div className="col-start-1 col-span-2 row-start-3 row-span-1 fc bg-greyShade1 py-2">
-          <p className="text-light p-medium">{sideHeader[1]}</p>
+      {/*
+       ________________________________________________AC23A
+      */}
+      <div
+        className={`grid grid-cols-[2fr_10fr] grid-rows-[repeat(4, 1fr)] ${horizGap}`}
+      >
+        {/*
+        ________________________________________________AC23A
+        */}
+        <div
+          className={`col-start-1 col-span-full row-start-1 row-end-3 grid grid-cols-[2fr_10fr] ${horizGap} group`}
+        >
+          <SideHeaderCenter
+            label={sideHeader[0]}
+            containerStyle="col-start-1 col-end-2 row-start-1 row-end-3 border-t-[2px] border-dark"
+          />
+          <div
+            data-layout="headerContainer"
+            className="col-start-2 col-span-full row-start-1 row-end-2  grid grid-cols-[repeat(10,1fr)]"
+          >
+            {bodyRows[0].map((label, index) => (
+              <BodyCell key={index} label={label} />
+            ))}
+          </div>
+          <div
+            data-layout="headerContainer"
+            className="col-start-2 col-span-full row-start-2 row-end-3  grid grid-cols-[repeat(10,1fr)]"
+          >
+            {bodyRows[1].map((label, index) => (
+              <BodyCell key={index} label={label} />
+            ))}
+          </div>
         </div>
-        <div className="col-start-1 col-span-2 row-start-4 row-span-1 fc bg-greyShade1 py-2">
-          <p className="text-light p-medium">{sideHeader[2]}</p>
+        {/*
+        ________________________________________________AC22A
+        */}
+        <div
+          className={`col-start-1 col-span-full row-start-3 row-end-4 grid grid-cols-[2fr_repeat(10,1fr)] group`}
+        >
+          <RowWithSideHeader
+            rowData={[sideHeader[1], ...bodyRows[2]]}
+            centered={true}
+          />
         </div>
-        {bodyRows.map((rowData, i) => (
-          <BodyRow key={i} rowData={rowData} bodyRowStyle={bodyRowStyle} />
-        ))}
-        <div className="col-start-3 col-span-full bg-vY" />
-        <div className="col-start-3 col-span-full bg-vY" />
-        <div className="col-start-3 col-span-full bg-vY" />
-        <div className="col-start-3 col-span-full bg-vY" />
+        {/*
+        ________________________________________________AC21A
+        */}
+        <div
+          className={`col-start-1 col-span-full row-start-4 row-end-5 grid grid-cols-[2fr_repeat(10,1fr)] group`}
+        >
+          <RowWithSideHeader
+            rowData={[sideHeader[2], ...bodyRows[3]]}
+            centered={true}
+          />
+        </div>
       </div>
     </div>
   );
 };
 
 export default CatalogTable_2;
-
-// const sectionGridStyle = `${mainGridStyle} grid-rows-[repeat(6,1fr)] ${yGapMedium} `;
-// //   'grid grid-cols-[repeat(4,1fr)] grid-rows-[repeat(6,1fr)] divide-x-[2px] divide-y-[2px] divide-dark ';
-// //___grid item type_1
-// const sideHeaderStyle = `col-start-1 col-span-2 row-start-1 row-span-full grid grid-rows-[4fr_2fr_1fr_1fr] ${yGapMedium}`;
-// //___grid item type_1; actual row...
-// const rowGridStyle = `col-start-2 col-span-full grid grid-cols-[repeat(3,1fr)] ${xGapMedium} group`;
-
-{
-  /* <div className={sideHeaderStyle}>
-        {sideHeader.map((label, i) => (
-          <div key={i} className="fc bg-greyShade1 py-2">
-            <p className="text-light p-medium">{label}</p>
-          </div>
-        ))}
-      </div> */
-}
-
-{
-  /* <div className="col-start-3 col-span-full row-start-1 row-span-2">
-        {topHeaderLine1.map((label, i) => (
-          <div key={i} className="fc bg-greyShade1 py-2">
-            <p className="text-light p-medium">{label}</p>
-          </div>
-        ))}
-      </div>
-      <div className="col-start-3 col-span-full row-start-3 row-span-1 fc">
-        <p className="text-light p-medium"> {topHeaderLine2}</p>
-      </div>
-      <div
-        className={`col-start-3 col-span-full row-start-4 row-span-1 grid grid-cols-[repeat(5,1fr)] ${xGapMedium}`}
-      >
-        {topHeaderLine3.map((label, i) => (
-          <div key={i} className="fc bg-greyShade1 py-2">
-            <p className="text-light p-medium">{label}</p>
-          </div>
-        ))}
-      </div> */
-}
-{
-  /* <div
-        className={`col-start-3 col-span-full row-start-5 row-span-full grid grid-cols-[repeat(5,1fr)] grid-rows-[repeat(4,1fr)] ${yGapMedium}`}
-      >
-        {bodyRows.map((rowData, i) => (
-          <div className="col-start-1 col-span-full fc bg-vY" key={i}>
-            {i}{' '}
-          </div>
-        ))}
-      </div> */
-}

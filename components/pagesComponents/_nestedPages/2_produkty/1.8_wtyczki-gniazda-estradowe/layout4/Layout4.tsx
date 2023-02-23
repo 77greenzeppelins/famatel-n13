@@ -16,6 +16,8 @@ import {
   aBodyCell_Lg,
   undelinedTableTextStyle,
 } from '../../../../../../utils/tailwindStyles';
+import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
+import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
 /**Hardcoded Staff**/
 const headerGrid = 'grid grid-cols-[1fr_3fr]';
 const mainGrid = 'grid grid-cols-[repeat(4,1fr)]';
@@ -30,13 +32,8 @@ const Layout4: React.FunctionComponent<{
 }> = ({ tableData }) => {
   /**JSX**/
   return (
-    <>
-      <SectionContentLayout divStyle="flex flex-col gap-y-6">
-        <SmallPseudoHeader
-          text={smallPseudoHeaders.l1}
-          hasBox={true}
-          hasVerticalOrnament={false}
-        />
+    <AllTablesContainer>
+      <SectionWithTable label={smallPseudoHeaders.l1}>
         <div
           data-component="Layout4__container"
           className={`flex flex-col ${horizGap}`}
@@ -72,20 +69,16 @@ const Layout4: React.FunctionComponent<{
             co umożliwia wielokrotne odkręcanie
           </p>
         </div>
-      </SectionContentLayout>
-      <SectionContentLayout divStyle="flex flex-col gap-y-8">
-        <SmallPseudoHeader
-          text={smallPseudoHeaders.l3}
-          hasBox={true}
-          hasVerticalOrnament={false}
-        />
+      </SectionWithTable>
+
+      <SectionWithTable label={smallPseudoHeaders.l3}>
         <TableWithUnderlinedRows
           rowsData={wtyczkiGniazdaEstradowe_l4_feat_data}
           cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
           textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
         />
-      </SectionContentLayout>
-    </>
+      </SectionWithTable>
+    </AllTablesContainer>
   );
 };
 

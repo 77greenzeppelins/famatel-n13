@@ -1,9 +1,9 @@
 import React from 'react';
 /**Components**/
-import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
+import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
+import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
 import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
 import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
-import SmallPseudoHeader from '../../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import DIYTable from '../../../../../multipagesComponents/tables/diyTable/DIYTable';
 /**Handler**/
 import { mainStylesSwitcher } from '../../../../../multipagesComponents/tables/diyTable/handlers/stylesSwitcher';
@@ -28,26 +28,12 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
 }) => {
   /**JSX**/
   return (
-    <div
-      data-component="TablesSection___container"
-      className="flex flex-col gap-16"
-    >
-      <SectionContentLayout divStyle="flex flex-col gap-y-8">
-        <SmallPseudoHeader
-          text={smallPseudoHeaders.l1}
-          hasBox={true}
-          hasVerticalOrnament={false}
-        />
+    <AllTablesContainer>
+      <SectionWithTable label={smallPseudoHeaders.l1}>
         <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
-      </SectionContentLayout>
+      </SectionWithTable>
 
-      <SectionContentLayout divStyle="flex flex-col gap-y-8">
-        <SmallPseudoHeader
-          text={smallPseudoHeaders.l2}
-          hasBox={true}
-          hasVerticalOrnament={false}
-        />
-
+      <SectionWithTable label={smallPseudoHeaders.l2}>
         <DIYTable tableLayout={`flex flex-col ${horizGap} `}>
           <RowWithLayout
             rowData={ampersData}
@@ -95,8 +81,8 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
             />
           )}
         </DIYTable>
-      </SectionContentLayout>
-    </div>
+      </SectionWithTable>
+    </AllTablesContainer>
   );
 };
 

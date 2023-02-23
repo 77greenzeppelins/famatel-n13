@@ -10,7 +10,7 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgAdapteryPrzemyslowe_01_schuko: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
+  { image: img1, model: '16010' },
+  { image: img2, model: '15002' },
 ];
 export { imgAdapteryPrzemyslowe_01_schuko };

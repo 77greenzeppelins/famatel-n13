@@ -19,16 +19,16 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgWtyczkiGniazda_07_chlodnicze: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-  { image: img5 },
-  { image: img6 },
-  { image: img7 },
-  { image: img8 },
-  { image: img9 },
-  { image: img10 },
-  { image: img11 },
+  { image: img1, model: '14308' },
+  { image: img2, model: '24308' },
+  { image: img3, model: '24339' },
+  { image: img4, model: '24398' },
+  { image: img5, model: '25053' },
+  { image: img6, model: '26028' },
+  { image: img7, model: '25074' },
+  { image: img8, model: '25136' },
+  { image: img9, model: '25727' },
+  { image: img10, model: '26327' },
+  { image: img11, model: '26514' },
 ];
 export { imgWtyczkiGniazda_07_chlodnicze };

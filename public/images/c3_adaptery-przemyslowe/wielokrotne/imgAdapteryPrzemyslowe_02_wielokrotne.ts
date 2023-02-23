@@ -14,11 +14,11 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgAdapteryPrzemyslowe_02_wielokrotne: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-  { image: img5 },
-  { image: img6 },
+  { image: img1, model: '15006' },
+  { image: img2, model: '16002' },
+  { image: img3, model: '15001' },
+  { image: img4, model: '16000' },
+  { image: img5, model: '15003' },
+  { image: img6, model: '16006' },
 ];
 export { imgAdapteryPrzemyslowe_02_wielokrotne };

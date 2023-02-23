@@ -21,18 +21,18 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgWtyczkiGniazda_01_przenosne: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-  { image: img5 },
-  { image: img6 },
-  { image: img7 },
-  { image: img8 },
-  { image: img9 },
-  { image: img10 },
-  { image: img11 },
-  { image: img12 },
-  { image: img13 },
+  { image: img1, model: '13200' },
+  { image: img2, model: '14200' },
+  { image: img3, model: '14304' },
+  { image: img4, model: '14307' },
+  { image: img5, model: '23200' },
+  { image: img6, model: '24200' },
+  { image: img7, model: '24305' },
+  { image: img8, model: '24307' },
+  { image: img9, model: '13200CR' },
+  { image: img10, model: '14200CR' },
+  { image: img11, model: '23200CR' },
+  { image: img12, model: '24200CR' },
+  { image: img13, model: '13311' },
 ];
 export { imgWtyczkiGniazda_01_przenosne };

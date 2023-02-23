@@ -7,7 +7,7 @@ Data for component
 const adapteryPrzemysloweWielokrotne_tech_data = [
   //___1__s.120
   {
-    header: [['Wymiary', 'A', 'B'], 'Ampery', 'Bieguny', 'Waga'],
+    header: ['Wymiary', 'A', 'B', 'Ampery', 'Bieguny', 'Waga'],
 
     tableBody: [
       ['230', '220', '16', '2P + T', '530'],
@@ -20,7 +20,7 @@ const adapteryPrzemysloweWielokrotne_tech_data = [
   },
   //___2__
   {
-    header: [['Wymiary', 'A', 'B'], 'Ampery', 'Bieguny', 'Waga'],
+    header: ['Wymiary', 'A', 'B', 'Ampery', 'Bieguny', 'Waga'],
     tableBody: [
       ['235', '230', '16', '2P + T', '987'],
       ['235', '230', '16', '3P + T', '997'],
@@ -32,7 +32,7 @@ const adapteryPrzemysloweWielokrotne_tech_data = [
   },
   //___3__
   {
-    header: [['Wymiary', 'A', 'B'], 'Ampery', 'Bieguny', 'Waga'],
+    header: ['Wymiary', 'A', 'B', 'Ampery', 'Bieguny', 'Waga'],
     tableBody: [
       ['160', '168', '16', '2P + T', '390'],
       ['160', '168', '16', '3P + T', '450'],
@@ -40,7 +40,7 @@ const adapteryPrzemysloweWielokrotne_tech_data = [
   },
   //___4__s.122
   {
-    header: [['Wymiary', 'A', 'B'], 'Ampery', 'Bieguny', 'Waga'],
+    header: ['Wymiary', 'A', 'B', 'Ampery', 'Bieguny', 'Waga'],
     tableBody: [
       ['170', '162', '16', '2P + T', '411'],
       ['170', '162', '16', '3P + T', '470'],
@@ -48,7 +48,7 @@ const adapteryPrzemysloweWielokrotne_tech_data = [
   },
   //___5__
   {
-    header: [['Wymiary', 'A', 'B'], 'Ampery', 'Bieguny', 'Waga'],
+    header: ['Wymiary', 'A', 'B', 'Ampery', 'Bieguny', 'Waga'],
     tableBody: [
       ['160', '168', '16', '2P + T', '390'],
       ['160', '168', '16', '3P + T', '450'],
@@ -56,7 +56,7 @@ const adapteryPrzemysloweWielokrotne_tech_data = [
   },
   //___6__
   {
-    header: [['Wymiary', 'A', 'B'], 'Ampery', 'Bieguny', 'Waga'],
+    header: ['Wymiary', 'A', 'B', 'Ampery', 'Bieguny', 'Waga'],
     tableBody: [
       ['170', '162', '16', '2P + T', '411'],
       ['170', '162', '16', '3P + T', '470'],

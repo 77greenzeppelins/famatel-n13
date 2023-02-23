@@ -12,6 +12,7 @@ import {
 } from '../../../../../data/categoriesData/cat_3_adaptery-przemyslowe/subCategories/_subCat_1_schuko_data';
 /**TS**/
 import { NextPageWithLayout } from '../../../../_app';
+import AdapteryPrzemysloweSchukoContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/3.1_adaptery-przemyslowe-schuko/AdapteryPrzemysloweSchukoContent';
 
 /**--------------------------------------**/
 const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
@@ -41,9 +42,9 @@ const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
       }
       subCategoryUrl={adapteryPrzemysloweSchuko_SubCategory_data.subCategoryUrl}
     >
-      {/* <GniazdaBlokadaStaleContent
+      <AdapteryPrzemysloweSchukoContent
         productCardsData={adapteryPrzemysloweSchuko_productCards_data}
-      /> */}
+      />
     </ProductPageTemplate>
   );
 };

@@ -21,18 +21,18 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgWtyczkiGniazda_08_estradowe: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-  { image: img5 },
-  { image: img6 },
-  { image: img7 },
-  { image: img8 },
-  { image: img9 },
-  { image: img10 },
-  { image: img11 },
-  { image: img12 },
-  { image: img13 },
+  { image: img1, model: '13410' },
+  { image: img2, model: '23410' },
+  { image: img3, model: '23480' },
+  { image: img4, model: '1107' },
+  { image: img5, model: '2108' },
+  { image: img6, model: '17220' },
+  { image: img7, model: '17120' },
+  { image: img8, model: '17122' },
+  { image: img9, model: '17023' },
+  { image: img10, model: '17020' },
+  { image: img11, model: '39103' },
+  { image: img12, model: '1830' },
+  { image: img13, model: '1831' },
 ];
 export { imgWtyczkiGniazda_08_estradowe };

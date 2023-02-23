@@ -2,14 +2,16 @@ import React from 'react';
 /**Router Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
-import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
+import ProductContentLayout_A from '../__productContentLayout/ProductContentLayout_A';
+import AllTablesContainer from '../_allTablesContainer/AllTablesContainer';
+import SectionWithTable from '../_sectionWithTable/SectionWithTable';
 import CatalogCardsTables from './catalogCardsTables/CatalogCardsTables';
-import DIYTable from '../../../../multipagesComponents/tables/diyTable/DIYTable';
-import RowType_6 from '../../../../multipagesComponents/tables/diyTable/rowType_6/RowType_6';
-import RowType_5 from '../../../../multipagesComponents/tables/diyTable/rowType_5/RowType_5';
+import TechTable from './techTable/TechTable';
 /**Basic Data**/
-import { splitedPathParts } from '../../../../../data/_data';
+import {
+  smallPseudoHeaders,
+  splitedPathParts,
+} from '../../../../../data/_data';
 import {
   adapteryPrzemysloweWielokrotne_1_tablesData,
   adapteryPrzemysloweWielokrotne_2_tablesData,
@@ -46,55 +48,29 @@ const AdapteryPrzemysloweWielokrotneContent: React.FunctionComponent<{
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
-              <SectionContentLayout divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 ">
-                <div className="flex flex-col gap-y-10 w-full lg:w-[50%] ">
-                  <div className="flex flex-col gap-10">
+              <ProductContentLayout_A imageData={productImage}>
+                <AllTablesContainer>
+                  <SectionWithTable label={smallPseudoHeaders.l1}>
                     <CatalogCardsTables
                       index={index}
                       catalogCardTablesData_1={catalogCardTablesData_1}
                       catalogCardTablesData_2={catalogCardTablesData_2}
                     />
+                  </SectionWithTable>
 
-                    <DIYTable tableLayout="flex flex-col gap-y-[2px]">
-                      <RowType_6
-                        rowData={
-                          adapteryPrzemysloweWielokrotne_tech_data[index].header
-                        }
-                        rowContainerStyle={'grid grid-cols-[repeat(5,1fr)]'}
-                        glitchedCellStyle={
-                          'relative col-start-1 col-end-3 fc flex-col border-x-[1px] border-dark gap-y-[2px]'
-                        }
-                        indexOfGlitch={0}
-                        typeOfGlitch={1}
-                      />
-                      <div className="flex flex-col gap-y-[2px]">
-                        {adapteryPrzemysloweWielokrotne_tech_data[
-                          index
-                        ].tableBody.map((rowData, index) => (
-                          <RowType_5
-                            key={index}
-                            backGroundStyleCase={1}
-                            rowContainerStyle="grid grid-cols-[repeat(5,1fr)] "
-                            rowData={rowData}
-                            labelStyle={
-                              'relative p-small text-center pointer-events-none text-dark'
-                            }
-                            bgColors={['bg-greyTint2']}
-                          />
-                        ))}
-                      </div>
-                    </DIYTable>
-                  </div>
-                </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]  bg-grey">
-                  <SquareHolderWithImage
-                    imageData={productImage}
-                    squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
-                    //___items-start
-                    squareHolderInnerContainer="relative overflow-hidden bg-light p-4"
-                  />
-                </div>
-              </SectionContentLayout>
+                  <SectionWithTable label={smallPseudoHeaders.l2}>
+                    <TechTable
+                      headerData={
+                        adapteryPrzemysloweWielokrotne_tech_data[index].header
+                      }
+                      bodyData={
+                        adapteryPrzemysloweWielokrotne_tech_data[index]
+                          .tableBody
+                      }
+                    />
+                  </SectionWithTable>
+                </AllTablesContainer>
+              </ProductContentLayout_A>
             </React.Fragment>
           );
         }

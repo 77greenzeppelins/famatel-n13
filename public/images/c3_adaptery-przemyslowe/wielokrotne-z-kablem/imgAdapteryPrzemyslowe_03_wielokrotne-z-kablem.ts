@@ -13,10 +13,10 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgAdapteryPrzemyslowe_03_wielokrotneKabel: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-  { image: img5 },
+  { image: img1, model: '31004' },
+  { image: img2, model: '31012' },
+  { image: img3, model: '31040' },
+  { image: img4, model: '31020' },
+  { image: img5, model: '31071' },
 ];
 export { imgAdapteryPrzemyslowe_03_wielokrotneKabel };

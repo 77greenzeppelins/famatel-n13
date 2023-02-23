@@ -17,54 +17,47 @@ const TechSpecTable: React.FunctionComponent<
 > = ({ productTechData }) => {
   /**JSX**/
   return (
-    <div
-      data-component="TablesSection___container"
-      className="flex flex-col gap-10"
-    >
-      <div className={`flex flex-col w-full ${horizGap}`}>
-        {productTechData.line1 ? (
-          <div className={`grid grid-cols-[2fr_repeat(6,1fr)] ${vertGap} `}>
-            <RowWithSideHeader
-              rowData={productTechData.line1}
-              customeHeader={'bg-dark'}
-            />
-          </div>
-        ) : null}
-        {productTechData.line2 ? (
-          <div
-            className={`grid grid-cols-[2fr_repeat(6,1fr)] ${vertGap} group`}
-          >
-            <RowWithSideHeader
-              rowData={productTechData.line2}
-              customeHeader={sideHeaderCellCenter}
-            />
-          </div>
-        ) : null}
-        {productTechData.connectionType ? (
-          <div className={`grid grid-cols-[2fr_6fr] ${vertGap} group`}>
-            <RowWithSideHeader
-              rowData={productTechData.connectionType}
-              customeHeader={sideHeaderCellCenter}
-            />
-          </div>
-        ) : null}
-        {productTechData.mm ? (
-          <div className={`grid grid-cols-[2fr_6fr] ${vertGap} group`}>
-            <RowWithSideHeader
-              rowData={productTechData.mm}
-              customeHeader={sideHeaderCellCenter}
-            />
-          </div>
-        ) : null}
-        {productTechData.weight ? (
-          <div className={`grid grid-cols-[2fr_6fr] ${vertGap} group`}>
-            <RowWithSideHeader
-              rowData={productTechData.weight}
-              customeHeader={sideHeaderCellCenter}
-            />
-          </div>
-        ) : null}
-      </div>
+    <div className={`flex flex-col w-full ${horizGap}`}>
+      {productTechData.line1 ? (
+        <div className={`grid grid-cols-[2fr_repeat(6,1fr)] `}>
+          <RowWithSideHeader
+            rowData={productTechData.line1}
+            customeHeader={'bg-dark'}
+          />
+        </div>
+      ) : null}
+      {productTechData.line2 ? (
+        <div className={`grid grid-cols-[2fr_repeat(6,1fr)] group`}>
+          <RowWithSideHeader
+            rowData={productTechData.line2}
+            customeHeader={sideHeaderCellCenter}
+          />
+        </div>
+      ) : null}
+      {productTechData.connectionType ? (
+        <div className={`grid grid-cols-[2fr_6fr] group`}>
+          <RowWithSideHeader
+            rowData={productTechData.connectionType}
+            customeHeader={sideHeaderCellCenter}
+          />
+        </div>
+      ) : null}
+      {productTechData.mm ? (
+        <div className={`grid grid-cols-[2fr_6fr] group`}>
+          <RowWithSideHeader
+            rowData={productTechData.mm}
+            customeHeader={sideHeaderCellCenter}
+          />
+        </div>
+      ) : null}
+      {productTechData.weight ? (
+        <div className={`grid grid-cols-[2fr_6fr] group`}>
+          <RowWithSideHeader
+            rowData={productTechData.weight}
+            customeHeader={sideHeaderCellCenter}
+          />
+        </div>
+      ) : null}
     </div>
   );
 };

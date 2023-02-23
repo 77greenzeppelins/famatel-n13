@@ -17,14 +17,14 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgWtyczkiGniazda_05_jednofazowe: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-  { image: img5 },
-  { image: img6 },
-  { image: img7 },
-  { image: img8 },
-  { image: img9 },
+  { image: img1, model: '1167' },
+  { image: img2, model: '2167' },
+  { image: img3, model: '2167F' },
+  { image: img4, model: '1165' },
+  { image: img5, model: '2165' },
+  { image: img6, model: '2165F' },
+  { image: img7, model: '187G' },
+  { image: img8, model: '188G' },
+  { image: img9, model: '2998' },
 ];
 export { imgWtyczkiGniazda_05_jednofazowe };

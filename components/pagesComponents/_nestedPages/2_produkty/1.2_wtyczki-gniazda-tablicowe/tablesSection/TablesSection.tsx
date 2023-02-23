@@ -1,5 +1,6 @@
 import React from 'react';
 /**Components**/
+import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
 import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
 import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
 import DIYTable from '../../../../../multipagesComponents/tables/diyTable/DIYTable';
@@ -9,12 +10,10 @@ import { mainStylesSwitcher } from '../../../../../multipagesComponents/tables/d
 /**TS**/
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles*/
-import {
-  horizGap,
-  tablesSectionContainer,
-} from '../../../../../../utils/tailwindStyles';
+import { horizGap } from '../../../../../../utils/tailwindStyles';
 /**Basic Data**/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
+
 /**----------------------------------**/
 const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
   productCardIndex,
@@ -29,10 +28,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
 }) => {
   /**JSX**/
   return (
-    <div
-      data-component="TablesSection___container"
-      className={`${tablesSectionContainer}`}
-    >
+    <AllTablesContainer>
       <SectionWithTable label={smallPseudoHeaders.l1}>
         <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
       </SectionWithTable>
@@ -86,7 +82,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
           )}
         </DIYTable>
       </SectionWithTable>
-    </div>
+    </AllTablesContainer>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 /**Components**/
+import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
 import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
 import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
 import DIYTable from '../../../../../multipagesComponents/tables/diyTable/DIYTable';
@@ -47,10 +48,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
 
   /**JSX**/
   return (
-    <div
-      data-component="TablesSection___container"
-      className="flex flex-col w-full gap-16"
-    >
+    <AllTablesContainer>
       <SectionWithTable label={smallPseudoHeaders.l1}>
         <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
       </SectionWithTable>
@@ -106,7 +104,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
           )}
         </DIYTable>
       </SectionWithTable>
-    </div>
+    </AllTablesContainer>
   );
 };
 

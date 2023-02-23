@@ -2,8 +2,7 @@ import React from 'react';
 /**Router Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
-import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SectionWithImages from '../_sectionWithImages/SectionWithImages';
+import ProductContentLayout_B from '../__productContentLayout/ProductContentLayout_B';
 import SectionWithTable from '../_sectionWithTable/SectionWithTable';
 import CatalogTable from './catalogTable/CatalogTable';
 import CatalogTable2 from './catalogTable/CatalogTable2';
@@ -18,10 +17,8 @@ import {
 } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_5_jednofazowe_prodCat';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
-/**Tailwind Styles**/
-import { productPagesSectionContentLayout } from '../../../../../utils/tailwindStyles';
 
-/**----------------------------------------**/
+/**----------------------------------------------------------**/
 const WtyczkiGniazdaSchukoContent: React.FunctionComponent<{
   productCardsData: IF_ProductCardData[];
 }> = ({ productCardsData }) => {
@@ -41,18 +38,13 @@ const WtyczkiGniazdaSchukoContent: React.FunctionComponent<{
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
-              {/* <SectionContentLayout></SectionContentLayout> */}
-              <SectionContentLayout divStyle={productPagesSectionContentLayout}>
-                <div className="flex flex-col gap-y-10 w-full lg:w-[50%] ">
-                  <SectionWithTable label={smallPseudoHeaders.l1}>
-                    <CatalogTable catalogData={catalogData} />
-                    <CatalogTable2 catalogData={catalogData2} />
-                  </SectionWithTable>
-                </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto lg:min-h-[400px]">
-                  <SectionWithImages imageData={productImage} />
-                </div>
-              </SectionContentLayout>
+              <ProductContentLayout_B imageData={productImage}>
+                {' '}
+                <SectionWithTable label={smallPseudoHeaders.l1}>
+                  <CatalogTable catalogData={catalogData} />
+                  <CatalogTable2 catalogData={catalogData2} />
+                </SectionWithTable>
+              </ProductContentLayout_B>
             </React.Fragment>
           );
         }
