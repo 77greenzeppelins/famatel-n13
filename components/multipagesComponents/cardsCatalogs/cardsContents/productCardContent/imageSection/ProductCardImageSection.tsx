@@ -44,7 +44,7 @@ const ProductCardImageSection: React.FunctionComponent<{
         <Image
           alt={imageAlt ? imageAlt : 'zdjęcie produktu'}
           src={imageData.image}
-          placeholder="blur"
+          // placeholder="blur"
           fill
           sizes="600"
           // width={Math.min(bounds.width, bounds.height) * 0.95}
@@ -58,7 +58,7 @@ const ProductCardImageSection: React.FunctionComponent<{
       <motion.div
         className="absolute inset-0 dark"
         animate={{ opacity: state ? 0 : 1 }}
-        transition={{ delay: 1, duration: 1 }}
+        transition={{ delay: 1.6, duration: 0.4, ease: 'easeIn' }}
       />
     </motion.div>
   );
