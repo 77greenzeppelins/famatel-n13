@@ -14,7 +14,7 @@ const ProductCardGraphicSection: React.FunctionComponent<{
   /**JSX**/
   return (
     <div
-      className="relative fc flex-col w-[98%] h-[98%] bg-light rounded-l-sm"
+      className="relative fc flex-col w-full h-full  rounded-l-sm"
       //___flex items-center
     >
       <ProductCardImageSection imageData={imageData} />

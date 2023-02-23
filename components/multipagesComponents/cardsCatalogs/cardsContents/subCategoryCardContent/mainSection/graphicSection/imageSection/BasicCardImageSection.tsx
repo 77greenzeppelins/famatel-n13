@@ -24,22 +24,26 @@ const BasicCardImageSection: React.FunctionComponent<{
       className="relative fc w-full h-full "
     >
       <div
-        className="relative fc w-full h-full"
-        // style={{
-        //   width: Math.min(bounds.width, bounds.height),
-        //   height: Math.min(bounds.width, bounds.height),
-        // }}
+        className="relative fc"
+        // w-full h-full
+        style={{
+          width: Math.min(bounds.width, bounds.height),
+          height: Math.min(bounds.width, bounds.height),
+        }}
       >
-        {/* <p>{bounds.width}</p>
-        <p>{bounds.height}</p> */}
         <Image
           alt={imageAlt ? imageAlt : 'zdjęcie produktu'}
           src={imageData.image}
-          width={Math.min(bounds.width, bounds.height)}
-          height={Math.min(bounds.width, bounds.height)}
+          placeholder="blur"
+          fill
+          // className="object-cover"
+          // width={Math.min(bounds.width, bounds.height)}
+          // height={Math.min(bounds.width, bounds.height)}
           // width={600}
           // height={600}
           // fill // intrinsic|fixed|responsive|fill allowed;  fill your parent bro! that is why I calculated width and height to make parent of square shape
+
+          //
         />
       </div>
     </motion.div>
