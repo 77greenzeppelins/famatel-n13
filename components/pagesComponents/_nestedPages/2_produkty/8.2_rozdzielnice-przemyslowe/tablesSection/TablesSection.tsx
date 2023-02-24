@@ -1,14 +1,19 @@
 import React from 'react';
 /**Components**/
-import BasicTable from '../../../../../multipagesComponents/tables/basicTable/BasicTable';
+import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
+import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 import RozdzielnicePrzemysloweTable from './rozdzielnicePrzemysloweTable.tsx/RozdzielnicePrzemysłoweTable';
 /**Tailwind Styles*/
 import {
-  vertGap,
-  bodyCell,
   undelinedTableTextStyle,
+  undelinedTableContainerStyle,
+  horizGap,
 } from '../../../../../../utils/tailwindStyles';
+/**Basic Data**/
+import { smallPseudoHeaders } from '../../../../../../data/_data';
+import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
+import TopHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
 
 /**--------------------------------------------------**/
 const TablesSection: React.FunctionComponent<{
@@ -55,48 +60,71 @@ const TablesSection: React.FunctionComponent<{
 }) => {
   /**JSX**/
   return (
-    <div
-      data-component="TablesSection___container"
-      className="flex flex-col gap-2"
-    >
+    <AllTablesContainer>
       {
         //___condition to distinguish between tables for rozdzielnicePrzemysłowe and tables for rozdzielniceNaPlaceBudowy
         productIndex < 11 ? (
-          <RozdzielnicePrzemysloweTable
-            tableColumnsNumber={tableColumnsNumber}
-            rozdzielnicePrzemysloweTableData={rozdzielnicePrzemysloweTableData}
-            tableLayout={tableLayout}
-          />
+          <SectionWithTable label={smallPseudoHeaders.l2}>
+            <RozdzielnicePrzemysloweTable
+              tableColumnsNumber={tableColumnsNumber}
+              rozdzielnicePrzemysloweTableData={
+                rozdzielnicePrzemysloweTableData
+              }
+              tableLayout={tableLayout}
+            />
+          </SectionWithTable>
         ) : (
-          <div className="flex flex-col gap-y-6">
-            <BasicTable
-              tableHeader={rozdzielniceBudowlaneHeader2}
-              tableBodyData={rozdzielniceBudowlaneTableData2}
-            />
-            <BasicTable
-              tableHeader={rozdzielniceBudowlaneHeader1}
-              tableBodyData={rozdzielniceBudowlaneTableData1}
-              multiCellsContainer={`grid grid-cols-[1fr_2fr_1fr] gap-[0.125rem] ${vertGap}  group bg-greyTint2 `}
-              multiCellsCell={[bodyCell, bodyCell, bodyCell]}
-            />
-          </div>
+          <>
+            <SectionWithTable label={smallPseudoHeaders.l1}>
+              <div className={`flex flex-col ${horizGap} `}>
+                {rozdzielniceBudowlaneTableData1?.map((rowData, i) => (
+                  <div key={i} className="grid grid-cols-[1fr_2fr_2fr] group">
+                    <RowWithSideHeader rowData={rowData} centered={true} />
+                  </div>
+                ))}
+              </div>
+            </SectionWithTable>
+            <SectionWithTable label={smallPseudoHeaders.l2}>
+              <div className={`flex flex-col ${horizGap} `}>
+                {typeof rozdzielniceBudowlaneHeader2 === 'string' && (
+                  <TopHeader label={rozdzielniceBudowlaneHeader2} />
+                )}
+                {rozdzielniceBudowlaneTableData2?.map(({ label, value }, i) => (
+                  <div key={i} className="grid grid-cols-[repeat(2,1fr)] group">
+                    <RowWithSideHeader
+                      rowData={[label, value]}
+                      centered={true}
+                    />
+                  </div>
+                ))}
+              </div>
+            </SectionWithTable>
+          </>
         )
       }
-      <div>
-        <TableWithUnderlinedRows
-          rowsData={norma}
-          tableContainerStyle="w-full flex flex-col gap-y-4 pt-4"
-          textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
-        />
-      </div>
-      <div>
-        <TableWithUnderlinedRows
-          rowsData={packageDetails}
-          tableContainerStyle="w-full flex flex-col gap-y-4 pt-4"
-          textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
-        />
-      </div>
-    </div>
+
+      <SectionWithTable label={smallPseudoHeaders.l4}>
+        <div>
+          <TableWithUnderlinedRows
+            rowsData={norma}
+            tableContainerStyle={undelinedTableContainerStyle}
+            cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+            textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
+          />
+        </div>
+      </SectionWithTable>
+
+      <SectionWithTable label={smallPseudoHeaders.l3}>
+        <div>
+          <TableWithUnderlinedRows
+            rowsData={packageDetails}
+            tableContainerStyle={undelinedTableContainerStyle}
+            cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+            textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
+          />
+        </div>
+      </SectionWithTable>
+    </AllTablesContainer>
   );
 };
 

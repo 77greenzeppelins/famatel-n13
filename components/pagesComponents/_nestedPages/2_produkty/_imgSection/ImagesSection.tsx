@@ -1,9 +1,9 @@
 import React from 'react';
-
 /**Components**/
-import SvgImageSwitcher from '../../../../multipagesComponents/sliders/basicSlider/svgImageSwitcher/SvgImageSwitcher';
+import SvgImageSwitcher from '../../../../multipagesComponents/sliders/svgImageSwitcher/SvgImageSwitcher';
 /**TS**/
 import { IF_ImgStaticData } from '../../../../../utils/TS/typeScriptStaff';
+
 /**-----------------------------------------------**/
 const ImagesSection: React.FunctionComponent<{
   imageData: IF_ImgStaticData;

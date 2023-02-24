@@ -4,7 +4,6 @@ import BasicTableHeader from './header/BasicTableHeader';
 import BasicTableBody from './body/BasicTableBody';
 /**Tailwind Styles*/
 import { horizGap } from '../../../../utils/tailwindStyles';
-
 /**
  * used in: 8.1_obudowy-puste / TablesSection / ...
  *

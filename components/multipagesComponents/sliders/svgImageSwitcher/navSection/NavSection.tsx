@@ -1,7 +1,10 @@
 import React from 'react';
-import { corpoColors } from '../../../../../../data/_data';
-import ChevronLeftIcon from '../../../../../SVG/icons/ChevronLeftIcon';
-import ChevronRightIcon from '../../../../../SVG/icons/ChevronRightIcon';
+/**Components* */
+import ChevronLeftIcon from '../../../../SVG/icons/ChevronLeftIcon';
+import ChevronRightIcon from '../../../../SVG/icons/ChevronRightIcon';
+
+/**Basic Data*/
+import { corpoColors } from '../../../../../data/_data';
 
 const range = [0, 1];
 /*
@@ -16,7 +19,7 @@ const NavSection: React.FunctionComponent<{
   JSX
   */
   return (
-    <div className="relative flex items-center justify-between h-full w-full bg-light">
+    <div className="relative flex items-center justify-between h-full w-full bg-greyShade2">
       <div
         className={`fc h-full w-10`}
         onClick={() => {
@@ -27,7 +30,7 @@ const NavSection: React.FunctionComponent<{
         <ChevronLeftIcon className={'w-6 h-6'} strokeColor={corpoColors.dark} />
       </div>
       <div>
-        <p className="text-grey p-small">{`MODEL: ${modelNumb}`}</p>
+        <p className="text-light p-small">{`MODEL: ${modelNumb}`}</p>
       </div>
       <div
         className={`fc h-full w-10`}
@@ -45,19 +48,3 @@ const NavSection: React.FunctionComponent<{
 };
 
 export default NavSection;
-
-// <div
-//   //___header container; cant be "fc"
-//   className={`relative py-[0.3rem] px-[0.5rem] flex items-center h-full bg-light`}
-// >
-//   <div
-//     className={`absolute inset-0 bg-greyShade2 opacity-[0.8] group-hover:opacity-[1] duration-300 ease-in delay-100`}
-//   />
-//   <p
-//     className={`${
-//       headerLabelStyle ? headerLabelStyle : globHeaderLabelStyle
-//     } relative`}
-//   >
-//     <span> {label}</span>
-//   </p>
-// </div>;

@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import NavSection from './navSection/NavSection';
 import SlidesSection from './slidesSection/SlidesSection';
 /*Hook*/
-import usePrevious from '../../../../../utils/hooks/usePrevious';
+import usePrevious from '../../../../utils/hooks/usePrevious';
 /**TS**/
-import { IF_ImgStaticData } from '../../../../../utils/TS/typeScriptStaff';
+import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
 /*Basic Data*/
 const switcherRange = [1, 2];
 
@@ -29,12 +29,12 @@ const SvgImageSwitcher: React.FunctionComponent<{
   return (
     <div
       data-component="SvgImageSwitcher__container"
-      className="relative w-full h-full"
+      className="flex items-center flex-col gap-4 w-full h-full"
     >
-      <div className=" w-full h-[40px] bg-light">
+      <div className=" w-full h-[40px]">
         <NavSection setBasicState={setBasicState} modelNumb={imageData.model} />
       </div>
-      <div className=" w-full h-full bg-light">
+      <div className=" w-full h-full ">
         <SlidesSection
           direction={direction}
           imageData={imageData}

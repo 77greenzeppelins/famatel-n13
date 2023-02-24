@@ -1,15 +1,12 @@
-import { corpoColors } from '../../../_data';
 /*
 Basic Data
 */
-const iconColorBG = corpoColors.dark;
-const iconColorFG = corpoColors.light;
-const iconContainerSize = 50;
-const textLabelStyle = 'text-light text-[0.75rem]';
 const arrOfDescriptions = [
-  'Pokrywa i podstawa z ABS',
-  'Transparentne okienko z PC',
-  'Osłony śrub dla IP w komplecie',
+  ['Pokrywa i podstawa', 'ABS'],
+  ['Transparentne okienko', ' PC'],
+  ['Osłony śrub dla IP', 'Tak (w komplecie)'],
+  ['Opakowanie podstawowe', '1'],
+  ['Opakowanie zbiorcze', '18'],
 ];
 
 /*
@@ -27,10 +24,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '18'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'MOD6', 'DRUT650'],
@@ -51,10 +45,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '12'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'MOD8', 'DRUT650'],
@@ -77,10 +68,7 @@ const obudowyPusteTechSpecData = [
     ],
 
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '6'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -103,10 +91,7 @@ const obudowyPusteTechSpecData = [
     ],
 
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '4'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -128,10 +113,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '4'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -153,10 +135,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '1'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -173,10 +152,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '7'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -193,10 +169,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '6'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -213,10 +186,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '1'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -233,10 +203,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '18'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -257,10 +224,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '12'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -282,10 +246,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '6'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -307,10 +268,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '6'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -332,10 +290,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '4'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -357,10 +312,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '1'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -382,10 +334,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '8'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -413,10 +362,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '4'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -444,10 +390,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '6'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -475,10 +418,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '4'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -506,10 +446,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '4'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -537,10 +474,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '4'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -568,10 +502,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '1'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -600,10 +531,7 @@ const obudowyPusteTechSpecData = [
     ],
 
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '8'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],
@@ -631,10 +559,7 @@ const obudowyPusteTechSpecData = [
       ],
     ],
     norma: ['Norma', 'EN 62208'],
-    packageDetails: [
-      ['Opakowanie podstawowe', '1'],
-      ['Opakowanie zbiorcze', '13'],
-    ],
+
     description: [...arrOfDescriptions],
     iconHolderData: {
       svgLabel: ['IP65', 'IK08', 'FREE', 'IZO', 'UV', 'DRUT650'],

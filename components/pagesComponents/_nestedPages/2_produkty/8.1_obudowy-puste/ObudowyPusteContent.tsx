@@ -5,12 +5,12 @@ import { useRouter } from 'next/router';
 import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import BasicIconsManager from '../../../../multipagesComponents/iconsManagers/basicIconsManager/BasicIconsManager';
 import TablesSection from './tablesSection/TablesSection';
-import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
 /**Basic Data**/
 import { splitedPathParts } from '../../../../../data/_data';
 import { obudowyPusteTechSpecData } from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_1_obudowy-puste_techSpec';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
+import ProductContentLayout_B from '../__productContentLayout/ProductContentLayout_B';
 
 /**----------------------------------------**/
 const ObudowyPusteContent: React.FunctionComponent<{
@@ -31,37 +31,19 @@ const ObudowyPusteContent: React.FunctionComponent<{
         const tablesHeaders = obudowyPusteTechSpecData[index].header;
         const tablesWithSizes = obudowyPusteTechSpecData[index].tablesData;
         const generalDescription = obudowyPusteTechSpecData[index].description;
-        const packageDetails = obudowyPusteTechSpecData[index].packageDetails;
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
               <SectionContentLayout>
                 <BasicIconsManager svgIcons={svgIcons} />
               </SectionContentLayout>
-              <SectionContentLayout
-                // divStyle="grid grid-cols-[1fr] gap-4 md:grid-cols-[1fr_1fr] md:grid-rows-3"
-                divStyle="flex flex-col-reverse gap-y-4 lg:flex-row lg:gap-x-10 "
-              >
-                <div
-                  className="w-full lg:w-[50%]"
-                  // className="md:col-start-1 md:row-start-1"
-                >
-                  <TablesSection
-                    tablesHeaders={tablesHeaders}
-                    tablesData={tablesWithSizes}
-                    generalDescription={generalDescription}
-                    packageDetails={packageDetails}
-                  />
-                </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] lg:w-[50%] lg:h-auto  bg-grey">
-                  <SquareHolderWithImage
-                    imageData={productImage}
-                    squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
-                    //___items-start
-                    squareHolderInnerContainer="relative overflow-hidden bg-light p-4"
-                  />
-                </div>
-              </SectionContentLayout>
+              <ProductContentLayout_B imageData={productImage}>
+                <TablesSection
+                  tablesHeaders={tablesHeaders}
+                  tablesData={tablesWithSizes}
+                  generalDescription={generalDescription}
+                />
+              </ProductContentLayout_B>
             </React.Fragment>
           );
         }

@@ -15,8 +15,8 @@ const ProductContentLayout_A: React.FunctionComponent<{
 }> = ({ children, imageData }) => {
   /**JSX**/
   return (
-    <div className="flex flex-col gap-y-28 xxl:flex-row-reverse xxl:gap-x-10">
-      <div className="w-full h-[40vh] sm:h-[50vh] xxl:w-[50%] xxl:h-auto xxl:min-h-[400px]">
+    <div className="flex flex-col gap-y-20 xxl:flex-row-reverse xxl:gap-x-10">
+      <div className="w-full h-[40vh] sm:h-[70vh] xxl:w-[50%] xxl:h-auto xxl:min-h-[400px]">
         <SectionWithImages imageData={imageData} />
       </div>
       <div className="flex w-full xxl:w-[50%]">{children}</div>

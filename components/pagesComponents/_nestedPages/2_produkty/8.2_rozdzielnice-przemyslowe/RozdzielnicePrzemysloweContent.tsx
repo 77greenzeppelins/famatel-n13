@@ -2,9 +2,9 @@ import React from 'react';
 /**Router Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
+import ProductContentLayout_B from '../__productContentLayout/ProductContentLayout_B';
 import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import BasicIconsManager from '../../../../multipagesComponents/iconsManagers/basicIconsManager/BasicIconsManager';
-import SquareHolderWithImage from '../../../../multipagesComponents/holders/squareHolderWithImage/SquareHolderWithImage';
 import TablesSection from './tablesSection/TablesSection';
 /**Basic Data**/
 import { splitedPathParts } from '../../../../../data/_data';
@@ -15,7 +15,6 @@ import {
 } from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_2_przemyslowe_techSpec';
 /**TS**/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
-import ImagesSection from '../_imgSection/ImagesSection';
 
 /**----------------------------------------**/
 const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
@@ -58,47 +57,30 @@ const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
               <SectionContentLayout>
                 <BasicIconsManager svgIcons={svgIcons} />
               </SectionContentLayout>
-              <SectionContentLayout
-                // divStyle="grid grid-cols-[1fr] gap-4 md:grid-cols-[1fr_1fr] md:grid-rows-3"
-                divStyle="flex flex-col-reverse gap-y-4 xl:flex-row xl:gap-x-10 "
-              >
-                <div
-                  className="w-full xl:w-[50%]"
-                  // className="md:col-start-1 md:row-start-1"
-                >
-                  <TablesSection
-                    productIndex={index}
-                    tableColumnsNumber={tableColumnsNumber}
-                    rozdzielnicePrzemysloweTableData={
-                      rozdzielnicePrzemysloweTableData
-                    }
-                    tableLayout={
-                      tableColumnsNumber === 8
-                        ? gridTemplate8Columns
-                        : gridTemplate7Columns
-                    }
-                    rozdzielniceBudowlaneHeader2={rozdzielniceBudowlaneHeader2}
-                    rozdzielniceBudowlaneTableData2={
-                      rozdzielniceBudowlaneTableData2
-                    }
-                    rozdzielniceBudowlaneHeader1={rozdzielniceBudowlaneHeader1}
-                    rozdzielniceBudowlaneTableData1={
-                      rozdzielniceBudowlaneTableData1
-                    }
-                    packageDetails={packageDetails}
-                    norma={norma}
-                  />
-                </div>
-                <div className="w-full h-[40vh] sm:h-[50vh] xl:w-[50%] xl:h-auto">
-                  {/* <SquareHolderWithImage
-                    imageData={productImage}
-                    squareHolderOuterContainer="flex justify-center items-center w-full h-full bg-light"
-                    //___items-start
-                    squareHolderInnerContainer="relative overflow-hidden bg-light p-4"
-                  /> */}
-                  <ImagesSection imageData={productImage} />
-                </div>
-              </SectionContentLayout>
+              <ProductContentLayout_B imageData={productImage}>
+                <TablesSection
+                  productIndex={index}
+                  tableColumnsNumber={tableColumnsNumber}
+                  rozdzielnicePrzemysloweTableData={
+                    rozdzielnicePrzemysloweTableData
+                  }
+                  tableLayout={
+                    tableColumnsNumber === 8
+                      ? gridTemplate8Columns
+                      : gridTemplate7Columns
+                  }
+                  rozdzielniceBudowlaneHeader2={rozdzielniceBudowlaneHeader2}
+                  rozdzielniceBudowlaneTableData2={
+                    rozdzielniceBudowlaneTableData2
+                  }
+                  rozdzielniceBudowlaneHeader1={rozdzielniceBudowlaneHeader1}
+                  rozdzielniceBudowlaneTableData1={
+                    rozdzielniceBudowlaneTableData1
+                  }
+                  packageDetails={packageDetails}
+                  norma={norma}
+                />
+              </ProductContentLayout_B>
             </React.Fragment>
           );
         }

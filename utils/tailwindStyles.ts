@@ -34,6 +34,8 @@ const productPagesSectionContentLayout =
 //___used in <UnderlinedTable>
 const undelinedTableTextStyle =
   'p-small text-grey group-hover:text-light ease-in duration-300 disable-soft';
+
+const undelinedTableContainerStyle = 'w-full flex flex-col gap-y-2 pt-1';
 //___"a" means "autonomical" i.e. has its own border; no border in gridedContainer
 //___used in layout that changes at xxl / 1536px
 const aTopHeaderCell = `fc bg-greyShade2 py-4 px-[1px] border-x-[1px] border-dark text-light text-center ${tableTextL} break-all select-none `;
@@ -65,8 +67,9 @@ export {
   blueCellStyle,
   //___ for <SectionContentLayout> at productLevel
   productPagesSectionContentLayout,
-  //___used in <UmnderlinedTable>
+  //___used in <TableWithUnderlinedRows>
   undelinedTableTextStyle,
+  undelinedTableContainerStyle,
   //___
   tableTextS,
   tableTextM,

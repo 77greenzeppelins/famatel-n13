@@ -1,9 +1,6 @@
 import React from 'react';
-import {
-  sideHeaderCellCenter,
-  topHeaderCell,
-  vertGap,
-} from '../../../../../utils/tailwindStyles';
+/**Components*/
+import TopHeader from '../../__cells/layoutXL/TopHeader';
 
 /**-----------------------------------------------------**/
 const BasicTableHeader: React.FunctionComponent<{
@@ -12,46 +9,33 @@ const BasicTableHeader: React.FunctionComponent<{
 }> = ({ tableHeader, headerContainerGrid }) => {
   /**Handler**/
   const createCells = () => {
-    if (!Array.isArray(tableHeader)) {
-      //___if rowData has type "{label: string, value: string}""
+    if (tableHeader && typeof tableHeader === 'string') {
+      //___if rowData has type "{label: string, value: string}"" ????
       return (
-        <div className={`grid grid-cols-[1fr] ${vertGap}  group`}>
-          <div className={topHeaderCell}>{tableHeader} </div>
-        </div>
-      );
-    } else {
-      return (
-        <div
-          className={
-            headerContainerGrid
-              ? headerContainerGrid
-              : `grid grid-cols-[1fr] ${vertGap} group`
-          }
-        >
-          {tableHeader.map((cell, index) => {
-            // if (rowIndex === specialCases?.index) {
-            //   return (
-            //     <div
-            //       key={index}
-            //       className={
-            //         specialCases.cellsSpecialStyles
-            //           ? specialCases.cellsSpecialStyles[index]
-            //           : 'relative header-link-label text-dark '
-            //       }
-            //     >
-            //       <p>{cell}</p>
-            //     </div>
-            //   );
-            // }
-            return (
-              <div key={index} className={topHeaderCell}>
-                <p>{cell}</p>
-              </div>
-            );
-          })}
-        </div>
+        // <div className={`grid grid-cols-[1fr]`}>
+        <TopHeader label={tableHeader} />
+        // </div>
       );
     }
+    // if (tableHeader && Array.isArray(tableHeader)) {
+    //   return (
+    //     <div
+    //       className={
+    //         headerContainerGrid
+    //           ? headerContainerGrid
+    //           : `grid grid-cols-[1fr] ${vertGap} group`
+    //       }
+    //     >
+    //       {tableHeader?.map((cell, index) => {
+    //         return (
+    //           <div key={index} className={topHeaderCell}>
+    //             <p>{cell}</p>
+    //           </div>
+    //         );
+    //       })}
+    //     </div>
+    //   );
+    // }
   };
   /**JSX**/
   return <>{createCells()}</>;
