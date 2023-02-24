@@ -20,7 +20,7 @@ const H1AnimatedPresence: React.FunctionComponent<{
     >
       <motion.div
         key={uniqueKey}
-        className=" disable "
+        className=" disable-soft xl:w-[90%] xxl:w-[70%] xxxl:w-[55%]"
         variants={opacityScaleYVariants}
         initial="from"
         animate="to"

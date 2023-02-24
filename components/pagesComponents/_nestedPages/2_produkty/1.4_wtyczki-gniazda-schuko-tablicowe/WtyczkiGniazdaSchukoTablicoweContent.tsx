@@ -50,6 +50,9 @@ const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
                       <SectionWithTable label={smallPseudoHeaders.l2}>
                         <TechSpecTable productTechData={productTechData} />
                       </SectionWithTable>
+                      <SectionWithTable label={smallPseudoHeaders.l8}>
+                        <ProtectionSection />
+                      </SectionWithTable>
                     </>
                   )}
                   {index > 5 && index < 8 && (
@@ -94,7 +97,7 @@ const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
                   )}
                 </AllTablesContainer>
               </ProductContentLayout_B>
-              {index < 6 ? <ProtectionSection /> : null}
+              {/* {index < 6 ? <ProtectionSection /> : null} */}
             </React.Fragment>
           );
         }

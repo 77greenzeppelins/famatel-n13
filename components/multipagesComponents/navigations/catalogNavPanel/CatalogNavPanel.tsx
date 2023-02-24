@@ -22,7 +22,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
       {namesLevels.map((name, index) => (
         <div
           key={index}
-          className="flex flex-col xs:flex-row  gap-x-2 md:gap-x-4  "
+          className="flex flex-col xs:flex-row gap-x-2 md:gap-x-4  "
         >
           <SmallPseudoHeader
             text={labels[index]}
@@ -57,7 +57,9 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
             hasBox={true}
             hasVerticalOrnament={false}
           />
-          <H1AnimatedPresence uniqueKey={0} text={lastLevelName} />
+          <div className="pl-8 ">
+            <H1AnimatedPresence uniqueKey={0} text={lastLevelName} />
+          </div>
         </>
       )}
     </SectionContentLayout>
