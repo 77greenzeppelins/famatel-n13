@@ -1,17 +1,16 @@
 import React from 'react';
 /**Components**/
 import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
+import BodyCell from '../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
 /**TS**/
 import { IF_ProductTechDataSchucoTablicowe } from '../../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles**/
 import {
-  vertGap,
   horizGap,
   sideHeaderCellCenter,
-  bodyCell,
 } from '../../../../../../utils/tailwindStyles';
 
-/**----------------------------------**/
+/**----------------------------------------------**/
 const TechSpecTable: React.FunctionComponent<
   IF_ProductTechDataSchucoTablicowe
 > = ({ productTechData }) => {
@@ -19,26 +18,24 @@ const TechSpecTable: React.FunctionComponent<
   return (
     <div className={`flex flex-col w-full ${horizGap}`}>
       {productTechData.line1 ? (
-        <div className={`grid grid-cols-[2fr_repeat(6,1fr)] `}>
-          <RowWithSideHeader
-            rowData={productTechData.line1}
-            customeHeader={'bg-dark'}
-          />
+        <div className={`grid grid-cols-[2fr_6fr] `}>
+          <div className={`grid grid-cols-[repeat(6,1fr)] col-start-2 `}>
+            {productTechData.line1.map((label, i) => (
+              <BodyCell key={i} label={label} />
+            ))}
+          </div>
         </div>
       ) : null}
       {productTechData.line2 ? (
         <div className={`grid grid-cols-[2fr_repeat(6,1fr)] group`}>
-          <RowWithSideHeader
-            rowData={productTechData.line2}
-            customeHeader={sideHeaderCellCenter}
-          />
+          <RowWithSideHeader rowData={productTechData.line2} centered={true} />
         </div>
       ) : null}
       {productTechData.connectionType ? (
         <div className={`grid grid-cols-[2fr_6fr] group`}>
           <RowWithSideHeader
             rowData={productTechData.connectionType}
-            customeHeader={sideHeaderCellCenter}
+            centered={true}
           />
         </div>
       ) : null}
@@ -47,6 +44,7 @@ const TechSpecTable: React.FunctionComponent<
           <RowWithSideHeader
             rowData={productTechData.mm}
             customeHeader={sideHeaderCellCenter}
+            centered={true}
           />
         </div>
       ) : null}
@@ -55,6 +53,7 @@ const TechSpecTable: React.FunctionComponent<
           <RowWithSideHeader
             rowData={productTechData.weight}
             customeHeader={sideHeaderCellCenter}
+            centered={true}
           />
         </div>
       ) : null}

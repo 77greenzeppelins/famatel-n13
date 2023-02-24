@@ -2,6 +2,9 @@ import React from 'react';
 /**Router Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
+import ProductContentLayout_B from '../__productContentLayout/ProductContentLayout_B';
+import AllTablesContainer from '../_allTablesContainer/AllTablesContainer';
+import SectionWithTable from '../_sectionWithTable/SectionWithTable';
 import TechSpecTable from './techSpecTable/TechSpecTable';
 import CatalogTable from './catalogTable/CatalogTable';
 import TableWithUnderlinedRows from '../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
@@ -17,9 +20,6 @@ import { wtyczkiGniazdaSchukoTablicowe_catalog_data } from '../../../../../data/
 import { IF_ProductCardData } from '../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles**/
 import { undelinedTableTextStyle } from '../../../../../utils/tailwindStyles';
-import ProductContentLayout_B from '../__productContentLayout/ProductContentLayout_B';
-import SectionWithTable from '../_sectionWithTable/SectionWithTable';
-import AllTablesContainer from '../_allTablesContainer/AllTablesContainer';
 
 /**----------------------------------------**/
 const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{

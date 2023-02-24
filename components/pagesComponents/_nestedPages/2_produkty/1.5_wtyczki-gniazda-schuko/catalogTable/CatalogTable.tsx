@@ -1,17 +1,18 @@
 import React from 'react';
+/**Components**/
+import BodyCell from '../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
+import SideHeaderCenter from '../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeaderCenter';
+import SvgTypeDE from './svgSection/SvgTypeDE';
 /**Tailwind Styles**/
 import {
   horizGap,
   tableTextS,
-  aTopHeaderCell,
-  aSideHeaderCellCenter,
-  aBodyCell,
   aBlueHeaderStyle,
   aBlueCellStyle,
 } from '../../../../../../utils/tailwindStyles';
 /**TS**/
 import { IFProdCatDataSchuko } from '../../../../../../utils/TS/typeScriptStaff';
-import SvgTypeDE from './svgSection/SvgTypeDE';
+
 /**HardCoded Data**/
 const mainGrid = `grid grid-cols-[2fr_2fr_2fr_2fr]`;
 const headerGrid = `grid grid-cols-[2fr_6fr] `;
@@ -28,21 +29,16 @@ const CatalogTable: React.FunctionComponent<{
     >
       {catalogData.line1 ? (
         <div className={headerGrid}>
-          <div className={aTopHeaderCell}>{catalogData.line1.label} </div>
+          <SideHeaderCenter label={catalogData.line1.label} />
           <div>
             <SvgTypeDE />
           </div>
         </div>
       ) : null}
       <div className={mainGrid}>
-        {catalogData.line2 ? (
-          <>
-            <div className={`${aTopHeaderCell}`}>{catalogData.line2[0]} </div>
-            <div className={`${aTopHeaderCell}`}>{catalogData.line2[1]} </div>
-            <div className={`${aTopHeaderCell}`}>{catalogData.line2[2]} </div>
-          </>
-        ) : // </div>
-        null}
+        {catalogData.line2?.map((label, i) => (
+          <SideHeaderCenter key={i} label={label} />
+        ))}
         {catalogData.line3 ? (
           <div>
             <div className={`${aBlueHeaderStyle} flex-col h-full`}>
@@ -55,12 +51,12 @@ const CatalogTable: React.FunctionComponent<{
       <div className={mainGrid}>
         {catalogData.line4 ? (
           <>
-            <div className={aSideHeaderCellCenter}>{catalogData.line4[0]} </div>
+            <SideHeaderCenter label={catalogData.line4[0]} />
             <div className="group">
-              <div className={aBodyCell}>{catalogData.line4[1]} </div>
+              <BodyCell label={catalogData.line4[1]} />
             </div>
             <div className="group">
-              <div className={aBodyCell}>{catalogData.line4[2]} </div>
+              <BodyCell label={catalogData.line4[2]} />
             </div>
           </>
         ) : null}

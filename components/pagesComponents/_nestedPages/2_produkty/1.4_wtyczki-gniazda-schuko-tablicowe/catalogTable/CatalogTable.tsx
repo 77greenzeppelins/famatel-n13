@@ -6,7 +6,7 @@ import SvgTypeEU from '../../../../../SVG/flags/SvgTypeEU';
 import { IFProdCatDataSchukoTablicowe } from '../../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles**/
 import { horizGap } from '../../../../../../utils/tailwindStyles';
-import SideHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeader';
+import SideHeaderCenter from '../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeaderCenter';
 import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 
 /**HardCoded Data**/
@@ -26,7 +26,7 @@ const CatalogTable: React.FunctionComponent<{
     >
       {catalogData.line1 ? (
         <div className={mainGrid}>
-          <SideHeader label={catalogData.line1.label} />
+          <SideHeaderCenter label={catalogData.line1.label} />
           <div>
             {catalogData.line1?.value === 'PL' ? <SvgTypePl /> : <SvgTypeEU />}{' '}
           </div>
@@ -34,7 +34,7 @@ const CatalogTable: React.FunctionComponent<{
       ) : null}
       {catalogData.line2 ? (
         <div className={mainGrid}>
-          <SideHeader label={catalogData.line2.label} />
+          <SideHeaderCenter label={catalogData.line2.label} />
           <div>
             {catalogData.line2?.value === 'PL' ? <SvgTypePl /> : <SvgTypeEU />}{' '}
           </div>
@@ -44,6 +44,7 @@ const CatalogTable: React.FunctionComponent<{
         <div className={mainGrid}>
           <RowWithSideHeader
             rowData={[catalogData.line3.label, catalogData.line3.value]}
+            centered={true}
           />
         </div>
       ) : null}
@@ -51,6 +52,7 @@ const CatalogTable: React.FunctionComponent<{
         <div className={mainGrid}>
           <RowWithSideHeader
             rowData={[catalogData.line4.label, catalogData.line4.value]}
+            centered={true}
           />
         </div>
       ) : null}
@@ -58,6 +60,7 @@ const CatalogTable: React.FunctionComponent<{
         <div className={mainGrid}>
           <RowWithSideHeader
             rowData={[catalogData.line5.label, catalogData.line5.value]}
+            centered={true}
           />
         </div>
       ) : null}
@@ -65,6 +68,7 @@ const CatalogTable: React.FunctionComponent<{
         <div className={mainGrid}>
           <RowWithSideHeader
             rowData={[catalogData.line6.label, catalogData.line6.value]}
+            centered={true}
           />
         </div>
       ) : null}
