@@ -5,10 +5,9 @@ import BasicTableBody from './body/BasicTableBody';
 /**Tailwind Styles*/
 import { horizGap } from '../../../../utils/tailwindStyles';
 
-/**
- * used in: 8.1_obudowy-puste / TablesSection / ...
- *
- */
+/*
+used in: 9.1_puszki-zamykane / TablesSection / ...
+*/
 /**---------------------------------------------------------------------**/
 const BasicTable: React.FunctionComponent<{
   tableHeader?: string | string[];
@@ -21,30 +20,31 @@ const BasicTable: React.FunctionComponent<{
   multiCellsContainer?: string;
   headerContainerGrid?: string;
   multiCellsCell?: string[];
+  //___???
   specialCases?: {
     index: number;
     containerSpecialStyle: string;
     cellsSpecialStyles: string[];
   };
+  centerRowHeader?: boolean;
 }> = ({
   tableHeader,
   tableBodyData,
   multiCellsContainer,
-  headerContainerGrid,
+  // headerContainerGrid,
   multiCellsCell,
   specialCases,
+  centerRowHeader,
 }) => {
   return (
     <div className={`${horizGap}`}>
-      <BasicTableHeader
-        tableHeader={tableHeader}
-        headerContainerGrid={headerContainerGrid}
-      />{' '}
+      <BasicTableHeader tableHeader={tableHeader} />{' '}
       <BasicTableBody
         tableBodyData={tableBodyData}
         multiCellsContainer={multiCellsContainer}
         multiCellsCell={multiCellsCell}
         specialCases={specialCases}
+        centerRowHeader={centerRowHeader}
       />
     </div>
   );

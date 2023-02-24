@@ -1,13 +1,9 @@
 import React from 'react';
 /**Components**/
+import TopHeader from '../__cells/layoutXL/TopHeader';
 import TechSpecTableRow from './row/RowOfBasicTable2';
 /**Tailwind Styles**/
-import {
-  horizGap,
-  vertGap,
-  topHeaderCell,
-} from '../../../../utils/tailwindStyles';
-import TopHeader from '../__cells/layoutXL/TopHeader';
+import { horizGap } from '../../../../utils/tailwindStyles';
 
 /*
 used in: wtyczki-gniazda-campingowe / Layout1

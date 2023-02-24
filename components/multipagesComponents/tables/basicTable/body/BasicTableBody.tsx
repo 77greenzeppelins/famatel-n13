@@ -19,7 +19,14 @@ const BasicTableBody: React.FunctionComponent<{
     containerSpecialStyle: string;
     cellsSpecialStyles: string[];
   };
-}> = ({ tableBodyData, multiCellsContainer, multiCellsCell, specialCases }) => {
+  centerRowHeader?: boolean;
+}> = ({
+  tableBodyData,
+  multiCellsContainer,
+  multiCellsCell,
+  specialCases,
+  centerRowHeader,
+}) => {
   /**JSX**/
   return (
     <div className={`${horizGap}`}>
@@ -31,6 +38,7 @@ const BasicTableBody: React.FunctionComponent<{
           multiCellsContainer={multiCellsContainer}
           multiCellsCell={multiCellsCell}
           specialCases={specialCases}
+          centerRowHeader={centerRowHeader}
         />
       ))}
     </div>

@@ -1,13 +1,11 @@
 import React from 'react';
 /**Tailwind Styles*/
-import {
-  bodyCell,
-  horizGap,
-  sideHeaderCellCenter,
-  vertGap,
-} from '../../../../../../utils/tailwindStyles';
+import RowWithSideHeader from '../../../diyTable/rowWithSideHeader/RowWithSideHeader';
+import BodyCell from '../../../__cells/layoutXL/BodyCell';
+import SideHeaderCenter from '../../../__cells/layoutXL/SideHeaderCenter';
 /**HardCoded Data*/
-const basicGrid = `grid grid-cols-[1fr_1fr] ${vertGap}  group`;
+const basicGrid_2 = `grid grid-cols-[1fr_1fr] group`;
+const basicGrid_3 = `grid grid-cols-[1fr_1fr_1fr] group`;
 
 /**---------------------------------------------**/
 const BasicTableRow: React.FunctionComponent<{
@@ -26,59 +24,32 @@ const BasicTableRow: React.FunctionComponent<{
     containerSpecialStyle: string;
     cellsSpecialStyles: string[];
   };
-}> = ({
-  rowData,
-  multiCellsContainer,
-  multiCellsCell,
-  specialCases,
-  rowIndex,
-}) => {
+  specialGrid?: string;
+  centerRowHeader?: boolean;
+}> = ({ rowData, specialGrid, centerRowHeader }) => {
   /**Handler**/
   const createCells = () => {
-    if (!Array.isArray(rowData)) {
+    if (rowData && !Array.isArray(rowData)) {
       //___if rowData has type "{label: string, value: string}""
       return (
-        <div className={`grid grid-cols-[1fr_1fr] ${vertGap}  group`}>
-          <div className={sideHeaderCellCenter}>{rowData.label} </div>
-          <div className={bodyCell}> {rowData.value}</div>
-        </div>
-      );
-    } else {
-      return (
-        <div
-          className={
-            multiCellsContainer
-              ? multiCellsContainer
-              : `grid grid-cols-[1fr_1fr] ${vertGap} group`
-          }
-        >
-          {rowData.map((cell, index) => {
-            if (rowIndex === specialCases?.index) {
-              return (
-                <div
-                  key={index}
-                  className={
-                    specialCases.cellsSpecialStyles
-                      ? specialCases.cellsSpecialStyles[index]
-                      : 'relative header-link-label text-dark '
-                  }
-                >
-                  <p>{cell}</p>
-                </div>
-              );
-            }
-            return (
-              <div
-                key={index}
-                className={index === 0 ? sideHeaderCellCenter : bodyCell}
-              >
-                <p>{cell}</p>
-              </div>
-            );
-          })}
+        <div className={basicGrid_2}>
+          <SideHeaderCenter label={rowData.label} />
+          <BodyCell label={rowData.value} />
         </div>
       );
     }
+    if (rowData && rowData.length === 2) {
+      return (
+        <div className={basicGrid_2}>
+          <RowWithSideHeader rowData={rowData} centered={centerRowHeader} />{' '}
+        </div>
+      );
+    }
+    return (
+      <div className={specialGrid ? specialGrid : basicGrid_3}>
+        <RowWithSideHeader rowData={rowData} centered={centerRowHeader} />{' '}
+      </div>
+    );
   };
 
   /**JSX**/
@@ -86,6 +57,39 @@ const BasicTableRow: React.FunctionComponent<{
 };
 
 export default BasicTableRow;
+
+// <div
+//   className={
+//     multiCellsContainer
+//       ? multiCellsContainer
+//       : `grid grid-cols-[1fr_1fr] ${vertGap} group`
+//   }
+// >
+//   {rowData.map((cell, index) => {
+//     if (rowIndex === specialCases?.index) {
+//       return (
+//         <div
+//           key={index}
+//           className={
+//             specialCases.cellsSpecialStyles
+//               ? specialCases.cellsSpecialStyles[index]
+//               : 'relative header-link-label text-dark '
+//           }
+//         >
+//           <p>{cell}</p>
+//         </div>
+//       );
+//     }
+//     return (
+//       <div
+//         key={index}
+//         className={index === 0 ? sideHeaderCellCenter : bodyCell}
+//       >
+//         <p>{cell}</p>
+//       </div>
+//     );
+//   })}
+// </div>
 
 // cellsContainersStyle?: [
 //   'flex items-center h-full w-[50%] ',

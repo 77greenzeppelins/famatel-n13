@@ -3,7 +3,6 @@ import BodyCell from '../../__cells/layoutXL/BodyCell';
 import SideHeader from '../../__cells/layoutXL/SideHeader';
 /**
  * used in "wtyczki-gniazda-estradowe" / layoput_1 /
- *
  */
 /**-----------------------------------------------------**/
 const RowOfBasicTable2: React.FunctionComponent<{

@@ -2,7 +2,7 @@ import React from 'react';
 /**Router Staff**/
 import { useRouter } from 'next/router';
 /**Components**/
-import ProductContentLayout_B from '../__productContentLayout/ProductContentLayout_B';
+import ProductContentLayout_A from '../__productContentLayout/ProductContentLayout_A';
 import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import BasicIconsManager from '../../../../multipagesComponents/iconsManagers/basicIconsManager/BasicIconsManager';
 import TablesSection from './tablesSection/TablesSection';
@@ -57,7 +57,7 @@ const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
               <SectionContentLayout>
                 <BasicIconsManager svgIcons={svgIcons} />
               </SectionContentLayout>
-              <ProductContentLayout_B imageData={productImage}>
+              <ProductContentLayout_A imageData={productImage}>
                 <TablesSection
                   productIndex={index}
                   tableColumnsNumber={tableColumnsNumber}
@@ -80,7 +80,7 @@ const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
                   packageDetails={packageDetails}
                   norma={norma}
                 />
-              </ProductContentLayout_B>
+              </ProductContentLayout_A>
             </React.Fragment>
           );
         }

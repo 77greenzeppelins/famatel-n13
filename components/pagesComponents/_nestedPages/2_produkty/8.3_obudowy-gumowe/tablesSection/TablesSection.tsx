@@ -1,78 +1,69 @@
 import React from 'react';
 /**Components**/
-import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SmallPseudoHeader from '../../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
-// import BasicTable from '../../../../../multipagesComponents/tables/basicTable/BasicTable';
+import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
+import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
+import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
+import TopHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 /**Tailwind Styles*/
 import {
-  vertGap,
-  bodyCell,
-  sideHeaderCellCenter,
   undelinedTableTextStyle,
+  undelinedTableContainerStyle,
+  horizGap,
 } from '../../../../../../utils/tailwindStyles';
 
 /**Basic Data**/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
+
 /**----------------------------------**/
 const TablesSection: React.FunctionComponent<{
   tableHeader: string[];
   tableBody: string[][];
   features: string[][];
   norma: string[][];
-}> = ({ tableHeader, tableBody, features, norma }) => {
+  description: string[];
+}> = ({ tableHeader, tableBody, features, norma, description }) => {
   /**JSX**/
   return (
-    <div
-      data-component="TablesSection___container"
-      className="flex flex-col gap-10"
-    >
-      <SectionContentLayout divStyle="flex flex-col gap-y-4">
-        <SmallPseudoHeader
-          text={smallPseudoHeaders.l2}
-          hasBox={true}
-          hasVerticalOrnament={false}
-        />
-        {/* <BasicTable
-          tableHeader={tableHeader}
-          tableBodyData={tableBody}
-          multiCellsContainer={`grid grid-cols-[1fr_1fr]  ${vertGap} group`}
-          multiCellsCell={[sideHeaderCellCenter, bodyCell]}
-        /> */}
-      </SectionContentLayout>
+    <AllTablesContainer>
+      <SectionWithTable label={smallPseudoHeaders.l2}>
+        <div className={`flex flex-col ${horizGap} `}>
+          {typeof tableHeader === 'string' && <TopHeader label={tableHeader} />}
+          {tableBody?.map((rowData, i) => (
+            <div key={i} className="grid grid-cols-[repeat(2,1fr)] group">
+              <RowWithSideHeader rowData={rowData} centered={true} />
+            </div>
+          ))}
+        </div>
+      </SectionWithTable>
 
-      <SectionContentLayout divStyle="flex flex-col">
-        <SmallPseudoHeader
-          text={smallPseudoHeaders.l3}
-          hasBox={true}
-          hasVerticalOrnament={false}
-        />
+      <SectionWithTable label={smallPseudoHeaders.l3}>
         <TableWithUnderlinedRows
           rowsData={features}
-          tableContainerStyle="w-full flex flex-col gap-y-4 pt-4"
-          textStyle={[
-            undelinedTableTextStyle,
-            `${undelinedTableTextStyle} text-center`,
-          ]}
+          tableContainerStyle={undelinedTableContainerStyle}
+          cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+          textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
         />
-      </SectionContentLayout>
+      </SectionWithTable>
 
-      <SectionContentLayout divStyle="flex flex-col">
-        <SmallPseudoHeader
-          text={smallPseudoHeaders.l4}
-          hasBox={true}
-          hasVerticalOrnament={false}
-        />
+      <SectionWithTable label={smallPseudoHeaders.l4}>
         <TableWithUnderlinedRows
           rowsData={norma}
-          tableContainerStyle="w-full flex flex-col gap-y-4 pt-4"
-          textStyle={[
-            undelinedTableTextStyle,
-            `${undelinedTableTextStyle} text-center`,
-          ]}
+          tableContainerStyle={undelinedTableContainerStyle}
+          cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
+          textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
         />
-      </SectionContentLayout>
-    </div>
+      </SectionWithTable>
+      <SectionWithTable label={smallPseudoHeaders.l7}>
+        {description.map((desc, index) => (
+          <div key={index}>
+            <p className="p-small text-grey text-justify hover:text-light ease-in duration-300  ">
+              {desc}
+            </p>
+          </div>
+        ))}
+      </SectionWithTable>
+    </AllTablesContainer>
   );
 };
 
