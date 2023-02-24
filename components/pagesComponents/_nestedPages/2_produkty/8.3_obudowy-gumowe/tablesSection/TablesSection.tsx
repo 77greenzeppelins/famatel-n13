@@ -2,7 +2,7 @@ import React from 'react';
 /**Components**/
 import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import SmallPseudoHeader from '../../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
-import BasicTable from '../../../../../multipagesComponents/tables/basicTable/BasicTable';
+// import BasicTable from '../../../../../multipagesComponents/tables/basicTable/BasicTable';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 /**Tailwind Styles*/
 import {
@@ -33,12 +33,12 @@ const TablesSection: React.FunctionComponent<{
           hasBox={true}
           hasVerticalOrnament={false}
         />
-        <BasicTable
+        {/* <BasicTable
           tableHeader={tableHeader}
           tableBodyData={tableBody}
           multiCellsContainer={`grid grid-cols-[1fr_1fr]  ${vertGap} group`}
           multiCellsCell={[sideHeaderCellCenter, bodyCell]}
-        />
+        /> */}
       </SectionContentLayout>
 
       <SectionContentLayout divStyle="flex flex-col">
