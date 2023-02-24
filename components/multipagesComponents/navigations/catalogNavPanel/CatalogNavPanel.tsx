@@ -34,7 +34,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
               <p className="header-link-label text-grey disable-soft hidden xs:block">
                 /
               </p>
-              <div className="pl-8 xs:pl-0">
+              <div className="pl-7 xs:pl-0">
                 <Link href={urlsLevels[index]} scroll={false}>
                   <div className="flex items-center gap-x-2 md:gap-x-4 group">
                     <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300">
@@ -57,7 +57,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
             hasBox={true}
             hasVerticalOrnament={false}
           />
-          <div className="pl-8 ">
+          <div className="pl-7 ">
             <H1AnimatedPresence uniqueKey={0} text={lastLevelName} />
           </div>
         </>
