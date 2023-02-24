@@ -20,7 +20,10 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
   return (
     <SectionContentLayout>
       {namesLevels.map((name, index) => (
-        <div key={index} className="flex items-center gap-x-2 md:gap-x-4  ">
+        <div
+          key={index}
+          className="flex flex-col xs:flex-row  gap-x-2 md:gap-x-4  "
+        >
           <SmallPseudoHeader
             text={labels[index]}
             hasBox={true}
@@ -28,17 +31,21 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
           />
           {name && (
             <>
-              <p className="header-link-label text-grey disable-soft">/</p>
-              <Link href={urlsLevels[index]} scroll={false}>
-                <div className="flex items-center gap-x-2 md:gap-x-4 group">
-                  <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300">
-                    {name}
-                  </p>
-                  <div className="fc h-[16px] w-[16px]">
-                    <LinkWithArrowIcon containerStyle="fc h-[16px] w-[16px] stroke-grey group-hover:stroke-corpo ease-in duration-300 origin-center" />
+              <p className="header-link-label text-grey disable-soft hidden xs:block">
+                /
+              </p>
+              <div className="pl-8 xs:pl-0">
+                <Link href={urlsLevels[index]} scroll={false}>
+                  <div className="flex items-center gap-x-2 md:gap-x-4 group">
+                    <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300">
+                      {name}
+                    </p>
+                    <div className="fc h-[16px] w-[16px]">
+                      <LinkWithArrowIcon containerStyle="fc h-[16px] w-[16px] stroke-grey group-hover:stroke-corpo ease-in duration-300 origin-center" />
+                    </div>
                   </div>
-                </div>
-              </Link>{' '}
+                </Link>{' '}
+              </div>
             </>
           )}
         </div>
