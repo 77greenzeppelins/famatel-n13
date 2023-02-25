@@ -30,10 +30,10 @@ const GraphicSection: React.FunctionComponent<{
     >
       <div
         className={`relative`}
-        style={{
-          width: Math.min(width, screenHeight),
-          height: Math.min(width, screenHeight),
-        }}
+        // style={{
+        //   width: Math.min(width, screenHeight),
+        //   height: Math.min(width, screenHeight),
+        // }}
       >
         <ImageSection imageData={imgOFirmiePage[1]} />
         <AnimatedButton

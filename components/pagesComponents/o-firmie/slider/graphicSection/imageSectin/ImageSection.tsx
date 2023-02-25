@@ -13,14 +13,16 @@ const ImageSection: React.FunctionComponent<{
   return (
     <motion.div
       data-component="ImageSection__container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 0.4 } }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1, transition: { delay: 0.4 } }}
       className="relative fc w-full h-full "
     >
       <Image
         alt={imageAlt ? imageAlt : 'zdjęcie produktu'}
         src={imageData.image}
-        fill // intrinsic|fixed|responsive|fill allowed;  fill your parent bro! that is why I calculated width and height to make parent of square shape
+        width={1500}
+        height={1500}
+        // fill // intrinsic|fixed|responsive|fill allowed;  fill your parent bro! that is why I calculated width and height to make parent of square shape
       />
     </motion.div>
   );
