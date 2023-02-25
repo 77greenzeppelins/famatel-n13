@@ -26,22 +26,22 @@ const GraphicSection: React.FunctionComponent<{
     <motion.div
       ref={ref}
       data-component="GraphicSection-slide2__container"
-      className="flex justify-end w-[95%] md:w-[90%] xl:w-full h-full "
+      className="flex justify-end w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px]"
     >
       <div
-        className={`relative`}
+        className="relative"
         // style={{
         //   width: Math.min(width, screenHeight),
         //   height: Math.min(width, screenHeight),
         // }}
       >
         <ImageSection imageData={imgOFirmiePage[1]} />
-        <AnimatedButton
+        {/* <AnimatedButton
           onClick={() => {
             productDescriptionOpener(prev => !prev);
           }}
         />
-        <OverlaySection />
+        <OverlaySection /> */}
       </div>
     </motion.div>
   );

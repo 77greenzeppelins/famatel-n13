@@ -12,8 +12,9 @@ import { textSectionChildrenVariants } from '../../../../../../utils/framerMotio
 import { pagesUrl } from '../../../../../../data/_data';
 /**Hardcoded Data**/
 const headerTexts = [
-  'Technologia rozwijan od przeszło 30. lat',
-  'Rozwiązania udoskonalane od przeszło 30. lat',
+  'Bezpieczne rozwiązania',
+  // 'Technologia rozwijan od przeszło 30. lat',
+  // 'Rozwiązania udoskonalane od przeszło 30. lat',
 ];
 
 /**----------------------------------------------------------------------------------**/
@@ -37,7 +38,7 @@ const TextSectionContent: React.FunctionComponent<{ slideNumber: number }> = ({
         <SmallPseudoHeader text={headerTexts[0]} />
       </motion.div>
       <motion.div
-        className="flex justify-start items-end 0"
+        className="flex justify-start items-end"
         // className="w-[45%] h-[20%] bg-corpo"
         variants={textSectionChildrenVariants}
       >

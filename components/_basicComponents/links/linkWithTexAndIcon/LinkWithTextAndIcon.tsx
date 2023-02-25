@@ -36,10 +36,10 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
         >
           {pLabel}
         </p>
-        <LinkWithArrowIcon
+        {/* <LinkWithArrowIcon
           containerStyle="fc h-full aspect-square stroke-greyTint1 group-hover:stroke-corpo group-hover:translate-x-1 ease-in duration-300 scale-[0.75] origin-center"
           // pathStyle="scale-[0.75] origin-center "
-        />
+        /> */}
       </AriaJSLink>
     </div>
   );
