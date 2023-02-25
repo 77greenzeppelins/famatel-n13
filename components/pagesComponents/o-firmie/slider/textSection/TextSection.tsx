@@ -22,13 +22,14 @@ const TextSection: React.FunctionComponent<{
   return (
     <div
       data-component="TextSection__container"
-      className="relative w-full h-full  inner-px-md-lg pt-[62px]"
+      className="relative w-full"
+      //___inner-px-md-lg pt-[62px]
     >
       <AnimatePresence initial={true}>
-        {mountingCondition && (
+        {true && (
           <motion.div
             key={router.asPath}
-            className="flex justify-center gap-6 flex-col w-full h-full overflow-hidden"
+            className="flex justify-center gap-6 flex-col overflow-hidden"
             //___remember(!) to orchestrate parent-ancestor animations manes  "from / to / exit" should be in  parent-ancestor variants; ancestor doen't need to be a child...
             variants={textSectionContainerVariants}
             initial="from"

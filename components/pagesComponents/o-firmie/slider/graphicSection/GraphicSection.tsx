@@ -1,31 +1,39 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
 /**Component**/
-import SquareHolder from '../../../../multipagesComponents/holders/squareHolder/SquareHolder';
 import ImageSection from './imageSectin/ImageSection';
 import AnimatedButton from './animatedButton/AnimatedButton';
+import OverlaySection from './overlaySection/OverlaySection';
 /**Image Staff**/
 import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFirmiePage';
+/*Hook Staff*/
+import useMeasure from 'react-use-measure';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
-import OverlaySection from './overlaySection/OverlaySection';
+import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 
 /**-------------------------------------------------------------------**/
 const GraphicSection: React.FunctionComponent<{
   productDescriptionOpener: Dispatch<SetStateAction<boolean>>;
 }> = ({ productDescriptionOpener }) => {
+  /**Hook Section**/
+  const [ref, { width, height }] = useMeasure();
+
+  const { width: screenWidth, height: screenHeight } = useWindowSize({
+    screensNumber: 1,
+  });
   /**JSX**/
   return (
     <motion.div
+      ref={ref}
       data-component="GraphicSection-slide2__container"
-      // variants={variants}
-      // initial="initial"
-      // animate="animate"
-      className="w-full max-w-[800px] xxl:max-w-[1400px] h-full disable"
-      // onAnimationComplete={() => setSniperIsMounted(true)}
+      className="flex justify-end w-[95%] md:w-[90%] xl:w-full h-full "
     >
-      <SquareHolder
-        refDivStyle="flex justify-end items-center w-full h-full pb-[60px] md:pt-[30%]  lg:pb-0 lg:pt-[10%]"
-        squareDivStyle="relative overflow-hidden"
+      <div
+        className={`relative`}
+        style={{
+          width: Math.min(width, screenHeight),
+          height: Math.min(width, screenHeight),
+        }}
       >
         <ImageSection imageData={imgOFirmiePage[1]} />
         <AnimatedButton
@@ -34,7 +42,7 @@ const GraphicSection: React.FunctionComponent<{
           }}
         />
         <OverlaySection />
-      </SquareHolder>
+      </div>
     </motion.div>
   );
 };

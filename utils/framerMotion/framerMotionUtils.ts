@@ -6,7 +6,7 @@ const routingAnimation = {
     // x: 0,
     transition: {
       //   delay: 1,
-      duration: 0.4,
+      duration: 0.2,
     },
   },
   out: {
@@ -14,7 +14,8 @@ const routingAnimation = {
     // scale: 0.995,
     // x: 20,
     transition: {
-      duration: 0.4,
+      duration: 0.2,
+      // delay: 1,
     },
   },
 };

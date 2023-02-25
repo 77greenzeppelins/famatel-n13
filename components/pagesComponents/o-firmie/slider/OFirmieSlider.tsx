@@ -10,7 +10,7 @@ import useWindowSize from '../../../../utils/hooks/useWindowSize';
  */
 const mdMainContainer = 'md:flex-row';
 const mdGraphicContainer =
-  'md:justify-end md:w-[70%] md:h-[100%]  lg:h-[90%] xl:h-[100%] xxl:w-[96%] xxl:h-[100%]';
+  'md:justify-end md:w-[70%] md:h-[100%]  xl:h-[90%] xl:h-[100%] xxl:w-[96%] xxl:h-[100%]';
 
 /**----------------------------------------------------**/
 const OFirmieSlider: React.FunctionComponent<{
@@ -23,32 +23,23 @@ const OFirmieSlider: React.FunctionComponent<{
   setIsProductDescriptionOpen,
 }) => {
   /**Hook For Special Case*/
-  const { width, height } = useWindowSize({ screensNumber: 1 });
-  const layoutCondition_1 = height < 450 && width < 400;
-  const layoutCondition = height < 550;
+  // const { width, height } = useWindowSize({ screensNumber: 1 });
+  // const layoutCondition_1 = height < 450 && width < 400;
+  // const layoutCondition = height < 550;
   /**JSX**/
   return (
     <div
-      data-component="Slide2__container"
-      className={`flex flex-col-reverse w-full h-full ${mdMainContainer}`}
+      data-component="OFirmieSlider__container"
+      className={`flex flex-col-reverse w-full h-full xl:flex-row-reverse `}
     >
-      {!layoutCondition_1 && (
-        <div
-          className={`absolute bottom-0 right-0 flex w-full max-h-[1200px] h-[60%] sm:h-[65%] ${mdGraphicContainer} `}
-        >
-          <GraphicSection
-            productDescriptionOpener={setIsProductDescriptionOpen}
-          />
-        </div>
-      )}
-
       <div
-        className={`absolute ${
-          layoutCondition
-            ? 'bottom-0 h-full fc pb-[74px] scale-90 origin-left'
-            : 'top-0 h-[40%]'
-        }  left-0 flex w-full md:w-[70%] md:h-full pointer-events-none `}
+        className={`flex items-start justify-end w-full xl:w-[55%] xl:max-h-screen xs:-mt-20 lg:-mt-[140px] xl:mt-0`}
       >
+        <GraphicSection
+          productDescriptionOpener={setIsProductDescriptionOpen}
+        />
+      </div>
+      <div className="flex items-center inner-pl-md-lg pt-[62px] xl:pt-0 w-full xl:w-[45%] xl:max-h-screen">
         <TextSection
           isProductDescriptionOpen={isProductDescriptionOpen}
           slideNumber={slideNumber}

@@ -38,8 +38,6 @@ const SquareHolder: React.FunctionComponent<IF_SquareImageHolder> = ({
           squareDivStyle ? squareDivStyle : defaultSquareDivStyle
         } relative`}
         style={{
-          // width: width >= height ? height : width,
-          // height: height >= width ? width : height,
           width: Math.min(width, height),
           height: Math.min(width, height),
         }}
@@ -51,3 +49,6 @@ const SquareHolder: React.FunctionComponent<IF_SquareImageHolder> = ({
 };
 
 export default SquareHolder;
+
+// width: width >= height ? height : width,
+// height: height >= width ? width : height,

@@ -3,11 +3,9 @@ import React, { ReactNode, useState } from 'react';
 import { motion } from 'framer-motion';
 
 /**--------------------------------------------------------------------**/
-/**
- *
- * used in: OFirmieContent/>
- *
- */
+/*
+used in: OFirmieContent/>
+*/
 const FixedContainerWithEngine: React.FunctionComponent<{
   slideState: number;
   setSlideState: React.Dispatch<
@@ -111,9 +109,9 @@ const FixedContainerWithEngine: React.FunctionComponent<{
   return (
     <motion.div
       data-component="FixedContainerWithEngine__container"
-      /**
-       * "fixed" prevents from "resizing" when changing pages
-       */
+      /*
+      "fixed" prevents from "resizing" when changing pages
+      */
       className={
         containerStyle
           ? containerStyle

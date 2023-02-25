@@ -15,22 +15,23 @@ const haasFont = localFont({
  * ___1___
  * allowes to introduce font for all pages
  * ___2___
- * allowes general "layout-shift" between "display: fixed" & "display: flex" according to route.pathname"
+ * allowes general "layout-shift" between "display: fixed" & "display: flex" according to route.pathname"; 25.02.2023 quit this concept...
  */
 const MainHtmlElement: React.FunctionComponent<{
   children: React.ReactNode;
 }> = ({ children }) => {
   /**useRouter**/
   const route = useRouter();
-  const condition = route.pathname === '/';
+  // const condition = route.pathname === '/';
   //   console.log('condition:', condition);
 
   /**JSX**/
   return (
     <main
-      className={`${haasFont.className} ${
-        condition ? 'fixed' : 'flex'
-      } w-full h-full`}
+      // className={`${haasFont.className} ${
+      //   condition ? 'fixed' : 'flex'
+      // } w-full h-full`}
+      className={`${haasFont.className} flex w-full h-full`}
     >
       {children}
     </main>

@@ -15,7 +15,7 @@ const PageTransitionHolder: React.FunctionComponent<{
   return (
     <AnimatePresence
       // initial={false}
-      // exitBeforeEnter={true}
+      // exitBeforeEnter={true}//depricated
       mode="wait"
       onExitComplete={() => window.scrollTo(0, 0)}
     >

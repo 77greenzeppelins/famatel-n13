@@ -22,33 +22,45 @@ const OFirmieContent = () => {
 
   /**JSX**/
   return (
-    <FixedContainerWithEngine
-      slideState={slideState.number}
-      setSlideState={setSlideState}
-      timeoutFactor={timeoutFactor}
-      sectionsNumber={screensNumber}
-      isEngineActive={true}
+    <div
+      data-component="ProductPageTemplate__container"
+      className="flex flex-col w-screen min-h-screen pt-[60px] bg-dark pb-[10vh]"
     >
       <OFirmieSlider
         slideNumber={slideState.number}
         isProductDescriptionOpen={isProductDescriptionOpen}
         setIsProductDescriptionOpen={setIsProductDescriptionOpen}
       />
-      <NavPanel
-        slideNumber={slideState.number + 1}
-        setSlideState={setSlideState}
-        sectionsNumber={screensNumber}
-      />
-      <ProductDescriptionOverlay
-        currentIndex={slideState.number}
-        isPreviewOpen={isProductDescriptionOpen}
-        setIsProductDescriptionOpen={setIsProductDescriptionOpen}
-      />
-    </FixedContainerWithEngine>
+      <div className="h-[50vh]" />
+      <div className="fixed w-full h-[50px] top-0 bg-dark" />
+    </div>
   );
 };
 
 export default OFirmieContent;
+// <FixedContainerWithEngine
+//   slideState={slideState.number}
+//   setSlideState={setSlideState}
+//   timeoutFactor={timeoutFactor}
+//   sectionsNumber={screensNumber}
+//   isEngineActive={true}
+// >
+//   <OFirmieSlider
+//     slideNumber={slideState.number}
+//     isProductDescriptionOpen={isProductDescriptionOpen}
+//     setIsProductDescriptionOpen={setIsProductDescriptionOpen}
+//   />
+//   <NavPanel
+//     slideNumber={slideState.number + 1}
+//     setSlideState={setSlideState}
+//     sectionsNumber={screensNumber}
+//   />
+//   <ProductDescriptionOverlay
+//     currentIndex={slideState.number}
+//     isPreviewOpen={isProductDescriptionOpen}
+//     setIsProductDescriptionOpen={setIsProductDescriptionOpen}
+//   />
+// </FixedContainerWithEngine>
 
 {
   /* <div className="fc absolute top-0 left-0 right-0 bg-grey h-[75px] text-2xl">

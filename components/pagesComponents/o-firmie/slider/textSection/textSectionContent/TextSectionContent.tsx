@@ -27,9 +27,7 @@ const TextSectionContent: React.FunctionComponent<{ slideNumber: number }> = ({
   /**JSX**/
   return (
     <div
-      className={`flex flex-col justify-end items-start md:justify-center ${
-        layoutCondition ? 'md:pb-0 lg:pb-0' : 'md:pb-[50%] lg:pb-[20%] xl:pb-0'
-      } gap-6 w-full h-full`}
+      className={`flex flex-col justify-end items-start md:justify-center gap-6 w-full h-full`}
     >
       <motion.div
         className="flex justify-start items-end "
