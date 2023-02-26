@@ -2,8 +2,6 @@ import React from 'react';
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
 /**Basic Data**/
-// const categoryNameContainerStyle = 'h-[1rem] lg:h-[2rem] lg:h-[4.6rem] xxl:h-[6rem] ';
-// const categoryNameContainerStyle = '';
 const h1DefaultStyle = `text-light text-left 
     text-[2rem] md:text-[3rem] xl:text-[4rem] font-bold tracking-[2px] leading-tight`;
 //___leading-none, leading-tight, leading-snug
@@ -32,7 +30,7 @@ const H1Component: React.FunctionComponent<{
   return (
     <div
       // className={`${categoryNameContainerStyle} flex disable`}
-      className="flex disable"
+      className="flex disable-soft"
     >
       {hasDecoration ? (
         <div className="h-auto w-[10px] border-l border-corpo" />
