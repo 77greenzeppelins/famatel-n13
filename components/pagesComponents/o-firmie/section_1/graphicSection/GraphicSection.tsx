@@ -41,7 +41,7 @@ const GraphicSection: React.FunctionComponent<{
             productDescriptionOpener(prev => !prev);
           }}
         />
-        {/* <OverlaySection /> */}
+        <OverlaySection />
       </div>
     </motion.div>
   );
