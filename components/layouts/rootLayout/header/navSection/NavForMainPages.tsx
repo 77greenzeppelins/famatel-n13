@@ -30,7 +30,6 @@ const NavForMainPages: React.FunctionComponent = () => {
   const { width, height } = useWindowSize({
     screensNumber: totalHeight(pathname),
   });
-
   /**JSX*/
   return (
     <nav
@@ -40,27 +39,6 @@ const NavForMainPages: React.FunctionComponent = () => {
       {width > 768 ? (
         <ul className="hidden h-full md:flex ">
           {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
-            // if (arrayIndex === 2) {
-            //   return (
-            //     <NavLink
-            //       key={arrayIndex}
-            //       url={url}
-            //       label={`W: ${width}`}
-            //       hasDropDownMenu={hasDropDownMenu}
-            //     ></NavLink>
-            //   );
-            // }
-            // if (arrayIndex === 3) {
-            //   return (
-            //     <NavLink
-            //       key={arrayIndex}
-            //       url={url}
-            //       label={`H: ${height}`}
-            //       hasDropDownMenu={hasDropDownMenu}
-            //     ></NavLink>
-            //   );
-            // }
-
             return (
               <NavLink
                 key={arrayIndex}
@@ -84,3 +62,24 @@ const NavForMainPages: React.FunctionComponent = () => {
 };
 
 export default NavForMainPages;
+
+// if (arrayIndex === 2) {
+//   return (
+//     <NavLink
+//       key={arrayIndex}
+//       url={url}
+//       label={`W: ${width}`}
+//       hasDropDownMenu={hasDropDownMenu}
+//     ></NavLink>
+//   );
+// }
+// if (arrayIndex === 3) {
+//   return (
+//     <NavLink
+//       key={arrayIndex}
+//       url={url}
+//       label={`H: ${height}`}
+//       hasDropDownMenu={hasDropDownMenu}
+//     ></NavLink>
+//   );
+// }
