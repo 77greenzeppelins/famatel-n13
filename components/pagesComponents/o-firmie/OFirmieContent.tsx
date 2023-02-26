@@ -20,11 +20,11 @@ const OFirmieContent = () => {
       data-component="ProductPageTemplate__container"
       className="flex flex-col w-screen min-h-screen pt-[60px] bg-dark pb-[10vh]"
     >
-      {/* <Section_1
+      <Section_1
         slideNumber={slideState.number}
         isProductDescriptionOpen={isProductDescriptionOpen}
         setIsProductDescriptionOpen={setIsProductDescriptionOpen}
-      /> */}
+      />
       <div className="h-[50vh]" />
       <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>
