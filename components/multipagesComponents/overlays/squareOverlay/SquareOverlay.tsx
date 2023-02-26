@@ -33,10 +33,10 @@ const SquareOverlay: React.FunctionComponent<{
       variants={{}}
       ref={ref}
       data-component="SquareOverlay__container"
-      className={`relative grid ${gridStyle} w-full h-full pointer-events-none bg-vB`}
+      className={`relative grid ${gridStyle} w-full h-full pointer-events-none`}
       // onAnimationComplete={() => setSniperIsMounted(true)}
     >
-      {/* {Array.from({ length: itemsNumber }).map((_, i) => (
+      {Array.from({ length: itemsNumber }).map((_, i) => (
         <OverlayCell
           key={i}
           width={width / columns}
@@ -46,7 +46,7 @@ const SquareOverlay: React.FunctionComponent<{
           originOffset={originOffset}
           cellStyle={cellStyle}
         />
-      ))} */}
+      ))}
     </motion.div>
   );
 };
