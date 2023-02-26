@@ -3,7 +3,6 @@ import React from 'react';
 import NavLink from './navLink/NavLink';
 /**Basic Data*/
 import { mainPages } from '../../../../../data/_data';
-
 /**________temp*/
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 import { useRouter } from 'next/router';
@@ -41,26 +40,26 @@ const NavForMainPages: React.FunctionComponent = () => {
       {width > 768 ? (
         <ul className="hidden h-full md:flex ">
           {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
-            if (arrayIndex === 2) {
-              return (
-                <NavLink
-                  key={arrayIndex}
-                  url={url}
-                  label={`W: ${width}`}
-                  hasDropDownMenu={hasDropDownMenu}
-                ></NavLink>
-              );
-            }
-            if (arrayIndex === 3) {
-              return (
-                <NavLink
-                  key={arrayIndex}
-                  url={url}
-                  label={`H: ${height}`}
-                  hasDropDownMenu={hasDropDownMenu}
-                ></NavLink>
-              );
-            }
+            // if (arrayIndex === 2) {
+            //   return (
+            //     <NavLink
+            //       key={arrayIndex}
+            //       url={url}
+            //       label={`W: ${width}`}
+            //       hasDropDownMenu={hasDropDownMenu}
+            //     ></NavLink>
+            //   );
+            // }
+            // if (arrayIndex === 3) {
+            //   return (
+            //     <NavLink
+            //       key={arrayIndex}
+            //       url={url}
+            //       label={`H: ${height}`}
+            //       hasDropDownMenu={hasDropDownMenu}
+            //     ></NavLink>
+            //   );
+            // }
 
             return (
               <NavLink
@@ -73,7 +72,12 @@ const NavForMainPages: React.FunctionComponent = () => {
           })}
         </ul>
       ) : (
-        <p className="text-grey text-[0.75rem]">{`w:${width} / h: ${height}`}</p>
+        <div
+          className="flex justify-end w-[80px] 
+        Shade2"
+        >
+          <p className="text-grey text-[0.75rem]">{`w:${width} / h: ${height}`}</p>
+        </div>
       )}
     </nav>
   );
