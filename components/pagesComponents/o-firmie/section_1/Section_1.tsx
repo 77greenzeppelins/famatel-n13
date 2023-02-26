@@ -27,7 +27,10 @@ const Section_1: React.FunctionComponent<{
           productDescriptionOpener={setIsProductDescriptionOpen}
         />
       </div>
-      <div className="flex items-center inner-pl-md-lg pt-[62px] xl:h-screen xl:pt-0 w-full xl:w-[45%]">
+      <div
+        className="flex items-center w-full inner-pl-md-lg pt-[62px] xl:pt-0 xl:w-[45%]"
+        //___xl:h-screen
+      >
         <TextSection
           isProductDescriptionOpen={isProductDescriptionOpen}
           slideNumber={slideNumber}

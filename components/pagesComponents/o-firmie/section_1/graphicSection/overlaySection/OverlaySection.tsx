@@ -12,14 +12,14 @@ const cellStyle = '';
 const OverlaySection = () => {
   /**JSX**/
   return (
-    <div className="absolute inset-0 pointer-events-none bg-grey">
-      {/* <SquareOverlay
+    <div className="absolute inset-0 pointer-events-none ">
+      <SquareOverlay
         itemsNumber={cellsNumber}
         columns={columns}
         gridStyle={gridStyle}
         cellStyle={cellStyle}
         delayPerPixel={delayPerPixel}
-      /> */}
+      />
     </div>
   );
 };
