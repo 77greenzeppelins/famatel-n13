@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 // const categoryNameContainerStyle = 'h-[1rem] lg:h-[2rem] lg:h-[4.6rem] xxl:h-[6rem] ';
 // const categoryNameContainerStyle = '';
 const h1DefaultStyle = `text-light text-left 
-    text-[2rem] md:text-[2.5rem] xxl:text-[3rem] tracking-widest
-   `;
+    text-[2rem] md:text-[3rem] xl:text-[4rem] font-bold tracking-[2px] leading-tight`;
+//___leading-none, leading-tight, leading-snug
 
 /**-----------------------------------------------**/
 const H1Component: React.FunctionComponent<{

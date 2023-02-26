@@ -1,13 +1,11 @@
 import React from 'react';
 /**Components**/
 import TextSectionContent from './textSectionContent/TextSectionContent';
-/** */
+/**.....**/
 import { useRouter } from 'next/router';
 /**Framer Motion Staff**/
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { textSectionContainerVariants } from '../../../../../utils/framerMotion/framerMotionUtils';
-/**BasicData*/
-import { mainPages } from '../../../../../data/_data';
 
 /**----------------------------------------------------------**/
 const TextSection: React.FunctionComponent<{
@@ -16,8 +14,7 @@ const TextSection: React.FunctionComponent<{
 }> = ({ isProductDescriptionOpen, slideNumber }) => {
   /**Hook Section**/
   const router = useRouter();
-  /**Basic Data; **/
-  const mountingCondition = router.asPath === mainPages[0].url;
+
   /**JSX**/
   return (
     <div
@@ -25,8 +22,6 @@ const TextSection: React.FunctionComponent<{
       className="relative w-full"
       //___inner-px-md-lg pt-[62px]
     >
-      {/* <div className="w-full h-[100px] bg-corpo" /> */}
-      {/* <AnimatePresence initial={true}> */}
       <motion.div
         key={router.asPath}
         className="flex justify-center gap-6 flex-col overflow-hidden"
@@ -38,7 +33,6 @@ const TextSection: React.FunctionComponent<{
       >
         <TextSectionContent slideNumber={slideNumber} />
       </motion.div>
-      {/* </AnimatePresence> */}
     </div>
   );
 };

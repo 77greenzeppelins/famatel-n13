@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 /**Components**/
-import FixedContainerWithEngine from '../../layouts/pseudoLayouts/fixedContainerWithEngine/FixedContainerWithEngine';
-import OFirmieSlider from './slider/OFirmieSlider';
-import NavPanel from './navPanel/NavPanel';
-import ProductDescriptionOverlay from './_overlay/ProductDescriptionOverlay';
-/**Basic Data*/
-const screensNumber = 3;
-const timeoutFactor = 1000;
+import Section_1 from './section_1/Section_1';
 
 /**----------------------------------------------------------------**/
 const OFirmieContent = () => {
@@ -26,7 +20,7 @@ const OFirmieContent = () => {
       data-component="ProductPageTemplate__container"
       className="flex flex-col w-screen min-h-screen pt-[60px] bg-dark pb-[10vh]"
     >
-      <OFirmieSlider
+      <Section_1
         slideNumber={slideState.number}
         isProductDescriptionOpen={isProductDescriptionOpen}
         setIsProductDescriptionOpen={setIsProductDescriptionOpen}
