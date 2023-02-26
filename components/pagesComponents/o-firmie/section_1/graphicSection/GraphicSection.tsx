@@ -35,14 +35,13 @@ const GraphicSection: React.FunctionComponent<{
         //   height: Math.min(width, screenHeight),
         // }}
       >
-        {/* <div className="w-[1500px] h-[1500px] bg-greyShade2" /> */}
         <ImageSection imageData={imgOFirmiePage[1]} />
         <AnimatedButton
           onClick={() => {
             productDescriptionOpener(prev => !prev);
           }}
         />
-        <OverlaySection />
+        {/* <OverlaySection /> */}
       </div>
     </motion.div>
   );
