@@ -9,10 +9,8 @@ const textVariants = {
 
 /**------------------------------------------------------------------------------*/
 const SvgLogo = ({
-  scaleFactor,
   animationCondition = false,
 }: {
-  scaleFactor: number;
   animationCondition?: boolean;
 }) => {
   /**...WTF*/
@@ -25,8 +23,9 @@ const SvgLogo = ({
       role="img"
       aria-hidden="true"
       viewBox="0 0 164.042 37.999"
-      height={143.618 * scaleFactor}
-      width={620 * scaleFactor}
+      className="w-full h-full max-h-[36px]"
+      // height={143.618 * scaleFactor}
+      // width={620 * scaleFactor}
       // height={143.618}
       // width={620}
       xmlns="http://www.w3.org/2000/svg"

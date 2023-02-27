@@ -2,11 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 /**Components**/
 import CardFrame from '../__cardFrame/CardFrame';
-/**TS**/
-import { IF_Card } from '../../../../utils/TS/typeScriptStaff';
 import CardCounter from '../__cardCounter/CardCounter';
 import BasicCardMainSection from './mainSection/BasicCardMainSection';
-
+/**TS**/
+import { IF_Card } from '../../../../utils/TS/typeScriptStaff';
 /*
 used in: manu expanded menu / catalog....
 */
@@ -26,11 +25,11 @@ const Card_Basic: React.FunctionComponent<IF_Card> = ({
     >
       <Link href={url} scroll={false}>
         <CardFrame>
-          <div className="relative fc w-full h-full ">
-            <div className="w-[18%] h-[80%] ">
+          <div className="relative fc flex-col xs:flex-row w-full h-full ">
+            <div className="w-[25%] xxs:w-[15%] h-[30%] xs:w-[18%] xs:h-[80%] ">
               <CardCounter arrayIndex={arrayIndex} />
             </div>
-            <div className="w-[82%] h-full">
+            <div className="w-full h-[70%] xs:w-[82%] xs:h-full">
               <BasicCardMainSection
                 label={label}
                 imageData={imageData}

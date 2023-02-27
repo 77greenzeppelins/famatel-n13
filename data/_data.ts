@@ -161,10 +161,10 @@ const mainCategoriesSummaryData = {
     categoryIndex: 9,
     categoryNema: mainCategoriesNames[9],
   },
-  osprzetDomowy: {
-    categoryIndex: 10,
-    categoryNema: mainCategoriesNames[10],
-  },
+  // osprzetDomowy: {
+  //   categoryIndex: 10,
+  //   categoryNema: mainCategoriesNames[10],
+  // },
 };
 
 const splitedPathParts = {

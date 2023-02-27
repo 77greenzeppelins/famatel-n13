@@ -16,8 +16,9 @@ const BasicCardMainSection: React.FunctionComponent<{
   heightMattersCondition?: boolean;
 }> = ({ label, imageData, heightMattersCondition }) => {
   /**Hook Section; if not enough hight just get rid of images**/
-  const { height } = useWindowSize({ screensNumber: 1 });
-  const condition = height < minHeight && heightMattersCondition;
+  const { height, width } = useWindowSize({ screensNumber: 1 });
+  const condition =
+    (height < minHeight && heightMattersCondition) || width < 540;
 
   /**JSX**/
   return (
@@ -27,7 +28,10 @@ const BasicCardMainSection: React.FunctionComponent<{
         data-layout="TextSection__container"
         className={`fc ${condition ? 'h-full' : 'h-[45%]'}  w-full p-1 `}
       >
-        <p className="header-link-label text-grey text-center group-hover:text-light ease-in duration-300 ">
+        <p
+          // className="header-link-label text-grey text-center group-hover:text-light ease-in duration-300"
+          className="text-grey text-center text-[0.5rem] xs:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300 "
+        >
           {label}
         </p>
       </div>

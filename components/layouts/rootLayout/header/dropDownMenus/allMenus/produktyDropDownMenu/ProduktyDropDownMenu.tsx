@@ -3,6 +3,7 @@ import React from 'react';
 import Card_Basic from '../../../../../../multipagesComponents/cardsCatalogs/card_Basic/Card_Basic';
 /**BasicData**/
 import { catalogStructureData } from '../../../../../../../data/_catalogStructure_data';
+import SpecialCard from './specialCard/SpecialCard';
 
 /**---------------------------------------------------------------------------**/
 const ProduktyDropDownMenu: React.FunctionComponent = () => {
@@ -12,7 +13,8 @@ const ProduktyDropDownMenu: React.FunctionComponent = () => {
   return (
     <div
       id="ProduktyDropDownMenu__griddedContainer"
-      className="grid grid-rows-3 grid-cols-4 w-[100vw] h-[100%] pt-[24px] pb-[4rem] px-[0.5rem] gap-[0.75rem] place-items-stretch bg-dark"
+      className="grid grid-rows-4 grid-cols-3  xs:grid-rows-3 xs:grid-cols-4 w-[100vw] h-[100%] pt-[24px] pb-[4rem] px-[1rem] gap-[0.75rem]"
+      //___place-items-stretch
     >
       {catalogStructureData.map(
         ({
@@ -31,6 +33,10 @@ const ProduktyDropDownMenu: React.FunctionComponent = () => {
           />
         )
       )}
+
+      <div className="col-start-2 xs:col-start-3 col-span-full ">
+        <SpecialCard />
+      </div>
     </div>
   );
 };

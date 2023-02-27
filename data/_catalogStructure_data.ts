@@ -352,17 +352,17 @@ const catalogStructureData: IF_CatalogStructureData[] = [
     // labeledIcons: [''],
   },
   //_____category__11
-  {
-    mainCategoryIndex: 10,
-    mainCategoryName: mainCategoriesNames[10],
-    mainCategoryUrl: `${pagesUrl.produkty}/${mainCatPat[10]}`,
-    mainCategoryImage: imgMainCategories[10],
-    subCategoriesNames: [...osprzetDomowySubCategoryNames],
-    subCategoriesUrls: [...osprzetDomowySubCategoryUrls],
-    imageData: imgSubCategoryCatalogs[10], //___fake
-    svgIcons: ['IP65', 'IK08', 'FREE', 'UV', 'IZO', 'MODR'],
-    labeledIcons: ['16A', '32A'],
-  },
+  // {
+  //   mainCategoryIndex: 10,
+  //   mainCategoryName: mainCategoriesNames[10],
+  //   mainCategoryUrl: `${pagesUrl.produkty}/${mainCatPat[10]}`,
+  //   mainCategoryImage: imgMainCategories[10],
+  //   subCategoriesNames: [...osprzetDomowySubCategoryNames],
+  //   subCategoriesUrls: [...osprzetDomowySubCategoryUrls],
+  //   imageData: imgSubCategoryCatalogs[10], //___fake
+  //   svgIcons: ['IP65', 'IK08', 'FREE', 'UV', 'IZO', 'MODR'],
+  //   labeledIcons: ['16A', '32A'],
+  // },
 ];
 
 export { catalogStructureData };

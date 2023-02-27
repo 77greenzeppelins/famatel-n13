@@ -45,9 +45,9 @@ const NavForMainPages: React.FunctionComponent = () => {
             })}
           </ul>
         );
-      case screenWidth > 768 && screenWidth < 1024:
+      case screenWidth > 540:
         return (
-          <ul className="hidden h-full md:flex ">
+          <ul className=" h-full flex ">
             <NavLink
               url={mainPages[1].url}
               label={mainPages[1].label}
@@ -55,9 +55,9 @@ const NavForMainPages: React.FunctionComponent = () => {
             ></NavLink>
           </ul>
         );
-      case screenWidth < 768:
+      case screenWidth < 540:
         return (
-          <div className="flex gap-4">
+          <div className="flex items-center h-full gap-4">
             <ul className="h-full flex">
               <NavLink
                 url={mainPages[1].url}
@@ -66,6 +66,16 @@ const NavForMainPages: React.FunctionComponent = () => {
               ></NavLink>
             </ul>
             <div className="w-4 h-4 bg-vY" />
+            {/* <div className=" h-[80%] aspect-1 md:hidden ">
+            </div> */}
+          </div>
+        );
+      case screenWidth < 300:
+        return (
+          <div className="flex">
+            <div className="w-4 h-4 bg-vY" />
+            {/* <div className=" h-[80%] aspect-1 md:hidden ">
+            </div> */}
           </div>
         );
     }
@@ -77,8 +87,8 @@ const NavForMainPages: React.FunctionComponent = () => {
   /**JSX*/
   return (
     <nav
-      className="h-full pt-2"
-      //___why "pt-2"? to break "center-y-alignment"...
+      className="h-full "
+      //___pt-2 // why "pt-2"? to break "center-y-alignment"...
     >
       {createContent(width)}
     </nav>

@@ -23,7 +23,7 @@ const HeaderLogoLink = () => {
       aStyle="relative cursor-pointer fc bg-transparent select-none touch-none focus:outline-none group "
     >
       <div className="flex justify-start cursor-pointer no-sparkling">
-        <SvgLogo scaleFactor={0.25} animationCondition={condition} />
+        <SvgLogo animationCondition={condition} />
       </div>
     </AriaJSLink>
   );

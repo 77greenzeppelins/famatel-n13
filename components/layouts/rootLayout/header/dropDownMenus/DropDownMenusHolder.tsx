@@ -51,9 +51,9 @@ const DropDownMenusHolder = ({
             exit="initial"
           >
             {dropDownMenusArray.map(({ id, Component }) => {
-              console.log('isHovered', isHovered);
-              console.log('hasDropDownMenu', hasDropDownMenu);
-              console.log(`label: ${label} ;  id: ${id}`);
+              // console.log('isHovered', isHovered);
+              // console.log('hasDropDownMenu', hasDropDownMenu);
+              // console.log(`label: ${label} ;  id: ${id}`);
               if (label === id) {
                 // console.log('label id', `${label} ;  ${id}`);
                 return (
