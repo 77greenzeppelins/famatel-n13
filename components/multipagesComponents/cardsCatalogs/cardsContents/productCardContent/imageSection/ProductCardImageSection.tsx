@@ -58,9 +58,9 @@ const ProductCardImageSection: React.FunctionComponent<{
         />
       </div>
       <motion.div
-        className="absolute inset-0 "
+        className="absolute inset-0 bg-dark"
         animate={{ opacity: state ? 0 : 1 }}
-        transition={{ delay: 2, duration: 0.6, ease: 'easeIn' }}
+        transition={{ delay: 0.4, duration: 0.6, ease: 'easeIn' }}
       />
     </motion.div>
   );
