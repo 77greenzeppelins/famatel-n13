@@ -25,8 +25,7 @@ const DropDownMenusHolder = ({
   // const specialCondition = pathname !== mainPages[1].url;
   const specialCondition = true;
 
-  const styleCondition =
-    pathname === pagesUrl.kontakt || pathname === pagesUrl.kontakt;
+  const styleCondition = pathname === pagesUrl.kontakt;
 
   /**...WTF...**/
   // console.log('isHovered', isHovered);
@@ -44,7 +43,9 @@ const DropDownMenusHolder = ({
           <motion.div
             id="DropDownMenusHolder__container"
             key={label}
-            className="fc "
+            className={`fc w-screen h-screen ${
+              styleCondition ? 'bg-light' : 'bg-dark'
+            } `}
             variants={overlayContainerVariants}
             animate="animate"
             initial="initial"
@@ -60,7 +61,7 @@ const DropDownMenusHolder = ({
                   <React.Fragment key={id}>
                     {specialCondition && (
                       <div
-                        className={`w-screen h-screen fc ${
+                        className={`w-[98%] h-[90%] fc ${
                           styleCondition ? 'bg-light' : 'bg-dark'
                         } `}
                       >

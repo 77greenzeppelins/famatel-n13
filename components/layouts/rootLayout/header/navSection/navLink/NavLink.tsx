@@ -80,7 +80,7 @@ const NavLink: React.FunctionComponent<{
       >
         <div
           data-layout="wrapper_for_DropDownMenuHolder"
-          className="fixed left-0 right-0 top-[50px] bottom-[1px]"
+          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] bg-corpo"
         >
           <DropDownMenusHolder
             isHovered={hovererState.isHovered}
