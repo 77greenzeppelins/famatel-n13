@@ -61,7 +61,7 @@ const DropDownMenusHolder = ({
                   <React.Fragment key={id}>
                     {specialCondition && (
                       <div
-                        className={`w-[98%] h-[90%] fc ${
+                        className={`w-[98%] h-[80%] xl:h-[90%] fc ${
                           styleCondition ? 'bg-light' : 'bg-dark'
                         } `}
                       >

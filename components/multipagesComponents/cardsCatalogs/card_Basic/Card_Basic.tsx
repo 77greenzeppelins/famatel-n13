@@ -26,10 +26,10 @@ const Card_Basic: React.FunctionComponent<IF_Card> = ({
       <Link href={url} scroll={false}>
         <CardFrame>
           <div className="relative fc flex-col xs:flex-row w-full h-full ">
-            <div className="w-[25%] xxs:w-[15%] h-[30%] xs:w-[18%] xs:h-[80%] ">
+            <div className="fc w-full h-[40%] xs:w-[18%] xs:h-[80%]">
               <CardCounter arrayIndex={arrayIndex} />
             </div>
-            <div className="w-full h-[70%] xs:w-[82%] xs:h-full">
+            <div className="w-full h-[60%] xs:w-[82%] xs:h-full">
               <BasicCardMainSection
                 label={label}
                 imageData={imageData}

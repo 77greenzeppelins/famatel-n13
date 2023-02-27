@@ -4,6 +4,7 @@ import NavForMainPages from './navSection/NavForMainPages';
 /*FramerMotion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import MobileMenuOverlay from '../../../multipagesComponents/mobileMenu/mobileMenuOverlay/MobileMenuOverlay';
 /*Basic Data*/
 
 /******************************************************************************/
@@ -47,18 +48,10 @@ const Header = () => {
         </div>
       </div>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            key={isMobileMenuOpen.toString()}
-            data-layout="wrapper_for_DropDownMenuHolder"
-            className="fixed left-0 right-0 top-[50px] bottom-[10vh] -z-[5]"
-            animate={{ opacity: isMobileMenuOpen ? 1 : 0 }}
-          >
-            <div className="w-full h-full bg-vY" />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <MobileMenuOverlay
+        isMobileMenuOpen={isMobileMenuOpen}
+        mobileMenuOpener={setIsMobileMenuOpen}
+      />
     </header>
   );
 };

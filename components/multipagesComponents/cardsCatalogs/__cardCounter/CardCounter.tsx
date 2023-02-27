@@ -1,7 +1,7 @@
 import React from 'react';
 /**Hardcoded Data**/
 const containerDefaultStyle =
-  'fc border-r border-light w-full h-full  p-[0.25rem] opacity-70 group-hover:opacity-100 ease-in duration-300';
+  'fc border-r border-light w-full max-w-[30px] md:max-w-[50px] h-full p-[0.25rem] opacity-70 group-hover:opacity-100 ease-in duration-300';
 const textDefaultStyle =
   'text-light text-center text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal ';
 /**-------------------------------------------------------------------------------**/
