@@ -14,7 +14,8 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <div className="fc flex-col w-screen min-h-screen bg-dark">
       <CategoryPageTemplate
-        mainCategoryIndex={catalogStructureData[10].mainCategoryIndex}
+        //___should be 10 /
+        mainCategoryIndex={catalogStructureData[9].mainCategoryIndex}
       />
     </div>
   );
