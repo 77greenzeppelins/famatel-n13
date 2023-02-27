@@ -31,8 +31,6 @@ const NavForMainPages: React.FunctionComponent = () => {
     // console.log('width', width);
     switch (true) {
       case screenWidth > 1024:
-        console.log('........width 1024');
-        // break;
         return (
           <ul className="hidden h-full md:flex ">
             {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
@@ -48,8 +46,6 @@ const NavForMainPages: React.FunctionComponent = () => {
           </ul>
         );
       case screenWidth > 768 && screenWidth < 1024:
-        console.log('........screenWidth > 768 && screenWidth < 1024');
-        // break;
         return (
           <ul className="hidden h-full md:flex ">
             <NavLink
@@ -60,9 +56,18 @@ const NavForMainPages: React.FunctionComponent = () => {
           </ul>
         );
       case screenWidth < 768:
-        console.log('........width < 768');
-        // break;
-        return <div className="w-4 h-4 bg-vY" />;
+        return (
+          <div className="flex gap-4">
+            <ul className="h-full flex">
+              <NavLink
+                url={mainPages[1].url}
+                label={mainPages[1].label}
+                hasDropDownMenu={mainPages[1].hasDropDownMenu}
+              ></NavLink>
+            </ul>
+            <div className="w-4 h-4 bg-vY" />
+          </div>
+        );
     }
   };
 

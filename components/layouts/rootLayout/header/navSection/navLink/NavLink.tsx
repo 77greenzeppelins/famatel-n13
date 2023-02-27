@@ -60,7 +60,6 @@ const NavLink: React.FunctionComponent<{
       label: target.id,
     }));
   };
-
   /**It allowes to close dropdownMenu when url changes*/
   useEffect(() => {
     return () => {
@@ -68,9 +67,6 @@ const NavLink: React.FunctionComponent<{
       setIsClicked(false);
     };
   }, [router.asPath]);
-
-  // console.log('linkStyleisHovered', linkStyleisHovered);
-  // console.log('label / url', { label, url });
 
   /**JSX*/
   return (
@@ -125,7 +121,7 @@ const NavLink: React.FunctionComponent<{
       {hasDropDownMenu ? (
         <motion.button
           onClick={onClickHandler}
-          className="fc origin-center w-6 "
+          className="fc origin-center w-6"
           animate={{
             rotateX: isClicked ? 180 : 0,
             // scale: isClicked ? [0, 0, 1] : [0, 0, 1],
