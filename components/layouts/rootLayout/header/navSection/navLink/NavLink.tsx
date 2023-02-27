@@ -54,13 +54,18 @@ const NavLink: React.FunctionComponent<{
     // console.log('event', event);
     target.id = label;
     setIsClicked(prev => !prev);
-    setHoverState({ isHovered: true, label: target.id });
+    setHoverState(prevState => ({
+      ...prevState,
+      isHovered: !prevState.isHovered,
+      label: target.id,
+    }));
   };
 
   /**It allowes to close dropdownMenu when url changes*/
   useEffect(() => {
     return () => {
       setHoverState({ isHovered: false, label: '' });
+      setIsClicked(false);
     };
   }, [router.asPath]);
 
@@ -120,7 +125,7 @@ const NavLink: React.FunctionComponent<{
       {hasDropDownMenu ? (
         <motion.button
           onClick={onClickHandler}
-          className="fc origin-center"
+          className="fc origin-center w-6 "
           animate={{
             rotateX: isClicked ? 180 : 0,
             // scale: isClicked ? [0, 0, 1] : [0, 0, 1],
