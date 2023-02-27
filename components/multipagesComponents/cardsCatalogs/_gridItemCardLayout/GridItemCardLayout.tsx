@@ -12,7 +12,7 @@ const GridItemCardLayout: React.FunctionComponent<{
   return (
     <div
       id="ProductCard__container"
-      className="min-h-[220px] sm:h-[240px] cursor-pointer group select-none no-sparkling"
+      className="h-[220px] sm:h-[240px] cursor-pointer group select-none no-sparkling"
     >
       <Link href={linkHref} scroll={false}>
         <CardFrame>
