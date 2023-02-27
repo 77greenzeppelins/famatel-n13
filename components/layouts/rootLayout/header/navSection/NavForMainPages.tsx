@@ -11,24 +11,63 @@ import { useRouter } from 'next/router';
 const NavForMainPages: React.FunctionComponent = () => {
   /**_________Temp: Hook Section*/
 
-  const { pathname } = useRouter();
-  const totalHeight = (currentPath: string) => {
-    // console.log('currentPath:', currentPath);
-    // console.log('pathname:', pathname);
-    switch (currentPath) {
-      case mainPages[0].url:
-        return 1;
-        break;
-      case mainPages[1].url:
-        return 11;
-        break;
-      default:
-        return 1;
+  // const { pathname } = useRouter();
+  // const totalHeight = (currentPath: string) => {
+  //   // console.log('currentPath:', currentPath);
+  //   // console.log('pathname:', pathname);
+  //   switch (currentPath) {
+  //     case mainPages[0].url:
+  //       return 1;
+  //       break;
+  //     case mainPages[1].url:
+  //       return 11;
+  //       break;
+  //     default:
+  //       return 1;
+  //   }
+  // };
+
+  const createContent = (screenWidth: number) => {
+    // console.log('width', width);
+    switch (true) {
+      case screenWidth > 1024:
+        console.log('........width 1024');
+        // break;
+        return (
+          <ul className="hidden h-full md:flex ">
+            {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
+              return (
+                <NavLink
+                  key={arrayIndex}
+                  url={url}
+                  label={label}
+                  hasDropDownMenu={hasDropDownMenu}
+                ></NavLink>
+              );
+            })}
+          </ul>
+        );
+      case screenWidth > 768 && screenWidth < 1024:
+        console.log('........screenWidth > 768 && screenWidth < 1024');
+        // break;
+        return (
+          <ul className="hidden h-full md:flex ">
+            <NavLink
+              url={mainPages[1].url}
+              label={mainPages[1].label}
+              hasDropDownMenu={mainPages[1].hasDropDownMenu}
+            ></NavLink>
+          </ul>
+        );
+      case screenWidth < 768:
+        console.log('........width < 768');
+        // break;
+        return <div className="w-4 h-4 bg-vY" />;
     }
   };
 
-  const { width, height } = useWindowSize({
-    screensNumber: totalHeight(pathname),
+  const { width } = useWindowSize({
+    screensNumber: 1,
   });
   /**JSX*/
   return (
@@ -36,27 +75,7 @@ const NavForMainPages: React.FunctionComponent = () => {
       className="h-full pt-2"
       //___why "pt-2"? to break "center-y-alignment"...
     >
-      {width > 768 ? (
-        <ul className="hidden h-full md:flex ">
-          {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
-            return (
-              <NavLink
-                key={arrayIndex}
-                url={url}
-                label={label}
-                hasDropDownMenu={hasDropDownMenu}
-              ></NavLink>
-            );
-          })}
-        </ul>
-      ) : (
-        <div
-          className="flex justify-end w-[80px] 
-        Shade2"
-        >
-          <p className="text-grey text-[0.75rem]">{`w:${width} / h: ${height}`}</p>
-        </div>
-      )}
+      {createContent(width)}
     </nav>
   );
 };
@@ -83,3 +102,27 @@ export default NavForMainPages;
 //     ></NavLink>
 //   );
 // }
+
+{
+  /* {width > 1024 ? (
+        <ul className="hidden h-full md:flex ">
+          {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
+            return (
+              <NavLink
+                key={arrayIndex}
+                url={url}
+                label={label}
+                hasDropDownMenu={hasDropDownMenu}
+              ></NavLink>
+            );
+          })}
+        </ul>
+      ) : (
+        <div
+          className="flex justify-end w-[80px] 
+        Shade2"
+        >
+          <p className="text-grey text-[0.75rem]">{`w:${width} / h: ${height}`}</p>
+        </div>
+      )} */
+}

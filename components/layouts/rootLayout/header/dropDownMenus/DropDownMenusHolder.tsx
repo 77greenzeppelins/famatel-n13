@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { overlayContainerVariants } from '../../../../../utils/framerMotion/framerMotionUtils';
 /**Basic Data**/
 import { dropDownMenusArray } from './_dropDownMenusHolder_data';
-import { mainPages, pagesUrl } from '../../../../../data/_data';
+import { pagesUrl } from '../../../../../data/_data';
 
 /*******************************************************************************/
 const DropDownMenusHolder = ({
@@ -28,6 +28,10 @@ const DropDownMenusHolder = ({
   const styleCondition =
     pathname === pagesUrl.kontakt || pathname === pagesUrl.kontakt;
 
+  /**...WTF...**/
+  // console.log('isHovered', isHovered);
+  // console.log('hasDropDownMenu', hasDropDownMenu);
+
   /**JSX**/
   return (
     <>
@@ -47,7 +51,11 @@ const DropDownMenusHolder = ({
             exit="initial"
           >
             {dropDownMenusArray.map(({ id, Component }) => {
+              console.log('isHovered', isHovered);
+              console.log('hasDropDownMenu', hasDropDownMenu);
+              console.log(`label: ${label} ;  id: ${id}`);
               if (label === id) {
+                // console.log('label id', `${label} ;  ${id}`);
                 return (
                   <React.Fragment key={id}>
                     {specialCondition && (

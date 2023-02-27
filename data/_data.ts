@@ -80,12 +80,12 @@ const mainPages: IF_MainPagesItem[] = [
     url: pagesUrl.nowosci,
     hasDropDownMenu: false,
   },
-  {
-    arrayIndex: 3,
-    label: menuLinkLabel[3],
-    url: pagesUrl.realizacje,
-    hasDropDownMenu: false,
-  },
+  // {
+  //   arrayIndex: 3,
+  //   label: menuLinkLabel[3],
+  //   url: pagesUrl.realizacje,
+  //   hasDropDownMenu: false,
+  // },
   {
     arrayIndex: 4,
     label: menuLinkLabel[4],

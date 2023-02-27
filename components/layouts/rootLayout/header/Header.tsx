@@ -7,7 +7,6 @@ import NavForMainPages from './navSection/NavForMainPages';
 import { motion } from 'framer-motion';
 /*Basic Data*/
 import { mainPages } from '../../../../data/_data';
-import { tailwindStyles } from '../../../../data/_styleData';
 
 /******************************************************************************/
 const Header = () => {
@@ -19,13 +18,9 @@ const Header = () => {
   return (
     <header
       data-component="Header__container"
-      className={`fixed w-screen top-0 left-0 right-0  md:h-[50px] z-[500] `}
+      className={`fixed w-screen top-0 left-0 right-0 md:h-[50px] z-[500] `}
     >
-      <div
-        // className="h-full mx-auto px-[2%] md:px-[60px]"
-        // className={`${tailwindStyles.innerContainer} `}
-        className="h-full w-full inner-px-md-lg"
-      >
+      <div className="h-full w-full inner-px-md-lg">
         <div className="relative w-full h-full">
           {/* {condition ? null : ( */}
           <motion.div
