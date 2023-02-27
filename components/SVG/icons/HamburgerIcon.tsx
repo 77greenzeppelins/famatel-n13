@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { corpoColors } from '../../../data/_data';
 
 /***********************************************************************************/
-const XMarkIcon = ({
+const HamburgerIcon = ({
   containerStyle,
   strokeWidth = 1,
   pathStyle = '',
@@ -22,7 +22,7 @@ const XMarkIcon = ({
       viewBox="0 0 24 24"
       strokeWidth={strokeWidth}
       stroke={corpoColors.light}
-      className={containerStyle}
+      className={containerStyle ? containerStyle : 'origin-center'}
       whileHover={{ scale: 1.1 }}
       transition={{
         type: 'spring',
@@ -35,13 +35,13 @@ const XMarkIcon = ({
         className={pathStyle}
         strokeLinecap="round"
         strokeLinejoin="round"
-        d="M6 18L18 6M6 6l12 12"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
       />
     </motion.svg>
   );
 };
 
-export default XMarkIcon;
+export default HamburgerIcon;
 
 /*
 useCase__1; with bae icon, i.e. no text label:
@@ -49,4 +49,10 @@ useCase__1; with bae icon, i.e. no text label:
 containerStyle="fc h-full aspect-square stroke-greyTint1 group-hover:stroke-corpo group-hover:rotate-[0.9] ease-in duration-300 scale-[0.75] origin-center"
 //___group-hover:rotate-90
 />
+*/
+/*
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
 */

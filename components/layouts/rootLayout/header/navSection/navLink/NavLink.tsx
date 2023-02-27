@@ -40,7 +40,7 @@ const NavLink: React.FunctionComponent<{
   };
 
   const onHoverEndHandler = (event: MouseEvent) => {
-    console.log('.......onHoverEndHandler');
+    // console.log('.......onHoverEndHandler');
     if (!isClicked) {
       setHoverState({ isHovered: false, label: '' });
     }
@@ -48,7 +48,7 @@ const NavLink: React.FunctionComponent<{
 
   /**onClick Handler*/
   const onClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log('.........onClickHandler');
+    // console.log('.........onClickHandler');
     //___second param: info: EventInfo
     const target = event.target as HTMLButtonElement; //TS requirements
     // console.log('event', event);
@@ -121,7 +121,7 @@ const NavLink: React.FunctionComponent<{
       {hasDropDownMenu ? (
         <motion.button
           onClick={onClickHandler}
-          className="fc origin-center w-6"
+          className="fc origin-center w-6 no-sparkling"
           animate={{
             rotateX: isClicked ? 180 : 0,
             // scale: isClicked ? [0, 0, 1] : [0, 0, 1],

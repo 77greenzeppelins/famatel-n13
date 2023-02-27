@@ -1,17 +1,15 @@
-import { useRouter } from 'next/router';
 /*Components*/
 import HeaderLogoLink from './logoLink/HeaderLogoLink';
 import NavForMainPages from './navSection/NavForMainPages';
 /*FramerMotion Staff*/
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 /*Basic Data*/
-import { mainPages } from '../../../../data/_data';
 
 /******************************************************************************/
 const Header = () => {
   /**Hook Section*/
-  const router = useRouter();
-  const condition = router.pathname === mainPages[0].url;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   /**JSX*/
   return (
@@ -19,9 +17,8 @@ const Header = () => {
       data-component="Header__container"
       className={`fixed w-screen top-0 left-0 right-0 h-[50px] z-[500] `}
     >
-      <div className="h-full w-full inner-px-md-lg ">
+      <div className="h-full w-full inner-px-md-lg z-[10]">
         <div className="relative w-full h-full">
-          {/* {condition ? null : ( */}
           <motion.div
             className="absolute bottom-0 left-0 right-0 h-full border-b border-greyShade1"
             initial={{ width: '0%', opacity: 0 }}
@@ -31,7 +28,6 @@ const Header = () => {
               transition: { duration: 0.8 },
             }}
           />
-          {/* )} */}
 
           <motion.div
             className="flex items-center justify-between w-full h-full"
@@ -42,11 +38,27 @@ const Header = () => {
               <HeaderLogoLink />
             </div>
             <div className="flex items-center justify-end h-full w-full ">
-              <NavForMainPages />
+              <NavForMainPages
+                mobileMenuOpener={setIsMobileMenuOpen}
+                mobileMenuState={isMobileMenuOpen}
+              />
             </div>
           </motion.div>
         </div>
       </div>
+
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            key={isMobileMenuOpen.toString()}
+            data-layout="wrapper_for_DropDownMenuHolder"
+            className="fixed left-0 right-0 top-[50px] bottom-[10vh] -z-[5]"
+            animate={{ opacity: isMobileMenuOpen ? 1 : 0 }}
+          >
+            <div className="w-full h-full bg-vY" />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
