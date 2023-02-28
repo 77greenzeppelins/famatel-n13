@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 /**Components**/
-import FixedContainerWithEngine from '../../layouts/pseudoLayouts/fixedContainerWithEngine/FixedContainerWithEngine';
-import KategorieProduktowSlider from './slider/KategorieProduktowSlider';
+import Section_1 from './section_1/Section_1';
 /**Basic Data*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
-import Section_1 from './section_1/Section_1';
+
 const timeoutFactor = 1000;
 /**----------------------------------------------------------------------------------**/
 const KategorieProduktowContent = () => {
@@ -22,18 +21,8 @@ const KategorieProduktowContent = () => {
         setCategoryIndex={setCategoryIndex}
         categoriesNumber={catalogStructureData.length}
       />
-      {/* <div className="h-[50vh]" /> */}
       <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>
-    // <FixedContainerWithEngine
-    //   slideState={slideState.number}
-    //   setSlideState={setSlideState}
-    //   timeoutFactor={timeoutFactor}
-    //   sectionsNumber={catalogStructureData.length}
-    //   isEngineActive={true}
-    // >
-    //   <KategorieProduktowSlider currentCategory={slideState.number} />
-    // </FixedContainerWithEngine>
   );
 };
 

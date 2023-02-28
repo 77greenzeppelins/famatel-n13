@@ -1,4 +1,3 @@
-import { StaticImageData } from 'next/image';
 /**Images**/
 import img1 from './27002.webp';
 import img2 from './27008.webp';
