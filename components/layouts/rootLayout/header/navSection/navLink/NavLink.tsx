@@ -75,8 +75,8 @@ const NavLink: React.FunctionComponent<{
         data-component="NavLink_container"
         className="relative ml-6 fc"
         //___my-auto
-        onHoverStart={onHoverStartHandler}
-        onHoverEnd={onHoverEndHandler}
+        // onHoverStart={onHoverStartHandler}
+        // onHoverEnd={onHoverEndHandler}
       >
         <div
           data-layout="wrapper_for_DropDownMenuHolder"

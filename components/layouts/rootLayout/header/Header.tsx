@@ -2,7 +2,7 @@
 import HeaderLogoLink from './logoLink/HeaderLogoLink';
 import NavForMainPages from './navSection/NavForMainPages';
 /*FramerMotion Staff*/
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import MobileMenuOverlay from '../../../multipagesComponents/mobileMenu/mobileMenuOverlay/MobileMenuOverlay';
 /*Basic Data*/

@@ -76,13 +76,23 @@
     @apply px-[2%] xxs:px-[6%] md:px-[60px];
   }
   .inner-px-md-lg {
-    @apply px-[2%] xxs:px-[6%] md:px-[60px] lg:px-[100px];
+    @apply px-[2%] xxs:px-[6%] md:px-[60px] xl:px-[80px] xxl:px-[100px];
+  }
+  /*"inner-px-md-xl-xxl" should replace "inner-px-md-lg" */
+  .inner-px-md-xl-xxl {
+    @apply px-[2%] xxs:px-[6%] md:px-[60px] xl:px-[80px] xxl:px-[100px];
+  }
+  .inner-pl-md-xl-xxl {
+    @apply pl-[2%] xxs:pl-[6%] md:pl-[60px] xl:pl-[80px] xxl:pl-[100px];
+  }
+  .inner-pr-md-xl-xxl {
+    @apply pr-[2%] xxs:pr-[6%] md:pr-[60px] xl:pr-[80px] xxl:pr-[100px];
   }
   .inner-pl-md-lg {
-    @apply pl-[2%] xxs:pl-[6%] md:pl-[60px] lg:pl-[100px];
+    @apply pl-[2%] xxs:pl-[6%] md:pl-[60px] xl:pl-[80px];
   }
   .inner-pr-md-lg {
-    @apply pr-[2%] xxs:pr-[6%] md:pr-[60px] lg:pr-[100px];
+    @apply pr-[2%] xxs:pr-[6%] md:pr-[60px] xl:pr-[80px];
   }
   /**
   * size-settings for link label; no color setting 

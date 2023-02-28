@@ -63,7 +63,7 @@ const FixedContainerWithEngine: React.FunctionComponent<{
     //   console.log('<SectionContainer/> / setTimeout / event', event.deltaY);
 
     /**let's manipulate allPseudoScrollEventsState
-     *__1__above instructiuons are evaluated "immedietely"; so at this stage they are complete
+     *__1__above "if-instructions" are evaluated "immedietely"; so at this stage they are complete
      *__2__with "setAllPseudoScrollEventsState(false)" we disable wheeling
      *__3__with "setTimeout(...)" we specify when whilling would be active again
      *__4__with such setting "wheelvent" works as "time-base-switcher"

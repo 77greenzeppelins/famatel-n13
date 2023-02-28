@@ -24,23 +24,23 @@ const KategorieProduktowSlider: React.FunctionComponent<{
         isLandscape ? 'flex-row' : 'flex-col-reverse'
       }`}
     >
-      <div className="fc w-full h-full flex-3">
+      <div className="fc w-full h-full ">
         <TextSection
           currentCategory={currentCategory}
           setIsPreviewOpen={setIsPreviewOpen}
         />
       </div>
-      <div className="fc w-full h-full flex-2">
+      <div className="fc w-full h-full ">
         <GraphicSection
           currentCategory={currentCategory}
           isPreviewOpen={isPreviewOpen}
         />
       </div>
-      <CategoriesPreviewOverlay
+      {/* <CategoriesPreviewOverlay
         currentCategory={currentCategory}
         isPreviewOpen={isPreviewOpen}
         setIsPreviewOpen={setIsPreviewOpen}
-      />
+      /> */}
     </div>
   );
 };

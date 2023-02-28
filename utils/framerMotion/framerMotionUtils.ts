@@ -218,7 +218,6 @@ const textSectionChildrenVariants = {
 /**
  * used in cards to animate image's "white-containers": <BasicCardGraphicSection> & <ProductCardImageSection>
  */
-
 const cardVariants = {
   initial: { opacity: 0 },
   animate: {

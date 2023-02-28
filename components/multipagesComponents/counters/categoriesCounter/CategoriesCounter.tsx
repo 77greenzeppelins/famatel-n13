@@ -5,7 +5,6 @@ import useWindowSize from '../../../../utils/hooks/useWindowSize';
 import { AnimatePresence, motion } from 'framer-motion';
 import { opacityScaleYVariants } from '../../../../utils/framerMotion/framerMotionUtils';
 /**Basic Data*/
-// import { mainCategories } from '../../../../data/_data';
 
 import { catalogStructureData } from '../../../../data/_catalogStructure_data';
 
@@ -64,7 +63,7 @@ const CategoriesCounter: React.FunctionComponent<{
         }
       >
         <p className={digitStyle ? digitStyle : digitDefaultStyle}>
-          {catalogStructureData.length - 1}
+          {catalogStructureData.length}
         </p>
       </div>
     </div>
