@@ -5,7 +5,7 @@ import {
   overlayClosebuttonVariants,
   overlayVariants,
 } from '../../../../utils/framerMotion/framerMotionUtils';
-import CloseButton from '../../../pagesComponents/kategorie-produktow/slider/overlay/closeButton/CloseButton';
+// import CloseButton from '../../../pagesComponents/kategorie-produktow/slider/overlay/closeButton/CloseButton';
 /**Basic Data**/
 const defaultContainerStyle =
   'absolute flex flex-col inset-0 inner-px-md-lg pb-[60px] bg-dark';
@@ -50,7 +50,7 @@ const FullScreenOverlay: React.FunctionComponent<{
             }
             variants={overlayClosebuttonVariants}
           >
-            <CloseButton setIsPreviewOpen={setIsPreviewOpen} />
+            {/* <CloseButton setIsPreviewOpen={setIsPreviewOpen} /> */}
           </motion.div>
         </motion.div>
       )}
