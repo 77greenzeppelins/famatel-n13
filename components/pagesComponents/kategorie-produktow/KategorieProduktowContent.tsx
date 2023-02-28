@@ -15,13 +15,14 @@ const KategorieProduktowContent = () => {
   return (
     <div
       data-component="KategorieProduktowContent__container"
-      className="flex flex-col w-screen min-h-screen pt-[60px] lg:pt-[80px] pb-[10vh] bg-dark"
+      className="flex flex-col w-screen min-h-screen pt-[60px] pb-[10vh] bg-dark"
     >
       <Section_1
         categoryIndex={categoryIndex}
         setCategoryIndex={setCategoryIndex}
+        categoriesNumber={catalogStructureData.length}
       />
-      <div className="h-[50vh]" />
+      {/* <div className="h-[50vh]" /> */}
       <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>
     // <FixedContainerWithEngine

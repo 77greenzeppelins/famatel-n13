@@ -28,6 +28,12 @@ const imgLadowarkiSlides: IF[] = [
   { image: img3 },
   { image: img1 },
   { image: img1 },
+  { image: img3 },
+  { image: img3 },
+  { image: img2 },
+  { image: img2 },
+  { image: img1 },
+  { image: img1 },
 ];
 
 export { imgLadowarki, imgLadowarkiSlides };

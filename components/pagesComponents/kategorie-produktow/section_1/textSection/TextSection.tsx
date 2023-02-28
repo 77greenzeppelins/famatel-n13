@@ -9,47 +9,51 @@ import H1AnimatedPresence from '../../../../_basicComponents/componentH1/H1Anima
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 /**Basic Data**/
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
+import NavSection from '../navSection/NavSection';
 
 /**--------------------------------------------------------------------------------**/
 const TextSection: React.FunctionComponent<{
   //   setCategoryIndex;
   categoryIndex: number;
   setCategoryIndex: React.Dispatch<React.SetStateAction<number>>;
-}> = ({ categoryIndex, setCategoryIndex }) => {
+  categoriesNumber: number;
+}> = ({ categoryIndex, setCategoryIndex, categoriesNumber }) => {
   /**Hook Section**/
   //   const { isLandscape } = useWindowSize({ screensNumber: 1 });
 
   /**JSX**/
   return (
-    <div className="relative w-full h-full overflow-hidden">
-      <div className="flex justify-center gap-4 md:gap-10 w-full h-full flex-col py-2 ">
-        <div className="flex flex-col gap-4  ">
-          <div className="flex gap-x-4 w-full h-[40px]">
-            <SmallPseudoHeader
-              text="Kategoria produktów"
-              // containerStyle="pr-10"
-            />
+    <div className="relative flex gap-x-4 w-full h-full lg:flex-col  overflow-hidden ">
+      <div className="flex justify-center   w-full h-full flex-col py-2 ">
+        <div className="flex gap-x-4 w-full h-[40px] ">
+          <SmallPseudoHeader
+            text="Kategoria produktów"
+            // containerStyle="pr-10"
+          />
 
-            <CategoriesCounter
-              key={categoryIndex}
-              currentCategoryIndex={categoryIndex}
-              digitStyle="header-link-label text-grey"
-              digitContainerStyle="fc w-[20px]"
-            />
-          </div>
-          <div
-            className="flex items-center max-w-[750px] h-full disable-soft"
-            //___leading-8 xxl:leading-[2.75rem]
-          >
-            <H1AnimatedPresence
-              uniqueKey={categoryIndex}
-              text={catalogStructureData[categoryIndex].mainCategoryName}
-              // variantH="h2"
-            />
-          </div>
+          <CategoriesCounter
+            key={categoryIndex}
+            currentCategoryIndex={categoryIndex}
+            digitStyle="header-link-label text-grey"
+            digitContainerStyle="fc w-[20px]"
+          />
+        </div>
+        <div
+          className="flex items-center max-w-[750px] h-full xl:h-[240px] disable-soft "
+          //___leading-8 xxl:leading-[2.75rem]
+        >
+          <H1AnimatedPresence
+            uniqueKey={categoryIndex}
+            text={catalogStructureData[categoryIndex].mainCategoryName}
+            // variantH="h2"
+          />
         </div>
       </div>
-      {/* </div> */}
+      <NavSection
+        categoryIndex={categoryIndex}
+        setCategoryIndex={setCategoryIndex}
+        categoriesNumber={categoriesNumber}
+      />
     </div>
   );
 };

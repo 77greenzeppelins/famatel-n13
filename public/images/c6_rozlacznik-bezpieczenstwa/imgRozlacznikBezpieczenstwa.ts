@@ -25,6 +25,15 @@ const imgRozlacznikBezpieczenstwaSlides: IF[] = [
   { image: img1 },
   { image: img1 },
   { image: img1 },
+  { image: img1 },
+  { image: img1 },
+  { image: img1 },
+  { image: img1 },
+  { image: img1 },
+  { image: img1 },
+  { image: img1 },
+  { image: img1 },
+  { image: img1 },
 ];
 
 export { imgRozlacznikBezpieczenstwa, imgRozlacznikBezpieczenstwaSlides };

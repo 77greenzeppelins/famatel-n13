@@ -11,20 +11,41 @@ import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 /**...**/
 const imgGniazdaPodwieszane: IF_ImgStaticData[] = [
   { image: img1 },
+  { image: img1 },
+  { image: img2 },
   { image: img2 },
   { image: img3 },
+  { image: img3 },
   { image: img4 },
+  { image: img4 },
+  //___
+  { image: img4 },
+  { image: img4 },
+  { image: img3 },
+  { image: img3 },
+  { image: img2 },
+  { image: img2 },
+  { image: img1 },
+  { image: img1 },
 ];
-const imgGniazdaPodwieszaneFake: IF_ImgStaticData[] = [
+const imgGniazdaPodwieszaneSlides: IF_ImgStaticData[] = [
+  { image: img1 },
   { image: img1 },
   { image: img2 },
+  { image: img2 },
+  { image: img3 },
   { image: img3 },
   { image: img4 },
-  { image: img1 },
-  { image: img2 },
+  { image: img4 },
+  //___
+  { image: img4 },
+  { image: img4 },
   { image: img3 },
-  { image: img1 },
+  { image: img3 },
   { image: img2 },
+  { image: img2 },
+  { image: img1 },
+  { image: img1 },
 ];
 
-export { imgGniazdaPodwieszane, imgGniazdaPodwieszaneFake };
+export { imgGniazdaPodwieszane, imgGniazdaPodwieszaneSlides };
