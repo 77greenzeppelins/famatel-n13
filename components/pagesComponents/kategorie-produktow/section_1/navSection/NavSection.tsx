@@ -1,4 +1,6 @@
 import React from 'react';
+import { corpoColors } from '../../../../../data/_data';
+import CategoriesCounter from '../../../../multipagesComponents/counters/categoriesCounter/CategoriesCounter';
 import ChevronLeftIcon from '../../../../SVG/icons/ChevronLeftIcon';
 import ChevronRightIcon from '../../../../SVG/icons/ChevronRightIcon';
 import ArrowButton from '../../../../_basicComponents/buttons/arrowButton/ArrowButton';
@@ -18,24 +20,35 @@ const NavSection: React.FunctionComponent<{
   };
   /**JSX**/
   return (
-    <div className="flex justify-between flex-col lg:flex-row-reverse h-auto w-10 lg:w-full lg:h-10 xl:max-w-[300px]">
-      {/* <button onClick={nextCategory}>
-        <ChevronRightIcon className={`w-6 h-6`} />
-      </button> */}
-      {/* <button onClick={prevCategory}>
-        <ChevronLeftIcon className={`w-6 h-6`} />
-      </button> */}
+    <div
+      // className="flex justify-between flex-col lg:flex-row-reverse h-auto w-10 lg:w-full lg:h-10 xl:max-w-[300px]"
+      className="flex justify-between  max-w-[300px]"
+    >
       <ArrowButton
-        buttonStyle="focus:outline-none disable pointer-events-auto"
-        onClickHandler={nextCategory}
-      >
-        <ChevronRightIcon className={`w-6 h-6`} />
-      </ArrowButton>
-      <ArrowButton
-        buttonStyle="focus:outline-none disable pointer-events-auto"
+        buttonStyle="fc focus:outline-none disable pointer-events-auto w-8 h-8 border border-greyShade2"
         onClickHandler={prevCategory}
       >
-        <ChevronLeftIcon className={`w-6 h-6`} />
+        <ChevronLeftIcon
+          className={`w-6 h-6`}
+          strokeColor={corpoColors.grey}
+          scale={1.2}
+        />
+      </ArrowButton>
+      <CategoriesCounter
+        key={categoryIndex}
+        currentCategoryIndex={categoryIndex}
+        digitStyle="header-link-label text-grey"
+        digitContainerStyle="fc w-[20px]"
+      />
+      <ArrowButton
+        buttonStyle="fc focus:outline-none disable pointer-events-auto w-8 h-8 border border-greyShade2"
+        onClickHandler={nextCategory}
+      >
+        <ChevronRightIcon
+          className={`w-6 h-6`}
+          strokeColor={corpoColors.grey}
+          scale={1.2}
+        />
       </ArrowButton>
     </div>
   );

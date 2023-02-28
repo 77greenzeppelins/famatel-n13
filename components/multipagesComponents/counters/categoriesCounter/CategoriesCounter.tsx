@@ -26,7 +26,7 @@ const CategoriesCounter: React.FunctionComponent<{
 
   /**JSX**/
   return (
-    <div className="flex w-full disable">
+    <div className="flex disable">
       <div
         className={`${digitContainerStyle} ? ${digitContainerStyle} : ${digitContainerDefaultStyle}`}
       >

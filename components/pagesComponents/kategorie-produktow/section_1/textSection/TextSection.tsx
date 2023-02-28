@@ -24,22 +24,21 @@ const TextSection: React.FunctionComponent<{
   /**JSX**/
   return (
     <div className="relative flex gap-x-4 w-full h-full lg:flex-col  overflow-hidden ">
-      <div className="flex justify-center   w-full h-full flex-col py-2 ">
+      <div className="flex justify-center w-full h-full flex-col gap-8 ">
         <div className="flex gap-x-4 w-full h-[40px] ">
           <SmallPseudoHeader
-            text="Kategoria produktów"
-            // containerStyle="pr-10"
-          />
-
-          <CategoriesCounter
-            key={categoryIndex}
-            currentCategoryIndex={categoryIndex}
-            digitStyle="header-link-label text-grey"
-            digitContainerStyle="fc w-[20px]"
+            text="Kategorie produktów"
+            hasBox={true}
+            hasVerticalOrnament={false}
           />
         </div>
+        <NavSection
+          categoryIndex={categoryIndex}
+          setCategoryIndex={setCategoryIndex}
+          categoriesNumber={categoriesNumber}
+        />
         <div
-          className="flex items-center max-w-[750px] h-full xl:h-[240px] disable-soft "
+          className="flex items-start max-w-[750px] h-full xl:h-[240px] disable-soft "
           //___leading-8 xxl:leading-[2.75rem]
         >
           <H1AnimatedPresence
@@ -49,11 +48,11 @@ const TextSection: React.FunctionComponent<{
           />
         </div>
       </div>
-      <NavSection
+      {/* <NavSection
         categoryIndex={categoryIndex}
         setCategoryIndex={setCategoryIndex}
         categoriesNumber={categoriesNumber}
-      />
+      /> */}
     </div>
   );
 };

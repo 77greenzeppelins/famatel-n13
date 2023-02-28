@@ -8,10 +8,12 @@ const ChevronLeftIcon = ({
   className,
   strokeWidth = 1.5,
   strokeColor,
+  scale,
 }: {
   strokeWidth?: number;
   strokeColor?: string;
   className: string;
+  scale?: number;
 }) => {
   return (
     <motion.svg
@@ -23,9 +25,9 @@ const ChevronLeftIcon = ({
       className={className ? className : 'w-6 h-6'}
       // onHoverStart={e => { fill:'#9b59b6'}}
       // onHoverEnd={e => {}}
-      whileHover={{ scale: 1.05, stroke: '#e6530f' }}
+      whileHover={{ scale: scale ? scale : 1.05, stroke: '#e6530f' }}
       transition={{
-        default: { type: 'spring', stiffness: 400, damping: 10 },
+        default: { type: 'spring', stiffness: 400, damping: 10, delay: 0.1 },
         stroke: { duration: 0.3, ease: [0, 0.71, 0.2, 1.01] },
       }}
     >
