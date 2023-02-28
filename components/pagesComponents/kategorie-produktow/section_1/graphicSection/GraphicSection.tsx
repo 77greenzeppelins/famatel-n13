@@ -25,7 +25,7 @@ const GraphicSection: React.FunctionComponent<{
     <div className="relative w-full h-full overflow-hidden">
       <div className="absolute fc inset-0">
         <div
-          className={`h-full w-full disable `}
+          className={`h-full w-full disable-soft `}
           //___${isLandscape ? 'inner-pr-md-lg' : 'inner-px-md-lg'}
         >
           <div
