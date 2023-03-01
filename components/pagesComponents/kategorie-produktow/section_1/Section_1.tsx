@@ -12,7 +12,7 @@ const Section_1: React.FunctionComponent<{
   return (
     <div
       data-component="Section_1__container"
-      className="flex w-screen items-center flex-col  md:gap-y-10 inner-px-md-xl-xxl pt-[60px] xl:flex-row xl:pt-[80px] "
+      className="flex w-screen items-center flex-col gap-y-4 sm:gap-y-10 inner-px-md-xl-xxl pt-[60px] xl:flex-row xl:pt-[80px] "
       //___xl:min-h-screen
     >
       <div className="w-full xl:h-[440px] xl:w-[45%] xxl:w-[40%] xxl:pr-[50px] ">
