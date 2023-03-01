@@ -23,7 +23,7 @@ const KategorieProduktowContent = () => {
       />
 
       {/* <Section_2 /> */}
-      <div className="fixed w-full h-[50px] top-0 bg-dark" />
+      {/* <div className="fixed w-full h-[50px] top-0 bg-dark" /> */}
     </div>
   );
 };

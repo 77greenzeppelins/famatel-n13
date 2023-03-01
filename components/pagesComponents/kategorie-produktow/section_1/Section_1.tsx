@@ -12,7 +12,7 @@ const Section_1: React.FunctionComponent<{
   return (
     <div
       data-component="Section_1__container"
-      className="flex w-screen items-center flex-col gap-y-4 sm:gap-y-10 inner-px-md-xl-xxl pt-[60px] xl:flex-row xl:pt-[80px] "
+      className="flex w-screen items-center flex-col gap-y-0 xs:gap-y-4 sm:gap-y-10 inner-px-md-xl-xxl pt-[60px] xl:flex-row xl:pt-[80px] "
       //___xl:min-h-screen
     >
       <div className="w-full xl:h-[440px] xl:w-[45%] xxl:w-[40%] xxl:pr-[50px] ">
@@ -22,7 +22,10 @@ const Section_1: React.FunctionComponent<{
           categoriesNumber={categoriesNumber}
         />
       </div>
-      <div className="w-full xl:w-[55%]  xxl:w-[60%] h-[440px] ">
+      <div
+        className="w-full xl:w-[55%] xxl:w-[60%] h-[340px] xs:h-[440px]"
+        //___h-[440px]
+      >
         <GraphicSection categoryIndex={categoryIndex} isPreviewOpen={false} />
       </div>
     </div>

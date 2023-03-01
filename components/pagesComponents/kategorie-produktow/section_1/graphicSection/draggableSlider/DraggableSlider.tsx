@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 const largeCellSize = 200;
 const smallCellSize = 150;
 
-const minWidthForLargeCell = 500;
+const minWidthForLargeCell = 475.22;
 const minHeightForTwoLines = 300;
 
 /**-------------------------------------------------------**/

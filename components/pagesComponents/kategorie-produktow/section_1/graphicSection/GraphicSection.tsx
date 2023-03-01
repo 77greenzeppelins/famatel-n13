@@ -22,7 +22,7 @@ const GraphicSection: React.FunctionComponent<{
 
   /**JSX**/
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className="relative flex items-start w-full h-full overflow-hidden">
       <div className="absolute fc inset-0">
         <div
           className={`h-full w-full disable-soft `}
