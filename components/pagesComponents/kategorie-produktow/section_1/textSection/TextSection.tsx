@@ -38,7 +38,7 @@ const TextSection: React.FunctionComponent<{
           categoriesNumber={categoriesNumber}
         />
         <div
-          className="flex items-start max-w-[750px] h-full sm:h-[120px] md:h-[160px] xl:h-[240px] disable-soft"
+          className="flex items-start max-w-[750px] h-[120px] sm:h-[120px] md:h-[160px] xl:h-[240px] disable-soft "
           //___leading-8 xxl:leading-[2.75rem]
         >
           <H1AnimatedPresence

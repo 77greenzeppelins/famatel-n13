@@ -3,15 +3,15 @@ import React from 'react';
 import SvgLogo from '../../../../SVG/logo/SvgLogo';
 import AriaJSLink from '../../../../_basicComponents/links/ariaJSLink/AriaJSLink';
 /**Hook Section**/
-import { useRouter } from 'next/router';
-/**BasicData*/
-import { pagesUrl } from '../../../../../data/_data';
+// import { useRouter } from 'next/router';
+// /**BasicData*/
+// import { pagesUrl } from '../../../../../data/_data';
 
 /******************************************************************************/
 const HeaderLogoLink = () => {
   /**Staff for condition that switches between dark and lighr svgPath...*/
-  const { pathname } = useRouter();
-  const condition = pathname === pagesUrl.kontakt;
+  // const { pathname } = useRouter();
+  // const condition = pathname === pagesUrl.kontakt;
   /**JSX*/
   return (
     <AriaJSLink
@@ -23,7 +23,7 @@ const HeaderLogoLink = () => {
       aStyle="relative cursor-pointer fc bg-transparent select-none touch-none focus:outline-none group "
     >
       <div className="flex justify-start cursor-pointer no-sparkling">
-        <SvgLogo animationCondition={condition} />
+        <SvgLogo animationCondition={false} />
       </div>
     </AriaJSLink>
   );

@@ -4,6 +4,7 @@ import Section_1 from './section_1/Section_1';
 /**Basic Data*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
 import Section_2 from './section_2/Section_2';
+import SmallPseudoHeader from '../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 
 /**----------------------------------------------------------------------------------**/
 const KategorieProduktowContent = () => {
@@ -14,8 +15,18 @@ const KategorieProduktowContent = () => {
   return (
     <div
       data-component="KategorieProduktowContent__container"
-      className="flex flex-col w-screen min-h-screen pt-[60px] pb-[10vh] bg-dark"
+      className="flex flex-col justify-center w-screen min-h-screen  "
+      //___pt-[50px] pb-[10vh]
     >
+      {/* <div className="inner-px-md-xl-xxl flex justify-end h-[50px]">
+        <div className="fc w-[60%]">
+          <SmallPseudoHeader
+            text="Szybki podgląd kategorii"
+            hasBox={true}
+            hasVerticalOrnament={false}
+          />
+        </div>
+      </div> */}
       <Section_1
         categoryIndex={categoryIndex}
         setCategoryIndex={setCategoryIndex}
