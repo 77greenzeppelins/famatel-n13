@@ -10,8 +10,7 @@ import { textSectionContainerVariants } from '../../../../../utils/framerMotion/
 /**----------------------------------------------------------**/
 const TextSection: React.FunctionComponent<{
   isProductDescriptionOpen: boolean;
-  slideNumber: number;
-}> = ({ isProductDescriptionOpen, slideNumber }) => {
+}> = ({ isProductDescriptionOpen }) => {
   /**Hook Section**/
   const router = useRouter();
 
@@ -31,7 +30,7 @@ const TextSection: React.FunctionComponent<{
         animate="to"
         exit="exit"
       >
-        <TextSectionContent slideNumber={slideNumber} />
+        <TextSectionContent />
       </motion.div>
     </div>
   );

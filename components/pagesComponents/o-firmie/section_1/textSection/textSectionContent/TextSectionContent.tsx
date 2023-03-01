@@ -19,9 +19,7 @@ const headerTexts = [
 
 /**----------------------------------------------------------------------------------**/
 
-const TextSectionContent: React.FunctionComponent<{ slideNumber: number }> = ({
-  slideNumber,
-}) => {
+const TextSectionContent: React.FunctionComponent = () => {
   /**Hook For Special Case*/
   const { height } = useWindowSize({ screensNumber: 1 });
   const layoutCondition = height < 550;
@@ -42,7 +40,7 @@ const TextSectionContent: React.FunctionComponent<{ slideNumber: number }> = ({
         // className="w-[45%] h-[20%] bg-corpo"
         variants={textSectionChildrenVariants}
       >
-        <MainText slideNumber={slideNumber} />
+        <MainText />
       </motion.div>
       <motion.div className="fc " variants={textSectionChildrenVariants}>
         <LinkWithTextAndIcon

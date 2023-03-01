@@ -4,12 +4,6 @@ import Section_1 from './section_1/Section_1';
 
 /**----------------------------------------------------------------**/
 const OFirmieContent = () => {
-  /**LocalState; just to control slides **/
-  const [slideState, setSlideState] = useState<{
-    number: number;
-  }>({
-    number: 0,
-  });
   /**LocalState; just to open/close <ProductDescriptionOverlay> **/
   const [isProductDescriptionOpen, setIsProductDescriptionOpen] =
     useState(false);
@@ -18,15 +12,13 @@ const OFirmieContent = () => {
   return (
     <div
       data-component="ProductPageTemplate__container"
-      className="flex flex-col w-screen min-h-screen pt-[60px] bg-dark pb-[10vh]"
+      className="flex flex-col justify-center w-screen min-h-screen bg-dark "
+      //___pt-[60px]
     >
       <Section_1
-        slideNumber={slideState.number}
         isProductDescriptionOpen={isProductDescriptionOpen}
         setIsProductDescriptionOpen={setIsProductDescriptionOpen}
       />
-      <div className="h-[50vh]" />
-      <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>
   );
 };
