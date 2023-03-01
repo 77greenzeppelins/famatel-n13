@@ -61,26 +61,12 @@ const ImageContnent: React.FunctionComponent<{
                 ? categoryImages[slideIndex].image
                 : categoryImages[categoryImages.length - slideIndex].image
             }
-            fill // intrinsic|fixed|responsive|fill allowed;  fill your parent bro! that is why I calculated width and height to make parent of square shape
+            fill
+            sizes="400"
           />
-
           <div data-layout="someFakeContainer" className="absolute inset-0 " />
         </motion.div>
-        {/* <motion.div
-          data-layout="someFakeContainer"
-          className="absolute inset-0 bg-dark"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 0, transition: { delay: 0.2, duration: 0.4 } }}
-          exit={{ opacity: 1, transition: { duration: 0.4 } }}
-        /> */}
       </AnimatePresence>
-      {/* <motion.div
-        data-layout="someFakeContainer"
-        className="absolute inset-0 bg-dark"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0, transition: { delay: 0.2, duration: 0.2 } }}
-        exit={{ opacity: 1 }}
-      /> */}
     </div>
   );
 };

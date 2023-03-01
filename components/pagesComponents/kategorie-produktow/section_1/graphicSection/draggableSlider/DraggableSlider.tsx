@@ -6,11 +6,10 @@ import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
 /**Framer Motion Staff*/
 import { motion } from 'framer-motion';
 
-/**Basic Data**/
+/**HardCoded Staff**/
 const largeCellSize = 200;
 const smallCellSize = 150;
-
-const minWidthForLargeCell = 475.22;
+const minWidthForLargeCell = 475.22; //in relation with <Section_1> / <GraphisSection>'s container h-[340px] xs:h-[440px]
 const minHeightForTwoLines = 300;
 
 /**-------------------------------------------------------**/
@@ -56,7 +55,7 @@ const DraggableSlider: React.FunctionComponent<{
             //___just to follow category changes...
             currentCategory={currentCategory}
             //___just to specify slides...
-            slidesNumber={minNumberOfSlides + 4}
+            slidesNumber={minNumberOfSlides + 6}
             slideSide={slideSide}
             //___
             slidesLineIndex={i}

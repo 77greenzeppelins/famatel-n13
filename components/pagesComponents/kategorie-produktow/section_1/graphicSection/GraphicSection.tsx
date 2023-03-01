@@ -1,10 +1,9 @@
 import React from 'react';
+/**Components**/
+import DraggableSlider from './draggableSlider/DraggableSlider';
 /**Hook Staff**/
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 import useMeasure from 'react-use-measure';
-/**Framer Motion Staff*/
-import { AnimatePresence, motion } from 'framer-motion';
-import DraggableSlider from './draggableSlider/DraggableSlider';
 
 /**--------------------------------------------------------------------------------**/
 const GraphicSection: React.FunctionComponent<{
