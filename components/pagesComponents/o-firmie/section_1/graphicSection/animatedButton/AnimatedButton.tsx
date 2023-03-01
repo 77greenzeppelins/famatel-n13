@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 /**Components**/
 import AriaMotionButton from '../../../../../_basicComponents/buttons/ariaMotionButton/AriaMotionButton';
 import Sniper from '../../../../../_basicComponents/buttons/sniper/Sniper';
@@ -12,12 +12,13 @@ const delayForSniper = 3;
 /**--------------------------------------------------------**/
 const AnimatedButton: React.FunctionComponent<{
   onClick: React.MouseEventHandler<HTMLButtonElement>;
+  children?: ReactNode;
   sniperColor?: string;
-}> = ({ onClick, sniperColor }) => {
+}> = ({ onClick, sniperColor, children }) => {
   /**JSX**/
   return (
     <motion.div
-      className="absolute bottom-[21%] right-[44%] h-[50%] w-[55%] pointer-events-auto"
+      className="absolute bottom-[10%] right-[25%] h-[75%] w-[75%] pointer-events-auto"
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
@@ -31,6 +32,7 @@ const AnimatedButton: React.FunctionComponent<{
         onClick={onClick}
       >
         <Sniper color={sniperColor} />
+        {children}
       </AriaMotionButton>
     </motion.div>
   );

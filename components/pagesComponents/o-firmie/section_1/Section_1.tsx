@@ -20,13 +20,14 @@ const Section_1: React.FunctionComponent<{
       >
         <GraphicSection
           productDescriptionOpener={setIsProductDescriptionOpen}
+          isProductDescriptionOpen={isProductDescriptionOpen}
         />
       </div>
       <div
         className="flex items-center w-full inner-pl-md-lg pt-[62px] xs:pt-[120px] md:pt-[120px] lg:pt-[160px] xl:pt-0 xl:w-[45%] "
         //___xl:h-screen
       >
-        <TextSection isProductDescriptionOpen={isProductDescriptionOpen} />
+        <TextSection />
       </div>
     </div>
   );

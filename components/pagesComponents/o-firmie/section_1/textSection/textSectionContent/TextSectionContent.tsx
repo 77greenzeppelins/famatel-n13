@@ -33,7 +33,11 @@ const TextSectionContent: React.FunctionComponent = () => {
         // className="w-[45%] h-[20%] bg-corpo"
         variants={textSectionChildrenVariants}
       >
-        <SmallPseudoHeader text={headerTexts[0]} />
+        <SmallPseudoHeader
+          text={headerTexts[0]}
+          hasBox={true}
+          hasVerticalOrnament={false}
+        />
       </motion.div>
       <motion.div
         className="flex justify-start items-end"

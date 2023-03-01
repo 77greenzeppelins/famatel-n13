@@ -2,7 +2,7 @@ import React, { Dispatch, SetStateAction, useState } from 'react';
 /**Component**/
 import ImageSection from './imageSectin/ImageSection';
 import AnimatedButton from './animatedButton/AnimatedButton';
-import OverlaySection from './overlaySection/OverlaySection';
+import ProductPreview from './productPreview/ProductPreview';
 /**Image Staff**/
 import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFirmiePage';
 /*Hook Staff*/
@@ -13,8 +13,9 @@ import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 
 /**-------------------------------------------------------------------**/
 const GraphicSection: React.FunctionComponent<{
+  isProductDescriptionOpen: boolean;
   productDescriptionOpener: Dispatch<SetStateAction<boolean>>;
-}> = ({ productDescriptionOpener }) => {
+}> = ({ productDescriptionOpener, isProductDescriptionOpen }) => {
   /**Hook Section**/
   const [ref, { width, height }] = useMeasure();
 
@@ -40,7 +41,9 @@ const GraphicSection: React.FunctionComponent<{
           onClick={() => {
             productDescriptionOpener(prev => !prev);
           }}
-        />
+        >
+          <ProductPreview isProductDescriptionOpen={isProductDescriptionOpen} />
+        </AnimatedButton>
         {/* <OverlaySection /> */}
       </div>
     </motion.div>

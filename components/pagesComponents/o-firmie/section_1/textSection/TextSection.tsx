@@ -8,9 +8,7 @@ import { motion } from 'framer-motion';
 import { textSectionContainerVariants } from '../../../../../utils/framerMotion/framerMotionUtils';
 
 /**----------------------------------------------------------**/
-const TextSection: React.FunctionComponent<{
-  isProductDescriptionOpen: boolean;
-}> = ({ isProductDescriptionOpen }) => {
+const TextSection: React.FunctionComponent = () => {
   /**Hook Section**/
   const router = useRouter();
 
