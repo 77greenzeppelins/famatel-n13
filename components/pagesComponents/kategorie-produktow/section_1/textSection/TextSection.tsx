@@ -38,12 +38,14 @@ const TextSection: React.FunctionComponent<{
           categoriesNumber={categoriesNumber}
         />
         <div
-          className="flex items-start max-w-[750px] h-full xl:h-[240px] disable-soft "
+          className="flex items-start max-w-[750px] h-full sm:h-[120px] md:h-[160px] xl:h-[240px] disable-soft"
           //___leading-8 xxl:leading-[2.75rem]
         >
           <H1AnimatedPresence
             uniqueKey={categoryIndex}
             text={catalogStructureData[categoryIndex].mainCategoryName}
+            variantH="custome"
+            customeStyle="text-light text-left text-[2rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4rem] font-bold tracking-[2px] leading-tight"
             // variantH="h2"
           />
         </div>

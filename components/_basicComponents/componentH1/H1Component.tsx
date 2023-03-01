@@ -8,7 +8,7 @@ const h1DefaultStyle = `text-light text-left
 
 /**-----------------------------------------------**/
 const H1Component: React.FunctionComponent<{
-  text?: string;
+  text?: string | string[];
   hasDecoration?: boolean;
   variantH?: string;
   customeStyle?: string;
@@ -26,20 +26,55 @@ const H1Component: React.FunctionComponent<{
         return h1DefaultStyle;
     }
   };
+
+  const createText = () => {
+    if (text && Array.isArray(text)) {
+      return (
+        <div
+          // className={`${categoryNameContainerStyle} flex disable`}
+          className="fc flex-col  disable-soft"
+        >
+          {hasDecoration ? (
+            <div className="h-auto w-[10px] border-l border-corpo" />
+          ) : null}
+          {text.map((label, i) => (
+            <motion.p
+              key={i}
+              className={variantH ? createStyle(variantH) : h1DefaultStyle}
+            >
+              {label}
+            </motion.p>
+          ))}
+        </div>
+      );
+    }
+    return (
+      <div
+        // className={`${categoryNameContainerStyle} flex disable`}
+        className="flex disable-soft"
+      >
+        {hasDecoration ? (
+          <div className="h-auto w-[10px] border-l border-corpo" />
+        ) : null}
+        <motion.p className={variantH ? createStyle(variantH) : h1DefaultStyle}>
+          {text}
+        </motion.p>
+      </div>
+    );
+  };
   /**JSX**/
-  return (
-    <div
-      // className={`${categoryNameContainerStyle} flex disable`}
-      className="flex disable-soft"
-    >
-      {hasDecoration ? (
-        <div className="h-auto w-[10px] border-l border-corpo" />
-      ) : null}
-      <motion.p className={variantH ? createStyle(variantH) : h1DefaultStyle}>
-        {text}
-      </motion.p>
-    </div>
-  );
+  return createText();
+  // <div
+  //   // className={`${categoryNameContainerStyle} flex disable`}
+  //   className="flex disable-soft"
+  // >
+  //   {hasDecoration ? (
+  //     <div className="h-auto w-[10px] border-l border-corpo" />
+  //   ) : null}
+  //   <motion.p className={variantH ? createStyle(variantH) : h1DefaultStyle}>
+  //     {text}
+  //   </motion.p>
+  // </div>
 };
 
 export default H1Component;

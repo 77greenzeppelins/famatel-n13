@@ -10,15 +10,19 @@ const Section_1: React.FunctionComponent<{
 }> = ({ categoryIndex, setCategoryIndex, categoriesNumber }) => {
   /**JSX**/
   return (
-    <div className="flex items-center flex-col-reverse gap-y-10 xl:flex-row xl:gap-x-4 inner-px-md-xl-xxl xl:min-h-screen pt-[60px] xl:pt-0">
-      <div className="w-full xl:w-[50%]">
+    <div
+      data-component="Section_1__container"
+      className="flex items-center flex-col-reverse gap-y-4 md:gap-y-10 inner-px-md-xl-xxl pt-[60px] xl:flex-row xl:pt-[80px]"
+      //___xl:min-h-screen
+    >
+      <div className="w-full xl:h-[440px] xl:w-[45%] xxl:w-[40%] xxl:pr-[50px] ">
         <TextSection
           categoryIndex={categoryIndex}
           setCategoryIndex={setCategoryIndex}
           categoriesNumber={categoriesNumber}
         />
       </div>
-      <div className="w-full xl:w-[50%] h-[400px]">
+      <div className="w-full xl:w-[55%]  xxl:w-[60%] h-[440px]">
         <GraphicSection categoryIndex={categoryIndex} isPreviewOpen={false} />
       </div>
     </div>
