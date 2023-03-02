@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 /***********************************************************************************/
 const ArrowLongRightIcon = ({
   containerStyle, // background style
-  strokeWidth = 1.5,
+  strokeWidth,
   pathStyle = '', // foreground / line style
 }: {
   strokeWidth?: number;
@@ -23,13 +23,13 @@ const ArrowLongRightIcon = ({
       viewBox="0 0 24 24"
       strokeWidth={strokeWidth ? strokeWidth : 1.5}
       // stroke={corpoColors.light}
-      className={containerStyle ? containerStyle : 'w-[30px] h-[30px]'}
+      className={containerStyle ? containerStyle : 'w-6 h-6'}
       // onHoverStart={e => { fill:'#9b59b6'}}
       // onHoverEnd={e => {}}
     >
       {/* <title>Link SVG Icon</title> */}
       <path
-        className={pathStyle ? pathStyle : 'stroke-light'}
+        className={pathStyle ? pathStyle : ''}
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"

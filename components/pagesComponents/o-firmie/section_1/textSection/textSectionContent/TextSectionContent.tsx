@@ -50,6 +50,9 @@ const TextSectionContent: React.FunctionComponent = () => {
         <LinkWithTextAndIcon
           linkHref={pagesUrl.produkty}
           pLabel={'Poznaj kategorie produktów'}
+          //___for <SmallPseudoHeader>
+          hasBox={false}
+          hasVerticalOrnament={false}
         />
       </motion.div>
     </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 /**Components**/
 import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import LinkWithTextAndIcon from '../../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
+import CloseButton from './closeButton/CloseButton';
+import SVG_14307_P28 from '../../../../SVG/techDrawings/1_wtyczki-gniazda/SVG_14307_P28';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
-import SVG_14307_P28 from '../../../../SVG/techDrawings/1_wtyczki-gniazda/SVG_14307_P28';
-import CloseButton from './closeButton/CloseButton';
 /**HardCodedData**/
 const links = [
   { l1: 'Kategoria', l2: 'Przemysłowe wtyczki i gniazda' },
@@ -27,9 +28,8 @@ const ProductDescription: React.FunctionComponent<{
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.4 }}
         >
-          <div className="relative flex justify-center flex-col xl:flex-col  gap-y-2 w-full h-full  mt-[24px] xs:mt-[80px] md:mt-[60px] lg:mt-[180px]  xl:items-start xl:justify-center xl:mt-0 ">
-            {/* <div className="absolute top-0 right-0 w-full h-0 xs:h-[80px] lg:h-[180px] bg-dark xl:h-0" /> */}
-            <div className="absolute top-0 right-0 fc w-6 h-6 xl:relative xl:flex xl:justify-end xl:w-full">
+          <div className="relative flex justify-center flex-col xl:flex-col  gap-y-2 w-full h-full  mt-[40px] xs:mt-[80px] md:mt-[60px] lg:mt-[180px]  xl:items-start xl:justify-center xl:mt-0 ">
+            <div className="absolute -top-6 xs:top-0 right-0 fc w-6 h-6 xl:relative xl:flex xl:justify-end xl:w-full">
               <CloseButton
                 productDescriptionOpener={productDescriptionOpener}
                 buttonStyle="relative fc focus:outline-none disable pointer-events-auto group"
@@ -39,19 +39,25 @@ const ProductDescription: React.FunctionComponent<{
               {links.map(({ l1, l2 }, i) => (
                 <div
                   key={i}
-                  className={`${i === 1 && 'hidden xxs:flex flex-col'}`}
+                  className={`${
+                    i === 1
+                      ? 'hidden xxs:flex flex-col group'
+                      : 'xxs:flex flex-col group'
+                  }`}
                 >
                   <SmallPseudoHeader
                     text={l1}
                     hasBox={true}
                     hasVerticalOrnament={false}
                   />
-                  <SmallPseudoHeader
-                    text={l2}
+                  <LinkWithTextAndIcon
+                    linkHref={''}
+                    pLabel={l2}
+                    // mainContainerStyle="w-[90%]"
+                    aStyle="fc gap-4 h-full  bg-transparent focus:outline-none "
                     hasBox={true}
                     hasVerticalOrnament={false}
-                    boxStyle="h-[10px] md:h-[14px] aspect-square bg-transparent"
-                    textStyle="text-[0.625rem] xxs:text-[1rem] xs:text-[1.5rem] md:text-[1.5rem] text-light"
+                    pStyle="flex items-center h-full p-medium text-grey group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]"
                   />
                 </div>
               ))}
