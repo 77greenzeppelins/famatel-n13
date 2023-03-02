@@ -60,16 +60,18 @@ const homePageSliderVariants = {
  */
 const animatedButton = {
   whileHover: {
-    scale: 1.05,
+    // scale: 1.1,
+    rotate: 90,
   },
   whileTap: {
-    scale: 1.05,
+    // scale: 0.95,
   },
   transition: {
-    type: 'spring',
-    damping: 5,
-    stiffness: 100,
-    restDelta: 0.001,
+    // type: 'spring',
+    // damping: 5,
+    // stiffness: 100,
+    // restDelta: 0.001,
+    duration: 5,
   },
 };
 const animatedSniper = {

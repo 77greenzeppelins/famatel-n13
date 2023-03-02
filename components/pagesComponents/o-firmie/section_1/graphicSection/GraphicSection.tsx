@@ -1,49 +1,41 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 /**Component**/
 import ImageSection from './imageSectin/ImageSection';
 import AnimatedButton from './animatedButton/AnimatedButton';
 import ProductPreview from './productPreview/ProductPreview';
 /**Image Staff**/
 import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFirmiePage';
-/*Hook Staff*/
+/** */
 import useMeasure from 'react-use-measure';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
-import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 
 /**-------------------------------------------------------------------**/
 const GraphicSection: React.FunctionComponent<{
   isProductDescriptionOpen: boolean;
   productDescriptionOpener: Dispatch<SetStateAction<boolean>>;
 }> = ({ productDescriptionOpener, isProductDescriptionOpen }) => {
-  /**Hook Section**/
-  const [ref, { width, height }] = useMeasure();
-
-  const { width: screenWidth, height: screenHeight } = useWindowSize({
-    screensNumber: 1,
-  });
+  /**...**/
+  const [ref, { width }] = useMeasure();
   /**JSX**/
   return (
     <motion.div
       ref={ref}
       data-component="GraphicSection-slide2__container"
-      className="flex justify-end w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px] xl:h-screen"
+      className="flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px] xl:h-screen "
     >
-      <div
-        className="relative"
-        // style={{
-        //   width: Math.min(width, screenHeight),
-        //   height: Math.min(width, screenHeight),
-        // }}
-      >
+      <div className="relative" style={{ width: width, height: width }}>
         <ImageSection imageData={imgOFirmiePage[1]} />
+
         <AnimatedButton
           onClick={() => {
             productDescriptionOpener(prev => !prev);
           }}
-        >
-          <ProductPreview isProductDescriptionOpen={isProductDescriptionOpen} />
-        </AnimatedButton>
+          sniperColor={'border-grey'}
+        ></AnimatedButton>
+
+        <ProductPreview isProductDescriptionOpen={isProductDescriptionOpen} />
+
         {/* <OverlaySection /> */}
       </div>
     </motion.div>

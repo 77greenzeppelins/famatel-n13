@@ -10,6 +10,7 @@ const SmallPseudoHeader: React.FunctionComponent<{
   text?: string;
   containerStyle?: string;
   textStyle?: string;
+  boxStyle?: string;
   // verticalOrnamentStyle?: string;
   hasVerticalOrnament?: boolean;
   hasHorizontalOrnament?: boolean;
@@ -18,6 +19,7 @@ const SmallPseudoHeader: React.FunctionComponent<{
   text,
   containerStyle,
   textStyle,
+  boxStyle,
   // verticalOrnamentStyle,
   hasVerticalOrnament = true,
   hasHorizontalOrnament = false,
@@ -35,7 +37,7 @@ const SmallPseudoHeader: React.FunctionComponent<{
       {hasHorizontalOrnament && (
         <div className="absolute top-0 h-[1px] w-full border-b border-corpo" />
       )}
-      {hasBox && <div className={boxDefaultStyle} />}
+      {hasBox && <div className={boxStyle ? boxStyle : boxDefaultStyle} />}
       <p
         className={`${textStyle ? textStyle : textDefaultStyle} ${
           hasVerticalOrnament ? 'border-l border-corpo pl-4' : ''

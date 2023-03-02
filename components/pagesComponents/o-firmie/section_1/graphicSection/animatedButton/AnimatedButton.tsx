@@ -18,7 +18,7 @@ const AnimatedButton: React.FunctionComponent<{
   /**JSX**/
   return (
     <motion.div
-      className="absolute bottom-[10%] right-[25%] h-[75%] w-[75%] pointer-events-auto"
+      className="absolute bottom-[10%] right-[25%] h-[70%] w-[70%] pointer-events-auto"
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
@@ -27,11 +27,12 @@ const AnimatedButton: React.FunctionComponent<{
     >
       <AriaMotionButton
         ariaLabel="Zobacz opis wtyczki"
-        whileTap={animatedButton.whileTap}
+        // whileTap={animatedButton.whileTap}
+        // whileHover={animatedButton.whileHover}
         transition={animatedButton.transition}
         onClick={onClick}
       >
-        <Sniper color={sniperColor} />
+        <Sniper borderColor={sniperColor} />
         {children}
       </AriaMotionButton>
     </motion.div>

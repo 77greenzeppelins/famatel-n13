@@ -22,7 +22,7 @@ const XMarkIcon = ({
       viewBox="0 0 24 24"
       strokeWidth={strokeWidth}
       stroke={corpoColors.light}
-      className={containerStyle}
+      className={containerStyle ? containerStyle : 'origin-center'}
       whileHover={{ scale: 1.1 }}
       transition={{
         type: 'spring',

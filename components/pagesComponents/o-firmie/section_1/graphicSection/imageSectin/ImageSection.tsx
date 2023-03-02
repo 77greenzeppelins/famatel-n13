@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 /*FramerMotion Staff*/
 import { motion } from 'framer-motion';
+/**TS**/
 import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
 
 /**-------------------------------------**/
@@ -20,8 +21,10 @@ const ImageSection: React.FunctionComponent<{
       <Image
         alt={imageAlt ? imageAlt : 'zdjęcie produktu'}
         src={imageData.image}
-        width={1500}
-        height={1500}
+        width={1200}
+        height={1200}
+        // fill
+        // sizes="1500"
         // fill // intrinsic|fixed|responsive|fill allowed;  fill your parent bro! that is why I calculated width and height to make parent of square shape
       />
     </motion.div>
