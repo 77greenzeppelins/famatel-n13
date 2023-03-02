@@ -22,10 +22,11 @@ const NavSection: React.FunctionComponent<{
   return (
     <div
       // className="flex justify-between flex-col lg:flex-row-reverse h-auto w-10 lg:w-full lg:h-10 xl:max-w-[300px]"
-      className="flex justify-between w-full xs:max-w-[300px] xl:w-full xl:max-w-[80%]"
+      className="flex justify-between w-full h-6 xs:max-w-[300px] xl:w-full xl:max-w-[80%]"
     >
       <ArrowButton
-        buttonStyle="fc focus:outline-none disable pointer-events-auto w-8 h-8 border border-greyShade2"
+        buttonStyle="flex items-center justify-start  focus:outline-none disable pointer-events-auto "
+        //___border border-greyShade2
         onClickHandler={prevCategory}
       >
         <ChevronLeftIcon
@@ -41,7 +42,7 @@ const NavSection: React.FunctionComponent<{
         digitContainerStyle="fc w-[20px]"
       />
       <ArrowButton
-        buttonStyle="fc focus:outline-none disable pointer-events-auto w-8 h-8 border border-greyShade2"
+        buttonStyle="flex items-center justify-start focus:outline-none disable pointer-events-auto "
         onClickHandler={nextCategory}
       >
         <ChevronRightIcon

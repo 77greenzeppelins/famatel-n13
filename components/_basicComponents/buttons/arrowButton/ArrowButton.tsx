@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 /**React Aria Staff*/
 import { FocusRing } from 'react-aria';
-/**Framer Motion Staff*/
-import { motion } from 'framer-motion';
 
 /**---------------------------------------------------**/
 const ArrowButton: React.FunctionComponent<{
@@ -14,12 +12,18 @@ const ArrowButton: React.FunctionComponent<{
   const [isDisabled, setIsDisabled] = useState(false);
 
   const handleClick = () => {
+    //___disable button
     setIsDisabled(true);
-    // console.log('...clicked....');
+    //___do what you need to do...
     onClickHandler();
-    setTimeout(() => {
+    //___set "timer"...
+    const timer = setTimeout(() => {
       setIsDisabled(false);
-    }, 1000); // disable button for 5 seconds
+    }, 1000); // disable button for 1 seconds
+    //___clean "timer"...
+    return () => {
+      clearTimeout(timer);
+    };
   };
   return (
     <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black ">

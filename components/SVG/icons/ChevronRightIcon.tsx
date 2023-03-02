@@ -2,6 +2,7 @@ import React from 'react';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
 import { corpoColors } from '../../../data/_data';
+import { svgTransition } from '../../../utils/framerMotion/framerMotionUtils';
 
 /***********************************************************************************/
 const ChevronRightIcon = ({
@@ -27,7 +28,8 @@ const ChevronRightIcon = ({
       // onHoverEnd={e => {}}
       whileHover={{ scale: scale ? scale : 1.05, stroke: '#e6530f' }}
       transition={{
-        default: { type: 'spring', stiffness: 400, damping: 10, delay: 0.1 },
+        // default: { type: 'spring', stiffness: 400, damping: 10, delay: 0.1 },
+        default: { ...svgTransition },
         stroke: { duration: 0.3, ease: [0, 0.71, 0.2, 1.01] },
       }}
     >

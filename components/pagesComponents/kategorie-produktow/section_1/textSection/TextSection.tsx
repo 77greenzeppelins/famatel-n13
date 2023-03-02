@@ -18,12 +18,17 @@ const TextSection: React.FunctionComponent<{
 
   /**JSX**/
   return (
-    <div className="flex justify-center w-full h-full flex-col gap-8 md:gap-10 xl:gap-8 pt-[40px] lg:pt-[60px] xl:pt-0">
-      <NavSection
-        categoryIndex={categoryIndex}
-        setCategoryIndex={setCategoryIndex}
-        categoriesNumber={categoriesNumber}
-      />
+    <div
+      className="flex justify-center w-full xl:h-full flex-col gap-8 md:gap-10 xl:gap-8 "
+      //___pt-[40px] lg:pt-[60px] xl:pt-0
+    >
+      <div className="hidden xl:block">
+        <NavSection
+          categoryIndex={categoryIndex}
+          setCategoryIndex={setCategoryIndex}
+          categoriesNumber={categoriesNumber}
+        />
+      </div>
       <div className="flex gap-x-4 w-full ">
         <SmallPseudoHeader
           text="Kategorie produktów"

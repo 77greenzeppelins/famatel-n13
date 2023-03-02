@@ -2,6 +2,7 @@
 import { corpoColors } from '../../../data/_data';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
+import { svgTransition } from '../../../utils/framerMotion/framerMotionUtils';
 const textVariants = {
   strokeLight: { fill: corpoColors.light, transition: { duration: 0.4 } },
   strokeDark: { fill: corpoColors.dark, transition: { duration: 0.4 } },
@@ -32,12 +33,7 @@ const SvgLogo = ({
       // {...props}
       animate={animationCondition ? 'strokeDark' : 'strokeLight'}
       whileHover={{ scale: 1.05 }}
-      transition={{
-        type: 'spring',
-        damping: 5,
-        stiffness: 100,
-        restDelta: 0.001,
-      }}
+      transition={svgTransition}
     >
       <g
         data-path="sygnet__twoParts"

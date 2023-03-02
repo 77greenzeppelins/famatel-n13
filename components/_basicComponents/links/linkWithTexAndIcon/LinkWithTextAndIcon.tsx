@@ -78,25 +78,23 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
 
 export default LinkWithTextAndIcon;
 
-//____usage:
+//____usage__1:
 {
   /* <LinkWithTextAndIcon
   linkHref={pagesUrl.produkty}
   pLabel={'Poznaj kategorie produktów'}
 />; */
 }
-
+//____usage__2 / <ProductDescription>:
 {
-  /* <p
-          className={`flex items-center h-full header-link-label text-grey group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] px-2`}
-        >
-          {pLabel}
-        </p> */
-}
-
-{
-  /* <LinkWithArrowIcon
-          containerStyle="fc h-6 w-6 aspect-square stroke-greyTint1 group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center "
-          // pathStyle="scale-[0.75] origin-center scale-[1] "
-        /> */
+  /* <LinkWithTextAndIcon
+  linkHref={linkHref}
+  // mainContainerStyle="w-[90%]"
+  aStyle="fc gap-4 h-full  bg-transparent focus:outline-none "
+  //___ for <SmallPseudoHeader>
+  hasBox={true}
+  hasVerticalOrnament={false}
+  pLabel={l2}
+  pStyle="flex items-center h-full p-medium text-grey group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]"
+/>; */
 }

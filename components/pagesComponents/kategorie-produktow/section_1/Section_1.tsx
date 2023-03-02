@@ -1,5 +1,6 @@
 import React from 'react';
 import GraphicSection from './graphicSection/GraphicSection';
+import NavSection from './navSection/NavSection';
 import TextSection from './textSection/TextSection';
 
 /**--------------------------------------------------**/
@@ -12,11 +13,18 @@ const Section_1: React.FunctionComponent<{
   return (
     <div
       data-component="Section_1__container"
-      className="flex w-screen items-center flex-col gap-y-0 xs:gap-y-4 sm:gap-y-10 inner-px-md-xl-xxl pt-[60px] xl:flex-row xl:pt-[80px] "
+      className="flex w-screen items-center flex-col-reverse gap-y-2  xs:gap-y-4 sm:gap-y-6 inner-px-md-xl-xxl pt-[60px] lg:pt-[100px] xl:flex-row xl:pt-[80px] "
       //___xl:min-h-screen
     >
       <div className="w-full xl:h-[440px] xl:w-[45%] xxl:w-[40%] xxl:pr-[50px] ">
         <TextSection
+          categoryIndex={categoryIndex}
+          setCategoryIndex={setCategoryIndex}
+          categoriesNumber={categoriesNumber}
+        />
+      </div>
+      <div className="flex justify-center w-full xl:hidden">
+        <NavSection
           categoryIndex={categoryIndex}
           setCategoryIndex={setCategoryIndex}
           categoriesNumber={categoriesNumber}

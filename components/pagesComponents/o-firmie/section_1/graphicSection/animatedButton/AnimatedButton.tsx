@@ -18,7 +18,7 @@ const AnimatedButton: React.FunctionComponent<{
   /**JSX**/
   return (
     <motion.div
-      className="absolute bottom-[10%] right-[25%] h-[70%] w-[70%] pointer-events-auto"
+      className="absolute hidden xs352:flex bottom-[10%] right-[25%] h-[70%] w-[70%] pointer-events-auto"
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,

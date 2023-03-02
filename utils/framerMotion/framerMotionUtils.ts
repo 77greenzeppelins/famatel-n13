@@ -228,6 +228,13 @@ const cardVariants = {
   },
 };
 
+const svgTransition = {
+  type: 'spring',
+  damping: 5,
+  stiffness: 100,
+  restDelta: 0.001,
+};
+
 export {
   routingAnimation,
   overlayContainerVariants,
@@ -242,4 +249,6 @@ export {
   textSectionChildrenVariants,
   //____
   cardVariants,
+  //___used in svgArrows, xMarks and so on...
+  svgTransition,
 };
