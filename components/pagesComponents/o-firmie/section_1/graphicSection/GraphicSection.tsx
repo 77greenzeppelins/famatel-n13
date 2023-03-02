@@ -2,7 +2,6 @@ import React, { Dispatch, SetStateAction } from 'react';
 /**Component**/
 import ImageSection from './imageSectin/ImageSection';
 import AnimatedButton from './animatedButton/AnimatedButton';
-import ProductPreview from './productPreview/ProductPreview';
 /**Image Staff**/
 import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFirmiePage';
 /** */
@@ -21,7 +20,7 @@ const GraphicSection: React.FunctionComponent<{
   return (
     <motion.div
       ref={ref}
-      data-component="GraphicSection-slide2__container"
+      data-component="GraphicSection__container"
       className="flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px] xl:h-screen "
     >
       <div className="relative" style={{ width: width, height: width }}>
@@ -33,8 +32,6 @@ const GraphicSection: React.FunctionComponent<{
           }}
           sniperColor={'border-grey'}
         ></AnimatedButton>
-
-        <ProductPreview isProductDescriptionOpen={isProductDescriptionOpen} />
 
         {/* <OverlaySection /> */}
       </div>

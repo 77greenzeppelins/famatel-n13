@@ -16,7 +16,7 @@ const TextSection: React.FunctionComponent = () => {
   return (
     <div
       data-component="TextSection__container"
-      className="relative w-full"
+      className="relative w-full xs:w-[70%] xl:w-full"
       //___inner-px-md-lg pt-[62px]
     >
       <motion.div
