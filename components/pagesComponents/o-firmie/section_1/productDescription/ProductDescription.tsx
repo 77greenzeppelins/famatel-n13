@@ -6,17 +6,33 @@ import CloseButton from './closeButton/CloseButton';
 import SVG_14307_P28 from '../../../../SVG/techDrawings/1_wtyczki-gniazda/SVG_14307_P28';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
+/** */
+import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
 /**HardCodedData**/
 const links = [
-  { l1: 'Kategoria', l2: 'Przemysłowe wtyczki i gniazda' },
-  { l1: 'Podkategoria', l2: 'Przenośne' },
-  { l1: 'Model', l2: '14307' },
+  {
+    l1: 'Kategoria',
+    l2: 'Przemysłowe wtyczki i gniazda',
+    linkHref: catalogStructureData[0].mainCategoryUrl,
+  },
+  {
+    l1: 'Podkategoria',
+    l2: 'Przenośne',
+    linkHref: catalogStructureData[0].subCategoriesUrls[0],
+  },
+  {
+    l1: 'Model',
+    l2: '14307',
+    linkHref: `${catalogStructureData[0].subCategoriesUrls[0]}/wtyczki-ip67-125A`,
+  },
 ];
 /**-------------------------------------------------------**/
 const ProductDescription: React.FunctionComponent<{
   isProductDescriptionOpen: boolean;
   productDescriptionOpener: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ isProductDescriptionOpen, productDescriptionOpener }) => {
+  /**...**/
+
   /**JSX**/
   return (
     <AnimatePresence>
@@ -36,7 +52,7 @@ const ProductDescription: React.FunctionComponent<{
               />
             </div>
             <div className=" flex flex-col justify-center items-start gap-y-8 w-full ">
-              {links.map(({ l1, l2 }, i) => (
+              {links.map(({ l1, l2, linkHref }, i) => (
                 <div
                   key={i}
                   className={`${
@@ -51,7 +67,7 @@ const ProductDescription: React.FunctionComponent<{
                     hasVerticalOrnament={false}
                   />
                   <LinkWithTextAndIcon
-                    linkHref={''}
+                    linkHref={linkHref}
                     pLabel={l2}
                     // mainContainerStyle="w-[90%]"
                     aStyle="fc gap-4 h-full  bg-transparent focus:outline-none "
