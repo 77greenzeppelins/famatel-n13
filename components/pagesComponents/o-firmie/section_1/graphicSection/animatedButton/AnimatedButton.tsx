@@ -60,18 +60,27 @@ const AnimatedButton: React.FunctionComponent<{
             </div>
           </div>
         </div>
-        <AriaMotionButton
-          ariaLabel="Zobacz opis wtyczki"
-          buttonStyle="w-full h-full focus:outline-none disable-soft pointer-events-auto group"
-          // whileTap={animatedButton.whileTap}
-          // whileHover={animatedButton.whileHover}
-          transition={animatedButton.transition}
-          onClick={onClick}
-          isDisabled={isSection_2_Open ? true : false}
+        <motion.div
+          className="w-full h-full"
+          animate={{ rotate: isSection_2_Open ? 90 : 0 }}
+          transition={{ duration: 4, delay: 0.4 }}
         >
-          <Sniper borderColor={sniperColor} hoverCondition={isSection_2_Open} />
-          {children}
-        </AriaMotionButton>
+          <AriaMotionButton
+            ariaLabel="Zobacz opis wtyczki"
+            buttonStyle="w-full h-full focus:outline-none disable-soft pointer-events-auto group"
+            // whileTap={animatedButton.whileTap}
+            // whileHover={animatedButton.whileHover}
+            // transition={animatedButton.transition}
+            onClick={onClick}
+            isDisabled={isSection_2_Open ? true : false}
+          >
+            <Sniper
+              borderColor={sniperColor}
+              hoverCondition={isSection_2_Open}
+            />
+            {children}
+          </AriaMotionButton>
+        </motion.div>
       </div>
     </motion.div>
   );

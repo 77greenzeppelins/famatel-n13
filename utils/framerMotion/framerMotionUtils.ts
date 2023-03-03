@@ -65,6 +65,7 @@ const animatedButton = {
   },
   whileTap: {
     // scale: 0.95,
+    rotate: 360,
   },
   transition: {
     // type: 'spring',
@@ -72,6 +73,7 @@ const animatedButton = {
     // stiffness: 100,
     // restDelta: 0.001,
     duration: 5,
+    delay: 0.4,
   },
 };
 const animatedSniper = {
