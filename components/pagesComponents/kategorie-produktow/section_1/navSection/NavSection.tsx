@@ -22,7 +22,7 @@ const NavSection: React.FunctionComponent<{
   return (
     <div
       // className="flex justify-between flex-col lg:flex-row-reverse h-auto w-10 lg:w-full lg:h-10 xl:max-w-[300px]"
-      className="flex justify-between w-full h-6 xs:max-w-[300px] xl:w-full xl:max-w-[80%]"
+      className="flex justify-between w-[80%] h-6 xs:max-w-[300px] xl:w-full xl:max-w-[80%]"
     >
       <ArrowButton
         buttonStyle="flex items-center justify-start  focus:outline-none disable pointer-events-auto "
