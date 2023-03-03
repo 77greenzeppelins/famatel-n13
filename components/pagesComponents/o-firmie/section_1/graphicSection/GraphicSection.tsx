@@ -4,8 +4,6 @@ import ImageSection from './imageSectin/ImageSection';
 import AnimatedButton from './animatedButton/AnimatedButton';
 /**Image Staff**/
 import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFirmiePage';
-/** */
-import useMeasure from 'react-use-measure';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
 
@@ -14,27 +12,23 @@ const GraphicSection: React.FunctionComponent<{
   isProductDescriptionOpen: boolean;
   productDescriptionOpener: Dispatch<SetStateAction<boolean>>;
 }> = ({ productDescriptionOpener, isProductDescriptionOpen }) => {
-  /**...**/
-  const [ref, { width }] = useMeasure();
   /**JSX**/
   return (
     <motion.div
-      ref={ref}
       data-component="GraphicSection__container"
-      className="flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px] xl:h-screen "
+      className={`flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px]  xl:h-screen`}
     >
-      <div className="relative" style={{ width: width, height: width }}>
-        <ImageSection imageData={imgOFirmiePage[1]} />
-
+      <ImageSection imageData={imgOFirmiePage[1]}>
         <AnimatedButton
           onClick={() => {
             productDescriptionOpener(prev => !prev);
           }}
           sniperColor={'border-grey'}
         ></AnimatedButton>
+      </ImageSection>
 
-        {/* <OverlaySection /> */}
-      </div>
+      {/* <OverlaySection /> */}
+      {/* </div> */}
     </motion.div>
   );
 };
