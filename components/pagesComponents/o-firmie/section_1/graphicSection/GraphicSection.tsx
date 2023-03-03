@@ -16,7 +16,7 @@ const GraphicSection: React.FunctionComponent<{
   return (
     <motion.div
       data-component="GraphicSection__container"
-      className={`flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px] xl:h-screen`}
+      className={`relative flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px] xl:h-screen`}
     >
       <ImageSection imageData={imgOFirmiePage[1]}>
         <AnimatedButton
@@ -26,6 +26,12 @@ const GraphicSection: React.FunctionComponent<{
           sniperColor={'border-grey'}
         ></AnimatedButton>
       </ImageSection>
+      <motion.div
+        className="absolute inset-0 w-full h-full bg-dark origin-bottom-right"
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0 }}
+        transition={{ duration: 2, delay: 0.8 }}
+      />
 
       {/* <OverlaySection /> */}
       {/* </div> */}
