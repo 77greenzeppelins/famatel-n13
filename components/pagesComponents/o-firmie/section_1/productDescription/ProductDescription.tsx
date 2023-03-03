@@ -38,7 +38,8 @@ const ProductDescription: React.FunctionComponent<{
     <AnimatePresence>
       {isProductDescriptionOpen && (
         <motion.div
-          className="absolute inset-0 px-[2%] xxs:px-[6%] md:px-[60px] xl:px-0 xl:pr-[80px] xxl:pr-[100px] xl:pt-[70px] bg-dark "
+          // className="absolute inset-0 px-[2%] xxs:px-[6%] md:px-[60px] xl:px-0 xl:pr-[80px] xxl:pr-[100px] xl:pt-[70px] bg-dark "
+          className=" bg-dark "
           //___mix of inner-pr-md-xl-xxl & inner-px-md-xl-xxl
           initial={{ opacity: 0, scale: 1 }}
           animate={{ opacity: 1, scale: 1 }}

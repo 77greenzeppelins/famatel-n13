@@ -21,7 +21,10 @@ const OFirmieContent = () => {
         setIsSection_2_Open={setIsSection_2_Open}
       />
 
-      <Section_2 isSection_2_Open={isSection_2_Open} />
+      <Section_2
+        isSection_2_Open={isSection_2_Open}
+        setIsSection_2_Open={setIsSection_2_Open}
+      />
     </div>
   );
 };

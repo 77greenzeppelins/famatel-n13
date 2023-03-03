@@ -8,8 +8,6 @@ const Section_1: React.FunctionComponent<{
   isSection_2_Open: boolean;
   setIsSection_2_Open: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ isSection_2_Open, setIsSection_2_Open }) => {
-  /**...**/
-  // console.log('isProductDescriptionOpen', isProductDescriptionOpen);
   /**JSX**/
   return (
     <div
