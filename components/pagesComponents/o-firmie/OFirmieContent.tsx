@@ -1,7 +1,7 @@
-import { AnimatePresence, motion } from 'framer-motion';
 import React, { useState } from 'react';
 /**Components**/
 import Section_1 from './section_1/Section_1';
+import Section_2 from './section_2/Section_2';
 
 /**----------------------------------------------------------------**/
 const OFirmieContent = () => {
@@ -12,7 +12,7 @@ const OFirmieContent = () => {
   return (
     <div
       data-component="ProductPageTemplate__container"
-      className="flex flex-col justify-center w-screen "
+      className="flex flex-col justify-center w-screen divide-y-[1px] divide-greyShade2"
       //___pt-[60px] min-h-screen
     >
       {/* <div className="absolute inset-0 bg-corpo" /> */}
@@ -21,10 +21,7 @@ const OFirmieContent = () => {
         setIsSection_2_Open={setIsSection_2_Open}
       />
 
-      <AnimatePresence>
-        {isSection_2_Open && <motion.div className="h-[75vh] bg-vY" />}
-      </AnimatePresence>
-      {/* <motion.div className="h-[75vh] bg-grey" /> */}
+      <Section_2 isSection_2_Open={isSection_2_Open} />
     </div>
   );
 };
