@@ -10,8 +10,8 @@ const Section_2: React.FunctionComponent<{
   return (
     <AnimatePresence>
       {isSection_2_Open && (
-        <motion.div className="h-[75vh] bg-dark">
-          <div className="hidden xl:flex w-full h-[10vh] bg-greyShade2" />
+        <motion.div className="bg-dark min-h-[75vh]">
+          <div className="hidden xl:flex w-full h-[10vh] bg-dark" />
           <ProductDescription
             isProductDescriptionOpen={isSection_2_Open}
             productDescriptionOpener={setIsSection_2_Open}

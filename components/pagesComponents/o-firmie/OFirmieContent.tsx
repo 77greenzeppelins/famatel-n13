@@ -12,8 +12,8 @@ const OFirmieContent = () => {
   return (
     <div
       data-component="ProductPageTemplate__container"
-      className="flex flex-col justify-center w-screen divide-y-[1px] divide-greyShade2"
-      //___pt-[60px] min-h-screen
+      className="flex flex-col justify-center w-screen "
+      //___pt-[60px] min-h-screen divide-y-[1px] divide-greyShade2
     >
       {/* <div className="absolute inset-0 bg-corpo" /> */}
       <Section_1

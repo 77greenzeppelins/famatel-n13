@@ -13,6 +13,7 @@ export interface IF_AriaMotionButton {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   children?: ReactNode;
   buttonStyle?: string;
+  isDisabled?: boolean;
 }
 
 /**-------------------------------------------------------------------------------**/
@@ -24,6 +25,7 @@ const AriaMotionButton: React.FunctionComponent<IF_AriaMotionButton> = ({
   onClick,
   children,
   buttonStyle,
+  isDisabled,
 }) => {
   return (
     <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black ">
@@ -36,6 +38,7 @@ const AriaMotionButton: React.FunctionComponent<IF_AriaMotionButton> = ({
         whileHover={whileHover}
         transition={transition}
         onClick={onClick}
+        disabled={isDisabled ? isDisabled : false}
       >
         {children}
       </motion.button>

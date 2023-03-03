@@ -67,6 +67,7 @@ const AnimatedButton: React.FunctionComponent<{
           // whileHover={animatedButton.whileHover}
           transition={animatedButton.transition}
           onClick={onClick}
+          isDisabled={isSection_2_Open ? true : false}
         >
           <Sniper borderColor={sniperColor} hoverCondition={isSection_2_Open} />
           {children}
