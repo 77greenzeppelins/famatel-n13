@@ -16,10 +16,12 @@ const OFirmieContent = () => {
       className="flex flex-col justify-center w-screen min-h-screen bg-dark "
       //___pt-[60px] min-h-screen
     >
+      {/* <div className="absolute inset-0 bg-corpo" /> */}
       <Section_1
         isProductDescriptionOpen={isProductDescriptionOpen}
         setIsProductDescriptionOpen={setIsProductDescriptionOpen}
       />
+
       <AnimatePresence>
         {isProductDescriptionOpen && <motion.div className="h-[75vh] bg-vY" />}
       </AnimatePresence>
