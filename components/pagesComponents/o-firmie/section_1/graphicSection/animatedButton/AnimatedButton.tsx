@@ -32,16 +32,18 @@ const AnimatedButton: React.FunctionComponent<{
        *
        *
        */}
-      <AriaMotionButton
-        ariaLabel="Zobacz opis wtyczki"
-        // whileTap={animatedButton.whileTap}
-        // whileHover={animatedButton.whileHover}
-        transition={animatedButton.transition}
-        onClick={onClick}
-      >
-        <Sniper borderColor={sniperColor} hoverCondition={isSection_2_Open} />
-        {children}
-      </AriaMotionButton>
+      <div className="relative w-full h-full">
+        <AriaMotionButton
+          ariaLabel="Zobacz opis wtyczki"
+          // whileTap={animatedButton.whileTap}
+          // whileHover={animatedButton.whileHover}
+          transition={animatedButton.transition}
+          onClick={onClick}
+        >
+          <Sniper borderColor={sniperColor} hoverCondition={isSection_2_Open} />
+          {children}
+        </AriaMotionButton>
+      </div>
     </motion.div>
   );
 };
