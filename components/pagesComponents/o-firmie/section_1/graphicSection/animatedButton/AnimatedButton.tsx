@@ -30,7 +30,26 @@ const AnimatedButton: React.FunctionComponent<{
       <div className="relative w-full h-full">
         <div className="absolute inset-0 ">
           <div className="relative w-full h-full grid grid-cols-[2%_3%_90%_3%_2%] grid-rows-[2%_3%_80%_13%_2%] ">
-            <div className="absolute inset-0 bg-vY opacity-50" />
+            {/* <div className="absolute inset-0 bg-vY opacity-50" /> */}
+            <div className="col-start-2 col-end-5 row-start-4 flex justify-center flex-col ">
+              {/* <div className="h-[4px] w-full border-t-[1px] border-b-[1px] border-greyShade1 " /> */}
+              <div className="flex gap-2">
+                <div className="fc h-full w-[10%] ">
+                  <div className="w-full h-[1px] bg-greyShade1" />
+                </div>
+                <p className="text-grey text-[0.625rem] xs:text-[0.75rem] tracking-[0.125rem] uppercase word-spacing-0125 lg:word-spacing-025">
+                  IP 67
+                </p>
+              </div>
+              <div className="flex gap-2">
+                <div className="fc h-full w-[15%] ">
+                  <div className="w-full h-[1px] bg-greyShade1" />
+                </div>
+                <p className="text-grey text-[0.625rem] xs:text-[0.75rem] tracking-[0.125rem] uppercase word-spacing-0125 lg:word-spacing-025">
+                  125A
+                </p>{' '}
+              </div>
+            </div>
           </div>
         </div>
 
