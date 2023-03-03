@@ -44,13 +44,17 @@ const AnimatedButton: React.FunctionComponent<{
               <div className="fc h-full w-[10%] ">
                 <div className="w-full h-[1px] bg-greyShade1" />
               </div>
-              <p className="text-grey text-[0.75rem]">IP 67</p>
+              <p className="text-grey text-[0.625rem] xs:text-[0.75rem] tracking-[0.125rem] uppercase word-spacing-0125 lg:word-spacing-025">
+                IP 67
+              </p>
             </div>
             <div className="flex gap-2">
               <div className="fc h-full w-[15%] ">
                 <div className="w-full h-[1px] bg-greyShade1" />
               </div>
-              <p className="text-grey text-[0.75rem]">125A</p>{' '}
+              <p className="text-grey text-[0.625rem] xs:text-[0.75rem] tracking-[0.125rem] uppercase word-spacing-0125 lg:word-spacing-025">
+                125A
+              </p>{' '}
             </div>
           </div>
         </div>
