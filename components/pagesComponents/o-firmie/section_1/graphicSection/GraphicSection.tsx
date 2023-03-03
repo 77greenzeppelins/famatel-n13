@@ -16,7 +16,7 @@ const GraphicSection: React.FunctionComponent<{
   return (
     <motion.div
       data-component="GraphicSection__container"
-      className={`flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px]  xl:h-screen`}
+      className={`flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px] xl:h-screen`}
     >
       <ImageSection imageData={imgOFirmiePage[1]}>
         <AnimatedButton

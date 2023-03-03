@@ -21,9 +21,7 @@ const OFirmieContent = () => {
         setIsProductDescriptionOpen={setIsProductDescriptionOpen}
       />
       <AnimatePresence>
-        {isProductDescriptionOpen && (
-          <motion.div className="h-[75vh] bg-grey" />
-        )}
+        {isProductDescriptionOpen && <motion.div className="h-[75vh] bg-vY" />}
       </AnimatePresence>
       {/* <motion.div className="h-[75vh] bg-grey" /> */}
     </div>

@@ -15,7 +15,7 @@ const Section_1: React.FunctionComponent<{
   return (
     <div
       data-component="OFirmieSlider__container"
-      className={`flex flex-col-reverse w-full xl:flex-row-reverse `}
+      className={`flex flex-col-reverse w-full xl:flex-row-reverse justify-center h-screen`}
     >
       <div
         className="relative flex items-start justify-end w-full xl:w-[55%] xs:-mt-20 lg:-mt-[180px] xl:mt-0"
