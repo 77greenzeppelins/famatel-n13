@@ -36,7 +36,7 @@ const ImageSection: React.FunctionComponent<{
   const size = condition
     ? Math.min(bounds.width, bounds.height)
     : Math.min(width, height);
-  // console.log('size', size);
+  console.log('size', size);
   /**JSX**/
   return (
     <motion.div
@@ -47,6 +47,7 @@ const ImageSection: React.FunctionComponent<{
       className="flex justify-end xl:items-center w-full h-full "
     >
       <div
+        data-layout="DynamicContainer"
         className="relative fc w-full h-full "
         style={{
           // width: Math.min(bounds.width, bounds.height),
