@@ -6,24 +6,23 @@ import Section_1 from './section_1/Section_1';
 /**----------------------------------------------------------------**/
 const OFirmieContent = () => {
   /**LocalState; just to open/close <ProductDescriptionOverlay> **/
-  const [isProductDescriptionOpen, setIsProductDescriptionOpen] =
-    useState(false);
+  const [isSection_2_Open, setIsSection_2_Open] = useState(false);
 
   /**JSX**/
   return (
     <div
       data-component="ProductPageTemplate__container"
-      className="flex flex-col justify-center w-screen min-h-screen bg-dark "
+      className="flex flex-col justify-center w-screen "
       //___pt-[60px] min-h-screen
     >
       {/* <div className="absolute inset-0 bg-corpo" /> */}
       <Section_1
-        isProductDescriptionOpen={isProductDescriptionOpen}
-        setIsProductDescriptionOpen={setIsProductDescriptionOpen}
+        isSection_2_Open={isSection_2_Open}
+        setIsSection_2_Open={setIsSection_2_Open}
       />
 
       <AnimatePresence>
-        {isProductDescriptionOpen && <motion.div className="h-[75vh] bg-vY" />}
+        {isSection_2_Open && <motion.div className="h-[75vh] bg-vY" />}
       </AnimatePresence>
       {/* <motion.div className="h-[75vh] bg-grey" /> */}
     </div>

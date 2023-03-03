@@ -2,20 +2,29 @@ import React from 'react';
 
 /**------------------------------------------------------------**/
 const Sniper: React.FunctionComponent<{
+  hoverCondition: boolean;
   borderColor?: string;
-}> = ({ borderColor }) => {
+}> = ({ borderColor, hoverCondition }) => {
   /**JSX**/
   return (
     <div className="relative fc w-full h-full">
       <div
         className={`absolute top-0 left-0 h-[20%] w-[20%] border-t border-l ${
           borderColor ? borderColor : 'border-light'
-        } opacity-60 group-hover:opacity-100 group-hover:h-[25%] group-hover:w-[25%] group-hover:border-corpo duration-[0.6s] ease-in delay-[0.1s]`}
+        } opacity-60 ${
+          hoverCondition
+            ? ''
+            : 'group-hover:opacity-100 group-hover:h-[25%] group-hover:w-[25%] group-hover:border-corpo duration-[0.6s] ease-in delay-[0.1s]'
+        }`}
       />
       <div
         className={`absolute bottom-0 left-0 h-[20%] w-[20%] border-b border-l ${
           borderColor ? borderColor : 'border-light'
-        } opacity-60 group-hover:opacity-100 group-hover:h-[25%] group-hover:w-[25%] group-hover:border-corpo duration-[0.6s] ease-in delay-[0.1s]`}
+        } opacity-60 ${
+          hoverCondition
+            ? ''
+            : 'group-hover:opacity-100 group-hover:h-[25%] group-hover:w-[25%] group-hover:border-corpo duration-[0.6s] ease-in delay-[0.1s]'
+        }`}
       />
       <div
         className={`absolute bottom-0 right-0 h-[20%] w-[20%] border-b border-r ${

@@ -9,23 +9,20 @@ import { motion } from 'framer-motion';
 
 /**-------------------------------------------------------------------**/
 const GraphicSection: React.FunctionComponent<{
-  isProductDescriptionOpen: boolean;
-  productDescriptionOpener: Dispatch<SetStateAction<boolean>>;
-}> = ({ productDescriptionOpener, isProductDescriptionOpen }) => {
+  isSection_2_Open: boolean;
+  setIsSection_2_Open: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({ isSection_2_Open, setIsSection_2_Open }) => {
   /**JSX**/
   return (
     <motion.div
       data-component="GraphicSection__container"
       className={`relative flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px] xl:h-screen `}
     >
-      <ImageSection imageData={imgOFirmiePage[1]}>
-        <AnimatedButton
-          onClick={() => {
-            productDescriptionOpener(prev => !prev);
-          }}
-          sniperColor={'border-grey'}
-        ></AnimatedButton>
-      </ImageSection>
+      <ImageSection
+        imageData={imgOFirmiePage[1]}
+        isSection_2_Open={isSection_2_Open}
+        setIsSection_2_Open={setIsSection_2_Open}
+      ></ImageSection>
       <motion.div
         className="absolute inset-0 w-full h-full bg-dark origin-bottom-right"
         initial={{ scaleX: 1 }}

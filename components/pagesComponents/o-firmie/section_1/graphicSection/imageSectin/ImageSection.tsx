@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react';
 import Image from 'next/image';
+/**Components**/
+import ScrollPrompt from '../scrollPrompt/ScrollPrompt';
 /*FramerMotion Staff*/
 import { motion } from 'framer-motion';
 /**TS**/
@@ -7,8 +9,8 @@ import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
 /** */
 import useMeasure from 'react-use-measure';
 import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
-import FlyingLine from '../../../../../multipagesComponents/lines/flyingLine/FlyingLine';
-import { corpoColors } from '../../../../../../data/_data';
+import AnimatedButton from '../animatedButton/AnimatedButton';
+
 /**HardCoded Staff*/
 const layoutBreakPoint = 1280;
 
@@ -17,12 +19,23 @@ const ImageSection: React.FunctionComponent<{
   imageData: IF_ImgStaticData;
   children?: ReactNode;
   imageAlt?: string;
-}> = ({ imageData, imageAlt, children }) => {
+  //___
+  isSection_2_Open: boolean;
+  setIsSection_2_Open: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({
+  imageData,
+  imageAlt,
+  children,
+  isSection_2_Open,
+  setIsSection_2_Open,
+}) => {
   /**...**/
   const [ref, bounds] = useMeasure();
-  const { width } = useWindowSize({ screensNumber: 1 });
+  const { width, height } = useWindowSize({ screensNumber: 1 });
   const condition = width >= layoutBreakPoint;
-  const size = condition ? Math.min(bounds.width, bounds.height) : 'auto';
+  const size = condition
+    ? Math.min(bounds.width, bounds.height)
+    : Math.min(width, height);
   // console.log('size', size);
   /**JSX**/
   return (
@@ -42,8 +55,14 @@ const ImageSection: React.FunctionComponent<{
           height: size,
         }}
       >
-        {children}
-        {/* <div className="absolute inset-0 bg-vY" /> */}
+        <AnimatedButton
+          isSection_2_Open={isSection_2_Open}
+          onClick={() => {
+            // setIsSection_2_Open(prev => !prev);
+            setIsSection_2_Open(true);
+          }}
+          sniperColor={'border-grey'}
+        />
         <Image
           alt={imageAlt ? imageAlt : 'zdjęcie produktu'}
           src={imageData.image}
@@ -51,21 +70,9 @@ const ImageSection: React.FunctionComponent<{
           height={1200}
           // fill
           // sizes="1200"
-          // fill // intrinsic|fixed|responsive|fill allowed;  fill your parent bro! that is why I calculated width and height to make parent of square shape
+          // fill // intrinsic|fixed|responsive|fill allowed;  fill your parent
         />
-        <div className="absolute  left-[40%] bottom-[0%] w-[10px] h-[20%]  ">
-          <div className="flex gap-1 items-center  flex-col w-full h-full ">
-            <div className="h-[5%]  aspect-square bg-corpo" />
-            <div className="relative w-[1px] h-[80%] bg-vY overflow-hidden">
-              <FlyingLine
-                variantsNumber={4}
-                bgColor={'bg-light'}
-                fgColor={'bg-corpo'}
-              />
-            </div>
-            <div className="h-[5%]  aspect-square bg-corpo" />
-          </div>
-        </div>
+        <ScrollPrompt isSection_2_Open={isSection_2_Open} />
       </div>
     </motion.div>
   );

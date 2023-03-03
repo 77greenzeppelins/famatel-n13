@@ -11,10 +11,11 @@ const delayForSniper = 3;
 
 /**--------------------------------------------------------**/
 const AnimatedButton: React.FunctionComponent<{
+  isSection_2_Open: boolean;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   children?: ReactNode;
   sniperColor?: string;
-}> = ({ onClick, sniperColor, children }) => {
+}> = ({ isSection_2_Open, onClick, sniperColor, children }) => {
   /**JSX**/
   return (
     <motion.div
@@ -32,7 +33,7 @@ const AnimatedButton: React.FunctionComponent<{
         transition={animatedButton.transition}
         onClick={onClick}
       >
-        <Sniper borderColor={sniperColor} />
+        <Sniper borderColor={sniperColor} hoverCondition={isSection_2_Open} />
         {children}
       </AriaMotionButton>
     </motion.div>
