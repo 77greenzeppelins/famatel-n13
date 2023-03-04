@@ -19,7 +19,7 @@ const PseudoTechPanel = () => {
             <div className="flex items-center pl-2 py-2 ">
               {' '}
               <div className="fc w-[10px] h-[10px] bg-dark border-[1px] border-greyShade1"></div>{' '}
-              <div className="fc w-[40px] h-[1px] border-[1px] border-greyShade1"></div>{' '}
+              <div className="fc w-[10%] h-[50%] border-t-[1px] border-greyShade1"></div>{' '}
               <div className="pl-2 ">
                 <p className="p-small text-greyShade1">IP 67</p>
               </div>
