@@ -38,8 +38,8 @@ const AnimatedButton: React.FunctionComponent<{
         >
           <AriaMotionButton
             ariaLabel="Zobacz opis wtyczki"
-            buttonStyle="w-full h-full focus:outline-none disable-soft  group"
-            //___pointer-events-auto
+            buttonStyle="w-full h-full focus:outline-none group"
+            //___pointer-events-auto disable-soft
             // whileTap={animatedButton.whileTap}
             // whileHover={animatedButton.whileHover}
             // transition={animatedButton.transition}
