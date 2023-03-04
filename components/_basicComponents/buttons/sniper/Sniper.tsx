@@ -8,21 +8,15 @@ const Sniper: React.FunctionComponent<{
   /**JSX**/
   return (
     <div className="relative fc w-full h-full">
-      {/* <div className="absolute inset-0 bg-dark opacity-50" /> */}
-      <div className="absolute top-0 left-0 h-[50%] w-[50%]">
-        <div className="relative w-full h-full">
-          {/* <div className="absolute inset-0 bg-dark opacity-50" /> */}
-          <div
-            className={` absolute top-0 left-0 h-[50%] w-[50%] border-t border-l ${
-              borderColor ? borderColor : 'border-light'
-            } opacity-60 ${
-              hoverCondition
-                ? ''
-                : 'group-hover:opacity-100 group-hover:h-[55%] group-hover:w-[55%] group-hover:border-corpo duration-[0.6s] ease-in delay-[0.1s]'
-            }`}
-          />
-        </div>
-      </div>
+      <div
+        className={` absolute top-0 left-0 h-[20%] w-[20%] border-t border-l ${
+          borderColor ? borderColor : 'border-light'
+        } opacity-60 ${
+          hoverCondition
+            ? ''
+            : 'group-hover:opacity-100 group-hover:h-[25%] group-hover:w-[25%] group-hover:border-corpo duration-[0.6s] ease-in delay-[0.1s]'
+        }`}
+      />
 
       <div
         className={`absolute bottom-0 left-0 h-[20%] w-[20%] border-b border-l ${
@@ -52,32 +46,33 @@ const Sniper: React.FunctionComponent<{
         }`}
       />
     </div>
-    // <div className="relative fc  w-full h-full group">
-    //   <div
-    //     className={`absolute top-0 left-0 h-[20%] w-[20%] border-t border-l ${
-    //       borderColor ? borderColor : 'border-light'
-    //     } opacity-60 group-hover:opacity-100 group-hover:h-[70%]  duration-[0.4s] ease-in delay-[0.2s]`}
-    //   />
-    //   <div
-    //     className={`absolute bottom-0 left-0 h-[20%] w-[20%] border-b border-l ${
-    //       borderColor ? borderColor : 'border-light'
-    //     } opacity-60 group-hover:opacity-100 group-hover:w-[70%] duration-[0.4s] ease-in delay-[0.2s]`}
-    //   />
-    //   <div
-    //     className={`absolute bottom-0 right-0 h-[20%] w-[20%] border-b border-r ${
-    //       borderColor ? borderColor : 'border-light'
-    //     } opacity-60 group-hover:opacity-100 group-hover:h-[70%] duration-[0.4s] ease-in delay-[0.2s]`}
-    //   />
-    //   <div
-    //     className={`absolute top-0 right-0 h-[20%] w-[20%] border-t border-r ${
-    //       borderColor ? borderColor : 'border-light'
-    //     } opacity-60 group-hover:opacity-100 group-hover:w-[70%] duration-[0.4s] ease-in delay-[0.2s]`}
-    //   />
-    // </div>
   );
 };
 
 export default Sniper;
+
+// <div className="relative fc  w-full h-full group">
+//   <div
+//     className={`absolute top-0 left-0 h-[20%] w-[20%] border-t border-l ${
+//       borderColor ? borderColor : 'border-light'
+//     } opacity-60 group-hover:opacity-100 group-hover:h-[70%]  duration-[0.4s] ease-in delay-[0.2s]`}
+//   />
+//   <div
+//     className={`absolute bottom-0 left-0 h-[20%] w-[20%] border-b border-l ${
+//       borderColor ? borderColor : 'border-light'
+//     } opacity-60 group-hover:opacity-100 group-hover:w-[70%] duration-[0.4s] ease-in delay-[0.2s]`}
+//   />
+//   <div
+//     className={`absolute bottom-0 right-0 h-[20%] w-[20%] border-b border-r ${
+//       borderColor ? borderColor : 'border-light'
+//     } opacity-60 group-hover:opacity-100 group-hover:h-[70%] duration-[0.4s] ease-in delay-[0.2s]`}
+//   />
+//   <div
+//     className={`absolute top-0 right-0 h-[20%] w-[20%] border-t border-r ${
+//       borderColor ? borderColor : 'border-light'
+//     } opacity-60 group-hover:opacity-100 group-hover:w-[70%] duration-[0.4s] ease-in delay-[0.2s]`}
+//   />
+// </div>
 
 // <motion.div
 //   className={`flex justify-between flex-col w-full h-full ${

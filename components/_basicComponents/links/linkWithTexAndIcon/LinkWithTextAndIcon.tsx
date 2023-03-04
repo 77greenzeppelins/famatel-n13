@@ -10,7 +10,7 @@ import { corpoColors } from '../../../../data/_data';
 /**Hardcoded Data**/
 const mainContinerDefaultStyle = '';
 const defaultAStyle =
-  'fc gap-4 h-full border border-grey hover:border-corpo ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-2 py-1';
+  'fc gap-4 h-full border border-greyShade1 hover:border-corpo ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-2 py-1';
 
 /**----------------------------------------------------------------**/
 const LinkWithTextAndIcon: React.FunctionComponent<{
@@ -66,11 +66,11 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
           textStyle={
             pStyle
               ? pStyle
-              : `flex items-center h-full header-link-label text-grey group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] px-2`
+              : `flex items-center h-full header-link-label text-grey group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] px-2 `
           }
         />
 
-        <ArrowLongRightIcon containerStyle="fc h-6 w-6 aspect-square stroke-grey group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center " />
+        <ArrowLongRightIcon containerStyle="fc h-6 w-6 aspect-square stroke-greyShade1 group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center " />
       </AriaJSLink>
     </div>
   );

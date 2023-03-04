@@ -30,7 +30,7 @@ const AnimatedButton: React.FunctionComponent<{
       <div className="relative w-full h-full fc">
         {/*------------------------------------------------------------------------*/}
         {/*------------------------------------------------------------------------*/}
-        ;
+
         <motion.div
           className="w-full h-full "
           animate={{ rotate: isSection_2_Open ? 90 : 0 }}

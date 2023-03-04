@@ -10,6 +10,7 @@ import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
 import useMeasure from 'react-use-measure';
 import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
 import AnimatedButton from '../animatedButton/AnimatedButton';
+import PseudoTechPanel from '../pseudoTechPanel/PseudoTechPanel';
 
 /**HardCoded Staff*/
 const layoutBreakPoint = 1280;
@@ -48,7 +49,7 @@ const ImageSection: React.FunctionComponent<{
     >
       <div
         data-layout="DynamicContainer"
-        className="relative fc "
+        className="relative fc"
         style={{
           // width: Math.min(bounds.width, bounds.height),
           // height: Math.min(bounds.width, bounds.height),
@@ -56,6 +57,7 @@ const ImageSection: React.FunctionComponent<{
           height: size,
         }}
       >
+        <PseudoTechPanel />
         <AnimatedButton
           isSection_2_Open={isSection_2_Open}
           onClick={() => {
