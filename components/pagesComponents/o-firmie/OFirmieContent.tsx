@@ -15,16 +15,18 @@ const OFirmieContent = () => {
       className="flex flex-col justify-center w-screen "
       //___pt-[60px] min-h-screen divide-y-[1px] divide-greyShade2
     >
-      {/* <div className="absolute inset-0 bg-corpo" /> */}
-      <Section_1
-        isSection_2_Open={isSection_2_Open}
-        setIsSection_2_Open={setIsSection_2_Open}
-      />
-
-      <Section_2
-        isSection_2_Open={isSection_2_Open}
-        setIsSection_2_Open={setIsSection_2_Open}
-      />
+      <div className="z-[10]">
+        <Section_1
+          isSection_2_Open={isSection_2_Open}
+          setIsSection_2_Open={setIsSection_2_Open}
+        />
+      </div>
+      <div className="z-[8]">
+        <Section_2
+          isSection_2_Open={isSection_2_Open}
+          setIsSection_2_Open={setIsSection_2_Open}
+        />
+      </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const Sniper: React.FunctionComponent<{
       {/* <div className="absolute inset-0 bg-dark opacity-50" /> */}
       <div className="absolute top-0 left-0 h-[50%] w-[50%]">
         <div className="relative w-full h-full">
-          <div className="absolute inset-0 bg-dark opacity-50" />
+          {/* <div className="absolute inset-0 bg-dark opacity-50" /> */}
           <div
             className={` absolute top-0 left-0 h-[50%] w-[50%] border-t border-l ${
               borderColor ? borderColor : 'border-light'

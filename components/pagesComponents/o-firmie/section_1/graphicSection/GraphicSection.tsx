@@ -17,7 +17,7 @@ const GraphicSection: React.FunctionComponent<{
     <motion.div
       data-component="GraphicSection__container"
       // className={`relative flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px] xl:h-screen `}
-      className={`relative flex justify-end items-center w-[95%]  xl:w-full xl:max-w-[950px] xl:h-screen `}
+      className={`relative flex justify-end items-center w-full xl:max-w-[950px] xl:h-screen `}
     >
       <ImageSection
         imageData={imgOFirmiePage[1]}

@@ -35,7 +35,7 @@ const ImageSection: React.FunctionComponent<{
   const condition = width >= layoutBreakPoint;
   const size = condition
     ? Math.min(bounds.width, bounds.height)
-    : Math.min(width, height);
+    : Math.min(width, height) * 0.98;
   console.log('size', size);
   /**JSX**/
   return (
@@ -48,7 +48,7 @@ const ImageSection: React.FunctionComponent<{
     >
       <div
         data-layout="DynamicContainer"
-        className="relative fc w-full h-full "
+        className="relative fc "
         style={{
           // width: Math.min(bounds.width, bounds.height),
           // height: Math.min(bounds.width, bounds.height),
