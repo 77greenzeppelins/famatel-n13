@@ -32,8 +32,10 @@ const AriaMotionButton: React.FunctionComponent<IF_AriaMotionButton> = ({
       <motion.button
         aria-label={ariaLabel}
         className={`${
-          buttonStyle ? buttonStyle : 'relative fc'
-        } w-full h-full focus:outline-none disable pointer-events-auto group`}
+          buttonStyle
+            ? buttonStyle
+            : 'relative fc w-full h-full focus:outline-none disable pointer-events-auto group'
+        } `}
         whileTap={whileTap}
         whileHover={whileHover}
         transition={transition}
