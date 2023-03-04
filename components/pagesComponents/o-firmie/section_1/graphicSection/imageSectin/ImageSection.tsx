@@ -58,7 +58,7 @@ const ImageSection: React.FunctionComponent<{
           height: size,
         }}
       >
-        <PseudoTechPanel />
+        <PseudoTechPanel isSection_2_Open={isSection_2_Open} />
         <AnimatedButton
           isSection_2_Open={isSection_2_Open}
           onClick={() => {
