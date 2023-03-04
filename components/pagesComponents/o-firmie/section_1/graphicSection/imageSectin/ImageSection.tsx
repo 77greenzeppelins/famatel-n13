@@ -58,15 +58,14 @@ const ImageSection: React.FunctionComponent<{
           height: size,
         }}
       >
-        <PseudoTechPanel />
-        <AnimatedButton
+        {/* <PseudoTechPanel /> */}
+        {/* <AnimatedButton
           isSection_2_Open={isSection_2_Open}
           onClick={() => {
-            // setIsSection_2_Open(prev => !prev);
             setIsSection_2_Open(true);
           }}
           sniperColor={'border-grey'}
-        />
+        /> */}
         <Image
           alt={imageAlt ? imageAlt : 'zdjęcie produktu'}
           src={imageData.image}
