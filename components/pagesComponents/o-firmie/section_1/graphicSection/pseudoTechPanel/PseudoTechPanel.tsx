@@ -7,21 +7,23 @@ const PseudoTechPanel = () => {
       <div className="relative fc w-full h-full">
         <div className={` absolute top-0 left-0 h-[20%] w-[20%] `} />
         <div className={`absolute bottom-0 left-0 h-[50%] w-[50%] `}>
-          <div className="relative flex flex-col justify-end w-full h-full ">
-            <div className="flex items-center pl-2 py-2 ">
-              {' '}
-              <div className="fc w-[10px] h-[10px] bg-dark border-[1px] border-greyShade1"></div>{' '}
-              <div className="fc w-[20px] h-[1px] border-[1px] border-greyShade1"></div>{' '}
-              <div className="pl-2 ">
-                <p className="p-small text-greyShade1">IP 67</p>
+          <div className="relative flex items-end w-full h-full">
+            <div className="w-full  flex flex-col pl-2">
+              <div className="flex items-center  ">
+                {' '}
+                <div className="fc w-[10px] h-[10px] bg-dark border-[1px] border-greyShade1"></div>{' '}
+                <div className="fc w-[10%] h-[1px] border-t-[1px] border-greyShade1"></div>{' '}
+                <div className="pl-2 ">
+                  <p className="p-small text-greyShade1">IP 67</p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-center pl-2 py-2 ">
-              {' '}
-              <div className="fc w-[10px] h-[10px] bg-dark border-[1px] border-greyShade1"></div>{' '}
-              <div className="fc w-[10%] h-[50%] border-t-[1px] border-greyShade1"></div>{' '}
-              <div className="pl-2 ">
-                <p className="p-small text-greyShade1">IP 67</p>
+              <div className="flex items-center h-[30px]  ">
+                {' '}
+                <div className="fc w-[10px] h-[10px] bg-dark border-[1px] border-greyShade1"></div>{' '}
+                <div className=" fc w-[15%] h-[1px] border-t-[1px] border-greyShade1"></div>{' '}
+                <div className="pl-2 ">
+                  <p className="p-small text-greyShade1">125 A</p>
+                </div>
               </div>
             </div>
             <div></div>
