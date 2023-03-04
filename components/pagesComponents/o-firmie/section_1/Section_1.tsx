@@ -15,8 +15,8 @@ const Section_1: React.FunctionComponent<{
       className={`flex flex-col-reverse items-end w-full xl:flex-row-reverse xl:items-center justify-center min-h-[100.1vh] xl:h-screen`}
     >
       <div
-        className="relative flex items-start justify-end w-full sm:w-[80%] md:w-[70%] md:aspect-h-1  xl:w-[55%] xl:h-auto xl:aspect-none xs:-mt-20 lg:-mt-[140px] xl:mt-0"
-        //___ xs:-mt-20 lg:-mt-[140px] xl:mt-0
+        className="relative flex items-start justify-end w-[98%] sm:w-[95%] md:w-[90%] lg:w-[80%] xl:w-[55%] xl:h-auto xs:-mt-20 lg:-mt-[140px] xl:mt-0"
+        //___ xs:-mt-20 lg:-mt-[140px] xl:mt-0 md:aspect-h-1  xl:aspect-none
       >
         <GraphicSection
           isSection_2_Open={isSection_2_Open}
