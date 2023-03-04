@@ -12,10 +12,10 @@ const Section_1: React.FunctionComponent<{
   return (
     <div
       data-component="OFirmieSlider__container"
-      className={`flex flex-col-reverse w-full xl:flex-row-reverse justify-center min-h-[100.1vh] xl:h-screen`}
+      className={`flex flex-col-reverse items-end w-full xl:flex-row-reverse xl:items-center justify-center min-h-[100.1vh] xl:h-screen`}
     >
       <div
-        className="relative flex items-start justify-end w-full xl:w-[55%] xs:-mt-20 lg:-mt-[180px] xl:mt-0"
+        className="relative flex items-start justify-end w-full sm:w-[80%] md:w-[70%] md:aspect-h-1  xl:w-[55%] xl:h-auto xl:aspect-none xs:-mt-20 lg:-mt-[140px] xl:mt-0"
         //___ xs:-mt-20 lg:-mt-[140px] xl:mt-0
       >
         <GraphicSection

@@ -34,9 +34,10 @@ const ImageSection: React.FunctionComponent<{
   const [ref, bounds] = useMeasure();
   const { width, height } = useWindowSize({ screensNumber: 1 });
   const condition = width >= layoutBreakPoint;
-  const size = condition
-    ? Math.min(bounds.width, bounds.height)
-    : Math.min(width, height) * 0.98;
+  // const size = condition
+  //   ? Math.min(bounds.width, bounds.height)
+  //   : Math.min(width, height) * 0.98;
+  const size = condition ? Math.min(bounds.width, bounds.height) : 'auto';
   console.log('size', size);
   /**JSX**/
   return (
