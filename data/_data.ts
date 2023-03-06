@@ -208,6 +208,15 @@ const smallPseudoHeaders = {
   // p1: 'Produkt aktualnie niedostępny',
   p1: 'PRODUKT AKTUALNIE NIEDOSTĘPNY',
 };
+
+/***...*/
+const story = {
+  s1: [
+    // 'Ten model to prawdziwy twardziel',
+    // 'Rozwiazuje na codzień wiele problemów',
+    'Ten model stworzony jest do działań w szczególnie wymagających warunkach.',
+  ],
+};
 /**...............**/
 export {
   pagesUrl,
@@ -226,6 +235,8 @@ export {
   textLabels,
   splitedPathParts,
   smallPseudoHeaders,
+  //___
+  story,
 };
 
 // const mainCategories: IF_MainCategorySpecification[] = [
