@@ -27,7 +27,7 @@ const OFirmieContent = () => {
           setIsSection_2_Open={setIsSection_2_Open}
         />
       </div>
-      <div className="h-screen bg-dark" />
+      {/* <div className="h-screen bg-dark" /> */}
     </div>
   );
 };

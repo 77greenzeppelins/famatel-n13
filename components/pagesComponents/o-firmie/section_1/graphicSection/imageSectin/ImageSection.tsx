@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 /**TS**/
 import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
 /** */
-import useMeasure, { RectReadOnly } from 'react-use-measure';
+import useMeasure from 'react-use-measure';
 import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
 import AnimatedButton from '../animatedButton/AnimatedButton';
 import PseudoTechPanel from '../pseudoTechPanel/PseudoTechPanel';
@@ -36,13 +36,12 @@ const ImageSection: React.FunctionComponent<{
   const { width } = useWindowSize({ screensNumber: 1 });
   const condition = width >= layoutBreakPoint;
   const size = condition ? Math.min(bounds.width, bounds.height) : 'auto';
-  console.log('bounds', bounds);
   /**JSX**/
   return (
     <div
       ref={ref}
       data-component="ImageSection__Ref-container"
-      className="flex justify-end xl:items-center w-full h-full "
+      className="flex justify-end w-full h-full xl:items-center "
     >
       <div
         data-layout="DynamicallySizedContainer"

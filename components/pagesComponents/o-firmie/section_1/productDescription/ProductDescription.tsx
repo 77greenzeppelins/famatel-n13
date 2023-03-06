@@ -38,6 +38,7 @@ const ProductDescription: React.FunctionComponent<{
     <AnimatePresence>
       {isProductDescriptionOpen && (
         <motion.div
+          data-component="ProductDescription__container"
           // className="absolute inset-0 px-[2%] xxs:px-[6%] md:px-[60px] xl:px-0 xl:pr-[80px] xxl:pr-[100px] xl:pt-[70px] bg-dark "
           //___mix of inner-pr-md-xl-xxl & inner-px-md-xl-xxl
           className="bg-dark"
@@ -49,7 +50,7 @@ const ProductDescription: React.FunctionComponent<{
             className="flex flex-col gap-y-8 xl:flex-row-reverse xl:gap-y-0 xl:gap-x-8 xxl:gap-x-20 inner-px-md-xl-xxl"
             // className="relative flex justify-center flex-col xl:flex-col  gap-y-2 w-full h-full  mt-[40px] xs:mt-[80px] md:mt-[60px] lg:mt-[180px]  xl:items-start xl:justify-center xl:mt-0 "
           >
-            {/* <div className="absolute -top-6 xs:top-0 right-0 fc w-6 h-6 xl:relative xl:flex xl:justify-end xl:w-full">
+            {/* <div className="absolute right-0 w-6 h-6 -top-6 xs:top-0 fc xl:relative xl:flex xl:justify-end xl:w-full">
               <CloseButton
                 productDescriptionOpener={productDescriptionOpener}
                 buttonStyle="relative fc focus:outline-none disable pointer-events-auto group"
@@ -82,7 +83,7 @@ const ProductDescription: React.FunctionComponent<{
                 </div>
               ))}
             </div>
-            <div className="flex justify-start bg-dark w-full max-w-[700px] xl:max-w-full">
+            <div className="flex justify-start bg-dark w-full max-w-[700px] lg:max-w-[1000px] xl:max-w-full">
               <SVG_14307_P28 />
             </div>
           </div>
