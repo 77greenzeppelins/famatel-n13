@@ -45,21 +45,22 @@ const TextForEntry = () => {
       ref={elementInView}
       className="relative flex flex-col inner-px-md-xl-xxl"
     >
-      <motion.p
-        ref={ref}
-        className="text-light text-center text-[2rem] xs:text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] xxl:text-[5rem] font-bold tracking-[2px] leading-tight"
-        animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.9 }}
-        transition={{
-          duration: 0.6,
-          delay: 0,
-          // type: 'spring',
-          // bounce: 0.4,
-          // duration: 0.8,
-        }}
-      >
-        {story.s1[0]}
-      </motion.p>
-      {/* <motion.div
+      <div className="xl:px-20">
+        <motion.p
+          ref={ref}
+          className="text-light text-center text-[1.5rem] xs:text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[3rem] xxl:text-[3.5rem] font-bold tracking-[2px] leading-tight"
+          animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.9 }}
+          transition={{
+            duration: 0.6,
+            delay: 0,
+            // type: 'spring',
+            // bounce: 0.4,
+            // duration: 0.8,
+          }}
+        >
+          {story.s1[0]}
+        </motion.p>
+        {/* <motion.div
       
         className="absolute inset-0 origin-left bg-dark z-1"
         animate={{ opacity: isInView ? 0 : 1 }}
@@ -69,10 +70,11 @@ const TextForEntry = () => {
         // whileInView={{ opacity: 0.5 }}
         // viewport={{ once: true, amount: 0.9 }}
       /> */}
-      {/* <motion.div
+        {/* <motion.div
         className="relative z-10 h-10 origin-left bg-vY"
         style={{ width }}
       /> */}
+      </div>
     </div>
   );
 };
