@@ -11,7 +11,7 @@ const Section_2: React.FunctionComponent<{
   return (
     <AnimatePresence>
       {isSection_2_Open && (
-        <motion.div className="min-h-[50vh]">
+        <motion.div className="flex flex-col gap-10 min-h-[50vh]">
           <div className="hidden md:flex w-full h-[10vh] min-h-[24px] max-h-[50px] bg-dark" />
 
           <TextForEntry />
