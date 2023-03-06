@@ -6,6 +6,7 @@ import AnimatedButton from './animatedButton/AnimatedButton';
 import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFirmiePage';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
+import { RectReadOnly } from 'react-use-measure';
 
 /**-------------------------------------------------------------------**/
 const GraphicSection: React.FunctionComponent<{
@@ -17,13 +18,13 @@ const GraphicSection: React.FunctionComponent<{
     <motion.div
       data-component="GraphicSection__container"
       // className={`relative flex justify-end items-center w-[95%] md:w-[90%] md:max-w-[700px] xl:w-full xl:max-w-[950px] xl:h-screen `}
-      className={`relative flex justify-end items-center w-full xl:max-w-[950px] xl:h-screen `}
+      className={`relative flex justify-end items-center w-full xl:max-w-[950px] xl:h-screen xxl:max-w-1150px]`}
     >
       <ImageSection
         imageData={imgOFirmiePage[1]}
         isSection_2_Open={isSection_2_Open}
         setIsSection_2_Open={setIsSection_2_Open}
-      ></ImageSection>
+      />
       <motion.div
         className="absolute inset-0 w-full h-full bg-dark origin-bottom-right"
         initial={{ scaleX: 1 }}

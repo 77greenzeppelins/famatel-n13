@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 /**TS**/
 import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
 /** */
-import useMeasure from 'react-use-measure';
+import useMeasure, { RectReadOnly } from 'react-use-measure';
 import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
 import AnimatedButton from '../animatedButton/AnimatedButton';
 import PseudoTechPanel from '../pseudoTechPanel/PseudoTechPanel';
@@ -22,6 +22,7 @@ const ImageSection: React.FunctionComponent<{
   imageAlt?: string;
   //___
   isSection_2_Open: boolean;
+
   setIsSection_2_Open: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({
   imageData,
@@ -32,28 +33,21 @@ const ImageSection: React.FunctionComponent<{
 }) => {
   /**...**/
   const [ref, bounds] = useMeasure();
-  const { width, height } = useWindowSize({ screensNumber: 1 });
+  const { width } = useWindowSize({ screensNumber: 1 });
   const condition = width >= layoutBreakPoint;
-  // const size = condition
-  //   ? Math.min(bounds.width, bounds.height)
-  //   : Math.min(width, height) * 0.98;
   const size = condition ? Math.min(bounds.width, bounds.height) : 'auto';
-  console.log('size', size);
+  console.log('bounds', bounds);
   /**JSX**/
   return (
-    <motion.div
+    <div
       ref={ref}
-      data-component="ImageSection__container"
-      // initial={{ opacity: 0 }}
-      // animate={{ opacity: 1, transition: { delay: 0.4 } }}
+      data-component="ImageSection__Ref-container"
       className="flex justify-end xl:items-center w-full h-full "
     >
       <div
-        data-layout="DynamicContainer"
+        data-layout="DynamicallySizedContainer"
         className="relative fc"
         style={{
-          // width: Math.min(bounds.width, bounds.height),
-          // height: Math.min(bounds.width, bounds.height),
           width: size,
           height: size,
         }}
@@ -75,9 +69,16 @@ const ImageSection: React.FunctionComponent<{
           // sizes="1200"
           // fill // intrinsic|fixed|responsive|fill allowed;  fill your parent
         />
-        <ScrollPrompt isSection_2_Open={isSection_2_Open} />
+        {/* <ScrollPrompt isSection_2_Open={isSection_2_Open} /> */}
       </div>
-    </motion.div>
+      {/* <div
+        className="absolute left-[40%] top-[80% w-[10px] h-[20%]"
+        //___-bottom-[10%]
+      >
+        <ScrollPrompt isSection_2_Open={isSection_2_Open} />
+      </div> */}
+      <ScrollPrompt isSection_2_Open={isSection_2_Open} />
+    </div>
   );
 };
 
