@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 /**Components*/
 import PageTransitionHolder from '../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
-import ProductPageFixedOverlay from '../components/layouts/pseudoLayouts/productPageFixedOverlay/ProductPageFixedOverlay';
+// import ProductPageFixedOverlay from '../components/layouts/pseudoLayouts/productPageFixedOverlay/ProductPageFixedOverlay';
 import MainHtmlElement from '../components/layouts/pseudoLayouts/mainHtmlElement/MainHtmlElement';
 /**CSS / Tailwind Staff*/
 import './globals.css'; // import '../styles/globals.css';
@@ -21,6 +21,8 @@ type AppPropsWithLayout = AppProps & {
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? (page => page);
+
+  //var supportsInertiaScrolling = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
 
   // return getLayout(<Component {...pageProps} />);
   return getLayout(
