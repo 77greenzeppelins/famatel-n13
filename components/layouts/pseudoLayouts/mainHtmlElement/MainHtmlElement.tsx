@@ -1,9 +1,12 @@
-import React from 'react';
-import { useRouter } from 'next/router';
+import React, { useEffect } from 'react';
+import LocomotiveScroll from 'locomotive-scroll';
+// import { useRouter } from 'next/router';
 /**Fonts Staff
  * resource: doc. & https://www.youtube.com/watch?v=L8_98i_bMMA
  **/
 import localFont from '@next/font/local';
+import locScrollInstance from '../../pagesLayouts/locomotiveComponents/locScrollInstance';
+// import LocomotiveContainer from '../../pagesLayouts/locomotiveComponents/LocomotiveContainer';
 const haasFont = localFont({
   src: '../../../../public/fonts/HaasGrotDisp-55Roman.woff2',
 });
@@ -20,22 +23,70 @@ const haasFont = localFont({
 const MainHtmlElement: React.FunctionComponent<{
   children: React.ReactNode;
 }> = ({ children }) => {
-  /**useRouter**/
-  const route = useRouter();
-  // const condition = route.pathname === '/';
-  //   console.log('condition:', condition);
+  /**...**/
+
+  // useEffect(() => {
+  // locScrollInstance();
+  //___required by TS
+  // const el = document.querySelector('[data-scroll-container]') as HTMLElement;
+  //__create instance of LocomotiveScroll
+  // const scroll = new LocomotiveScroll({
+  //   // ___specify the el property as the scrolling container, which we select using a data attribute...
+  //   el: el,
+  //   smooth: true,
+  //   // multiplier: 0.5,
+  //   // smartphone: {
+  //   //   smooth: true,
+  //   // },
+  //   // smoothMobile: false,
+  //   // resetNativeScroll: true,
+  //   // inertia: 0.75,
+  // });
+  // console.log('el', el);
+  // return () => {
+  //   if (scroll) scroll.destroy();
+  // };
+  // }, []);
 
   /**JSX**/
   return (
+    // <LocomotiveContainer>
     <main
-      // className={`${haasFont.className} ${
-      //   condition ? 'fixed' : 'flex'
-      // } w-full h-full`}
       className={`${haasFont.className} flex w-full h-full`}
+      data-scroll-container
     >
       {children}
     </main>
+    // </LocomotiveContainer>
   );
 };
 
 export default MainHtmlElement;
+
+// useEffect(() => {
+//   let scroll;
+//   import('locomotive-scroll').then(locomotiveModule => {
+//     scroll = new locomotiveModule.default({
+//       el: document.querySelector('[data-scroll-container]'),
+//       smooth: true,
+//       smoothMobile: false,
+//       resetNativeScroll: true,
+//     });
+//   });
+
+//   // `useEffect`'s cleanup phase
+//   return () => {
+//     if (scroll) scroll.destroy();
+//   };
+// });
+
+{
+  //____this might be required as "https://www.appsloveworld.com/reactjs/200/96/how-to-correctly-use-locomotive-scroll-with-next-js-routing?utm_content=cmp-true mentioned": "Locomotive works by initialising itself and reading the actual document size on page load. but the situation with next js routing is that the page loads only once, after that its only components changes, no actual page reloading. so the Scroll instance will assume the page is still the same size on load. this leads to a lot of bugs and page breakage."
+  // useEffect(() => window.dispatchEvent(new Event('resize')), [Component]);
+  // this way the resize event will trigger every time the page "component" is switched. the locomotive Scroll instance will pick up this event and recalculate the page size according to the new component size.
+}
+
+/**useRouter**/
+// const route = useRouter();
+// const condition = route.pathname === '/';
+//   console.log('condition:', condition);
