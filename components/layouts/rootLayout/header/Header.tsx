@@ -3,15 +3,14 @@ import HeaderLogoLink from './logoLink/HeaderLogoLink';
 import NavForMainPages from './navSection/NavForMainPages';
 /*FramerMotion Staff*/
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import MobileMenuOverlay from '../../../multipagesComponents/mobileMenu/mobileMenuOverlay/MobileMenuOverlay';
+
 /*Basic Data*/
 
 /******************************************************************************/
-const Header = () => {
-  /**Hook Section*/
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+const Header: React.FunctionComponent<{
+  setIsMobileMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isMobileMenuOpen: boolean;
+}> = ({ setIsMobileMenuOpen, isMobileMenuOpen }) => {
   /**JSX*/
   return (
     <header
@@ -47,11 +46,6 @@ const Header = () => {
           </motion.div>
         </div>
       </div>
-
-      <MobileMenuOverlay
-        isMobileMenuOpen={isMobileMenuOpen}
-        mobileMenuOpener={setIsMobileMenuOpen}
-      />
     </header>
   );
 };

@@ -217,6 +217,11 @@ const story = {
     'Ten model stworzony jest do działań w szczególnie wymagających warunkach.',
   ],
 };
+
+const mobileMenuData = {
+  minH: 500,
+  maxW: 500,
+};
 /**...............**/
 export {
   pagesUrl,
@@ -237,6 +242,8 @@ export {
   smallPseudoHeaders,
   //___
   story,
+  //___
+  mobileMenuData,
 };
 
 // const mainCategories: IF_MainCategorySpecification[] = [

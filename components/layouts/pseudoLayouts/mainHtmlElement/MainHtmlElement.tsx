@@ -5,7 +5,7 @@ import LocomotiveScroll from 'locomotive-scroll';
  * resource: doc. & https://www.youtube.com/watch?v=L8_98i_bMMA
  **/
 import localFont from '@next/font/local';
-import locScrollInstance from '../../pagesLayouts/locomotiveComponents/locScrollInstance';
+// import locScrollInstance from '../../pagesLayouts/locomotiveComponents/locScrollInstance';
 // import LocomotiveContainer from '../../pagesLayouts/locomotiveComponents/LocomotiveContainer';
 const haasFont = localFont({
   src: '../../../../public/fonts/HaasGrotDisp-55Roman.woff2',

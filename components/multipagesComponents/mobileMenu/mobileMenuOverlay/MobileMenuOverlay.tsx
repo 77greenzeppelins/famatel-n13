@@ -20,12 +20,13 @@ const MobileMenuOverlay: React.FunctionComponent<{
         <motion.div
           key={isMobileMenuOpen.toString()}
           // data-layout="wrapper_for_DropDownMenuHolder"
-          className="fixed left-0 right-0 top-[50px] bottom-[10vh] -z-[5] bg-vB"
-          // animate={{ opacity: isMobileMenuOpen ? 1 : 0 }}
-          animate={{ scaleX: isMobileMenuOpen ? 100 : 0 }}
-          transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
+          className="fixed left-0 right-0 top-[50px] bottom-0 z-[500] bg-dark"
+          initial={{ opacity: 0.9, x: '100%' }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0.9, x: '100%' }}
+          transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
         >
-          <div className="w-full h-full " />
+          <p className="text-grey text-2xl">{isMobileMenuOpen.toString()}</p>
         </motion.div>
       )}
     </AnimatePresence>
