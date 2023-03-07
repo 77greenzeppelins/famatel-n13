@@ -15,6 +15,7 @@ const haasFont = localFont({
 export default function Layout({ children }: { children: React.ReactNode }) {
   /**Local State*/
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [roadPrompt, setRoadPrompt] = useState(false);
 
   /**JSX**/
   return (
@@ -32,9 +33,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <MobileMenuOverlay
           isMobileMenuOpen={isMobileMenuOpen}
           mobileMenuOpener={setIsMobileMenuOpen}
+          setRoadPrompt={setRoadPrompt}
+          roadPrompt={roadPrompt}
         />
         <MobileContactPanel
           isMobileMenuOpen={isMobileMenuOpen}
+          setRoadPrompt={setRoadPrompt}
           maxW={mobileMenuData.maxW}
           minH={mobileMenuData.minH}
         />

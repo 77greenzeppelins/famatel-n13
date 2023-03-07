@@ -9,6 +9,7 @@ const ArrowButton: React.FunctionComponent<{
   ariaLabel?: string;
   buttonStyle?: string;
 }> = ({ children, ariaLabel, buttonStyle, onClickHandler }) => {
+  /**Local state**/
   const [isDisabled, setIsDisabled] = useState(false);
 
   const handleClick = () => {
@@ -34,8 +35,8 @@ const ArrowButton: React.FunctionComponent<{
         className={`${
           buttonStyle
             ? buttonStyle
-            : 'relative fc w-full h-full focus:outline-none disable pointer-events-auto group'
-        } `}
+            : 'relative fc w-full h-full focus:outline-none disable  group'
+        } ${isDisabled ? 'pointer-events-none' : 'pointer-events-auto'}`}
       >
         {children}
       </button>

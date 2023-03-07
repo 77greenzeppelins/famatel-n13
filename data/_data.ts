@@ -8,8 +8,8 @@ import {
 
 /**Instant Contact Buttons**/
 const linksToInstantContactData = {
-  phone: 'mailto:77greenzeppelins@gmail.com',
-  mobile: 'tel:798-905-558',
+  mail: 'mailto:77greenzeppelins@gmail.com',
+  mobile: 'tel:697-790-915',
 };
 
 /**Data for Data**/

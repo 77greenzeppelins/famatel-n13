@@ -5,7 +5,9 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 const MobileMenuOverlay: React.FunctionComponent<{
   mobileMenuOpener: Dispatch<SetStateAction<boolean>>;
   isMobileMenuOpen: boolean;
-}> = ({ isMobileMenuOpen, mobileMenuOpener }) => {
+  setRoadPrompt: React.Dispatch<React.SetStateAction<boolean>>;
+  roadPrompt: boolean;
+}> = ({ isMobileMenuOpen, mobileMenuOpener, setRoadPrompt, roadPrompt }) => {
   const router = useRouter();
   //
   useEffect(() => {
@@ -13,6 +15,10 @@ const MobileMenuOverlay: React.FunctionComponent<{
       mobileMenuOpener(false);
     };
   }, [mobileMenuOpener, router.asPath]);
+
+  useEffect(() => {
+    !isMobileMenuOpen && setRoadPrompt(false);
+  }, [isMobileMenuOpen, setRoadPrompt]);
   /**JSX*/
   return (
     <AnimatePresence>
@@ -26,7 +32,17 @@ const MobileMenuOverlay: React.FunctionComponent<{
           exit={{ opacity: 0.9, x: '100%' }}
           transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
         >
-          <p className="text-grey text-2xl">{isMobileMenuOpen.toString()}</p>
+          <div className="relative fc w-full h-full">
+            {' '}
+            <p className="text-grey text-2xl">{isMobileMenuOpen.toString()}</p>
+          </div>
+          <motion.div
+            className="absolute inset-0"
+            animate={{ x: roadPrompt ? 0 : '100%' }}
+            transition={{ duration: 0.4, delay: 0.1, ease: 'easeOut' }}
+          >
+            <div className="fc w-full h-full bg-greyShade2"> </div>
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>

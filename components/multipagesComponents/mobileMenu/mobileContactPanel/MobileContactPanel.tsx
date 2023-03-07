@@ -1,19 +1,21 @@
 import React from 'react';
 //___
-import { MapPinIcon } from '@heroicons/react/24/solid';
+
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
 import { PhoneIcon } from '@heroicons/react/24/solid';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
-import { corpoColors } from '../../../../data/_data';
+import { corpoColors, linksToInstantContactData } from '../../../../data/_data';
+import RoadPrompt from './roadPrompt/RoadPrompt';
 
 /**-------------------------------------------------------**/
 const MobileContactPanel: React.FunctionComponent<{
+  setRoadPrompt: React.Dispatch<React.SetStateAction<boolean>>;
   isMobileMenuOpen: boolean;
   maxW: number;
   minH: number;
-}> = ({ isMobileMenuOpen, maxW, minH }) => {
+}> = ({ setRoadPrompt, isMobileMenuOpen, maxW, minH }) => {
   const { width, height } = useWindowSize({ screensNumber: 1 });
 
   const mountingCondition = isMobileMenuOpen && width < maxW && height > minH;
@@ -47,18 +49,15 @@ const MobileContactPanel: React.FunctionComponent<{
                   whileTap={{ scale: 0.95, borderColor: corpoColors.orange }}
                 >
                   <a
-                    href="mailto:77greenzeppelins@gmail.com"
+                    href={linksToInstantContactData.mail}
                     className="fc w-full h-full no-sparkling"
                   >
                     <EnvelopeIcon className="h-[40px] w-[40px] text-grey" />
                   </a>
                 </motion.div>
               </div>
-              <div className="fc p-1 bg-corpo">
-                <div className="" />
-                {/* <MapOpener>
-                  <MapPinIcon className="h-[50px] w-[50px] text-dark" />
-                </MapOpener> */}
+              <div className="fc ">
+                <RoadPrompt setRoadPrompt={setRoadPrompt} />
               </div>
               <div className="fc ">
                 <motion.div
@@ -66,19 +65,13 @@ const MobileContactPanel: React.FunctionComponent<{
                   whileTap={{ scale: 0.95, borderColor: corpoColors.orange }}
                 >
                   <a
-                    href="tel:798-905-558"
+                    href={linksToInstantContactData.mobile}
                     className="fc w-full h-full no-sparkling"
                   >
                     <PhoneIcon className="h-[40px] w-[40px] text-grey" />
                   </a>
                 </motion.div>
               </div>
-              {/* <div className="fc p-1">
-                <div className="bg-corpo" />
-                <MapOpener>
-                  <MapPinIcon className="h-[50px] w-[50px] text-dark" />
-                </MapOpener>
-              </div> */}
             </div>
           </motion.div>
         </motion.div>
