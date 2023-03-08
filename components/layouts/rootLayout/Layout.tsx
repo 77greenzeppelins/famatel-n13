@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 /**Components*/
 import Header from './header/Header';
 /**Basic Data**/
-import { mobileMenuData } from '../../../data/_data';
+import { mobileMenuData, layoutZIndex } from '../../../data/_data';
 /**Font Staff**/
 import localFont from '@next/font/local';
 import MobileContactPanel from '../../multipagesComponents/mobileMenu/mobileContactPanel/MobileContactPanel';
@@ -29,6 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Header
           setIsMobileMenuOpen={setIsMobileMenuOpen}
           isMobileMenuOpen={isMobileMenuOpen}
+          layoutZIndex={layoutZIndex.header}
         />
         <MobileMenuOverlay
           isMobileMenuOpen={isMobileMenuOpen}

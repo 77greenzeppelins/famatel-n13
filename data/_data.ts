@@ -178,7 +178,7 @@ const splitedPathParts = {
 /**Aria staff*/
 const closeOverlay = 'przycisk: zamknij okno';
 /**Layout => z-index**/
-const LayoutzIndex = {
+const layoutZIndex = {
   turboModal: 'z-[600]',
   header: 'z-[500]',
   mobileMenuOverlay: 'z-[510]',
@@ -238,7 +238,7 @@ export {
   //__12.02
   linksToInstantContactData,
   closeOverlay,
-  LayoutzIndex,
+  layoutZIndex,
   //___
   textLabels,
   splitedPathParts,

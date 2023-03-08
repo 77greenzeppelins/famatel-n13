@@ -9,7 +9,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**Basic Data**/
 import { corpoColors, linksToInstantContactData } from '../../../../data/_data';
-import { LayoutzIndex } from '../../../../data/_data';
 
 /**-------------------------------------------------------**/
 const MobileContactPanel: React.FunctionComponent<{
@@ -30,7 +29,7 @@ const MobileContactPanel: React.FunctionComponent<{
         <motion.div
           datat-component="MobileContactPanel__container"
           key={isMobileMenuOpen.toString()}
-          className={`fixed fc bottom-0 w-screen h-[60px] ${LayoutzIndex.mobileMenuContactPanel} bg-dark`}
+          className={`fixed fc bottom-0 w-screen h-[60px] z-[550] bg-dark`}
           initial={{ opacity: 0, y: '100%' }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: '100%' }}

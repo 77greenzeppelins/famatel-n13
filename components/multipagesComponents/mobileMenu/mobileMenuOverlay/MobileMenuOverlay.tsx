@@ -4,7 +4,6 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { mainPages } from '../../../../data/_data';
 import MobileNavLink from './mobileNavLink/MobileNavLink';
 /**Basic Data**/
-import { LayoutzIndex } from '../../../../data/_data';
 
 /**-----------------------------------------------------**/
 const MobileMenuOverlay: React.FunctionComponent<{
@@ -32,7 +31,7 @@ const MobileMenuOverlay: React.FunctionComponent<{
           data-component="MobileMenuOverlay__container"
           key={isMobileMenuOpen.toString()}
           // data-layout="wrapper_for_DropDownMenuHolder"
-          className={`fixed left-0 right-[50px] top-0 bottom-0 ${LayoutzIndex.mobileMenuOverlay}`}
+          className={`fixed left-0 right-[50px] top-0 bottom-0 z-[510]`}
           initial={{ x: '-100%' }}
           animate={{ x: 0 }}
           exit={{ opacity: 0.9, x: '-100%' }}

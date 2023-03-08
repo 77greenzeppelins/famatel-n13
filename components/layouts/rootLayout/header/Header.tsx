@@ -4,17 +4,18 @@ import NavForMainPages from './navSection/NavForMainPages';
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
 /**Basic Data**/
-import { LayoutzIndex } from '../../../../data/_data';
+
 /******************************************************************************/
 const Header: React.FunctionComponent<{
   setIsMobileMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isMobileMenuOpen: boolean;
-}> = ({ setIsMobileMenuOpen, isMobileMenuOpen }) => {
+  layoutZIndex: string;
+}> = ({ setIsMobileMenuOpen, isMobileMenuOpen, layoutZIndex }) => {
   /**JSX*/
   return (
     <header
       data-component="Header__container"
-      className={`fixed w-screen top-0 left-0 right-0 h-[50px] ${LayoutzIndex.header} bg-dark`}
+      className={`fixed w-screen top-0 left-0 right-0 h-[50px] ${layoutZIndex} bg-dark`}
     >
       <div className="h-full w-full inner-px-md-lg z-[10] ">
         <div className="relative w-full h-full">
