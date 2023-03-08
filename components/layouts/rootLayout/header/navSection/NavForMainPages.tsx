@@ -43,7 +43,7 @@ const NavForMainPages: React.FunctionComponent<{
       //   );
       case screenWidth > 300:
         return (
-          <div className="flex items-center h-full gap-4">
+          <div className="flex items-center h-full ">
             <ul className="h-full flex">
               <NavLink
                 url={mainPages[1].url}
@@ -51,19 +51,21 @@ const NavForMainPages: React.FunctionComponent<{
                 hasDropDownMenu={mainPages[1].hasDropDownMenu}
               ></NavLink>
             </ul>
-            <MobileMenuButton
+            <div className="w-[40px] h-full " />
+            {/* <MobileMenuButton
               mobileMenuOpener={mobileMenuOpener}
               mobileMenuState={mobileMenuState}
-            />
+            /> */}
           </div>
         );
       case screenWidth <= 300:
         return (
           <div className="flex items-center h-full">
-            <MobileMenuButton
+            <div className="w-[40px] h-full " />
+            {/* <MobileMenuButton
               mobileMenuOpener={mobileMenuOpener}
               mobileMenuState={mobileMenuState}
-            />
+            /> */}
           </div>
         );
     }

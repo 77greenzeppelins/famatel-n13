@@ -7,6 +7,7 @@ import { mobileMenuData } from '../../../data/_data';
 import localFont from '@next/font/local';
 import MobileContactPanel from '../../multipagesComponents/mobileMenu/mobileContactPanel/MobileContactPanel';
 import MobileMenuOverlay from '../../multipagesComponents/mobileMenu/mobileMenuOverlay/MobileMenuOverlay';
+import MobileMenuButton from '../../multipagesComponents/mobileMenu/mobileMenuButton/MobileMenuButton';
 
 const haasFont = localFont({
   src: '../../../public/fonts/HaasGrotDisp-55Roman.woff2',
@@ -29,6 +30,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Header
           setIsMobileMenuOpen={setIsMobileMenuOpen}
           isMobileMenuOpen={isMobileMenuOpen}
+        />
+        <MobileMenuButton
+          mobileMenuOpener={setIsMobileMenuOpen}
+          mobileMenuState={isMobileMenuOpen}
         />
         <MobileMenuOverlay
           isMobileMenuOpen={isMobileMenuOpen}

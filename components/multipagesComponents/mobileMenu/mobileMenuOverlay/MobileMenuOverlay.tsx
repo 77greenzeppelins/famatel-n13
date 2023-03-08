@@ -31,7 +31,7 @@ const MobileMenuOverlay: React.FunctionComponent<{
           data-component="MobileMenuOverlay__container"
           key={isMobileMenuOpen.toString()}
           // data-layout="wrapper_for_DropDownMenuHolder"
-          className={`fixed left-0 right-[50px] top-0 bottom-0 z-[510]`}
+          className={`fixed left-0 right-0 top-0 bottom-0 z-[500]`}
           initial={{ x: '-100%' }}
           animate={{ x: 0 }}
           exit={{ opacity: 0.9, x: '-100%' }}

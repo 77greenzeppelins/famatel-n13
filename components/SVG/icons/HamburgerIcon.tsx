@@ -7,7 +7,7 @@ import { corpoColors } from '../../../data/_data';
 const HamburgerIcon = ({
   containerStyle,
   strokeWidth = 1,
-  pathStyle = '',
+  pathStyle,
 }: {
   strokeWidth?: number;
   containerStyle?: string;
@@ -32,7 +32,7 @@ const HamburgerIcon = ({
       }}
     >
       <path
-        className={pathStyle}
+        className={pathStyle ? pathStyle : 'w-6 h-6'}
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"

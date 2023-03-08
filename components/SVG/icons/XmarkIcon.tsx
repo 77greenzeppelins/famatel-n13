@@ -7,7 +7,7 @@ import { corpoColors } from '../../../data/_data';
 const XMarkIcon = ({
   containerStyle,
   strokeWidth = 1,
-  pathStyle = '',
+  pathStyle,
 }: {
   strokeWidth?: number;
   containerStyle?: string;
@@ -32,7 +32,7 @@ const XMarkIcon = ({
       }}
     >
       <path
-        className={pathStyle}
+        className={pathStyle ? pathStyle : 'w-6 h-6'}
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M6 18L18 6M6 6l12 12"

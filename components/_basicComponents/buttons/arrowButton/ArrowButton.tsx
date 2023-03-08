@@ -35,7 +35,7 @@ const ArrowButton: React.FunctionComponent<{
         className={`${
           buttonStyle
             ? buttonStyle
-            : 'relative fc w-full h-full focus:outline-none disable  group'
+            : 'relative fc w-full h-full focus:outline-none disable group'
         } ${isDisabled ? 'pointer-events-none' : 'pointer-events-auto'}`}
       >
         {children}

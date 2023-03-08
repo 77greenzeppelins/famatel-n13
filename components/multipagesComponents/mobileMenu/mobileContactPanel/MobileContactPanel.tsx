@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 /**Components**/
 import RoadPrompt from './roadPrompt/RoadPrompt';
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
@@ -21,6 +21,10 @@ const MobileContactPanel: React.FunctionComponent<{
   const { width, height } = useWindowSize({ screensNumber: 1 });
   /**Mounting Condition**/
   const mountingCondition = isMobileMenuOpen && width < maxW && height > minH;
+
+  // useEffect(() => {
+  //   mountingCondition && console.log('.............MobileContactPanel');
+  // }, [isMobileMenuOpen]);
 
   /**JSX**/
   return (
