@@ -178,13 +178,13 @@ const splitedPathParts = {
 /**Aria staff*/
 const closeOverlay = 'przycisk: zamknij okno';
 /**Layout => z-index**/
-const layoutZIndex = {
-  turboModal: 'z-[600]',
-  header: 'z-[500]',
-  mobileMenuOverlay: 'z-[510]',
-  mobileMenuContactPanel: 'z-[550]',
-  sideMenu: 'z-[400]',
-};
+// const layoutZIndex = {
+//   turboModal: 'z-[600]',
+//   header: 'z-[500]',
+//   mobileMenuOverlay: 'z-[510]',
+//   mobileMenuContactPanel: 'z-[550]',
+//   sideMenu: 'z-[400]',
+// };
 
 const textLabels = {
   kategoriePage: {
@@ -238,7 +238,7 @@ export {
   //__12.02
   linksToInstantContactData,
   closeOverlay,
-  layoutZIndex,
+  // layoutZIndex,
   //___
   textLabels,
   splitedPathParts,
