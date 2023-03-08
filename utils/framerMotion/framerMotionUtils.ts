@@ -130,10 +130,9 @@ const overlayClosebuttonVariants = {
   },
 };
 
-/**
- * used in: <CategoriesCounter>; various <textComponents> that change frequently...
- *
- */
+/*
+used in: <H1AnimatedPresence>...!important
+*/
 const opacityScaleYVariants = {
   from: { opacity: 0, scaleY: 0 },
   to: {
@@ -150,27 +149,9 @@ const opacityScaleYVariants = {
     transition: { duration: 0.6, ease: 'easeInOut' },
   },
 };
-
-// const headerVariants = {
-//   from: { opacity: 0, x: '-100%' },
-//   to: {
-//     opacity: 1,
-//     x: 0,
-//     transition: {
-//       duration: 0.8,
-//       ease: 'easeOut',
-//     },
-//   },
-//   exit: {
-//     opacity: 0,
-//     x: '-100%',
-//     transition: { duration: 0.7, ease: 'easeIn' },
-//   },
-// };
-
-/**
- * created to be used in all sorts of <TextSectionComponents>
- */
+/*
+created to be used in all sorts of <TextSectionComponents>
+*/
 
 const textSectionContainerVariants = {
   from: {
@@ -219,9 +200,9 @@ const textSectionChildrenVariants = {
   },
 };
 
-/**
- * used in cards to animate image's "white-containers": <BasicCardGraphicSection> & <ProductCardImageSection>
- */
+/*
+used in: cards to animate image's "white-containers": <BasicCardGraphicSection> & <ProductCardImageSection>
+*/
 const cardVariants = {
   initial: { opacity: 0 },
   animate: {

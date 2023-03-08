@@ -11,7 +11,8 @@ const H1AnimatedPresence: React.FunctionComponent<{
   text?: string;
   variantH?: string;
   customeStyle?: string;
-}> = ({ uniqueKey, text, variantH, customeStyle }) => {
+  customeVariants?: {};
+}> = ({ uniqueKey, text, variantH, customeStyle, customeVariants }) => {
   /**JSX**/
   return (
     <AnimatePresence
@@ -21,7 +22,7 @@ const H1AnimatedPresence: React.FunctionComponent<{
       <motion.div
         key={uniqueKey}
         // className=" disable-soft xl:w-[90%] xxl:w-[70%] xxxl:w-[55%]"
-        variants={opacityScaleYVariants}
+        variants={customeVariants ? customeVariants : opacityScaleYVariants}
         initial="from"
         animate="to"
         exit="exit"
