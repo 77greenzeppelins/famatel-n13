@@ -6,11 +6,11 @@ import { EnvelopeIcon } from '@heroicons/react/24/solid';
 import { PhoneIcon } from '@heroicons/react/24/solid';
 import { linksToInstantContactData } from '../../../../data/_data';
 
-const aStyle = 'flex items-center gap-6 group';
+const aStyle = 'flex items-center gap-6 group no-sparkling';
 const iconsStyle =
-  'w-6 h-6 text-dark group-hover:text-corpo group-hover:translate-x-1 ease-in duration-300  origin-center';
+  'w-6 h-6 text-light group-hover:text-corpo group-hover:translate-x-1 ease-in duration-300  origin-center';
 const labelStyle =
-  'text-dark text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-corpo group-hover:-translate-x-1 ease-in duration-300  origin-center';
+  'text-grey text-[1rem] lg:text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-light group-hover:-translate-x-1 ease-in duration-300  origin-center break-all';
 
 /**----------------------------------**/
 const ContactContacts = () => {
@@ -22,17 +22,15 @@ const ContactContacts = () => {
           Kontakt
         </p>{' '}
       </div>
-      <div className="flex flex-col gap-6 pt-2">
-        {/* <div > */}
+      <div className="flex flex-col gap-6 pt-2 ">
         <a
           href="tel:601 460 307"
           className={aStyle}
-          style={{ width: 'fit-content' }}
+          // style={{ width: 'fit-content' }}
         >
           <PhoneIcon className={iconsStyle} />
           <p className={labelStyle}>Telefon: +48 601 460 307</p>
         </a>
-        {/* </div> */}
 
         <div>
           <a

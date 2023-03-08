@@ -16,8 +16,8 @@ const KontaktContent = () => {
         <PageContentLayout>
           {' '}
           <ContactIntro />
-          {/* <ContactContacts />
-          <ContactAddress /> */}
+          <ContactContacts />
+          <ContactAddress />
         </PageContentLayout>
       </div>
     </div>
