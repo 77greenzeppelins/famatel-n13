@@ -180,7 +180,7 @@ const closeOverlay = 'przycisk: zamknij okno';
 /**Layout => z-index**/
 const LayoutzIndex = {
   turboModal: 'z-[600]',
-  header: 'z-[501]',
+  header: 'z-[500]',
   mobileMenuOverlay: 'z-[510]',
   mobileMenuContactPanel: 'z-[550]',
   sideMenu: 'z-[400]',
