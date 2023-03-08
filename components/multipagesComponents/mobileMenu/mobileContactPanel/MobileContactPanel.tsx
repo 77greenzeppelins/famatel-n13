@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**Basic Data**/
 import { corpoColors, linksToInstantContactData } from '../../../../data/_data';
+import PseudoButton from './pseudoButton/PseudoButton';
 
 /**-------------------------------------------------------**/
 const MobileContactPanel: React.FunctionComponent<{
@@ -33,7 +34,7 @@ const MobileContactPanel: React.FunctionComponent<{
         <motion.div
           datat-component="MobileContactPanel__container"
           key={isMobileMenuOpen.toString()}
-          className={`fixed fc bottom-0 w-screen h-[60px] z-[550] bg-dark`}
+          className={`fixed fc bottom-0 w-screen h-[80px] z-[550] bg-dark`}
           initial={{ opacity: 0, y: '100%' }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: '100%' }}
@@ -43,40 +44,31 @@ const MobileContactPanel: React.FunctionComponent<{
             className="w-full h-[50px]"
             initial={{ opacity: 0, y: '100%' }}
             animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-            exit={{ opacity: 0, y: '100%', transition: { duration: 1 } }}
+            exit={{ opacity: 0, y: '100%', transition: { duration: 0.4 } }}
           >
             <div className="w-full h-full grid grid-cols-[1fr_1fr_1fr] gap-[0.125rem]">
-              <div
-                className="fc"
-                //___p-1
-              >
-                <motion.div
-                  className="fc aspect-square h-full border"
-                  whileTap={{ scale: 0.95, borderColor: corpoColors.orange }}
-                >
+              <div className="fc">
+                <PseudoButton>
                   <a
                     href={linksToInstantContactData.mail}
                     className="fc w-full h-full no-sparkling"
                   >
                     <EnvelopeIcon className="h-[40px] w-[40px] text-grey" />
                   </a>
-                </motion.div>
+                </PseudoButton>
               </div>
               <div className="fc ">
                 <RoadPrompt setRoadPrompt={setRoadPrompt} />
               </div>
               <div className="fc ">
-                <motion.div
-                  className="fc aspect-square h-full border"
-                  whileTap={{ scale: 0.95, borderColor: corpoColors.orange }}
-                >
+                <PseudoButton>
                   <a
                     href={linksToInstantContactData.mobile}
                     className="fc w-full h-full no-sparkling"
                   >
                     <PhoneIcon className="h-[40px] w-[40px] text-grey" />
                   </a>
-                </motion.div>
+                </PseudoButton>
               </div>
             </div>
           </motion.div>

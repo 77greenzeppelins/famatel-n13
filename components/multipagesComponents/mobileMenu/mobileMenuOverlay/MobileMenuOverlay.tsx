@@ -31,14 +31,19 @@ const MobileMenuOverlay: React.FunctionComponent<{
           data-component="MobileMenuOverlay__container"
           key={isMobileMenuOpen.toString()}
           // data-layout="wrapper_for_DropDownMenuHolder"
-          className={`fixed left-0 right-0 top-0 bottom-0 z-[500]`}
-          initial={{ x: '-100%' }}
+          className={`fixed left-0 right-0 top-0 bottom-0 z-[500] `}
+          initial={{ x: '100%' }}
           animate={{ x: 0 }}
-          exit={{ opacity: 0.9, x: '-100%' }}
+          exit={{ opacity: 0.9, x: '100%' }}
           transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
         >
-          <div className="relative fc w-full h-full bg-dark">
-            <ul className="flex flex-col gap-6">
+          <div
+            className="relative fc w-full h-full bg-dark
+         
+           inner-px-md-xl-xxl
+           "
+          >
+            <ul className="flex w-full flex-col gap-[10px] ">
               {mainPages.map(({ arrayIndex, label, url }, i) => {
                 //___I don't want to duplicate "produkty"
                 return arrayIndex === 1 ? null : (
@@ -47,14 +52,14 @@ const MobileMenuOverlay: React.FunctionComponent<{
                     uniqueKey={arrayIndex}
                     url={url}
                     label={label}
-                    // hasDropDownMenu={''}
+                    isLast={arrayIndex === mainPages.length}
                   ></MobileNavLink>
                 );
               })}
             </ul>
             <motion.div
               className="absolute left-0 right-0 top-0 bottom-0"
-              animate={{ x: roadPrompt ? 0 : '-110%' }}
+              animate={{ x: roadPrompt ? 0 : '110%' }}
               transition={{ duration: 0.4, delay: 0.1, ease: 'easeOut' }}
             >
               <div className="fc w-full h-full bg-corpo"> </div>

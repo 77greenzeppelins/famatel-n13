@@ -16,7 +16,7 @@ const NavForMainPages: React.FunctionComponent<{
   const createContent = (screenWidth: number) => {
     // console.log('width', width);
     switch (true) {
-      case screenWidth > 1024:
+      case screenWidth >= 1024:
         return (
           <ul className="hidden h-full md:flex ">
             {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
