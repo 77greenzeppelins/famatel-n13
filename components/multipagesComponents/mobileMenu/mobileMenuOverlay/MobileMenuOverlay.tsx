@@ -1,9 +1,13 @@
-import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
-import { mainPages } from '../../../../data/_data';
+/**Componenst**/
 import MobileNavLink from './mobileNavLink/MobileNavLink';
-/**Basic Data**/
+/**Hooks staff**/
+import useWindowSize from '../../../../utils/hooks/useWindowSize';
+/**Framer Motion Staff**/
+import { AnimatePresence, motion } from 'framer-motion';
+/**Basic Data*/
+import { mainPages } from '../../../../data/_data';
 
 /**-----------------------------------------------------**/
 const MobileMenuOverlay: React.FunctionComponent<{
@@ -12,7 +16,19 @@ const MobileMenuOverlay: React.FunctionComponent<{
   setRoadPrompt: React.Dispatch<React.SetStateAction<boolean>>;
   roadPrompt: boolean;
 }> = ({ isMobileMenuOpen, mobileMenuOpener, setRoadPrompt, roadPrompt }) => {
+  /**UseRouter sectioin**/
   const router = useRouter();
+  /**UseWindowSize sectioin**/
+  const { width } = useWindowSize({ screensNumber: 1 });
+  /*Condition
+  why: it allows to 
+  */
+  const mountingCondition = width >= 1024;
+
+  if (mountingCondition) {
+    mobileMenuOpener(false);
+  }
+
   //
   useEffect(() => {
     return () => {

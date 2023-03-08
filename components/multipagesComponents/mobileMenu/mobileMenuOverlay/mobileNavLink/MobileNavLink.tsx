@@ -1,12 +1,29 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 /**Components**/
 import AriaJSLink from '../../../../_basicComponents/links/ariaJSLink/AriaJSLink';
+import H1AnimatedPresence from '../../../../_basicComponents/componentH1/H1AnimatedPresence';
 /**Framer Motion Staff**/
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/router';
-import H1AnimatedPresence from '../../../../_basicComponents/componentH1/H1AnimatedPresence';
+const variants = {
+  from: { opacity: 0, scaleY: 0 },
+  to: {
+    opacity: 1,
+    scaleY: 1,
+    transition: {
+      delay: 0.9,
+      duration: 0.6,
+      ease: 'easeInOut',
+    },
+  },
+  exit: {
+    opacity: 0,
+    scaleY: 0,
+    transition: { duration: 0.6, ease: 'easeInOut' },
+  },
+};
 
-/**---------------------------------**/
+/**------------------------------------------------**/
 const MobileNavLink: React.FunctionComponent<{
   url: string;
   label: string;
@@ -14,8 +31,8 @@ const MobileNavLink: React.FunctionComponent<{
   isLast: boolean;
 }> = ({ url, label, uniqueKey, isLast }) => {
   /*useRouter Section
-   why: for style sake;  I want link to be in corpo color 
-    when user is on its corresponding page
+  why: for style sake;  I want link to be in corpo color 
+  when user is on its corresponding page
   */
   const router = useRouter();
   const linkStyleIfRouterMatches = router.pathname === url;
@@ -49,10 +66,16 @@ const MobileNavLink: React.FunctionComponent<{
               ? 'text-corpo'
               : 'text-grey group-hover:text-light duration-[0.3s] delay-[0.1s] ease-in'
           } ${linkStyleIfRouterMatches ? 'cursor-default' : 'cursor-pointer'}`}
+          customeVariants={variants}
         />
       </AriaJSLink>
       {isLast ? (
-        <div className="w-full h-[16px] border-b-[0.5px] border-greyShade1" />
+        <motion.div
+          className="w-full h-[16px] border-b-[0.5px] border-greyShade1 origin-right"
+          initial={{ x: '110%' }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        />
       ) : null}
     </motion.li>
   );
