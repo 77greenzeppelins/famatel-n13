@@ -8,7 +8,7 @@ import {
 
 /**Instant Contact Buttons**/
 const linksToInstantContactData = {
-  mail: 'mailto:77greenzeppelins@gmail.com',
+  mail: 'mailto:biuro@famatel.pl',
   mobile: 'tel:697-790-915',
 };
 

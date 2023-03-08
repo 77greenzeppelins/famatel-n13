@@ -1,12 +1,10 @@
 import React, { Dispatch, SetStateAction } from 'react';
 /**Component**/
 import ImageSection from './imageSectin/ImageSection';
-import AnimatedButton from './animatedButton/AnimatedButton';
 /**Image Staff**/
 import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFirmiePage';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
-import { RectReadOnly } from 'react-use-measure';
 
 /**-------------------------------------------------------------------**/
 const GraphicSection: React.FunctionComponent<{

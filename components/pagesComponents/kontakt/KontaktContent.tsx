@@ -10,17 +10,16 @@ const KontaktContent = () => {
   return (
     <div
       data-component="KontaktContent__container"
-      className="relative w-screen min-h-screen bg-light pt-[60px]"
+      className="relative w-screen min-h-screen bg-dark pt-[60px]"
     >
-      <div className="w-full h-full inner-px-md-lg">
+      <div className="w-full h-full  inner-px-md-xl-xxl">
         <PageContentLayout>
           {' '}
           <ContactIntro />
-          <ContactContacts />
-          <ContactAddress />
+          {/* <ContactContacts />
+          <ContactAddress /> */}
         </PageContentLayout>
       </div>
-      <div className="fixed w-full h-[50px] top-0 bg-light" />
     </div>
   );
 };

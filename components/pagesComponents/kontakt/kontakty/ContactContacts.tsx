@@ -4,6 +4,7 @@ import SectionContentLayout from '../../../layouts/pagesLayouts/multipagesLayout
 import { MapPinIcon } from '@heroicons/react/24/solid';
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
 import { PhoneIcon } from '@heroicons/react/24/solid';
+import { linksToInstantContactData } from '../../../../data/_data';
 
 const aStyle = 'flex items-center gap-6 group';
 const iconsStyle =
@@ -35,7 +36,7 @@ const ContactContacts = () => {
 
         <div>
           <a
-            href="mailto:biuro@famatel.pl"
+            href={linksToInstantContactData.mail}
             className={aStyle}
             style={{ width: 'fit-content' }}
           >
