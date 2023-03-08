@@ -12,20 +12,16 @@ const MobileNavLink: React.FunctionComponent<{
   label: string;
   uniqueKey: number;
 }> = ({ url, label, uniqueKey }) => {
-  /**useRouter Section*/
-  /**why: for style sake;  I want link to be in corpo color and has no border-bottom when user is on its corresponding page */
+  /*useRouter Section
+   why: for style sake;  I want link to be in corpo color 
+    when user is on its corresponding page
+  */
   const router = useRouter();
   const linkStyleisHovered = router.pathname === url;
 
   /**JSX**/
   return (
-    <motion.li
-      data-component="NavLink_container"
-      className="relative ml-6 fc"
-      //___my-auto
-      // onHoverStart={onHoverStartHandler}
-      // onHoverEnd={onHoverEndHandler}
-    >
+    <motion.li data-component="NavLink_container" className="relative ml-6 fc">
       <AriaJSLink
         linkHref={url}
         controlsSet={{ background: 'transparent' }}
