@@ -11,9 +11,9 @@ const RoadPrompt: React.FunctionComponent<{
   /**JSX**/
   return (
     <ArrowButton onClickHandler={() => setRoadPrompt(prev => !prev)}>
-      <PseudoButton>
-        <MapPinIcon className="h-[40px] w-[40px] text-grey" />
-      </PseudoButton>
+      {/* <PseudoButton> */}
+      <MapPinIcon className="h-[24px] w-[30px] text-grey" />
+      {/* </PseudoButton> */}
     </ArrowButton>
   );
 };

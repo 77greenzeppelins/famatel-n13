@@ -78,7 +78,7 @@ const MobileMenuOverlay: React.FunctionComponent<{
               animate={{ x: roadPrompt ? 0 : '110%' }}
               transition={{ duration: 0.4, delay: 0.1, ease: 'easeOut' }}
             >
-              <div className="fc w-full h-full bg-corpo"> </div>
+              <div className="fc w-full h-full bg-dark"> </div>
             </motion.div>
           </div>
           {/* <motion.div

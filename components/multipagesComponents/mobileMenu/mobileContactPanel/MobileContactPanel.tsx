@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 /**Components**/
 import RoadPrompt from './roadPrompt/RoadPrompt';
+import PseudoButton from './pseudoButton/PseudoButton';
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
 import { PhoneIcon } from '@heroicons/react/24/solid';
 /**Framer Motion Staff*/
@@ -8,8 +9,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 /**Hook Staff*/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**Basic Data**/
-import { corpoColors, linksToInstantContactData } from '../../../../data/_data';
-import PseudoButton from './pseudoButton/PseudoButton';
+import { linksToInstantContactData } from '../../../../data/_data';
 
 /**-------------------------------------------------------**/
 const MobileContactPanel: React.FunctionComponent<{
@@ -46,7 +46,7 @@ const MobileContactPanel: React.FunctionComponent<{
             animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
             exit={{ opacity: 0, y: '100%', transition: { duration: 0.4 } }}
           >
-            <div className="w-full h-full grid grid-cols-[1fr_1fr_1fr] gap-[0.125rem]">
+            <div className="w-full h-full grid grid-cols-[3fr_5fr_3fr] gap-[0.125rem]">
               <div className="fc">
                 <PseudoButton>
                   <a
@@ -57,8 +57,13 @@ const MobileContactPanel: React.FunctionComponent<{
                   </a>
                 </PseudoButton>
               </div>
-              <div className="fc ">
-                <RoadPrompt setRoadPrompt={setRoadPrompt} />
+              <div className="fc">
+                <PseudoButton diveStyle="fc flex-col h-full border-[0.5px] border-greyShade1">
+                  <RoadPrompt setRoadPrompt={setRoadPrompt} />
+                  <div className="px-2">
+                    <p className="p-small text-grey">Wskazówki dojazdu</p>
+                  </div>
+                </PseudoButton>
               </div>
               <div className="fc ">
                 <PseudoButton>
