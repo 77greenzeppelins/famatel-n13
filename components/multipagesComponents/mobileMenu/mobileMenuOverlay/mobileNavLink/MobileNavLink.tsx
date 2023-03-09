@@ -29,7 +29,8 @@ const MobileNavLink: React.FunctionComponent<{
   label: string;
   uniqueKey: number;
   isLast: boolean;
-}> = ({ url, label, uniqueKey, isLast }) => {
+  isSimple: boolean;
+}> = ({ url, label, uniqueKey, isLast, isSimple }) => {
   /*useRouter Section
   why: for style sake;  I want link to be in corpo color 
   when user is on its corresponding page
@@ -37,6 +38,7 @@ const MobileNavLink: React.FunctionComponent<{
   const router = useRouter();
   const linkStyleIfRouterMatches = router.pathname === url;
 
+  console.log('isSimple', isSimple);
   /**JSX**/
   return (
     <motion.li
@@ -44,7 +46,11 @@ const MobileNavLink: React.FunctionComponent<{
       className="relative fc flex-col  overflow-hidden"
     >
       <motion.div
-        className="w-full h-[16px] border-t-[0.5px] border-greyShade1 origin-right"
+        className={
+          isSimple
+            ? 'w-full h-[8px] border-t-[0.5px] border-greyShade1 origin-right'
+            : 'w-full h-[16px] border-t-[0.5px] border-greyShade1 origin-right'
+        }
         initial={{ x: '110%' }}
         animate={{ x: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
@@ -61,7 +67,11 @@ const MobileNavLink: React.FunctionComponent<{
           uniqueKey={uniqueKey}
           text={label}
           variantH="custome"
-          customeStyle={`text-right text-[2rem] xs:text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4rem] font-bold tracking-[2px] leading-tight ${
+          customeStyle={`text-right ${
+            isSimple
+              ? 'text-[1rem]'
+              : 'text-[2rem] xs:text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4rem]'
+          }  font-bold tracking-[2px] leading-tight ${
             linkStyleIfRouterMatches
               ? 'text-corpo'
               : 'text-grey group-hover:text-light duration-[0.3s] delay-[0.1s] ease-in'
@@ -71,7 +81,11 @@ const MobileNavLink: React.FunctionComponent<{
       </AriaJSLink>
       {isLast ? (
         <motion.div
-          className="w-full h-[16px] border-b-[0.5px] border-greyShade1 origin-right"
+          className={
+            isSimple
+              ? 'w-full h-[8px] border-t-[0.5px] border-greyShade1 origin-right'
+              : 'w-full h-[16px] border-b-[0.5px] border-greyShade1 origin-right'
+          }
           initial={{ x: '110%' }}
           animate={{ x: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}

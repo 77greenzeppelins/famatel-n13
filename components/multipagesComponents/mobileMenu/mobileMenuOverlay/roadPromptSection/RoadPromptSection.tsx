@@ -14,13 +14,13 @@ const RoadPromptSection: React.FunctionComponent<{
       animate={{ x: roadPrompt ? 0 : '110%' }}
       transition={{ duration: 0.4, delay: 0.1, ease: 'easeOut' }}
     >
-      <div className="relative fc flex-col  gap-y-4 w-full h-full bg-dark pt-[50px] pb-[70px] ">
+      <div className="relative fc flex-col  gap-y-8 w-full h-full bg-dark pt-[50px] pb-[70px] ">
         <div className="flex  flex-col w-[90%] ">
           <div className="flex items-center w-full gap-1">
             <p className="header-link-label text-grey">Adres</p>
             <div className=" w-full h-[1px] border-t-[0.5px] gorder-grey " />
           </div>
-          <div className="flex flex-col w-[90%] ">
+          <div className="flex flex-col w-[90%] pt-2">
             <p className="p-small text-grey">ul.Willowa 5</p>
             <p className="p-small text-grey">Bielawa</p>
           </div>
@@ -31,7 +31,7 @@ const RoadPromptSection: React.FunctionComponent<{
             <p className="header-link-label text-grey">Dojazd</p>
             <div className=" w-full h-[1px] border-t-[0.5px] gorder-grey " />
           </div>
-          <div className="flex flex-col w-[90%]">
+          <div className="flex flex-col w-[90%] pt-2">
             <p className="p-small text-grey">ul.Strażacka</p>
             <p className="p-small text-grey">Bielawa</p>
             <p className="p-small text-grey">

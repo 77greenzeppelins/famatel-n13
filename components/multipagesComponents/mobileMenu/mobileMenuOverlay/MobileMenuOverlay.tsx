@@ -5,10 +5,15 @@ import MobileNavLink from './mobileNavLink/MobileNavLink';
 import RoadPromptSection from './roadPromptSection/RoadPromptSection';
 /**Hooks staff**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
+import useMeasure from 'react-use-measure';
 /**Framer Motion Staff**/
 import { AnimatePresence, motion } from 'framer-motion';
 /**Basic Data*/
 import { mainPages } from '../../../../data/_data';
+
+/**Hardcoded Staff**/
+const mountingConditionValue = 1024;
+const minHeight = 500;
 
 /**-----------------------------------------------------**/
 const MobileMenuOverlay: React.FunctionComponent<{
@@ -19,13 +24,15 @@ const MobileMenuOverlay: React.FunctionComponent<{
 }> = ({ isMobileMenuOpen, mobileMenuOpener, setRoadPrompt, roadPrompt }) => {
   /**UseRouter sectioin**/
   const router = useRouter();
+
   /**UseWindowSize sectioin**/
   const { width } = useWindowSize({ screensNumber: 1 });
+
   /*Condition
   why: it allows to close <MobileMenuOverlay> when screen width changes; 
   solved bug: without this ifstatement when user opens <MobileMenuOverlay> and inreases the width menu don't close even though "closeButton" disappears 
   */
-  const mountingCondition = width >= 1024;
+  const mountingCondition = width >= mountingConditionValue;
   if (mountingCondition) {
     mobileMenuOpener(false);
   }
@@ -38,6 +45,7 @@ const MobileMenuOverlay: React.FunctionComponent<{
       mobileMenuOpener(false);
     };
   }, [mobileMenuOpener, router.asPath]);
+
   /*
   why: when user closes <MobileMenuOverlay> road prompt should return to its initial "position" showing links
   */
@@ -45,11 +53,17 @@ const MobileMenuOverlay: React.FunctionComponent<{
     !isMobileMenuOpen && setRoadPrompt(false);
   }, [isMobileMenuOpen, setRoadPrompt]);
 
+  /*
+  why: in case of device rotating or height less then 500px
+  */
+  const [ref, { height }] = useMeasure();
+
   /**JSX*/
   return (
     <AnimatePresence mode="wait">
       {isMobileMenuOpen && (
         <motion.div
+          ref={ref}
           data-component="MobileMenuOverlay__container"
           key={isMobileMenuOpen.toString()}
           className={`fixed left-0 right-0 top-0 bottom-0 z-[500] `}
@@ -74,6 +88,7 @@ const MobileMenuOverlay: React.FunctionComponent<{
                     url={url}
                     label={label}
                     isLast={arrayIndex === mainPages.length}
+                    isSimple={height < minHeight}
                   ></MobileNavLink>
                 );
               })}
