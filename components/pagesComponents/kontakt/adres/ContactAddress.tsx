@@ -1,9 +1,9 @@
 import React from 'react';
 /**Components**/
 import SectionContentLayout from '../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import { MapPinIcon } from '@heroicons/react/24/solid';
-import { motion } from 'framer-motion';
 import ScaledYWrapper from '../_scaledYWrapper/ScaledYWrapper';
+/**Framer Motion Staff*/
+import { motion } from 'framer-motion';
 /**Hardcoded Data*/
 const address = ['Biuro/Magazyn', 'Ul. Willowa 5', '58-260 Bielawa'];
 const labelStyle =
@@ -40,24 +40,6 @@ const ContactAddress: React.FunctionComponent<{ animationDelay?: number }> = ({
             </ScaledYWrapper>
           ))}
         </ul>
-        {/* <div className="flex flex-col gap-y-4">
-          <motion.div
-            className="fc text-corpo"
-            initial={{ opacity: 0.3 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              repeat: Infinity,
-              repeatType: 'reverse',
-              duration: 2,
-            }}
-          >
-            <MapPinIcon className="h-6 w-6" />
-          </motion.div>
-          <div className="fc flex-col">
-            <p className={labelStyle}> Dojazd od ulicy</p>
-            <p className={labelStyle}> Lotniczej</p>
-          </div>
-        </div> */}
       </div>
     </SectionContentLayout>
   );
@@ -80,4 +62,25 @@ export default ContactAddress;
         </div>
       </div>
       <div className="h-[20px]" /> */
+}
+
+{
+  /* <div className="flex flex-col gap-y-4">
+          <motion.div
+            className="fc text-corpo"
+            initial={{ opacity: 0.3 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 2,
+            }}
+          >
+            <MapPinIcon className="h-6 w-6" />
+          </motion.div>
+          <div className="fc flex-col">
+            <p className={labelStyle}> Dojazd od ulicy</p>
+            <p className={labelStyle}> Lotniczej</p>
+          </div>
+        </div> */
 }
