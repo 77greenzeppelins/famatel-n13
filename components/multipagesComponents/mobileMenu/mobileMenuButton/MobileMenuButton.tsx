@@ -13,21 +13,12 @@ const MobileMenuButton: React.FunctionComponent<{
   mobileMenuState: boolean;
 }> = ({ mobileMenuOpener, mobileMenuState }) => {
   /**...**/
-  //   const onClickHandler = () => {
-  //     mobileMenuOpener(prev => !prev);
-  //   };
   useEffect(() => {
-    // Access the document.body.style object
+    //___Access the document.body.style object via window
     const bodyStyle = window.document.body.style;
     mobileMenuState
       ? (bodyStyle.overflow = 'hidden')
       : (bodyStyle.overflow = 'auto');
-    // Manipulate the body style properties
-    // bodyStyle.backgroundColor = 'lightblue';
-    // bodyStyle.fontFamily = 'Arial, sans-serif';
-    // bodyStyle.fontSize = '16px';
-    // bodyStyle.padding = '0';
-    // bodyStyle.margin = '0';
   }, [mobileMenuState]);
 
   /**JSX**/

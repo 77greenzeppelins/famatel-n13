@@ -21,48 +21,52 @@ const MobileMenuOverlay: React.FunctionComponent<{
   /**UseWindowSize sectioin**/
   const { width } = useWindowSize({ screensNumber: 1 });
   /*Condition
-  why: it allows to 
+  why: it allows to close <MobileMenuOverlay> when screen width changes; 
+  solved bug: without this ifstatement when user opens <MobileMenuOverlay> and inreases the width menu don't close even though "closeButton" disappears 
   */
   const mountingCondition = width >= 1024;
-
   if (mountingCondition) {
     mobileMenuOpener(false);
   }
 
-  //
+  /*
+  why: when user changes page <MobileMenuOverlay> should be automatically closed
+  */
   useEffect(() => {
     return () => {
       mobileMenuOpener(false);
     };
   }, [mobileMenuOpener, router.asPath]);
-
+  /*
+  why: when user closes <MobileMenuOverlay> road prompt should return to its initial "position" showing links
+  */
   useEffect(() => {
     !isMobileMenuOpen && setRoadPrompt(false);
   }, [isMobileMenuOpen, setRoadPrompt]);
+
   /**JSX*/
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {isMobileMenuOpen && (
         <motion.div
           data-component="MobileMenuOverlay__container"
           key={isMobileMenuOpen.toString()}
-          // data-layout="wrapper_for_DropDownMenuHolder"
           className={`fixed left-0 right-0 top-0 bottom-0 z-[500] `}
           initial={{ x: '100%' }}
-          animate={{ x: 0 }}
-          exit={{ opacity: 0.9, x: '100%' }}
-          transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+          animate={{
+            x: 0,
+            transition: { duration: 0.6, delay: 0.1, ease: 'easeOut' },
+          }}
+          exit={{
+            opacity: 0.9,
+            x: '100%',
+            transition: { duration: 0.8, delay: 1, ease: 'easeOut' },
+          }}
         >
-          <div
-            className="relative fc w-full h-full bg-dark
-         
-           inner-px-md-xl-xxl
-           "
-          >
+          <div className="relative fc w-full h-full bg-dark inner-px-md-xl-xxl">
             <ul className="flex w-full flex-col gap-[10px] ">
               {mainPages.map(({ arrayIndex, label, url }, i) => {
-                //___I don't want to duplicate "produkty"
-                return arrayIndex === 1 ? null : (
+                return (
                   <MobileNavLink
                     key={arrayIndex}
                     uniqueKey={arrayIndex}
@@ -81,13 +85,6 @@ const MobileMenuOverlay: React.FunctionComponent<{
               <div className="fc w-full h-full bg-dark"> </div>
             </motion.div>
           </div>
-          {/* <motion.div
-            className="absolute inset-0"
-            animate={{ x: roadPrompt ? 0 : '100%' }}
-            transition={{ duration: 0.4, delay: 0.1, ease: 'easeOut' }}
-          >
-            <div className="fc w-full h-full bg-greyShade2"> </div>
-          </motion.div> */}
         </motion.div>
       )}
     </AnimatePresence>
