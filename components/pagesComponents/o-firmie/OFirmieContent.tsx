@@ -11,9 +11,9 @@ const OFirmieContent = () => {
   /**JSX**/
   return (
     <div
-      data-component="ProductPageTemplate__container"
-      className="flex flex-col justify-center w-screen "
-      //___pt-[60px] min-h-screen divide-y-[1px] divide-greyShade2
+      data-component="OFirmieContent__container"
+      className="flex flex-col justify-center min-h-[100.1vh]"
+      //___pt-[60px] min-h-screen divide-y-[1px] divide-greyShade2 w-screen
     >
       <div className="z-[10]">
         <Section_1
@@ -27,7 +27,6 @@ const OFirmieContent = () => {
           setIsSection_2_Open={setIsSection_2_Open}
         />
       </div>
-      {/* <div className="h-screen bg-dark" /> */}
     </div>
   );
 };

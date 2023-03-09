@@ -15,7 +15,7 @@ const RoadPromptSection: React.FunctionComponent<{
       transition={{ duration: 0.4, delay: 0.1, ease: 'easeOut' }}
     >
       <div className="relative fc flex-col  gap-y-8 w-full h-full bg-dark pt-[50px] pb-[70px] ">
-        <div className="flex  flex-col w-[90%] ">
+        <div className="flex  flex-col w-[90%]">
           <div className="flex items-center w-full gap-1">
             <p className="header-link-label text-grey">Adres</p>
             <div className=" w-full h-[1px] border-t-[0.5px] gorder-grey " />

@@ -1,16 +1,13 @@
 import { useRouter } from 'next/router';
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 /**Componenst**/
-import MobileNavLink from './mobileNavLink/MobileNavLink';
+import LinksSection from './linksSection/LinksSection';
 import RoadPromptSection from './roadPromptSection/RoadPromptSection';
 /**Hooks staff**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 import useMeasure from 'react-use-measure';
 /**Framer Motion Staff**/
 import { AnimatePresence, motion } from 'framer-motion';
-/**Basic Data*/
-import { mainPages } from '../../../../data/_data';
-
 /**Hardcoded Staff**/
 const mountingConditionValue = 1024;
 const minHeight = 500;
@@ -33,9 +30,11 @@ const MobileMenuOverlay: React.FunctionComponent<{
   solved bug: without this ifstatement when user opens <MobileMenuOverlay> and inreases the width menu don't close even though "closeButton" disappears 
   */
   const mountingCondition = width >= mountingConditionValue;
-  if (mountingCondition) {
-    mobileMenuOpener(false);
-  }
+  useEffect(() => {
+    if (mountingCondition) {
+      mobileMenuOpener(false);
+    }
+  }, [mobileMenuOpener, mountingCondition]);
 
   /*
   why: when user changes page <MobileMenuOverlay> should be automatically closed
@@ -79,7 +78,19 @@ const MobileMenuOverlay: React.FunctionComponent<{
           }}
         >
           <div className="relative fc w-full h-full bg-dark inner-px-md-xl-xxl">
-            <ul className="flex w-full flex-col gap-[10px] ">
+            <LinksSection isSimple={height < minHeight} />
+            <RoadPromptSection roadPrompt={roadPrompt} />
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
+export default MobileMenuOverlay;
+
+{
+  /* <ul className="flex w-full flex-col gap-[10px] ">
               {mainPages.map(({ arrayIndex, label, url }, i) => {
                 return (
                   <MobileNavLink
@@ -92,13 +103,5 @@ const MobileMenuOverlay: React.FunctionComponent<{
                   ></MobileNavLink>
                 );
               })}
-            </ul>
-            <RoadPromptSection roadPrompt={roadPrompt} />
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};
-
-export default MobileMenuOverlay;
+            </ul> */
+}
