@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 /**Componenst**/
 import MobileNavLink from './mobileNavLink/MobileNavLink';
+import RoadPromptSection from './roadPromptSection/RoadPromptSection';
 /**Hooks staff**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**Framer Motion Staff**/
@@ -77,13 +78,7 @@ const MobileMenuOverlay: React.FunctionComponent<{
                 );
               })}
             </ul>
-            <motion.div
-              className="absolute left-0 right-0 top-0 bottom-0"
-              animate={{ x: roadPrompt ? 0 : '110%' }}
-              transition={{ duration: 0.4, delay: 0.1, ease: 'easeOut' }}
-            >
-              <div className="fc w-full h-full bg-dark"> </div>
-            </motion.div>
+            <RoadPromptSection roadPrompt={roadPrompt} />
           </div>
         </motion.div>
       )}
