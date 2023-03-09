@@ -151,6 +151,22 @@ const opacityScaleYVariants = {
 };
 
 /*
+used in: <ContactPage> / <ContactIntro>
+*/
+const opacityScaleYDynamicVariants = {
+  from: { opacity: 0, scaleY: 0 },
+  to: (delayVal: number) => ({
+    opacity: 1,
+    scaleY: 1,
+    transition: {
+      duration: 0.8,
+      delay: 0.6 * delayVal,
+      ease: 'easeInOut',
+    },
+  }),
+};
+
+/*
 created to be used in all sorts of <TextSectionComponents>
 */
 const textSectionContainerVariants = {
@@ -247,4 +263,6 @@ export {
   svgTransition,
   //___
   headerVariants,
+  //___
+  opacityScaleYDynamicVariants,
 };

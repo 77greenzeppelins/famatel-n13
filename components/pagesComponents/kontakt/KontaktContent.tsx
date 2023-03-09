@@ -10,13 +10,15 @@ const KontaktContent = () => {
   return (
     <div
       data-component="KontaktContent__container"
-      className="relative w-screen bg-dark pt-[60px]"
+      className="relative bg-dark pt-[60px]"
     >
       <div className="w-full h-full inner-px-md-xl-xxl">
-        <div className="flex flex-col gap-y-[50px] lg:gap-y-[50px] pt-[50px] ">
+        <div className="flex flex-col pt-[50px] gap-y-[10px]">
           <ContactIntro />
-          <ContactContacts />
-          <ContactAddress />
+          <div className="flex flex-col gap-y-[80px]">
+            <ContactContacts />
+            <ContactAddress />
+          </div>
         </div>
       </div>
     </div>

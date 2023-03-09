@@ -11,37 +11,24 @@ import { story } from '../../../../data/_data';
 
 /**Framer Motion Staff*/
 import { motion } from 'framer-motion';
-const variants = {
-  from: { opacity: 0, scaleY: 0 },
-  to: (delayVal: number) => ({
-    opacity: 1,
-    scaleY: 1,
-    transition: {
-      duration: 0.8,
-      delay: 0.6 * delayVal,
-      ease: 'easeInOut',
-    },
-  }),
-};
+import { opacityScaleYDynamicVariants } from '../../../../utils/framerMotion/framerMotionUtils';
 
 /**------------------------------**/
 const ContactIntro = () => {
   return (
-    <SectionContentLayout divStyle="flex flex-col gap-y-4 md:flex-row md:gap-x-14 lg:py-[20px] xl:py-[50px] xl:pl-[50px]">
+    <SectionContentLayout divStyle="flex flex-col gap-y-4 md:flex-row md:gap-x-14 lg:py-[20px] xl:py-[80px] xl:pl-[50px]">
       <div className="flex justify-center md:justify-start gap-x-6 ">
         <motion.div
-          // className="w-full"
           custom={1}
-          variants={variants}
+          variants={opacityScaleYDynamicVariants}
           initial="from"
           animate="to"
         >
           <p className={`${witajStyle} text-right`}>Witamy</p>
         </motion.div>
         <motion.div
-          // className="w-full"
-          custom={1.3}
-          variants={variants}
+          custom={1.4}
+          variants={opacityScaleYDynamicVariants}
           initial="from"
           animate="to"
         >
@@ -51,8 +38,8 @@ const ContactIntro = () => {
       <div className="flex items-center lg:w-[70%] xl:w-[50%]">
         <motion.div
           className="w-full"
-          custom={1.6}
-          variants={variants}
+          custom={1.8}
+          variants={opacityScaleYDynamicVariants}
           initial="from"
           animate="to"
         >

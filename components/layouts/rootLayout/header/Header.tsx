@@ -16,7 +16,7 @@ const Header: React.FunctionComponent = () => {
       <div className="h-full w-full inner-px-md-xl-xxl ">
         <div className="relative w-full h-full">
           <motion.div
-            className="absolute bottom-0 left-0 right-0 h-full border-b border-greyShade1"
+            className="absolute bottom-0 left-0 right-0 h-full border-b-[0.5px] border-greyShade1"
             initial={{ width: '0%', opacity: 0 }}
             animate={{
               width: '100%',
