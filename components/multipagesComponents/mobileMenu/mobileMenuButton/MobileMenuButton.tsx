@@ -1,12 +1,13 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { Dispatch, SetStateAction, useEffect } from 'react';
 /**Components**/
 import ArrowButton from '../../../_basicComponents/buttons/arrowButton/ArrowButton';
 import HamburgerIcon from '../../../SVG/icons/HamburgerIcon';
 import XMarkIcon from '../../../SVG/icons/XmarkIcon';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
+import { headerVariants } from '../../../../utils/framerMotion/framerMotionUtils';
 
-/**---------------------------------**/
+/**-------------------------------------------------------**/
 const MobileMenuButton: React.FunctionComponent<{
   mobileMenuOpener: Dispatch<SetStateAction<boolean>>;
   mobileMenuState: boolean;
@@ -15,6 +16,20 @@ const MobileMenuButton: React.FunctionComponent<{
   //   const onClickHandler = () => {
   //     mobileMenuOpener(prev => !prev);
   //   };
+  useEffect(() => {
+    // Access the document.body.style object
+    const bodyStyle = window.document.body.style;
+    mobileMenuState
+      ? (bodyStyle.overflow = 'hidden')
+      : (bodyStyle.overflow = 'auto');
+    // Manipulate the body style properties
+    // bodyStyle.backgroundColor = 'lightblue';
+    // bodyStyle.fontFamily = 'Arial, sans-serif';
+    // bodyStyle.fontSize = '16px';
+    // bodyStyle.padding = '0';
+    // bodyStyle.margin = '0';
+  }, [mobileMenuState]);
+
   /**JSX**/
   return (
     <AnimatePresence>
@@ -22,7 +37,12 @@ const MobileMenuButton: React.FunctionComponent<{
         data-component="MobileMenuButton__container"
         className={` fc lg:hidden fixed w-screen top-0 left-0 right-0 h-[50px] z-[600] bg-transparent pointer-events-none`}
       >
-        <div className="flex items-center justify-end h-full w-full inner-px-md-xl-xxl ">
+        <motion.div
+          className="flex items-center justify-end h-full w-full inner-px-md-xl-xxl"
+          variants={headerVariants}
+          initial="from"
+          animate="to"
+        >
           {mobileMenuState ? (
             <ArrowButton
               onClickHandler={() => mobileMenuOpener(prev => !prev)}
@@ -38,7 +58,7 @@ const MobileMenuButton: React.FunctionComponent<{
               <HamburgerIcon />
             </ArrowButton>
           )}
-        </div>
+        </motion.div>
       </div>
     </AnimatePresence>
   );

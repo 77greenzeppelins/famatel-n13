@@ -1,21 +1,20 @@
 import React, { Dispatch, SetStateAction } from 'react';
-/**Components*/
+/**Components**/
 import NavLink from './navLink/NavLink';
-/**Basic Data*/
+/**Basic Data**/
 import { mainPages } from '../../../../../data/_data';
 /**Hook Staff**/
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
-import MobileMenuButton from '../../../../multipagesComponents/mobileMenu/mobileMenuButton/MobileMenuButton';
 
-/********************************************************************************/
-const NavForMainPages: React.FunctionComponent<{
-  mobileMenuOpener: Dispatch<SetStateAction<boolean>>;
-  mobileMenuState: boolean;
-}> = ({ mobileMenuOpener, mobileMenuState }) => {
+/**---------------------------------------------------------**/
+const NavForMainPages: React.FunctionComponent = () => {
   /**Handler Section**/
   const createContent = (screenWidth: number) => {
     // console.log('width', width);
     switch (true) {
+      /*
+      if screen is "tailwind-LG" create classic "headMenu" with all buttons
+      */
       case screenWidth >= 1024:
         return (
           <ul className="hidden h-full md:flex ">
@@ -31,16 +30,9 @@ const NavForMainPages: React.FunctionComponent<{
             })}
           </ul>
         );
-      // case screenWidth > 540:
-      //   return (
-      //     <ul className=" h-full flex ">
-      //       <NavLink
-      //         url={mainPages[1].url}
-      //         label={mainPages[1].label}
-      //         hasDropDownMenu={mainPages[1].hasDropDownMenu}
-      //       ></NavLink>
-      //     </ul>
-      //   );
+      /*
+      if screen is "tailwind-xxs" create "headMenu" with "productyButton" and "hamburgerButton"
+      */
       case screenWidth > 300:
         return (
           <div className="flex items-center h-full ">
@@ -52,20 +44,15 @@ const NavForMainPages: React.FunctionComponent<{
               ></NavLink>
             </ul>
             <div className="w-[40px] h-full " />
-            {/* <MobileMenuButton
-              mobileMenuOpener={mobileMenuOpener}
-              mobileMenuState={mobileMenuState}
-            /> */}
           </div>
         );
+      /*
+      if screen is less then "tailwind-xxs" create "headMenu" with "hamburgerButton" only; case for "odd users"
+      */
       case screenWidth <= 300:
         return (
           <div className="flex items-center h-full">
             <div className="w-[40px] h-full " />
-            {/* <MobileMenuButton
-              mobileMenuOpener={mobileMenuOpener}
-              mobileMenuState={mobileMenuState}
-            /> */}
           </div>
         );
     }
@@ -75,14 +62,7 @@ const NavForMainPages: React.FunctionComponent<{
     screensNumber: 1,
   });
   /**JSX*/
-  return (
-    <nav
-      className="h-full "
-      //___pt-2 // why "pt-2"? to break "center-y-alignment"...
-    >
-      {createContent(width)}
-    </nav>
-  );
+  return <nav className="h-full ">{createContent(width)}</nav>;
 };
 
 export default NavForMainPages;

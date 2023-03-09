@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 /**Components*/
 import Header from './header/Header';
+import MobileMenuButton from '../../multipagesComponents/mobileMenu/mobileMenuButton/MobileMenuButton';
+import MobileMenuOverlay from '../../multipagesComponents/mobileMenu/mobileMenuOverlay/MobileMenuOverlay';
+import MobileContactPanel from '../../multipagesComponents/mobileMenu/mobileContactPanel/MobileContactPanel';
 /**Basic Data**/
 import { mobileMenuData } from '../../../data/_data';
 /**Font Staff**/
 import localFont from '@next/font/local';
-import MobileContactPanel from '../../multipagesComponents/mobileMenu/mobileContactPanel/MobileContactPanel';
-import MobileMenuOverlay from '../../multipagesComponents/mobileMenu/mobileMenuOverlay/MobileMenuOverlay';
-import MobileMenuButton from '../../multipagesComponents/mobileMenu/mobileMenuButton/MobileMenuButton';
 
 const haasFont = localFont({
   src: '../../../public/fonts/HaasGrotDisp-55Roman.woff2',
 });
 
+/**---------------------------------------------------------------------------------**/
 export default function Layout({ children }: { children: React.ReactNode }) {
-  /**Local State*/
+  /**Local States**/
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [roadPrompt, setRoadPrompt] = useState(false);
 
@@ -27,10 +28,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         className={`${haasFont.className}`}
       >
         <div className="relative z-[10]">{children}</div>
-        <Header
-          setIsMobileMenuOpen={setIsMobileMenuOpen}
-          isMobileMenuOpen={isMobileMenuOpen}
-        />
+        <Header />
         <MobileMenuButton
           mobileMenuOpener={setIsMobileMenuOpen}
           mobileMenuState={isMobileMenuOpen}

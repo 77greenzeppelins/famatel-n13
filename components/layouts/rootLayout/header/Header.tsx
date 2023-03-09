@@ -3,13 +3,10 @@ import HeaderLogoLink from './logoLink/HeaderLogoLink';
 import NavForMainPages from './navSection/NavForMainPages';
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
-/**Basic Data**/
+import { headerVariants } from '../../../../utils/framerMotion/framerMotionUtils';
 
 /******************************************************************************/
-const Header: React.FunctionComponent<{
-  setIsMobileMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  isMobileMenuOpen: boolean;
-}> = ({ setIsMobileMenuOpen, isMobileMenuOpen }) => {
+const Header: React.FunctionComponent = () => {
   /**JSX*/
   return (
     <header
@@ -30,17 +27,15 @@ const Header: React.FunctionComponent<{
 
           <motion.div
             className="flex items-center justify-between w-full h-full"
-            initial={{ y: '-100%' }}
-            animate={{ y: 0, transition: { duration: 0.8 } }}
+            variants={headerVariants}
+            initial="from"
+            animate="to"
           >
             <div className="origin-left h-full flex items-center  pb-1">
               <HeaderLogoLink />
             </div>
             <div className="flex items-center justify-end h-full w-full ">
-              <NavForMainPages
-                mobileMenuOpener={setIsMobileMenuOpen}
-                mobileMenuState={isMobileMenuOpen}
-              />
+              <NavForMainPages />
             </div>
           </motion.div>
         </div>

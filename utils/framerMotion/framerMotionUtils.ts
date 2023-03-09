@@ -149,10 +149,10 @@ const opacityScaleYVariants = {
     transition: { duration: 0.6, ease: 'easeInOut' },
   },
 };
+
 /*
 created to be used in all sorts of <TextSectionComponents>
 */
-
 const textSectionContainerVariants = {
   from: {
     //___why empty? I need "from" name to orchestrate "parent-children "animations
@@ -211,11 +211,22 @@ const cardVariants = {
   },
 };
 
+/*
+used in header <Logo> and many other components !important
+*/
 const svgTransition = {
   type: 'spring',
   damping: 5,
   stiffness: 100,
   restDelta: 0.001,
+};
+
+/*
+used in <Header> for header itsef and <MobileMenuButton>; just to coordinate their animations
+*/
+const headerVariants = {
+  from: { y: '-100%' },
+  to: { y: 0, transition: { duration: 0.8 } },
 };
 
 export {
@@ -234,4 +245,6 @@ export {
   cardVariants,
   //___used in svgArrows, xMarks and so on...
   svgTransition,
+  //___
+  headerVariants,
 };
