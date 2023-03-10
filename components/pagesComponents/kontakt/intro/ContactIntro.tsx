@@ -5,7 +5,7 @@ import SectionContentLayout from '../../../layouts/pagesLayouts/multipagesLayout
 const witajStyle =
   'text-light  text-6xl xxs:text-8xl lg:text-9xl font-bold tracking-[1.5px] lg:tracking-[1.5px] word-spacing-0125 lg:word-spacing-025 disable-soft';
 const sentenceStyle =
-  'text-1rem lg:text-2xl text-grey text-center md:text-left tracking-[1.5px] lg:tracking-[2px] word-spacing-0125 lg:word-spacing-025 disable-soft';
+  'text-base lg:text-xl lg:text-2xl text-grey text-center md:text-left tracking-[1.5px] lg:tracking-[2px] word-spacing-0125 lg:word-spacing-025 disable-soft';
 /**Basic Data**/
 import { story } from '../../../../data/_data';
 
@@ -15,8 +15,9 @@ import { opacityScaleYDynamicVariants } from '../../../../utils/framerMotion/fra
 
 /**------------------------------**/
 const ContactIntro = () => {
+  /**JSX**/
   return (
-    <SectionContentLayout divStyle="flex flex-col gap-y-4 md:flex-row md:gap-x-14 lg:py-[20px] xl:py-[80px] xl:pl-[50px]">
+    <SectionContentLayout divStyle="flex flex-col gap-y-4 md:flex-row md:gap-x-14 lg:py-[20px] lg:py-[80px] xl:pl-[50px]">
       <div className="flex justify-center md:justify-start gap-x-6 ">
         <motion.div
           custom={1}

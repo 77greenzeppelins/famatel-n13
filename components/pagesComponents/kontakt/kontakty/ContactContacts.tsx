@@ -17,12 +17,27 @@ const labelStyle =
   'text-grey text-[1rem] lg:text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-light group-hover:-translate-x-1 ease-in duration-300  origin-center break-all';
 
 /**-------------------------------------------------------------------------------**/
-const ContactContacts: React.FunctionComponent<{ animationDelay?: number }> = ({
+const ContactContacts: React.FunctionComponent<{
+  animationDelay?: number;
+  setAnimationStage: React.Dispatch<React.SetStateAction<number>>;
+  animationStage: number;
+  animationStageNumber: number;
+}> = ({
   animationDelay = 2,
+  setAnimationStage,
+  animationStage,
+  animationStageNumber,
 }) => {
+  /**Handler*/
+  const onAnimationCompleteHandler = () => {
+    console.log('..........onAnimationCompleteHandler fired !!!!!!!');
+    setAnimationStage(animationStageNumber);
+  };
+
+  /**JSX**/
   return (
     <SectionContentLayout>
-      <div className="w-full ">
+      <div className="w-full">
         <ScaledYWrapper animationDelay={animationDelay}>
           <p className="text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025">
             Kontakt
@@ -62,7 +77,10 @@ const ContactContacts: React.FunctionComponent<{ animationDelay?: number }> = ({
           </a>
         </ScaledYWrapper>
 
-        <ScaledYWrapper animationDelay={animationDelay * 1.9}>
+        <ScaledYWrapper
+          animationDelay={animationDelay * 1.9}
+          onAnimationCompleteHandler={onAnimationCompleteHandler}
+        >
           <a
             href="mailto:grzegorz.kowcz@famatel.pl"
             className={aStyle}

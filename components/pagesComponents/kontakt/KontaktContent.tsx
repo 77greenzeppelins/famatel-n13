@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 /**Components**/
 import ContactAddress from './adres/ContactAddress';
 import ContactIntro from './intro/ContactIntro';
@@ -6,6 +6,10 @@ import ContactContacts from './kontakty/ContactContacts';
 
 /**----------------------------------**/
 const KontaktContent = () => {
+  /**Local State**/
+  const [animationStage, setAnimationStage] = useState<number>(0);
+
+  console.log('.......animationStage', animationStage);
   /**JSX**/
   return (
     <div
@@ -15,9 +19,17 @@ const KontaktContent = () => {
       <div className="w-full h-full inner-px-md-xl-xxl">
         <div className="flex flex-col pt-[50px] gap-y-[10px]">
           <ContactIntro />
-          <div className="flex flex-col gap-y-[80px]">
-            <ContactContacts />
-            <ContactAddress />
+          <div className="flex flex-col xl:flex-row xl:gap-x-20 gap-y-[80px]">
+            <div className="xl:w-[50%]">
+              <ContactContacts
+                animationStage={animationStage}
+                setAnimationStage={setAnimationStage}
+                animationStageNumber={1}
+              />
+            </div>
+            <div className="xl:w-[50%]">
+              <ContactAddress />
+            </div>
           </div>
         </div>
       </div>

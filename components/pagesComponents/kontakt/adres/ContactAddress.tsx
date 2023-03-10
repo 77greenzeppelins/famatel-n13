@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 /**Components**/
 import SectionContentLayout from '../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import ScaledYWrapper from '../_scaledYWrapper/ScaledYWrapper';
 /**Framer Motion Staff*/
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import useMeasure from 'react-use-measure';
 /**Hardcoded Data*/
 const address = ['Biuro/Magazyn', 'Ul. Willowa 5', '58-260 Bielawa'];
 const labelStyle =
@@ -13,35 +14,51 @@ const labelStyle =
 const ContactAddress: React.FunctionComponent<{ animationDelay?: number }> = ({
   animationDelay = 2,
 }) => {
+  /**Staff for handling "inView" **/
+  const [ref, bounds] = useMeasure();
+  const elementInView = useRef(null);
+  const isInView = useInView(elementInView, {
+    margin: `-${bounds.height * 0.9}px 0px -${bounds.height * 0.9}px 0px`,
+    // once: true,
+    // amount: 'all',
+    // amount: 1,
+  });
+  /**.....WTF**/
+  console.log('.....ContactAddress isInView', isInView);
   /**JSX**/
   return (
-    <SectionContentLayout>
-      <div className="w-full ">
-        <ScaledYWrapper animationDelay={animationDelay}>
-          <p className="text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025">
-            Adres
-          </p>
-        </ScaledYWrapper>
+    <div className="bg-vB" ref={elementInView}>
+      <div ref={ref} className="flex flex-col gap-y-4">
+        <div className="w-full ">
+          <ScaledYWrapper animationDelay={animationDelay}>
+            <p className="text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025">
+              Adres
+            </p>
+          </ScaledYWrapper>
 
-        <motion.div
-          className="w-full h-[1px] border-b-[0.5px] border-grey"
-          initial={{ y: '110%', opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: animationDelay }}
-        />
+          <motion.div
+            className="w-full h-[1px] border-b-[0.5px] border-grey"
+            initial={{ y: '110%', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            //___animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.9 }}
+            //___animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 0.9 }}
+
+            transition={{ duration: 0.6, delay: animationDelay }}
+          />
+        </div>
+        <div className="flex flex-col gap-y-4  items-start  md:flex-row md:items-center md:gap-x-20 pt-2">
+          <ul className="flex flex-col gap-4  group">
+            {address.map((label, index) => (
+              <ScaledYWrapper key={index} animationDelay={animationDelay}>
+                <li>
+                  <p className={labelStyle}>{label}</p>
+                </li>
+              </ScaledYWrapper>
+            ))}
+          </ul>
+        </div>
       </div>
-      <div className="flex flex-col gap-y-4  items-start  md:flex-row md:items-center md:gap-x-20 pt-2">
-        <ul className="flex flex-col gap-4  group">
-          {address.map((label, index) => (
-            <ScaledYWrapper key={index} animationDelay={animationDelay}>
-              <li>
-                <p className={labelStyle}>{label}</p>
-              </li>
-            </ScaledYWrapper>
-          ))}
-        </ul>
-      </div>
-    </SectionContentLayout>
+    </div>
   );
 };
 

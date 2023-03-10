@@ -8,10 +8,12 @@ const ScaledYWrapper = ({
   animationDelay,
   children,
   isInView = false,
+  onAnimationCompleteHandler,
 }: {
   animationDelay: number;
   children: ReactNode;
   isInView?: boolean;
+  onAnimationCompleteHandler?: () => void;
 }) => {
   /**JSX**/
   return (
@@ -20,6 +22,8 @@ const ScaledYWrapper = ({
       variants={opacityScaleYDynamicVariants}
       initial="from"
       animate="to"
+      onAnimationComplete={onAnimationCompleteHandler}
+      // onComplete={onAnimationCompleteHandler}
     >
       {children}
     </motion.div>

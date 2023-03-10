@@ -1,18 +1,24 @@
 import React, { useRef } from 'react';
-import { story } from '../../../../../data/_data';
+/**Components*/
+import InViewContainer from '../../../../containers/inViewContainer/InViewContainer';
+import AnimatedText from './animatedText/AnimatedText';
+/**Hook Staff**/
+import useMeasure from 'react-use-measure';
 /**Framer Motion Staff**/
 import {
   motion,
+  useInView,
   // useScroll,
   // useTransform,
-  useInView,
-  useSpring,
+  // useSpring,
 } from 'framer-motion';
-import useMeasure from 'react-use-measure';
-const val1 = 300;
 
+/**Basic Data*/
+// import { story } from '../../../../../data/_data';
+
+/**---------------------------------**/
 const TextForEntry = () => {
-  const scrollRef = useRef(null);
+  // const scrollRef = useRef(null);
   const [ref, bounds] = useMeasure();
   const elementInView = useRef(null);
   const isInView = useInView(elementInView, {
@@ -21,62 +27,49 @@ const TextForEntry = () => {
     // amount: 'all',
     // amount: 1,
   });
-  //___
-
-  /**Framer Motion Section**/
-  // const { scrollYProgress } = useScroll({
-  //   target: scrollRef,
-  //   offset: ['end end', 'end start'],
-  // });
-  // let width = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
-  // let height = useTransform(scrollYProgress, [0, 0.5], ['100%', '0%']);
-
-  //___
-  // const scaleX = useSpring(scrollYProgress, {
-  //   stiffness: 100,
-  //   damping: 30,
-  //   restDelta: 0.001,
-  // });
+  /**.....WTF**/
   console.log('isInView', isInView);
+
   /**JSX**/
   return (
-    <div
-      // ref={scrollRef}
-      ref={elementInView}
-      className="relative flex flex-col inner-px-md-xl-xxl"
-    >
-      <div className="xl:px-20">
-        <motion.p
-          ref={ref}
-          className="text-light text-center text-[1.5rem] xs:text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[3rem] xxl:text-[3.5rem] font-bold tracking-[2px] leading-tight"
-          animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.9 }}
-          transition={{
-            duration: 0.6,
-            delay: 0,
-            // type: 'spring',
-            // bounce: 0.4,
-            // duration: 0.8,
-          }}
-        >
-          {story.s1[0]}
-        </motion.p>
-        {/* <motion.div
-      
-        className="absolute inset-0 origin-left bg-dark z-1"
-        animate={{ opacity: isInView ? 0 : 1 }}
-        transition={{ duration: 0.4, delay: 0 }}
-        // style={{ height }}
-        // initial={{ opacity: 1 }}
-        // whileInView={{ opacity: 0.5 }}
-        // viewport={{ once: true, amount: 0.9 }}
-      /> */}
-        {/* <motion.div
-        className="relative z-10 h-10 origin-left bg-vY"
-        style={{ width }}
-      /> */}
-      </div>
-    </div>
+    <InViewContainer>
+      <AnimatedText />
+    </InViewContainer>
   );
 };
 
 export default TextForEntry;
+
+// type Props = {
+//   value?: boolean;
+// };
+
+// const ChildComponent: React.FC<Props> = ({ value = false }) => {
+//   // Use the `value` prop in the child component
+//   return (
+//     <div className="text-corpo text-2xl">
+//       The value is: {value ? 'true' : 'false'}
+//     </div>
+//   );
+// };
+
+// <div>
+//   <ReusableComponent>
+//     <ChildComponent />
+//   </ReusableComponent>
+// </div>
+
+/**Framer Motion Section**/
+// const { scrollYProgress } = useScroll({
+//   target: scrollRef,
+//   offset: ['end end', 'end start'],
+// });
+// let width = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+// let height = useTransform(scrollYProgress, [0, 0.5], ['100%', '0%']);
+
+//___
+// const scaleX = useSpring(scrollYProgress, {
+//   stiffness: 100,
+//   damping: 30,
+//   restDelta: 0.001,
+// });
