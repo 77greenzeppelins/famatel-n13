@@ -1,16 +1,19 @@
 import React, { ReactNode } from 'react';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
-import { opacityScaleYDynamicVariants } from '../../../../utils/framerMotion/framerMotionUtils';
+import {
+  opacityScaleYDynamicVariants,
+  opacityScaleYDynamicComplexVariants,
+} from '../../../../utils/framerMotion/framerMotionUtils';
 
 /**--------------------------**/
 const ScaledYWrapper = ({
   animationDelay,
   children,
-  isInView = false,
+  isInView,
   onAnimationCompleteHandler,
 }: {
-  animationDelay: number;
+  animationDelay?: number;
   children: ReactNode;
   isInView?: boolean;
   onAnimationCompleteHandler?: () => void;

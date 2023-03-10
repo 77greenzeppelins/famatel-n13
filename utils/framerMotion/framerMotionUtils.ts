@@ -165,6 +165,24 @@ const opacityScaleYDynamicVariants = {
     },
   }),
 };
+const opacityScaleYDynamicComplexVariants = {
+  from: { opacity: 0, scaleY: 0 },
+  to: ({
+    delayVal,
+    isInView = true,
+  }: {
+    delayVal: number;
+    isInView?: boolean;
+  }) => ({
+    opacity: isInView ? 1 : 0,
+    scaleY: isInView ? 1 : 0,
+    transition: {
+      duration: 0.8,
+      delay: 0.6 * delayVal,
+      ease: 'easeInOut',
+    },
+  }),
+};
 
 /*
 created to be used in all sorts of <TextSectionComponents>
@@ -265,4 +283,6 @@ export {
   headerVariants,
   //___
   opacityScaleYDynamicVariants,
+  //___
+  opacityScaleYDynamicComplexVariants,
 };

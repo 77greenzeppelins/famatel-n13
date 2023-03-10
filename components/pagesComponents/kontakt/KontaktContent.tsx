@@ -28,7 +28,7 @@ const KontaktContent = () => {
               />
             </div>
             <div className="xl:w-[50%]">
-              <ContactAddress />
+              <ContactAddress animationDelay={2} />
             </div>
           </div>
         </div>

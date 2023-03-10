@@ -1,65 +1,121 @@
-import React, { useRef } from 'react';
-/**Components**/
-import SectionContentLayout from '../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import ScaledYWrapper from '../_scaledYWrapper/ScaledYWrapper';
-/**Framer Motion Staff*/
 import { motion, useInView } from 'framer-motion';
+import React, { useRef } from 'react';
 import useMeasure from 'react-use-measure';
+/**Containers**/
+import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
+import ScaledYWrapper from '../_scaledYWrapper/ScaledYWrapper';
+import AddressContent from './addressContent/AddressContent';
 /**Hardcoded Data*/
 const address = ['Biuro/Magazyn', 'Ul. Willowa 5', '58-260 Bielawa'];
+const staggerFactors = [1.3, 1.6, 1.9];
 const labelStyle =
   'text-grey text-[1rem] lg:text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-light  ease-in duration-300  origin-center break-all';
 
 /**----------------------------------**/
-const ContactAddress: React.FunctionComponent<{ animationDelay?: number }> = ({
-  animationDelay = 2,
+const ContactAddress: React.FunctionComponent<{
+  animationDelay?: number;
+  outherContainerStyle?: string;
+  innerContainerStyle?: string;
+  measuredElementStyle?: string;
+}> = ({
+  animationDelay = 0,
+  outherContainerStyle,
+  innerContainerStyle,
+  measuredElementStyle,
 }) => {
-  /**Staff for handling "inView" **/
   const [ref, bounds] = useMeasure();
   const elementInView = useRef(null);
   const isInView = useInView(elementInView, {
     margin: `-${bounds.height * 0.9}px 0px -${bounds.height * 0.9}px 0px`,
-    // once: true,
-    // amount: 'all',
-    // amount: 1,
+    // once: true, // amount: 'all', // amount: 1,
   });
-  /**.....WTF**/
-  console.log('.....ContactAddress isInView', isInView);
+  console.log('InViewContainer / isInView', isInView);
+  //  console.log('InViewContainer / topFactor', topFactor);
+
   /**JSX**/
   return (
-    <div className="bg-vB" ref={elementInView}>
-      <div ref={ref} className="flex flex-col gap-y-4">
-        <div className="w-full ">
-          <ScaledYWrapper animationDelay={animationDelay}>
-            <p className="text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025">
-              Adres
-            </p>
-          </ScaledYWrapper>
-
-          <motion.div
-            className="w-full h-[1px] border-b-[0.5px] border-grey"
-            initial={{ y: '110%', opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            //___animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.9 }}
-            //___animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 0.9 }}
-
-            transition={{ duration: 0.6, delay: animationDelay }}
-          />
-        </div>
-        <div className="flex flex-col gap-y-4  items-start  md:flex-row md:items-center md:gap-x-20 pt-2">
-          <ul className="flex flex-col gap-4  group">
-            {address.map((label, index) => (
-              <ScaledYWrapper key={index} animationDelay={animationDelay}>
-                <li>
-                  <p className={labelStyle}>{label}</p>
-                </li>
+    <div
+      data-layout="OutherContainer"
+      ref={elementInView}
+      className={outherContainerStyle ? outherContainerStyle : 'w-full h-full'}
+    >
+      <div
+        data-layout="InnerContainer"
+        className={innerContainerStyle ? innerContainerStyle : 'w-full h-full'}
+      >
+        <div
+          ref={ref}
+          data-layout="MeasuredElementContainer"
+          className={
+            measuredElementStyle ? measuredElementStyle : 'w-full h-full'
+          }
+        >
+          <div className="flex flex-col gap-y-4">
+            <div className="w-full overflow-hidden">
+              <ScaledYWrapper
+                //    animationDelay={animationDelay}
+                animationDelay={animationDelay && animationDelay * 1}
+                isInView={isInView}
+              >
+                <p className="text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025">
+                  {`Adres ${isInView && isInView.toString()}`}
+                </p>
               </ScaledYWrapper>
-            ))}
-          </ul>
+
+              <motion.div
+                className={`w-full h-[1px] border-b-[0.5px] border-grey`}
+                //   initial={{ x: '-110%', opacity: 0 }}
+                //   animate={{ x: 0, opacity: 1 }}
+                // animate={{
+                //   opacity: isInView ? 1 : 0,
+                //   scale: isInView ? 1 : 0.9,
+                // }}
+                animate={{
+                  opacity: isInView ? 1 : 0,
+                  x: isInView ? 0 : '-110%',
+                }}
+                transition={{
+                  duration: 0.8,
+                  // delay: animationDelay && animationDelay * 3,
+                  delay: 0.4,
+                }}
+              />
+            </div>
+            <div className="flex flex-col gap-y-4  items-start  md:flex-row md:items-center md:gap-x-20 pt-2">
+              <ul className="flex flex-col gap-4  group">
+                {address.map((label, index) => (
+                  <ScaledYWrapper
+                    key={index}
+                    animationDelay={
+                      animationDelay && animationDelay * staggerFactors[index]
+                    }
+                    isInView={isInView}
+                  >
+                    <li>
+                      <p className={labelStyle}>{label}</p>
+                    </li>
+                  </ScaledYWrapper>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
+
+  /**JSX**/
+  // return (
+  //   <InViewContainer
+  //     // topFactor={0.9}
+  //     // bottomFactor={0.9}
+  //     animationDelay={animationDelay}
+  //     // outherContainerStyle="w-full"
+  //     // innerContainerStyle="w-full"
+  //   >
+  //     <AddressContent />
+  //   </InViewContainer>
+  // );
 };
 
 export default ContactAddress;

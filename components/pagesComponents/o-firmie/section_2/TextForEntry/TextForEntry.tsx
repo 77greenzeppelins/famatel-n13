@@ -1,38 +1,17 @@
-import React, { useRef } from 'react';
+import React from 'react';
 /**Components*/
 import InViewContainer from '../../../../containers/inViewContainer/InViewContainer';
 import AnimatedText from './animatedText/AnimatedText';
-/**Hook Staff**/
-import useMeasure from 'react-use-measure';
-/**Framer Motion Staff**/
-import {
-  motion,
-  useInView,
-  // useScroll,
-  // useTransform,
-  // useSpring,
-} from 'framer-motion';
-
-/**Basic Data*/
-// import { story } from '../../../../../data/_data';
 
 /**---------------------------------**/
 const TextForEntry = () => {
-  // const scrollRef = useRef(null);
-  const [ref, bounds] = useMeasure();
-  const elementInView = useRef(null);
-  const isInView = useInView(elementInView, {
-    margin: `-${bounds.height * 0.9}px 0px -${bounds.height * 0.9}px 0px`,
-    // once: true,
-    // amount: 'all',
-    // amount: 1,
-  });
-  /**.....WTF**/
-  console.log('isInView', isInView);
-
   /**JSX**/
   return (
-    <InViewContainer>
+    <InViewContainer
+      animationDelay={2}
+      outherContainerStyle="relative flex flex-col inner-px-md-xl-xxl"
+      innerContainerStyle="xl:px-20"
+    >
       <AnimatedText />
     </InViewContainer>
   );

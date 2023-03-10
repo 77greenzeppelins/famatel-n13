@@ -29,17 +29,17 @@ const ContactContacts: React.FunctionComponent<{
   animationStageNumber,
 }) => {
   /**Handler*/
-  const onAnimationCompleteHandler = () => {
-    console.log('..........onAnimationCompleteHandler fired !!!!!!!');
-    setAnimationStage(animationStageNumber);
-  };
+  // const onAnimationCompleteHandler = () => {
+  //   console.log('..........onAnimationCompleteHandler fired !!!!!!!');
+  //   setAnimationStage(animationStageNumber);
+  // };
 
   /**JSX**/
   return (
     <SectionContentLayout>
       <div className="w-full">
         <ScaledYWrapper animationDelay={animationDelay}>
-          <p className="text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025">
+          <p className="text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025">
             Kontakt
           </p>
         </ScaledYWrapper>
@@ -79,7 +79,7 @@ const ContactContacts: React.FunctionComponent<{
 
         <ScaledYWrapper
           animationDelay={animationDelay * 1.9}
-          onAnimationCompleteHandler={onAnimationCompleteHandler}
+          // onAnimationCompleteHandler={onAnimationCompleteHandler}
         >
           <a
             href="mailto:grzegorz.kowcz@famatel.pl"

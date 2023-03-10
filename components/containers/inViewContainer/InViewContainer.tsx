@@ -11,59 +11,66 @@ interface Props {
   outherContainerStyle?: string;
   innerContainerStyle?: string;
   measuredElementStyle?: string;
+  topFactor?: number;
+  bottomFactor?: number;
+  animationDelay?: number;
+  //   componentIsInView?:boolean
 }
 
-// const ReusableComponent: React.FC<Props> = ({ children, value }) => {
-//   return <>{React.cloneElement(children, { value })}</>;
-// };
-
-const InViewGenContainer: React.FC<Props> = ({
+/**-------------------------------------------------**/
+const InViewContainer: React.FC<Props> = ({
   children,
   outherContainerStyle,
   innerContainerStyle,
   measuredElementStyle,
+  topFactor = 0.9,
+  bottomFactor = 0.9,
+  animationDelay = 0,
+  //   componentIsInView,
 }) => {
   const [ref, bounds] = useMeasure();
   const elementInView = useRef(null);
   const isInView = useInView(elementInView, {
-    margin: `-${bounds.height * 0.9}px 0px -${bounds.height * 0.9}px 0px`,
-    // once: true,
-    // amount: 'all',
-    // amount: 1,
+    margin: `-${bounds.height * topFactor}px 0px -${
+      bounds.height * bottomFactor
+    }px 0px`,
+    // once: true, // amount: 'all', // amount: 1,
   });
-  /**.....WTF**/
-  //   const clonedChild = React.Children.map(children, child => {
-  //     return <>{cloneElement(child, { componentIsInView })}</>;
-  //   });
+  console.log('InViewContainer / isInView', isInView);
+  console.log('InViewContainer / topFactor', topFactor);
 
   /**JSX**/
   return (
     <div
       data-layout="OutherContainer"
-      // ref={scrollRef}
       ref={elementInView}
-      className={
-        outherContainerStyle
-          ? outherContainerStyle
-          : 'relative flex flex-col inner-px-md-xl-xxl'
-      }
+      className={outherContainerStyle ? outherContainerStyle : 'w-full h-full'}
     >
       <div
         data-layout="InnerContainer"
-        className={innerContainerStyle ? innerContainerStyle : 'xl:px-20'}
+        className={innerContainerStyle ? innerContainerStyle : 'w-full h-full'}
       >
         <div
           ref={ref}
           data-layout="MeasuredElementContainer"
           className={
-            measuredElementStyle ? measuredElementStyle : 'w-full h-full bg-vB'
+            measuredElementStyle ? measuredElementStyle : 'w-full h-full'
           }
         >
-          {React.cloneElement(children, { value: isInView })}
+          {React.cloneElement(children, {
+            componentIsInView: isInView,
+            animationDelay: animationDelay,
+          })}
+          /
         </div>
       </div>
     </div>
   );
+
+  /**.....WTF**/
+  //   const clonedChild = React.Children.map(children, child => {
+  //     return <>{cloneElement(child, { componentIsInView })}</>;
+  //   });
 
   // <div>{clonedChild}</div>
   // <div
@@ -93,4 +100,4 @@ const InViewGenContainer: React.FC<Props> = ({
   // </div>
 };
 
-export default InViewGenContainer;
+export default InViewContainer;

@@ -1,36 +1,26 @@
-import { motion } from 'framer-motion';
 import React from 'react';
+/**Framer Motion Staff**/
+import { motion } from 'framer-motion';
+/**Basic Data**/
 import { story } from '../../../../../../data/_data';
 
-/*
-  type Props = {
-    value?: boolean;
-  };
-
-  const ChildComponent: React.FC<Props> = ({ value = false }) => {
-    // Use the `value` prop in the child component
-    return (
-      <div className="text-corpo text-2xl">
-        The value is: {value ? 'true' : 'false'}
-      </div>
-    );
-  };
-
-
-*/
+/**TS**/
 type Props = {
-  value?: boolean;
+  componentIsInView?: boolean;
 };
 
 /**-------------------------------------------**/
-const AnimatedText: React.FC<Props> = ({ value = false }) => {
-  console.log('......AnimatedText / value', value);
+const AnimatedText: React.FC<Props> = ({ componentIsInView = false }) => {
+  //   console.log('......AnimatedText / componentIsInView', componentIsInView);
   /**JSX**/
   return (
     <motion.p
       // ref={ref}
       className="text-light text-center text-[1.5rem] xs:text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[3rem] xxl:text-[3.5rem] font-bold tracking-[2px] leading-tight"
-      animate={{ opacity: value ? 1 : 0, scale: value ? 1 : 0.9 }}
+      animate={{
+        opacity: componentIsInView ? 1 : 0,
+        scale: componentIsInView ? 1 : 0.9,
+      }}
       transition={{
         duration: 0.6,
         delay: 0,
