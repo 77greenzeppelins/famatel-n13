@@ -39,9 +39,7 @@ const ContactAddress: React.FunctionComponent<{
       data-layout="OutherContainer"
       ref={elementInView}
       className={
-        outherContainerStyle
-          ? outherContainerStyle
-          : 'w-full h-full bg-greyShade2'
+        outherContainerStyle ? outherContainerStyle : 'w-full h-full bg-dark'
       }
     >
       <div
@@ -52,7 +50,7 @@ const ContactAddress: React.FunctionComponent<{
           ref={ref}
           data-layout="MeasuredElementContainer"
           className={
-            measuredElementStyle ? measuredElementStyle : 'w-full h-full bg-vB'
+            measuredElementStyle ? measuredElementStyle : 'w-full h-full'
           }
         >
           <div className="flex flex-col gap-y-10  pt-2">

@@ -17,23 +17,24 @@ const KontaktContent = () => {
       className="relative bg-dark pt-[60px]"
     >
       <div className="w-full h-full inner-px-md-xl-xxl">
-        <div className="flex flex-col pt-[50px] gap-y-[10px]">
-          <ContactIntro />
-          <div className="flex flex-col xl:flex-row xl:gap-x-20 gap-y-[80px]">
-            {/* <div className="xl:w-[50%]">
+        <ContactIntro />
+        <div className="flex flex-col  gap-y-[10px]">
+          {/* <ContactIntro /> */}
+          <div className="flex flex-col xl:flex-row xl:gap-x-20 gap-y-[80px] z-10">
+            <div className="xl:w-[50%]">
               <ContactContacts
                 animationStage={animationStage}
                 setAnimationStage={setAnimationStage}
                 animationStageNumber={1}
               />
-            </div> */}
+            </div>
             <div className="xl:w-[50%]">
               <ContactAddress />
             </div>
           </div>
-          <div className="h-[50vh] bg-greyShade2"></div>
-          <div className="h-[50vh] bg-greyShade1"></div>
-          <div className="h-[50vh] bg-vY"></div>
+          <div className="h-[50vh] bg-greyShade2 z-10"></div>
+          <div className="h-[50vh] bg-greyShade1 z-10"></div>
+          {/* <div className="h-[50vh] bg-vY "></div> */}
         </div>
       </div>
     </div>
