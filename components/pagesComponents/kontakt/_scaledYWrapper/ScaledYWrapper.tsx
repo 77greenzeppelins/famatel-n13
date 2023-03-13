@@ -26,7 +26,6 @@ const ScaledYWrapper = ({
       initial="from"
       animate="to"
       onAnimationComplete={onAnimationCompleteHandler}
-      // onComplete={onAnimationCompleteHandler}
     >
       {children}
     </motion.div>

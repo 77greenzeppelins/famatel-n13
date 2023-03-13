@@ -9,7 +9,7 @@ const KontaktContent = () => {
   /**Local State**/
   const [animationStage, setAnimationStage] = useState<number>(0);
 
-  console.log('.......animationStage', animationStage);
+  // console.log('.......animationStage', animationStage);
   /**JSX**/
   return (
     <div
@@ -28,9 +28,12 @@ const KontaktContent = () => {
               />
             </div>
             <div className="xl:w-[50%]">
-              <ContactAddress animationDelay={2} />
+              <ContactAddress />
             </div>
           </div>
+          <div className="h-[50vh] bg-greyShade2"></div>
+          <div className="h-[50vh] bg-greyShade1"></div>
+          <div className="h-[50vh] bg-vY"></div>
         </div>
       </div>
     </div>

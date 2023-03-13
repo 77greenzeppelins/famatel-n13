@@ -17,7 +17,7 @@ const MainText: React.FunctionComponent = () => {
             uniqueKey={index}
             text={label}
             variantH="custome"
-            customeStyle="text-light text-left text-[2rem] xs:text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] xxl:text-[5rem] font-bold tracking-[2px] leading-tight"
+            customeStyle="text-light text-left text-[2rem] xs:text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[4.5rem] xxl:text-[5rem] font-bold tracking-[2px] leading-tight"
           />
         );
       })}
