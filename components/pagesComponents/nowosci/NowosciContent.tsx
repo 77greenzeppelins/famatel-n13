@@ -19,23 +19,23 @@ const NowosciContent = () => {
       <div className="w-full h-full inner-px-md-xl-xxl">
         <div className="flex flex-col pt-[50px] gap-y-[10px]">
           <Section2 />
-          <div className="fc h-[50vh] bg-greyShade2">
+          <div className="fc h-[50vh] ">
             <InViewContainer
               animationDelay={2}
               outherContainerStyle="relative fc inner-px-md-xl-xxl "
               innerContainerStyle="xl:px-20 "
-              measuredElementStyle="w-full h-full bg-vR"
+              measuredElementStyle="w-full h-full "
               topFactor={0.6}
             >
               <AnimatedText text="Text z sekcji_1 animuje sie w następujący sposób..." />
             </InViewContainer>
           </div>
-          <div className="relative fc h-[50vh] bg-greyShade1">
+          <div className="relative fc h-[50vh] ">
             <InViewContainer
               animationDelay={2}
               outherContainerStyle="relative fc inner-px-md-xl-xxl "
               innerContainerStyle="xl:px-20 "
-              measuredElementStyle=" w-full h-full bg-vR"
+              measuredElementStyle=" w-full h-full "
               topFactor={0.6}
             >
               <AnimatedText text="Text z sekcji_2 animuje sie w następujący sposób..." />

@@ -12,7 +12,7 @@ const Section2 = () => {
   //   console.log('bounds.width * 2:', bounds.width * 2);
   /**JSX**/
   return (
-    <div ref={ref} className="relative fc overflow-hidden">
+    <div ref={ref} className="relative fc h-[50vh] overflow-hidden">
       <InViewContainer
         animationDelay={2}
         outherContainerStyle="relative fc inner-px-md-xl-xxl"
@@ -25,7 +25,7 @@ const Section2 = () => {
       <OverlayWithGradient
         initial={{ x: '-50%' }}
         animate={{ x: '100%' }}
-        transition={{ duration: 3, delay: 0.8 }}
+        transition={{ duration: 3, delay: 0.6 }}
       />
       {/* <motion.div
         data-layout="Fake-overlay__for-initial-animation"
