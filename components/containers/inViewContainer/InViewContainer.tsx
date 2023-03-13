@@ -2,7 +2,7 @@ import React, { ReactElement, useRef, cloneElement } from 'react';
 /**Hook Staff**/
 import useMeasure from 'react-use-measure';
 /**FramerMotion Staff**/
-import { useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 /**TS**/
 interface Props {
@@ -14,7 +14,6 @@ interface Props {
   topFactor?: number;
   bottomFactor?: number;
   animationDelay?: number;
-  //   componentIsInView?:boolean
 }
 
 /**-------------------------------------------------**/
@@ -26,7 +25,6 @@ const InViewContainer: React.FC<Props> = ({
   topFactor = 0.9,
   bottomFactor = 0.9,
   animationDelay = 0,
-  //   componentIsInView,
 }) => {
   const [ref, bounds] = useMeasure();
   const elementInView = useRef(null);
@@ -36,8 +34,8 @@ const InViewContainer: React.FC<Props> = ({
     }px 0px`,
     // once: true, // amount: 'all', // amount: 1,
   });
-  console.log('InViewContainer / isInView', isInView);
-  console.log('InViewContainer / topFactor', topFactor);
+  // console.log('InViewContainer / additionalCompNumb', );
+  console.log('InViewContainer / bounds.width', bounds.width);
 
   /**JSX**/
   return (
@@ -61,7 +59,6 @@ const InViewContainer: React.FC<Props> = ({
             componentIsInView: isInView,
             animationDelay: animationDelay,
           })}
-          /
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import React from 'react';
 import SectionContentLayout from '../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 /**Hardcoded Staff*/
 const witajStyle =
-  'text-light  text-6xl xxs:text-8xl lg:text-9xl font-bold tracking-[1.5px] lg:tracking-[1.5px] word-spacing-0125 lg:word-spacing-025 disable-soft';
+  'text-light text-5xl xxs:text-[4.75rem] xs:text-9xl md:text-8xl lg:text-9xl font-bold tracking-[1.5px] lg:tracking-[1.5px] word-spacing-0125 lg:word-spacing-025 disable-soft';
 const sentenceStyle =
   'text-base lg:text-xl lg:text-2xl text-grey text-center md:text-left tracking-[1.5px] lg:tracking-[2px] word-spacing-0125 lg:word-spacing-025 disable-soft';
 /**Basic Data**/
@@ -17,7 +17,7 @@ import { opacityScaleYDynamicVariants } from '../../../../utils/framerMotion/fra
 const ContactIntro = () => {
   /**JSX**/
   return (
-    <SectionContentLayout divStyle="flex flex-col gap-y-4 md:flex-row md:gap-x-14 lg:py-[20px] lg:py-[80px] xl:pl-[50px]">
+    <section className="flex flex-col gap-y-4 md:flex-row md:gap-x-14 py-[80px] lg:py-[80px] xl:pl-[50px]">
       <div className="flex justify-center md:justify-start gap-x-6 ">
         <motion.div
           custom={1}
@@ -47,7 +47,7 @@ const ContactIntro = () => {
           <p className={sentenceStyle}>{story.pageKontakt.s1}</p>
         </motion.div>
       </div>
-    </SectionContentLayout>
+    </section>
     // <motion.div className="grid grid-cols-[1fr_1fr] lg:grid-cols-[1fr_50px_1fr] lg:py-[40px] ">
     //   <div className="flex  justify-end pr-2 overflow-hidden">
     //     <motion.div

@@ -1,7 +1,7 @@
 import React from 'react';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
-import ProductDescription from '../section_1/productDescription/ProductDescription';
+import ProductDescription from './productDescription/ProductDescription';
 import TextForEntry from './TextForEntry/TextForEntry';
 
 /**---------------------------------------------**/

@@ -20,13 +20,13 @@ const KontaktContent = () => {
         <div className="flex flex-col pt-[50px] gap-y-[10px]">
           <ContactIntro />
           <div className="flex flex-col xl:flex-row xl:gap-x-20 gap-y-[80px]">
-            <div className="xl:w-[50%]">
+            {/* <div className="xl:w-[50%]">
               <ContactContacts
                 animationStage={animationStage}
                 setAnimationStage={setAnimationStage}
                 animationStageNumber={1}
               />
-            </div>
+            </div> */}
             <div className="xl:w-[50%]">
               <ContactAddress />
             </div>

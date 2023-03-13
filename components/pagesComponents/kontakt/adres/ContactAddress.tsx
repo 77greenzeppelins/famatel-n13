@@ -26,19 +26,23 @@ const ContactAddress: React.FunctionComponent<{
 }) => {
   const [ref, bounds] = useMeasure();
   const elementInView = useRef(null);
-  const isInView = useInView(elementInView, {
-    margin: `-${bounds.height * 0.9}px 0px -${bounds.height * 0.9}px 0px`,
-    // once: true, // amount: 'all', // amount: 1,
-  });
+  // const isInView = useInView(elementInView, {
+  //   margin: `-${bounds.height * 0.4}px 0px -${bounds.height * 0.9}px 0px`,
+  //   // once: true, // amount: 'all', // amount: 1,
+  // });
   // console.log('InViewContainer / isInView', isInView);
   // console.log('InViewContainer / topFactor', topFactor);
-
+  const isInView = useInView(elementInView, { once: true, amount: 0.5 });
   /**JSX**/
   return (
     <div
       data-layout="OutherContainer"
       ref={elementInView}
-      className={outherContainerStyle ? outherContainerStyle : 'w-full h-full'}
+      className={
+        outherContainerStyle
+          ? outherContainerStyle
+          : 'w-full h-full bg-greyShade2'
+      }
     >
       <div
         data-layout="InnerContainer"
@@ -48,7 +52,7 @@ const ContactAddress: React.FunctionComponent<{
           ref={ref}
           data-layout="MeasuredElementContainer"
           className={
-            measuredElementStyle ? measuredElementStyle : 'w-full h-full'
+            measuredElementStyle ? measuredElementStyle : 'w-full h-full bg-vB'
           }
         >
           <div className="flex flex-col gap-y-10  pt-2">
@@ -58,21 +62,27 @@ const ContactAddress: React.FunctionComponent<{
                 isInView={isInView}
               >
                 <p className="text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025">
-                  {`Adres ${isInView && isInView.toString()}`}
+                  {/* {`Adres ${isInView && isInView.toString()}`} */}
+                  Adres
                 </p>
               </ScaledYTextWrapper>
 
               <motion.div
                 className={`w-full h-[1px] border-b-[0.5px] border-grey`}
-                animate={{
+                style={{
+                  transform: isInView ? 'none' : 'translateX(-200px)',
                   opacity: isInView ? 1 : 0,
-                  x: isInView ? 0 : '-110%',
+                  transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
                 }}
-                transition={{
-                  duration: 0.8,
-                  // delay: animationDelay && animationDelay * 3,
-                  delay: animationDelay && animationDelay * 1.2,
-                }}
+                // animate={{
+                //   opacity: isInView ? 1 : 0,
+                //   x: isInView ? 0 : '-110%',
+                // }}
+                // transition={{
+                //   duration: 0.8,
+                //   delay: 3,
+                //   // delay: animationDelay && animationDelay * 1.2,
+                // }}
               />
             </div>
             <div className="flex flex-col gap-y-4  items-start  md:flex-row md:items-center md:gap-x-20 pt-2">

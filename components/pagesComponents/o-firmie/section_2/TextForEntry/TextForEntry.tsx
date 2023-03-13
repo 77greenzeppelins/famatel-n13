@@ -9,8 +9,10 @@ const TextForEntry = () => {
   return (
     <InViewContainer
       animationDelay={2}
-      outherContainerStyle="relative flex flex-col inner-px-md-xl-xxl"
-      innerContainerStyle="xl:px-20"
+      outherContainerStyle="relative flex flex-col inner-px-md-xl-xxl "
+      innerContainerStyle="xl:px-20 "
+      // measuredElementStyle="w-full h-full bg-vR"
+      topFactor={0.6}
     >
       <AnimatedText />
     </InViewContainer>
