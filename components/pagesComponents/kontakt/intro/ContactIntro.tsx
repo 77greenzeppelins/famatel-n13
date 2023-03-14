@@ -16,11 +16,12 @@ import { opacityScaleYDynamicVariants } from '../../../../utils/framerMotion/fra
 const ContactIntro = () => {
   /**...*/
   let { scrollY } = useScroll();
-  let animatedVal = useTransform(scrollY, [0, 200], [0, 1]);
+  let animatedVal_1 = useTransform(scrollY, [0, 240], [0, 1]);
+  let animatedVal_2 = useTransform(scrollY, [0, 250], [1, 0.8]);
 
   /**JSX**/
   return (
-    <section className="sticky top-[50px] inset-x-0 flex flex-col justify-center gap-y-4 h-[50vh] xl:flex-row xl:gap-x-14 xl:w-[90%] xl:mx-auto xxl:w-[80%] z-0 px-2">
+    <section className="sticky top-[50px] inset-x-0 flex flex-col justify-center gap-y-4 h-[60vh] xl:flex-row xl:gap-x-14 xl:w-[90%] xl:mx-auto xxl:w-[80%] z-0 px-2">
       <div className="flex justify-center xl:justify-start xl:items-center gap-x-6 ">
         <motion.div
           custom={1}
@@ -28,7 +29,12 @@ const ContactIntro = () => {
           initial="from"
           animate="to"
         >
-          <p className={`${witajStyle} text-right`}>Witamy</p>
+          <motion.p
+            className={`${witajStyle} text-right`}
+            style={{ scale: animatedVal_2 }}
+          >
+            Witamy
+          </motion.p>
         </motion.div>
         <motion.div
           custom={1.4}
@@ -36,7 +42,12 @@ const ContactIntro = () => {
           initial="from"
           animate="to"
         >
-          <p className={`${witajStyle} text-right`}>!</p>
+          <motion.p
+            className={`${witajStyle} text-right origin-left`}
+            style={{ scale: animatedVal_2 }}
+          >
+            !
+          </motion.p>
         </motion.div>
       </div>
       <div className="fc ">
@@ -47,11 +58,13 @@ const ContactIntro = () => {
           initial="from"
           animate="to"
         >
-          <p className={sentenceStyle}>{story.pageKontakt.s1}</p>
+          <motion.p className={sentenceStyle} style={{ scale: animatedVal_2 }}>
+            {story.pageKontakt.s1}
+          </motion.p>
         </motion.div>
       </div>
       <motion.div
-        style={{ opacity: animatedVal }}
+        style={{ opacity: animatedVal_1 }}
         className="absolute inset-y-0 left-0 right-0 bg-dark"
       />
     </section>
