@@ -217,7 +217,7 @@ const story = {
   pageOFirmie: [
     'Stworzyliśmy ten model, aby wspierał Twoje działania w szczególnie wymagających warunkach.',
     'Od przeszło 30. lat dbamy o Twoje bezpieczeństwo przy inwestycjach z zakresu elektryki przemysłowej.',
-    'Do twojej dyspozycji oddajemy 10. kategorii produktowych. Jeśli działasz w zakresie elektryki przemysłowej na pewno mamy rozwiązanie dla Ciebie!',
+    'Oddajemy do Twojej dyspozycji 10. kategorii produktowych. Jeśli działasz w zakresie elektryki przemysłowej na pewno mamy rozwiązanie dla Ciebie!',
   ],
   pageKontakt: {
     s1: 'Zespół Famatel Polska zaprasza do kontaktu od poniedziałku do piątku w godzinach 8ºº - 16ºº.',

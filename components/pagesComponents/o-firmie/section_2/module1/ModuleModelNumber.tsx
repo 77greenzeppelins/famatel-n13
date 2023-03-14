@@ -14,7 +14,8 @@ const ModuleModelNumber = () => {
       outherContainerStyle="relative flex flex-col inner-px-md-xl-xxl "
       // innerContainerStyle="xl:px-20 "
       measuredElementStyle="fc flex-col md:flex-row md:justify-center md:items-center pt-10 gap-y-6 gap-x-6 w-full h-full"
-      topFactor={0.6}
+      topFactor={0.5}
+      bottomFactor={0.9}
     >
       <SquareWithModelNumber pseudoNumber="14307" text="model" />
       <AnimatedText text={story.pageOFirmie[0]} />
