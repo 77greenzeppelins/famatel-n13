@@ -7,7 +7,7 @@ import { motion, useInView } from 'framer-motion';
 /**TS**/
 interface Props {
   //   children: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
-  children: ReactElement;
+  children: ReactElement | ReactElement[];
   outherContainerStyle?: string;
   innerContainerStyle?: string;
   measuredElementStyle?: string;
@@ -35,7 +35,7 @@ const InViewContainer: React.FC<Props> = ({
     // once: true, // amount: 'all', // amount: 1,
   });
   // console.log('InViewContainer / additionalCompNumb', );
-  console.log('InViewContainer / bounds.width', bounds.width);
+  // console.log('InViewContainer / bounds.width', bounds.width);
 
   /**JSX**/
   return (
@@ -55,10 +55,22 @@ const InViewContainer: React.FC<Props> = ({
             measuredElementStyle ? measuredElementStyle : 'w-full h-full'
           }
         >
-          {React.cloneElement(children, {
+          {/* {React.cloneElement(children, {
             componentIsInView: isInView,
             animationDelay: animationDelay,
-          })}
+          })} */}
+          {Array.isArray(children)
+            ? children.map((child, i) =>
+                React.cloneElement(child, {
+                  key: i,
+                  componentIsInView: isInView,
+                  animationDelay: animationDelay,
+                })
+              )
+            : React.cloneElement(children, {
+                componentIsInView: isInView,
+                animationDelay: animationDelay,
+              })}
         </div>
       </div>
     </div>

@@ -217,7 +217,7 @@ const story = {
   s1: [
     // 'Ten model to prawdziwy twardziel',
     // 'Rozwiazuje na codzień wiele problemów',
-    'Ten model stworzony jest do działań w szczególnie wymagających warunkach.',
+    'Stworzyliśmy ten model, aby wspierał Twoje działania w szczególnie wymagających warunkach.',
   ],
   pageKontakt: {
     s1: 'Zespół Famatel Polska zaprasza do kontaktu od poniedziałku do piątku w godzinach 8ºº - 16ºº.',

@@ -6,14 +6,14 @@ import { motion } from 'framer-motion';
 /**TS**/
 type Props = {
   componentIsInView?: boolean;
-  animationDelay?: number;
+  // animationDelay?: number;
   text?: string;
 };
 
 /**-------------------------------------------**/
 const AnimatedText: React.FC<Props> = ({
   componentIsInView = false,
-  animationDelay = 0,
+  // animationDelay = 0,
   text,
 }) => {
   //   console.log('......AnimatedText / componentIsInView', componentIsInView);
