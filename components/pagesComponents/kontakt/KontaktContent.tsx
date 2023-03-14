@@ -19,9 +19,9 @@ const KontaktContent = () => {
     >
       <div className="relative w-full h-full ">
         <ContactIntro />
-        <div className="flex flex-col gap-y-10 inner-px-md-xl-xxl">
+        <div className="inner-px-md-xl-xxl">
           <div
-            className="flex flex-col gap-y-10 z-10"
+            className="flex flex-col gap-y-14 xl:gap-y-20 z-10"
             //___xl:flex-row xl:gap-x-20 gap-y-[80px]
           >
             <div className="md:w-[50%] ">
@@ -31,13 +31,12 @@ const KontaktContent = () => {
                 animationStageNumber={1}
               />
             </div>
-            {/* <div className="md:w-[50%]">
+            <div className="md:w-[50%]">
               <ContactAddress />
-            </div> */}
+            </div>
+            <div className="h-[50vh] bg-greyShade2 z-10"></div>
+            <div className="h-[50vh] bg-greyShade1 z-10"></div>
           </div>
-          <div className="h-[50vh] bg-greyShade2 z-10"></div>
-          <div className="h-[50vh] bg-greyShade1 z-10"></div>
-          {/* <div className="h-[50vh] bg-vY "></div> */}
         </div>
       </div>
     </div>

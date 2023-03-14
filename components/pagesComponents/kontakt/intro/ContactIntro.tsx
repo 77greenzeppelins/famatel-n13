@@ -17,7 +17,7 @@ const ContactIntro = () => {
   /**...*/
   let { scrollY } = useScroll();
   let animatedVal_1 = useTransform(scrollY, [0, 240], [0, 1]);
-  let animatedVal_2 = useTransform(scrollY, [0, 250], [1, 0.8]);
+  let animatedVal_2 = useTransform(scrollY, [0, 250], [1, 0.7]);
 
   /**JSX**/
   return (
