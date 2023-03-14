@@ -14,7 +14,7 @@ const ModuleYearsNumber = () => {
       outherContainerStyle="relative flex flex-col inner-px-md-xl-xxl "
       // innerContainerStyle="xl:px-20 "
       measuredElementStyle="fc flex-col md:flex-row md:justify-center md:items-center pt-10 gap-y-6 gap-x-6 w-full h-full"
-      topFactor={0.9}
+      topFactor={0.1}
     >
       <SquareWithModelNumber pseudoNumber="+30" text="lat" />
       <AnimatedText text={story.pageOFirmie[1]} />

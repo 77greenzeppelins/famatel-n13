@@ -29,7 +29,7 @@ const Section_2: React.FunctionComponent<{
             />
             <ModuleYearsNumber />
             <ModuleCatNumber />
-            <div className="h-[50px] bg-dark" />
+            <div className="h-[50vh] bg-dark" />
           </motion.div>
         </>
       )}
