@@ -6,7 +6,7 @@ import AnimatedText from '../_textInView/AnimatedText';
 import { story } from '../../../../../data/_data';
 
 /**-----------------------------------**/
-const ModuleModelNumber = () => {
+const ModuleYearsNumber = () => {
   /**JSx**/
   return (
     <div className="flex inner-pl-md-xl-xxl ">
@@ -17,11 +17,11 @@ const ModuleModelNumber = () => {
         measuredElementStyle="fc flex-col md:flex-row md:justify-center md:items-center pt-10 gap-y-6 gap-x-6 w-full h-full"
         topFactor={0.6}
       >
-        <SquareWithModelNumber pseudoNumber="14307" text="model" />
-        <AnimatedText text={story.pageOFirmie[0]} />
+        <SquareWithModelNumber pseudoNumber="+30" text="lat" />
+        <AnimatedText text={story.pageOFirmie[1]} />
       </InViewContainer>
     </div>
   );
 };
 
-export default ModuleModelNumber;
+export default ModuleYearsNumber;
