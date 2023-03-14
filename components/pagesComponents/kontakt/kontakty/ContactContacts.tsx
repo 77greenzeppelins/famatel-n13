@@ -1,7 +1,6 @@
 import React from 'react';
 /**Components**/
-import SectionContentLayout from '../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import ScaledYWrapper from '../_scaledYWrapper/ScaledYWrapper';
+import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
 /*Icons Staff*/
 import { EnvelopeIcon } from '@heroicons/react/24/solid';
 import { PhoneIcon } from '@heroicons/react/24/solid';
@@ -9,7 +8,6 @@ import { PhoneIcon } from '@heroicons/react/24/solid';
 import { linksToInstantContactData } from '../../../../data/_data';
 /**Framer Motion staff*/
 import { motion } from 'framer-motion';
-import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
 
 /**HardCoded Staff*/
 const aStyle = 'flex items-center gap-6 group no-sparkling';
@@ -46,7 +44,7 @@ const ContactContacts: React.FunctionComponent<{
         </div>
         <motion.div
           // className="w-full h-[1px] border-b-[0.5px] border-grey"
-          className="w-full h-[0.5px] bg-gradient-to-r from-light via-grey to-transparent"
+          className="w-full h-[0.75px] bg-gradient-to-r from-light via-grey to-transparent"
 
           // initial={{ y: '110%', opacity: 0 }}
           // animate={{ y: 0, opacity: 1 }}

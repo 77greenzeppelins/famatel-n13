@@ -2,11 +2,7 @@ import { motion, useInView } from 'framer-motion';
 import React, { useRef } from 'react';
 import useMeasure from 'react-use-measure';
 /**Containers**/
-// import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
-import ScaledYTextWrapper from '../../../containers/scaledYTextWrapper/ScaledYTextWrapper';
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
-// import ScaledYWrapper from '../_scaledYWrapper/ScaledYWrapper';
-// import AddressContent from './addressContent/AddressContent';
 /**Hardcoded Data*/
 const address = ['Biuro/Magazyn', 'Ul. Willowa 5', '58-260 Bielawa'];
 const staggerFactors = [1.4, 1.6, 1.8];
