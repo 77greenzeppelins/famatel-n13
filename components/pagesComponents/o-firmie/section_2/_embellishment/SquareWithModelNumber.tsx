@@ -22,7 +22,7 @@ const SquareWithModelNumber: React.FC<Props> = ({
     <div
       className={`fc flex-col  ${
         componentIsInView ? 'bg-corpo translate-x-0' : 'bg-dark translate-x-4'
-      } duration-[0.9s] delay-[0.6] p-2 disable-soft w-[120px] h-[120px]`}
+      } duration-[0.9s] delay-[0.6] p-2 disable-soft w-[80px] h-[80px] md:w-[120px] md:h-[120px]`}
       style={{
         //  width: val,
         aspectRatio: '1/1',
