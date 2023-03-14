@@ -9,18 +9,16 @@ import { story } from '../../../../../data/_data';
 const ModuleModelNumber = () => {
   /**JSx**/
   return (
-    <div className="flex inner-pl-md-xl-xxl ">
-      <InViewContainer
-        animationDelay={2}
-        outherContainerStyle="relative flex flex-col inner-px-md-xl-xxl "
-        // innerContainerStyle="xl:px-20 "
-        measuredElementStyle="fc flex-col md:flex-row md:justify-center md:items-center pt-10 gap-y-6 gap-x-6 w-full h-full"
-        topFactor={0.6}
-      >
-        <SquareWithModelNumber pseudoNumber="14307" text="model" />
-        <AnimatedText text={story.pageOFirmie[0]} />
-      </InViewContainer>
-    </div>
+    <InViewContainer
+      animationDelay={2}
+      outherContainerStyle="relative flex flex-col inner-px-md-xl-xxl "
+      // innerContainerStyle="xl:px-20 "
+      measuredElementStyle="fc flex-col md:flex-row md:justify-center md:items-center pt-10 gap-y-6 gap-x-6 w-full h-full"
+      topFactor={0.6}
+    >
+      <SquareWithModelNumber pseudoNumber="14307" text="model" />
+      <AnimatedText text={story.pageOFirmie[0]} />
+    </InViewContainer>
   );
 };
 
