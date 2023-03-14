@@ -18,11 +18,8 @@ const Section_2: React.FunctionComponent<{
       {isSection_2_Open && (
         <>
           <div className="hidden md:flex w-full md:h-[8vh] h-[14vh] bg-dark" />
-
           <motion.div className="flex flex-col gap-y-20">
-            {/* <div className="hidden md:flex w-full md:h-[8vh] h-[14vh] bg-dark" /> */}
             <ModuleModelNumber />
-            {/* <div className="flex w-full d:h-[8vh] h-[14vh] bg-dark" /> */}
             <ProductDescription
               isProductDescriptionOpen={isSection_2_Open}
               productDescriptionOpener={setIsSection_2_Open}
