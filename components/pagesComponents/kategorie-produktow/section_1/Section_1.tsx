@@ -13,10 +13,13 @@ const Section_1: React.FunctionComponent<{
   return (
     <div
       data-component="Section_1__container"
-      className="flex w-screen items-center flex-col-reverse gap-y-8 xs:gap-y-10 inner-px-md-xl-xxl pt-[60px] lg:pt-[100px] xl:flex-row xl:pt-[80px] "
+      className="flex w-screen items-center flex-col-reverse gap-y-4 xs:gap-y-6 inner-px-md-xl-xxl pt-[60px] lg:pt-[100px] xl:flex-row xl:pt-[80px] xl:gap-x-6"
       //___xl:min-h-screen
     >
-      <div className="w-full xl:h-[440px] xl:w-[45%] xxl:w-[40%] xxl:pr-[50px] pb-[40px] xl:pb-0">
+      <div
+        className="relative w-full min-h-[160px] xl:h-[420px] xl:w-[45%] xxl:w-[40%]"
+        //___h-[200px]
+      >
         <TextSection
           categoryIndex={categoryIndex}
           setCategoryIndex={setCategoryIndex}
@@ -31,7 +34,7 @@ const Section_1: React.FunctionComponent<{
         />
       </div>
       <div
-        className="w-full xl:w-[55%] xxl:w-[60%] h-[340px] xs:h-[440px] "
+        className="w-full xl:w-[55%] xxl:w-[60%] h-[340px] xs:h-[440px]"
         //___h-[440px]
       >
         <GraphicSection categoryIndex={categoryIndex} isPreviewOpen={false} />

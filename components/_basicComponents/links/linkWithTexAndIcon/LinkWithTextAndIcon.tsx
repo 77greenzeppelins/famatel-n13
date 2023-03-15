@@ -29,7 +29,6 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
   ariaLabel,
   mainContainerStyle,
   aStyle,
-
   //__for <SmallPseudoHeader>
   pLabel,
   hasBox,
