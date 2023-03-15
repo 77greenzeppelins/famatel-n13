@@ -218,8 +218,10 @@ const story = {
     'Stworzyliśmy ten model, aby wspierał Twoje działania w szczególnie wymagających warunkach.',
     'Od przeszło 30. lat dbamy o Twoje bezpieczeństwo przy inwestycjach z zakresu elektryki przemysłowej.',
     'Nasze rozwiązania znane są Klientom w przeszło 80 krajach na całym świecie.',
-    'W celu usprawnienia działania opieramy sie na 8 firmach partnerskich.',
-    'Oddajemy do Twojej dyspozycji 10. kategorii produktowych. Jeśli działasz w zakresie elektryki przemysłowej na pewno mamy rozwiązanie dla Ciebie!',
+    // 'W celu usprawnienia działania opieramy sie na 8 firmach partnerskich.',
+    'W celu uzapewnienia naszym Klientom sprawnej obsługi oparliśmy sie na 8 firmach partnerskich.',
+    'Oddajemy do Twojej dyspozycji 10. kategorii produktowych.',
+    'Jeśli działasz w zakresie elektryki przemysłowej na pewno mamy rozwiązanie dla Ciebie!',
   ],
   pageKontakt: {
     s1: 'Zespół Famatel Polska zaprasza do kontaktu od poniedziałku do piątku w godzinach 8ºº - 16ºº.',

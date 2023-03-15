@@ -20,7 +20,7 @@ const Section_2: React.FunctionComponent<{
     <AnimatePresence>
       {isSection_2_Open && (
         <>
-          <div className="hidden md:flex w-full md:h-[8vh] h-[14vh] bg-dark" />
+          <div className="hidden lg:flex w-full lg:h-[8vh] h-[14vh] bg-dark" />
           <motion.div className="flex flex-col gap-y-20 ">
             <ModuleModelNumber />
             <ProductDescription
