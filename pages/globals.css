@@ -57,6 +57,9 @@
 
 /*__________________________________________________________utilities*/
 @layer utilities {
+  .glow {
+    box-shadow: 0 0 5px #e74124, 0 0 25px #e74124, 0 0 50px #e74124, 0 0 100px;
+  }
   .fc {
     @apply flex justify-center items-center;
   }

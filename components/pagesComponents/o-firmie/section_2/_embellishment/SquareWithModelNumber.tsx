@@ -30,7 +30,7 @@ const SquareWithModelNumber: React.FC<Props> = ({
     >
       <p
         // ref={ref}
-        className={` text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] lg:text-[2rem] xl:text-[2.25rem] xxl:text-[3rem]  font-bold tracking-[2px] leading-tight  ${
+        className={` text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] lg:text-[2rem] xl:text-[2.25rem]   font-bold tracking-[2px] leading-tight  ${
           componentIsInView ? 'text-light' : 'text-dark'
         } duration-[0.9s] delay-[0.6] pb-1`}
         style={{ width: 'content-fit' }}

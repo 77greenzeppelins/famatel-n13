@@ -41,6 +41,14 @@ const NowosciContent = () => {
               <AnimatedText text="Text z sekcji_2 animuje sie w następujący sposób..." />
             </InViewContainer>
           </div>
+          <div className="fc h-20">
+            <button className="bg-corpo  text-white font-bold py-2 px-4 rounded-full shadow-md ">
+              Click me!
+            </button>
+          </div>
+          <div className="fc h-20">
+            <button className=" w-6 h-6 rounded-sm bg-corpo glow animate-pulse"></button>
+          </div>
         </div>
       </div>
     </div>
