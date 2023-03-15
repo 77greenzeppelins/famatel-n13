@@ -19,10 +19,10 @@ const TextSection: React.FunctionComponent<{
   /**JSX**/
   return (
     <div
-      className=" flex flex-col items-center justify-center w-full h-full xl:h-full  gap-8 md:gap-10 xl:gap-8"
+      className=" flex flex-col items-center justify-center w-full h-full xl:h-full  gap-2 xl:gap-y-10"
       //___pt-[40px] lg:pt-[60px] xl:pt-0
     >
-      <div className="hidden xl:flex justify-center w-full ">
+      <div className="hidden xl:flex justify-center w-full xl:h-10 ">
         <NavSection
           categoryIndex={categoryIndex}
           setCategoryIndex={setCategoryIndex}
@@ -30,20 +30,20 @@ const TextSection: React.FunctionComponent<{
         />
       </div>
       <div
-        className="flex items-center max-w-[750px] h-[120px] sm:h-[120px] md:h-[160px] xl:h-[240px] disable-soft md:pb-[40px] xl:pb-0"
+        className="flex items-center max-w-[750px] h-[120px] xl:h-[180px] disable-soft "
         //___leading-8 xxl:leading-[2.75rem]
       >
         <H1AnimatedPresence
           uniqueKey={categoryIndex}
           text={catalogStructureData[categoryIndex].mainCategoryName}
           variantH="custome"
-          customeStyle="text-light text-center text-[1rem] xxs:text-[2rem] xs:text-[2.5rem] sm:text-[2.75rem] md:text-[2.75rem] lg:text-[3rem] xl:text-[3rem] font-bold tracking-[2px] leading-tight"
+          customeStyle="text-light text-center text-[1rem] xxs:text-[2rem] xs:text-[2.5rem] lg:text-[2.75rem] xl:text-[3rem] font-bold tracking-[2px] leading-tight"
           // variantH="h2"
         />
       </div>
 
       <div
-        className="absolute bottom-0 h-10"
+        className="h-10"
         //___inset-x-0
       >
         <LinkWithTextAndIcon

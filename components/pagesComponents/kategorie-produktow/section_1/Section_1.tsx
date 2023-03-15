@@ -17,7 +17,7 @@ const Section_1: React.FunctionComponent<{
       //___xl:min-h-screen
     >
       <div
-        className="relative w-full min-h-[160px] xl:h-[420px] xl:w-[45%] xxl:w-[40%]"
+        className="relative w-full xl:w-[45%] xxl:w-[40%]"
         //___h-[200px]
       >
         <TextSection
