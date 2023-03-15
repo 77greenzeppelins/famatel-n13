@@ -34,14 +34,15 @@ const PseudoTechPanel: React.FunctionComponent<{
           </div>
         </div>
         <div
-          className={`absolute flex justify-end items-end p-4 bottom-0 right-0 h-[20%] w-[20%]`}
+          className={`absolute flex justify-end items-end p-2 sm:p-3 bottom-0 right-0 h-[20%] w-[20%]`}
         >
           <motion.button
             className={
               isSection_2_Open
-                ? 'w-6 h-6 rounded-sm bg-transparent border-[0.5px] border-greyShade1 transition-all'
-                : `w-6 h-6 rounded-sm bg-corpo glow animate-pulse`
+                ? 'w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-transparent border-[0.5px] border-greyShade1 transition-all'
+                : `w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-corpo glow animate-pulse`
             }
+            // style={{ aspectRatio: '1/1' }}
           ></motion.button>
         </div>
         <div className={`absolute top-0 right-0 h-[50%] w-[50%]`}>
