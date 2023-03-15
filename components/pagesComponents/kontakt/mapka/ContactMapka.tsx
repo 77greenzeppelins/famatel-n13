@@ -4,6 +4,10 @@ import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWi
 /**Framer Motion Staff**/
 import { motion } from 'framer-motion';
 import SvgMap from '../../../SVG/maps/SvgMap';
+import { MapPinIcon } from '@heroicons/react/24/solid';
+
+const labelStyle =
+  'text-grey text-[1rem] lg:text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-light  ease-in duration-300  origin-center break-all';
 
 /**--------------------------------**/
 const ContactMapka = () => {
@@ -23,8 +27,13 @@ const ContactMapka = () => {
       {/*
       _________________________________________________kontact_Section
       */}
-      <div>
-        <div className="flex w-[50%] pt-2">
+      <div className="flex flex-col sm:flex-row items-center h-full gap-y-6 sm:gap-y-0 sm:gap-2 lg:gap-10 ">
+        <div className="flex w-full gap-x-6 sm:w-[40%] h-full pt-2 ">
+          <MapPinIcon className="h-[24px] w-[24px] text-corpo" />
+          <p className={labelStyle}>ul. Strażacka</p>
+        </div>
+
+        <div className="flex w-full sm:w-[60%] pt-2">
           <SvgMap containerStyle="w-full" />
         </div>
       </div>
