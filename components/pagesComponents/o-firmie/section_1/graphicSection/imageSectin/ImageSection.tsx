@@ -1,16 +1,13 @@
 import React, { ReactNode } from 'react';
 import Image from 'next/image';
 /**Components**/
-import ScrollPrompt from '../scrollPrompt/ScrollPrompt';
-/*FramerMotion Staff*/
-import { motion } from 'framer-motion';
-/**TS**/
-import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
-/** */
-import useMeasure from 'react-use-measure';
-import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
 import AnimatedButton from '../animatedButton/AnimatedButton';
 import PseudoTechPanel from '../pseudoTechPanel/PseudoTechPanel';
+/*Hooks Staff*/
+import useMeasure from 'react-use-measure';
+import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
+/**TS**/
+import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
 
 /**HardCoded Staff*/
 const layoutBreakPoint = 1280;
@@ -68,15 +65,7 @@ const ImageSection: React.FunctionComponent<{
           // sizes="1200"
           // fill // intrinsic|fixed|responsive|fill allowed;  fill your parent
         />
-        {/* <ScrollPrompt isSection_2_Open={isSection_2_Open} /> */}
       </div>
-      {/* <div
-        className="absolute left-[40%] top-[80% w-[10px] h-[20%]"
-        //___-bottom-[10%]
-      >
-        <ScrollPrompt isSection_2_Open={isSection_2_Open} />
-      </div> */}
-      <ScrollPrompt isSection_2_Open={isSection_2_Open} />
     </div>
   );
 };

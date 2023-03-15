@@ -9,7 +9,7 @@ const ScrollPrompt: React.FunctionComponent<{ isSection_2_Open: boolean }> = ({
   /**JSX**/
   return (
     <motion.div
-      className=" hidden xl:flex w-full h-[20%] "
+      className=" absolute bottom-[3%] md:bottom-0 right-[3%] h-[25%] md:h-[35%] "
       animate={{
         opacity: isSection_2_Open ? 1 : 0,
         transition: { duration: 1 },
@@ -20,7 +20,7 @@ const ScrollPrompt: React.FunctionComponent<{ isSection_2_Open: boolean }> = ({
           {isSection_2_Open && (
             <FlyingLine
               variantsNumber={4}
-              bgColor={'bg-greyShade2'}
+              bgColor={'bg-light'}
               fgColor={'bg-corpo'}
             />
           )}

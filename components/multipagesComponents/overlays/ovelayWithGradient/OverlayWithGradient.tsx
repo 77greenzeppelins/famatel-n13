@@ -20,7 +20,7 @@ const OverlayWithGradient: React.FC<{
       <motion.div
         style={{ width: bounds.width && bounds.width * 2 }}
         initial={initial ? initial : { x: '-50%' }}
-        animate={animate ? animate : { x: '19%' }}
+        animate={animate ? animate : { x: '50%' }}
         transition={transition ? transition : { duration: 2, delay: 0.9 }}
         className="h-full bg-gradient-to-r from-transparent via-dark to-dark"
       />

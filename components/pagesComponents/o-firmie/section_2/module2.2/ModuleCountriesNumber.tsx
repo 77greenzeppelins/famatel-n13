@@ -6,7 +6,7 @@ import AnimatedText from '../_textInView/AnimatedText';
 import { story } from '../../../../../data/_data';
 
 /**-----------------------------------**/
-const ModuleCatNumber = () => {
+const ModuleCountriesNumber = () => {
   /**JSx**/
   return (
     <InViewContainer
@@ -17,10 +17,10 @@ const ModuleCatNumber = () => {
       topFactor={0.5}
       bottomFactor={0.9}
     >
-      <SquareWithModelNumber pseudoNumber="10" text="kategorii" />
-      <AnimatedText text={story.pageOFirmie[4]} />
+      <SquareWithModelNumber pseudoNumber="+80" text="Państw" />
+      <AnimatedText text={story.pageOFirmie[2]} />
     </InViewContainer>
   );
 };
 
-export default ModuleCatNumber;
+export default ModuleCountriesNumber;

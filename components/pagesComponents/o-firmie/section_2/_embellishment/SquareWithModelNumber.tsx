@@ -43,7 +43,7 @@ const SquareWithModelNumber: React.FC<Props> = ({
         } duration-[0.9s] delay-[0.6]`}
       />
       <p
-        className={`header-link-label  ${
+        className={`header-link-label text-center ${
           componentIsInView ? 'text-light' : 'text-dark'
         } duration-[0.9s] delay-[0.6]`}
         style={{ width: 'content-fit' }}

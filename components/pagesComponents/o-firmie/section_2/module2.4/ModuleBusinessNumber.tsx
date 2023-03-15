@@ -6,21 +6,21 @@ import AnimatedText from '../_textInView/AnimatedText';
 import { story } from '../../../../../data/_data';
 
 /**-----------------------------------**/
-const ModuleCatNumber = () => {
+const ModuleBusinessNumber = () => {
   /**JSx**/
   return (
     <InViewContainer
       animationDelay={2}
       outherContainerStyle="relative flex flex-col inner-px-md-xl-xxl "
       // innerContainerStyle="xl:px-20 "
-      measuredElementStyle="fc flex-col md:flex-row md:justify-center md:items-center pt-10 gap-y-6 gap-x-6 w-full h-full"
+      measuredElementStyle="fc flex-col md:flex-row pt-10 gap-y-6 gap-x-6  w-full h-full "
       topFactor={0.5}
       bottomFactor={0.9}
     >
-      <SquareWithModelNumber pseudoNumber="10" text="kategorii" />
-      <AnimatedText text={story.pageOFirmie[4]} />
+      <SquareWithModelNumber pseudoNumber="8" text="Business Subsidies" />
+      <AnimatedText text={story.pageOFirmie[3]} />
     </InViewContainer>
   );
 };
 
-export default ModuleCatNumber;
+export default ModuleBusinessNumber;
