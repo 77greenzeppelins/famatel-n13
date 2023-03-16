@@ -65,7 +65,7 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
           textStyle={
             pStyle
               ? pStyle
-              : `flex items-center h-full header-link-label text-grey group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] px-2 `
+              : `flex items-center h-full header-link-label text-grey group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] px-2`
           }
         />
 
