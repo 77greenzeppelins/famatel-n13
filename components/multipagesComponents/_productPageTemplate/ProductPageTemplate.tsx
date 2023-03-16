@@ -51,7 +51,7 @@ const ProductPageTemplate: React.FunctionComponent<{
                 namesLevels={[categoryName, subCategoryName]}
                 urlsLevels={[categoryUrl, subCategoryUrl]}
                 lastLevelName={productName}
-                lastLevelLab="Produkt:"
+                lastLevelLab="Produkt"
               />
             );
           }

@@ -113,7 +113,7 @@
     @apply text-[0.625rem] lg:text-[0.75rem] xxxl:text-[0.825rem] tracking-[0.125rem] uppercase word-spacing-0125 lg:word-spacing-025;
   }
   .p-medium {
-    @apply text-[0.825rem] xxxl:text-[0.875rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025;
+    @apply text-[0.825rem] xxxl:text-[1rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025;
   }
   .p-small {
     @apply text-[0.625rem] xxl:text-[0.75rem] xxxl:text-[0.825rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-01 lg:word-spacing-0125;

@@ -45,7 +45,7 @@ const CategoryPageTemplate: React.FunctionComponent<{
         <SectionContentLayout>
           <SmallPseudoHeader
             text="Katalog podkategorii"
-            containerStyle="pb-4 md:pb-10"
+            containerStyle="relative flex items-center disable-soft pb-4 md:pb-10"
             hasBox={true}
             hasVerticalOrnament={false}
           />

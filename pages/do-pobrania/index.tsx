@@ -1,17 +1,18 @@
 import type { ReactElement } from 'react';
 /**Components**/
 import Layout from '../../components/layouts/rootLayout/Layout';
-import NowosciContent from '../../components/pagesComponents/nowosci/NowosciContent';
+import DoPobraniaContent from '../../components/pagesComponents/doPobrania/DoPobraniaContent';
+
 // import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 import type { NextPageWithLayout } from '../_app';
 
 /**--------------------------------------------**/
-const NowosciPage: NextPageWithLayout = () => {
+const DoPobraniaPage: NextPageWithLayout = () => {
   /**JSX**/
-  return <NowosciContent />;
+  return <DoPobraniaContent />;
 };
 
-NowosciPage.getLayout = function getLayout(page: ReactElement) {
+DoPobraniaPage.getLayout = function getLayout(page: ReactElement) {
   return (
     <Layout>
       {/* <NestedLayout>{page}</NestedLayout> */}
@@ -20,4 +21,4 @@ NowosciPage.getLayout = function getLayout(page: ReactElement) {
   );
 };
 
-export default NowosciPage;
+export default DoPobraniaPage;
