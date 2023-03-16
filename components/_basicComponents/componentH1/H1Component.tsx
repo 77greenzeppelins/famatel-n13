@@ -17,7 +17,7 @@ const H1Component: React.FunctionComponent<{
   const createStyle = (variantH: string) => {
     switch (variantH) {
       case 'h2':
-        return `text-light text-left text-[1rem] lg:text-[1.5rem] xxl:text-[1.75rem] tracking-widest`;
+        return `text-light text-left text-[1rem] lg:text-[1.5rem] xxl:text-[1.75rem]  tracking-widest`;
       case 'h3':
         return `text-light text-left text-[0.75rem] lg:text-[1rem] xxl:text-[1.25rem] tracking-widest`;
       case 'custome':

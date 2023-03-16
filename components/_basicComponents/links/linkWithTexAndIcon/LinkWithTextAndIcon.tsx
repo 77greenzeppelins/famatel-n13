@@ -15,6 +15,7 @@ const defaultAStyle =
 /**----------------------------------------------------------------**/
 const LinkWithTextAndIcon: React.FunctionComponent<{
   linkHref: string;
+  controlsSet?: {};
   ariaLabel?: string;
   mainContainerStyle?: string;
   aStyle?: string;
@@ -26,6 +27,7 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
   pStyle?: string;
 }> = ({
   linkHref,
+  controlsSet,
   ariaLabel,
   mainContainerStyle,
   aStyle,
@@ -45,9 +47,11 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
     >
       <AriaJSLink
         linkHref={linkHref}
-        controlsSet={{ background: corpoColors.greyTint1 }}
+        controlsSet={
+          controlsSet ? controlsSet : { background: corpoColors.greyTint1 }
+        }
         controlsStart={{
-          background: 'transparent', //dark
+          background: corpoColors.dark, //dark
           transition: { duration: 0.4 },
         }}
         ariaLabel={ariaLabel}
@@ -58,9 +62,7 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
           hasBox={hasBox}
           hasVerticalOrnament={hasVerticalOrnament}
           boxStyle={
-            boxStyle
-              ? boxStyle
-              : 'h-[10px] md:h-[14px] aspect-square bg-transparent'
+            boxStyle ? boxStyle : 'h-[10px] aspect-square bg-transparent'
           }
           textStyle={
             pStyle

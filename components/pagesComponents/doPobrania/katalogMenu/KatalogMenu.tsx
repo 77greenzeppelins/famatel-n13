@@ -10,7 +10,7 @@ const KatalogMenu: React.FC<{
 }> = ({ headerLabels, lineLabels, urls }) => {
   return (
     <div data-component="KatalogMenu__container" className="flex h-full">
-      <div className="w-[20px] border-r-[0.5px] border-grey">
+      {/* <div className="w-[20px] border-r-[0.5px] border-grey">
         <div className="flex  w-full h-full">
           <SmallPseudoHeader
             text="Katalog"
@@ -20,8 +20,8 @@ const KatalogMenu: React.FC<{
             inlineTextStyle={{ writingMode: 'vertical-rl' }}
           />
         </div>
-      </div>
-      <div className="flex flex-col gap-3">
+      </div> */}
+      <div className="flex flex-col gap-4">
         {headerLabels.map((headerLabel, i) => {
           return (
             <div key={i} className="flex flex-col gap-1">

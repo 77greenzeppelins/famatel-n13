@@ -3,7 +3,7 @@ import React from 'react';
 const textDefaultStyle =
   'header-link-label text-grey align-middle leading-none';
 // const verticalOrnamentDefaultStyle = 'h-[16px] w-[10px] border-l border-corpo';
-const boxDefaultStyle = 'h-[10px] md:h-[14px] aspect-square bg-corpo';
+const boxDefaultStyle = 'h-[10px] aspect-square bg-corpo';
 
 /**-----------------------------------------------------**/
 const SmallPseudoHeader: React.FunctionComponent<{
