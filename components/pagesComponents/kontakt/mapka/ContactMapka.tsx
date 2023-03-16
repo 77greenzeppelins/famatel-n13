@@ -1,10 +1,10 @@
 import React from 'react';
 /**Components**/
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
-/**Framer Motion Staff**/
-import { motion } from 'framer-motion';
 import SvgMap from '../../../SVG/maps/SvgMap';
 import { MapPinIcon } from '@heroicons/react/24/solid';
+/**Framer Motion Staff**/
+import { motion } from 'framer-motion';
 
 const labelStyle =
   'text-grey text-[1rem] lg:text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-light  ease-in duration-300  origin-center break-all';
