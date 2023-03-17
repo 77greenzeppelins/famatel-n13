@@ -8,6 +8,8 @@ import BasicIconsManager from '../iconsManagers/basicIconsManager/BasicIconsMana
 /**Basic Data**/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
 import H1AnimatedPresence from '../../_basicComponents/componentH1/H1AnimatedPresence';
+import CatalogNavPanel from '../navigations/catalogNavPanel/CatalogNavPanel';
+import { smallPseudoHeaders } from '../../../data/_data';
 
 /**---------------------------------------------------------**/
 const CategoryPageTemplate: React.FunctionComponent<{
@@ -24,7 +26,39 @@ const CategoryPageTemplate: React.FunctionComponent<{
       className="w-full inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
     >
       <PageContentLayout>
+        <SectionContentLayout divStyle="flex flex-col gap-y-4">
+          <CatalogNavPanel
+            // linkHeaders={[smallPseudoHeaders.n1]}
+            // linkNames={[parentCategoryName]}
+            // linkUrls={[parentCategoryUrl]}
+            bottomHeader={smallPseudoHeaders.n1}
+            bottomName={
+              catalogStructureData[mainCategoryIndex].mainCategoryName
+            }
+            // optionalHeader={smallPseudoHeaders.n4}
+          />
+        </SectionContentLayout>
+
         <SectionContentLayout>
+          <SmallPseudoHeader
+            text="Katalog podkategorii"
+            containerStyle="relative flex items-center disable-soft pb-4 md:pb-10"
+            hasBox={false}
+            // hasVerticalOrnament={false}
+          />
+          <SubCategoriesCatalog subCategoryData={categoryData} />
+        </SectionContentLayout>
+        {children}
+      </PageContentLayout>
+      <div className="fixed w-full h-[50px] top-0 bg-dark" />
+    </div>
+  );
+};
+
+export default CategoryPageTemplate;
+
+{
+  /* <SectionContentLayout>
           <SmallPseudoHeader
             text="Kategoria"
             hasBox={true}
@@ -40,25 +74,8 @@ const CategoryPageTemplate: React.FunctionComponent<{
             svgIcons={categoryData.svgIcons}
             labeledIcons={categoryData.labeledIcons}
           />
-        </SectionContentLayout>
-
-        <SectionContentLayout>
-          <SmallPseudoHeader
-            text="Katalog podkategorii"
-            containerStyle="relative flex items-center disable-soft pb-4 md:pb-10"
-            hasBox={true}
-            hasVerticalOrnament={false}
-          />
-          <SubCategoriesCatalog subCategoryData={categoryData} />
-        </SectionContentLayout>
-        {children}
-      </PageContentLayout>
-      <div className="fixed w-full h-[50px] top-0 bg-dark" />
-    </div>
-  );
-};
-
-export default CategoryPageTemplate;
+        </SectionContentLayout> */
+}
 
 //  const [categoryDetails, setCategoryDetails] = useState({
 //     categoryIndex: 0,

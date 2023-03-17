@@ -47,6 +47,7 @@ const Table3: React.FC<{
           <div className="col-start-4 col-end-5 grid grid-rows-[1fr_1fr]">
             <BodyCell
               label={outletsData[0]}
+              isBreakAll={false}
               containerStyle={`row-start-1  fc py-2 px-[1px] border-x-[1px] border-b border-dark  delay-100 ease-in duration-300 select-none ${
                 hoveredRow !== null && hoveredRow >= 0 && hoveredRow < 8
                   ? ' bg-light'
@@ -55,20 +56,14 @@ const Table3: React.FC<{
             />
             <BodyCell
               label={outletsData[1]}
-              containerStyle={`row-start-2 border-t border-dark fc py-2 px-[1px] border-x-[1px] border-dark  delay-100 ease-in duration-300 select-none ${
+              isBreakAll={false}
+              containerStyle={`row-start-2 border-t border-dark fc py-2 px-[1px] border-x-[1px] border-dark delay-100 ease-in duration-300 select-none ${
                 hoveredRow !== null && hoveredRow >= 8
                   ? ' bg-light'
                   : 'bg-greyTint2'
               }`}
             />
           </div>
-          {/* <div className="col-start-4 col-span-full">
-            <BodyCell
-              label="brak"
-              containerStyle="h-full fc py-2 px-[1px] border-x-[1px] border-dark bg-greyTint2 group-hover:bg-light delay-100 ease-in duration-300 select-none"
-              // containerStyle="row-start-5 row-span-full border-t border-dark"
-            />
-          </div> */}
         </div>
       </div>
     </SectionWithTable>

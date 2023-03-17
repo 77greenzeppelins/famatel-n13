@@ -37,15 +37,15 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
             linkUrls={[parentCategoryUrl]}
             bottomHeader={smallPseudoHeaders.n2}
             bottomName={subCategoryName}
-            optionalHeader={smallPseudoHeaders.n4}
+            // optionalHeader={smallPseudoHeaders.n4}
           />
         </SectionContentLayout>
         <SectionContentLayout>
-          {/* <SmallPseudoHeader
+          <SmallPseudoHeader
             text={smallPseudoHeaders.l5}
-            hasBox={true}
-            hasVerticalOrnament={false}
-          /> */}
+            hasBox={false}
+            hasVerticalOrnament={true}
+          />
           <ProductsCatalog productCardsData={productCardsData} />
         </SectionContentLayout>
         {

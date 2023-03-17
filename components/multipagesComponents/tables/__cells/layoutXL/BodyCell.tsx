@@ -8,14 +8,15 @@ const BodyCell: React.FunctionComponent<{
   label: string;
   containerStyle?: string;
   textStyle?: string;
-}> = ({ label, textStyle, containerStyle }) => {
+  isBreakAll?: boolean;
+}> = ({ label, textStyle, containerStyle, isBreakAll = true }) => {
   /**JSX*/
   return (
     <div className={containerStyle ? containerStyle : defaultContainerStyle}>
       <p
-        className={`text-center text-[0.75rem]  lg:text-[0.75rem] xxl:text-[0.75rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-01 lg:word-spacing-0125 select-none break-all ${
-          textStyle ? textStyle : 'text-dark'
-        }`}
+        className={`text-center text-[0.75rem]  lg:text-[0.75rem] xxl:text-[0.75rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-01 lg:word-spacing-0125 select-none ${
+          isBreakAll && 'break-all'
+        }  ${textStyle ? textStyle : 'text-dark'}`}
       >
         {label}
       </p>
