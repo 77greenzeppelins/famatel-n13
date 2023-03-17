@@ -12,7 +12,7 @@ twoCols => md / xl / 768 - 1280
 threeCols => xl
 */
 const textStyle =
-  'text-[0.75rem] xs:text-[0.825rem] md:text-[0.75rem] xl:text-[0.625rem] xxxl:text-[0.825rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-01 lg:word-spacing-0125 text-grey text-left group-hover:text-light ease-in duration-300';
+  'text-[0.75rem] xs:text-[0.825rem] md:text-[0.75rem] xl:text-[0.675rem] xxxl:text-[0.825rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-01 lg:word-spacing-0125 text-grey text-left group-hover:text-light ease-in duration-300';
 /*
 ____2__
 */
@@ -31,22 +31,6 @@ const ProductCardTextSection: React.FunctionComponent<{
   /**JSX**/
   return (
     <div className="relative flex flex-col  w-full h-full px-4 py-4">
-      {/* <div>
-        {productName && Array.isArray(productName) ? (
-          productName.map((line, index) => (
-            <p
-              key={index}
-              className="header-link-label text-light opacity-70 group-hover:opacity-100 ease-in duration-300 "
-            >
-              {line}
-            </p>
-          ))
-        ) : (
-          <p className="header-link-labe text-light text-center opacity-70 group-hover:opacity-100 ease-in duration-300 l">
-            {productName}
-          </p>
-        )}
-      </div> */}
       <div
         className={
           width > widthConditionValue ? '' : 'flex h-full items-center '

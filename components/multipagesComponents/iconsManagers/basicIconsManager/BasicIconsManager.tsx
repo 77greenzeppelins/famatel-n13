@@ -46,7 +46,8 @@ const BasicIconsManager: React.FunctionComponent<{
   return (
     <div
       data-component="BasicIconsManager__wrapper"
-      className="flex flex-col lg:items-center lg:flex-row lg:gap-x-10 "
+      className="flex flex-col lg:items-center"
+      //___lg:flex-row lg:gap-x-10
     >
       <div className="flex gap-4 flex-wrap">
         {svgIconsFromCatalog_data.map(({ id, Icon }, i) => {

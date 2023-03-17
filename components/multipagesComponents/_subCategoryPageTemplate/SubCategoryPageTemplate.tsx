@@ -40,7 +40,7 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
             // optionalHeader={smallPseudoHeaders.n4}
           />
         </SectionContentLayout>
-        <SectionContentLayout>
+        <SectionContentLayout divStyle="flex flex-col gap-y-10">
           <SmallPseudoHeader
             text={smallPseudoHeaders.l5}
             hasBox={false}

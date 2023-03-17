@@ -6,7 +6,7 @@ const SectionContentLayout: React.FunctionComponent<{
 }> = ({ children, divStyle }) => {
   /**JSX**/
   return (
-    <div className={divStyle ? divStyle : 'flex flex-col gap-y-4 '}>
+    <div className={divStyle ? divStyle : 'flex flex-col gap-y-4'}>
       {children}
     </div>
   );

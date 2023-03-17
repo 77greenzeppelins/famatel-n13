@@ -208,6 +208,7 @@ const smallPseudoHeaders = {
   n2: 'Podkategoria',
   n3: 'Produkt',
   n4: 'Produkty',
+  n5: 'Podkategorie',
   // nl1: 'Produkt:',
   // nl2: 'Podkategoria:',
   //__for productCard

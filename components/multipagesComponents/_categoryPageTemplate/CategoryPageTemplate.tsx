@@ -2,13 +2,12 @@ import { ReactNode } from 'react';
 /**Components**/
 import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
 import SectionContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
+import CatalogNavPanel from '../navigations/catalogNavPanel/CatalogNavPanel';
 import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import SubCategoriesCatalog from './subCategoriesCatalog/SubCategoriesCatalog';
 import BasicIconsManager from '../iconsManagers/basicIconsManager/BasicIconsManager';
 /**Basic Data**/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
-import H1AnimatedPresence from '../../_basicComponents/componentH1/H1AnimatedPresence';
-import CatalogNavPanel from '../navigations/catalogNavPanel/CatalogNavPanel';
 import { smallPseudoHeaders } from '../../../data/_data';
 
 /**---------------------------------------------------------**/
@@ -25,24 +24,28 @@ const CategoryPageTemplate: React.FunctionComponent<{
       data-component="CategoryPageTemplate__container"
       className="w-full inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
     >
-      <PageContentLayout>
-        <SectionContentLayout divStyle="flex flex-col gap-y-4">
-          <CatalogNavPanel
-            // linkHeaders={[smallPseudoHeaders.n1]}
-            // linkNames={[parentCategoryName]}
-            // linkUrls={[parentCategoryUrl]}
-            bottomHeader={smallPseudoHeaders.n1}
-            bottomName={
-              catalogStructureData[mainCategoryIndex].mainCategoryName
-            }
-            // optionalHeader={smallPseudoHeaders.n4}
-          />
+      <PageContentLayout divStyle="flex flex-col gap-y-[50px] lg:gap-y-[80px] pt-[60px]">
+        <SectionContentLayout divStyle="flex xl:flex-row gap-y-4">
+          <div className="w-full xl:w-[50%]">
+            <CatalogNavPanel
+              bottomHeader={smallPseudoHeaders.n1}
+              bottomName={
+                catalogStructureData[mainCategoryIndex].mainCategoryName
+              }
+            />
+          </div>
+          <div className="hidden xl:flex justify-center xl:w-[50%]">
+            <BasicIconsManager
+              svgIcons={categoryData.svgIcons}
+              labeledIcons={categoryData.labeledIcons}
+            />
+          </div>
         </SectionContentLayout>
 
-        <SectionContentLayout>
+        <SectionContentLayout divStyle="flex flex-col gap-y-10">
           <SmallPseudoHeader
-            text="Katalog podkategorii"
-            containerStyle="relative flex items-center disable-soft pb-4 md:pb-10"
+            text={smallPseudoHeaders.n5}
+            containerStyle="relative flex items-center disable-soft "
             hasBox={false}
             // hasVerticalOrnament={false}
           />
@@ -50,7 +53,6 @@ const CategoryPageTemplate: React.FunctionComponent<{
         </SectionContentLayout>
         {children}
       </PageContentLayout>
-      <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>
   );
 };
