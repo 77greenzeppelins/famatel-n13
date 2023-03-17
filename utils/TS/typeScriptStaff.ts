@@ -135,17 +135,14 @@ interface IF_ProductCardData {
 // }
 
 interface IF_CatalogNavPanel {
-  // categoryName: string;
-  // categoryUrl: string;
-  // subCategoryName?: string;
-  // subCategoryUrl?: string;
-  // productName?: string;
-  labels: string[];
-  namesLevels: string[];
-  urlsLevels: string[];
-  // productName?: string;
-  lastLevelName?: string;
-  lastLevelLab: string;
+  linkHeaders?: string[];
+  linkNames?: string[];
+  linkUrls?: string[];
+  //___
+  bottomName?: string;
+  bottomHeader: string;
+  //___
+  optionalHeader?: string;
 }
 
 interface IF_CatalogCardTableData {

@@ -29,22 +29,23 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
       data-component="SubCategoryPageTemplate__container"
       className="w-screen min-h-screen inner-px-md-lg pt-[60px] bg-dark pb-[50px]"
     >
-      <PageContentLayout>
+      <PageContentLayout divStyle="flex flex-col gap-y-[50px] lg:gap-y-[80px] pt-[60px]">
         <SectionContentLayout>
           <CatalogNavPanel
-            labels={[smallPseudoHeaders.n1]}
-            namesLevels={[parentCategoryName]}
-            urlsLevels={[parentCategoryUrl]}
-            lastLevelName={subCategoryName}
-            lastLevelLab={smallPseudoHeaders.nl2}
+            linkHeaders={[smallPseudoHeaders.n1]}
+            linkNames={[parentCategoryName]}
+            linkUrls={[parentCategoryUrl]}
+            bottomHeader={smallPseudoHeaders.n2}
+            bottomName={subCategoryName}
+            optionalHeader={smallPseudoHeaders.n4}
           />
         </SectionContentLayout>
         <SectionContentLayout>
-          <SmallPseudoHeader
+          {/* <SmallPseudoHeader
             text={smallPseudoHeaders.l5}
             hasBox={true}
             hasVerticalOrnament={false}
-          />
+          /> */}
           <ProductsCatalog productCardsData={productCardsData} />
         </SectionContentLayout>
         {

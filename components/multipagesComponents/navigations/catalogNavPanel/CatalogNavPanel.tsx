@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 /**Components**/
 import SmallPseudoHeader from '../../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import LinkWithTextAndIcon from '../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
@@ -8,37 +8,32 @@ import H1Component from '../../../_basicComponents/componentH1/H1Component';
 import { IF_CatalogNavPanel } from '../../../../utils/TS/typeScriptStaff';
 /**Basic Data*/
 import { corpoColors } from '../../../../data/_data';
-import ArrowLongRightIcon from '../../../SVG/icons/ArrowLongRightIcon';
+// import ArrowLongRightIcon from '../../../SVG/icons/ArrowLongRightIcon';
+// import useMeasure from 'react-use-measure';
 
 /**HardCoded Staff*/
+const headerTextStyle =
+  'text-grey text-[0.825rem] xxxl:text-[1rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]';
 const textStyle = `text-[0.825rem] lg:text-[1.25rem] leading-1 tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]`;
 
 const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
-  labels,
-  namesLevels,
-  urlsLevels,
+  linkHeaders,
+  linkNames,
+  linkUrls,
   //__
-  lastLevelName,
-  lastLevelLab,
+  bottomName,
+  bottomHeader,
+  //__
+  optionalHeader,
 }) => {
-  /**JSX**/
-  return (
-    <div className="flex">
-      <div className="w-[20px]">
-        <SmallPseudoHeader
-          text="Katalog"
-          hasBox={false}
-          hasVerticalOrnament={false}
-          containerStyle="flex disable-soft"
-          inlineTextStyle={{ writingMode: 'vertical-rl' }}
-        />
-      </div>
-      <div className="w-[20px] border-l border-greyShade1"></div>
-      <div className="flex flex-col gap-y-6 ">
-        {namesLevels.map((name, index) => (
+  /**Handlers to conditionally create links**/
+  const createLinks = () => {
+    return linkNames && linkHeaders && linkUrls
+      ? linkNames.map((name, index) => (
           <div key={index} className="flex flex-col ">
             <SmallPseudoHeader
-              text={labels[index]}
+              text={linkHeaders[index]}
+              textStyle={headerTextStyle}
               hasBox={false}
               hasVerticalOrnament={false}
             />
@@ -49,7 +44,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
                   style={{ width: 'fit-content' }}
                 >
                   <LinkWithTextAndIcon
-                    linkHref={urlsLevels[index]}
+                    linkHref={linkUrls[index]}
                     controlsSet={{ background: corpoColors.dark }}
                     aStyle="flex items-center gap-4 h-full ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-[10px]"
                     pLabel={name}
@@ -62,28 +57,68 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
               </>
             )}
           </div>
-        ))}
-        {lastLevelName && (
-          <div>
-            <SmallPseudoHeader
-              text={lastLevelLab}
-              hasBox={false}
-              hasVerticalOrnament={false}
-            />
-            <div
-              className="flex "
-              //  className="pl-[26px]"
-            >
-              <H1Component
-                text={lastLevelName}
-                // customeStyle={`text-light text-left ${textStyle}`}
-                customeStyle=" text-light text-left text-[1.5rem] lg:text-[2rem] xxl:text-[2.25] leading-1 tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]"
-                variantH="custome"
-              />
-              <div className="h-6" />
-            </div>
-          </div>
-        )}
+        ))
+      : null;
+  };
+
+  /**Handlers to conditionally create bottomLevel**/
+  const createBottomLevel = () => {
+    return bottomName ? (
+      <div>
+        <SmallPseudoHeader
+          text={bottomHeader}
+          textStyle={headerTextStyle}
+          hasBox={false}
+          hasVerticalOrnament={false}
+        />
+        <div
+          className="flex "
+          //  className="pl-[26px]"
+        >
+          <H1Component
+            text={bottomName}
+            // customeStyle={`text-light text-left ${textStyle}`}
+            customeStyle=" text-light text-left text-[1.5rem] lg:text-[2rem] xxl:text-[2.25] leading-1 tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]"
+            variantH="custome"
+          />
+          <div className="h-6" />
+        </div>
+      </div>
+    ) : null;
+  };
+
+  /**Handlers to conditionally create optionalHeader**/
+  const createOptionalHeader = () => {
+    return optionalHeader ? (
+      <div className="flex gap-x-6 items-center">
+        <SmallPseudoHeader
+          text={optionalHeader}
+          textStyle={headerTextStyle}
+          hasBox={false}
+          hasVerticalOrnament={false}
+        />
+        <div className="w-[30%] h-[0.5px] bg-greyShade1"> </div>
+      </div>
+    ) : null;
+  };
+
+  /**JSX**/
+  return (
+    <div className="flex ">
+      <div className="w-[20px]">
+        <SmallPseudoHeader
+          text="Katalog"
+          hasBox={false}
+          hasVerticalOrnament={false}
+          containerStyle="flex disable-soft"
+          inlineTextStyle={{ writingMode: 'vertical-rl' }}
+        />
+      </div>
+      <div className="w-[20px]  border-l border-greyShade1 "></div>
+      <div className="flex w-full flex-col gap-y-6 ">
+        {createLinks()}
+        {createBottomLevel()}
+        {createOptionalHeader()}
       </div>
     </div>
   );

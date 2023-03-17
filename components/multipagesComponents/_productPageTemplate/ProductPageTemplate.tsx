@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
 import CatalogNavPanel from '../navigations/catalogNavPanel/CatalogNavPanel';
 /**Basic Data*/
-import { splitedPathParts } from '../../../data/_data';
+import { splitedPathParts, smallPseudoHeaders } from '../../../data/_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../utils/TS/typeScriptStaff';
 
@@ -34,7 +34,7 @@ const ProductPageTemplate: React.FunctionComponent<{
       data-component="ProductPageTemplate__container"
       className="w-screen min-h-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
     >
-      <PageContentLayout>
+      <PageContentLayout divStyle="flex flex-col gap-y-[50px] lg:gap-y-[80px] pt-[60px]">
         {/* <SectionContentLayout> */}
         {productCardsData.map((productData, index) => {
           const productPath = productData.path.split('/');
@@ -47,11 +47,11 @@ const ProductPageTemplate: React.FunctionComponent<{
             return (
               <CatalogNavPanel
                 key={index}
-                labels={['Kategoria', 'Podkategoria']}
-                namesLevels={[categoryName, subCategoryName]}
-                urlsLevels={[categoryUrl, subCategoryUrl]}
-                lastLevelName={productName}
-                lastLevelLab="Produkt"
+                linkHeaders={[smallPseudoHeaders.n1, smallPseudoHeaders.n2]}
+                linkNames={[categoryName, subCategoryName]}
+                linkUrls={[categoryUrl, subCategoryUrl]}
+                bottomHeader={smallPseudoHeaders.n3}
+                bottomName={productName}
               />
             );
           }

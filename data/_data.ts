@@ -205,8 +205,10 @@ const smallPseudoHeaders = {
   //___for "katalog navigation"
   n1: 'Kategoria',
   n2: 'Podkategoria',
-  nl1: 'Produkt:',
-  nl2: 'Podkategoria:',
+  n3: 'Produkt',
+  n4: 'Produkty',
+  // nl1: 'Produkt:',
+  // nl2: 'Podkategoria:',
   //__for productCard
   // p1: 'Produkt aktualnie niedostępny',
   p1: 'PRODUKT AKTUALNIE NIEDOSTĘPNY',
