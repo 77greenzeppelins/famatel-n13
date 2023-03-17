@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
 import CatalogNavPanel from '../navigations/catalogNavPanel/CatalogNavPanel';
 /**Basic Data*/
-import { splitedPathParts } from '../../../data/_data';
+import { smallPseudoHeaders, splitedPathParts } from '../../../data/_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../utils/TS/typeScriptStaff';
 
@@ -36,13 +36,21 @@ const ProductPageTemplateShort: React.FunctionComponent<{
           if (router.query.model === productPathPivotalPart) {
             // console.log('ProductPageTemplate________________');
             return (
+              // <CatalogNavPanel
+              //   key={index}
+              //   labels={['Kategoria']}
+              //   namesLevels={[categoryName]}
+              //   urlsLevels={[categoryUrl]}
+              //   lastLevelName={productName}
+              //   lastLevelLab="Podkategoria:"
+              // />
               <CatalogNavPanel
                 key={index}
-                labels={['Kategoria']}
-                namesLevels={[categoryName]}
-                urlsLevels={[categoryUrl]}
-                lastLevelName={productName}
-                lastLevelLab="Podkategoria:"
+                linkHeaders={[smallPseudoHeaders.n1]}
+                linkNames={[categoryName]}
+                linkUrls={[categoryUrl]}
+                bottomHeader={smallPseudoHeaders.n2}
+                bottomName={productName}
               />
             );
           }
