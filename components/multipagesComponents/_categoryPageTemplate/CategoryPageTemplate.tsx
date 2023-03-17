@@ -21,7 +21,7 @@ const CategoryPageTemplate: React.FunctionComponent<{
   return (
     <div
       data-component="CategoryPageTemplate__container"
-      className="w-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
+      className="w-full inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
     >
       <PageContentLayout>
         <SectionContentLayout>

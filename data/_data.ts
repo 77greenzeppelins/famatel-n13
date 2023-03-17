@@ -202,6 +202,7 @@ const smallPseudoHeaders = {
   l6: 'Katalog podkategorii',
   l7: 'Opis',
   l8: 'Zabezpieczenie dla dzieci',
+  l9: 'Materiał',
   //___for "katalog navigation"
   n1: 'Kategoria',
   n2: 'Podkategoria',

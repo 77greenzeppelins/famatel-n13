@@ -11,10 +11,10 @@ import type { NextPageWithLayout } from '../../_app';
 /**----------------------------------------------------------**/
 const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
-    <div className="flex flex-col w-screen min-h-screen bg-dark">
+    <div className="flex flex-col w-full min-h-screen bg-dark">
       <RozlacznikiBezpieczenstwaContent
         uniqueKey={0}
-        nategoryName={catalogStructureData[5].mainCategoryName}
+        categoryName={catalogStructureData[5].mainCategoryName}
       />
     </div>
   );

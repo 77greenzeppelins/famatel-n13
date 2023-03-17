@@ -32,7 +32,7 @@ const ProductPageTemplate: React.FunctionComponent<{
   return (
     <div
       data-component="ProductPageTemplate__container"
-      className="w-screen min-h-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
+      className="w-ful min-h-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
     >
       <PageContentLayout divStyle="flex flex-col gap-y-[50px] lg:gap-y-[80px] pt-[60px]">
         {/* <SectionContentLayout> */}

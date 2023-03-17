@@ -11,7 +11,7 @@ import type { NextPageWithLayout } from '../../_app';
 /**----------------------------------------------------------**/
 const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
-    <div className="fc flex-col w-screen min-h-screen bg-dark">
+    <div className="fc flex-col w-full min-h-screen bg-dark">
       <CategoryPageTemplate
         mainCategoryIndex={catalogStructureData[4].mainCategoryIndex}
       />
