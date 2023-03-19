@@ -72,7 +72,7 @@ const GniazdaPodwieszaneContent = ({
             </SectionWithTable>
           </div>
           <div className="flex h-full w-full xl:w-[50%] pb-[4rem]">
-            <ImagesSection />
+            {/* <ImagesSection /> */}
           </div>
         </div>
         {/*
