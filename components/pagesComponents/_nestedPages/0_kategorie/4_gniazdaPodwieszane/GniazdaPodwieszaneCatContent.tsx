@@ -72,20 +72,19 @@ const GniazdaPodwieszaneContent = ({
             </SectionWithTable>
           </div>
           <div className="flex h-full w-full xl:w-[50%] pb-[4rem]">
-            {/* <ImagesSection /> */}
+            <ImagesSection />
           </div>
         </div>
         {/*
         _______________________________________other tables
         */}
-        <TablesSection
+        {/* <TablesSection
           table1header={catalogTable_1_data.header}
           table1body={catalogTable_1_data.tableBody}
           table2header={catalogTable_2_data.header}
           table2body={catalogTable_2_data.tableBody}
-        />
+        /> */}
       </PageContentLayout>
-      <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>
   );
 };
