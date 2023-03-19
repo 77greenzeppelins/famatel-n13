@@ -7,26 +7,25 @@ import img4 from './28000_MA.webp';
 /**TS**/
 import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
-/**...**/
+/**...should be small????**/
 const imgGniazdaPodwieszane: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img1 },
-  { image: img2 },
-  { image: img2 },
-  { image: img3 },
-  { image: img3 },
-  { image: img4 },
-  { image: img4 },
+  { image: img3, model: '28000' },
+  { image: img4, model: '28000-MA' },
+  { image: img1, model: '27002' },
+  { image: img2, model: '27008' },
+
   //___
-  { image: img4 },
-  { image: img4 },
-  { image: img3 },
-  { image: img3 },
-  { image: img2 },
-  { image: img2 },
-  { image: img1 },
-  { image: img1 },
+  // { image: img4 },
+  // { image: img4 },
+  // { image: img3 },
+  // { image: img3 },
+  // { image: img2 },
+  // { image: img2 },
+  // { image: img1 },
+  // { image: img1 },
 ];
+
+/**...**/
 const imgGniazdaPodwieszaneSlides: IF_ImgStaticData[] = [
   { image: img1 },
   { image: img1 },

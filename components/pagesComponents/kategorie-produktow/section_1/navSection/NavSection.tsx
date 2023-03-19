@@ -1,10 +1,12 @@
 import React from 'react';
 import { corpoColors } from '../../../../../data/_data';
-import CategoriesCounter from '../../../../multipagesComponents/counters/categoriesCounter/CategoriesCounter';
+import NumbersDisplayer from '../../../../multipagesComponents/counters/numbersDisplayer/NumbersDisplayer';
 import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import ChevronLeftIcon from '../../../../SVG/icons/ChevronLeftIcon';
 import ChevronRightIcon from '../../../../SVG/icons/ChevronRightIcon';
 import ArrowButton from '../../../../_basicComponents/buttons/arrowButton/ArrowButton';
+/**Basic Data*/
+import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
 
 const NavSection: React.FunctionComponent<{
   //   setCategoryIndex;
@@ -12,12 +14,15 @@ const NavSection: React.FunctionComponent<{
   setCategoryIndex: React.Dispatch<React.SetStateAction<number>>;
   categoriesNumber: number;
 }> = ({ categoryIndex, setCategoryIndex, categoriesNumber }) => {
+  /**...**/
+  const min = 0;
+  const max = categoriesNumber - 1;
   /**OnClick Handlers*/
   const nextCategory = () => {
-    setCategoryIndex(Math.min(categoryIndex + 1, categoriesNumber - 1));
+    setCategoryIndex(Math.min(categoryIndex + 1, max));
   };
   const prevCategory = () => {
-    setCategoryIndex(Math.max(categoryIndex - 1, 0));
+    setCategoryIndex(Math.max(categoryIndex - 1, min));
   };
   /**JSX**/
   return (
@@ -30,7 +35,10 @@ const NavSection: React.FunctionComponent<{
         <ChevronLeftIcon
           className={`w-6 h-6`}
           strokeColor={corpoColors.grey}
-          scale={1.2}
+          scale={categoryIndex !== min ? 1.2 : 1}
+          strokeColorWhileHover={
+            categoryIndex !== min ? corpoColors.orange : corpoColors.grey
+          }
         />
       </ArrowButton>
       <div className="fc flex-col gap-y-2">
@@ -40,11 +48,11 @@ const NavSection: React.FunctionComponent<{
           hasVerticalOrnament={false}
           textStyle="header-link-label text-grey text-center leading-none"
         />
-        <CategoriesCounter
-          key={categoryIndex}
+        <NumbersDisplayer
           currentCategoryIndex={categoryIndex}
           digitStyle="header-link-label text-grey"
           digitContainerStyle="fc w-[20px]"
+          countedStaff={catalogStructureData.length}
         />
       </div>
       <ArrowButton
@@ -54,7 +62,10 @@ const NavSection: React.FunctionComponent<{
         <ChevronRightIcon
           className={`w-6 h-6`}
           strokeColor={corpoColors.grey}
-          scale={1.2}
+          scale={categoryIndex !== max ? 1.2 : 1}
+          strokeColorWhileHover={
+            categoryIndex !== max ? corpoColors.orange : corpoColors.grey
+          }
         />
       </ArrowButton>
     </div>

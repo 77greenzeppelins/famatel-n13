@@ -6,7 +6,6 @@ import SectionWithTable from '../../2_produkty/_sectionWithTable/SectionWithTabl
 import CatalogNavPanel from '../../../../multipagesComponents/navigations/catalogNavPanel/CatalogNavPanel';
 import TableWithUnderlinedRows from '../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 import TablesSection from './tablesSection/TablesSection';
-import SvgTechSection from './svgSection/SvgTechSection';
 /**Basic Data**/
 import { smallPseudoHeaders } from '../../../../../data/_data';
 import {
@@ -18,11 +17,9 @@ import {
 } from '../../../../../data/categoriesData/cat_4_gniazda-podwieszane/cat4_gniazdaPodwieszane_data';
 /**Tailwind Staff**/
 import { undelinedTableTextStyle } from '../../../../../utils/tailwindStyles';
+import ImagesSection from './imagesSection/ImagesSection';
 
-/**HardCoded Data**/
-const tableTextStyle =
-  'p-small text-grey group-hover:text-light ease-in duration-300 disable';
-/**------------------------------------------------**/
+/**---------------------------------**/
 const GniazdaPodwieszaneContent = ({
   uniqueKey,
   categoryName,
@@ -50,7 +47,7 @@ const GniazdaPodwieszaneContent = ({
         {/*
         _______________________________________underlinedTable + image
         */}
-        <div className="fc gap-4 flex-col-reverse xl:flex-row h-full ">
+        <div className="flex-col-reverse h-full gap-4 fc xl:flex-row ">
           <div className="flex h-full flex-col gap-12  w-full xl:w-[50%] pb-[4rem]">
             <SectionWithTable label={smallPseudoHeaders.l3}>
               <TableWithUnderlinedRows
@@ -75,7 +72,7 @@ const GniazdaPodwieszaneContent = ({
             </SectionWithTable>
           </div>
           <div className="flex h-full w-full xl:w-[50%] pb-[4rem]">
-            <SvgTechSection />
+            <ImagesSection />
           </div>
         </div>
         {/*
@@ -96,7 +93,7 @@ const GniazdaPodwieszaneContent = ({
 export default GniazdaPodwieszaneContent;
 
 /*
-<div className="fc gap-4 flex-col xl:flex-row h-full ">
+<div className="flex-col h-full gap-4 fc xl:flex-row ">
         <div className="flex h-full flex-col  w-full xl:w-[50%] pb-[4rem]">
           <SectionWithTable label={smallPseudoHeaders.l3}>
             <TableWithUnderlinedRows

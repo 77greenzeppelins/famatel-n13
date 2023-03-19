@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 /**React Aria Staff*/
 import { FocusRing } from 'react-aria';
 
-/**---------------------------------------------------**/
+/**-----------------------------------------**/
 const ArrowButton: React.FunctionComponent<{
   onClickHandler: () => void;
-  children: import('react').ReactNode;
+  children: React.ReactNode;
   ariaLabel?: string;
   buttonStyle?: string;
 }> = ({ children, ariaLabel, buttonStyle, onClickHandler }) => {
@@ -26,6 +26,7 @@ const ArrowButton: React.FunctionComponent<{
       clearTimeout(timer);
     };
   };
+  /**JSX**/
   return (
     <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black ">
       <button

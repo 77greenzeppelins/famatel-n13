@@ -9,10 +9,12 @@ const ChevronLeftIcon = ({
   className,
   strokeWidth = 1.5,
   strokeColor,
+  strokeColorWhileHover = corpoColors.orange,
   scale,
 }: {
   strokeWidth?: number;
   strokeColor?: string;
+  strokeColorWhileHover?: string;
   className: string;
   scale?: number;
 }) => {
@@ -24,13 +26,12 @@ const ChevronLeftIcon = ({
       strokeWidth={strokeWidth}
       stroke={strokeColor ? strokeColor : corpoColors.light}
       className={className ? className : 'w-6 h-6'}
-      // onHoverStart={e => { fill:'#9b59b6'}}
-      // onHoverEnd={e => {}}
-      whileHover={{ scale: scale ? scale : 1.05, stroke: '#e6530f' }}
+      whileHover={{
+        scale: scale ? scale : 1.05,
+        stroke: strokeColorWhileHover,
+      }}
       transition={{
-        // default: { type: 'spring', stiffness: 400, damping: 10, delay: 0.1 },
         default: { ...svgTransition },
-
         stroke: { duration: 0.3, ease: [0, 0.71, 0.2, 1.01] },
       }}
     >

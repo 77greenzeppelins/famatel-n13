@@ -9,7 +9,11 @@ const ComplexCell = ({ cellData }: { cellData: string[] }) => {
     <div className="flex flex-col h-full">
       {' '}
       {cellData.map((cellData, i) => (
-        <BodyCell key={i} label={cellData} containerStyle="h-full" />
+        <BodyCell
+          key={i}
+          label={cellData}
+          containerStyle="h-full fc py-2 px-[1px] border-x-[1px] border-dark bg-greyTint2 group-hover:bg-light delay-100 ease-in duration-300 select-none"
+        />
       ))}
     </div>
   );

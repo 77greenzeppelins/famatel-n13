@@ -23,7 +23,7 @@ const ProductPageTemplateShort: React.FunctionComponent<{
   return (
     <div
       data-component="ProductPageTemplate__container"
-      className="w-screen min-h-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
+      className="w-full min-h-screen inner-px-md-lg pt-[60px] bg-dark pb-[10vh]"
     >
       <PageContentLayout>
         {/* <SectionContentLayout> */}

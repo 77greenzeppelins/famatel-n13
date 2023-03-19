@@ -22,10 +22,7 @@ const SvgImageSwitcher: React.FunctionComponent<{
   ...
   */
   const direction = basicState > prev ? 1 : -1;
-
-  /*
-  JSX
-  */
+  /**JSX**/
   return (
     <div
       data-component="SvgImageSwitcher__container"

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import KatalogMenu from './katalogMenu/KatalogMenu';
-// import InViewContainer from '../../containers/inViewContainer/InViewContainer';
-
-/**Components**/
+import { imgLadowarki } from '../../../public/images/c7_ladowarki/imgLadowarki';
+import ImageSlider from '../../multipagesComponents/sliders/imageSlider/ImageSlider';
+import SvgTechPrzemyslowe from '../../SVG/techDrawings/5_przedluzacze-bebnowe/SvgTechPrzemyslowe';
 
 /**----------------------------------**/
 const DoPobraniaContent = () => {
@@ -16,23 +15,15 @@ const DoPobraniaContent = () => {
       data-component="KontaktContent__container"
       className="relative bg-dark pt-[60px]"
     >
-      <div className="w-full h-full inner-px-md-xl-xxl pt-[20px] lg:pt-[40px]">
-        {/* <div className="flex flex-col pt-[50px] gap-y-[10px]">
-          <div className="fc h-20">
-            <button className=" w-6 h-6 rounded-sm bg-corpo glow animate-pulse"></button>
-          </div>
-        </div> */}
+      {/* <div className="w-full h-full inner-px-md-xl-xxl pt-[20px] lg:pt-[40px]">
         <div>
-          <KatalogMenu
-            headerLabels={['Kategoria', 'Podkategoria', 'Produkt']}
-            lineLabels={[
-              'Przemysłowe wtyczki i gniazda',
-              'Wtyczki i gniazda przenośne',
-              '14328',
-            ]}
-            urls={['', '', '']}
-          />
+          <ImageSlider imageData={imgLadowarki} />
         </div>
+      </div> */}
+      <div>
+        <p className="text-2xl text-corpo">Karty katalogowe</p>
+        <p className="text-2xl text-corpo">deklaracje</p>
+        <p className="text-2xl text-corpo">katalog</p>
       </div>
     </div>
   );

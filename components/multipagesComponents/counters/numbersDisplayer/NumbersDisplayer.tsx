@@ -1,29 +1,26 @@
 import React from 'react';
-/**Hook Section**/
-import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**FramerMotion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
 import { opacityScaleYVariants } from '../../../../utils/framerMotion/framerMotionUtils';
-/**Basic Data*/
+/**HardCoded Data*/
+const digitContainerDefaultStyle = `w-[40px] `;
+const digitDefaultStyle = 'text-[1.5rem] text-grey text-cente';
 
-import { catalogStructureData } from '../../../../data/_catalogStructure_data';
-
-/**----------------------------------------**/
-const CategoriesCounter: React.FunctionComponent<{
+/**-------------------------------------------------**/
+const NumbersDisplayer: React.FunctionComponent<{
   currentCategoryIndex: number;
+  countedStaff: number;
   digitStyle?: string;
   digitContainerStyle?: string;
-}> = ({ currentCategoryIndex, digitStyle, digitContainerStyle }) => {
-  /**Hook Section**/
-  const { isLandscape } = useWindowSize({ screensNumber: 1 });
-  /**Basic Data**/
-  const digitContainerDefaultStyle = `w-[40px] `;
-  const digitDefaultStyle = `  ${
-    isLandscape
-      ? 'text-[1rem] xs:text-[2rem] sx:text-[3rem] '
-      : 'text-[1.5rem] '
-  } text-grey text-center`;
-
+}> = ({
+  currentCategoryIndex,
+  countedStaff,
+  digitStyle,
+  digitContainerStyle,
+}) => {
+  /**...*/
+  const conditionForAdditionalZero =
+    countedStaff > 9 && currentCategoryIndex + 1 < 10;
   /**JSX**/
   return (
     <div className="flex disable">
@@ -34,18 +31,11 @@ const CategoriesCounter: React.FunctionComponent<{
           <motion.p
             key={currentCategoryIndex}
             className={digitStyle ? digitStyle : digitDefaultStyle}
-            // initial={{ scaleY: 0 }}
-            // animate={{ scaleY: 1, transition: { delay: 0.0, duration: 0.4 } }}
-            // exit={{
-            //   scaleY: 0,
-            //   transition: { duration: 0.4 },
-            // }}
-
             variants={opacityScaleYVariants}
             initial="from"
             animate="to"
             exit="exit"
-          >{`${currentCategoryIndex + 1 < 10 ? '0' : ''}${
+          >{`${conditionForAdditionalZero ? '0' : ''}${
             currentCategoryIndex + 1
           } `}</motion.p>
         </AnimatePresence>
@@ -63,11 +53,11 @@ const CategoriesCounter: React.FunctionComponent<{
         }
       >
         <p className={digitStyle ? digitStyle : digitDefaultStyle}>
-          {catalogStructureData.length}
+          {countedStaff}
         </p>
       </div>
     </div>
   );
 };
 
-export default CategoriesCounter;
+export default NumbersDisplayer;
