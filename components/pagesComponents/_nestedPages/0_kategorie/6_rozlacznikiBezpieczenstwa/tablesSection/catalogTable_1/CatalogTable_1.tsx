@@ -17,7 +17,7 @@ import { horizGap } from '../../../../../../../utils/tailwindStyles';
 import SliderWithScrollbar from '../../../../../../multipagesComponents/sliders/sliderWithScrollbar/SliderWithScrollbar';
 /**HardCoded Data*/
 const mainGridStyle = `grid grid-cols-[repeat(4,1fr)]`;
-const tableLayout = `flex flex-col ${horizGap} ${sliderTriggersForTables.lg}`;
+const tableLayout = `flex flex-col ${horizGap} ${sliderTriggersForTables.md}`;
 
 /**--------------------------------**/
 const CatalogTable_1 = () => {
@@ -47,3 +47,11 @@ const CatalogTable_1 = () => {
 };
 
 export default CatalogTable_1;
+
+{
+  /* <SliderWithScrollbar>
+      <div
+        data-component="CatalogTable_2__container"
+        className={`flex flex-col ${horizGap} `}
+      ></div> */
+}

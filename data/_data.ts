@@ -238,7 +238,8 @@ const mobileMenuData = {
 };
 
 const sliderTriggersForTables = {
-  lg: ' min-w-[903px]',
+  md: 'min-w-[700px]',
+  lg: 'min-w-[903px]',
 };
 /**...............**/
 export {
