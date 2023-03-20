@@ -1,38 +1,38 @@
 import React from 'react';
 /**Components**/
+import TableFrame from '../../_tableFrame/TableFrame';
 import CatalogTable from './catalogTable/CatalogTable';
 /**TS**/
 import { IF_CatalogCardTablesData } from '../../../../../utils/TS/typeScriptStaff';
-import TableFrame from '../../_tableFrame/TableFrame';
+
+interface IF_Props extends IF_CatalogCardTablesData {
+  sliderTriggersValue?: string;
+}
 
 /**-----------------------------------------------------**/
-const CatalogCardsSection: React.FunctionComponent<
-  IF_CatalogCardTablesData
-> = ({ catalogCardTablesData }) => {
-  /**...WTF**/
-  // console.log('catalogCardTablesData:', catalogCardTablesData);
+const CatalogCardsSection: React.FC<IF_Props> = ({
+  catalogCardTablesData,
+  sliderTriggersValue = 'lg',
+}) => {
   /**JSX* */
   return (
-    <TableFrame
-      sliderTriggersValue={'custom'}
-      customeTrigger="min-w-[924px]"
-      // detailsForContainerStyle=
-    >
+    <TableFrame sliderTriggersValue={sliderTriggersValue}>
       {catalogCardTablesData?.map((catalogCardTableData, index) => (
         <CatalogTable key={index} catalogCardTableData={catalogCardTableData} />
       ))}
     </TableFrame>
   );
-  // return (
-  //   <div
-  //     className="flex flex-col divide-[2px] "
-  //     data-component="CatalogCardsSection__container"
-  //   >
-  //     {catalogCardTablesData?.map((catalogCardTableData, index) => (
-  //       <CatalogTable key={index} catalogCardTableData={catalogCardTableData} />
-  //     ))}
-  //   </div>
-  // );
 };
 
 export default CatalogCardsSection;
+
+// return (
+//   <div
+//     className="flex flex-col divide-[2px] "
+//     data-component="CatalogCardsSection__container"
+//   >
+//     {catalogCardTablesData?.map((catalogCardTableData, index) => (
+//       <CatalogTable key={index} catalogCardTableData={catalogCardTableData} />
+//     ))}
+//   </div>
+// );

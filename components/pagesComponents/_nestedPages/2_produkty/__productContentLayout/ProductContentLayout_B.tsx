@@ -21,7 +21,7 @@ const ProductContentLayout_B: React.FunctionComponent<{
           <SectionWithImages imageData={imageData} />
         </div>
       </div>
-      <div className="flex w-full lg:w-[50%]">{children}</div>
+      <div className="flex w-full h-full lg:w-[50%]">{children}</div>
     </div>
   );
 };

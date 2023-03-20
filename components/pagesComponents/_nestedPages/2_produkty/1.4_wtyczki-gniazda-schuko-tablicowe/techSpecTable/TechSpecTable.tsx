@@ -9,6 +9,7 @@ import {
   horizGap,
   sideHeaderCellCenter,
 } from '../../../../../../utils/tailwindStyles';
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 
 /**----------------------------------------------**/
 const TechSpecTable: React.FunctionComponent<
@@ -16,7 +17,8 @@ const TechSpecTable: React.FunctionComponent<
 > = ({ productTechData }) => {
   /**JSX**/
   return (
-    <div className={`flex flex-col w-full ${horizGap}`}>
+    // <div className={`flex flex-col w-full ${horizGap}`}>
+    <TableFrame sliderTriggersValue={'sm'}>
       {productTechData.line1 ? (
         <div className={`grid grid-cols-[2fr_6fr] `}>
           <div className={`grid grid-cols-[repeat(6,1fr)] col-start-2 `}>
@@ -28,7 +30,11 @@ const TechSpecTable: React.FunctionComponent<
       ) : null}
       {productTechData.line2 ? (
         <div className={`grid grid-cols-[2fr_repeat(6,1fr)] group`}>
-          <RowWithSideHeader rowData={productTechData.line2} centered={true} />
+          <RowWithSideHeader
+            rowData={productTechData.line2}
+            centered={true}
+            isBreakAll={false}
+          />
         </div>
       ) : null}
       {productTechData.connectionType ? (
@@ -36,6 +42,7 @@ const TechSpecTable: React.FunctionComponent<
           <RowWithSideHeader
             rowData={productTechData.connectionType}
             centered={true}
+            isBreakAll={false}
           />
         </div>
       ) : null}
@@ -45,6 +52,7 @@ const TechSpecTable: React.FunctionComponent<
             rowData={productTechData.mm}
             customeHeader={sideHeaderCellCenter}
             centered={true}
+            isBreakAll={false}
           />
         </div>
       ) : null}
@@ -54,10 +62,12 @@ const TechSpecTable: React.FunctionComponent<
             rowData={productTechData.weight}
             customeHeader={sideHeaderCellCenter}
             centered={true}
+            isBreakAll={false}
           />
         </div>
       ) : null}
-    </div>
+    </TableFrame>
+    // </div>
   );
 };
 

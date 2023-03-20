@@ -34,7 +34,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
       </SectionWithTable>
 
       <SectionWithTable label={smallPseudoHeaders.l2}>
-        <DIYTable tableLayout={`flex flex-col ${horizGap}`}>
+        <DIYTable>
           <RowWithLayout
             rowData={ampersData}
             containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}

@@ -9,8 +9,6 @@ import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/r
 import { mainStylesSwitcher } from '../../../../../multipagesComponents/tables/diyTable/handlers/stylesSwitcher';
 /**TS**/
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
-/**Tailwind Styles*/
-import { horizGap } from '../../../../../../utils/tailwindStyles';
 /**Basic Data*/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
 
@@ -32,7 +30,7 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
         <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
       </SectionWithTable>
       <SectionWithTable label={smallPseudoHeaders.l2}>
-        <DIYTable tableLayout={`flex flex-col ${horizGap}`}>
+        <DIYTable>
           <RowWithLayout
             rowData={ampersData}
             containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}

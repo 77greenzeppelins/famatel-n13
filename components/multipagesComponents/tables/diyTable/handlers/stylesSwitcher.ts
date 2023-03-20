@@ -1,7 +1,10 @@
+/*
+used in: WtyczkiGniazdaPrzenośne | <TableSection> 
+*/
+
 /**Tailwind Styles*/
 import {
   vertGap,
-  tableTextS,
   tableTextM,
   tableTextL,
 } from '../../../../../utils/tailwindStyles';
