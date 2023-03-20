@@ -9,7 +9,7 @@ const SliderScrollbar: React.FC<{
   handleSize?: number;
   translateX: number;
   setTranslateXValue: Dispatch<SetStateAction<number>>;
-}> = ({ handleSize = 16, translateX, setTranslateXValue }) => {
+}> = ({ handleSize = 24, translateX, setTranslateXValue }) => {
   /*
   References
   */
@@ -74,7 +74,7 @@ const SliderScrollbar: React.FC<{
             ref={handlerRef}
             data-layout="slider-handler"
             // className="relative border rounded-sm border-corpo bg-dark cursor-grab"
-            className="relative w-4 h-4 rounded-sm aspect-square "
+            className="relative w-6 h-6 rounded-sm aspect-square bg-corpo"
             //___bg-corpo glow animate-pulse
             style={{ width: handleSize, height: handleSize }}
             drag="x"
@@ -88,8 +88,8 @@ const SliderScrollbar: React.FC<{
             // onPointerUp={() => setIsDragging(false)}
             // animate={{ scale: isDragging ? 1.5 : 1 }}
           >
-            <div className="absolute top-0 bottom-0 w-4 h-4 rounded-sm aspect-square bg-dark" />
-            <div className="relative w-4 h-4 rounded-sm aspect-square bg-corpo glow animate-pulse" />
+            {/* <div className="absolute top-0 bottom-0 w-6 h-6 rounded-sm aspect-square bg-dark" /> */}
+            {/* <div className="relative w-6 h-6 rounded-sm aspect-square bg-corpo glow animate-pulse" /> */}
           </motion.div>
         </div>
       </div>
