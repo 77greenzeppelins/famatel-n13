@@ -5,7 +5,8 @@ import SideHeaderCenter from '../../../../../../multipagesComponents/tables/__ce
 import TopHeader from '../../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
 import BodyCell from '../../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
 import RowWithSideHeader from '../../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
-/**BasicData**/
+/**Basic Data**/
+import { sliderTriggersForTables } from '../../../../../../../data/_data';
 import { catalogTable_2_data } from '../../../../../../../data/categoriesData/cat_6_rozlacznikiBezpieczenstwa/cat6_rozlacznikBezpieczenstwa_data';
 /**Tailwind Staff**/
 import { horizGap } from '../../../../../../../utils/tailwindStyles';
@@ -24,7 +25,7 @@ const {
 const CatalogTable_2 = () => {
   return (
     <SliderWithScrollbar>
-      <div className="flex flex-col min-w-[903px]">
+      <div className={`flex flex-col ${sliderTriggersForTables.lg}`}>
         {/*
        ________________________________________________header
       */}

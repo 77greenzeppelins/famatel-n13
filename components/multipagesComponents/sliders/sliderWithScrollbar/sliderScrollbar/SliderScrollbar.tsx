@@ -60,7 +60,7 @@ const SliderScrollbar: React.FC<{
           data-layout="slider-background"
           className="absolute w-full h-[1px] rounded-full "
           style={{
-            background: `linear-gradient(90deg, ${corpoColors.orange} ${progressValue}px,${corpoColors.grey} 0 )`,
+            background: `linear-gradient(90deg, ${corpoColors.grey} ${progressValue}px,${corpoColors.orange} 0 )`,
           }}
         />
         <div
@@ -74,7 +74,7 @@ const SliderScrollbar: React.FC<{
             ref={handlerRef}
             data-layout="slider-handler"
             // className="relative border rounded-sm border-corpo bg-dark cursor-grab"
-            className="relative fc w-[60px] h-7  bg-dark border border-corpo"
+            className="relative fc w-[60px] h-7  bg-dark border border-grey"
             //___bg-corpo glow animate-pulse aspect-square rounded-sm
             // style={{ width: handleSize, height: handleSize }}
             drag="x"

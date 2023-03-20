@@ -5,6 +5,8 @@ import RowWithSideHeader from '../../../../../../multipagesComponents/tables/diy
 /**Tailwind Staff**/
 import { horizGap } from '../../../../../../../utils/tailwindStyles';
 import SliderWithScrollbar from '../../../../../../multipagesComponents/sliders/sliderWithScrollbar/SliderWithScrollbar';
+/**Basic Data**/
+import { sliderTriggersForTables } from '../../../../../../../data/_data';
 /**HardCoded Data*/
 const mainGridStyle = `grid grid-cols-[repeat(10,1fr)] group`;
 
@@ -16,7 +18,7 @@ const CatalogTable_2: React.FC<{
     <SliderWithScrollbar>
       <div
         data-component="CatalogTable_2__container"
-        className={`flex flex-col ${horizGap} min-w-[903px]`}
+        className={`flex flex-col ${horizGap} ${sliderTriggersForTables.lg}`}
       >
         <div className={mainGridStyle}>
           {headerData.map((label, index) => (
