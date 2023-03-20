@@ -38,7 +38,6 @@ const WtyczkiGniazdaPrzenosneContent: React.FunctionComponent<{
         //___data for "catalogTable"
         const catalogCardTablesData =
           wtyczkiGniazdaPrzenosne_tablesData[index].tablesData;
-
         //___
         if (router.query.model === productPathPivotalPart) {
           return (

@@ -3,7 +3,7 @@ import React from 'react';
 import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
 import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
 import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
-import DIYTable from '../../../../../multipagesComponents/tables/diyTable/DIYTable';
+// import DIYTable from '../../../../../multipagesComponents/tables/diyTable/DIYTable';
 import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
 /**Handler**/
 import {
@@ -14,9 +14,10 @@ import {
 /**TS**/
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles*/
-import { horizGap } from '../../../../../../utils/tailwindStyles';
+// import { horizGap } from '../../../../../../utils/tailwindStyles';
 /**Basic Data**/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 
 /**------------------------------------------------**/
 const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
@@ -54,7 +55,8 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
       </SectionWithTable>
 
       <SectionWithTable label={smallPseudoHeaders.l2}>
-        <DIYTable tableLayout={`flex flex-col ${horizGap} `}>
+        {/* <DIYTable tableLayout={`flex flex-col ${horizGap} `}> */}
+        <TableFrame sliderTriggersValue={'lg'}>
           <RowWithLayout
             rowData={ampersData}
             containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}
@@ -102,7 +104,8 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
               }
             />
           )}
-        </DIYTable>
+        </TableFrame>
+        {/* </DIYTable> */}
       </SectionWithTable>
     </AllTablesContainer>
   );

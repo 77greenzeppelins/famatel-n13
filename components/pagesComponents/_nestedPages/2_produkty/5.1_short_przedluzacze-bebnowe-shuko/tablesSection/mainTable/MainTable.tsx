@@ -14,7 +14,6 @@ const MainTable: React.FunctionComponent<{
 }> = ({ tableHeader, tableBody }) => {
   /**JSX**/
   return (
-    // <div className={`flex flex-col ${horizGap}`}>
     <TableFrame sliderTriggersValue={'custom'} customeTrigger="min-w-[924px]">
       <div className={mainGridStyle}>
         {tableHeader.map((label, index) => (
@@ -30,7 +29,6 @@ const MainTable: React.FunctionComponent<{
         />
       ))}
     </TableFrame>
-    // </div>
   );
 };
 

@@ -7,9 +7,17 @@ import { horizGap } from '../../../../utils/tailwindStyles';
 /**--------------------------**/
 const TableFrame: React.FC<{
   children: ReactNode;
+  customContainerStyle?: string;
+  detailsForContainerStyle?: string;
   sliderTriggersValue?: string;
   customeTrigger?: string;
-}> = ({ children, sliderTriggersValue, customeTrigger }) => {
+}> = ({
+  children,
+  customContainerStyle,
+  detailsForContainerStyle,
+  sliderTriggersValue,
+  customeTrigger,
+}) => {
   /**Switch statement*/
   const createSliderTriggerValue = (
     sliderTriggersValue: string | undefined
@@ -29,9 +37,14 @@ const TableFrame: React.FC<{
   return (
     <SliderWithScrollbar>
       <div
-        className={`flex flex-col ${horizGap} ${createSliderTriggerValue(
-          sliderTriggersValue
-        )}`}
+        data-component="TableFrame__innerContainer"
+        className={
+          customContainerStyle
+            ? customContainerStyle
+            : `flex flex-col ${horizGap} ${createSliderTriggerValue(
+                sliderTriggersValue
+              )} ${detailsForContainerStyle ? detailsForContainerStyle : ''}`
+        }
       >
         {children}
       </div>

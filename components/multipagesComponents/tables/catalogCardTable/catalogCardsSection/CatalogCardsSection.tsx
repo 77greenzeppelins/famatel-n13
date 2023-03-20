@@ -3,6 +3,7 @@ import React from 'react';
 import CatalogTable from './catalogTable/CatalogTable';
 /**TS**/
 import { IF_CatalogCardTablesData } from '../../../../../utils/TS/typeScriptStaff';
+import TableFrame from '../../_tableFrame/TableFrame';
 
 /**-----------------------------------------------------**/
 const CatalogCardsSection: React.FunctionComponent<
@@ -12,15 +13,26 @@ const CatalogCardsSection: React.FunctionComponent<
   // console.log('catalogCardTablesData:', catalogCardTablesData);
   /**JSX* */
   return (
-    <div
-      className="flex flex-col divide-[2px] "
-      data-component="CatalogCardsSection__container"
+    <TableFrame
+      sliderTriggersValue={'custom'}
+      customeTrigger="min-w-[924px]"
+      // detailsForContainerStyle=
     >
       {catalogCardTablesData?.map((catalogCardTableData, index) => (
         <CatalogTable key={index} catalogCardTableData={catalogCardTableData} />
       ))}
-    </div>
+    </TableFrame>
   );
+  // return (
+  //   <div
+  //     className="flex flex-col divide-[2px] "
+  //     data-component="CatalogCardsSection__container"
+  //   >
+  //     {catalogCardTablesData?.map((catalogCardTableData, index) => (
+  //       <CatalogTable key={index} catalogCardTableData={catalogCardTableData} />
+  //     ))}
+  //   </div>
+  // );
 };
 
 export default CatalogCardsSection;
