@@ -4,6 +4,7 @@ import TopHeader from '../../../../../../multipagesComponents/tables/__cells/lay
 import RowWithInnerRows from '../../../../../../multipagesComponents/tables/diyTable/rowWithInnerRows/RowWithInnerRows';
 /**Tailwind Styles**/
 import { horizGap } from '../../../../../../../utils/tailwindStyles';
+import TableFrame from '../../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 /**HardCoded Data*/
 const mainGridStyle = `grid grid-cols-[1fr_1fr_2fr_2fr_1fr_1fr_1fr]`;
 
@@ -14,16 +15,21 @@ const MainTable: React.FunctionComponent<{
 }> = ({ tableHeader, tableBody }) => {
   /**JSX**/
   return (
-    <div className={`flex flex-col ${horizGap}`}>
+    <TableFrame sliderTriggersValue={'custom'} customeTrigger="min-w-[924px]">
       <div className={mainGridStyle}>
         {tableHeader.map((label, index) => (
           <TopHeader key={index} label={label} />
         ))}
       </div>
       {tableBody.map((rowData, i) => (
-        <RowWithInnerRows key={i} gridStyle={mainGridStyle} rowData={rowData} />
+        <RowWithInnerRows
+          key={i}
+          gridStyle={mainGridStyle}
+          rowData={rowData}
+          isBreakAll={false}
+        />
       ))}
-    </div>
+    </TableFrame>
   );
 };
 

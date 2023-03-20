@@ -237,6 +237,7 @@ const mobileMenuData = {
   maxW: 500,
 };
 
+//___should be delated...
 const sliderTriggersForTables = {
   md: 'min-w-[700px]',
   lg: 'min-w-[903px]',
