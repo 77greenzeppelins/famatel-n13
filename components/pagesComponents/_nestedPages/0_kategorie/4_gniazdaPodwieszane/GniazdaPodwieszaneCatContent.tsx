@@ -6,6 +6,7 @@ import SectionWithTable from '../../2_produkty/_sectionWithTable/SectionWithTabl
 import CatalogNavPanel from '../../../../multipagesComponents/navigations/catalogNavPanel/CatalogNavPanel';
 import TableWithUnderlinedRows from '../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 import TablesSection from './tablesSection/TablesSection';
+import ImagesSection from './imagesSection/ImagesSection';
 /**Basic Data**/
 import { smallPseudoHeaders } from '../../../../../data/_data';
 import {
@@ -17,7 +18,6 @@ import {
 } from '../../../../../data/categoriesData/cat_4_gniazda-podwieszane/cat4_gniazdaPodwieszane_data';
 /**Tailwind Staff**/
 import { undelinedTableTextStyle } from '../../../../../utils/tailwindStyles';
-import ImagesSection from './imagesSection/ImagesSection';
 
 /**---------------------------------**/
 const GniazdaPodwieszaneContent = ({
@@ -36,12 +36,8 @@ const GniazdaPodwieszaneContent = ({
         */}
         <SectionContentLayout>
           <CatalogNavPanel
-            // linkHeaders={[smallPseudoHeaders.n1]}
-            // linkNames={[parentCategoryName]}
-            // linkUrls={[parentCategoryUrl]}
             bottomHeader={smallPseudoHeaders.n1}
             bottomName={categoryName}
-            // optionalHeader={smallPseudoHeaders.n4}
           />
         </SectionContentLayout>
         {/*
@@ -78,12 +74,12 @@ const GniazdaPodwieszaneContent = ({
         {/*
         _______________________________________other tables
         */}
-        {/* <TablesSection
+        <TablesSection
           table1header={catalogTable_1_data.header}
           table1body={catalogTable_1_data.tableBody}
           table2header={catalogTable_2_data.header}
           table2body={catalogTable_2_data.tableBody}
-        /> */}
+        />
       </PageContentLayout>
     </div>
   );

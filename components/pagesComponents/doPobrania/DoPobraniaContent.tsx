@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { imgLadowarki } from '../../../public/images/c7_ladowarki/imgLadowarki';
 import ImageSlider from '../../multipagesComponents/sliders/imageSlider/ImageSlider';
+import SliderWithScrollbar from '../../multipagesComponents/sliders/sliderWithScrollbar/SliderWithScrollbar';
 import SvgTechPrzemyslowe from '../../SVG/techDrawings/5_przedluzacze-bebnowe/SvgTechPrzemyslowe';
 
 /**----------------------------------**/
@@ -24,6 +25,11 @@ const DoPobraniaContent = () => {
         <p className="text-2xl text-corpo">Karty katalogowe</p>
         <p className="text-2xl text-corpo">deklaracje</p>
         <p className="text-2xl text-corpo">katalog</p>
+      </div>
+      <div>
+        <SliderWithScrollbar>
+          <div className="w-[800px] h-[500px] bg-vY" />
+        </SliderWithScrollbar>
       </div>
     </div>
   );
