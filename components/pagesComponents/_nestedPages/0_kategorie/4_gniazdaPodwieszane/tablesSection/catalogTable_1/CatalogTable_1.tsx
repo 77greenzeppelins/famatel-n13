@@ -7,6 +7,7 @@ import RowWithSideHeader from '../../../../../../multipagesComponents/tables/diy
 import { horizGap } from '../../../../../../../utils/tailwindStyles';
 /**Basic Data**/
 import { sliderTriggersForTables } from '../../../../../../../data/_data';
+import TableFrame from '../../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 /**HardCoded Data*/
 const mainGridStyle = `grid grid-cols-[repeat(10,1fr)] group`;
 
@@ -17,25 +18,27 @@ const CatalogTable_1: React.FC<{
 }> = ({ headerData, tableDodyData }) => {
   /**JSX**/
   return (
-    <SliderWithScrollbar>
-      <div
-        data-component="CatalogTable_1__container"
-        className={`flex flex-col ${horizGap} ${sliderTriggersForTables.lg}`}
-      >
-        <div className={mainGridStyle}>
-          {headerData.map((label, index) => (
-            <TopHeader key={index} label={label} isBreakAll={false} />
-          ))}
-        </div>
-        <div className={`flex flex-col ${horizGap}`}>
-          {tableDodyData.map((rowData, i) => (
-            <div key={i} className={mainGridStyle}>
-              <RowWithSideHeader key={i} rowData={rowData} centered={true} />
-            </div>
-          ))}
-        </div>
+    // <SliderWithScrollbar>
+    //   <div
+    //     data-component="CatalogTable_1__container"
+    //     className={`flex flex-col ${horizGap} ${sliderTriggersForTables.lg}`}
+    //   >
+    <TableFrame sliderTriggersValue={'lg'}>
+      <div className={mainGridStyle}>
+        {headerData.map((label, index) => (
+          <TopHeader key={index} label={label} isBreakAll={false} />
+        ))}
       </div>
-    </SliderWithScrollbar>
+      <div className={`flex flex-col ${horizGap}`}>
+        {tableDodyData.map((rowData, i) => (
+          <div key={i} className={mainGridStyle}>
+            <RowWithSideHeader key={i} rowData={rowData} centered={true} />
+          </div>
+        ))}
+      </div>
+    </TableFrame>
+    //   </div>
+    // </SliderWithScrollbar>
   );
 };
 
