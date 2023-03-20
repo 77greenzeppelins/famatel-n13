@@ -15,14 +15,16 @@ const SliderWithScrollbar: React.FC<{ children: ReactNode }> = ({
   /**Layout Calculator**/
   const [squareRef, { width, scrollWidth }] = useElementSize();
   /*Framer Motion Section*/
-  const translateXMotionValue = useMotionValue(0);
-  /**...*/
-  console.log('translateXValue', translateXValue);
+  // const translateXMotionValue = useMotionValue(0);
+  /**...wtf...*/
+  // console.log('SliderWithScrollbar / width:', width);
+  // console.log('SliderWithScrollbar / scrollWidth:', scrollWidth);
+  // console.log('translateXValue', translateXValue);
   /**JSX**/
   return (
     <div
-      data-component="CarouselWithScrollbar__container"
-      className="flex flex-col h-full gap-y-8"
+      data-component="SliderWithScrollbar__container"
+      className="flex flex-col h-full gap-y-7 pb-[14px]"
     >
       <div
         data-layout="carousel-viewBox"

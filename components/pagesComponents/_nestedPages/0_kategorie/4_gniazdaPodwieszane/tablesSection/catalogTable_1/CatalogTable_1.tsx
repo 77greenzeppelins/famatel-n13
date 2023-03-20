@@ -1,12 +1,15 @@
 import React from 'react';
 /**Components**/
+import SliderWithScrollbar from '../../../../../../multipagesComponents/sliders/sliderWithScrollbar/SliderWithScrollbar';
 import TopHeader from '../../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
 import RowWithSideHeader from '../../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 /**Tailwind Staff*/
 import { horizGap } from '../../../../../../../utils/tailwindStyles';
-import SliderWithScrollbar from '../../../../../../multipagesComponents/sliders/sliderWithScrollbar/SliderWithScrollbar';
+/**Basic Data**/
+import { sliderTriggersForTables } from '../../../../../../../data/_data';
 /**HardCoded Data*/
 const mainGridStyle = `grid grid-cols-[repeat(10,1fr)] group`;
+
 /**--------------------------------**/
 const CatalogTable_1: React.FC<{
   headerData: string[];
@@ -17,7 +20,7 @@ const CatalogTable_1: React.FC<{
     <SliderWithScrollbar>
       <div
         data-component="CatalogTable_1__container"
-        className={`flex flex-col ${horizGap} min-w-[903px]`}
+        className={`flex flex-col ${horizGap} ${sliderTriggersForTables.lg}`}
       >
         <div className={mainGridStyle}>
           {headerData.map((label, index) => (

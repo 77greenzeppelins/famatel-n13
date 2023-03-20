@@ -236,6 +236,10 @@ const mobileMenuData = {
   minH: 500,
   maxW: 500,
 };
+
+const sliderTriggersForTables = {
+  lg: ' min-w-[903px]',
+};
 /**...............**/
 export {
   pagesUrl,
@@ -258,6 +262,7 @@ export {
   story,
   //___
   mobileMenuData,
+  sliderTriggersForTables,
 };
 
 // const mainCategories: IF_MainCategorySpecification[] = [
