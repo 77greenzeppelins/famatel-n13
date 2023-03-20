@@ -22,7 +22,7 @@ const SliderWithScrollbar: React.FC<{ children: ReactNode }> = ({
   return (
     <div
       data-component="CarouselWithScrollbar__container"
-      className="flex flex-col h-full"
+      className="flex flex-col h-full gap-y-8"
     >
       <div
         data-layout="carousel-viewBox"
@@ -40,7 +40,7 @@ const SliderWithScrollbar: React.FC<{ children: ReactNode }> = ({
       </div>
       <div
         data-layout="carouselScrollbar--wrapper"
-        className="fc h-[15%] w-full pt-4"
+        className="fc h-[15%] w-full "
       >
         <div className="w-[80%]">
           {width !== scrollWidth && (
