@@ -23,7 +23,7 @@ const SliderScrollbar: React.FC<{
   /*
   Local State for countin progress of scroll's handle move
   */
-  const [isDragging, setIsDragging] = useState(false);
+  // const [isDragging, setIsDragging] = useState(false);
   /*
   ...
   */
@@ -82,10 +82,10 @@ const SliderScrollbar: React.FC<{
             dragElastic={0}
             dragConstraints={constraintsRef}
             onDrag={dragHandler}
-            onDragStart={() => setIsDragging(true)}
-            onDragEnd={() => setIsDragging(false)}
-            onPointerDown={() => setIsDragging(true)}
-            onPointerUp={() => setIsDragging(false)}
+            // onDragStart={() => setIsDragging(true)}
+            // onDragEnd={() => setIsDragging(false)}
+            // onPointerDown={() => setIsDragging(true)}
+            // onPointerUp={() => setIsDragging(false)}
             // animate={{ scale: isDragging ? 1.5 : 1 }}
           >
             <div className="absolute top-0 bottom-0 w-4 h-4 rounded-sm aspect-square bg-dark" />
