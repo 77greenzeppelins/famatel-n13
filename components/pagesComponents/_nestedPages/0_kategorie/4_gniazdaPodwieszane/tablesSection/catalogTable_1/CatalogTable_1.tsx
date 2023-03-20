@@ -15,7 +15,10 @@ const CatalogTable_1: React.FC<{
   /**JSX**/
   return (
     <SliderWithScrollbar>
-      <div className={`flex flex-col ${horizGap} min-w-[903px]`}>
+      <div
+        data-component="CatalogTable_1__container"
+        className={`flex flex-col ${horizGap} min-w-[903px]`}
+      >
         <div className={mainGridStyle}>
           {headerData.map((label, index) => (
             <TopHeader key={index} label={label} isBreakAll={false} />

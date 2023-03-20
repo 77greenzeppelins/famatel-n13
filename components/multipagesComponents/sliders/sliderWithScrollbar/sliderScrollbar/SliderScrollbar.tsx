@@ -64,14 +64,14 @@ const SliderScrollbar: React.FC<{
         <div
           ref={progressBarRef}
           data-layout="slider-progress-bar"
-          className="absolute  "
+          className="absolute "
           style={{ left: handleSize / 2, right: handleSize / 2 }}
         />
         <div data-layout="slider-handler-constraintsRef" ref={constraintsRef}>
           <motion.div
             ref={handlerRef}
             data-layout="slider-handler"
-            className="relative bg-corpo rounded-full cursor-grab"
+            className="relative rounded-full bg-corpo cursor-grab"
             style={{ width: handleSize, height: handleSize }}
             drag="x"
             dragMomentum={false}
@@ -82,7 +82,7 @@ const SliderScrollbar: React.FC<{
             onDragEnd={() => setIsDragging(false)}
             onPointerDown={() => setIsDragging(true)}
             onPointerUp={() => setIsDragging(false)}
-            animate={{ scale: isDragging ? 1.5 : 1 }}
+            // animate={{ scale: isDragging ? 1.5 : 1 }}
           />
         </div>
       </div>
