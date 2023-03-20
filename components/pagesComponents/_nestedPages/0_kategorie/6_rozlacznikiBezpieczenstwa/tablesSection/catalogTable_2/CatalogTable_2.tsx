@@ -1,6 +1,6 @@
 import React from 'react';
-
 /**Components**/
+import SliderWithScrollbar from '../../../../../../multipagesComponents/sliders/sliderWithScrollbar/SliderWithScrollbar';
 import SideHeaderCenter from '../../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeaderCenter';
 import TopHeader from '../../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
 import BodyCell from '../../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
@@ -9,7 +9,6 @@ import RowWithSideHeader from '../../../../../../multipagesComponents/tables/diy
 import { catalogTable_2_data } from '../../../../../../../data/categoriesData/cat_6_rozlacznikiBezpieczenstwa/cat6_rozlacznikBezpieczenstwa_data';
 /**Tailwind Staff**/
 import { horizGap } from '../../../../../../../utils/tailwindStyles';
-import SliderWithScrollbar from '../../../../../../multipagesComponents/sliders/sliderWithScrollbar/SliderWithScrollbar';
 
 //__
 const {
@@ -21,15 +20,7 @@ const {
   bodyRows,
 } = catalogTable_2_data;
 
-/*
-<SliderWithScrollbar>
-      <div
-        data-component="CatalogTable_2__container"
-        className={`flex flex-col ${horizGap} min-w-[903px]`}
-      >
-
-*/
-
+/**------------------------------**/
 const CatalogTable_2 = () => {
   return (
     <SliderWithScrollbar>
