@@ -1,13 +1,15 @@
 import React, { Dispatch, SetStateAction, useRef, useState } from 'react';
 /**Framer Motion Staff**/
 import { motion } from 'framer-motion';
+/**Basic Data**/
+import { corpoColors } from '../../../../../data/_data';
 
 /**--------------------------------**/
 const SliderScrollbar: React.FC<{
   handleSize?: number;
   translateX: number;
   setTranslateXValue: Dispatch<SetStateAction<number>>;
-}> = ({ handleSize = 24, translateX, setTranslateXValue }) => {
+}> = ({ handleSize = 16, translateX, setTranslateXValue }) => {
   /*
   References
   */
@@ -56,9 +58,9 @@ const SliderScrollbar: React.FC<{
       >
         <div
           data-layout="slider-background"
-          className="absolute w-full h-2 rounded-full "
+          className="absolute w-full h-[1px] rounded-full "
           style={{
-            background: `linear-gradient(90deg, #1d1d1b ${progressValue}px, #9d9e9f 0 )`,
+            background: `linear-gradient(90deg, ${corpoColors.orange} ${progressValue}px,${corpoColors.grey} 0 )`,
           }}
         />
         <div
@@ -67,11 +69,13 @@ const SliderScrollbar: React.FC<{
           className="absolute "
           style={{ left: handleSize / 2, right: handleSize / 2 }}
         />
-        <div data-layout="slider-handler-constraintsRef" ref={constraintsRef}>
+        <div data-layout=" slider-handler-constraintsRef" ref={constraintsRef}>
           <motion.div
             ref={handlerRef}
             data-layout="slider-handler"
-            className="relative rounded-full bg-corpo cursor-grab"
+            // className="relative border rounded-sm border-corpo bg-dark cursor-grab"
+            className="relative w-4 h-4 rounded-sm aspect-square "
+            //___bg-corpo glow animate-pulse
             style={{ width: handleSize, height: handleSize }}
             drag="x"
             dragMomentum={false}
@@ -83,7 +87,10 @@ const SliderScrollbar: React.FC<{
             onPointerDown={() => setIsDragging(true)}
             onPointerUp={() => setIsDragging(false)}
             // animate={{ scale: isDragging ? 1.5 : 1 }}
-          />
+          >
+            <div className="absolute top-0 bottom-0 w-4 h-4 rounded-sm aspect-square bg-dark" />
+            <div className="relative w-4 h-4 rounded-sm aspect-square bg-corpo glow animate-pulse" />
+          </motion.div>
         </div>
       </div>
       {/* <div>
@@ -100,3 +107,11 @@ const SliderScrollbar: React.FC<{
 };
 
 export default SliderScrollbar;
+
+/*
+<motion.button
+            className= "w-4 h-4 rounded-sm aspect-square sm:w-6 sm:h-6 bg-corpo glow animate-pulse"
+            }
+          />
+
+*/
