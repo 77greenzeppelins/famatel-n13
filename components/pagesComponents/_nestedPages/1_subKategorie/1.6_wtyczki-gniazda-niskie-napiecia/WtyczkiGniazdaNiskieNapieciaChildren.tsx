@@ -22,7 +22,9 @@ const WtyczkiGniazdaNiskieNapieciaChildren = () => {
           odróżnienia napięcia i częstotliwości - szczegóły w tabeli
         </p>
       </div>
-      <DIYTable tableLayout="flex flex-col gap-y-[2px]">
+      <DIYTable
+      //  tableLayout="flex flex-col gap-y-[2px]"
+      >
         <RowType_6
           rowData={niskieNapięciaSubCatTable1Data.header}
           rowContainerStyle={'grid grid-cols-[repeat(5,1fr)_20px]'}
