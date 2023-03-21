@@ -1,24 +1,22 @@
 import React from 'react';
 /**Components**/
-import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SmallPseudoHeader from '../../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
+import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
+import TopHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
+import BodyCell from '../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
+import SideHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeader';
 import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 /**Basic Data**/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
 /**Tailwind Styles**/
 import {
-  vertGap,
   sideHeaderCellCenter,
   bodyCell,
   horizGap,
   undelinedTableTextStyle,
 } from '../../../../../../utils/tailwindStyles';
-import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
-import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
-import TopHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
-import BodyCell from '../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
-import SideHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeader';
 
 /**-----------------------------------------**/
 const Layout4: React.FunctionComponent<{
@@ -33,7 +31,7 @@ const Layout4: React.FunctionComponent<{
   return (
     <AllTablesContainer>
       <SectionWithTable label={smallPseudoHeaders.l2}>
-        <div className={`flex flex-col  ${horizGap}`}>
+        <TableFrame sliderTriggersValue={'vsm'}>
           <div className={`grid grid-cols-[3fr_repeat(3,2fr)]`}>
             {tableData.tableHeader.map((label, i) => {
               if (i === 0) {
@@ -74,7 +72,7 @@ const Layout4: React.FunctionComponent<{
               </div>
             </div>
           </div>
-        </div>
+        </TableFrame>
       </SectionWithTable>
       <SectionWithTable label={smallPseudoHeaders.l3}>
         <TableWithUnderlinedRows

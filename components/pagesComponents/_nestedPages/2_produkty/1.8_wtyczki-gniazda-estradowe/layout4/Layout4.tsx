@@ -1,7 +1,8 @@
 import React from 'react';
 /**Components**/
-import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SmallPseudoHeader from '../../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
+import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 /**Basic Data**/
@@ -10,14 +11,12 @@ import { wtyczkiGniazdaEstradowe_l4_feat_data } from '../../../../../../data/cat
 /**Tailwind Styles*/
 import {
   tableTextM_Lg,
-  horizGap,
   aTopH_Lg,
   aSideHCenter_Lg,
   aBodyCell_Lg,
   undelinedTableTextStyle,
 } from '../../../../../../utils/tailwindStyles';
-import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
-import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
+
 /**Hardcoded Staff**/
 const headerGrid = 'grid grid-cols-[1fr_3fr]';
 const mainGrid = 'grid grid-cols-[repeat(4,1fr)]';
@@ -34,10 +33,7 @@ const Layout4: React.FunctionComponent<{
   return (
     <AllTablesContainer>
       <SectionWithTable label={smallPseudoHeaders.l1}>
-        <div
-          data-component="Layout4__container"
-          className={`flex flex-col ${horizGap}`}
-        >
+        <TableFrame sliderTriggersValue={'sm'}>
           <div className={headerGrid}>
             <div className="col-start-2">
               <div className={aTopH_Lg}>{tableData.line1}</div>
@@ -59,7 +55,7 @@ const Layout4: React.FunctionComponent<{
               />
             </div>
           ))}
-        </div>
+        </TableFrame>
         <div>
           <p
             className={`${tableTextM_Lg} text-grey hover:text-light delay-100 duration-300 ease-in`}

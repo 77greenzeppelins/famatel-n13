@@ -2,20 +2,18 @@ import React from 'react';
 /**Components**/
 import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
 import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 import SideHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeader';
 import TopHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
 import BodyCell from '../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 /**Tailwind Styles**/
-import {
-  horizGap,
-  undelinedTableTextStyle,
-} from '../../../../../../utils/tailwindStyles';
+import { undelinedTableTextStyle } from '../../../../../../utils/tailwindStyles';
 /**Basic Data**/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
 
-/**HardCoded Data*/
+/**HardCoded Staff*/
 const grid4Cells = `grid grid-cols-[3fr_repeat(3,2fr)]`;
 const grid2Cells = `grid grid-cols-[3fr,6fr] `;
 
@@ -32,7 +30,7 @@ const Layout3: React.FunctionComponent<{
   return (
     <AllTablesContainer>
       <SectionWithTable label={smallPseudoHeaders.l2}>
-        <div className={`flex flex-col ${horizGap}`}>
+        <TableFrame sliderTriggersValue={'sm'}>
           <div className={grid4Cells}>
             {tableData.tableLine1.map((label, i) => {
               if (i === 0) {
@@ -54,7 +52,7 @@ const Layout3: React.FunctionComponent<{
               <RowWithSideHeader rowData={rowData} />
             </div>
           ))}
-        </div>
+        </TableFrame>
       </SectionWithTable>{' '}
       {underlinedTableData && (
         <SectionWithTable label={smallPseudoHeaders.l3}>

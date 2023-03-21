@@ -2,6 +2,7 @@ import React from 'react';
 /**Components**/
 import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
 import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 /**Basic Data*/
@@ -11,13 +12,7 @@ import {
   wtyczkiGniazdaCampingowe_l5_rest_data,
 } from '../../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_9_campingowe_techSpec';
 /**Tailwind Styles*/
-import {
-  vertGap,
-  sideHeaderCellCenter,
-  bodyCell,
-  horizGap,
-  undelinedTableTextStyle,
-} from '../../../../../../utils/tailwindStyles';
+import { undelinedTableTextStyle } from '../../../../../../utils/tailwindStyles';
 
 /**-------------------------------**/
 const Layout5 = () => {
@@ -25,13 +20,13 @@ const Layout5 = () => {
   return (
     <AllTablesContainer>
       <SectionWithTable label={smallPseudoHeaders.l2}>
-        <div className={`flex flex-col  ${horizGap}`}>
+        <TableFrame sliderTriggersValue={'vsm'}>
           {wtyczkiGniazdaCampingowe_l5_tech_data.map((rowData, i) => (
             <div key={i} className={`grid grid-cols-[3fr_6fr] group`}>
               <RowWithSideHeader rowData={rowData} />
             </div>
           ))}
-        </div>
+        </TableFrame>
       </SectionWithTable>
       <SectionWithTable label={smallPseudoHeaders.l3}>
         <TableWithUnderlinedRows

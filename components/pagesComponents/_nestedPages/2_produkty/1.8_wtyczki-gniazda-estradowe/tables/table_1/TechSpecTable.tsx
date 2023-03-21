@@ -3,6 +3,7 @@ import React from 'react';
 import TechSpecTableRow from './row/TechSpecTableRow';
 /**Tailwind Styles**/
 import { horizGap } from '../../../../../../../utils/tailwindStyles';
+import TableFrame from '../../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 
 /**-------------------------------**/
 const TechSpecTable: React.FunctionComponent<{
@@ -13,10 +14,7 @@ const TechSpecTable: React.FunctionComponent<{
   /**...**/
   /**JSX*/
   return (
-    <div
-      data-component="TablesSection___container"
-      className={`flex flex-col ${horizGap} `}
-    >
+    <TableFrame sliderTriggersValue={'md'}>
       {tableData.map((rowData, i) => (
         <TechSpecTableRow
           key={i}
@@ -26,7 +24,7 @@ const TechSpecTable: React.FunctionComponent<{
           headerCellsStyles={headerCellsStyles}
         />
       ))}
-    </div>
+    </TableFrame>
   );
 };
 

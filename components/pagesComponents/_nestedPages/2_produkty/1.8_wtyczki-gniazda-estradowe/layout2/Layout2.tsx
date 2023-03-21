@@ -1,7 +1,10 @@
 import React from 'react';
 /**Components**/
+import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
+import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
-/**...**/
+/**Tailwind Staff**/
 import {
   vertGap,
   horizGap,
@@ -10,16 +13,15 @@ import {
   blueHeaderStyle,
   blueCellStyle,
 } from '../../../../../../utils/tailwindStyles';
-import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
-import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
+/**Basic Data**/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
 
-/**...*/
+/**HardCoded Staff**/
 const tableTextStyle =
   'p-small text-grey group-hover:text-light ease-in duration-300 disable';
 
-/**---------------------------------------**/
-const Layout2: React.FunctionComponent<{
+/**-----------------------**/
+const Layout2: React.FC<{
   index: number;
   tableData: {
     line1: string[];
@@ -30,13 +32,13 @@ const Layout2: React.FunctionComponent<{
 }> = ({ index, tableData, featuresData }) => {
   /**...**/
   const { line1, line2, line3 } = tableData;
-  console.log('tableData', tableData);
+  // console.log('tableData', tableData);
 
   /**JSX**/
   return (
     <AllTablesContainer>
       <SectionWithTable label={smallPseudoHeaders.l3}>
-        <div className={`flex flex-col `}>
+        <TableFrame sliderTriggersValue={'vsm'}>
           {line2.length === 4 ? (
             <div
               className={`grid grid-cols-[2fr,2fr,4fr] grid-rows-[repeat(3,1fr)] ${horizGap} ${vertGap}`}
@@ -118,7 +120,7 @@ const Layout2: React.FunctionComponent<{
               </div>
             </div>
           )}
-        </div>
+        </TableFrame>
       </SectionWithTable>
       <SectionWithTable label={smallPseudoHeaders.l3}>
         <TableWithUnderlinedRows

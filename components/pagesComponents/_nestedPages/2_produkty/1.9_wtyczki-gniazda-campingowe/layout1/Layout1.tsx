@@ -8,11 +8,9 @@ import BasicTable2 from '../../../../../multipagesComponents/tables/basicTable_2
 /**Basic Data*/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
 /**Tailwind Styles**/
-import {
-  aTopH_Lg,
-  undelinedTableTextStyle,
-} from '../../../../../../utils/tailwindStyles';
+import { undelinedTableTextStyle } from '../../../../../../utils/tailwindStyles';
 import TopHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 
 /**--------------------------------------------**/
 const Layout1: React.FunctionComponent<{
@@ -20,12 +18,13 @@ const Layout1: React.FunctionComponent<{
   tableHeaderData: string[];
   tableBodyData: string[][]; // array of rows; row is array of strings (cell's labels)
   underlinedTableData: string[][];
-}> = ({ index, tableHeaderData, tableBodyData, underlinedTableData }) => {
+}> = ({ tableHeaderData, tableBodyData, underlinedTableData }) => {
   /**JSX**/
   return (
     <AllTablesContainer>
       <SectionWithTable label={smallPseudoHeaders.l2}>
-        <div className="flex flex-col gap-y-4">
+        {/* <div className="flex flex-col gap-y-4"> */}
+        <TableFrame sliderTriggersValue={'vsm'}>
           <div className="grid grid-cols-[repeat(3,1fr)]">
             <div className="col-start-1 col-end-2">
               <TopHeader label="Standard:" containerStyle="h-full" />
@@ -39,7 +38,8 @@ const Layout1: React.FunctionComponent<{
             tableHeaderData={tableHeaderData}
             tableBodyData={tableBodyData}
           />
-        </div>
+        </TableFrame>
+        {/* </div> */}
       </SectionWithTable>{' '}
       <SectionWithTable label={smallPseudoHeaders.l3}>
         <TableWithUnderlinedRows
