@@ -33,7 +33,9 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
       </SectionWithTable>
 
       <SectionWithTable label={smallPseudoHeaders.l2}>
-        <DIYTable tableLayout={`flex flex-col ${horizGap} w-full`}>
+        <DIYTable
+        //  tableLayout={`flex flex-col ${horizGap} w-full`}
+        >
           <RowWithLayout
             rowData={ampersData}
             containerLayout={mainStylesSwitcher(polesNumber)?.columnsAmpers}
