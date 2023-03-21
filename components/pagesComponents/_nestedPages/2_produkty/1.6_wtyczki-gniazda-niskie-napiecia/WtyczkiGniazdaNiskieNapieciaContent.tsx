@@ -46,7 +46,6 @@ const WtyczkiGniazdaNiskieNapieciaContent: React.FunctionComponent<{
             <React.Fragment key={index}>
               <ProductContentLayout_A imageData={productImage}>
                 <TablesSection
-                  productCardIndex={index}
                   polesNumber={polesNumber}
                   polesData={polesData}
                   ampersData={ampersData}

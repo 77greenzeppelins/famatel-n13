@@ -3,7 +3,6 @@ import React from 'react';
 import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
 import CatalogCardsSection from '../../../../../multipagesComponents/tables/catalogCardTable/catalogCardsSection/CatalogCardsSection';
 import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
-import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 import RowWithLayout from '../../../../../multipagesComponents/tables/diyTable/rowWithLayout/RowWithLayout';
 /**Handler**/
 import {

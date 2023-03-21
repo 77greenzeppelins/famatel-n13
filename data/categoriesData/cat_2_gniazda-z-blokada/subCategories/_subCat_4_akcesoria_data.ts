@@ -17,7 +17,8 @@ const gniazdaBlokadaAkcesoria_SubCategory_data = {
 const gniazdaBlokadaAkcesoria_productCards_data: IF_ProductCardData[] = [
   {
     arrayIndex: 0,
-    path: `${gniazdaBlokadaAkcesoria_SubCategory_data.subCategoryUrl}/model-23021`,
+    // path: `${gniazdaBlokadaAkcesoria_SubCategory_data.subCategoryUrl}/model-23021`,
+    path: ``,
     textIcons: ['Wymiary: 115 × 115 × 90'],
     imageData: imgGniazdaBlokada_04_akcesoria[0],
     type: 'Typ: Junction box for 1 socket',
@@ -25,7 +26,8 @@ const gniazdaBlokadaAkcesoria_productCards_data: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 1,
-    path: `${gniazdaBlokadaAkcesoria_SubCategory_data.subCategoryUrl}/model-23022`,
+    // path: `${gniazdaBlokadaAkcesoria_SubCategory_data.subCategoryUrl}/model-23022`,
+    path: ``,
     textIcons: ['Wymiary: 115 × 230 × 90'],
     imageData: imgGniazdaBlokada_04_akcesoria[1],
     type: 'Typ: Junction box for 2 sockets',
@@ -33,7 +35,8 @@ const gniazdaBlokadaAkcesoria_productCards_data: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 2,
-    path: `${gniazdaBlokadaAkcesoria_SubCategory_data.subCategoryUrl}/model-23056`,
+    // path: `${gniazdaBlokadaAkcesoria_SubCategory_data.subCategoryUrl}/model-23056`,
+    path: '',
     productName: ['Model: 25056'],
     textIcons: ['Wymiary: 115 × 400 × 18'],
     imageData: imgGniazdaBlokada_04_akcesoria[2],

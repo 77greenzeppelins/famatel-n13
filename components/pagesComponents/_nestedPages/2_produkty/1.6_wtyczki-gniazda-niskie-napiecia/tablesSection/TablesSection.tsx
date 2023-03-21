@@ -11,12 +11,9 @@ import { mainStylesSwitcher } from '../../../../../multipagesComponents/tables/d
 import { smallPseudoHeaders } from '../../../../../../data/_data';
 /**TS**/
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
-/**Tailwind Styles**/
-import { horizGap } from '../../../../../../utils/tailwindStyles';
 
 /**------------------------------------------------**/
 const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
-  productCardIndex,
   polesNumber,
   polesData,
   ampersData,

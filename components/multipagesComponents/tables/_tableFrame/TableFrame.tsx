@@ -23,6 +23,8 @@ const TableFrame: React.FC<{
     sliderTriggersValue: string | undefined
   ) => {
     switch (sliderTriggersValue) {
+      case 'vvsm':
+        return 'min-w-[300px]';
       case 'vsm':
         return 'min-w-[400px]';
       case 'sm':

@@ -1,9 +1,8 @@
 import React from 'react';
 /**Components**/
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 import TopHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
 import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
-/**Tailwind Styles**/
-import { horizGap } from '../../../../../../utils/tailwindStyles';
 /**HardCoded Data**/
 const mainGrid = `grid grid-cols-[repeat(2,1fr)] group`;
 
@@ -11,14 +10,9 @@ const mainGrid = `grid grid-cols-[repeat(2,1fr)] group`;
 const TechSpecTable: React.FunctionComponent<{
   catalogData: string[][];
 }> = ({ catalogData }) => {
-  /**...**/
-
   /**JSX*/
   return (
-    <div
-      data-component="TablesSection___container"
-      className={`flex flex-col ${horizGap} `}
-    >
+    <TableFrame sliderTriggersValue={'vvsm'}>
       {catalogData.map((rowData, i) => {
         if (i === 0) {
           return (
@@ -33,7 +27,7 @@ const TechSpecTable: React.FunctionComponent<{
           </div>
         );
       })}
-    </div>
+    </TableFrame>
   );
 };
 

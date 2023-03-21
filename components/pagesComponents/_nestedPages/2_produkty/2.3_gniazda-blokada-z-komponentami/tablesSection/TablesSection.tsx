@@ -11,8 +11,6 @@ import { mainStylesSwitcher } from '../../../../../multipagesComponents/tables/d
 import { IF_ProductsTablesSection } from '../../../../../../utils/TS/typeScriptStaff';
 /**Basic Data**/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
-/**Tailwind Styles**/
-import { horizGap } from '../../../../../../utils/tailwindStyles';
 
 /**------------------------------------------------**/
 const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
@@ -31,7 +29,6 @@ const TablesSection: React.FunctionComponent<IF_ProductsTablesSection> = ({
       <SectionWithTable label={smallPseudoHeaders.l1}>
         <CatalogCardsSection catalogCardTablesData={catalogCardTablesData} />
       </SectionWithTable>
-
       <SectionWithTable label={smallPseudoHeaders.l2}>
         <DIYTable>
           <RowWithLayout
