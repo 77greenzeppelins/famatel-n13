@@ -5,21 +5,7 @@ import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
-const catalogVersion = [
-  '13200',
-  '14200',
-  '14304',
-  '14307',
-  '23200',
-  '24200',
-  '24305',
-  '24307',
-  '13200CR',
-  '14200CR',
-  '23200CR',
-  '24200CR',
-  '13311',
-];
+/**...**/
 const wtyczkiGniazdaPrzenosne_SubCategory_data = {
   subCategoryName: catalogStructureData[0].subCategoriesNames[0],
   subCategoryUrl: catalogStructureData[0].subCategoriesUrls[0],

@@ -1,12 +1,12 @@
 import { StaticImageData } from 'next/image';
-import { ReactNode } from 'react';
+
 interface IF_ImgStaticData {
   image: StaticImageData;
   model?: string;
 }
-/**
- * used in some _data files in "data / categoriesData"
- **/
+/*
+used in some _data files in "data / categoriesData"
+*/
 interface IImage {
   image: StaticImageData;
   width: number;
@@ -23,9 +23,9 @@ interface ISubCategoriesItem {
   icons?: string[];
 }
 
-/**
- * used in some _data files in "data / _catalogStructureData"
- **/
+/*
+used in some _data files in "data / _catalogStructureData"
+*/
 interface IF_CatalogStructureData {
   mainCategoryIndex: number;
   mainCategoryName: string;
@@ -39,9 +39,9 @@ interface IF_CatalogStructureData {
   labeledIcons?: string[];
 }
 
-/**
- * used in cards
- */
+/*
+used in cards
+*/
 interface IF_Card {
   arrayIndex: number;
   label: string;
@@ -53,9 +53,9 @@ interface IF_Card {
   containerStyle?: string;
 }
 
-/**
- * used in main dataFile => _data.ts
- */
+/*
+used in main dataFile => _data.ts
+*/
 interface IF_MainCategorySpecification {
   arrayIndex: number;
   name: string;
@@ -102,9 +102,9 @@ interface IF_MainPagesItem {
   hasDropDownMenu: boolean;
 }
 
-/**
- * used in data / categoriesData / cat_1_ .... / sunCategories / subCat1_przenośne...
- */
+/*
+used in data / categoriesData / cat_1_ .... / sunCategories / subCat1_przenośne...
+*/
 interface IF_ProductCardData {
   //___crucial properties!!!
   arrayIndex: number;
@@ -124,15 +124,6 @@ interface IF_ProductCardData {
   //___for productPage as "productModel / productName"
   altName?: string;
 }
-
-///___ IF_ProductPageNavPanel should be replaced by IF_CatalogNavPanel
-// interface IF_ProductPageNavPanel {
-//   categoryName: string;
-//   categoryUrl: string;
-//   subCategoryName: string;
-//   subCategoryUrl: string;
-//   productName?: string;
-// }
 
 interface IF_CatalogNavPanel {
   linkHeaders?: string[];
@@ -288,6 +279,13 @@ interface IFProdCatDataSchuko2 {
   };
 }
 
+interface IF_SvgTech {
+  model: string;
+  Component: React.FC<{
+    basicSize: number;
+  }>;
+}
+
 export type {
   ISubCategoriesItem,
   IF_CatalogStructureData,
@@ -311,4 +309,6 @@ export type {
   IFProdCatDataSchuko2,
   //___
   IF_CatalogNavPanel,
+  //___
+  IF_SvgTech,
 };

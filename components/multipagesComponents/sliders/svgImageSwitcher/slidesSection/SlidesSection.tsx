@@ -6,89 +6,126 @@ import useMeasure from 'react-use-measure';
 import { motion } from 'framer-motion';
 /**TS**/
 import { IF_ImgStaticData } from '../../../../../utils/TS/typeScriptStaff';
+import SvgTechSelector from './svgTechSelector/SvgTechSelector';
 
 /**********************************************************************************/
 const SlidesSection: React.FunctionComponent<{
-  direction: number;
   imageData: IF_ImgStaticData;
   basicState: number;
-}> = ({ direction, imageData, basicState }) => {
+  imageDirectContainer?: string;
+}> = ({ imageData, basicState, imageDirectContainer }) => {
   /**useMeasure Section**/
-  const [ref, { width, height }] = useMeasure();
-  /**Framer Motion**/
-  // const variants = {
-  //   start: ({ direction, width }: { direction: number; width: number }) => ({
-  //     x: direction * width,
-  //   }),
-  //   center: { x: 0 },
-  //   exit: ({ direction, width }: { direction: number; width: number }) => ({
-  //     x: direction * -width,
-  //   }),
-  // };
-  console.log('SlidesSection / basicState:', basicState);
-  console.log('SlidesSection / direction:', direction);
-  // const variants = {
-  //   start: ({ direction, width }: { direction: number; width: number }) => ({
-  //     x: 0,
-  //   }),
-
-  //   animate: ({ direction, width }: { direction: number; width: number }) => ({
-  //     x: direction * -width,
-  //   }),
-  // };
+  const [ref, { width }] = useMeasure();
 
   /**JSX**/
   return (
     <div
       ref={ref}
       data-component="SlidesSection__container"
-      className="relative flex justify-center w-full h-full overflow-hidden "
-      //___"bg-light" is cruciall... eliminates some trange vertical blaze...bg-greyShade2
+      className="relative flex w-full max-w-[740px] h-full overflow-hidden "
     >
       <div
         data-layout="sliderWrapper"
-        className="bg-light overflow-hidden"
+        className="fc overflow-x-hidden "
         style={{
-          width: Math.min(width, height),
-          height: Math.min(width, height),
+          width: width,
+          height: width,
         }}
       >
         <motion.div
           data-layout="slidingContainer"
-          className="flex items-center flex-nowrap w-full h-full bg-light"
+          className="flex items-center w-full h-full flex-nowrap "
           initial={{ x: 0 }}
-          animate={{ x: basicState ? -Math.min(width, height) : 0 }}
+          animate={{ x: basicState * -width }}
           transition={{ duration: 1, delay: 0.2, ease: 'easeIn' }}
         >
           <div
-            className="fc flex-none "
+            className="flex-none fc bg-light"
             style={{
-              width: Math.min(width, height),
-              height: Math.min(width, height),
+              width: width,
+              height: width,
             }}
           >
-            <div className="relative w-[90%] h-[90%] ">
+            <div
+              className={
+                imageDirectContainer ? imageDirectContainer : `relative`
+              }
+            >
               <Image
                 alt={'zdjęcie produktu'}
                 src={imageData.image}
-                fill // intrinsic|fixed|responsive|fill allowed;  fill your parent bro! that is why I calculated width and height to make parent of square shape
+                width={800}
+                height={800}
               />
             </div>
           </div>
           <div
-            className="fc flex-none "
+            className="fc flex-none bg-light"
             style={{
-              width: Math.min(width, height),
-              height: Math.min(width, height),
+              width: width,
+              height: width,
             }}
           >
-            {' '}
-            <div className="w-[25%] h-[25%] bg-grey" />
+            <SvgTechSelector
+              basicSize={width * 0.9}
+              modelName={imageData.model}
+            />
           </div>
         </motion.div>
       </div>
     </div>
   );
+  // return (
+  //   <div
+  //     ref={ref}
+  //     data-component="SlidesSection__container"
+  //     className="relative flex justify-center w-full h-full overflow-hidden "
+  //     //___"bg-light" is cruciall... eliminates some trange vertical blaze...bg-greyShade2
+  //   >
+  //     <div
+  //       data-layout="sliderWrapper"
+  //       className="bg-light overflow-hidden"
+  //       style={{
+  //         width: Math.min(width, height),
+  //         height: Math.min(width, height),
+  //       }}
+  //     >
+  //       <motion.div
+  //         data-layout="slidingContainer"
+  //         className="flex items-center flex-nowrap w-full h-full bg-light"
+  //         initial={{ x: 0 }}
+  //         animate={{ x: basicState ? -Math.min(width, height) : 0 }}
+  //         transition={{ duration: 1, delay: 0.2, ease: 'easeIn' }}
+  //       >
+  //         <div
+  //           className="fc flex-none "
+  //           style={{
+  //             width: Math.min(width, height),
+  //             height: Math.min(width, height),
+  //           }}
+  //         >
+  //           <div className="relative w-[90%] h-[90%] ">
+  //             <Image
+  //               alt={'zdjęcie produktu'}
+  //               src={imageData.image}
+  //               fill // intrinsic|fixed|responsive|fill allowed;  fill your parent bro! that is why I calculated width and height to make parent of square shape
+  //             />
+  //           </div>
+  //         </div>
+  //         <div
+  //           className="fc flex-none "
+  //           style={{
+  //             width: Math.min(width, height),
+  //             height: Math.min(width, height),
+  //           }}
+  //         >
+  //           {' '}
+  //           <div className="w-[25%] h-[25%] bg-grey" />
+  //         </div>
+  //       </motion.div>
+  //     </div>
+  //   </div>
+  // );
 };
 
 export default SlidesSection;
@@ -99,6 +136,28 @@ export default SlidesSection;
 //   }),
 //   center: { x: 0 },
 //   exit: ({ direction, width }: { direction: number; width: number }) => ({
+//     x: direction * -width,
+//   }),
+// };
+
+/**Framer Motion**/
+// const variants = {
+//   start: ({ direction, width }: { direction: number; width: number }) => ({
+//     x: direction * width,
+//   }),
+//   center: { x: 0 },
+//   exit: ({ direction, width }: { direction: number; width: number }) => ({
+//     x: direction * -width,
+//   }),
+// };
+// console.log('SlidesSection / basicState:', basicState);
+// console.log('SlidesSection / direction:', direction);
+// const variants = {
+//   start: ({ direction, width }: { direction: number; width: number }) => ({
+//     x: 0,
+//   }),
+
+//   animate: ({ direction, width }: { direction: number; width: number }) => ({
 //     x: direction * -width,
 //   }),
 // };

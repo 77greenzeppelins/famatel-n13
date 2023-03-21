@@ -9,7 +9,10 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
 const ImageSlider: React.FunctionComponent<{
   imageData: IF_ImgStaticData[];
   imageDirectContainer?: string;
-}> = ({ imageData, imageDirectContainer }) => {
+}> = ({
+  imageData,
+  imageDirectContainer, //allowes to style <div> that wraps <Image>
+}) => {
   /**localState__1: to follow slideIndex changes**/
   const [basicState, setBasicState] = useState<number>(0);
   /**...**/

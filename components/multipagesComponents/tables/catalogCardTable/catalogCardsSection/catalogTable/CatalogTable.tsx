@@ -3,7 +3,6 @@ import CatalogTableHeader from './CatalogTableHeader/CatalogTableHeader';
 import CatalogTableBody from './catalogTableBody/CatalogTableBody';
 /**TS**/
 import { IF_CatalogCardTableData } from '../../../../../../utils/TS/typeScriptStaff';
-import TableFrame from '../../../_tableFrame/TableFrame';
 
 /**-------------------------------------------------------------------------**/
 const CatalogTable: React.FunctionComponent<IF_CatalogCardTableData> = ({
@@ -13,7 +12,8 @@ const CatalogTable: React.FunctionComponent<IF_CatalogCardTableData> = ({
   return (
     <div
       data-component="CatalogTable__container"
-      className="w-full flex flex-col divide-[2px]"
+      className="w-full flex flex-col"
+      //___divide-[2px]
     >
       {catalogCardTableData.headerType ? (
         <CatalogTableHeader

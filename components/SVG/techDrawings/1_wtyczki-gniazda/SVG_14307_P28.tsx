@@ -2,12 +2,14 @@ import React from 'react';
 // import { corpoColors } from '../../../../data/_data';
 
 const SVG_14307_P28: React.FunctionComponent = ({
+  svgStyle,
   sizes,
   specSizes,
   containerStyle,
   strokeWidth = 1.5,
   pathStyle = '',
 }: {
+  svgStyle?: string;
   specSizes?: boolean;
   sizes?: { A: string; B: string; C: string; K: string };
   strokeWidth?: number;
@@ -19,7 +21,7 @@ const SVG_14307_P28: React.FunctionComponent = ({
       role="img"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full"
+      className={svgStyle ? svgStyle : 'w-full'}
       viewBox="0 0 800 400"
     >
       <g stroke="#9d9e9f">

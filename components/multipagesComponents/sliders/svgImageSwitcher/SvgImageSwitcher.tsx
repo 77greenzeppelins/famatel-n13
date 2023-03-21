@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 /*Components*/
 import NavSection from './navSection/NavSection';
 import SlidesSection from './slidesSection/SlidesSection';
-/*Hook*/
-import usePrevious from '../../../../utils/hooks/usePrevious';
 /**TS**/
 import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
-/*Basic Data*/
-const switcherRange = [1, 2];
 
 /*****************************************************************************************/
 const SvgImageSwitcher: React.FunctionComponent<{
@@ -17,29 +13,48 @@ const SvgImageSwitcher: React.FunctionComponent<{
   const [basicState, setBasicState] = useState(0);
   // console.log('basicState:', basicState);
   /**....**/
-  const prev = usePrevious(basicState);
-  /*
-  ...
-  */
-  const direction = basicState > prev ? 1 : -1;
+
   /**JSX**/
   return (
     <div
       data-component="SvgImageSwitcher__container"
       className="flex items-center flex-col gap-4 w-full h-full"
     >
-      <div className=" w-full h-[40px]">
-        <NavSection setBasicState={setBasicState} modelNumb={imageData.model} />
+      <div className="w-full h-[40px] xl:max-w-[600px]">
+        <NavSection
+          basicState={basicState}
+          setBasicState={setBasicState}
+          modelName={imageData.model}
+        />
       </div>
-      <div className=" w-full h-full ">
+      <div className="fc w-full h-full">
+        <SlidesSection imageData={imageData} basicState={basicState} />
+      </div>
+    </div>
+  );
+  /*
+  return (
+    <div
+      data-component="SvgImageSwitcher__container"
+      className="flex flex-col items-center w-full h-full gap-4"
+    >
+      <div className=" w-full h-[40px] ">
+        <NavSection
+          basicState={basicState}
+          setBasicState={setBasicState}
+          modelsNames={modelsNames}
+        />
+      </div>
+      <div className="w-full h-full fc">
         <SlidesSection
-          direction={direction}
           imageData={imageData}
           basicState={basicState}
+          imageDirectContainer={imageDirectContainer}
         />
       </div>
     </div>
   );
+  */
 };
 
 export default SvgImageSwitcher;

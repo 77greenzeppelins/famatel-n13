@@ -7,16 +7,23 @@ import { IF_CatalogCardTablesData } from '../../../../../utils/TS/typeScriptStaf
 
 interface IF_Props extends IF_CatalogCardTablesData {
   sliderTriggersValue?: string;
+  customeTrigger?: string;
 }
 
 /**-----------------------------------------------------**/
 const CatalogCardsSection: React.FC<IF_Props> = ({
   catalogCardTablesData,
-  sliderTriggersValue = 'lg',
+  sliderTriggersValue,
+  customeTrigger,
 }) => {
   /**JSX* */
   return (
-    <TableFrame sliderTriggersValue={sliderTriggersValue}>
+    <TableFrame
+      sliderTriggersValue={customeTrigger ? customeTrigger : 'custom'}
+      customeTrigger={
+        sliderTriggersValue ? sliderTriggersValue : 'min-w-[724px]'
+      }
+    >
       {catalogCardTablesData?.map((catalogCardTableData, index) => (
         <CatalogTable key={index} catalogCardTableData={catalogCardTableData} />
       ))}
@@ -25,14 +32,3 @@ const CatalogCardsSection: React.FC<IF_Props> = ({
 };
 
 export default CatalogCardsSection;
-
-// return (
-//   <div
-//     className="flex flex-col divide-[2px] "
-//     data-component="CatalogCardsSection__container"
-//   >
-//     {catalogCardTablesData?.map((catalogCardTableData, index) => (
-//       <CatalogTable key={index} catalogCardTableData={catalogCardTableData} />
-//     ))}
-//   </div>
-// );
