@@ -7,15 +7,15 @@ import { svgTransition } from '../../../utils/framerMotion/framerMotionUtils';
 /***********************************************************************************/
 const ChevronLeftIcon = ({
   className,
-  strokeWidth = 1.5,
+  strokeWidth = 1,
   strokeColor,
   strokeColorWhileHover = corpoColors.orange,
   scale,
 }: {
+  className: string;
   strokeWidth?: number;
   strokeColor?: string;
   strokeColorWhileHover?: string;
-  className: string;
   scale?: number;
 }) => {
   return (

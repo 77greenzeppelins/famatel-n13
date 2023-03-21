@@ -1,11 +1,11 @@
 import React from 'react';
 /**Components**/
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 import BodyCell from '../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
 import SideHeaderCenter from '../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeaderCenter';
 import SvgTypeDE from './svgSection/SvgTypeDE';
 /**Tailwind Styles**/
 import {
-  horizGap,
   tableTextS,
   aBlueHeaderStyle,
   aBlueCellStyle,
@@ -23,10 +23,7 @@ const CatalogTable: React.FunctionComponent<{
 }> = ({ catalogData }) => {
   /**JSX*/
   return (
-    <div
-      data-component="CatalogTable___container"
-      className={`flex flex-col ${horizGap} `}
-    >
+    <TableFrame sliderTriggersValue={'vsm'}>
       {catalogData.line1 ? (
         <div className={headerGrid}>
           <SideHeaderCenter label={catalogData.line1.label} />
@@ -66,7 +63,7 @@ const CatalogTable: React.FunctionComponent<{
           </div>
         ) : null}
       </div>
-    </div>
+    </TableFrame>
   );
 };
 

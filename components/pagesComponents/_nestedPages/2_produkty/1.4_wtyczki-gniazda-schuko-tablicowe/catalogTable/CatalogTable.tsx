@@ -8,6 +8,7 @@ import { IFProdCatDataSchukoTablicowe } from '../../../../../../utils/TS/typeScr
 import { horizGap } from '../../../../../../utils/tailwindStyles';
 import SideHeaderCenter from '../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeaderCenter';
 import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 
 /**HardCoded Data**/
 const mainGrid = `grid grid-cols-[repeat(2,1fr)] group`;
@@ -20,10 +21,11 @@ const CatalogTable: React.FunctionComponent<{
 
   /**JSX*/
   return (
-    <div
-      data-component="TablesSection___container"
-      className={`flex flex-col ${horizGap} `}
-    >
+    // <div
+    //   data-component="TablesSection___container"
+    //   className={`flex flex-col ${horizGap} `}
+    // >
+    <TableFrame sliderTriggersValue={'vsm'}>
       {catalogData.line1 ? (
         <div className={mainGrid}>
           <SideHeaderCenter label={catalogData.line1.label} />
@@ -72,7 +74,8 @@ const CatalogTable: React.FunctionComponent<{
           />
         </div>
       ) : null}
-    </div>
+    </TableFrame>
+    // </div>
   );
 };
 

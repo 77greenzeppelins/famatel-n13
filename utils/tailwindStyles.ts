@@ -43,6 +43,7 @@ const aSideHeaderCell = `flex items-center border-x-[1px] border-dark px-2 py-2 
 const aSideHeaderCellCenter = `fc items-center px-2 py-2 border-x-[1px] border-dark bg-greyShade2 text-light text-center ${tableTextM} group-hover:bg-corpo delay-100 ease-in duration-300 select-none`;
 const aBodyCell = `fc py-2 px-[1px] bg-greyTint2 border-x-[1px] border-dark text-dark text-center ${tableTextM} group-hover:bg-light delay-100 ease-in duration-300 select-none`;
 //___styles for vatTables
+// used in: schuko tablicowe
 const aBlueHeaderStyle = `fc bg-vB py-2 px-[1px] border-x-[1px] border-dark text-light text-center ${tableTextL} break-all select-none`;
 const aBlueCellStyle = `fc bg-vB py-2 px-[1px] border-x-[1px] border-dark text-light text-center ${tableTextM} hover:bg-vtB delay-100 ease-in duration-300 select-none`;
 //___"a" means "autonomical" i.e. has its own border; no border in gridedContainer

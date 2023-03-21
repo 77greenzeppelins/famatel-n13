@@ -6,8 +6,12 @@ import TableFrame from '../_tableFrame/TableFrame';
 const DIYTable: React.FC<{
   children: ReactNode;
   sliderTriggersValue?: string;
-  tableLayout?: string;
-}> = ({ children, sliderTriggersValue = 'md', tableLayout }) => {
+  // tableLayout?: string;
+}> = ({
+  children,
+  sliderTriggersValue = 'md',
+  // tableLayout
+}) => {
   /**JSX**/
   return (
     <TableFrame sliderTriggersValue={sliderTriggersValue}>

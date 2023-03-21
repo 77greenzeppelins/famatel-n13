@@ -13,7 +13,6 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <div className="fc flex-col w-full min-h-screen bg-dark">
       <GniazdaPodwieszaneContent
-        uniqueKey={0}
         categoryName={catalogStructureData[3].mainCategoryName}
       />
     </div>

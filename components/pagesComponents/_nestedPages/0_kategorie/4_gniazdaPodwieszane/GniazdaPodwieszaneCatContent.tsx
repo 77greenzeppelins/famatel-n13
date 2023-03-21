@@ -21,10 +21,8 @@ import { undelinedTableTextStyle } from '../../../../../utils/tailwindStyles';
 
 /**---------------------------------**/
 const GniazdaPodwieszaneContent = ({
-  uniqueKey,
   categoryName,
 }: {
-  uniqueKey: number;
   categoryName: string;
 }) => {
   /**JSX**/
@@ -86,38 +84,3 @@ const GniazdaPodwieszaneContent = ({
 };
 
 export default GniazdaPodwieszaneContent;
-
-/*
-<div className="flex-col h-full gap-4 fc xl:flex-row ">
-        <div className="flex h-full flex-col  w-full xl:w-[50%] pb-[4rem]">
-          <SectionWithTable label={smallPseudoHeaders.l3}>
-            <TableWithUnderlinedRows
-              rowsData={przedluzaczeBebnoweGeneralFeatures_data}
-              cellsStyles={['w-[55%]', 'w-[45%] pl-[10%]']}
-              textStyle={[undelinedTableTextStyle, undelinedTableTextStyle]}
-            />
-          </SectionWithTable>
-        </div>
-        <div className="flex h-full w-full xl:w-[50%] pb-[4rem]">
-          <SvgTechSection />
-        </div>
-</div>
-
-      <SectionWithTable label={smallPseudoHeaders.l1}>
-        <MainTable tableHeader={tableHeader} tableBody={tableBody} />
-      </SectionWithTable>
-*/
-
-{
-  /* <SmallPseudoHeader
-            text={smallPseudoHeaders.n1}
-            hasBox={true}
-            hasVerticalOrnament={false}
-          />
-          <H1AnimatedPresence
-            uniqueKey={uniqueKey}
-            text={categoryName}
-            variantH="custome"
-            customeStyle="text-light text-left text-[2rem] xs:text-[2.5rem] xxl:text-[3rem] tracking-widest"
-          /> */
-}

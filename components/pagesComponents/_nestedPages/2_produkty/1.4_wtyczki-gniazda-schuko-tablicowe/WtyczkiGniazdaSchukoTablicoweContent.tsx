@@ -27,6 +27,7 @@ const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
 }> = ({ productCardsData }) => {
   /**Router Section**/
   const router = useRouter();
+
   /**JSX**/
   return (
     <>
@@ -42,7 +43,7 @@ const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
             <React.Fragment key={index}>
               <ProductContentLayout_B imageData={productImage}>
                 <AllTablesContainer>
-                  {index < 6 && (
+                  {index <= 5 && (
                     <>
                       <SectionWithTable label={smallPseudoHeaders.l1}>
                         <CatalogTable catalogData={catalogData} />
@@ -97,7 +98,6 @@ const WtyczkiGniazdaSchukoTablicoweContent: React.FunctionComponent<{
                   )}
                 </AllTablesContainer>
               </ProductContentLayout_B>
-              {/* {index < 6 ? <ProtectionSection /> : null} */}
             </React.Fragment>
           );
         }

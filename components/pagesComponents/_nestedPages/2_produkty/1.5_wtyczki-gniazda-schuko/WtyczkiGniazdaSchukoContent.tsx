@@ -41,8 +41,12 @@ const WtyczkiGniazdaSchukoContent: React.FunctionComponent<{
               <ProductContentLayout_B imageData={productImage}>
                 {' '}
                 <SectionWithTable label={smallPseudoHeaders.l1}>
-                  <CatalogTable catalogData={catalogData} />
-                  <CatalogTable2 catalogData={catalogData2} />
+                  {Object.keys(catalogData).length !== 0 ? (
+                    <CatalogTable catalogData={catalogData} />
+                  ) : null}
+                  {Object.keys(catalogData2).length !== 0 ? (
+                    <CatalogTable2 catalogData={catalogData2} />
+                  ) : null}
                 </SectionWithTable>
               </ProductContentLayout_B>
             </React.Fragment>

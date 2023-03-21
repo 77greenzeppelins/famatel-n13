@@ -1,15 +1,12 @@
 import React from 'react';
 /**Components**/
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
 import BodyCell from '../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
 /**TS**/
 import { IF_ProductTechDataSchucoTablicowe } from '../../../../../../utils/TS/typeScriptStaff';
 /**Tailwind Styles**/
-import {
-  horizGap,
-  sideHeaderCellCenter,
-} from '../../../../../../utils/tailwindStyles';
-import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
+import { sideHeaderCellCenter } from '../../../../../../utils/tailwindStyles';
 
 /**----------------------------------------------**/
 const TechSpecTable: React.FunctionComponent<
@@ -72,29 +69,3 @@ const TechSpecTable: React.FunctionComponent<
 };
 
 export default TechSpecTable;
-
-/**Handler**/
-// const createContent = ({
-//   i = 0,
-//   label,
-//   headerStyle,
-//   cellsStyle,
-// }: {
-//   i: number;
-//   label: string;
-//   headerStyle: string;
-//   cellsStyle: string;
-// }) => {
-//   if (i === 0) {
-//     return (
-//       <div className={headerStyle} key={i}>
-//         {label}{' '}
-//       </div>
-//     );
-//   }
-//   return (
-//     <div className={cellsStyle} key={i}>
-//       <p>{label}</p>
-//     </div>
-//   );
-// };

@@ -3,6 +3,7 @@ import React from 'react';
 import { horizGap } from '../../../../../../utils/tailwindStyles';
 /**TS**/
 import { IFProdCatDataSchuko2 } from '../../../../../../utils/TS/typeScriptStaff';
+import TableFrame from '../../../../../multipagesComponents/tables/_tableFrame/TableFrame';
 import BodyCell from '../../../../../multipagesComponents/tables/__cells/layoutXL/BodyCell';
 import SideHeaderCenter from '../../../../../multipagesComponents/tables/__cells/layoutXL/SideHeaderCenter';
 import TopHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
@@ -15,10 +16,11 @@ const CatalogTable2: React.FunctionComponent<{
 }> = ({ catalogData }) => {
   /**JSX*/
   return (
-    <div
-      data-component="TablesSection___container"
-      className={`flex flex-col  ${horizGap} `}
-    >
+    // <div
+    //   data-component="TablesSection___container"
+    //   className={`flex flex-col  ${horizGap} `}
+    // >
+    <TableFrame sliderTriggersValue={'vsm'}>
       {catalogData.line1 ? (
         <div className={mainGrid}>
           <TopHeader label={catalogData.line1.label} />
@@ -73,7 +75,8 @@ const CatalogTable2: React.FunctionComponent<{
           </>
         ) : null}
       </div>
-    </div>
+    </TableFrame>
+    // </div>
   );
 };
 

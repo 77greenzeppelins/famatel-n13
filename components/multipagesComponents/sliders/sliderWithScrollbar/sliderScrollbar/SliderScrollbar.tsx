@@ -3,6 +3,8 @@ import React, { Dispatch, SetStateAction, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 /**Basic Data**/
 import { corpoColors } from '../../../../../data/_data';
+import ChevronLeftIcon from '../../../../SVG/icons/ChevronLeftIcon';
+import ChevronRightIcon from '../../../../SVG/icons/ChevronRightIcon';
 
 /**--------------------------------**/
 const SliderScrollbar: React.FC<{
@@ -10,23 +12,15 @@ const SliderScrollbar: React.FC<{
   translateX: number;
   setTranslateXValue: Dispatch<SetStateAction<number>>;
 }> = ({ handleSize = 60, translateX, setTranslateXValue }) => {
-  /*
-  References
-  */
+  /**References**/
   const constraintsRef = useRef<HTMLDivElement>(null!);
   const handlerRef = useRef<HTMLDivElement>(null!);
   const progressBarRef = useRef<HTMLDivElement>(null!);
-  /*
-  Local State for countin progress of scroll's handle move
-  */
+  /**Local State for countin progress of scroll's handle move**/
   const [progressValue, setProgressValue] = useState(0);
-  /*
-  Local State for countin progress of scroll's handle move
-  */
+  /**Local State for countin progress of scroll's handle move**/
   // const [isDragging, setIsDragging] = useState(false);
-  /*
-  ...
-  */
+  /*Drag Gesture Handler*/
   const dragHandler = () => {
     //___it activates calculation of getBoundingClientRect() = returns object with set of data; in practice we can detect slider's handler localization according to the left side of the page
     const handlerBounds = handlerRef.current?.getBoundingClientRect();
@@ -36,7 +30,6 @@ const SliderScrollbar: React.FC<{
     const progressBarBounds = progressBarRef.current?.getBoundingClientRect();
     // console.log('...progressBarBounds.x', progressBarBounds.x);
     // console.log('...progressBarBounds.width', progressBarBounds.width);
-
     //___calculation that returns percentage result; initial state: (400-400) / 600 = 0; example: (450-400) / 600 => progress of slider handle = 50px; total width of scroll bar is 600px; result 0.083333
     const newProgress =
       (middleOfHandler - progressBarBounds.x) / progressBarBounds.width;
@@ -73,8 +66,7 @@ const SliderScrollbar: React.FC<{
           <motion.div
             ref={handlerRef}
             data-layout="slider-handler"
-            // className="relative border rounded-sm border-corpo bg-dark cursor-grab"
-            className="relative fc w-[60px] h-7  bg-dark border border-grey"
+            className="relative flex items-center justify-between w-[60px] h-7 bg-dark border border-grey"
             //___bg-corpo glow animate-pulse aspect-square rounded-sm
             // style={{ width: handleSize, height: handleSize }}
             drag="x"
@@ -88,9 +80,18 @@ const SliderScrollbar: React.FC<{
             // onPointerUp={() => setIsDragging(false)}
             // animate={{ scale: isDragging ? 1.5 : 1 }}
           >
-            <p className="text-grey header-link-label">scroll</p>
-            {/* <div className="absolute top-0 bottom-0 w-6 h-6 rounded-sm aspect-square bg-dark" /> */}
-            {/* <div className="relative w-6 h-6 rounded-sm aspect-square bg-corpo glow animate-pulse" /> */}
+            <ChevronLeftIcon
+              className={'w-6 h-6'}
+              strokeColor={corpoColors.grey}
+              strokeColorWhileHover={corpoColors.grey}
+              scale={1}
+            />
+            <ChevronRightIcon
+              className={'w-6 h-6'}
+              strokeColor={corpoColors.grey}
+              strokeColorWhileHover={corpoColors.grey}
+              scale={1}
+            />
           </motion.div>
         </div>
       </div>
@@ -116,3 +117,9 @@ export default SliderScrollbar;
           />
 
 */
+
+/* <p className="text-grey header-link-label">scroll</p> */
+
+/* <div className="absolute top-0 bottom-0 w-6 h-6 rounded-sm aspect-square bg-dark" /> */
+
+/* <div className="relative w-6 h-6 rounded-sm aspect-square bg-corpo glow animate-pulse" /> */
