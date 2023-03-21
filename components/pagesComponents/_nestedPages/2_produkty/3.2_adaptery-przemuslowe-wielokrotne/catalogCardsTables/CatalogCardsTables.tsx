@@ -33,7 +33,9 @@ const CatalogCardsTables: React.FunctionComponent<{
   return catalogCardTablesData_1 ? (
     <CatalogCardsSection catalogCardTablesData={catalogCardTablesData_1} />
   ) : (
-    <DIYTable tableLayout={'flex flex-col w-full'}>
+    <DIYTable
+    //  tableLayout={'flex flex-col w-full'}
+    >
       {catalogCardTablesData_2 && (
         <div className="flex flex-col divide-y-[2px] divide-dark">
           {/*line___1___*/}
