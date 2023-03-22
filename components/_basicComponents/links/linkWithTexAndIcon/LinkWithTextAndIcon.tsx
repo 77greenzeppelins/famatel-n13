@@ -71,7 +71,10 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
           }
         />
 
-        <ArrowLongRightIcon containerStyle="fc h-6 w-6 aspect-square stroke-greyShade1 group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center " />
+        <ArrowLongRightIcon
+          containerStyle="fc h-6 w-6 aspect-square stroke-greyShade1 group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center "
+          strokeWidth={1}
+        />
       </AriaJSLink>
     </div>
   );
