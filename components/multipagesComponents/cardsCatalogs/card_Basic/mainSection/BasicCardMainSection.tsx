@@ -7,7 +7,7 @@ import { IF_ImgStaticData } from '../../../../../utils/TS/typeScriptStaff';
 /**HardCoded Data**/
 const minHeight = 500;
 const textStyle =
-  'text-grey text-center text-[0.5rem] xs:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300';
+  'text-grey text-center text-[0.5rem] xs3xx:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300';
 
 /*
 used in <ProduktyDropDownMenu>
