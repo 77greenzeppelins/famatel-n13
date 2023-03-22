@@ -13,9 +13,9 @@ const SvgTechSection = () => {
   /*
   ...WTF
   */
-  useEffect(() => {
-    console.log('SvgHolder / bounds:', bounds);
-  }, [bounds]);
+  // useEffect(() => {
+  //   console.log('SvgHolder / bounds:', bounds);
+  // }, [bounds]);
   /*
   JSX
   */

@@ -13,26 +13,6 @@ const SVG_1_1_14200: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       width={basicSize}
       viewBox="0 0 800 500"
     >
-      {/* <defs>
-       <clipPath id="clipPath2192">
-         <path d="M112.71 482.3a.654.654 0 01-.652-.651v-14.631c0-.358.294-.651.652-.651h1.007c.358 0 .651.293.651.651v14.631a.653.653 0 01-.651.651z"></path>
-       </clipPath>
-       <clipPath id="clipPath2204">
-         <path d="M6.827 6.827h623.62v870.24H6.827z"></path>
-       </clipPath>
-       <clipPath id="clipPath2224">
-         <path d="M6.827 6.827h623.62v870.24H6.827z"></path>
-       </clipPath>
-       <clipPath id="clipPath2264">
-         <path d="M6.827 6.827h623.62v870.24H6.827z"></path>
-       </clipPath>
-       <clipPath id="clipPath2280">
-         <path d="M6.827 6.827h623.62v870.24H6.827z"></path>
-       </clipPath>
-       <clipPath id="clipPath2308">
-         <path d="M6.827 6.827h623.62v870.24H6.827z"></path>
-       </clipPath>
-     </defs> */}
       <path
         fill="#231f20"
         d="M0 0l3.786-1.077L3.482 0l.304 1.077z"

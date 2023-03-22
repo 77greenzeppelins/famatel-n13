@@ -16,9 +16,6 @@ import {
 /**Tailwind Staff**/
 import { undelinedTableTextStyle } from '../../../../../utils/tailwindStyles';
 
-/**HardCoded Data**/
-const tableTextStyle =
-  'p-small text-grey group-hover:text-light ease-in duration-300 disable';
 /**------------------------------------------------**/
 const RozlacznikiBezpieczenstwaContent = ({
   uniqueKey,

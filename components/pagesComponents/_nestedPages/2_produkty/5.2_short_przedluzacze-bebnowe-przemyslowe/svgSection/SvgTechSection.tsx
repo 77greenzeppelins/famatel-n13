@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 /*Components*/
 import SvgTechPrzemyslowe from '../../../../../SVG/techDrawings/5_przedluzacze-bebnowe/SvgTechPrzemyslowe';
 /*Hook*/
@@ -13,9 +13,9 @@ const SvgTechSection = () => {
   /*
   ...WTF
   */
-  useEffect(() => {
-    console.log('SvgHolder / bounds:', bounds);
-  }, [bounds]);
+  // useEffect(() => {
+  //   console.log('SvgHolder / bounds:', bounds);
+  // }, [bounds]);
   /*
   JSX
   */
