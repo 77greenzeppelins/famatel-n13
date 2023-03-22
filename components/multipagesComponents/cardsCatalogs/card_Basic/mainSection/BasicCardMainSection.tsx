@@ -7,7 +7,7 @@ import { IF_ImgStaticData } from '../../../../../utils/TS/typeScriptStaff';
 /**HardCoded Data**/
 const minHeight = 500;
 const textStyle =
-  'text-grey text-center text-[0.5rem] xs3xx:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300';
+  'text-grey text-center text-[0.5rem] xs3xx:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300 ';
 
 /*
 used in <ProduktyDropDownMenu>
@@ -25,11 +25,15 @@ const BasicCardMainSection: React.FunctionComponent<{
 
   /**JSX**/
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="w-full h-full flex flex-col ">
       {condition ? null : <BasicCardGraphicSection imageData={imageData} />}
       <div
         data-layout="TextSection__container"
-        className={`fc ${condition ? 'h-full' : 'h-[45%]'}  w-full p-1 `}
+        className={`${
+          condition
+            ? 'flex h-full items-start justify-center px-4 xs3xx:px-6'
+            : 'fc h-[45%]'
+        }  w-full p-1`}
       >
         <p
           className={textStyle}

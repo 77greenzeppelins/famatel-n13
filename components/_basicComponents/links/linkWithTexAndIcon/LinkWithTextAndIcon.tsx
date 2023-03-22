@@ -25,6 +25,8 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
   hasVerticalOrnament?: boolean;
   boxStyle?: string;
   pStyle?: string;
+  //___for Arrow
+  arrowContainerStyle?: string;
 }> = ({
   linkHref,
   controlsSet,
@@ -37,6 +39,8 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
   hasVerticalOrnament,
   boxStyle,
   pStyle,
+  //___
+  arrowContainerStyle,
 }) => {
   /**JSX**/
   return (
@@ -72,7 +76,11 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
         />
 
         <ArrowLongRightIcon
-          containerStyle="fc h-6 w-6 aspect-square stroke-greyShade1 group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center "
+          containerStyle={
+            arrowContainerStyle
+              ? arrowContainerStyle
+              : 'fc h-6 w-6 aspect-square stroke-greyShade1 group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center '
+          }
           strokeWidth={1}
         />
       </AriaJSLink>

@@ -11,11 +11,7 @@ import { textSectionChildrenVariants } from '../../../../../../utils/framerMotio
 /**Basic Data**/
 import { pagesUrl } from '../../../../../../data/_data';
 /**Hardcoded Data**/
-const headerTexts = [
-  'Bezpieczne rozwiązania',
-  // 'Technologia rozwijan od przeszło 30. lat',
-  // 'Rozwiązania udoskonalane od przeszło 30. lat',
-];
+const headerTexts = ['Bezpieczne rozwiązania'];
 
 /**----------------------------------------------------------------------------------**/
 
