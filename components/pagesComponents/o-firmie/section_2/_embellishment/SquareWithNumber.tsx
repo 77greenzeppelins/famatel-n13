@@ -9,7 +9,7 @@ type Props = {
 };
 
 /**------------------------------------------------**/
-const SquareWithModelNumber: React.FC<Props> = ({
+const SquareWithNumber: React.FC<Props> = ({
   componentIsInView = false,
   pseudoNumber = '000',
   text = 'lorem',
@@ -54,4 +54,4 @@ const SquareWithModelNumber: React.FC<Props> = ({
   );
 };
 
-export default SquareWithModelNumber;
+export default SquareWithNumber;

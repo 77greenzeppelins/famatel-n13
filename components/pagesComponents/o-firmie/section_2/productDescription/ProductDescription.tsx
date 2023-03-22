@@ -2,7 +2,6 @@ import React from 'react';
 /**Components**/
 import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import LinkWithTextAndIcon from '../../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
-import CloseButton from './closeButton/CloseButton';
 import SVG_14307_P28 from '../../../../SVG/techDrawings/1_wtyczki-gniazda/SVG_14307_P28';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';

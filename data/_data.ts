@@ -218,15 +218,32 @@ const smallPseudoHeaders = {
 
 /***...*/
 const story = {
-  pageOFirmie: [
-    'Stworzyliśmy ten model, aby wspierał Twoje działania w szczególnie wymagających warunkach.',
-    'Od przeszło 30. lat dbamy o Twoje bezpieczeństwo przy inwestycjach z zakresu elektryki przemysłowej.',
-    'Nasze rozwiązania znane są Klientom w przeszło 80 krajach na całym świecie.',
-    // 'W celu usprawnienia działania opieramy sie na 8 firmach partnerskich.',
-    'W celu uzapewnienia naszym Klientom sprawnej obsługi oparliśmy sie na 8 firmach partnerskich.',
-    'Oddajemy do Twojej dyspozycji 10. kategorii produktowych.',
-    'Jeśli działasz w zakresie elektryki przemysłowej na pewno mamy rozwiązanie dla Ciebie!',
-  ],
+  // pageOFirmie: [
+  //   'Stworzyliśmy ten model, aby wspierał Twoje działania w szczególnie wymagających warunkach.',
+  //   'Od przeszło 30. lat dbamy o Twoje bezpieczeństwo przy inwestycjach z zakresu elektryki przemysłowej.',
+  //   'Nasze rozwiązania znane są Klientom w przeszło 80 krajach na całym świecie.',
+  //   // 'W celu usprawnienia działania opieramy sie na 8 firmach partnerskich.',
+  //   'W celu uzapewnienia naszym Klientom sprawnej obsługi oparliśmy sie na 8 firmach partnerskich.',
+  //   'Oddajemy do Twojej dyspozycji 10. kategorii produktowych.',
+  //   'Jeśli działasz w zakresie elektryki przemysłowej na pewno mamy rozwiązanie dla Ciebie!',
+  // ],
+  oFirmiePage: {
+    animatedText: [
+      'Stworzyliśmy ten model, aby wspierać Twoje działania w szczególnie wymagających warunkach.',
+      'Od przeszło 30 lat dbamy o Twoje bezpieczeństwo przy inwestycjach z zakresu elektryki przemysłowej.',
+      'Nasze rozwiązania znane są Klientom w przeszło 80 krajach na całym świecie.',
+      'W celu zapewnienia naszym Klientom sprawnej obsługi oparliśmy sie na 8 firmach partnerskich.',
+      'Oddajemy do Twojej dyspozycji 10 kategorii produktowych.',
+      'Jeśli działasz w zakresie elektryki przemysłowej na pewno mamy rozwiązanie dla Ciebie!',
+    ],
+    squareText: [
+      { pseudoNumber: '14307', text: 'model' },
+      { pseudoNumber: '+30', text: 'lat' },
+      { pseudoNumber: '+80', text: 'państw' },
+      { pseudoNumber: '8', text: 'business subsidies' },
+      { pseudoNumber: '10', text: 'kategorii' },
+    ],
+  },
   pageKontakt: {
     s1: 'Zespół Famatel Polska zaprasza do kontaktu od poniedziałku do piątku w godzinach 8ºº - 16ºº.',
   },

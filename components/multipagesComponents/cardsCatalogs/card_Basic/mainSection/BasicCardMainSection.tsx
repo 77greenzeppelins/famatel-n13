@@ -4,11 +4,14 @@ import BasicCardGraphicSection from './graphicSection/BasicCardGraphicSection';
 /**Hook Staff**/
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 import { IF_ImgStaticData } from '../../../../../utils/TS/typeScriptStaff';
-/**HardCoded Data
- * used in <ProduktyDropDownMenu>
- **/
+/**HardCoded Data**/
 const minHeight = 500;
+const textStyle =
+  'text-grey text-center text-[0.5rem] xs:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300';
 
+/*
+used in <ProduktyDropDownMenu>
+*/
 /**------------------------------------------------**/
 const BasicCardMainSection: React.FunctionComponent<{
   label: string;
@@ -29,8 +32,9 @@ const BasicCardMainSection: React.FunctionComponent<{
         className={`fc ${condition ? 'h-full' : 'h-[45%]'}  w-full p-1 `}
       >
         <p
+          className={textStyle}
           // className="header-link-label text-grey text-center group-hover:text-light ease-in duration-300"
-          className="text-grey text-center text-[0.5rem] xs:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300 "
+          // className="text-grey text-center text-[0.5rem] xs:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300 "
         >
           {label}
         </p>

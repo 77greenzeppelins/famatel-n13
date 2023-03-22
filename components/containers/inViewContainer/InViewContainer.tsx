@@ -55,10 +55,6 @@ const InViewContainer: React.FC<Props> = ({
             measuredElementStyle ? measuredElementStyle : 'w-full h-full'
           }
         >
-          {/* {React.cloneElement(children, {
-            componentIsInView: isInView,
-            animationDelay: animationDelay,
-          })} */}
           {Array.isArray(children)
             ? children.map((child, i) =>
                 React.cloneElement(child, {

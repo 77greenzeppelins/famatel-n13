@@ -1,17 +1,16 @@
 import React from 'react';
 /**Components**/
-import ModuleModelNumber from './module1/ModuleModelNumber';
+import NumberTextModule from './numberTextModule/NumberTextModule';
 import ProductDescription from './productDescription/ProductDescription';
-import ModuleYearsNumber from './module2/ModuleYearsNumber';
+import WordMap from './wordMap/WordMap';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
-import ModuleCatNumber from './module3/ModuleCatNumber';
-import WordMap from './wordMap/WordMap';
-import ModuleCountriesNumber from './module2.2/ModuleCountriesNumber';
-import ModuleBusinessNumber from './module2.4/ModuleBusinessNumber';
+
+/**Basic Data*/
+import { story } from '../../../../data/_data';
 
 /**---------------------------------------------**/
-const Section_2: React.FunctionComponent<{
+const Section_2: React.FC<{
   isSection_2_Open: boolean;
   setIsSection_2_Open: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ isSection_2_Open, setIsSection_2_Open }) => {
@@ -22,16 +21,36 @@ const Section_2: React.FunctionComponent<{
         <>
           <div className="hidden lg:flex w-full lg:h-[8vh] h-[14vh] bg-dark" />
           <motion.div className="flex flex-col gap-y-20 ">
-            <ModuleModelNumber />
+            <NumberTextModule
+              squareNumber={story.oFirmiePage.squareText[0].pseudoNumber}
+              squareText={story.oFirmiePage.squareText[0].text}
+              animatedText={story.oFirmiePage.animatedText[0]}
+            />
             <ProductDescription
               isProductDescriptionOpen={isSection_2_Open}
               productDescriptionOpener={setIsSection_2_Open}
             />
-            <ModuleYearsNumber />
-            <ModuleCountriesNumber />
-            <ModuleBusinessNumber />
+            <NumberTextModule
+              squareNumber={story.oFirmiePage.squareText[1].pseudoNumber}
+              squareText={story.oFirmiePage.squareText[1].text}
+              animatedText={story.oFirmiePage.animatedText[1]}
+            />
+            <NumberTextModule
+              squareNumber={story.oFirmiePage.squareText[2].pseudoNumber}
+              squareText={story.oFirmiePage.squareText[2].text}
+              animatedText={story.oFirmiePage.animatedText[2]}
+            />
+            <NumberTextModule
+              squareNumber={story.oFirmiePage.squareText[3].pseudoNumber}
+              squareText={story.oFirmiePage.squareText[3].text}
+              animatedText={story.oFirmiePage.animatedText[3]}
+            />
             <WordMap />
-            <ModuleCatNumber />
+            <NumberTextModule
+              squareNumber={story.oFirmiePage.squareText[4].pseudoNumber}
+              squareText={story.oFirmiePage.squareText[4].text}
+              animatedText={story.oFirmiePage.animatedText[4]}
+            />
             <div className="h-[10vh] bg-dark" />
           </motion.div>
         </>
