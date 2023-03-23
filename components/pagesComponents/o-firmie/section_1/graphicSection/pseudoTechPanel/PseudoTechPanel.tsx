@@ -10,7 +10,7 @@ const PseudoTechPanel: React.FunctionComponent<{
   /**JSX**/
   return (
     <motion.div
-      className="absolute hidden xs352:flex bottom-[10%] right-[25%] h-[70%] w-[70%] overflow-hidden"
+      className="absolute hidden xs3xx:flex bottom-[10%] right-[25%] h-[70%] w-[70%] overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,

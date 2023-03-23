@@ -41,7 +41,7 @@ const gniazdaBlokadaKomponenty_productCards_data: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 3,
-    path: `${gniazdaBlokadaKomponenty_SubCategory_data.subCategoryUrl}/tablicowe-din-ip67-16A-32A`,
+    path: `${gniazdaBlokadaKomponenty_SubCategory_data.subCategoryUrl}/stale-din-ip67-16A-32A`,
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[3],
     type: 'Typ: Gniazdo stałe z blokadą i szyną DIN',
@@ -49,7 +49,7 @@ const gniazdaBlokadaKomponenty_productCards_data: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 4,
-    path: `${gniazdaBlokadaKomponenty_SubCategory_data.subCategoryUrl}/tablicowe-din-ip67-16A-32A-108`,
+    path: `${gniazdaBlokadaKomponenty_SubCategory_data.subCategoryUrl}/stale-din-ip67-16A-32A-108`,
     textIcons: ['IP67', '16A', '32A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[4],
     type: 'Typ: Gniazdo stałe z blokadą i szyną DIN',
@@ -65,7 +65,7 @@ const gniazdaBlokadaKomponenty_productCards_data: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 6,
-    path: `${gniazdaBlokadaKomponenty_SubCategory_data.subCategoryUrl}/scienne-din-ip67-63A`,
+    path: `${gniazdaBlokadaKomponenty_SubCategory_data.subCategoryUrl}/stale-din-ip67-63A`,
     textIcons: ['IP67', '63A', 'Opcja: MCB'],
     imageData: imgGniazdaBlokada_03_z_komponentami[6],
     type: 'Typ: Gniazdo stałe z blokadą i szyną DIN',
@@ -73,7 +73,7 @@ const gniazdaBlokadaKomponenty_productCards_data: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 7,
-    path: `${gniazdaBlokadaKomponenty_SubCategory_data.subCategoryUrl}/scienne-mcb-typeC-ip67-63A`,
+    path: `${gniazdaBlokadaKomponenty_SubCategory_data.subCategoryUrl}/stale-mcb-typeC-ip67-63A`,
     textIcons: ['IP67', '63A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[7],
     type: 'Typ: Gniazdo stałe z blokadą i zabezpieczeniem MCB',
@@ -81,7 +81,7 @@ const gniazdaBlokadaKomponenty_productCards_data: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 8,
-    path: `${gniazdaBlokadaKomponenty_SubCategory_data.subCategoryUrl}/scienne-ip67-125A`,
+    path: `${gniazdaBlokadaKomponenty_SubCategory_data.subCategoryUrl}/stale-ip67-125A`,
     textIcons: ['IP67', '125A'],
     imageData: imgGniazdaBlokada_03_z_komponentami[8],
     type: 'Typ: Gniazdo stałe z blokadą ',

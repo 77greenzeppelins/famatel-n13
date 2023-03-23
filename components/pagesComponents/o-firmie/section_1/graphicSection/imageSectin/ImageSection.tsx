@@ -38,7 +38,7 @@ const ImageSection: React.FunctionComponent<{
     <div
       ref={ref}
       data-component="ImageSection__Ref-container"
-      className="flex justify-end w-full h-full xl:items-center "
+      className="flex justify-end w-full h-full xl:items-center"
     >
       <div
         data-layout="DynamicallySizedContainer"
