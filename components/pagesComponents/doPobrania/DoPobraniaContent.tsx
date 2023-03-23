@@ -16,20 +16,33 @@ const DoPobraniaContent = () => {
       data-component="KontaktContent__container"
       className="relative bg-dark pt-[60px]"
     >
-      {/* <div className="w-full h-full inner-px-md-xl-xxl pt-[20px] lg:pt-[40px]">
+      <div className="w-full h-full inner-px-md-xl-xxl">
+        {/* <div className="w-full h-full inner-px-md-xl-xxl pt-[20px] lg:pt-[40px]">
         <div>
           <ImageSlider imageData={imgLadowarki} />
         </div>
       </div> */}
-      <div>
-        <p className="text-2xl text-corpo">Karty katalogowe</p>
-        <p className="text-2xl text-corpo">deklaracje</p>
-        <p className="text-2xl text-corpo">katalog</p>
-      </div>
-      <div>
-        <SliderWithScrollbar>
-          <div className="w-[800px] h-[500px] bg-vY" />
-        </SliderWithScrollbar>
+        <div>
+          <p className="text text-grey">Karty katalogowe</p>
+          <p className="text text-grey">deklaracje</p>
+          <p className="text text-grey">katalog</p>
+        </div>
+        <div className="fc h-[50vh] py-4">
+          <div className="fc w-[90%] h-full border-t border-b border-greyShade2">
+            <a
+              className="text-2xl text-light"
+              href="/pdf/05_przedluzacze_bebnowe.pdf"
+              // alt="alt text"
+              target="_blank"
+              rel="noopener noreferrer"
+              //___
+              download
+              // locale={false}
+            >
+              Download FIle
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
