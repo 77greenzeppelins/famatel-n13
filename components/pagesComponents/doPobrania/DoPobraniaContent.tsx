@@ -31,7 +31,7 @@ const DoPobraniaContent = () => {
           <div className="fc w-[90%] h-full border-t border-b border-greyShade2">
             <a
               className="text-2xl text-light"
-              href="/pdf/05_przedluzacze_bebnowe.pdf"
+              href="/pdf/catalogChapters/05_przedluzacze_bebnowe.pdf"
               // alt="alt text"
               target="_blank"
               rel="noopener noreferrer"
