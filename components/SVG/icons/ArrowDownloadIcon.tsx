@@ -9,14 +9,14 @@ const ChevronRightIcon = ({
   className,
   strokeWidth = 1,
   strokeColor,
-  strokeColorWhileHover = corpoColors.orange,
-  scale,
-}: {
+}: // strokeColorWhileHover = corpoColors.orange,
+// scale,
+{
   strokeWidth?: number;
   strokeColor?: string;
-  strokeColorWhileHover?: string;
+  // strokeColorWhileHover?: string;
   className: string;
-  scale?: number;
+  // scale?: number;
 }) => {
   return (
     <motion.svg
@@ -26,14 +26,14 @@ const ChevronRightIcon = ({
       strokeWidth={strokeWidth}
       stroke={strokeColor ? strokeColor : corpoColors.light}
       className={className ? className : 'w-6 h-6'}
-      whileHover={{
-        scale: scale ? scale : 1.05,
-        stroke: strokeColorWhileHover,
-      }}
-      transition={{
-        default: { ...svgTransition },
-        stroke: { duration: 0.3, ease: [0, 0.71, 0.2, 1.01] },
-      }}
+      // whileHover={{
+      //   scale: scale ? scale : 1.05,
+      //   stroke: strokeColorWhileHover,
+      // }}
+      // transition={{
+      //   default: { ...svgTransition },
+      //   stroke: { duration: 0.3, ease: [0, 0.71, 0.2, 1.01] },
+      // }}
     >
       <path
         strokeLinecap="round"

@@ -27,8 +27,13 @@ const ChapterLine: React.FC<{ chapterName: string; chapterNumber: number }> = ({
           <p className={textStyle}>{chapterName}</p>
         </div>
         <div className="flex gap-6">
-          <div className="flex">
-            <ArrowDownloadIcon className={'w-6 h-6'} />
+          <div className="flex items-center gap-6 group">
+            <ArrowDownloadIcon
+              className={
+                'w-6 h-6 stroke-light group-hover:translate-y-1 ease-in duration-300 delay-300'
+                //___animate-bounce animate-ping group-hover:translate-y-1
+              }
+            />
             <DownloadableLink
               staffToDownload={
                 '/pdf/catalogChapters/05_przedluzacze_bebnowe.pdf'
