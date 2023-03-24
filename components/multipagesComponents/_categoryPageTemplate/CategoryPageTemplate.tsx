@@ -3,7 +3,8 @@ import { ReactNode } from 'react';
 import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
 import SectionContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 import CatalogNavPanel from '../navigations/catalogNavPanel/CatalogNavPanel';
-import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import FadingHeader from '../pseudoHeaders/fadingHeader/FadingHeader';
+// import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import SubCategoriesCatalog from './subCategoriesCatalog/SubCategoriesCatalog';
 import BasicIconsManager from '../iconsManagers/basicIconsManager/BasicIconsManager';
 /**Basic Data**/
@@ -43,12 +44,13 @@ const CategoryPageTemplate: React.FunctionComponent<{
         </SectionContentLayout>
 
         <SectionContentLayout divStyle="flex flex-col gap-y-10">
-          <SmallPseudoHeader
+          {/* <SmallPseudoHeader
             text={smallPseudoHeaders.n5}
             containerStyle="relative flex items-center disable-soft "
             hasBox={false}
             // hasVerticalOrnament={false}
-          />
+          /> */}
+          <FadingHeader label={smallPseudoHeaders.n5} />
           <SubCategoriesCatalog subCategoryData={categoryData} />
         </SectionContentLayout>
         {children}

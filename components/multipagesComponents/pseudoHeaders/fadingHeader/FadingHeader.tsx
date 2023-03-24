@@ -35,7 +35,7 @@ const FadingHeader: React.FC<{
         hasBox={hasBox}
         hasVerticalOrnament={hasVerticalOrnament}
       />
-      <div className="w-full h-[1px] bg-gradient-to-r from-grey via-greyShade2 to-transparent" />
+      <div className="w-full h-[1px] bg-gradient-to-r from-light via-greyShade2 to-transparent" />
     </div>
   );
 };

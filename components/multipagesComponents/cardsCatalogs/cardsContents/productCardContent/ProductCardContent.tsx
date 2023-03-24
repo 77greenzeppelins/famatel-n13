@@ -21,7 +21,7 @@ const ProductCardContent: React.FunctionComponent<{
   } = productCardData;
   /**JSX**/
   return (
-    <div className="flex h-full ">
+    <div className="flex h-full">
       <div className=" fc w-[50%]  xs:w-[50%] md:max-w-[240px] h-full ">
         <ProductCardGraphicSection
           imageData={imageData}

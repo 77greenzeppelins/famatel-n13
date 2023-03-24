@@ -2,7 +2,8 @@ import React, { ReactNode } from 'react';
 /**Components**/
 import PageContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/PageContentLayout';
 import SectionContentLayout from '../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import FadingHeader from '../pseudoHeaders/fadingHeader/FadingHeader';
+// import SmallPseudoHeader from '../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import ProductsCatalog from './productsCatalog/ProductsCatalog';
 import CatalogNavPanel from '../navigations/catalogNavPanel/CatalogNavPanel';
 /**Basic Data**/
@@ -29,7 +30,7 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
       data-component="SubCategoryPageTemplate__container"
       className="w-full min-h-screen inner-px-md-lg pt-[60px] bg-dark pb-[50px]"
     >
-      <PageContentLayout divStyle="flex flex-col gap-y-[50px] lg:gap-y-[80px] pt-[60px]">
+      <PageContentLayout divStyle="flex flex-col gap-y-[50px] lg:gap-y-[90px] pt-[60px]">
         <SectionContentLayout>
           <CatalogNavPanel
             linkHeaders={[smallPseudoHeaders.n1]}
@@ -40,12 +41,13 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
             // optionalHeader={smallPseudoHeaders.n4}
           />
         </SectionContentLayout>
-        <SectionContentLayout divStyle="flex flex-col gap-y-10">
-          <SmallPseudoHeader
+        <SectionContentLayout divStyle="flex flex-col gap-y-14">
+          {/* <SmallPseudoHeader
             text={smallPseudoHeaders.l5}
             hasBox={false}
             hasVerticalOrnament={true}
-          />
+          /> */}
+          <FadingHeader label={smallPseudoHeaders.n5} />
           <ProductsCatalog productCardsData={productCardsData} />
         </SectionContentLayout>
         {

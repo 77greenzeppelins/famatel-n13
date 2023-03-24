@@ -9,6 +9,9 @@ import { smallPseudoHeaders, splitedPathParts } from '../../../data/_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../utils/TS/typeScriptStaff';
 
+/*
+is used in: [model] | <SubcategoryNamePage>
+*/
 /**---------------------------------**/
 const ProductPageTemplateShort: React.FunctionComponent<{
   categoryName: string;
@@ -34,16 +37,7 @@ const ProductPageTemplateShort: React.FunctionComponent<{
             : productData.altName;
           const productPathPivotalPart = productPath[splitedPathParts.product];
           if (router.query.model === productPathPivotalPart) {
-            // console.log('ProductPageTemplate________________');
             return (
-              // <CatalogNavPanel
-              //   key={index}
-              //   labels={['Kategoria']}
-              //   namesLevels={[categoryName]}
-              //   urlsLevels={[categoryUrl]}
-              //   lastLevelName={productName}
-              //   lastLevelLab="Podkategoria:"
-              // />
               <CatalogNavPanel
                 key={index}
                 linkHeaders={[smallPseudoHeaders.n1]}
@@ -57,8 +51,6 @@ const ProductPageTemplateShort: React.FunctionComponent<{
         })}
         {children}
       </PageContentLayout>
-
-      <div className="fixed w-full h-[50px] top-0 bg-dark" />
     </div>
   );
 };

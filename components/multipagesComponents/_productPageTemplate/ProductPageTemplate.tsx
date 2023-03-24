@@ -9,6 +9,9 @@ import { splitedPathParts, smallPseudoHeaders } from '../../../data/_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../utils/TS/typeScriptStaff';
 
+/*
+is used in: <WtyczkiGniazdaPrzenosneProductPage> i.e. [model] | <SubcategoryNamePage>
+*/
 /**---------------------------------**/
 const ProductPageTemplate: React.FunctionComponent<{
   categoryName: string;

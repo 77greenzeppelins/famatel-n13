@@ -4,6 +4,8 @@ import CardFrame from '../../../../../../../multipagesComponents/cardsCatalogs/_
 import Clock from '../../../../../../../multipagesComponents/timeAndData/Clock';
 import DateDisplayer from '../../../../../../../multipagesComponents/timeAndData/DateDisplayer';
 import SvgLogoF from '../../../../../../../SVG/logo/SvgLogoF';
+import SvgLogoFgrad from '../../../../../../../SVG/logo/SvgLogoFgrad';
+import SvgLogoFgradient from '../../../../../../../SVG/logo/SvgLogoFgradient';
 
 const SpecialCard = () => {
   /**JSX**/
@@ -15,7 +17,9 @@ const SpecialCard = () => {
           <div className="relative flex justify-between items-center w-full h-[75%] px-2 xl:px-6">
             <div className="hidden lg:flex absolute inset-x-0 h-[70%] border-r border-greyShade2" />
           </div> */}
-          <SvgLogoF svgStyle={'w-[70%]'} gStyle={'stroke-grey'} />
+          {/* <SvgLogoF svgStyle={'w-[70%]'} gStyle={'stroke-grey'} /> */}
+          {/* <SvgLogoFgrad svgStyle={'w-[70%]'} />*/}
+          <SvgLogoFgradient svgStyle={'w-[70%]'} />
         </div>
 
         <div className="relative flex flex-col items-center w-full lg:w-[70%] h-full">
