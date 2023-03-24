@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import CatalogChapters from './catalogChapters/CatalogChapters';
 import ChatLoader from './loaderStaff/ChatLoader';
-// import { imgLadowarki } from '../../../public/images/c7_ladowarki/imgLadowarki';
-// import ImageSlider from '../../multipagesComponents/sliders/imageSlider/ImageSlider';
-// import SliderWithScrollbar from '../../multipagesComponents/sliders/sliderWithScrollbar/SliderWithScrollbar';
-// import SvgTechPrzemyslowe from '../../SVG/techDrawings/5_przedluzacze-bebnowe/SvgTechPrzemyslowe';
+
+import ArrowDownloadIcon from '../../SVG/icons/ArrowDownloadIcon';
+
 /**HardCoded Staff*/
 const chapter05href = '/pdf/catalogChapters/05_przedluzacze_bebnowe.pdf';
 
@@ -26,11 +26,21 @@ const DoPobraniaContent = () => {
         </div>
       </div> */}
         <div>
-          <p className="text text-grey">Karty katalogowe</p>
-          <p className="text text-grey">deklaracje</p>
-          <p className="text text-grey">katalog</p>
+          <div className="flex gap-6">
+            <p className="text text-grey">Karty katalogowe</p>
+            <ArrowDownloadIcon className={'w-6 h-6'} />
+          </div>
+          <div>
+            <p className="text text-grey">deklaracje</p>
+          </div>
+          <div>
+            <p className="text text-grey">katalog</p>
+          </div>
         </div>
-        <div className="w-full flex flex-col gap-y-10">
+        <div className="w-full flex flex-col gap-y-10 pt-10">
+          <div>
+            <CatalogChapters />
+          </div>
           <div className="fc h-[50vh] py-4">
             <div className="fc w-[90%] h-full border-t border-b border-greyShade2">
               <a

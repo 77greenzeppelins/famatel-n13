@@ -23,7 +23,7 @@ const TableWithUnderlinedRows: React.FunctionComponent<{
       className={
         tableContainerStyle
           ? tableContainerStyle
-          : 'w-full flex flex-col gap-y-4 '
+          : 'w-full flex flex-col gap-y-4'
       }
     >
       {rowsData?.map((rowData, i) => (

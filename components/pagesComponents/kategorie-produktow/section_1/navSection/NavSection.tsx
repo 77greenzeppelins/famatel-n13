@@ -28,7 +28,7 @@ const NavSection: React.FunctionComponent<{
   return (
     <div className="flex justify-between w-[80%] xs:max-w-[300px] lg:max-w-[500px] xl:w-full xl:max-w-[80%] ">
       <ArrowButton
-        buttonStyle="flex items-center justify-start  focus:outline-none disable pointer-events-auto "
+        buttonStyle="flex items-center justify-start focus:outline-none disable pointer-events-auto "
         //___border border-greyShade2
         onClickHandler={prevCategory}
       >
