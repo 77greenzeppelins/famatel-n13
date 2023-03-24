@@ -27,11 +27,7 @@ const KontaktContent = () => {
               //___xl:flex-row xl:gap-x-20 gap-y-[80px]
             >
               <div className=" ">
-                <ContactContacts
-                  animationStage={animationStage}
-                  setAnimationStage={setAnimationStage}
-                  animationStageNumber={1}
-                />
+                <ContactContacts />
               </div>
               <div className="">
                 <ContactAddress />

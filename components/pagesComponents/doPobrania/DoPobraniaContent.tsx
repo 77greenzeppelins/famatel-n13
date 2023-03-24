@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import FadingHeader from '../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
+/**Components**/
 import CatalogChapters from './catalogChapters/CatalogChapters';
-import ChatLoader from './loaderStaff/ChatLoader';
+import DeclarationsSection from './declarations/DeclarationsSection';
+import FullCatalog from './fullCatalog/FullCatalog';
+/**Hardcoded Staff*/
 
-import ArrowDownloadIcon from '../../SVG/icons/ArrowDownloadIcon';
-
-/**HardCoded Staff*/
-const chapter05href = '/pdf/catalogChapters/05_przedluzacze_bebnowe.pdf';
+const lgTextStyle =
+  'text-light text-left text-[2rem] xs:text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[4.5rem] xxl:text-[5rem] font-bold tracking-[2px] md:leading-[3rem] lg:leading-[4rem] xl:leading-[3.5rem] xxl:leading-[4rem]';
+const mdTextStyle =
+  'text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025';
 
 /**----------------------------------**/
 const DoPobraniaContent = () => {
@@ -20,48 +24,23 @@ const DoPobraniaContent = () => {
       className="relative bg-dark pt-[60px]"
     >
       <div className="w-full h-full inner-px-md-xl-xxl">
-        {/* <div className="w-full h-full inner-px-md-xl-xxl pt-[20px] lg:pt-[40px]">
-        <div>
-          <ImageSlider imageData={imgLadowarki} />
-        </div>
-      </div> */}
-        <div>
-          <div className="flex gap-6">
-            <p className="text text-grey">Karty katalogowe</p>
-            <ArrowDownloadIcon className={'w-6 h-6'} />
-          </div>
-          <div>
-            <p className="text text-grey">deklaracje</p>
-          </div>
-          <div>
-            <p className="text text-grey">katalog</p>
-          </div>
-        </div>
         <div className="w-full flex flex-col gap-y-10 pt-10">
-          <div>
+          <FadingHeader
+            label={'KATALOG'}
+            // hasBox={true}
+            // hasVerticalOrnament={false}
+          />
+          <div className="flex flex-col-reverse xxl:flex-row gap-10">
             <CatalogChapters />
+            <FullCatalog mdTextStyle={mdTextStyle} lgTextStyle={lgTextStyle} />
           </div>
-          <div className="fc h-[50vh] py-4">
-            <div className="fc w-[90%] h-full border-t border-b border-greyShade2">
-              <a
-                className="text-2xl text-light"
-                href={chapter05href}
-                // alt="alt text"
-                target="_blank"
-                rel="noopener noreferrer"
-                //___
-                download
-                // locale={false}
-              >
-                Download FIle
-              </a>
-            </div>
+          <FadingHeader label={'DEKLARACJE'} />
+          <div>
+            <DeclarationsSection />
           </div>
-          <div className="fc h-[50vh] py-4">
-            <div className="fc w-[90%] h-full border-t border-b border-greyShade2">
-              <ChatLoader />
-            </div>
-          </div>
+
+          <FadingHeader label={'KARTY KATALOGOWE'} />
+          <div className="h-[10vh]" />
         </div>
       </div>
     </div>

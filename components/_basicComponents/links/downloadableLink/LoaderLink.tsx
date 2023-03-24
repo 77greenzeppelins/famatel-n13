@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const chapter05href = '/pdf/catalogChapters/05_przedluzacze_bebnowe.pdf';
 
 /**------------------------**/
-const ChatLoader = () => {
+const LoaderLink = () => {
   const [chapter, setChapter] = useState('');
   /**Handler**/
   const handleDownload = (
@@ -44,4 +44,4 @@ const ChatLoader = () => {
   );
 };
 
-export default ChatLoader;
+export default LoaderLink;

@@ -1,11 +1,14 @@
-import { motion, useInView } from 'framer-motion';
-import React, { useRef } from 'react';
-import useMeasure from 'react-use-measure';
-/**Containers**/
+import {
+  motion,
+  //  useInView
+} from 'framer-motion';
+// import React, { useRef } from 'react';
+// import useMeasure from 'react-use-measure';
+/**Components**/
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
+import FadingHeader from '../../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
 /**Hardcoded Data*/
 const address = ['Biuro/Magazyn', 'Ul. Willowa 5', '58-260 Bielawa'];
-const staggerFactors = [1.4, 1.6, 1.8];
 const labelStyle =
   'text-grey text-[1rem] lg:text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-light  ease-in duration-300  origin-center break-all';
 
@@ -21,51 +24,34 @@ const ContactAddress: React.FunctionComponent<{
   innerContainerStyle,
   measuredElementStyle,
 }) => {
-  const [ref, bounds] = useMeasure();
-  const elementInView = useRef(null);
+  // const [ref, bounds] = useMeasure();
+  // const elementInView = useRef(null);
   // const isInView = useInView(elementInView, {
   //   margin: `-${bounds.height * 0.4}px 0px -${bounds.height * 0.9}px 0px`,
   //   // once: true, // amount: 'all', // amount: 1,
   // });
   // console.log('InViewContainer / isInView', isInView);
   // console.log('InViewContainer / topFactor', topFactor);
-  const isInView = useInView(elementInView, { once: true, amount: 0.5 });
+  // const isInView = useInView(elementInView, { once: true, amount: 0.5 });
   /**JSX**/
   return (
     <div className="relative flex flex-col gap-y-4">
-      <div className="w-full">
-        {/*
-        _________________________________________________header_Section
-        */}
-        <div
-        //  animationDelay={animationDelay}
-        >
-          <p className="text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025">
-            Adres
-          </p>
-        </div>
-        <motion.div
-          className="w-full h-[0.75px] bg-gradient-to-r from-light via-grey to-transparent"
-          // className="w-full h-[1px] border-b-[0.5px] border-grey"
-          // initial={{ y: '110%', opacity: 0 }}
-          // animate={{ y: 0, opacity: 1 }}
-          // transition={{ duration: 0.6, delay: animationDelay }}
-        />
-      </div>
-      {/*
-      _________________________________________________kontact_Section
-      */}
-      <div className="pt-2">
-        <ul className="flex flex-col gap-10  group">
-          {address.map((label, index) => (
-            <div key={index}>
-              <li>
+      <motion.div
+        className=" flex flex-col gap-y-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.01, delay: 0.2 } }}
+      >
+        <FadingHeader label={'Adres'} />
+        <div className="pt-2">
+          <ul className="flex flex-col gap-10  group">
+            {address.map((label, index) => (
+              <li key={index}>
                 <p className={labelStyle}>{label}</p>
               </li>
-            </div>
-          ))}
-        </ul>
-      </div>
+            ))}
+          </ul>
+        </div>
+      </motion.div>
       <OverlayWithGradient
         initial={{ x: '-50%' }}
         animate={{ x: '100%' }}
