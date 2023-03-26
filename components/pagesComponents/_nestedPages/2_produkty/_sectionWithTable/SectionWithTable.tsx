@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import FadingHeader from '../../../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
 /**Components*/
-import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+// import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 
 const SectionWithTable: React.FunctionComponent<{
   label: string;

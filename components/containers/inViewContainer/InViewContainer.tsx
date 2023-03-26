@@ -32,7 +32,6 @@ const InViewContainer: React.FC<Props> = ({
     margin: `-${bounds.height * topFactor}px 0px -${
       bounds.height * bottomFactor
     }px 0px`,
-    // once: true, // amount: 'all', // amount: 1,
   });
   // console.log('InViewContainer / additionalCompNumb', );
   // console.log('InViewContainer / bounds.width', bounds.width);
