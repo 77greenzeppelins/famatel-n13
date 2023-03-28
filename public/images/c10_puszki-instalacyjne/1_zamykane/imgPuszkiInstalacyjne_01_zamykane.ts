@@ -59,11 +59,12 @@ const imgPuszkiInstalacyjne_01_zamykane: IF_ImgStaticData[] = [
   { image: img1, model: '3050' },
   { image: img2, model: '3051' },
   { image: img3, model: '3052' },
-  { image: img4, model: '3056' },
+  { image: img4, model: '3056 / 3059' },
   { image: img5, model: '3025' },
   { image: img6, model: '3027' },
   { image: img7, model: '3026' },
   { image: img8, model: '3028' },
+  //___
   { image: img9, model: '3002-GL' },
   { image: img10, model: '3003' },
   { image: img11, model: '3011' },
@@ -71,9 +72,11 @@ const imgPuszkiInstalacyjne_01_zamykane: IF_ImgStaticData[] = [
   { image: img13, model: '3013' },
   { image: img14, model: '3014' },
   { image: img15, model: '3015' },
+  //___
   { image: img1_b, model: '3062' },
   { image: img2_b, model: '3063' },
   { image: img3_b, model: '3071' },
+  //___
   { image: img4_b, model: '3042' },
   { image: img5_b, model: '3072' },
   { image: img6_b, model: '3043' },
@@ -83,7 +86,7 @@ const imgPuszkiInstalacyjne_01_zamykane: IF_ImgStaticData[] = [
   { image: img10_b, model: '3045' },
   { image: img11_b, model: '3075' },
   { image: img12_b, model: '3005' },
-
+  //___
   { image: img13_bx, model: '3955' },
   { image: img14_bx, model: '3956' },
   { image: img15_bx, model: '3953' },

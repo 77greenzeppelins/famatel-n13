@@ -7,6 +7,7 @@ import { IF_SvgTech } from '../../../utils/TS/typeScriptStaff';
 /**TS**/
 import { svgTech_1_1 } from './1_wtyczki-gniazda/1.1_przenosne/svgTech_1.1';
 import { svgTech_1_2 } from './1_wtyczki-gniazda/1.2_tablicowe/svgTech_1.2';
+import { svgTech_1_3 } from './1_wtyczki-gniazda/1.3_scienne/svgTech_1.3';
 import { svgTech_2_1 } from './2_gniazda-z-blokada/2.1_tablicowe/svgTech_2.1';
 import { svgTech_2_2 } from './2_gniazda-z-blokada/2.2_stale/svgTech_2.2';
 import { svgTech_2_3 } from './2_gniazda-z-blokada/2.3_z-opcjami/svgTech_2.3';
@@ -16,10 +17,12 @@ import { svgTech_8_2 } from './8_obudowy-rozdzielnice/8.2_przemyslowe/svgTech_8.
 import { svgTech_8_3 } from './8_obudowy-rozdzielnice/8.3_gumowe/svgTech_8.3';
 import { svgTech_9_1 } from './9_rozdzielnice-modulowe/9.1_scienne/svgTech_9.1';
 import { svgTech_9_2 } from './9_rozdzielnice-modulowe/9.2_modulowe/svgTech_9.2';
+import { svgTech_10_1 } from './10_puszki/10.1_zamykane/svgTech_10.1';
 
 const allSvgTech: readonly IF_SvgTech[] = [
   ...svgTech_1_1,
   ...svgTech_1_2,
+  ...svgTech_1_3,
   ...svgTech_2_1,
   ...svgTech_2_2,
   ...svgTech_2_3,
@@ -31,6 +34,8 @@ const allSvgTech: readonly IF_SvgTech[] = [
   //___
   ...svgTech_9_1,
   ...svgTech_9_2,
+  //___
+  ...svgTech_10_1,
 ];
 
 export { allSvgTech };
