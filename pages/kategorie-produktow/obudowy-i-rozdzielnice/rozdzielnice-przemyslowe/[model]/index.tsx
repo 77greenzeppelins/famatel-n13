@@ -1,17 +1,11 @@
-import React, { ReactElement, useState } from 'react';
-/**Hook Staff**/
-// import { useRouter } from 'next/router';
+import React, { ReactElement } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
+import RozdzielnicePrzemysloweContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/8.2_rozdzielnice-przemyslowe/RozdzielnicePrzemysloweContent';
 /**BasicData**/
 import { mainCategoriesSummaryData } from '../../../../../data/_data';
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
-// import {
-//   obudowyPusteSubCategoryData,
-//   productCardsData,
-// } from '../../../../../data/categoriesData/cat_8_obudowy-i-rozdzielnice/subCategories/_subCat_1_obudowy-puste';
-
 import {
   rozdzielnicePrzemysloweSubCategoryData,
   productCardsData,
@@ -19,10 +13,9 @@ import {
 
 /**TS**/
 import { NextPageWithLayout } from '../../../../_app';
-import RozdzielnicePrzemysloweContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/8.2_rozdzielnice-przemyslowe/RozdzielnicePrzemysloweContent';
 
 /**--------------------------------------**/
-const ObudowyPusteProductPage: NextPageWithLayout = () => {
+const RozdzielnicePrzemysloweProductPage: NextPageWithLayout = () => {
   /**Router Section**/
   //   const router = useRouter();
   //   console.log('obudowyPusteSubCategoryData:', obudowyPusteSubCategoryData);
@@ -52,7 +45,9 @@ const ObudowyPusteProductPage: NextPageWithLayout = () => {
   );
 };
 
-ObudowyPusteProductPage.getLayout = function getLayout(page: ReactElement) {
+RozdzielnicePrzemysloweProductPage.getLayout = function getLayout(
+  page: ReactElement
+) {
   return (
     <Layout>
       {/* <NestedLayout>{page}</NestedLayout> */}
@@ -61,4 +56,4 @@ ObudowyPusteProductPage.getLayout = function getLayout(page: ReactElement) {
   );
 };
 
-export default ObudowyPusteProductPage;
+export default RozdzielnicePrzemysloweProductPage;

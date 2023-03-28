@@ -3,8 +3,6 @@ import React from 'react';
 import { useRouter } from 'next/router';
 /**Components**/
 import ProductContentLayout_A from '../__productContentLayout/ProductContentLayout_A';
-import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import BasicIconsManager from '../../../../multipagesComponents/iconsManagers/basicIconsManager/BasicIconsManager';
 import TablesSection from '../8.3_obudowy-gumowe/tablesSection/TablesSection';
 /**Basic Data**/
 import { splitedPathParts } from '../../../../../data/_data';
@@ -38,9 +36,6 @@ const ObudowyGumoweContent: React.FunctionComponent<{
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
-              <SectionContentLayout>
-                <BasicIconsManager svgIcons={svgIcons} />
-              </SectionContentLayout>
               <ProductContentLayout_A imageData={productImage}>
                 <div className="flex flex-col">
                   <TablesSection
@@ -49,6 +44,7 @@ const ObudowyGumoweContent: React.FunctionComponent<{
                     norma={norma}
                     features={features}
                     description={description}
+                    svgIcons={svgIcons}
                   />
                 </div>
               </ProductContentLayout_A>

@@ -34,14 +34,15 @@ const ObudowyPusteContent: React.FunctionComponent<{
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
-              <SectionContentLayout>
+              {/* <SectionContentLayout>
                 <BasicIconsManager svgIcons={svgIcons} />
-              </SectionContentLayout>
+              </SectionContentLayout> */}
               <ProductContentLayout_B imageData={productImage}>
                 <TablesSection
                   tablesHeaders={tablesHeaders}
                   tablesData={tablesWithSizes}
                   generalDescription={generalDescription}
+                  svgIcons={svgIcons}
                 />
               </ProductContentLayout_B>
             </React.Fragment>

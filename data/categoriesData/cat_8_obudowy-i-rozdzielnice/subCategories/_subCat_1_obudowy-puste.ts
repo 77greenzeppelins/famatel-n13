@@ -5,9 +5,6 @@ import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
-//___catalog & www 100% mapping !!!
-// const catalogVersion = [
-// ];
 const obudowyPusteSubCategoryData = {
   subCategoryName: catalogStructureData[7].subCategoriesNames[0],
   subCategoryUrl: catalogStructureData[7].subCategoriesUrls[0],

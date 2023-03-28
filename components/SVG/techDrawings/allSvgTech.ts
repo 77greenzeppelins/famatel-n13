@@ -11,6 +11,11 @@ import { svgTech_2_1 } from './2_gniazda-z-blokada/2.1_tablicowe/svgTech_2.1';
 import { svgTech_2_2 } from './2_gniazda-z-blokada/2.2_stale/svgTech_2.2';
 import { svgTech_2_3 } from './2_gniazda-z-blokada/2.3_z-opcjami/svgTech_2.3';
 import { svgTech_3_1_2_3 } from './3_adaptery-przemyslowe/svgTech_3.1_2_3';
+import { svgTech_8_1 } from './8_obudowy-rozdzielnice/8.1_puste/svgTech_8.1';
+import { svgTech_8_2 } from './8_obudowy-rozdzielnice/8.2_przemyslowe/svgTech_8.2';
+import { svgTech_8_3 } from './8_obudowy-rozdzielnice/8.3_gumowe/svgTech_8.3';
+import { svgTech_9_1 } from './9_rozdzielnice-modulowe/9.1_scienne/svgTech_9.1';
+import { svgTech_9_2 } from './9_rozdzielnice-modulowe/9.2_modulowe/svgTech_9.2';
 
 const allSvgTech: readonly IF_SvgTech[] = [
   ...svgTech_1_1,
@@ -19,6 +24,13 @@ const allSvgTech: readonly IF_SvgTech[] = [
   ...svgTech_2_2,
   ...svgTech_2_3,
   ...svgTech_3_1_2_3,
+  //___
+  ...svgTech_8_1,
+  ...svgTech_8_2,
+  ...svgTech_8_3,
+  //___
+  ...svgTech_9_1,
+  ...svgTech_9_2,
 ];
 
 export { allSvgTech };

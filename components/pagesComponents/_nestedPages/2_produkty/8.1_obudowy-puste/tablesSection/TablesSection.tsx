@@ -11,6 +11,8 @@ import {
   undelinedTableTextStyle,
   undelinedTableContainerStyle,
 } from '../../../../../../utils/tailwindStyles';
+import BasicIconsManager from '../../../../../multipagesComponents/iconsManagers/basicIconsManager/BasicIconsManager';
+import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
 
 /**------------------------------------------------**/
 const TablesSection: React.FunctionComponent<{
@@ -20,7 +22,8 @@ const TablesSection: React.FunctionComponent<{
     value: string;
   }[][];
   generalDescription: string[][];
-}> = ({ tablesData, tablesHeaders, generalDescription }) => {
+  svgIcons: string[];
+}> = ({ tablesData, tablesHeaders, generalDescription, svgIcons }) => {
   console.log('generalDescription:', generalDescription);
   /**JSX**/
   return (
@@ -44,6 +47,9 @@ const TablesSection: React.FunctionComponent<{
           />
         </div>
       </SectionWithTable>
+      <SectionContentLayout>
+        <BasicIconsManager svgIcons={svgIcons} />
+      </SectionContentLayout>
     </AllTablesContainer>
   );
 };

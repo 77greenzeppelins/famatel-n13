@@ -3,8 +3,6 @@ import React from 'react';
 import { useRouter } from 'next/router';
 /**Components**/
 import ProductContentLayout_A from '../__productContentLayout/ProductContentLayout_A';
-import SectionContentLayout from '../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
-import BasicIconsManager from '../../../../multipagesComponents/iconsManagers/basicIconsManager/BasicIconsManager';
 import TablesSection from './tablesSection/TablesSection';
 /**Basic Data**/
 import { splitedPathParts } from '../../../../../data/_data';
@@ -54,9 +52,6 @@ const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
         if (router.query.model === productPathPivotalPart) {
           return (
             <React.Fragment key={index}>
-              <SectionContentLayout>
-                <BasicIconsManager svgIcons={svgIcons} />
-              </SectionContentLayout>
               <ProductContentLayout_A imageData={productImage}>
                 <TablesSection
                   productIndex={index}
@@ -79,6 +74,7 @@ const RozdzielnicePrzemysloweContent: React.FunctionComponent<{
                   }
                   packageDetails={packageDetails}
                   norma={norma}
+                  svgIcons={svgIcons}
                 />
               </ProductContentLayout_A>
             </React.Fragment>

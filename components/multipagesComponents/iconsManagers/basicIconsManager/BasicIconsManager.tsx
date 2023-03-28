@@ -14,7 +14,14 @@ const BasicIconsManager: React.FunctionComponent<{
   labeledIcons?: string[];
   iconContainerStyle?: string;
   isHoverabled?: boolean;
-}> = ({ svgIcons, labeledIcons, iconContainerStyle, isHoverabled = true }) => {
+  mainContainerStyle?: string;
+}> = ({
+  svgIcons,
+  labeledIcons,
+  iconContainerStyle,
+  isHoverabled = true,
+  mainContainerStyle,
+}) => {
   /*
   Global State
   */
@@ -46,7 +53,11 @@ const BasicIconsManager: React.FunctionComponent<{
   return (
     <div
       data-component="BasicIconsManager__wrapper"
-      className="flex flex-col lg:items-center"
+      className={
+        mainContainerStyle
+          ? mainContainerStyle
+          : 'flex flex-col lg:items-center '
+      }
       //___lg:flex-row lg:gap-x-10
     >
       <div className="flex gap-4 flex-wrap">

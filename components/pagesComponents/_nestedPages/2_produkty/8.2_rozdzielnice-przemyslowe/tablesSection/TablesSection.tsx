@@ -4,6 +4,10 @@ import AllTablesContainer from '../../_allTablesContainer/AllTablesContainer';
 import SectionWithTable from '../../_sectionWithTable/SectionWithTable';
 import TableWithUnderlinedRows from '../../../../../multipagesComponents/tables/tableWithUnderlinedRows/TableWithUnderlinedRows';
 import RozdzielnicePrzemysloweTable from './rozdzielnicePrzemysloweTable.tsx/RozdzielnicePrzemysłoweTable';
+import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
+import TopHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
+import SectionContentLayout from '../../../../../layouts/pagesLayouts/multipagesLayouts/SectionContentLayout';
+import BasicIconsManager from '../../../../../multipagesComponents/iconsManagers/basicIconsManager/BasicIconsManager';
 /**Tailwind Styles*/
 import {
   undelinedTableTextStyle,
@@ -12,8 +16,6 @@ import {
 } from '../../../../../../utils/tailwindStyles';
 /**Basic Data**/
 import { smallPseudoHeaders } from '../../../../../../data/_data';
-import RowWithSideHeader from '../../../../../multipagesComponents/tables/diyTable/rowWithSideHeader/RowWithSideHeader';
-import TopHeader from '../../../../../multipagesComponents/tables/__cells/layoutXL/TopHeader';
 
 /**--------------------------------------------------**/
 const TablesSection: React.FunctionComponent<{
@@ -45,6 +47,7 @@ const TablesSection: React.FunctionComponent<{
     | undefined;
   rozdzielniceBudowlaneHeader1: string | string[] | undefined;
   rozdzielniceBudowlaneTableData1: string[][] | undefined;
+  svgIcons: string[];
 }> = ({
   productIndex,
   tableColumnsNumber,
@@ -55,8 +58,8 @@ const TablesSection: React.FunctionComponent<{
   //___
   rozdzielniceBudowlaneHeader2,
   rozdzielniceBudowlaneTableData2,
-  rozdzielniceBudowlaneHeader1,
   rozdzielniceBudowlaneTableData1,
+  svgIcons,
 }) => {
   /**JSX**/
   return (
@@ -124,6 +127,13 @@ const TablesSection: React.FunctionComponent<{
           />
         </div>
       </SectionWithTable>
+
+      <SectionContentLayout>
+        <BasicIconsManager
+          svgIcons={svgIcons}
+          mainContainerStyle="flex flex-col lg:items-center gap-2"
+        />
+      </SectionContentLayout>
     </AllTablesContainer>
   );
 };

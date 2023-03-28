@@ -21,18 +21,18 @@ import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
  * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
  **/
 const imgRozdzielniceModulowe_01_scienne_ip65: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-  { image: img5 },
-  { image: img6 },
-  { image: img7 },
-  { image: img8 },
-  { image: img9 },
-  { image: img10 },
-  { image: img11 },
-  { image: img12 },
-  { image: img13 },
+  { image: img1, model: '39123' },
+  { image: img2, model: '39123-T' },
+  { image: img3, model: '39134' },
+  { image: img4, model: '39134-T' },
+  { image: img5, model: '39145' },
+  { image: img6, model: '39145-T' },
+  { image: img7, model: '39146' },
+  { image: img8, model: '39146-T' },
+  { image: img9, model: '39157' },
+  { image: img10, model: '39157-T' },
+  { image: img11, model: '39168' },
+  { image: img12, model: '39168-T' },
+  { image: img13, model: '39169' },
 ];
 export { imgRozdzielniceModulowe_01_scienne_ip65 };

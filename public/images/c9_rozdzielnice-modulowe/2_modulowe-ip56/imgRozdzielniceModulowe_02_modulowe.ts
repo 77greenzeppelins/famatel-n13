@@ -18,25 +18,24 @@ import img15 from './9.2_10_39072.webp';
 
 /**TS**/
 import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
-
-/**
- * used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
- **/
+/*
+used in: images / kategorieProduktowPage / imgKategorieProduktowPage.ts
+*/
 const imgRozdzielniceModulowe_02_modulowe: IF_ImgStaticData[] = [
-  { image: img1 },
-  { image: img2 },
-  { image: img3 },
-  { image: img4 },
-  { image: img5 },
-  { image: img6 },
-  { image: img7 },
-  { image: img8 },
-  { image: img9 },
-  { image: img10 },
-  { image: img11 },
-  { image: img12 },
-  { image: img13 },
-  { image: img14 },
-  { image: img15 },
+  { image: img1, model: '3902-T' },
+  { image: img2, model: '3904' },
+  { image: img3, model: '3904-T' },
+  { image: img4, model: '3908' },
+  { image: img5, model: '3908-T' },
+  { image: img6, model: '3912' },
+  { image: img7, model: '3912-T' },
+  { image: img8, model: '3926' },
+  { image: img9, model: '3926-T' },
+  { image: img10, model: '3942' },
+  { image: img11, model: '3942-T' },
+  { image: img12, model: '39018' },
+  { image: img13, model: '39036' },
+  { image: img14, model: '39054' },
+  { image: img15, model: '39072' },
 ];
 export { imgRozdzielniceModulowe_02_modulowe };
