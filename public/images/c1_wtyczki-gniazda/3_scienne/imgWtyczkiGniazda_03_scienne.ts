@@ -47,6 +47,6 @@ const imgWtyczkiGniazda_03_scienne: IF_ImgStaticData[] = [
   { image: img15, model: '24395' },
   { image: img16, model: '24396' },
   { image: img17, model: '23000' },
-  { image: img18, model: '23001' },
+  { image: img18, model: '23001 / 23002' },
 ];
 export { imgWtyczkiGniazda_03_scienne };
