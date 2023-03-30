@@ -40,9 +40,9 @@ const MainHtmlElement: React.FunctionComponent<{
         {/*
         resource: https://moz.com/blog/the-ultimate-guide-to-seo-meta-tags
         */}
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta
-          http-equiv="Content-Type"
+          httpEquiv="Content-Type"
           content="text/html; charset=ISO-8859-1"
         />
         <meta lang="pl" />

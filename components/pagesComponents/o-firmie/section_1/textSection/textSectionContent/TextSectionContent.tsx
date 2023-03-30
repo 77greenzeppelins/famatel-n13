@@ -9,7 +9,7 @@ import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
 import { motion } from 'framer-motion';
 import { textSectionChildrenVariants } from '../../../../../../utils/framerMotion/framerMotionUtils';
 /**Basic Data**/
-import { pagesUrl } from '../../../../../../data/_data';
+import { pagesUrl, story } from '../../../../../../data/_data';
 /**Hardcoded Data**/
 const headerTexts = ['Bezpieczne rozwiązania'];
 
@@ -30,9 +30,10 @@ const TextSectionContent: React.FunctionComponent = () => {
         variants={textSectionChildrenVariants}
       >
         <SmallPseudoHeader
-          text={headerTexts[0]}
-          hasBox={true}
-          hasVerticalOrnament={false}
+          text={story.oFirmiePage.pseudoHeader}
+          hasBox={false}
+          hasVerticalOrnament={true}
+          // textStyle="p-medium text-grey align-middle leading-none"
         />
       </motion.div>
       <motion.div

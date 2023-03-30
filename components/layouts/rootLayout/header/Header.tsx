@@ -4,9 +4,13 @@ import NavForMainPages from './navSection/NavForMainPages';
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
 import { headerVariants } from '../../../../utils/framerMotion/framerMotionUtils';
+import { useRouter } from 'next/router';
 
 /******************************************************************************/
 const Header: React.FunctionComponent = () => {
+  const router = useRouter();
+  const condition = router.pathname === '/';
+
   /**JSX*/
   return (
     <header
@@ -17,11 +21,15 @@ const Header: React.FunctionComponent = () => {
         <div className="relative w-full h-full">
           <motion.div
             className="absolute bottom-0 left-0 right-0 h-full border-b-[0.5px] border-greyShade1"
-            initial={{ width: '0%', opacity: 0 }}
+            // initial={{ width: '0%', opacity: 0 }}
+            initial={{
+              width: condition ? '0%' : '100%',
+              opacity: condition ? 0 : 1,
+            }}
             animate={{
               width: '100%',
               opacity: 1,
-              transition: { duration: 0.8 },
+              transition: { duration: 0.8, delay: 1.6 },
             }}
           />
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 /*Components*/
 import SvgLogo from '../../../../SVG/logo/SvgLogo';
-import AriaJSLink from '../../../../_basicComponents/links/ariaJSLink/AriaJSLink';
+// import AriaJSLink from '../../../../_basicComponents/links/ariaJSLink/AriaJSLink';
 /**Hook Section**/
 // import { useRouter } from 'next/router';
 // /**BasicData*/

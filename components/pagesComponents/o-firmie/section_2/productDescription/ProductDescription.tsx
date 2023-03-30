@@ -7,6 +7,8 @@ import SVG_14307_P28 from '../../../../SVG/techDrawings/1_wtyczki-gniazda/SVG_14
 import { AnimatePresence, motion } from 'framer-motion';
 /** */
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
+import CatalogNavPanel from '../../../../multipagesComponents/navigations/catalogNavPanel/CatalogNavPanel';
+import { smallPseudoHeaders } from '../../../../../data/_data';
 /**HardCodedData**/
 const links = [
   {
@@ -56,7 +58,7 @@ const ProductDescription: React.FunctionComponent<{
               />
             </div> */}
             <div className=" flex flex-col justify-center items-start gap-y-8 w-full xl:w-[50%] ">
-              {links.map(({ l1, l2, linkHref }, i) => (
+              {/* {links.map(({ l1, l2, linkHref }, i) => (
                 <div
                   key={i}
                   className={`${
@@ -80,7 +82,20 @@ const ProductDescription: React.FunctionComponent<{
                     pStyle="flex items-center h-full p-medium text-grey group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]"
                   />
                 </div>
-              ))}
+              ))} */}
+
+              <CatalogNavPanel
+                // key={index}
+                linkHeaders={[smallPseudoHeaders.n1, smallPseudoHeaders.n2]}
+                linkNames={['Przemysłowe wtyczki i gniazda', 'Przenośne']}
+                linkUrls={[
+                  catalogStructureData[0].subCategoriesUrls[0],
+                  catalogStructureData[0].mainCategoryUrl,
+                ]}
+                bottomHeader={smallPseudoHeaders.n3}
+                bottomName={'14307'}
+                bottomUrl={`${catalogStructureData[0].subCategoriesUrls[0]}/wtyczki-ip67-125A`}
+              />
             </div>
             <div className="flex justify-start bg-dark w-full max-w-[700px] lg:max-w-[1000px] xl:max-w-full">
               <SVG_14307_P28 />

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';
 /**HardCoded Data**/
 //___delay to create a sort of "animation sequence" => image - overlay - sniper
@@ -36,7 +36,25 @@ const PseudoTechPanel: React.FunctionComponent<{
         <div
           className={`absolute flex justify-end items-end p-2 sm:p-3 bottom-0 right-0 h-[20%] w-[20%]`}
         >
-          <div className={isSection_2_Open ? '' : 'animate-spin-slow '}>
+          <AnimatePresence>
+            {!isSection_2_Open && (
+              <motion.div
+                // className="animate-spin-slow "
+                initial={{ scale: 1 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0, transition: { duration: 3 } }}
+              >
+                <div className="animate-spin-slow ">
+                  <button
+                    aria-label="Click!"
+                    className="w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-corpo  animate-pulse glow"
+                    //___animate-pulse glow
+                  />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          {/* <div className={isSection_2_Open ? '' : 'animate-spin-slow '}>
             <button
               aria-label="Click!"
               className={
@@ -45,7 +63,7 @@ const PseudoTechPanel: React.FunctionComponent<{
                   : `w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-corpo glow animate-pulse`
               }
             />
-          </div>
+          </div> */}
         </div>
         <div className={`absolute top-0 right-0 h-[50%] w-[50%]`}>
           <div className="relative w-full h-full">

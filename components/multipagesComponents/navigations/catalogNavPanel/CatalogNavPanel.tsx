@@ -3,13 +3,10 @@ import React, { useEffect, useState } from 'react';
 import SmallPseudoHeader from '../../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import LinkWithTextAndIcon from '../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
 import H1Component from '../../../_basicComponents/componentH1/H1Component';
-// import H1AnimatedPresence from '../../../_basicComponents/componentH1/H1AnimatedPresence';
 /**TS**/
 import { IF_CatalogNavPanel } from '../../../../utils/TS/typeScriptStaff';
 /**Basic Data*/
 import { corpoColors } from '../../../../data/_data';
-// import ArrowLongRightIcon from '../../../SVG/icons/ArrowLongRightIcon';
-// import useMeasure from 'react-use-measure';
 
 /**HardCoded Staff*/
 const headerTextStyle =
@@ -23,6 +20,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
   //__
   bottomName,
   bottomHeader,
+  bottomUrl,
   //__
   optionalHeader,
 }) => {
@@ -75,12 +73,33 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
           className="flex "
           //  className="pl-[26px]"
         >
-          <H1Component
-            text={bottomName}
-            // customeStyle={`text-light text-left ${textStyle}`}
-            customeStyle=" text-light text-left text-[1.5rem] lg:text-[2rem] xxl:text-[2.25] leading-1 tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]"
-            variantH="custome"
-          />
+          {bottomUrl ? (
+            <>
+              <div
+                //  className="pl-[26px] "
+                style={{ width: 'fit-content' }}
+              >
+                <LinkWithTextAndIcon
+                  linkHref={bottomUrl}
+                  controlsSet={{ background: corpoColors.dark }}
+                  aStyle="flex items-center gap-4 h-full ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-[10px]"
+                  pLabel={bottomName}
+                  //___for <SmallPseudoHeader>
+                  hasBox={false}
+                  hasVerticalOrnament={false}
+                  pStyle={`text-grey text-left ${textStyle}`}
+                />
+              </div>
+            </>
+          ) : (
+            <H1Component
+              text={bottomName}
+              // customeStyle={`text-light text-left ${textStyle}`}
+              customeStyle=" text-light text-left text-[1.5rem] lg:text-[2rem] xxl:text-[2.25] leading-1 tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]"
+              variantH="custome"
+            />
+          )}
+
           <div className="h-6" />
         </div>
       </div>

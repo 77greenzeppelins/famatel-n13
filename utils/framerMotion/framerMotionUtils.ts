@@ -260,7 +260,7 @@ used in <Header> for header itsef and <MobileMenuButton>; just to coordinate the
 */
 const headerVariants = {
   from: { y: '-100%' },
-  to: { y: 0, transition: { duration: 0.8 } },
+  to: { y: 0, transition: { duration: 0.8, delay: 2.2 } },
 };
 
 export {

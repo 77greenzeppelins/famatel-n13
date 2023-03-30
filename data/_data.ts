@@ -219,6 +219,8 @@ const smallPseudoHeaders = {
 /***...*/
 const story = {
   oFirmiePage: {
+    pseudoHeader: 'Bezpieczne rozwiązania',
+    heroMainText: 'Elektryka przemysłowa',
     animatedText: [
       'Stworzyliśmy ten model, aby wspierać Twoje działania w szczególnie wymagających warunkach.',
       'Od przeszło 30 lat dbamy o Twoje bezpieczeństwo przy inwestycjach z zakresu elektryki przemysłowej.',

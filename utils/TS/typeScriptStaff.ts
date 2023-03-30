@@ -132,6 +132,7 @@ interface IF_CatalogNavPanel {
   //___
   bottomName?: string;
   bottomHeader: string;
+  bottomUrl?: string;
   //___
   optionalHeader?: string;
 }
