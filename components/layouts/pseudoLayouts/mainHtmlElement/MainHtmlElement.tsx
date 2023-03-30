@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import Head from 'next/head';
 // import LocomotiveScroll from 'locomotive-scroll';
 // import { useRouter } from 'next/router';
 /**Fonts Staff
  * resource: doc. & https://www.youtube.com/watch?v=L8_98i_bMMA
  **/
 import localFont from '@next/font/local';
+
 // import locScrollInstance from '../../pagesLayouts/locomotiveComponents/locScrollInstance';
 // import LocomotiveContainer from '../../pagesLayouts/locomotiveComponents/LocomotiveContainer';
 const haasFont = localFont({
@@ -21,36 +23,11 @@ const haasFont = localFont({
  * ___1___
  * allowes to introduce font for all pages
  * ___2___
- * allowes general "layout-shift" between "display: fixed" & "display: flex" according to route.pathname"; 25.02.2023 quit this concept...
+ * allowes general "layout-shift" between "display: fixed" & "display: flex" according to route.pathname"; 25.02.2023 I quit this concept...
  */
 const MainHtmlElement: React.FunctionComponent<{
   children: React.ReactNode;
 }> = ({ children }) => {
-  /**...**/
-
-  // useEffect(() => {
-  // locScrollInstance();
-  //___required by TS
-  // const el = document.querySelector('[data-scroll-container]') as HTMLElement;
-  //__create instance of LocomotiveScroll
-  // const scroll = new LocomotiveScroll({
-  //   // ___specify the el property as the scrolling container, which we select using a data attribute...
-  //   el: el,
-  //   smooth: true,
-  //   // multiplier: 0.5,
-  //   // smartphone: {
-  //   //   smooth: true,
-  //   // },
-  //   // smoothMobile: false,
-  //   // resetNativeScroll: true,
-  //   // inertia: 0.75,
-  // });
-  // console.log('el', el);
-  // return () => {
-  //   if (scroll) scroll.destroy();
-  // };
-  // }, []);
-
   /**JSX**/
   return (
     // <LocomotiveContainer>
@@ -58,6 +35,17 @@ const MainHtmlElement: React.FunctionComponent<{
       className={`${haasFont.className} flex w-full h-full`}
       // data-scroll-container
     >
+      <Head>
+        <title>Famatel Polska</title>
+        {/*
+        resource: https://moz.com/blog/the-ultimate-guide-to-seo-meta-tags
+        */}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta
+          http-equiv="Content-Type"
+          content="text/html; charset=ISO-8859-1"
+        ></meta>
+      </Head>
       {children}
     </main>
     // </LocomotiveContainer>
@@ -65,6 +53,31 @@ const MainHtmlElement: React.FunctionComponent<{
 };
 
 export default MainHtmlElement;
+
+/**...**/
+
+// useEffect(() => {
+// locScrollInstance();
+//___required by TS
+// const el = document.querySelector('[data-scroll-container]') as HTMLElement;
+//__create instance of LocomotiveScroll
+// const scroll = new LocomotiveScroll({
+//   // ___specify the el property as the scrolling container, which we select using a data attribute...
+//   el: el,
+//   smooth: true,
+//   // multiplier: 0.5,
+//   // smartphone: {
+//   //   smooth: true,
+//   // },
+//   // smoothMobile: false,
+//   // resetNativeScroll: true,
+//   // inertia: 0.75,
+// });
+// console.log('el', el);
+// return () => {
+//   if (scroll) scroll.destroy();
+// };
+// }, []);
 
 // useEffect(() => {
 //   let scroll;
