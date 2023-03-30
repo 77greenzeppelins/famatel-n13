@@ -47,7 +47,7 @@ const PseudoTechPanel: React.FunctionComponent<{
                 <div className="animate-spin-slow ">
                   <button
                     aria-label="Click!"
-                    className="w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-corpo  animate-pulse glow"
+                    className="w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-corpo animate-pulse glow"
                     //___animate-pulse glow
                   />
                 </div>

@@ -20,18 +20,27 @@ const DoPobraniaContent = () => {
       className="relative bg-dark pt-[60px]"
     >
       <div className="w-full h-full inner-px-md-xl-xxl">
-        <div className="w-full flex flex-col gap-y-10 pt-10">
-          <FadingHeader label={'KATALOG'} />
-          <div className="flex flex-col-reverse xxl:flex-row gap-10">
-            <CatalogChapters />
-            <FullCatalog mdTextStyle={mdTextStyle} lgTextStyle={lgTextStyle} />
+        <div className="w-full flex flex-col gap-y-20 pt-10">
+          <div className="flex flex-col gap-y-10">
+            <FadingHeader label={'KATALOG'} />
+            <div className="flex flex-col-reverse xxl:flex-row gap-10">
+              <CatalogChapters />
+              <FullCatalog
+                mdTextStyle={mdTextStyle}
+                lgTextStyle={lgTextStyle}
+              />
+            </div>
           </div>
-          <FadingHeader label={'DEKLARACJE'} />
-          <div>
-            <DeclarationsSection />
+          <div className="flex flex-col gap-y-10">
+            <FadingHeader label={'DEKLARACJE'} />
+            <div>
+              <DeclarationsSection />
+            </div>
           </div>
-          <FadingHeader label={'KARTY KATALOGOWE'} />
-          <div className="h-[10vh]" />
+          <div className="flex flex-col gap-y-10">
+            <FadingHeader label={'KARTY KATALOGOWE'} />
+            <div className="h-[10vh]" />
+          </div>
         </div>
       </div>
     </div>

@@ -22,16 +22,18 @@ const FadingHeader: React.FC<{
       className={
         mainContainerStyle
           ? mainContainerStyle
-          : 'w-full flex flex-col gap-[4px]'
+          : 'w-full flex flex-col gap-[10px]'
       }
     >
       <SmallPseudoHeader
         text={label}
-        textStyle={
-          textStyle
-            ? textStyle
-            : 'text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025'
-        }
+        textStyle={textStyle}
+        // textStyle={
+        //   textStyle
+        //     ? textStyle
+        //     : 'text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025'
+        // }
+
         hasBox={hasBox}
         hasVerticalOrnament={hasVerticalOrnament}
       />

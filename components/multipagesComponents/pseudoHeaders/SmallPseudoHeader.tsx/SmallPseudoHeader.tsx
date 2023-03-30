@@ -44,7 +44,7 @@ const SmallPseudoHeader: React.FunctionComponent<{
       {hasBox && <div className={boxStyle ? boxStyle : boxDefaultStyle} />}
       <p
         className={`${textStyle ? textStyle : textDefaultStyle} ${
-          hasVerticalOrnament ? 'border-l border-corpo pl-4' : ''
+          hasVerticalOrnament ? 'border-l-[2px] border-corpo pl-3' : ''
         } `}
         style={inlineTextStyle}
       >

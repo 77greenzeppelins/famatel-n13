@@ -50,7 +50,7 @@ const CatalogChapters = () => {
         <DownloadableRow
           key={i}
           rowLabel={name}
-          rowNumber={1 + 1}
+          rowNumber={i + 1}
           buttonsLabels={buttonsLabels[i]}
           staffToDownload={staffLinks[i]}
         />

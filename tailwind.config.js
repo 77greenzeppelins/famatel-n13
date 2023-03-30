@@ -48,6 +48,7 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite',
+        'bounce-slow': 'bounce 4s  infinite',
       },
     },
   },

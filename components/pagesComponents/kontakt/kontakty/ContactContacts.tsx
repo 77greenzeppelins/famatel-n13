@@ -21,15 +21,15 @@ const labelStyle =
 const ContactContacts: React.FunctionComponent = () => {
   /**JSX**/
   return (
-    <div className="relative flex flex-col gap-y-4">
+    <div className="relative flex flex-col gap-y-1">
       <motion.div
-        className=" flex flex-col gap-y-4"
+        className=" flex flex-col gap-y-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.01, delay: 0.2 } }}
       >
         <FadingHeader label={'Kontakt'} />
 
-        <div className="flex flex-col gap-y-10 pt-2">
+        <div className="flex flex-col gap-y-5 ">
           <div>
             <a
               href="tel:601 460 307"

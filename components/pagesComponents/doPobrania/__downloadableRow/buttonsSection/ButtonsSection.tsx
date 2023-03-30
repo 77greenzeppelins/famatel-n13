@@ -18,8 +18,9 @@ const ButtonsSection: React.FC<{
         >
           <ArrowDownloadIcon
             className={
-              'w-4 h-4 sm:w-6 sm:h-6 stroke-grey group-hover:stroke-light group-hover:translate-y-1 ease-in duration-300 delay-300'
+              'w-4 h-4 sm:w-6 sm:h-6 stroke-grey group-hover:stroke-light group-hover:translate-y-1 ease-in duration-300 delay-100'
               //___animate-bounce animate-ping group-hover:translate-y-1 group-hover:translate-x-1 group-hover:scale-[1.1]
+              //___group-hover:translate-y-1 ease-in duration-300 delay-300
             }
           />
           <DownloadableLink

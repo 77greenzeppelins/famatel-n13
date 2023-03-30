@@ -21,9 +21,9 @@ const KontaktContent = () => {
       <div className="relative w-full h-full ">
         <ContactIntro />
         <div className="inner-px-md-xl-xxl">
-          <div className="flex flex-col gap-y-14 w-full">
+          <div className="flex flex-col gap-y-20 lg:gap-y-28 w-full">
             <div
-              className="flex w-full md:w-[50%] flex-col gap-y-14 xl:gap-y-20 z-10"
+              className="flex w-full md:w-[50%] flex-col gap-y-20 lg:gap-y-28 z-10"
               //___xl:flex-row xl:gap-x-20 gap-y-[80px]
             >
               <div className=" ">
