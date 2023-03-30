@@ -44,6 +44,12 @@ const MainHtmlElement: React.FunctionComponent<{
         <meta
           http-equiv="Content-Type"
           content="text/html; charset=ISO-8859-1"
+        />
+        <meta lang="pl" />
+        <meta
+          name="description"
+          content="We are specialised manufacturers in the international electrical sector with more than 30 years of experience developing electrical solutions that provide value to professionals."
+          // content="We are specialised manufacturers in the international electrical sector with more than 30 years of experience developing electrical solutions that provide value to professionals."
         ></meta>
       </Head>
       {children}
