@@ -15,7 +15,7 @@ const DownloadableRow: React.FC<{
 }> = ({ rowLabel, rowNumber, buttonsLabels, staffToDownload }) => {
   /**JSX**/
   return (
-    <div className="relative min-h-[64px] sm:min-h-[32px] flex items-center ">
+    <div className="relative min-h-[64px] sm:min-h-[32px] flex items-center group">
       <div className="flex items-center min-w-[24px] min-h-[64px] sm:min-h-[32px] ">
         <p className={textStyle}>{rowNumber}</p>
       </div>

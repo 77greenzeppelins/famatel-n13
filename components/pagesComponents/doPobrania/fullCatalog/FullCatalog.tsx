@@ -1,7 +1,6 @@
 import React from 'react';
 /**Components**/
 import FadingFrame from '../../../multipagesComponents/lines/fadingFrame/FadingFrame';
-import ArrowDownloadIcon from '../../../SVG/icons/ArrowDownloadIcon';
 import DownloadableLink from '../../../_basicComponents/links/downloadableLink/DownloadableLink';
 /**Hardcoded Staff**/
 const fakeLink = '/pdf/catalogChapters/05_przedluzacze_bebnowe.pdf';
@@ -22,11 +21,6 @@ const FullCatalog: React.FC<{ mdTextStyle?: string; lgTextStyle?: string }> = ({
           <p className={mdTextStyle}>2023</p>
         </div>
         <div className="flex items-center justify-between min-w-[92px] gap-3 group">
-          <ArrowDownloadIcon
-            className={
-              'w-4 h-4 sm:w-6 sm:h-6 stroke-grey group-hover:stroke-light group-hover:translate-y-1 ease-in duration-300 delay-300'
-            }
-          />
           <DownloadableLink
             staffToDownload={fakeLink}
             linkLabel={'PEŁNA WERSJA'}
