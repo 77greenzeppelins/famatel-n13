@@ -46,6 +46,9 @@ module.exports = {
         vmG: 'var(--vModGreen)',
         vmL: 'var(--vModLight)',
       },
+      animation: {
+        'spin-slow': 'spin 8s linear infinite',
+      },
     },
   },
   plugins: [],

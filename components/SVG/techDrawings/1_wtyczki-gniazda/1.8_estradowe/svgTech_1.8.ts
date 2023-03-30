@@ -3,12 +3,14 @@ import React from 'react';
 import SVG_1_8_1107 from './SVG_1.8_1107';
 import SVG_1_8_2108 from './SVG_1.8_2108';
 import SVG_1_8_13410 from './SVG_1.8_13410';
+import SVG_1_8_17020 from './SVG_1.8_17020';
+import SVG_1_8_17023 from './SVG_1.8_17023';
 import SVG_1_8_17120 from './SVG_1.8_17120';
 import SVG_1_8_17122 from './SVG_1.8_17122';
-
 import SVG_1_8_17220 from './SVG_1.8_17220';
 import SVG_1_8_23410 from './SVG_1.8_23410';
 import SVG_1_8_23480 from './SVG_1.8_23480';
+import SVG_1_8_39103 from './SVG_1.8_39103';
 
 /**TS**/
 import { IF_SvgTech } from '../../../../../utils/TS/typeScriptStaff';
@@ -23,6 +25,9 @@ const svgTech_1_8: readonly IF_SvgTech[] = [
   { model: '17220', Component: SVG_1_8_17220 },
   { model: '17120', Component: SVG_1_8_17120 },
   { model: '17122', Component: SVG_1_8_17122 },
+  { model: '17023', Component: SVG_1_8_17023 },
+  { model: '17020', Component: SVG_1_8_17020 },
+  { model: '39103', Component: SVG_1_8_39103 },
 ];
 
 export { svgTech_1_8 };

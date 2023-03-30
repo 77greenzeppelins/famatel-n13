@@ -56,13 +56,7 @@ const NavLink: React.FunctionComponent<{
   /**JSX*/
   return (
     <>
-      <motion.li
-        data-component="NavLink_container"
-        className="relative ml-6 fc"
-        //___my-auto
-        // onHoverStart={onHoverStartHandler}
-        // onHoverEnd={onHoverEndHandler}
-      >
+      <li data-component="NavLink_container" className="relative ml-6 fc">
         <div
           data-layout="wrapper_for_DropDownMenuHolder"
           className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] bg-corpo"
@@ -92,14 +86,21 @@ const NavLink: React.FunctionComponent<{
             <span>{label}</span>
           </p>
 
-          <div
+          {/* <div
             className={`absolute border-b border-grey h-[32px] ${
               linkStyleisHovered ? 'w-[0%]' : 'w-full'
             } inset-0 opacity-0 hover:opacity-100  ease-in duration-300 `}
             //__w-full h-full
-          />
+          /> */}
+          <span
+            className={`h-[1px] inline-block w-0 bg-grey absolute left-0 bottom-[14px] group-hover:w-full transition-[width] ease-in duration-300 ${
+              linkStyleisHovered ? 'opacity-0' : 'opacity-1'
+            }`}
+          >
+            &nbsp;
+          </span>
         </AriaJSLink>
-      </motion.li>
+      </li>
       {hasDropDownMenu ? (
         <CatalogOpener
           isClicked={isClicked}

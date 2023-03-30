@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import LocomotiveScroll from 'locomotive-scroll';
+// import LocomotiveScroll from 'locomotive-scroll';
 // import { useRouter } from 'next/router';
 /**Fonts Staff
  * resource: doc. & https://www.youtube.com/watch?v=L8_98i_bMMA
@@ -9,6 +9,9 @@ import localFont from '@next/font/local';
 // import LocomotiveContainer from '../../pagesLayouts/locomotiveComponents/LocomotiveContainer';
 const haasFont = localFont({
   src: '../../../../public/fonts/HaasGrotDisp-55Roman.woff2',
+  //___
+  // subsets: ["latin"]
+  // variable: "--font-haas"
 });
 
 /**
@@ -53,7 +56,7 @@ const MainHtmlElement: React.FunctionComponent<{
     // <LocomotiveContainer>
     <main
       className={`${haasFont.className} flex w-full h-full`}
-      data-scroll-container
+      // data-scroll-container
     >
       {children}
     </main>

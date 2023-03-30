@@ -36,13 +36,15 @@ const PseudoTechPanel: React.FunctionComponent<{
         <div
           className={`absolute flex justify-end items-end p-2 sm:p-3 bottom-0 right-0 h-[20%] w-[20%]`}
         >
-          <motion.button
-            className={
-              isSection_2_Open
-                ? 'w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-transparent border-[0.5px] border-greyShade2 transition-all'
-                : `w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-corpo glow animate-pulse`
-            }
-          />
+          <div className={isSection_2_Open ? '' : 'animate-spin-slow '}>
+            <button
+              className={
+                isSection_2_Open
+                  ? 'w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-transparent border-[0.5px] border-greyShade2 transition-all'
+                  : `w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-corpo glow animate-pulse`
+              }
+            />
+          </div>
         </div>
         <div className={`absolute top-0 right-0 h-[50%] w-[50%]`}>
           <div className="relative w-full h-full">

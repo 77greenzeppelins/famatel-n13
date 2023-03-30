@@ -10,7 +10,7 @@ const HomePage: NextPageWithLayout = () => {
     // <>
     //   <Head>
     //     <title>Famatel Polska</title>
-    //     <meta />
+    //     <meta name='description content=' '/>
     //   </Head>
     <OFirmieContent />
   );
