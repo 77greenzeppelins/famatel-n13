@@ -38,6 +38,7 @@ const PseudoTechPanel: React.FunctionComponent<{
         >
           <div className={isSection_2_Open ? '' : 'animate-spin-slow '}>
             <button
+              aria-label="Click!"
               className={
                 isSection_2_Open
                   ? 'w-4 h-4 aspect-square sm:w-6 sm:h-6 rounded-sm bg-transparent border-[0.5px] border-greyShade2 transition-all'
