@@ -19,7 +19,7 @@ const SpecialCard = () => {
           </div> */}
           {/* <SvgLogoF svgStyle={'w-[70%]'} gStyle={'stroke-grey'} /> */}
           {/* <SvgLogoFgrad svgStyle={'w-[70%]'} />*/}
-          <SvgLogoFgradient svgStyle={'w-[70%]'} />
+          {/* <SvgLogoFgradient svgStyle={'w-[70%]'} /> */}
         </div>
 
         <div className="relative flex flex-col items-center w-full lg:w-[70%] h-full">

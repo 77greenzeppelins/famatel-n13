@@ -27,7 +27,7 @@ const DropDownMenusHolder = ({
           <motion.div
             id="DropDownMenusHolder__container"
             key={label}
-            className="fc w-screen h-screen bg-dark"
+            className="fc w-screen h-screen bg-dark pointer-events-auto"
             variants={overlayContainerVariants}
             animate="animate"
             initial="initial"

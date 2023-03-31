@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 /**Components**/
 import NavLink from './navLink/NavLink';
 /**Basic Data**/
@@ -17,7 +17,7 @@ const NavForMainPages: React.FunctionComponent = () => {
       */
       case screenWidth >= 1024:
         return (
-          <ul className="hidden h-full md:flex ">
+          <ul className="hidden h-full md:flex">
             {mainPages.map(({ arrayIndex, label, url, hasDropDownMenu }) => {
               return (
                 <NavLink

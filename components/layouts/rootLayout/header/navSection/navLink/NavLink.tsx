@@ -59,7 +59,7 @@ const NavLink: React.FunctionComponent<{
       <li data-component="NavLink_container" className="relative ml-6 fc">
         <div
           data-layout="wrapper_for_DropDownMenuHolder"
-          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] bg-corpo"
+          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] pointer-events-none"
         >
           <DropDownMenusHolder
             isHovered={hovererState.isHovered}
@@ -93,7 +93,7 @@ const NavLink: React.FunctionComponent<{
             //__w-full h-full
           /> */}
           <span
-            className={`h-[1px] inline-block w-0 bg-grey absolute left-0 bottom-[14px] group-hover:w-full transition-[width] ease-in duration-300 ${
+            className={`h-[1px] inline-block w-0 bg-grey absolute left-0 bottom-[14px] group-hover:w-full transition-[width] ease-in duration-300 delay-400 ${
               linkStyleisHovered ? 'opacity-0' : 'opacity-1'
             }`}
           >
