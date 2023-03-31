@@ -3,7 +3,7 @@ import React from 'react';
 import FadingFrame from '../../../multipagesComponents/lines/fadingFrame/FadingFrame';
 import DownloadableLink from '../../../_basicComponents/links/downloadableLink/DownloadableLink';
 /**Hardcoded Staff**/
-const fakeLink = '/pdf/catalogChapters/05_przedluzacze_bebnowe.pdf';
+const catalogLink = '/pdf/catalog/Katalog 2023.pdf';
 
 const FullCatalog: React.FC<{ mdTextStyle?: string; lgTextStyle?: string }> = ({
   mdTextStyle,
@@ -22,8 +22,8 @@ const FullCatalog: React.FC<{ mdTextStyle?: string; lgTextStyle?: string }> = ({
         </div>
         <div className="flex items-center justify-between min-w-[92px] gap-3 group">
           <DownloadableLink
-            staffToDownload={fakeLink}
-            linkLabel={'PEŁNA WERSJA'}
+            staffToDownload={catalogLink}
+            linkLabel={'PEŁNA WERSJA (53 MB)'}
             textStyle={
               'header-link-label text-grey group-hover:text-light ease-in duration-300 disable whitespace-normal'
             }
