@@ -7,26 +7,35 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       width={basicSize}
       viewBox="0 0 600 500"
     >
+      <defs>
+        <clipPath id="clipPath25221">
+          <path d="M189.36 523.75a1.8 1.8 0 01-1.796-1.795v-53.364c0-.988.808-1.796 1.796-1.796h35.186c.988 0 1.796.808 1.796 1.796v53.364a1.8 1.8 0 01-1.796 1.795z"></path>
+        </clipPath>
+        <clipPath id="clipPath25261">
+          <path d="M15 15h612.28v858.9H15z"></path>
+        </clipPath>
+        {/* <clipPath id="clipPath33021"></clipPath>
+        <clipPath id="clipPath33027"></clipPath>
+        <clipPath id="clipPath33033"></clipPath> */}
+      </defs>
       <path
         fill="none"
         stroke="#231f20"
         strokeLinejoin="round"
         strokeMiterlimit="22.926"
-        strokeWidth="1.4"
-        d="M179.23 262.73h37.324v90.483H179.23z"
-        transform="translate(-625.26 -866.87) scale(3.7857)"
+        strokeWidth="5.455"
+        d="M47.12 124.17h145.42v352.54H47.12z"
       ></path>
       <path
         fill="none"
         stroke="#231f20"
         strokeMiterlimit="22.926"
-        strokeWidth="0.793"
-        d="M185.6 262.82h1.784v89.869H185.6z"
-        transform="translate(-625.26 -866.87) scale(3.7857)"
+        strokeWidth="3.091"
+        d="M71.962 124.55h6.95V474.7h-6.95z"
       ></path>
       <g
-        clipPath="url(#clipPath33068)"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 182.25 298.27)"
+        clipPath="url(#clipPath33033)"
+        transform="matrix(5.195 0 0 -5.195 58.897 262.66)"
       >
         <path
           fill="none"
@@ -37,110 +46,181 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         ></path>
       </g>
       <g
-        clipPath="url(#clipPath25293)"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 82.938 968.32)"
-      >
-        <path
-          fill="none"
-          stroke="#231f20"
-          strokeMiterlimit="22.926"
-          strokeWidth="0.595"
-          d="M122.27 532.82h.975v-7.378h-.975zm0-67.656h.975v-7.378h-.975z"
-        ></path>
-      </g>
-      <g
-        clipPath="url(#clipPath25303)"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 82.938 968.32)"
+        clipPath="url(#clipPath33027)"
+        transform="matrix(5.195 0 0 -5.195 300.23 124.17)"
       >
         <path
           fill="none"
           stroke="#231f20"
           strokeMiterlimit="22.926"
           strokeWidth="1.05"
-          d="M0 0h46.586c1.185 0 2.155-.97 2.155-2.155v-63.551c0-1.186-.97-2.155-2.155-2.155H0a2.161 2.161 0 00-2.155 2.155v63.551C-2.155-.97-1.185 0 0 0z"
-          transform="translate(121.24 529.2)"
-        ></path>
-        <path
-          fill="none"
-          stroke="#231f20"
-          strokeMiterlimit="22.926"
-          strokeWidth="0.315"
-          d="M0 0a2.546 2.546 0 10-.001-5.091A2.546 2.546 0 000 0z"
-          transform="translate(161.94 514.87)"
-        ></path>
-        <path
-          fill="#231f20"
-          d="M0 0a1.95 1.95 0 10-.001-3.899A1.95 1.95 0 000 0"
-          transform="translate(161.94 514.28)"
-        ></path>
-        <path
-          fill="none"
-          stroke="#231f20"
-          strokeMiterlimit="22.926"
-          strokeWidth="0.595"
-          d="M0 0a1.95 1.95 0 10-.001-3.899A1.95 1.95 0 000 0z"
-          transform="translate(161.94 514.28)"
-        ></path>
-        <path
-          fill="none"
-          stroke="#fff"
-          strokeMiterlimit="22.926"
-          strokeWidth="0.315"
-          d="M0 0a1.528 1.528 0 100-3.056A1.528 1.528 0 000 0z"
-          transform="translate(161.94 513.85)"
+          d="M0 0h46.181a2.364 2.364 0 002.358-2.357v-63.147a2.365 2.365 0 00-2.358-2.357H0a2.364 2.364 0 00-2.357 2.357v63.147A2.363 2.363 0 000 0z"
         ></path>
       </g>
-      <path
-        fill="none"
-        stroke="#fff"
-        strokeLinejoin="round"
-        strokeMiterlimit="22.926"
-        strokeWidth="0.595"
-        d="M0 0l.418-.723.417-.724h-1.67l.417.724z"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 298.82 283.95)"
-      ></path>
       <g
-        clipPath="url(#clipPath25335)"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 82.938 968.32)"
+        clipPath="url(#clipPath33021)"
+        transform="matrix(5.195 0 0 -5.195 328.79 152.49)"
+      >
+        <path
+          fill="#d3d2d2"
+          d="M0 0h35.186c.988 0 1.796-.808 1.796-1.796v-53.363c0-.988-.808-1.796-1.796-1.796H0c-.988 0-1.796.808-1.796 1.796v53.363C-1.796-.808-.988 0 0 0"
+        ></path>
+      </g>
+      <g
+        clipPath="url(#clipPath25221)"
+        transform="matrix(5.195 0 0 -5.195 -654.93 2873.4)"
       >
         <path
           fill="none"
           stroke="#231f20"
           strokeMiterlimit="22.926"
-          strokeWidth="0.315"
-          d="M0 0a2.546 2.546 0 10-.001-5.091A2.546 2.546 0 000 0z"
-          transform="translate(161.94 480.76)"
-        ></path>
-        <path
-          fill="#231f20"
-          d="M0 0a1.95 1.95 0 10-.001-3.899A1.95 1.95 0 000 0"
-          transform="translate(161.94 480.16)"
+          strokeWidth="0.525"
+          d="M0 0h5.52v-9.803a2.983 2.983 0 00-2.975-2.975H0z"
+          transform="translate(187.05 528.12)"
         ></path>
         <path
           fill="none"
           stroke="#231f20"
           strokeMiterlimit="22.926"
-          strokeWidth="0.595"
-          d="M0 0a1.95 1.95 0 10-.001-3.899A1.95 1.95 0 000 0z"
-          transform="translate(161.94 480.16)"
+          strokeWidth="0.525"
+          d="M0 0a1.84 1.84 0 100-3.68A1.84 1.84 0 000 0zm0-.613a1.227 1.227 0 100-2.454A1.227 1.227 0 000-.613z"
+          transform="translate(189.81 520.14)"
         ></path>
         <path
           fill="none"
-          stroke="#fff"
+          stroke="#231f20"
           strokeMiterlimit="22.926"
-          strokeWidth="0.315"
-          d="M0 0a1.528 1.528 0 100-3.056A1.528 1.528 0 000 0z"
-          transform="translate(161.94 479.74)"
+          strokeWidth="0.525"
+          d="M0 0h-5.52v-9.803a2.983 2.983 0 012.975-2.975H0z"
+          transform="translate(226.92 528.12)"
+        ></path>
+        <path
+          fill="none"
+          stroke="#231f20"
+          strokeMiterlimit="22.926"
+          strokeWidth="0.525"
+          d="M0 0a1.84 1.84 0 110-3.68A1.84 1.84 0 010 0zm0-.613a1.227 1.227 0 110-2.454A1.227 1.227 0 010-.613z"
+          transform="translate(224.16 520.14)"
+        ></path>
+        <path
+          fill="none"
+          stroke="#231f20"
+          strokeMiterlimit="22.926"
+          strokeWidth="0.525"
+          d="M0 0h5.52v9.803a2.983 2.983 0 01-2.975 2.975H0z"
+          transform="translate(187.05 462.65)"
+        ></path>
+        <path
+          fill="none"
+          stroke="#231f20"
+          strokeMiterlimit="22.926"
+          strokeWidth="0.525"
+          d="M0 0a1.84 1.84 0 110 3.68A1.84 1.84 0 010 0zm0 .613a1.227 1.227 0 110 2.454A1.227 1.227 0 010 .613z"
+          transform="translate(189.81 470.63)"
+        ></path>
+        <path
+          fill="none"
+          stroke="#231f20"
+          strokeMiterlimit="22.926"
+          strokeWidth="0.525"
+          d="M0 0h-5.52v9.803a2.983 2.983 0 002.975 2.975H0z"
+          transform="translate(226.92 462.65)"
+        ></path>
+        <path
+          fill="none"
+          stroke="#231f20"
+          strokeMiterlimit="22.926"
+          strokeWidth="0.525"
+          d="M0 0a1.84 1.84 0 100 3.68A1.84 1.84 0 000 0zm0 .613a1.227 1.227 0 100 2.454A1.227 1.227 0 000 .613z"
+          transform="translate(224.16 470.63)"
+        ></path>
+      </g>
+      <g
+        clipPath="url(#clipPath25261)"
+        transform="matrix(5.195 0 0 -5.195 -654.93 2873.4)"
+      >
+        <path
+          fill="none"
+          stroke="#231f20"
+          strokeMiterlimit="22.926"
+          strokeWidth="1.05"
+          d="M0 0h35.186c.988 0 1.796-.808 1.796-1.796v-53.363c0-.988-.808-1.796-1.796-1.796H0c-.988 0-1.796.808-1.796 1.796v53.363C-1.796-.808-.988 0 0 0z"
+          transform="translate(189.36 523.75)"
+        ></path>
+        <path
+          fill="none"
+          stroke="#231f20"
+          strokeMiterlimit="22.926"
+          strokeWidth="0.525"
+          d="M0 0h36.17a2.606 2.606 0 002.598-2.599V-56.6a2.606 2.606 0 00-2.598-2.598H0A2.606 2.606 0 00-2.599-56.6v54.001A2.606 2.606 0 000 0z"
+          transform="translate(188.87 524.87)"
+        ></path>
+        <path
+          fill="#fff"
+          d="M0 0h1.128v-4.805h-3.067v2.866C-1.939-.872-1.067 0 0 0"
+          transform="translate(183.44 529.2)"
+        ></path>
+        <path
+          fill="none"
+          stroke="#231f20"
+          strokeMiterlimit="22.926"
+          strokeWidth="0.788"
+          d="M0 0h1.128v-4.805h-3.067v2.866C-1.939-.872-1.067 0 0 0z"
+          transform="translate(183.44 529.2)"
+        ></path>
+        <path
+          fill="#fff"
+          d="M0 0h1.128v4.805h-3.067V1.939C-1.939.872-1.067 0 0 0"
+          transform="translate(183.44 461.43)"
+        ></path>
+        <path
+          fill="none"
+          stroke="#231f20"
+          strokeMiterlimit="22.926"
+          strokeWidth="0.788"
+          d="M0 0h1.128v4.805h-3.067V1.939C-1.939.872-1.067 0 0 0z"
+          transform="translate(183.44 461.43)"
         ></path>
       </g>
       <path
+        fill="#231f20"
+        d="M0 0l3.975-1.131L3.656 0l.319 1.131z"
+        transform="matrix(5.195 0 0 -5.195 316.94 342.07)"
+      ></path>
+      <path
         fill="none"
-        stroke="#fff"
-        strokeLinejoin="round"
+        stroke="#231f20"
         strokeMiterlimit="22.926"
-        strokeWidth="0.595"
-        d="M0 0l.418-.723.417-.724h-1.67l.417.724z"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 298.82 329.44)"
+        strokeWidth="0.227"
+        d="M0 0h33.144"
+        transform="matrix(5.195 0 0 -5.195 329.52 342.08)"
+      ></path>
+      <path
+        fill="#231f20"
+        d="M0 0l-3.975-1.131L-3.656 0l-.319 1.131z"
+        transform="matrix(5.195 0 0 -5.195 520.92 342.07)"
+      ></path>
+      <path
+        fill="none"
+        stroke="#231f20"
+        strokeMiterlimit="22.926"
+        strokeWidth="0.227"
+        d="M0 0v-55.497"
+        transform="matrix(5.195 0 0 -5.195 379.53 165.25)"
+      ></path>
+      <path
+        fill="#231f20"
+        d="M0 0l-1.131 3.975L0 3.656l1.131.319z"
+        transform="matrix(5.195 0 0 -5.195 379.54 448.38)"
+      ></path>
+      <path
+        fill="#d3d2d2"
+        d="M349.25 249.72h65.291v40.49H349.25zM416.07 326.82h73.244v37.565H416.07z"
+      ></path>
+      <path
+        fill="#231f20"
+        d="M0 0l-1.131-3.975L0-3.656l1.131-.319z"
+        transform="matrix(5.195 0 0 -5.195 379.66 154.92)"
       ></path>
       <path
         fill="none"
@@ -148,12 +228,12 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         strokeMiterlimit="22.926"
         strokeWidth="0.227"
         d="M0 0v17.869M51.635.138v17.731"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 240.74 261.14)"
+        transform="matrix(5.195 0 0 -5.195 286.77 117.99)"
       ></path>
       <path
         fill="#231f20"
         d="M0 0l3.975-1.131L3.656 0l.319 1.131z"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 240.74 240.74)"
+        transform="matrix(5.195 0 0 -5.195 286.77 38.493)"
       ></path>
       <path
         fill="none"
@@ -161,30 +241,26 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         strokeMiterlimit="22.926"
         strokeWidth="0.227"
         d="M0 0h48.514"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 243.78 240.74)"
+        transform="matrix(5.195 0 0 -5.195 298.64 38.494)"
       ></path>
       <path
         fill="#231f20"
         d="M0 0l-3.975-1.131L-3.656 0l-.319 1.131z"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 309.59 240.74)"
+        transform="matrix(5.195 0 0 -5.195 555.02 38.493)"
       ></path>
-      <path
-        fill="#fff"
-        d="M264.22 236.13h21.019v7.564H264.22z"
-        transform="translate(-625.26 -866.87) scale(3.7857)"
-      ></path>
+      <path fill="#fff" d="M378.28 20.562h81.894v29.471H378.28z"></path>
       <path
         fill="none"
         stroke="#231f20"
         strokeMiterlimit="22.926"
         strokeWidth="0.227"
         d="M0 0v15.635M27.954 0v15.635"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 179.23 260.05)"
+        transform="matrix(5.195 0 0 -5.195 47.122 113.74)"
       ></path>
       <path
         fill="#231f20"
         d="M0 0l3.975-1.131L3.656 0l.319 1.131z"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 179.24 241.01)"
+        transform="matrix(5.195 0 0 -5.195 47.175 39.556)"
       ></path>
       <path
         fill="none"
@@ -192,35 +268,32 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         strokeMiterlimit="22.926"
         strokeWidth="0.227"
         d="M0 0h26.17"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 179.81 241.01)"
+        transform="matrix(5.195 0 0 -5.195 49.377 39.558)"
       ></path>
       <path
         fill="#231f20"
         d="M0 0l-3.975-1.131L-3.656 0l-.319 1.131z"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 216.34 241.01)"
+        transform="matrix(5.195 0 0 -5.195 191.73 39.556)"
       ></path>
-      <path
-        fill="#fff"
-        d="M188.48 237.45h18.608v7.564H188.48z"
-        transform="translate(-625.26 -866.87) scale(3.7857)"
-      ></path>
+      <path fill="#fff" d="M83.152 25.68h72.502v29.471H83.152z"></path>
       <path
         fill="none"
         stroke="#231f20"
         strokeMiterlimit="22.926"
         strokeWidth="0.227"
         d="M0 0v-64.977"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 228.11 265.37)"
+        transform="matrix(5.195 0 0 -5.195 237.59 134.46)"
       ></path>
+      <path fill="#fff" d="M231.08 272.98h10.746v51.44H231.08z"></path>
       <path
         fill="#231f20"
         d="M0 0l-1.131 3.975L0 3.656l1.131.319z"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 228.02 353.21)"
+        transform="matrix(5.195 0 0 -5.195 237.23 476.7)"
       ></path>
       <path
         fill="#231f20"
         d="M0 0l-1.131-3.975L0-3.656l1.131-.319z"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 228.15 261.96)"
+        transform="matrix(5.195 0 0 -5.195 237.72 121.2)"
       ></path>
       <path
         fill="none"
@@ -228,11 +301,11 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         strokeMiterlimit="22.926"
         strokeWidth="0.227"
         d="M0 0h18.322M0-68.431h18.322"
-        transform="translate(-625.26 -866.87) scale(3.7857) matrix(1.3333 0 0 -1.3333 218.59 261.96)"
+        transform="matrix(5.195 0 0 -5.195 200.49 121.2)"
       ></path>
       <text
-        x="190.908"
-        y="233.94"
+        x="92.624"
+        y="10.191"
         style={{
           fontVariantCaps: 'normal',
           fontVariantEastAsian: 'normal',
@@ -240,14 +313,13 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
           fontVariantNumeric: 'normal',
         }}
         fill="#231f20"
-        strokeWidth="6.879"
+        strokeWidth="26.802"
         fontFamily="Arial"
-        fontSize="8"
-        transform="translate(-625.26 -866.87) scale(3.7857)"
+        fontSize="31.17"
       >
         <tspan
-          x="190.908"
-          y="243.94"
+          x="92.624"
+          y="49.154"
           style={{
             fontVariantCaps: 'normal',
             fontVariantEastAsian: 'normal',
@@ -259,8 +331,8 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         </tspan>
       </text>
       <text
-        x="268.06"
-        y="234.127"
+        x="393.23"
+        y="10.191"
         style={{
           fontVariantCaps: 'normal',
           fontVariantEastAsian: 'normal',
@@ -268,14 +340,13 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
           fontVariantNumeric: 'normal',
         }}
         fill="#231f20"
-        strokeWidth="6.879"
+        strokeWidth="26.802"
         fontFamily="Arial"
-        fontSize="8"
-        transform="translate(-625.26 -866.87) scale(3.7857)"
+        fontSize="31.17"
       >
         <tspan
-          x="268.06"
-          y="244.127"
+          x="393.23"
+          y="49.154"
           style={{
             fontVariantCaps: 'normal',
             fontVariantEastAsian: 'normal',
@@ -286,14 +357,9 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
           300
         </tspan>
       </text>
-      <path
-        fill="#fff"
-        d="M226.44 157.38h2.758v13.202h-2.758z"
-        transform="translate(-625.26 -866.87) scale(3.7857) translate(0 139.87)"
-      ></path>
       <text
-        x="221.057"
-        y="157.162"
+        x="210.094"
+        y="272.127"
         style={{
           fontVariantCaps: 'normal',
           fontVariantEastAsian: 'normal',
@@ -301,14 +367,13 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
           fontVariantNumeric: 'normal',
         }}
         fill="#231f20"
-        strokeWidth="6.879"
+        strokeWidth="26.802"
         fontFamily="Arial"
-        fontSize="8"
-        transform="translate(-625.26 -866.87) scale(3.7857) translate(0 139.87)"
+        fontSize="31.17"
       >
         <tspan
-          x="221.057"
-          y="167.162"
+          x="210.094"
+          y="311.09"
           style={{
             fontVariantCaps: 'normal',
             fontVariantEastAsian: 'normal',
@@ -319,18 +384,60 @@ const SVG_9_1_39134_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
           400
         </tspan>
       </text>
-      <defs>
-        <clipPath id="clipPath25293">
-          <path d="M121.24 529.2a2.16 2.16 0 01-2.154-2.155v-63.551a2.16 2.16 0 012.154-2.155h46.586c1.186 0 2.156.969 2.156 2.155v63.551c0 1.186-.97 2.155-2.156 2.155z"></path>
-        </clipPath>
-        <clipPath id="clipPath25303">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath25335">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath33068"></clipPath>
-      </defs>
+      <text
+        x="354.286"
+        y="244.412"
+        style={{
+          fontVariantCaps: 'normal',
+          fontVariantEastAsian: 'normal',
+          fontVariantLigatures: 'normal',
+          fontVariantNumeric: 'normal',
+        }}
+        fill="#231f20"
+        strokeWidth="26.802"
+        fontFamily="Arial"
+        fontSize="31.17"
+      >
+        <tspan
+          x="354.286"
+          y="283.374"
+          style={{
+            fontVariantCaps: 'normal',
+            fontVariantEastAsian: 'normal',
+            fontVariantLigatures: 'normal',
+            fontVariantNumeric: 'normal',
+          }}
+        >
+          352
+        </tspan>
+      </text>
+      <text
+        x="428.068"
+        y="312.95"
+        style={{
+          fontVariantCaps: 'normal',
+          fontVariantEastAsian: 'normal',
+          fontVariantLigatures: 'normal',
+          fontVariantNumeric: 'normal',
+        }}
+        fill="#231f20"
+        strokeWidth="26.802"
+        fontFamily="Arial"
+        fontSize="31.17"
+      >
+        <tspan
+          x="428.068"
+          y="351.913"
+          style={{
+            fontVariantCaps: 'normal',
+            fontVariantEastAsian: 'normal',
+            fontVariantLigatures: 'normal',
+            fontVariantNumeric: 'normal',
+          }}
+        >
+          250
+        </tspan>
+      </text>
     </svg>
   );
 };

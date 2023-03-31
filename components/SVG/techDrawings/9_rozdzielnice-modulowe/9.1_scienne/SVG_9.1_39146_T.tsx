@@ -14,8 +14,8 @@ const SVG_9_1_39146_T: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         <clipPath id="clipPath25791">
           <path d="M15 15h612.28v858.9H15z"></path>
         </clipPath>
-        <clipPath id="clipPath40799"></clipPath>
-        <clipPath id="clipPath40811"></clipPath>
+        {/* <clipPath id="clipPath40799"></clipPath> */}
+        {/* <clipPath id="clipPath40811"></clipPath> */}
       </defs>
       <path
         fill="none"
