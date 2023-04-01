@@ -3,7 +3,6 @@ import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 /**Components*/
 import PageTransitionHolder from '../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
-import MainHtmlElement from '../components/layouts/pseudoLayouts/mainHtmlElement/MainHtmlElement';
 /**CSS / Tailwind Staff*/
 import './globals.css'; // import '../styles/globals.css';
 
@@ -23,15 +22,11 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   //var supportsInertiaScrolling = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
 
-  // return getLayout(<Component {...pageProps} />);
   return getLayout(
-    // <main className={`${haasFont.className} fixed w-full h-full`}>
-    <MainHtmlElement>
-      {/* <ProductPageFixedOverlay /> */}
-      <PageTransitionHolder>
-        <Component {...pageProps} />
-      </PageTransitionHolder>
-    </MainHtmlElement>
+    <PageTransitionHolder>
+      <Component {...pageProps} />
+    </PageTransitionHolder>
+
     // </main>
   );
 }
