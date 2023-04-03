@@ -1,4 +1,4 @@
-// import Head from 'next/head';
+import Head from 'next/head';
 import type { ReactElement } from 'react';
 import Layout from '../components/layouts/rootLayout/Layout';
 import OFirmieContent from '../components/pagesComponents/o-firmie/OFirmieContent';
@@ -6,12 +6,12 @@ import type { NextPageWithLayout } from './_app';
 
 const HomePage: NextPageWithLayout = () => {
   return (
-    // <>
-    //   <Head>
-    //     <title>Famatel Polska</title>
-    //     <meta name='description content=' '/>
-    //   </Head>
-    <OFirmieContent />
+    <>
+      <Head>
+        <title>Famatel Polska</title>
+      </Head>
+      <OFirmieContent />
+    </>
   );
 };
 

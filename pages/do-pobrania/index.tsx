@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { ReactElement } from 'react';
 /**Components**/
 import Layout from '../../components/layouts/rootLayout/Layout';
@@ -14,10 +15,19 @@ const DoPobraniaPage: NextPageWithLayout = () => {
 
 DoPobraniaPage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Famatel Polska</title>
+        <meta
+          name="description"
+          content="Witaj na stronie z materiałami do pobrania. Peły obraz naszej elektryki przemysłowej uzyskasz dzięki najnowszemu katalowi. Poznasz tutaj wszystkie wtyczki, gniazda, czy rozdzielnice przemysłowe w najrozmaitszych konfiguracjach. Jeśli wolisz, możesz pobierać też poszczególne jego rozdziały. Znajdziesz tutaj ponadto deklaracje zgodności technicznej oraz karty techniczne poszczególnych produktów."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

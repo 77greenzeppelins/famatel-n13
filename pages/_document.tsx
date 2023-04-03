@@ -18,6 +18,8 @@ class MyDocument extends Document {
     return (
       <Html lang="pl">
         <Head>
+          <meta property="og:site_name" content="Famatel Polska"></meta>
+          <meta property="og:type" content="website"></meta>
           {/*
         resource: https://moz.com/blog/the-ultimate-guide-to-seo-meta-tags
     */}
@@ -25,13 +27,16 @@ class MyDocument extends Document {
             httpEquiv="Content-Type"
             content="text/html; charset=ISO-8859-1"
           />
-          <meta lang="pl" />
+          <meta lang="pl" dir="ltr" />
           <meta
             name="description"
-            content="We are specialised manufacturers in the international electrical sector with more than 30 years of experience developing electrical solutions that provide value to professionals."
-            // content="We are specialised manufacturers in the international electrical sector with more than 30 years of experience developing electrical solutions that provide value to professionals."
+            content="Famatel to międzynarodowy producent rozwiązań z zakresu  elektryki przemysłowej z ponad 30-letnim doświadczeniem. Oferujemy wysokiej jakości produkty, takie jak rozdzielnice, gniazda i wtyczki, które spełniają najwyższe standardy bezpieczeństwa i jakości. Dołącz do grona naszych zadowolonych klientów już dziś!"
           ></meta>
-          <title>Famatel Polska</title>
+          {/*
+           Nasze rozwiązania są projektowane z myślą o złożonych potrzebach przemysłu, zapewniając niezawodność i wydajność w każdych warunkach.
+          */}
+
+          {/* <title>Famatel Polska</title> */}
           <link rel="canonical" href="https://www.famatel.pl" />
         </Head>
         <body>
