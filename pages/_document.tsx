@@ -16,28 +16,24 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="pl">
+      <Html lang="pl" dir="ltr">
         <Head>
-          <meta property="og:site_name" content="Famatel Polska"></meta>
-          <meta property="og:type" content="website"></meta>
-          {/*
-        resource: https://moz.com/blog/the-ultimate-guide-to-seo-meta-tags
-    */}
           <meta
             httpEquiv="Content-Type"
             content="text/html; charset=ISO-8859-1"
           />
-          <meta lang="pl" dir="ltr" />
+          <meta property="og:site_name" content="Famatel Polska"></meta>
+          <meta property="og:type" content="website"></meta>
+          <meta property="og:locale" content="pl"></meta>
+          <meta name="twitter:card" content="summary_large_image"></meta>
           <meta
-            name="description"
-            content="Famatel to międzynarodowy producent rozwiązań z zakresu  elektryki przemysłowej z ponad 30-letnim doświadczeniem. Oferujemy wysokiej jakości produkty, takie jak rozdzielnice, gniazda i wtyczki, które spełniają najwyższe standardy bezpieczeństwa i jakości. Dołącz do grona naszych zadowolonych klientów już dziś!"
+            name="twitter:image"
+            content="https://famatel.pl/images/oFirmiePage/dirtyPlug_1.webp"
           ></meta>
-          {/*
-           Nasze rozwiązania są projektowane z myślą o złożonych potrzebach przemysłu, zapewniając niezawodność i wydajność w każdych warunkach.
-          */}
-
-          {/* <title>Famatel Polska</title> */}
-          <link rel="canonical" href="https://www.famatel.pl" />
+          <meta
+            name="twitter:image:alt"
+            content="Przemysłowa wtyczka używana w trudnych warunkach terenowych"
+          ></meta>
         </Head>
         <body>
           <Main

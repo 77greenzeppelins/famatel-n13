@@ -14,11 +14,20 @@ KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <Head>
-        <title>Famatel Polska</title>
+        <title>Kategorie produktów | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Kategorie produktów &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
         <meta
           name="description"
           content="Wybierz interesującą Cię grupę produktów! Nasze wtyczki i gniazda znajdują zastosowanie w najróżniejszych gałęziach przemysłu. Pozwalają na tworzenie ściśle określonych konfiguracji, spełniających indywidualne specyfikacje techniczne."
         ></meta>
+        <meta
+          property="og:description"
+          content="Wybierz interesującą Cię grupę produktów! Nasze wtyczki i gniazda znajdują zastosowanie w najróżniejszych gałęziach przemysłu. Pozwalają na tworzenie ściśle określonych konfiguracji, spełniających indywidualne specyfikacje techniczne."
+        ></meta>
+        <link rel="canonical" href="https://www.famatel.pl/produkty" />
       </Head>
       <Layout>
         {/* <NestedLayout>{page}</NestedLayout> */}

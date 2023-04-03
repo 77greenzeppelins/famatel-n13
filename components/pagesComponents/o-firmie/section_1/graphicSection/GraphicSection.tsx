@@ -19,7 +19,7 @@ const GraphicSection: React.FunctionComponent<{
       className="relative flex justify-end items-center w-full xl:max-w-[950px] xl:h-screen xxl:max-w-1150px]"
     >
       <ImageSection
-        imageData={imgOFirmiePage[1]}
+        imageData={imgOFirmiePage[0]}
         isSection_2_Open={isSection_2_Open}
         setIsSection_2_Open={setIsSection_2_Open}
       />

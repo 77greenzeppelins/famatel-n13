@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { ReactElement } from 'react';
 /**Components**/
 import Layout from '../../components/layouts/rootLayout/Layout';
@@ -13,10 +14,28 @@ const NowosciPage: NextPageWithLayout = () => {
 
 NowosciPage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Nowości | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Nowości &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Wszystko o najnowszych produktach w ofercie Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Wszystko o najnowszych produktach w ofercie Famatel."
+        ></meta>
+        <link rel="canonical" href="https://www.famatel.pl/nowosci" />
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 
