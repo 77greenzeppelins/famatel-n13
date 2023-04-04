@@ -32,10 +32,14 @@ const KontaktContent = () => {
               <div className="">
                 <ContactAddress />
               </div>
+              {/* <div className="">
+                <ContactMapka />
+              </div>  */}
             </div>
             <div className="">
               <ContactMapka />
             </div>
+            {/* <div className="h-[50vh]" /> */}
             {/* <div className="hidden md:block md:w-[50%] h-ful z-10 bg-corpo"></div> */}
           </div>
         </div>

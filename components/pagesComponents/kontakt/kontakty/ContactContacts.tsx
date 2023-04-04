@@ -1,5 +1,7 @@
 import React from 'react';
 /**Components**/
+import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
+import InViewAnimatedContent from '../_inViewAnimatedContent/InViewAnimatedContent';
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
 import FadingHeader from '../../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
 /*Icons Staff*/
@@ -7,10 +9,6 @@ import { EnvelopeIcon } from '@heroicons/react/24/solid';
 import { PhoneIcon } from '@heroicons/react/24/solid';
 /**Basic Data**/
 import { linksToInstantContactData } from '../../../../data/_data';
-/**Framer Motion staff*/
-import { motion } from 'framer-motion';
-import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
-import AnimatedContent from './animatedContent/AnimatedContent';
 
 /**HardCoded Staff*/
 const aStyle = 'flex items-center gap-6 group no-sparkling';
@@ -24,55 +22,49 @@ const ContactContacts: React.FunctionComponent = () => {
   /**JSX**/
   return (
     <div className="relative flex flex-col gap-y-1">
-      {/* <motion.div
-        className=" flex flex-col gap-y-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.01, delay: 0.2 } }}
-      >
-        <FadingHeader label={'Kontakt'} />
-
-        <div className="flex flex-col gap-y-5 ">
-          <div>
-            <a
-              href="tel:601 460 307"
-              className={aStyle}
-              style={{ width: 'fit-content' }}
-            >
-              <PhoneIcon className={iconsStyle} />
-              <p className={labelStyle}>Telefon: +48 601 460 307</p>
-            </a>
-          </div>
-
-          <div>
-            <a
-              href={linksToInstantContactData.mail}
-              className={aStyle}
-              style={{ width: 'fit-content' }}
-            >
-              <EnvelopeIcon className={iconsStyle} />
-              <p className={labelStyle}>biuro@famatel.pl</p>
-            </a>
-          </div>
-
-          <div>
-            <a
-              href="mailto:grzegorz.kowcz@famatel.pl"
-              className={aStyle}
-              style={{ width: 'fit-content' }}
-            >
-              <EnvelopeIcon className={iconsStyle} />
-              <p className={labelStyle}>grzegorz.kowcz@famatel.pl</p>
-            </a>
-          </div>
-        </div>
-      </motion.div> */}
       <InViewContainer
         animationDelay={2}
         outherContainerStyle="w-full"
         measuredElementStyle="relative "
         topFactor={0.6}
       >
-        <AnimatedContent />
+        <InViewAnimatedContent>
+          <FadingHeader label={'Kontakt'} />
+          <div className="flex flex-col gap-y-5 ">
+            <div>
+              <a
+                href="tel:601 460 307"
+                className={aStyle}
+                style={{ width: 'fit-content' }}
+              >
+                <PhoneIcon className={iconsStyle} />
+                <p className={labelStyle}>Telefon: +48 601 460 307</p>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href={linksToInstantContactData.mail}
+                className={aStyle}
+                style={{ width: 'fit-content' }}
+              >
+                <EnvelopeIcon className={iconsStyle} />
+                <p className={labelStyle}>biuro@famatel.pl</p>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="mailto:grzegorz.kowcz@famatel.pl"
+                className={aStyle}
+                style={{ width: 'fit-content' }}
+              >
+                <EnvelopeIcon className={iconsStyle} />
+                <p className={labelStyle}>grzegorz.kowcz@famatel.pl</p>
+              </a>
+            </div>
+          </div>
+        </InViewAnimatedContent>
       </InViewContainer>
 
       <OverlayWithGradient

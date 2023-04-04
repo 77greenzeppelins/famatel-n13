@@ -3,8 +3,6 @@ import InViewContainer from '../../../containers/inViewContainer/InViewContainer
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
 import FadingHeader from '../../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
 import InViewAnimatedContent from '../_inViewAnimatedContent/InViewAnimatedContent';
-import InViewContent from '../_isInViewContainer/IsInViewContainer';
-import AnimatedContent from './animatedContent/AnimatedContent';
 
 const address = ['Biuro/Magazyn', 'Ul. Willowa 5', '58-260 Bielawa'];
 const labelStyle =
@@ -21,7 +19,6 @@ const ContactAddress: React.FunctionComponent = () => {
         measuredElementStyle="relative "
         topFactor={0.6}
       >
-        {/* <AnimatedContent /> */}
         <InViewAnimatedContent>
           <FadingHeader label={'Adres'} />
           <div className="pt-2">
