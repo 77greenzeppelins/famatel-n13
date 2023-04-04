@@ -33,10 +33,13 @@ const TableFrame: React.FC<{
         return 'min-w-[700px]';
       case 'lg':
         return 'min-w-[900px]';
-      case 'custom':
+      // case 'custom':
+      //   return customeTrigger && customeTrigger;
+      default:
         return customeTrigger && customeTrigger;
     }
   };
+
   /**JSX*/
   return (
     <SliderWithScrollbar>

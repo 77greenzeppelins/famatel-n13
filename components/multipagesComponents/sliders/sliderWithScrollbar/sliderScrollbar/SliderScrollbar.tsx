@@ -1,6 +1,12 @@
-import React, { Dispatch, SetStateAction, useRef, useState } from 'react';
+import React, {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 /**Framer Motion Staff**/
-import { motion } from 'framer-motion';
+import { motion, useMotionValue } from 'framer-motion';
 /**Basic Data**/
 import { corpoColors } from '../../../../../data/_data';
 import ChevronLeftIcon from '../../../../SVG/icons/ChevronLeftIcon';
@@ -12,14 +18,28 @@ const SliderScrollbar: React.FC<{
   translateX: number;
   setTranslateXValue: Dispatch<SetStateAction<number>>;
 }> = ({ handleSize = 60, translateX, setTranslateXValue }) => {
+  /*
+   ----
+  */
+  // console.log('...translateX', translateX);
+  /*
+   ----
+  */
   /**References**/
   const constraintsRef = useRef<HTMLDivElement>(null!);
   const handlerRef = useRef<HTMLDivElement>(null!);
   const progressBarRef = useRef<HTMLDivElement>(null!);
+  const timeoutRef = useRef<NodeJS.Timeout>(); //__for handleResize()
+
+  /**Local State for resizing**/
+  // const [_, setWindowSize] = useState({ width: 0, height: 0 });
+
   /**Local State for countin progress of scroll's handle move**/
   const [progressValue, setProgressValue] = useState(0);
-  /**Local State for countin progress of scroll's handle move**/
-  // const [isDragging, setIsDragging] = useState(false);
+
+  /**Framer Value*/
+  const sliderHandlerPosition = useMotionValue(0);
+
   /*Drag Gesture Handler*/
   const dragHandler = () => {
     //___it activates calculation of getBoundingClientRect() = returns object with set of data; in practice we can detect slider's handler localization according to the left side of the page
@@ -34,12 +54,38 @@ const SliderScrollbar: React.FC<{
     const newProgress =
       (middleOfHandler - progressBarBounds.x) / progressBarBounds.width;
     setTranslateXValue(translateX * newProgress);
-    // console.log('...newProgress', newProgress);
     //___result 0.083333 * (100-0) = 8.333
+    // console.log('...newProgress', newProgress);
     // const newProgressInPercentage = newProgress * (max - min);
     setProgressValue(progressBarBounds.width * newProgress + handleSize / 2);
   };
 
+  /**Resizer**/
+  useEffect(() => {
+    //___
+    let progress = progressValue;
+    let progressBarBounds = progressBarRef.current?.getBoundingClientRect();
+    //___resize handler
+    function handleResize() {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => {
+        // setWindowSize({ width: window.innerWidth, height: innerHeight });
+        //__allowes to reset mposition of table
+        setProgressValue(0);
+        sliderHandlerPosition.set(0);
+        // console.log('________handleResize');
+      }, 400);
+    }
+    //__listener
+    window.addEventListener('resize', handleResize);
+    //__cleaner
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [progressValue, sliderHandlerPosition]);
+
+  /**JSX**/
   return (
     <div
       data-component="CarouselScrollbar__container"
@@ -67,18 +113,12 @@ const SliderScrollbar: React.FC<{
             ref={handlerRef}
             data-layout="slider-handler"
             className="relative flex items-center justify-between w-[60px] h-7 bg-dark border border-grey"
-            //___bg-corpo glow animate-pulse aspect-square rounded-sm
-            // style={{ width: handleSize, height: handleSize }}
             drag="x"
             dragMomentum={false}
-            dragElastic={0}
+            dragElastic={0} //___slider handler doesn't cross left and right borders set by slider bar
             dragConstraints={constraintsRef}
             onDrag={dragHandler}
-            // onDragStart={() => setIsDragging(true)}
-            // onDragEnd={() => setIsDragging(false)}
-            // onPointerDown={() => setIsDragging(true)}
-            // onPointerUp={() => setIsDragging(false)}
-            // animate={{ scale: isDragging ? 1.5 : 1 }}
+            style={{ x: sliderHandlerPosition }}
           >
             <ChevronLeftIcon
               className={'w-6 h-6'}
@@ -95,20 +135,17 @@ const SliderScrollbar: React.FC<{
           </motion.div>
         </div>
       </div>
-      {/* <div>
-        <p>{value}</p>
-      </div>  */}
-      {/* <div>
-        <p>{translateX}</p>
-      </div> */}
-      {/* <div>
-        <p>{translateXValue}</p>
-      </div> */}
     </div>
   );
 };
 
 export default SliderScrollbar;
+
+// onDragStart={() => setIsDragging(true)}
+// onDragEnd={() => setIsDragging(false)}
+// onPointerDown={() => setIsDragging(true)}
+// onPointerUp={() => setIsDragging(false)}
+// animate={{ scale: isDragging ? 1.5 : 1 }}
 
 /*
 <motion.button

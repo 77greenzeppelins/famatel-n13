@@ -16,11 +16,6 @@ import { NextPageWithLayout } from '../../../../_app';
 
 /**--------------------------------------**/
 const WtyczkiGniazdaPrzenosneProductPage: NextPageWithLayout = () => {
-  /**Router Section**/
-  //   const router = useRouter();
-  //   console.log('obudowyPusteSubCategoryData:', obudowyPusteSubCategoryData);
-  /**...**/
-
   /**JSX**/
   return (
     <ProductPageTemplate

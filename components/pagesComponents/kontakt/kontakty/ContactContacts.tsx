@@ -9,6 +9,8 @@ import { PhoneIcon } from '@heroicons/react/24/solid';
 import { linksToInstantContactData } from '../../../../data/_data';
 /**Framer Motion staff*/
 import { motion } from 'framer-motion';
+import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
+import AnimatedContent from './animatedContent/AnimatedContent';
 
 /**HardCoded Staff*/
 const aStyle = 'flex items-center gap-6 group no-sparkling';
@@ -22,7 +24,7 @@ const ContactContacts: React.FunctionComponent = () => {
   /**JSX**/
   return (
     <div className="relative flex flex-col gap-y-1">
-      <motion.div
+      {/* <motion.div
         className=" flex flex-col gap-y-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.01, delay: 0.2 } }}
@@ -63,7 +65,15 @@ const ContactContacts: React.FunctionComponent = () => {
             </a>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
+      <InViewContainer
+        animationDelay={2}
+        outherContainerStyle="w-full"
+        measuredElementStyle="relative "
+        topFactor={0.6}
+      >
+        <AnimatedContent />
+      </InViewContainer>
 
       <OverlayWithGradient
         initial={{ x: '-50%' }}

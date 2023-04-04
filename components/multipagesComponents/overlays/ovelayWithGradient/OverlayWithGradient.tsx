@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import useMeasure from 'react-use-measure';
-
+/*
+is used: as "initial / reload" animation; only to revel content when page is mounted or refreshed; 
+*/
 /**------------------------------------**/
 const OverlayWithGradient: React.FC<{
   transition?: {};

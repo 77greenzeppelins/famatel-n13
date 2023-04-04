@@ -6,14 +6,16 @@ import { motion } from 'framer-motion';
 /**TS**/
 type Props = {
   componentIsInView?: boolean;
-  // animationDelay?: number;
+  transitionDuration?: number;
+  transitionDelay?: number;
   text?: string;
 };
 
 /**-------------------------------------------**/
 const AnimatedText: React.FC<Props> = ({
   componentIsInView = false,
-  // animationDelay = 0,
+  transitionDuration = 0.6,
+  transitionDelay = 0.1,
   text,
 }) => {
   //   console.log('......AnimatedText / componentIsInView', componentIsInView);
@@ -27,11 +29,8 @@ const AnimatedText: React.FC<Props> = ({
         scale: componentIsInView ? 1 : 0.95,
       }}
       transition={{
-        duration: 0.6,
-        delay: 0,
-        // type: 'spring',
-        // bounce: 0.4,
-        // duration: 0.8,
+        duration: transitionDuration,
+        delay: transitionDelay,
       }}
     >
       {text}

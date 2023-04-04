@@ -18,7 +18,7 @@ const useDate = (): IF_DateInfo => {
   useEffect(() => {
     const currentDate = new Date();
     const year = currentDate.getFullYear();
-    const month = currentDate.getMonth() + 1; // getMonth() returns 0-11, so add 1 to get 1-12
+    const month = currentDate.getMonth();
     const day = currentDate.getDate();
     const weekday = currentDate.toLocaleString('default', { weekday: 'long' });
 

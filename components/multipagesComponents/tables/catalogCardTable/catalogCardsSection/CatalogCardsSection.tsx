@@ -16,7 +16,7 @@ const CatalogCardsSection: React.FC<IF_Props> = ({
   sliderTriggersValue,
   customeTrigger,
 }) => {
-  /**JSX* */
+  /**JSX**/
   return (
     <TableFrame
       sliderTriggersValue={customeTrigger ? customeTrigger : 'custom'}

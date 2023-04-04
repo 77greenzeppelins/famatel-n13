@@ -37,7 +37,7 @@ function useElementSize<T extends HTMLElement = HTMLDivElement>(): [
       scrollWidth: ref?.scrollWidth || 0,
       scrollHeight: ref?.scrollHeight || 0,
     });
-
+    // console.log('____resized in hook');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     ref?.offsetHeight,
