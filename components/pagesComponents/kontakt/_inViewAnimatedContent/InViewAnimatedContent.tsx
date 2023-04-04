@@ -17,8 +17,7 @@ const InViewAnimatedContent: React.FC<Props> = ({
   return (
     <motion.div
       className=" flex flex-col gap-y-10"
-      //   initial={{ opacity: 0 }}
-      //   animate={{ opacity: 1, transition: { duration: 0.01, delay: 0.2 } }}
+      initial={{ opacity: 0 }}
       animate={{
         opacity: componentIsInView ? 1 : 0,
         y: componentIsInView ? 0 : '5%',

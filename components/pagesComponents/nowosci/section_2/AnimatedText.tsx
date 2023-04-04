@@ -15,7 +15,7 @@ type Props = {
 const AnimatedText: React.FC<Props> = ({
   componentIsInView = false,
   transitionDuration = 0.6,
-  transitionDelay = 0.1,
+  transitionDelay = 0.4,
   text,
 }) => {
   //   console.log('......AnimatedText / componentIsInView', componentIsInView);
@@ -24,6 +24,7 @@ const AnimatedText: React.FC<Props> = ({
     <motion.p
       // ref={ref}
       className="text-light text-center text-[1.5rem] xs:text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] xl:text-[3rem] xxl:text-[3.5rem] font-bold tracking-[2px] leading-tight"
+      initial={{ opacity: 0 }}
       animate={{
         opacity: componentIsInView ? 1 : 0,
         scale: componentIsInView ? 1 : 0.95,

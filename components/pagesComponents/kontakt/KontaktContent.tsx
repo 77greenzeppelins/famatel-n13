@@ -22,25 +22,17 @@ const KontaktContent = () => {
         <ContactIntro />
         <div className="inner-px-md-xl-xxl">
           <div className="flex flex-col gap-y-20 lg:gap-y-28 w-full">
-            <div
-              className="flex w-full md:w-[50%] flex-col gap-y-20 lg:gap-y-28 z-10"
-              //___xl:flex-row xl:gap-x-20 gap-y-[80px]
-            >
+            <div className="flex w-full md:w-[50%] flex-col gap-y-20 lg:gap-y-28 z-10">
               <div className=" ">
                 <ContactContacts />
               </div>
-              <div className="">
-                <ContactAddress />
-              </div>
               {/* <div className="">
-                <ContactMapka />
-              </div>  */}
+                <ContactAddress />
+              </div> */}
             </div>
-            <div className="">
+            {/* <div className="">
               <ContactMapka />
-            </div>
-            {/* <div className="h-[50vh]" /> */}
-            {/* <div className="hidden md:block md:w-[50%] h-ful z-10 bg-corpo"></div> */}
+            </div> */}
           </div>
         </div>
       </div>
