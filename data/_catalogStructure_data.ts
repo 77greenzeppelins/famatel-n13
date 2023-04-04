@@ -49,10 +49,10 @@ const wtyczkiGniazdaSubCategoriesUrls: string[] = [
 
 //_____category__2
 const GniazdaZBlokadaSubCategoryNames: string[] = [
-  'Gniazda tablicowe z blokadą mechaniczną',
-  'Gniazda stałe z blokadą mechaniczną',
-  'Gniazda z blokadą mechaniczną z opcjonalnymi komponentami',
-  'Akcesoria do gniazd z blokadą',
+  'Gniazda tablicowe ',
+  'Gniazda stałe ',
+  'Gniazda z opcjonalnymi komponentami',
+  'Akcesoria do gniazd z rozłącznikiem i blokadą',
 ];
 const GniazdaZBlokadaSubCatPaths: string[] = [
   `tablicowe`,

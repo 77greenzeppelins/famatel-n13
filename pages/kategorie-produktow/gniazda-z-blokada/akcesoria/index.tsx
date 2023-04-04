@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { ReactElement } from 'react';
 /**Components*/
 import Layout from '../../../../components/layouts/rootLayout/Layout';
@@ -22,10 +23,29 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
 
 KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>
+          Akcesoria do gniazd z rozłącznikiem i blokadą | Famatel Polska
+        </title>
+        <meta
+          property="og:title"
+          content="Akcesoria do gniazd z rozłącznikiem i blokadą &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Poznaj akcesoria do gniazd z rozłącznikiem i blokadą marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Poznaj akcesoria do gniazd z rozłącznikiem i blokadą marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

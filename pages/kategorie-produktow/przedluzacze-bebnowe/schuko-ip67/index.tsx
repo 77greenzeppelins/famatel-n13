@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { ReactElement } from 'react';
 /**Components**/
 import Layout from '../../../../components/layouts/rootLayout/Layout';
@@ -33,10 +34,30 @@ PrzedluzaczeBebnowePrzemysloweProductPage.getLayout = function getLayout(
   page: ReactElement
 ) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>
+          Przemysłowe przedłużacze bębnowe IP67 z gniazdami Schuko | Famatel
+          Polska
+        </title>
+        <meta
+          property="og:title"
+          content="Przemysłowe przedłużacze bębnowe IP67 z gniazdami Schuko &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Poznaj ofertę przemysłowych przedłużaczy bębnowych IP67 z gniazdami Schuko."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Poznaj ofertę przemysłowych przedłużaczy bębnowych IP67 z gniazdami Schuko."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

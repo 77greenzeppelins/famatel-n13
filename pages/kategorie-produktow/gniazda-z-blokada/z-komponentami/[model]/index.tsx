@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { ReactElement, useState } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
@@ -16,11 +17,6 @@ import { NextPageWithLayout } from '../../../../_app';
 
 /**--------------------------------------**/
 const GniazdaBlokadaKomponentyProductPage: NextPageWithLayout = () => {
-  /**Router Section**/
-  //   const router = useRouter();
-  //   console.log('obudowyPusteSubCategoryData:', obudowyPusteSubCategoryData);
-  /**...**/
-
   /**JSX**/
   return (
     <ProductPageTemplate
@@ -53,10 +49,30 @@ GniazdaBlokadaKomponentyProductPage.getLayout = function getLayout(
   page: ReactElement
 ) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>
+          Gniazdo z rozłącznikiem, blokadą oraz opcjonalnymi komponentami |
+          Famatel Polska
+        </title>
+        <meta
+          property="og:title"
+          content="Gniazdo z rozłącznikiem, blokadą oraz opcjonalnymi komponentami &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Specyfikacja techniczna gniaza z rozłącznikiem, blokadą oraz opcjonalnymi komponentami."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Specyfikacja techniczna gniaza z rozłącznikiem, blokadą oraz opcjonalnymi komponentami."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { ReactElement } from 'react';
 /**Components*/
 import Layout from '../../../../components/layouts/rootLayout/Layout';
@@ -23,10 +24,27 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
 
 KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Puszki instalacyjne drywall | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Puszki instalacyjne drywall &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Poznaj ofertę puszek instalacyjnych drywall marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Poznaj ofertę puszek instalacyjnych drywall marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

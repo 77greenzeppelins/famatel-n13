@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { ReactElement, useState } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
@@ -14,7 +15,7 @@ import {
 import { NextPageWithLayout } from '../../../../_app';
 
 /**--------------------------------------**/
-const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
+const AdapterZPrzewodemProductPage: NextPageWithLayout = () => {
   /**Router Section**/
   //   const router = useRouter();
   //   console.log('obudowyPusteSubCategoryData:', obudowyPusteSubCategoryData);
@@ -50,15 +51,32 @@ const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
   );
 };
 
-GniazdaBlokadaStaleProductPage.getLayout = function getLayout(
+AdapterZPrzewodemProductPage.getLayout = function getLayout(
   page: ReactElement
 ) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Adapter przemysłowy z przewodem | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Adapter przemysłowy z przewodem &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Specyfikacja techniczna adaptera przemysłowego z przewodem marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Specyfikacja techniczna adaptera przemysłowego z przewodem marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 
-export default GniazdaBlokadaStaleProductPage;
+export default AdapterZPrzewodemProductPage;

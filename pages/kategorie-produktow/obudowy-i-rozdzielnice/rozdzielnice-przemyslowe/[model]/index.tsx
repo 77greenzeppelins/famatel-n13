@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { ReactElement } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
@@ -49,10 +50,27 @@ RozdzielnicePrzemysloweProductPage.getLayout = function getLayout(
   page: ReactElement
 ) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Rozdzielnica przemysłowa | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Rozdzielnica przemysłowa &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Specyfikacja techniczna rozdzielnicy przemysłowej marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Specyfikacja techniczna rozdzielnicy przemysłowej marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

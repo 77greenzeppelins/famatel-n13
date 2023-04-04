@@ -1,8 +1,8 @@
+import Head from 'next/head';
 import type { ReactElement } from 'react';
 /**Components*/
 import Layout from '../../../../components/layouts/rootLayout/Layout';
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
-// import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
 import { wtyczkiGniazdaKontenerowe_productCard_data } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_7_kontenerowe_data';
@@ -22,10 +22,27 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
 
 KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Wtyczki i gniazda kontenerowe | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Wtyczki i gniazda kontenerowe &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Poznaj ofertę wtyczek i gniazd kontenerowych marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Poznaj ofertę wtyczek i gniazd kontenerowych marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

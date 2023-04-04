@@ -12,7 +12,7 @@ import imageC5 from './5_modulowe-vita/9.6_06_3320-F.webp';
 import imageC6 from './6_scienne-icp/9.7_06_3401.webp';
 import imageC7 from './7_metalowe-ip40/9.8_01_3114.webp';
 import imageC8 from './8_metalowe-ict/9.9_04_3235.webp';
-import imageC9 from './9_akcesoria/9.9_11_keys.webp';
+import imageC9 from './9_akcesoria//9.9_SPTA-12.webp';
 
 /**TS**/
 import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';

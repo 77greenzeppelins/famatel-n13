@@ -12,6 +12,7 @@ import {
 } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_6_niskie-napiecia_data';
 /**TS**/
 import { NextPageWithLayout } from '../../../../_app';
+import Head from 'next/head';
 
 /**--------------------------------------**/
 const WtyczkiGniazdaNiskieNapięciaProductPage: NextPageWithLayout = () => {
@@ -54,10 +55,27 @@ WtyczkiGniazdaNiskieNapięciaProductPage.getLayout = function getLayout(
   page: ReactElement
 ) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Osprzęt elektryczny na niskie napięcia | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Osprzęt elektryczny na niskie napięcia &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Specyfikacja techniczna osprzętu elektrycznego na niskie napięcia marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Specyfikacja techniczna osprzętu elektrycznego na niskie napięcia marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

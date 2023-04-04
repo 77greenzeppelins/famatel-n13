@@ -3,10 +3,9 @@ import type { ReactElement } from 'react';
 /**Components*/
 import Layout from '../../../../components/layouts/rootLayout/Layout';
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
-// import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { rozdzielniceModuloweSubCategoriesData } from '../../../../data/categoriesData/cat_9_rozdzielnice-modulowe/_cat9_rozdzielnice-modulowe_data';
-import { productCardsData } from '../../../../data/categoriesData/cat_9_rozdzielnice-modulowe/subCategories/_subCat_8_rozdzielnice-metalowe-ict';
+import { productCardsData } from '../../../../data/categoriesData/cat_9_rozdzielnice-modulowe/subCategories/_subCat_9_akcesoria';
 
 /**TS**/
 import type { NextPageWithLayout } from '../../../_app';
@@ -25,18 +24,18 @@ KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <Head>
-        <title>Rozdzielnice modułowe metalowe ICT | Famatel Polska</title>
+        <title>Akcesoria do rozdzielnic modułowych | Famatel Polska</title>
         <meta
           property="og:title"
-          content="Rozdzielnice modułowe metalowe ICT &nbsp;|&nbsp; Famatel Polska"
+          content="Akcesoria do rozdzielnic modułowych &nbsp;|&nbsp; Famatel Polska"
         ></meta>
         <meta
           name="description"
-          content="Poznaj ofertę rozdzielnic modułowych metalowych ICT marki Famatel."
+          content="Poznaj ofertę akcesoriów do rozdzielnic modułowych marki Famatel."
         ></meta>
         <meta
           property="og:description"
-          content="Poznaj ofertę rozdzielnic modułowych metalowych ICT marki Famatel."
+          content="Poznaj ofertę akcesoriów do rozdzielnic modułowych marki Famatel."
         ></meta>
       </Head>
       <Layout>

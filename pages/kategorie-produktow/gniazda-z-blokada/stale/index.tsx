@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { ReactElement } from 'react';
 /**Components*/
 import Layout from '../../../../components/layouts/rootLayout/Layout';
@@ -15,6 +16,7 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
   return (
     <SubCategoryPageTemplate
       subCategoryData={gniazdaBlokadaSubCategoriesData[1]}
+      // subCategoryData={['Gniazda stałe']}
       productCardsData={gniazdaBlokadaStale_productCards_data}
     />
   );
@@ -22,10 +24,27 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
 
 KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Gniazda stałe z rozłącznikiem i blokadą | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Gniazda stałe z rozłącznikiem i blokadą &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Poznaj ofertę gniazd stałych z rozłącznikiem i blokadą marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Poznaj ofertę gniazd stałych z rozłącznikiem i blokadą marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

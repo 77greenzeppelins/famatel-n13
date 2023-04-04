@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { ReactElement, useState } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
@@ -47,10 +48,27 @@ WtyczkiGniazdaCampingoweProductPage.getLayout = function getLayout(
   page: ReactElement
 ) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Osprzęt elektryczny campingowy | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Osprzęt elektryczny campingowy &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Specyfikacja techniczna osprzętu elektrycznego campingowego marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Specyfikacja techniczna osprzętu elektrycznego campingowego marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

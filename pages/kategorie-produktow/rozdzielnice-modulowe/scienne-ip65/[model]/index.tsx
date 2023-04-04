@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { ReactElement, useState } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
@@ -49,10 +50,27 @@ RozdzielniceScienneProductPage.getLayout = function getLayout(
   page: ReactElement
 ) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Rozdzielnica ścienna IP65 | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Rozdzielnica ścienna IP65 &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Specyfikacja techniczna rozdzielnicy ściennej IP65 marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Specyfikacja techniczna rozdzielnicy ściennej IP65 marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

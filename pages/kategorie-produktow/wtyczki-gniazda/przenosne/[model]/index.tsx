@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { ReactElement, useState } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
@@ -48,10 +49,27 @@ WtyczkiGniazdaPrzenosneProductPage.getLayout = function getLayout(
   page: ReactElement
 ) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Osprzęt elektryczny przenośny | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Osprzęt elektryczny przenośny &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Specyfikacja techniczna osprzętu elektrycznego przenośnego marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Specyfikacja techniczna osprzętu elektrycznego przenośnego marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

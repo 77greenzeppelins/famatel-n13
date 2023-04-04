@@ -24,7 +24,7 @@ const gniazdaBlokadaSubCategoriesData: ISubCategoriesItem[] = [
     subCategoryName: catalogStructureData[1].subCategoriesNames[0],
     subCategoryUrl: catalogStructureData[1].subCategoriesUrls[0],
   },
-  //___2__gniazda-z-blokada__scienne
+  //___2__gniazda-z-blokada__scienne vel stałe
   {
     arrayIndex: 1,
     parentCategoryName: catalogStructureData[1].mainCategoryName,
@@ -32,7 +32,7 @@ const gniazdaBlokadaSubCategoriesData: ISubCategoriesItem[] = [
     subCategoryName: catalogStructureData[1].subCategoriesNames[1],
     subCategoryUrl: catalogStructureData[1].subCategoriesUrls[1],
   },
-  //___3__gniazda-z-blokada__
+  //___3__gniazda-z-blokada__z akcesoriami
   {
     arrayIndex: 2,
     parentCategoryName: catalogStructureData[1].mainCategoryName,

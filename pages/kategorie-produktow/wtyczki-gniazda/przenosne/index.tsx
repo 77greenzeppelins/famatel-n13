@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import type { ReactElement } from 'react';
 /**Components*/
 import Layout from '../../../../components/layouts/rootLayout/Layout';
@@ -24,10 +25,27 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
 
 KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Wtyczki i gniazda przenośne | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Wtyczki i gniazda przenośne &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Poznaj ofertę wtyczek i gniazd przenośnych marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Poznaj ofertę wtyczek i gniazd przenośnych marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

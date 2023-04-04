@@ -15,7 +15,7 @@ const pseudoHeroData = {
   iconSize: 80,
 };
 
-const obudowyRozdzielniceSubCategoriesData: ISubCategoriesItem[] = [
+const rozdzielniceModuloweSubCategoriesData: ISubCategoriesItem[] = [
   //___1__rozdzielnice-modulowe__scienne
   {
     arrayIndex: 0,
@@ -115,7 +115,7 @@ const textStyle: string =
 
 export {
   pseudoHeroData,
-  obudowyRozdzielniceSubCategoriesData,
+  rozdzielniceModuloweSubCategoriesData,
   // daneTechniczneText,
   // materialText,
   regulationText,

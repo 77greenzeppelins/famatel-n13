@@ -1,4 +1,5 @@
-import React, { ReactElement, useState } from 'react';
+import Head from 'next/head';
+import React, { ReactElement } from 'react';
 /**Components**/
 import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
@@ -14,17 +15,11 @@ import {
 import { NextPageWithLayout } from '../../../../_app';
 
 /**--------------------------------------**/
-const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
-  /**Router Section**/
-  //   const router = useRouter();
-  //   console.log('obudowyPusteSubCategoryData:', obudowyPusteSubCategoryData);
-  /**...**/
-
+const AdapterWielokrotnyPrzemyslowyProductPage: NextPageWithLayout = () => {
   /**JSX**/
   return (
     <ProductPageTemplate
       productCardsData={adapteryPrzemysloweWielokrotne_productCards_data}
-      //___data for <ProductPageNavPanel> => data about category
       categoryName={
         catalogStructureData[
           mainCategoriesSummaryData.adapteryPrzemyslowe.categoryIndex
@@ -50,15 +45,32 @@ const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
   );
 };
 
-GniazdaBlokadaStaleProductPage.getLayout = function getLayout(
+AdapterWielokrotnyPrzemyslowyProductPage.getLayout = function getLayout(
   page: ReactElement
 ) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Adapter wielokrotny przemysłowy | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Adapter wielokrotny przemysłowy &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Specyfikacja techniczna adaptera wielokrotnego przemysłowego marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Specyfikacja techniczna adaptera wielokrotnego przemysłowego marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 
-export default GniazdaBlokadaStaleProductPage;
+export default AdapterWielokrotnyPrzemyslowyProductPage;

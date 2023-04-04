@@ -12,6 +12,7 @@ import {
 } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_2_tablicowe_data';
 /**TS**/
 import { NextPageWithLayout } from '../../../../_app';
+import Head from 'next/head';
 
 /**--------------------------------------**/
 const GniazdaTablicoweProductPage: NextPageWithLayout = () => {
@@ -46,10 +47,27 @@ const GniazdaTablicoweProductPage: NextPageWithLayout = () => {
 
 GniazdaTablicoweProductPage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Osprzęt elektryczny tablicowy | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Osprzęt elektryczny tablicowy &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Specyfikacja techniczna osprzętu elektrycznego tablicowego marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Specyfikacja techniczna osprzętu elektrycznego tablicowego marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { ReactElement, useState } from 'react';
 /**Hook Staff**/
 // import { useRouter } from 'next/router';
@@ -48,10 +49,27 @@ const ObudowyPusteProductPage: NextPageWithLayout = () => {
 
 ObudowyPusteProductPage.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>Obudowa gumowa | Famatel Polska</title>
+        <meta
+          property="og:title"
+          content="Obudowa gumowa &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Specyfikacja techniczna obudowy gumowej marki Famatel."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Specyfikacja techniczna obudowy gumowej marki Famatel."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 

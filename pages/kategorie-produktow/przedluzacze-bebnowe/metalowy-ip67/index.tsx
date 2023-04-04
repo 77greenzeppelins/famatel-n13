@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React, { ReactElement } from 'react';
 /**Components**/
 import Layout from '../../../../components/layouts/rootLayout/Layout';
@@ -33,10 +34,30 @@ PrzedluzaczeBebnowePrzemysloweProductPage.getLayout = function getLayout(
   page: ReactElement
 ) {
   return (
-    <Layout>
-      {/* <NestedLayout>{page}</NestedLayout> */}
-      {page}
-    </Layout>
+    <>
+      <Head>
+        <title>
+          Metalowe przemysłowe przedłużacze bębnowe z gniazdami IP67 | Famatel
+          Polska
+        </title>
+        <meta
+          property="og:title"
+          content="Metalowe przemysłowe przedłużacze bębnowe z gniazdami IP67 &nbsp;|&nbsp; Famatel Polska"
+        ></meta>
+        <meta
+          name="description"
+          content="Poznaj ofertę metalowych przemysłowych przedłużaczy bębnowych z gniazdami IP67."
+        ></meta>
+        <meta
+          property="og:description"
+          content="Poznaj ofertę metalowych przemysłowych przedłużaczy bębnowych z gniazdami IP67."
+        ></meta>
+      </Head>
+      <Layout>
+        {/* <NestedLayout>{page}</NestedLayout> */}
+        {page}
+      </Layout>
+    </>
   );
 };
 
