@@ -26,13 +26,13 @@ const KontaktContent = () => {
               <div className=" ">
                 <ContactContacts />
               </div>
-              {/* <div className="">
+              <div className="">
                 <ContactAddress />
-              </div> */}
+              </div>
             </div>
-            {/* <div className="">
+            <div className="">
               <ContactMapka />
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
