@@ -24,21 +24,6 @@ const Section2 = () => {
           transition={{ duration: 3, delay: 0.6 }}
         />
       </div>
-      {/* <div className="relative fc h-[75vh]">
-        <InViewContainer
-          animationDelay={2}
-          outherContainerStyle="relative fc "
-          measuredElementStyle="fc w-full h-full"
-          topFactor={0.6}
-        >
-          <AnimatedText text="Już wkrótce zobaczysz tutaj fake text..." />
-        </InViewContainer>
-        <OverlayWithGradient
-          initial={{ x: '-50%' }}
-          animate={{ x: '100%' }}
-          transition={{ duration: 3, delay: 0.6 }}
-        />
-      </div> */}
     </div>
   );
 };

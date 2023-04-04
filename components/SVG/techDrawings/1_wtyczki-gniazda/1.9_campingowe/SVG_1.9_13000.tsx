@@ -11,7 +11,7 @@ const SVG_1_9_13000: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       width={basicSize}
       viewBox="0 0 500 200"
     >
-      <defs>
+      {/* <defs>
         <clipPath id="clipPath135126-2">
           <path d="M15 15h612.28v858.9H15z"></path>
         </clipPath>
@@ -29,7 +29,7 @@ const SVG_1_9_13000: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         </clipPath>
         <clipPath id="clipPath136682"></clipPath>
         <clipPath id="clipPath136676"></clipPath>
-      </defs>
+      </defs> */}
       <text
         x="87.519"
         y="186.823"

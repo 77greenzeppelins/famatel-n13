@@ -75,9 +75,10 @@ const SVG_1_9_13361: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
         fontSize="6.21"
-        fontWeight="bold"
+        // fontWeight="bold"
         transform="matrix(2.1167 0 0 -2.1167 -153.97 1069) matrix(1 0 0 -1 130.45 492.68)"
       >
         <tspan x="0 3.45276 6.90552" y="0">
@@ -141,7 +142,8 @@ const SVG_1_9_13361: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="KGTREX +ArialMT"
+        fontFamily="Arial"
+        // fontFamily="KGTREX +ArialMT"
         fontSize="6.21"
         transform="matrix(2.1167 0 0 -2.1167 -153.97 1069) scale(1 -1) rotate(44.506 584.155 -7.214)"
       >
@@ -168,9 +170,10 @@ const SVG_1_9_13361: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       >
         <text
           fill="#231f20"
-          fontFamily="HelveticaNeueLTStd"
+          fontFamily="Arial"
+          // fontFamily="HelveticaNeueLTStd"
           fontSize="6.21"
-          fontWeight="bold"
+          // fontWeight="bold"
           transform="matrix(1 0 0 -1 188.06 437.38)"
         >
           <tspan x="0 3.45276" y="0">
@@ -589,9 +592,10 @@ const SVG_1_9_13361: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       </g>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
         fontSize="6.21"
-        fontWeight="bold"
+        // fontWeight="bold"
         transform="matrix(2.1167 0 0 -2.1167 -153.97 1069) matrix(1 0 0 -1 132.4 484.69)"
       >
         <tspan x="0 3.45276" y="0">
@@ -724,9 +728,10 @@ const SVG_1_9_13361: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
         fontSize="6.21"
-        fontWeight="bold"
+        // fontWeight="bold"
         transform="matrix(2.1167 0 0 -2.1167 -153.97 1069) matrix(1 0 0 -1 130.54 476.97)"
       >
         <tspan x="0 3.45276 6.90552 8.6318998" y="0">
@@ -851,9 +856,10 @@ const SVG_1_9_13361: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
         fontSize="6.21"
-        fontWeight="bold"
+        // fontWeight="bold"
         transform="matrix(2.1167 0 0 -2.1167 -153.97 1069) matrix(1 0 0 -1 232.71 481.76)"
       >
         <tspan x="0" y="0">
@@ -919,9 +925,10 @@ const SVG_1_9_13361: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
         fontSize="6.21"
-        fontWeight="bold"
+        // fontWeight="bold"
         transform="matrix(2.1167 0 0 -2.1167 -153.97 1069) matrix(1 0 0 -1 178.91 437.38)"
       >
         <tspan x="0 3.45276" y="0">
@@ -1086,9 +1093,10 @@ const SVG_1_9_13361: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
         fontSize="6.21"
-        fontWeight="bold"
+        // fontWeight="bold"
         transform="matrix(2.1167 0 0 -2.1167 -153.97 1069) matrix(1 0 0 -1 231.26 401.66)"
       >
         <tspan x="0" y="0">
@@ -1144,9 +1152,10 @@ const SVG_1_9_13361: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
         fontSize="6.21"
-        fontWeight="bold"
+        // fontWeight="bold"
         transform="matrix(2.1167 0 0 -2.1167 -153.97 1069) matrix(1 0 0 -1 217.32 394.47)"
       >
         <tspan x="0" y="0">

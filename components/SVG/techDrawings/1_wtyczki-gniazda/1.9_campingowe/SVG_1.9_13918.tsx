@@ -157,9 +157,9 @@ const SVG_1_9_13918: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       </g>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
-        fontSize="7"
-        fontWeight="bold"
+        fontFamily="Arial"
+        fontSize="6"
+        // fontWeight="bold"
         transform="matrix(2.7041 0 0 -2.7041 -173.12 1909) matrix(1 0 0 -1 103 695.91)"
       >
         <tspan x="0 3.892 7.7839999" y="0">
@@ -180,9 +180,9 @@ const SVG_1_9_13918: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       >
         <text
           fill="#231f20"
-          fontFamily="OCMPIP +Arial-BoldMT"
-          fontSize="7.599"
-          fontWeight="bold"
+          fontFamily="Arial"
+          fontSize="6"
+          // fontWeight="bold"
           transform="matrix(.92114 .0118 .0109 -.99993 259.3 642.09)"
         >
           <tspan x="0 4.2248936" y="0">
@@ -785,9 +785,9 @@ const SVG_1_9_13918: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       >
         <text
           fill="#231f20"
-          fontFamily="HelveticaNeueLTStd"
-          fontSize="7"
-          fontWeight="bold"
+          fontFamily="Arial"
+          fontSize="6"
+          // fontWeight="bold"
           transform="matrix(1 0 0 -1 95.993 695.91)"
         >
           <tspan x="0 3.892 7.7839999" y="0">
@@ -800,9 +800,9 @@ const SVG_1_9_13918: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       </g>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
-        fontSize="7"
-        fontWeight="bold"
+        fontFamily="Arial"
+        fontSize="6"
+        // fontWeight="bold"
         transform="matrix(2.7041 0 0 -2.7041 -173.12 1909) matrix(1 0 0 -1 179.54 696.2)"
       >
         <tspan x="0 3.892" y="0">
@@ -844,9 +844,9 @@ const SVG_1_9_13918: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
-        fontSize="7"
-        fontWeight="bold"
+        fontFamily="Arial"
+        fontSize="6"
+        // fontWeight="bold"
         transform="matrix(2.7041 0 0 -2.7041 -173.12 1909) matrix(1 0 0 -1 153.72 660.06)"
       >
         <tspan x="0 3.892" y="0">
@@ -1478,9 +1478,9 @@ const SVG_1_9_13918: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       </g>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
-        fontSize="7"
-        fontWeight="bold"
+        fontFamily="Arial"
+        fontSize="6"
+        // fontWeight="bold"
         transform="matrix(2.7041 0 0 -2.7041 -173.12 1909) matrix(1 0 0 -1 118.8 619.41)"
       >
         <tspan x="0 3.892 7.7839999 9.7299995" y="0">
@@ -1522,9 +1522,9 @@ const SVG_1_9_13918: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="OCMPIP +Arial-BoldMT"
-        fontSize="7.599"
-        fontWeight="bold"
+        fontFamily="ArialMT"
+        fontSize="6.599"
+        // fontWeight="bold"
         transform="matrix(2.7041 0 0 -2.7041 -173.12 1909) matrix(.92114 .0118 .0109 -.99993 107.92 567.61)"
       >
         <tspan x="0 4.2248936" y="0">

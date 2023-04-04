@@ -11,7 +11,7 @@ const SVG_1_9_13917: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       width={basicSize}
       viewBox="0 0 500 280"
     >
-      <defs>
+      {/* <defs>
         <clipPath id="clipPath142359">
           <path d="M71.693 619.63h160.54v88.313H71.693z"></path>
         </clipPath>
@@ -21,7 +21,7 @@ const SVG_1_9_13917: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         <clipPath id="clipPath142627">
           <path d="M71.693 619.63h160.54v88.313H71.693z"></path>
         </clipPath>
-      </defs>
+      </defs> */}
       <path
         fill="none"
         stroke="#231f20"
@@ -364,9 +364,10 @@ const SVG_1_9_13917: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       </g>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
-        fontSize="7"
-        fontWeight="bold"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
+        fontSize="6"
+        // fontWeight="bold"
         transform="matrix(3.0135 0 0 -3.0135 -209.27 2140) matrix(1 0 0 -1 169.61 699.01)"
       >
         <tspan x="0 3.892 7.7839999" y="0">
@@ -416,9 +417,10 @@ const SVG_1_9_13917: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
-        fontSize="7"
-        fontWeight="bold"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
+        fontSize="6"
+        // fontWeight="bold"
         transform="matrix(3.0135 0 0 -3.0135 -209.27 2140) matrix(1 0 0 -1 160.32 687.31)"
       >
         <tspan x="0 3.892" y="0">
@@ -468,9 +470,10 @@ const SVG_1_9_13917: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
-        fontSize="7"
-        fontWeight="bold"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
+        fontSize="6"
+        // fontWeight="bold"
         transform="matrix(3.0135 0 0 -3.0135 -209.27 2140) matrix(1 0 0 -1 223.96 657.51)"
       >
         <tspan x="0" y="0">
@@ -528,8 +531,9 @@ const SVG_1_9_13917: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="FXANMH +ArialMT"
-        fontSize="7"
+        fontFamily="Arial"
+        // fontFamily="FXANMH +ArialMT"
+        fontSize="6"
         transform="matrix(3.0135 0 0 -3.0135 -209.27 2140) scale(1 -1) rotate(-.676 -52708.624 -7874.466)"
       >
         <tspan x="0" y="0">
@@ -542,9 +546,10 @@ const SVG_1_9_13917: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       >
         <text
           fill="#231f20"
-          fontFamily="FXANMH +Arial-BoldMT"
-          fontSize="7"
-          fontWeight="bold"
+          fontFamily="Arial"
+          // fontFamily="FXANMH +Arial-BoldMT"
+          fontSize="6"
+          // fontWeight="bold"
           transform="scale(1 -1) rotate(-.676 -52711.833 -8335.926)"
         >
           <tspan x="0" y="0">
@@ -579,9 +584,10 @@ const SVG_1_9_13917: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="HelveticaNeueLTStd"
-        fontSize="7"
-        fontWeight="bold"
+        fontFamily="Arial"
+        // fontFamily="HelveticaNeueLTStd"
+        fontSize="6"
+        // fontWeight="bold"
         transform="matrix(3.0135 0 0 -3.0135 -209.27 2140) matrix(1 0 0 -1 123.46 659.01)"
       >
         <tspan x="0 3.892" y="0">
@@ -631,8 +637,9 @@ const SVG_1_9_13917: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       ></path>
       <text
         fill="#231f20"
-        fontFamily="FXANMH +ArialMT"
-        fontSize="7"
+        fontFamily="Arial"
+        // fontFamily="FXANMH +ArialMT"
+        fontSize="6"
         transform="matrix(3.0135 0 0 -3.0135 -209.27 2140) scale(1 -1) rotate(-.676 -53623.988 -7855.8)"
       >
         <tspan x="0" y="0">
@@ -641,9 +648,10 @@ const SVG_1_9_13917: React.FC<{ basicSize: number }> = ({ basicSize }) => {
       </text>
       <text
         fill="#231f20"
-        fontFamily="FXANMH +Arial-BoldMT"
-        fontSize="7"
-        fontWeight="bold"
+        fontFamily="Arial"
+        // fontFamily="FXANMH +Arial-BoldMT"
+        fontSize="6"
+        // fontWeight="bold"
         transform="matrix(3.0135 0 0 -3.0135 -209.27 2140) scale(1 -1) rotate(-.676 -53627.198 -8317.26)"
       >
         <tspan x="0" y="0">
