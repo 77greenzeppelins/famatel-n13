@@ -31,15 +31,9 @@ const ContactMapka = () => {
               <p className={labelStyle}>ul. Strażacka 666</p>
             </div>
 
-            <div className="flex w-full gap-x-6 min-h-[400px] h-[70vh] pt-2">
+            <div className="flex w-full gap-x-6 min-h-[400px] xl:h-[70vh] pt-2">
               <SvgMap containerStyle="w-full" />
             </div>
-
-            {/* <div className="flex w-full sm:w-[40%] pt-2">
-              <SvgMap containerStyle="w-full" />
-            </div> */}
-            {/* <div className="flex w-full sm:w-[40%] h-[400px] bg-vY pt-2">
-            </div> */}
           </div>
         </InViewAnimatedContent>
       </InViewContainer>

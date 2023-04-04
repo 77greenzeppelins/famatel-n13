@@ -24,7 +24,7 @@ const Section2 = () => {
           transition={{ duration: 3, delay: 0.6 }}
         />
       </div>
-      <div className="relative fc h-[75vh]">
+      {/* <div className="relative fc h-[75vh]">
         <InViewContainer
           animationDelay={2}
           outherContainerStyle="relative fc "
@@ -38,7 +38,7 @@ const Section2 = () => {
           animate={{ x: '100%' }}
           transition={{ duration: 3, delay: 0.6 }}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
