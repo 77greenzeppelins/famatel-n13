@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-/**HardCoded Data**/
-const secondsStyle =
-  'text-greyShade2 text-center text-[0.5rem] xs:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300';
 
-const Clock: React.FunctionComponent<{
+/**---------------------**/
+const Clock: React.FC<{
   city: string | string[];
   timeZone: string;
-}> = ({ city, timeZone }) => {
-  const [currentTime, setCurrentTime] = useState('');
+  textStyle?: string;
+}> = ({ city, timeZone, textStyle }) => {
+  // const [currentTime, setCurrentTime] = useState('');
   const [currentTime2, setCurrentTime2] = useState(['', '']);
 
   useEffect(() => {
@@ -18,7 +17,7 @@ const Clock: React.FunctionComponent<{
       });
       let timePart2 = time.split(':')[2];
       let timePart1 = time.slice(0, 6);
-      setCurrentTime(time);
+      // setCurrentTime(time);
       setCurrentTime2([timePart1, timePart2]);
     };
     const timeController = setInterval(UpdateTime, 1000);
@@ -26,11 +25,9 @@ const Clock: React.FunctionComponent<{
   }, [timeZone]);
 
   return (
-    <div className="flex items-end w-[68px] xl:w-[122px] ">
+    <div className="flex items-end  w-[68px] sm:w-[94px] xl:w-[122px] ">
       {' '}
-      <p className="text-greyShade2 text-1xl xl:text-3xl tracking-[0.09rem]">
-        {currentTime2[0]}
-      </p>
+      <p className={textStyle}>{currentTime2[0]}</p>
       <p className="text-greyShade2 text-1xl xl:text-2xl tracking-[0.09rem]">
         {currentTime2[1]}
       </p>

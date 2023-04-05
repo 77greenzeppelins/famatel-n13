@@ -43,7 +43,7 @@ const NavForMainPages: React.FunctionComponent = () => {
                 hasDropDownMenu={mainPages[1].hasDropDownMenu}
               ></NavLink>
             </ul>
-            <div className="w-[40px] h-full " />
+            <div data-layout="fakeContainer" className="w-[50px] h-full" />
           </div>
         );
       /*
@@ -52,7 +52,7 @@ const NavForMainPages: React.FunctionComponent = () => {
       case screenWidth <= 300:
         return (
           <div className="flex items-center h-full">
-            <div className="w-[40px] h-full " />
+            <div data-layout="fakeContainer" className="w-[40px] h-full " />
           </div>
         );
     }

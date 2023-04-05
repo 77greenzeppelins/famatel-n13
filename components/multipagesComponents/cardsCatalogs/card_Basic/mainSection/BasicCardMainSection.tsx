@@ -6,8 +6,6 @@ import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 import { IF_ImgStaticData } from '../../../../../utils/TS/typeScriptStaff';
 /**HardCoded Data**/
 const minHeight = 500;
-const textStyle =
-  'text-grey text-center text-[0.5rem] xs3xx:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300 ';
 
 /*
 used in <ProduktyDropDownMenu>
@@ -17,7 +15,8 @@ const BasicCardMainSection: React.FunctionComponent<{
   label: string;
   imageData: IF_ImgStaticData;
   heightMattersCondition?: boolean;
-}> = ({ label, imageData, heightMattersCondition }) => {
+  textStyle?: string;
+}> = ({ label, imageData, heightMattersCondition, textStyle }) => {
   /**Hook Section; if not enough hight just get rid of images**/
   const { height, width } = useWindowSize({ screensNumber: 1 });
   const condition =
@@ -35,13 +34,7 @@ const BasicCardMainSection: React.FunctionComponent<{
             : 'fc h-[45%]'
         }  w-full p-1`}
       >
-        <p
-          className={textStyle}
-          // className="header-link-label text-grey text-center group-hover:text-light ease-in duration-300"
-          // className="text-grey text-center text-[0.5rem] xs:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300 "
-        >
-          {label}
-        </p>
+        <p className={textStyle}>{label}</p>
       </div>
     </div>
   );

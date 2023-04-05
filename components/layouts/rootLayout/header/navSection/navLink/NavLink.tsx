@@ -56,10 +56,10 @@ const NavLink: React.FunctionComponent<{
   /**JSX*/
   return (
     <>
-      <li data-component="NavLink_container" className="relative ml-6 fc">
+      <li data-component="NavLink_container" className="relative ml-6 fc ">
         <div
           data-layout="wrapper_for_DropDownMenuHolder"
-          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] pointer-events-none"
+          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] pointer-events-none "
         >
           <DropDownMenusHolder
             isHovered={hovererState.isHovered}
@@ -67,39 +67,40 @@ const NavLink: React.FunctionComponent<{
             hasDropDownMenu={hasDropDownMenu}
           />
         </div>
-
-        <AriaJSLink
-          linkHref={url}
-          controlsSet={{ background: 'transparent' }}
-          controlsStart={{
-            background: 'transparent',
-          }}
-          aStyle={`relative fc gap-1 w-full h-full cursor-pointer bg-transparent select-none touch-none focus:outline-none group ${
-            hasDropDownMenu ? 'pr-2' : ''
-          }`}
-        >
-          <p
-            className={`header-link-label ${
-              linkStyleisHovered ? 'text-corpo' : 'text-grey'
+        <div className="hidden lg:block">
+          <AriaJSLink
+            linkHref={url}
+            controlsSet={{ background: 'transparent' }}
+            controlsStart={{
+              background: 'transparent',
+            }}
+            aStyle={`relative fc gap-1 w-full h-full cursor-pointer bg-transparent select-none touch-none focus:outline-none group ${
+              hasDropDownMenu ? 'pr-2' : ''
             }`}
           >
-            <span>{label}</span>
-          </p>
+            <p
+              className={`header-link-label ${
+                linkStyleisHovered ? 'text-corpo' : 'text-grey'
+              }`}
+            >
+              <span>{label}</span>
+            </p>
 
-          {/* <div
+            {/* <div
             className={`absolute border-b border-grey h-[32px] ${
               linkStyleisHovered ? 'w-[0%]' : 'w-full'
             } inset-0 opacity-0 hover:opacity-100  ease-in duration-300 `}
             //__w-full h-full
           /> */}
-          <span
-            className={`h-[1px] inline-block w-0 bg-grey absolute left-0 bottom-[14px] group-hover:w-full transition-[width] ease-in duration-300 delay-400 ${
-              linkStyleisHovered ? 'opacity-0' : 'opacity-1'
-            }`}
-          >
-            &nbsp;
-          </span>
-        </AriaJSLink>
+            <span
+              className={`h-[1px] inline-block w-0 bg-grey absolute left-0 -bottom-[2px] group-hover:w-full transition-[width] ease-in duration-300 delay-400 ${
+                linkStyleisHovered ? 'opacity-0' : 'opacity-1'
+              }`}
+            >
+              &nbsp;
+            </span>
+          </AriaJSLink>
+        </div>
       </li>
       {hasDropDownMenu ? (
         <CatalogOpener

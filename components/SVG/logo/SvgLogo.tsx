@@ -26,7 +26,7 @@ const SvgLogo = () =>
         role="img"
         aria-hidden="true"
         viewBox="0 0 164.042 37.999"
-        className="w-full h-full max-h-[36px]"
+        className="w-full h-full max-h-[36px] pointer-events-auto"
         xmlns="http://www.w3.org/2000/svg"
         // animate={animationCondition ? 'strokeDark' : 'strokeLight'}
         whileHover={{ scale: 1.05 }}

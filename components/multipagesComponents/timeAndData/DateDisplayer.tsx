@@ -2,11 +2,11 @@ import React from 'react';
 import useDate from '../../../utils/hooks/useDate';
 
 /**HardCoded Data**/
-const textStyle =
-  'text-greyShade2 text-center text-[0.5rem] xs:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300';
+// const textStyle =
+//   'text-greyShade2 text-center text-[0.5rem] xs:text-[0.625rem] sm:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300';
 
 /**------------------------------**/
-const DateDisplayer = () => {
+const DateDisplayer: React.FC<{ textStyle?: string }> = ({ textStyle }) => {
   const { year, month, day, weekday } = useDate();
 
   const createMonthName = () => {

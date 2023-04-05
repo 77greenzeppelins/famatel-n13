@@ -1,9 +1,17 @@
 import { proxy } from 'valtio';
 
-const appFirstApperance = proxy<{ isCompleted: boolean }>({
-  isCompleted: false,
+declare module 'valtio' {
+  function useSnapshot<T extends object>(p: T): T;
+}
+
+interface IF_AppGlobalStates {
+  appFirstApperance: boolean;
+  someNumb: number;
+}
+
+const appGlobalStates = proxy<IF_AppGlobalStates>({
+  appFirstApperance: true,
+  someNumb: 0,
 });
 
-const state = proxy({ count: 0, text: 'hello' });
-
-export { appFirstApperance, state };
+export { appGlobalStates };

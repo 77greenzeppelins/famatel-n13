@@ -12,15 +12,7 @@ import SvgLogo from '../../../../SVG/logo/SvgLogo';
 const HeaderLogoLink = () => {
   /**JSX*/
   return (
-    // <AriaJSLink
-    //   linkHref={'/'}
-    //   controlsSet={{ background: 'transparent' }}
-    //   controlsStart={{
-    //     background: 'transparent',
-    //   }}
-    //   aStyle="relative cursor-pointer fc bg-transparent select-none touch-none focus:outline-none group "
-    // >
-    <Link href={'/'} scroll={false}>
+    <Link href={'/'} scroll={false} className="pointer-events-auto">
       <div className="flex justify-start cursor-pointer no-sparkling">
         <SvgLogo />
       </div>

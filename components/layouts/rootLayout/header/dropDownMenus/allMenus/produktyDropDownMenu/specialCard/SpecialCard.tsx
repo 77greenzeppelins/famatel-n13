@@ -5,24 +5,29 @@ import Clock from '../../../../../../../multipagesComponents/timeAndData/Clock';
 import DateDisplayer from '../../../../../../../multipagesComponents/timeAndData/DateDisplayer';
 
 /**--------------------------**/
-const SpecialCard = () => {
+const SpecialCard: React.FC<{
+  mediumTextStyle?: string;
+  largeTextStyle?: string;
+}> = ({ mediumTextStyle, largeTextStyle }) => {
   /**JSX**/
   return (
     <CardFrame>
       <div className="flex w-full h-full group">
-        <div className="relative hidden lg:flex flex-col  lg:w-[30%]"></div>
+        {/* <div className="relative hidden lg:flex flex-col lg:w-[30%]"></div> */}
 
         <div className="relative flex flex-col items-center w-full lg:w-[70%] h-full">
           <div className="flex justify-end items-center  w-full h-[25%] min-h-[18px] px-2 xl:px-6">
-            <DateDisplayer />
+            <DateDisplayer textStyle={mediumTextStyle} />
           </div>
           <div className="flex justify-between items-center w-full h-[75%] px-2 xl:px-6">
-            <div>
-              <p className="text-greyShade2 text-1xl xl:text-3xl tracking-[0.09rem]">
-                Bielawa
-              </p>
+            <div className="">
+              <p className={largeTextStyle}>Bielawa</p>
             </div>
-            <Clock city={'Bielawa'} timeZone={'Europe/Warsaw'} />
+            <Clock
+              city={'Bielawa'}
+              timeZone={'Europe/Warsaw'}
+              textStyle={largeTextStyle}
+            />
           </div>
         </div>
       </div>

@@ -89,7 +89,7 @@ const WtyczkiGniazdaCampingoweContent: React.FunctionComponent<{
                     underlinedTableData={wtyczkiGniazdaCampingowe_l6_rest_data}
                   />
                 )}
-                <div className="flex flex-col h-full gap-10">
+                <div className="flex flex-col h-full w-full gap-10">
                   {index === 10 &&
                     wtyczkiGniazdaCampingowe_l7_tech_data.map(
                       (tableData, i) => (

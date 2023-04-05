@@ -8,6 +8,8 @@ import { motion } from 'framer-motion';
 /**Basic Data**/
 import { corpoColors } from '../../../../../../data/_data';
 
+import ListIcon from '../../../../../SVG/icons/ListIcon';
+
 /**---------------------------------------------------**/
 const CatalogOpener: React.FunctionComponent<{
   isClicked: boolean;
@@ -46,20 +48,43 @@ const CatalogOpener: React.FunctionComponent<{
 
   /**JSX**/
   return (
-    <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black ">
-      <motion.button
-        disabled={isDisabled}
-        aria-label={'przycisk'}
-        onClick={onClickHandler}
-        className="fc origin-center w-6  focus:outline-none disable pointer-events-auto"
-        animate={{
-          rotateX: isClicked ? 180 : 0,
-          transition: { duration: 0.6, delay: 0.1, ease: 'easeOut' },
-        }}
-      >
-        <ChevronDownIcon strokeColor={corpoColors.grey} className="w-4 h-4" />
-      </motion.button>
-    </FocusRing>
+    <div className="fc h-full">
+      <div className="hidden  lg:fc">
+        <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black ">
+          <motion.button
+            disabled={isDisabled}
+            aria-label={'przycisk'}
+            onClick={onClickHandler}
+            className=" fc origin-center w-6 focus:outline-none disable pointer-events-auto"
+            animate={{
+              rotateX: isClicked ? 180 : 0,
+              transition: { duration: 0.6, delay: 0.1, ease: 'easeOut' },
+            }}
+          >
+            <ChevronDownIcon
+              strokeColor={corpoColors.grey}
+              className="w-4 h-4"
+            />
+          </motion.button>
+        </FocusRing>
+      </div>
+      <div className=" lg:hidden w-6 h-6">
+        <FocusRing focusRingClass="ring ring-offset-2 ring-offset-black ">
+          <motion.button
+            disabled={isDisabled}
+            aria-label={'przycisk'}
+            onClick={onClickHandler}
+            className=" fc origin-center w-6 focus:outline-none disable pointer-events-auto"
+            animate={{
+              rotateX: isClicked ? 180 : 0,
+              transition: { duration: 0.6, delay: 0.1, ease: 'easeOut' },
+            }}
+          >
+            <ListIcon />
+          </motion.button>
+        </FocusRing>
+      </div>
+    </div>
   );
 };
 

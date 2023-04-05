@@ -34,6 +34,10 @@ class MyDocument extends Document {
             name="twitter:image:alt"
             content="Przemysłowa wtyczka używana w trudnych warunkach terenowych"
           ></meta>
+          <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+          ></meta>
         </Head>
         <body>
           <Main

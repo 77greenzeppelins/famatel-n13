@@ -51,6 +51,7 @@ interface IF_Card {
   altLabel?: string;
   heightMattersCondition?: boolean;
   containerStyle?: string;
+  textStyle?: string;
 }
 
 /*
