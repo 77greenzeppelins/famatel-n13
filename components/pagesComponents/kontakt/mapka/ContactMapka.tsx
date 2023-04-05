@@ -1,13 +1,11 @@
 import React from 'react';
 /**Components**/
+import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
+import InViewAnimatedContent from '../_inViewAnimatedContent/InViewAnimatedContent';
 import FadingHeader from '../../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
 import SvgMap from '../../../SVG/maps/SvgMap';
 import { MapPinIcon } from '@heroicons/react/24/solid';
-/**Framer Motion Staff**/
-import { motion } from 'framer-motion';
-import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
-import InViewAnimatedContent from '../_inViewAnimatedContent/InViewAnimatedContent';
 
 const labelStyle =
   'text-grey text-[1rem] lg:text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-light  ease-in duration-300  origin-center break-all';
@@ -20,8 +18,10 @@ const ContactMapka = () => {
         animationDelay={2}
         outherContainerStyle="w-full"
         measuredElementStyle="relative "
-        topFactor={0.3}
-        bottomFactor={0.3}
+        // topFactor={0.3}
+        // bottomFactor={0.3}
+        topFactor={0.1}
+        bottomFactor={0.2}
       >
         <InViewAnimatedContent>
           <FadingHeader label={'Dojazd'} />

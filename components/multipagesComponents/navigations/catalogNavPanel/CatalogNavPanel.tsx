@@ -12,6 +12,8 @@ import { corpoColors } from '../../../../data/_data';
 const headerTextStyle =
   'text-grey text-[0.825rem] xxxl:text-[1rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]';
 const textStyle = `text-[0.825rem] lg:text-[1.25rem] leading-1 tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]`;
+const customTextstyle =
+  'text-light text-left text-[1.5rem] lg:text-[2rem] xxl:text-[2.25] leading-1 tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]';
 
 const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
   linkHeaders,
@@ -37,10 +39,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
             />
             {name && (
               <>
-                <div
-                  //  className="pl-[26px] "
-                  style={{ width: 'fit-content' }}
-                >
+                <div style={{ width: 'fit-content' }}>
                   <LinkWithTextAndIcon
                     linkHref={linkUrls[index]}
                     controlsSet={{ background: corpoColors.dark }}
@@ -69,16 +68,10 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
           hasBox={false}
           hasVerticalOrnament={false}
         />
-        <div
-          className="flex "
-          //  className="pl-[26px]"
-        >
+        <div className="flex ">
           {bottomUrl ? (
             <>
-              <div
-                //  className="pl-[26px] "
-                style={{ width: 'fit-content' }}
-              >
+              <div style={{ width: 'fit-content' }}>
                 <LinkWithTextAndIcon
                   linkHref={bottomUrl}
                   controlsSet={{ background: corpoColors.dark }}
@@ -94,12 +87,10 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
           ) : (
             <H1Component
               text={bottomName}
-              // customeStyle={`text-light text-left ${textStyle}`}
-              customeStyle=" text-light text-left text-[1.5rem] lg:text-[2rem] xxl:text-[2.25] leading-1 tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]"
+              customeStyle={customTextstyle}
               variantH="custome"
             />
           )}
-
           <div className="h-6" />
         </div>
       </div>
@@ -134,35 +125,13 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
         />
       </div>
       <div className="w-[20px]  border-l border-greyShade1 "></div>
-      <div className="flex w-full flex-col gap-y-6 ">
+      <nav className="flex w-full flex-col gap-y-6 ">
         {createLinks()}
         {createBottomLevel()}
         {createOptionalHeader()}
-      </div>
+      </nav>
     </div>
   );
 };
 
 export default CatalogNavPanel;
-
-{
-  /* <H1AnimatedPresence
-              uniqueKey={0}
-              text={lastLevelName}
-              customeStyle={`text-light text-left ${textStyle}`}
-              variantH="custome"
-            /> */
-}
-
-{
-  /* <Link href={urlsLevels[index]} scroll={false}>
-                  <div className="flex items-center gap-x-2 md:gap-x-4 group">
-                    <p className="p-small text-grey text-left group-hover:text-light ease-in duration-300">
-                      {name}
-                    </p>
-                    <div className="fc h-[16px] w-[16px]">
-                      <LinkWithArrowIcon containerStyle="fc h-[16px] w-[16px] stroke-grey group-hover:stroke-corpo ease-in duration-300 origin-center" />
-                    </div>
-                  </div>
-                </Link>{' '} */
-}

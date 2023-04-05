@@ -14,7 +14,7 @@ const mdTextStyle =
 const DoPobraniaContent = () => {
   /**JSX**/
   return (
-    <div
+    <main
       data-component="KontaktContent__container"
       className="relative bg-dark pt-[60px]"
     >
@@ -50,7 +50,7 @@ const DoPobraniaContent = () => {
           <div className="h-[10vh]" />
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 export default DoPobraniaContent;

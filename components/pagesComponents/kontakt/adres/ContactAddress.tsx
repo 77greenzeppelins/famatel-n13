@@ -17,7 +17,9 @@ const ContactAddress: React.FunctionComponent = () => {
         animationDelay={2}
         outherContainerStyle="w-full"
         measuredElementStyle="relative "
-        topFactor={0.6}
+        // topFactor={0.6}
+        topFactor={0.1}
+        bottomFactor={0.2}
       >
         <InViewAnimatedContent>
           <FadingHeader label={'Adres'} />
