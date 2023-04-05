@@ -8,10 +8,12 @@ const ListIcon = ({
   containerStyle,
   strokeWidth = 1,
   pathStyle = '',
+  condition,
 }: {
   strokeWidth?: number;
   containerStyle?: string;
   pathStyle?: string;
+  condition?: boolean;
 }) => {
   return (
     <motion.svg

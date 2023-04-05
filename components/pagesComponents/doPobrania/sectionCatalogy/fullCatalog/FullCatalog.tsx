@@ -1,16 +1,18 @@
 import React from 'react';
 /**Components**/
-import FadingFrame from '../../../multipagesComponents/lines/fadingFrame/FadingFrame';
-import DownloadableLink from '../../../_basicComponents/links/downloadableLink/DownloadableLink';
+import FadingFrame from '../../../../multipagesComponents/lines/fadingFrame/FadingFrame';
+import DownloadableLink from '../../../../_basicComponents/links/downloadableLink/DownloadableLink';
 /**Hardcoded Staff**/
 const catalogLink = '/pdf/catalog/Katalog 2023.pdf';
 
+/**-------------------------------------------------------------------------------**/
 const FullCatalog: React.FC<{ mdTextStyle?: string; lgTextStyle?: string }> = ({
   mdTextStyle,
   lgTextStyle,
 }) => {
+  /**JSX**/
   return (
-    <div className={`relative fc flex-col container aspect-video`}>
+    <div className="relative fc flex-col container aspect-video">
       <div
         className={`relative fc flex-col gap-10 w-full h-full max-w-[600px] max-h-[600px]`}
       >

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 /**Components**/
 import ChevronDownIcon from '../../../../../SVG/icons/ChevronDownIcon';
+import ListIcon from '../../../../../SVG/icons/ListIcon';
 /**Aria Staff**/
 import { FocusRing } from 'react-aria';
 /**Framer Motion Staff*/
 import { motion } from 'framer-motion';
 /**Basic Data**/
 import { corpoColors } from '../../../../../../data/_data';
-
-import ListIcon from '../../../../../SVG/icons/ListIcon';
 
 /**---------------------------------------------------**/
 const CatalogOpener: React.FunctionComponent<{
@@ -76,11 +75,15 @@ const CatalogOpener: React.FunctionComponent<{
             onClick={onClickHandler}
             className=" fc origin-center w-6 focus:outline-none disable pointer-events-auto"
             animate={{
-              rotateX: isClicked ? 180 : 0,
+              rotateY: isClicked ? 180 : 0,
               transition: { duration: 0.6, delay: 0.1, ease: 'easeOut' },
             }}
           >
-            <ListIcon />
+            <ListIcon
+              pathStyle={`${
+                isClicked ? 'stroke-corpo ' : 'stroke-light'
+              } transition-all`}
+            />
           </motion.button>
         </FocusRing>
       </div>

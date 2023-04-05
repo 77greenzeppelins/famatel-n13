@@ -14,6 +14,7 @@ interface Props {
   topFactor?: number;
   bottomFactor?: number;
   animationDelay?: number;
+  animationDuration?: number;
 }
 
 /**-------------------------------------------------**/
@@ -25,6 +26,7 @@ const InViewContainer: React.FC<Props> = ({
   topFactor = 0.9,
   bottomFactor = 0.9,
   animationDelay = 0,
+  animationDuration = 0.4,
 }) => {
   const [ref, bounds] = useMeasure();
   const elementInView = useRef(null);
@@ -60,11 +62,13 @@ const InViewContainer: React.FC<Props> = ({
                   key: i,
                   componentIsInView: isInView,
                   animationDelay: animationDelay,
+                  animationDuration: animationDuration,
                 })
               )
             : React.cloneElement(children, {
                 componentIsInView: isInView,
                 animationDelay: animationDelay,
+                animationDuration: animationDuration,
               })}
         </div>
       </div>

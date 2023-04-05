@@ -6,6 +6,7 @@ type Props = {
   componentIsInView?: boolean;
   transitionDuration?: number;
   transitionDelay?: number;
+  containerStyle?: string;
 };
 
 const InViewAnimatedContent: React.FC<Props> = ({
@@ -13,10 +14,12 @@ const InViewAnimatedContent: React.FC<Props> = ({
   componentIsInView = false,
   transitionDuration = 0.6,
   transitionDelay = 0.2,
+  containerStyle,
 }) => {
   return (
     <motion.div
-      className=" flex flex-col gap-y-10"
+      data-component="InViewAnimatedContent__container"
+      className={containerStyle ? containerStyle : 'flex flex-col gap-y-10'}
       initial={{ opacity: 0 }}
       animate={{
         opacity: componentIsInView ? 1 : 0,

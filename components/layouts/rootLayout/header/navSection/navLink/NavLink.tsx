@@ -29,22 +29,6 @@ const NavLink: React.FunctionComponent<{
   /**Local State mr_2**/
   const [isClicked, setIsClicked] = useState(false);
 
-  /**Hover Handlers*/
-  // const onHoverStartHandler = (event: MouseEvent) => {
-  //   //___second param: info: EventInfo
-  //   if (!isClicked) {
-  //     const target = event.target as HTMLElement; //TS requirements
-  //     setHoverState({ isHovered: true, label: target.innerText });
-  //   }
-  // };
-
-  // const onHoverEndHandler = (event: MouseEvent) => {
-  //   // console.log('.......onHoverEndHandler');
-  //   if (!isClicked) {
-  //     setHoverState({ isHovered: false, label: '' });
-  //   }
-  // };
-
   /**It allowes to close dropdownMenu when url changes*/
   useEffect(() => {
     return () => {

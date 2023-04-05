@@ -11,7 +11,7 @@ const Section2 = () => {
     <div className="relative flex flex-col items-center overflow-hidden">
       <div className="relative fc h-[75vh]">
         <InViewContainer
-          animationDelay={2}
+          animationDelay={0.1}
           outherContainerStyle="relative fc "
           measuredElementStyle="fc w-full h-full"
           topFactor={0.6}
@@ -21,7 +21,7 @@ const Section2 = () => {
         <OverlayWithGradient
           initial={{ x: '-50%' }}
           animate={{ x: '100%' }}
-          transition={{ duration: 3, delay: 0.6 }}
+          transition={{ duration: 3, delay: 0.4 }}
         />
       </div>
     </div>

@@ -1,12 +1,11 @@
 import React from 'react';
 /**Components**/
-import DownloadableRow from '../__downloadableRow/DownloadableRow';
+import DownloadableRow from '../../__downloadableRow/DownloadableRow';
 /**Basic Data*/
-import { mainCategoriesNames } from '../../../../data/_data';
+import { mainCategoriesNames } from '../../../../../data/_data';
 
 /**HardCoded Data**/
 const catalogChapters = ['Wstęp', ...mainCategoriesNames];
-const fakeLinks = ['/pdf/catalogChapters/00.Wstęp.pdf'];
 const staffLinks = [
   ['/pdf/catalogChapters/00.Wstęp.pdf'],
   ['/pdf/catalogChapters/01.Wtyczki i gniazda.pdf'],

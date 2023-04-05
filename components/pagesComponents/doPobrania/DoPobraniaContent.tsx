@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import FadingHeader from '../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
+import React from 'react';
 /**Components**/
-import CatalogChapters from './catalogChapters/CatalogChapters';
-import DeclarationsSection from './declarations/DeclarationsSection';
-import FullCatalog from './fullCatalog/FullCatalog';
-
+import InViewContainer from '../../containers/inViewContainer/InViewContainer';
+import InViewAnimatedContent from '../kontakt/_inViewAnimatedContent/InViewAnimatedContent';
+import SectionCatalogy from './sectionCatalogy/SectionCatalogy';
+import SectionDeclarations from './sectionDeclarations/SectionDeclarations';
 /**Hardcoded Staff*/
 const lgTextStyle =
   'text-light text-left text-[2rem] xs:text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[4.5rem] xxl:text-[5rem] font-bold tracking-[2px] md:leading-[3rem] lg:leading-[4rem] xl:leading-[3.5rem] xxl:leading-[4rem]';
@@ -20,27 +19,35 @@ const DoPobraniaContent = () => {
       className="relative bg-dark pt-[60px]"
     >
       <div className="w-full h-full inner-px-md-xl-xxl">
-        <div className="w-full flex flex-col gap-y-20 pt-10">
-          <div className="flex flex-col gap-y-10">
-            <FadingHeader label={'KATALOG'} />
-            <div className="flex flex-col-reverse xxl:flex-row gap-10">
-              <CatalogChapters />
-              <FullCatalog
+        <div className="w-full flex flex-col gap-y-20 pt-10 lg:pt-20">
+          <InViewContainer
+            animationDelay={0.1}
+            outherContainerStyle="relative w-full h-full"
+            measuredElementStyle="w-full h-full"
+            topFactor={0.1}
+            bottomFactor={0.2}
+          >
+            <InViewAnimatedContent containerStyle="w-full">
+              <SectionCatalogy
                 mdTextStyle={mdTextStyle}
                 lgTextStyle={lgTextStyle}
               />
-            </div>
-          </div>
-          <div className="flex flex-col gap-y-10">
-            <FadingHeader label={'DEKLARACJE'} />
-            <div>
-              <DeclarationsSection />
-            </div>
-          </div>
-          <div className="flex flex-col gap-y-10">
-            <FadingHeader label={'KARTY KATALOGOWE'} />
-            <div className="h-[10vh]" />
-          </div>
+            </InViewAnimatedContent>
+          </InViewContainer>
+
+          <InViewContainer
+            animationDelay={0.1}
+            outherContainerStyle="relative fc w-full h-full"
+            measuredElementStyle="fc w-full h-full"
+            topFactor={0.1}
+            bottomFactor={0.2}
+          >
+            <InViewAnimatedContent containerStyle="w-full">
+              <SectionDeclarations />
+            </InViewAnimatedContent>
+          </InViewContainer>
+
+          <div className="h-[10vh]" />
         </div>
       </div>
     </div>
