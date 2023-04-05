@@ -27,8 +27,8 @@ const ContactContacts: React.FunctionComponent = () => {
         outherContainerStyle="w-full"
         measuredElementStyle="relative "
         // topFactor={0.6}
-        topFactor={0.1}
-        bottomFactor={0.2}
+        topFactor={0.3}
+        bottomFactor={0.3}
       >
         <InViewAnimatedContent>
           <FadingHeader label={'Kontakt'} />

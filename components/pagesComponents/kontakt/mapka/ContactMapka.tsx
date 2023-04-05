@@ -20,8 +20,8 @@ const ContactMapka = () => {
         measuredElementStyle="relative "
         // topFactor={0.3}
         // bottomFactor={0.3}
-        topFactor={0.1}
-        bottomFactor={0.2}
+        topFactor={0.2}
+        bottomFactor={0.1}
       >
         <InViewAnimatedContent>
           <FadingHeader label={'Dojazd'} />
