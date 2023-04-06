@@ -37,7 +37,7 @@ const FooterLink: React.FunctionComponent<{
         controlsStart={{
           background: 'transparent',
         }}
-        aStyle={`relative flex flex-col gap-y-[3px] w-full disable-soft focus:outline-none group `}
+        aStyle={`relative flex flex-col gap-y-[3px] w-full group `}
       >
         <p
           className={`p-small  text-left ${

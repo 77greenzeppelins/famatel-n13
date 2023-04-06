@@ -5,21 +5,11 @@ import { FocusRing, useLink } from 'react-aria';
 /**FramerMotion Staff*/
 import { motion, useAnimation } from 'framer-motion';
 /**BasicData*/
-import { corpoColors } from '../../../../data/_data';
-import { tailwindStyles } from '../../../../data/_styleData';
-//___<a> style, optimised for "iconStyle"
-// const aDefaultStyle = 'fc h-[70%] text-[1rem] bg-greyShade1 ';
+
 const aDefaultStyle =
-  'fc gap-4 h-full border border-greyTint1 hover:border-corpo rounded-sm bg-transparent focus:outline-none group';
+  'fc gap-4 h-full border border-greyTint1 hover:border-corpo rounded-sm bg-transparent  group';
 /**********************************************************************************************/
-const AriaJsLink = ({
-  children,
-  linkHref,
-  // aStyle = '',
-  // controlsSet,
-  // controlsStart,
-  ...props
-}) => {
+const AriaJsLink = ({ children, linkHref, ...props }) => {
   /**Referencea*/
   const ref = useRef();
   /**FramerMotion Section*/
@@ -59,18 +49,10 @@ const AriaJsLink = ({
         {...linkProps}
         className={`${
           props.aStyle ? props.aStyle : aDefaultStyle
-        } focus:outline-none pointer-events-auto disable`}
+        } focus:outline-none pointer-events-auto disable-soft`}
       >
         {children}
       </motion.a>
-      {/* <motion.div
-        aria-label={props.ariaLabel}
-        animate={controls}
-        {...linkProps}
-        className="fc gap-4 h-full border border-greyTint1 hover:border-corpo rounded-sm bg-transparent focus:outline-none group pointer-events-auto disable"
-      >
-        {children}
-      </motion.div> */}
     </Link>
     // </FocusRing>
   );
