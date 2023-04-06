@@ -240,6 +240,9 @@ const story = {
   },
   pageKontakt: {
     s1: 'Zespół Famatel Polska zaprasza do kontaktu od poniedziałku do piątku w godzinach 8ºº - 16ºº.',
+    adres: ['ul. Willowa 5', '58-260 Bielawa'],
+    dojazd: ['ul. Strażacka', '58-260 Bielawa'],
+    dojazdNav: ['50.68051, 16.60300'],
   },
 };
 

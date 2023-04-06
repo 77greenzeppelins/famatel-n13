@@ -3,16 +3,18 @@ import React from 'react';
 import SmallPseudoHeader from '../SmallPseudoHeader.tsx/SmallPseudoHeader';
 /**FramerMotion staff**/
 import { motion } from 'framer-motion';
-
-/**---------------------------**/
-const FadingHeader: React.FC<{
+/**TS**/
+interface Props {
   label: string;
   mainContainerStyle?: string;
-  //___for <SmallPseudoHeader>
+  //___options for <SmallPseudoHeader>
   hasBox?: boolean;
   hasVerticalOrnament?: boolean;
   textStyle?: string;
-}> = ({
+}
+
+/**---------------------------**/
+const FadingHeader: React.FC<Props> = ({
   label,
   mainContainerStyle,
   hasBox,

@@ -6,11 +6,12 @@ import { motion } from 'framer-motion';
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 
 /**-----------------------**/
-const WordMap = () => {
+const WordMap: React.FC<{ widthToDrag?: number }> = ({ widthToDrag = 768 }) => {
   const constraintsRef = useRef(null);
   /**...**/
   const { width } = useWindowSize({ screensNumber: 1 });
-  const dragCondition = width <= 768;
+  //___if width is less then passed number dragging is disabled
+  const dragCondition = width <= widthToDrag;
 
   /**JSX**/
   return (

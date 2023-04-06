@@ -24,7 +24,7 @@ const ContactAddress: React.FunctionComponent = () => {
         <InViewAnimatedContent>
           <FadingHeader label={'Adres'} />
           <div className="pt-2">
-            <ul className="flex flex-col gap-5  group">
+            <ul className="flex flex-col gap-5 group">
               {address.map((label, index) => (
                 <li key={index}>
                   <p className={labelStyle}>{label}</p>
