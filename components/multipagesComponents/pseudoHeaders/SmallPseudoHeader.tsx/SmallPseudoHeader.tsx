@@ -4,9 +4,8 @@ const textDefaultStyle =
   'header-link-label text-grey align-middle leading-none';
 // const verticalOrnamentDefaultStyle = 'h-[16px] w-[10px] border-l border-corpo';
 const boxDefaultStyle = 'h-[10px] aspect-square bg-corpo';
-
-/**-----------------------------------------------------**/
-const SmallPseudoHeader: React.FunctionComponent<{
+/**TS**/
+interface Props {
   text?: string;
   containerStyle?: string;
   textStyle?: string;
@@ -16,7 +15,9 @@ const SmallPseudoHeader: React.FunctionComponent<{
   hasVerticalOrnament?: boolean;
   hasHorizontalOrnament?: boolean;
   hasBox?: boolean;
-}> = ({
+}
+/**-----------------------------------------------------**/
+const SmallPseudoHeader: React.FunctionComponent<Props> = ({
   text,
   containerStyle,
   textStyle,
@@ -28,7 +29,7 @@ const SmallPseudoHeader: React.FunctionComponent<{
   hasBox = false,
 }) => {
   return (
-    <div
+    <h2
       className={`${
         containerStyle
           ? containerStyle
@@ -50,7 +51,7 @@ const SmallPseudoHeader: React.FunctionComponent<{
       >
         {text}
       </p>
-    </div>
+    </h2>
   );
 };
 

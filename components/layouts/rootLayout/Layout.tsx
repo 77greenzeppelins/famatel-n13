@@ -8,9 +8,11 @@ import MobileContactPanel from '../../multipagesComponents/mobileMenu/mobileCont
 import { mobileMenuData } from '../../../data/_data';
 /**Font Staff**/
 import localFont from '@next/font/local';
-
+import Footer from './footer/Footer';
 const haasFont = localFont({
   src: '../../../public/fonts/HaasGrotDisp-55Roman.woff2',
+  // subsets: ["latin"]
+  // variable: "--font-haas"
 });
 
 /**---------------------------------------------------------------------------------**/
@@ -27,7 +29,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         data-component="RootLayout__container"
         className={`${haasFont.className}`}
       >
-        <div className="relative z-[10]">{children}</div>
+        {/* <div className="relative z-[10]">{children}</div> */}
+        {children}
         <Header />
         <MobileMenuButton
           mobileMenuOpener={setIsMobileMenuOpen}
@@ -41,10 +44,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         />
         <MobileContactPanel
           isMobileMenuOpen={isMobileMenuOpen}
+          roadPrompt={roadPrompt}
           setRoadPrompt={setRoadPrompt}
           maxW={mobileMenuData.maxW}
           minH={mobileMenuData.minH}
         />
+        <Footer />
       </div>
     </>
   );

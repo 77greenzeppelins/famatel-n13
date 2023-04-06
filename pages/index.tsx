@@ -21,6 +21,7 @@ const HomePage: NextPageWithLayout = () => {
         <link rel="canonical" href="https://www.famatel.pl" />
       </Head>
       <OFirmieContent />
+      {/* <footer className="h-[25vh] bg-corpo"></footer> */}
     </>
   );
 };

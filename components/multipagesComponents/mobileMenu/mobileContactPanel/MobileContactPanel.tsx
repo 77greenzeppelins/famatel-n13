@@ -13,11 +13,12 @@ import { linksToInstantContactData } from '../../../../data/_data';
 
 /**-------------------------------------------------------**/
 const MobileContactPanel: React.FunctionComponent<{
+  roadPrompt: boolean;
   setRoadPrompt: React.Dispatch<React.SetStateAction<boolean>>;
   isMobileMenuOpen: boolean;
   maxW: number;
   minH: number;
-}> = ({ setRoadPrompt, isMobileMenuOpen, maxW, minH }) => {
+}> = ({ roadPrompt, setRoadPrompt, isMobileMenuOpen, maxW, minH }) => {
   /**Hook Section**/
   const { width, height } = useWindowSize({ screensNumber: 1 });
   /**Mounting Condition**/
@@ -46,8 +47,8 @@ const MobileContactPanel: React.FunctionComponent<{
             animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
             exit={{ opacity: 0, y: '100%', transition: { duration: 0.4 } }}
           >
-            <div className="w-full h-full grid grid-cols-[3fr_5fr_3fr] gap-[0.125rem]">
-              <div className="fc">
+            <ul className="w-full h-full grid grid-cols-[3fr_5fr_3fr] gap-[0.125rem]">
+              <li className="fc">
                 <PseudoButton>
                   <a
                     href={linksToInstantContactData.mail}
@@ -56,16 +57,16 @@ const MobileContactPanel: React.FunctionComponent<{
                     <EnvelopeIcon className="h-[40px] w-[40px] text-grey" />
                   </a>
                 </PseudoButton>
-              </div>
-              <div className="fc">
+              </li>
+              <li className="fc">
                 <PseudoButton diveStyle="fc flex-col h-full border-[0.5px] border-greyShade1">
-                  <RoadPrompt setRoadPrompt={setRoadPrompt} />
-                  <div className="px-2">
-                    <p className="p-small text-grey">Wskazówki dojazdu</p>
-                  </div>
+                  <RoadPrompt
+                    roadPrompt={roadPrompt}
+                    setRoadPrompt={setRoadPrompt}
+                  />
                 </PseudoButton>
-              </div>
-              <div className="fc ">
+              </li>
+              <li className="fc ">
                 <PseudoButton>
                   <a
                     href={linksToInstantContactData.mobile}
@@ -74,8 +75,8 @@ const MobileContactPanel: React.FunctionComponent<{
                     <PhoneIcon className="h-[40px] w-[40px] text-grey" />
                   </a>
                 </PseudoButton>
-              </div>
-            </div>
+              </li>
+            </ul>
           </motion.div>
         </motion.div>
       )}

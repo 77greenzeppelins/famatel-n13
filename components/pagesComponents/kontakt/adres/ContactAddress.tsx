@@ -12,7 +12,7 @@ const labelStyle =
 const ContactAddress: React.FunctionComponent = () => {
   /**JSX**/
   return (
-    <div className="relative flex flex-col gap-y-1">
+    <section className="relative flex flex-col gap-y-1">
       <InViewContainer
         animationDelay={2}
         outherContainerStyle="w-full"
@@ -39,7 +39,7 @@ const ContactAddress: React.FunctionComponent = () => {
         animate={{ x: '100%' }}
         transition={{ duration: 3, delay: 0.6 }}
       />
-    </div>
+    </section>
   );
 };
 

@@ -1,18 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-/**Fonts Staff
- * resource: doc. & https://www.youtube.com/watch?v=L8_98i_bMMA
- **/
-// import localFont from '@next/font/local';
-
-// import locScrollInstance from '../../pagesLayouts/locomotiveComponents/locScrollInstance';
-// import LocomotiveContainer from '../../pagesLayouts/locomotiveComponents/LocomotiveContainer';
-// const haasFont = localFont({
-//   src: '../../../../public/fonts/HaasGrotDisp-55Roman.woff2',
-//___
-// subsets: ["latin"]
-// variable: "--font-haas"
-// });
-
 class MyDocument extends Document {
   render() {
     return (
@@ -40,9 +26,7 @@ class MyDocument extends Document {
           ></meta>
         </Head>
         <body>
-          <Main
-          //className={`${haasFont.className} flex w-full h-full`}
-          />
+          <Main />
           <NextScript />
         </body>
       </Html>

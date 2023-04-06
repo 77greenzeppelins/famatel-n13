@@ -19,7 +19,7 @@ const DownloadableRow: React.FC<{
       <div className="flex items-center min-w-[24px] min-h-[64px] sm:min-h-[32px] ">
         <p className={textStyle}>{rowNumber}</p>
       </div>
-      <div className="flex sm:items-center flex-col gap-y-2 sm:flex-row w-full justify-between flex-wrap">
+      <div className="flex flex-col flex-wrap justify-between w-full sm:items-center gap-y-2 sm:flex-row">
         <div className="sm3xx:min-w-[312px]">
           <p className={textStyle}>{rowLabel}</p>
         </div>
@@ -31,7 +31,10 @@ const DownloadableRow: React.FC<{
           />
         </div>
       </div>
-      <div className="absolute inset-0 flex border-b border-greyShade2 group-hover:border-grey ease-in duration-300 pointer-events-none" />
+      <div
+        className="absolute inset-0 flex duration-300 ease-in border-b border-greyShade2 group-hover:border-grey"
+        //___pointer-events-none
+      />
     </div>
   );
 };

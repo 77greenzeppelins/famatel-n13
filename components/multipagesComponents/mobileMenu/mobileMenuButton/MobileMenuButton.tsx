@@ -24,12 +24,12 @@ const MobileMenuButton: React.FunctionComponent<{
   /**JSX**/
   return (
     <AnimatePresence>
-      <div
+      <aside
         data-component="MobileMenuButton__container"
         className={` fc lg:hidden fixed w-screen top-0 left-0 right-0 h-[50px] z-[600] bg-transparent pointer-events-none`}
       >
         <motion.div
-          className="flex items-center justify-end h-full w-full inner-px-md-xl-xxl"
+          className="flex items-center justify-end w-full h-full inner-px-md-xl-xxl"
           variants={headerVariants}
           initial="from"
           animate="to"
@@ -50,7 +50,7 @@ const MobileMenuButton: React.FunctionComponent<{
             </ArrowButton>
           )}
         </motion.div>
-      </div>
+      </aside>
     </AnimatePresence>
   );
 };
@@ -59,7 +59,7 @@ export default MobileMenuButton;
 
 // <motion.button
 //   onClick={() => mobileMenuOpener(prev => !prev)}
-//   className="fc origin-center w-6 no-sparkling pointer-events-auto"
+//   className="w-6 origin-center pointer-events-auto fc no-sparkling"
 //   //   animate={{
 //   //     rotateX: isClicked ? 180 : 0,
 //   //     // scale: isClicked ? [0, 0, 1] : [0, 0, 1],
@@ -70,7 +70,7 @@ export default MobileMenuButton;
 // </motion.button>
 // <motion.button
 //   onClick={() => mobileMenuOpener(prev => !prev)}
-//   className="fc origin-center w-6 no-sparkling pointer-events-auto"
+//   className="w-6 origin-center pointer-events-auto fc no-sparkling"
 //   //   animate={{
 //   //     rotateX: isClicked ? 180 : 0,
 //   //     // scale: isClicked ? [0, 0, 1] : [0, 0, 1],

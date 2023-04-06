@@ -144,7 +144,7 @@
 
   /* Chrome, Safari and Opera */
   .scroll-bar-style::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
     background-color: var(--corpo-grey-shade-2);
   }
   .scroll-bar-style::-webkit-scrollbar-thumb {
