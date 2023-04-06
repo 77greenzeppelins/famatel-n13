@@ -9,19 +9,10 @@ import ProductCategoriesLinks from './productCategories/ProductCategoriesLinks';
 
 const Footer = () => {
   return (
-    <footer className="w-full pb-10">
+    <footer className="flex flex-col w-full pb-10 gap-y-10">
       <div className="relative flex items-end h-20 ">
         <FadingLine gradientTo="toLeft" containerStyle="w-1/2 h-[1px]" />
         <FadingLine gradientTo="toRight" containerStyle="w-1/2 h-[1px]" />
-        {/* <div className="absolute inset-0 fc">
-          <GoToTopButton />
-        </div> */}
-      </div>
-
-      <div className="w-full h-24 pb-4 sm:h-40 fc">
-        <div>
-          <GoToTopButton />
-        </div>
       </div>
       <div className="w-full inner-px-md-xl-xxl ">
         <div className="flex flex-col w-full sm:flex-row gap-y-14 sm:gap-h-0 ">
@@ -42,11 +33,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between pt-20 inner-px-md-xl-xxl">
+      <div className="flex justify-between inner-px-md-xl-xxl">
         <div className="flex gap-x-1">
           <p className="p-small text-grey">&copy;</p>
           <p className="p-small text-grey">2013. Famatel Polska</p>
         </div>
+        <GoToTopButton />
         <div>
           <p className="p-small text-grey">twórca: 77</p>
         </div>
