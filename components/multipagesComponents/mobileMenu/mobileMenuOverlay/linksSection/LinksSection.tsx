@@ -10,7 +10,7 @@ const LinksSection: React.FC<{
 }> = ({ isSimple }) => {
   /**JSX*/
   return (
-    <nav>
+    <nav className="w-full">
       <ul className="flex w-full flex-col gap-[10px] ">
         {mainPages.map(({ arrayIndex, label, url }, i) => {
           return (

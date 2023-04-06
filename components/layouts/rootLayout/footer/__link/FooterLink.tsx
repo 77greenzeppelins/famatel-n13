@@ -28,7 +28,7 @@ const FooterLink: React.FunctionComponent<{
   return (
     <li
       data-component="NavLink_container"
-      className="relative fc flex-col  overflow-hidden"
+      className="relative flex-col overflow-hidden fc"
     >
       {/* <BorderHolder /> */}
       <AriaJSLink
@@ -37,7 +37,7 @@ const FooterLink: React.FunctionComponent<{
         controlsStart={{
           background: 'transparent',
         }}
-        aStyle={`relative flex flex-col gap-y-[3px] w-full select-none touch-none focus:outline-none group `}
+        aStyle={`relative flex flex-col gap-y-[3px] w-full disable-soft focus:outline-none group `}
       >
         <p
           className={`p-small  text-left ${

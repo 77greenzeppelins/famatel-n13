@@ -13,9 +13,9 @@ const labelStyle =
 
 const ContactsLinks = () => {
   return (
-    <div>
-      <div className="flex flex-col gap-y-5 ">
-        <div>
+    <address className="not-italic">
+      <ul className="flex flex-col gap-y-5 ">
+        <li>
           <a
             href="tel:601 460 307"
             className={aStyle}
@@ -24,9 +24,9 @@ const ContactsLinks = () => {
             <PhoneIcon className={iconsStyle} />
             <p className={labelStyle}>Telefon: +48 601 460 307</p>
           </a>
-        </div>
+        </li>
 
-        <div>
+        <li>
           <a
             href={linksToInstantContactData.mail}
             className={aStyle}
@@ -35,9 +35,9 @@ const ContactsLinks = () => {
             <EnvelopeIcon className={iconsStyle} />
             <p className={labelStyle}>biuro@famatel.pl</p>
           </a>
-        </div>
+        </li>
 
-        <div>
+        <li>
           <a
             href="mailto:grzegorz.kowcz@famatel.pl"
             className={aStyle}
@@ -46,9 +46,9 @@ const ContactsLinks = () => {
             <EnvelopeIcon className={iconsStyle} />
             <p className={labelStyle}>grzegorz.kowcz@famatel.pl</p>
           </a>
-        </div>
-      </div>
-    </div>
+        </li>
+      </ul>
+    </address>
   );
 };
 

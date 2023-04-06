@@ -7,7 +7,7 @@ import { catalogStructureData } from '../../../../../data/_catalogStructure_data
 
 const ProductCategoriesLinks: React.FC = () => {
   return (
-    <nav className="w-[80%]">
+    <nav className="w-full sm:w-[80%]">
       <ul className="flex flex-col gap-y-4">
         {catalogStructureData.map(
           ({ mainCategoryName, mainCategoryUrl }, i) => {

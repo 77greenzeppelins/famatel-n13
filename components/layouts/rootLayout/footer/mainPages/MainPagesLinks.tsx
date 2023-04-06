@@ -7,7 +7,7 @@ import { mainPages } from '../../../../../data/_data';
 /**----------------------------**/
 const MainPagesLinks: React.FC = () => {
   return (
-    <nav className="w-[80%]">
+    <nav className="w-full sm:w-[80%]">
       <ul className="flex flex-col gap-y-4">
         {mainPages.map(({ arrayIndex, label, url }, i) => {
           return (
