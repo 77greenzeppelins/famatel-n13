@@ -1,13 +1,16 @@
 import React from 'react';
+/**Components**/
 import FadingLine from '../../../multipagesComponents/lines/fadingLine/FadingLine';
 import SmallPseudoHeader from '../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import MainPagesLinks from './mainPages/MainPagesLinks';
 import ContactsLinks from './contacts/ContactsLinks';
 import SocialMediaBar from './contacts/SocialMediaBar';
-import GoToTopButton from './goToTopButton/GoToTopButton';
-import MainPagesLinks from './mainPages/MainPagesLinks';
 import ProductCategoriesLinks from './productCategories/ProductCategoriesLinks';
+import GoToTopButton from './goToTopButton/GoToTopButton';
 
-const Footer = () => {
+/**----------------------**/
+const Footer: React.FC = () => {
+  /**JSX**/
   return (
     <footer className="flex flex-col w-full pb-10 gap-y-10">
       <div className="relative flex items-end h-20 ">
