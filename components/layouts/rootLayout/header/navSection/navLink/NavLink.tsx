@@ -4,15 +4,15 @@ import { useRouter } from 'next/router';
 import AriaJSLink from '../../../../../_basicComponents/links/ariaJSLink/AriaJSLink';
 import DropDownMenusHolder from '../../dropDownMenus/DropDownMenusHolder';
 import CatalogOpener from '../catalogOpener/CatalogOpener';
-/**FramerMotion Staff*/
-import { motion } from 'framer-motion';
-
-/**********************************************************************************/
-const NavLink: React.FunctionComponent<{
+/**TS**/
+interface Props {
   label: string;
   url: string;
   hasDropDownMenu: boolean;
-}> = ({ label, url, hasDropDownMenu }) => {
+}
+
+/**---------------------------------------------------------------------**/
+const NavLink: React.FC<Props> = ({ label, url, hasDropDownMenu }) => {
   /**useRouter Section*/
   /**why: for style sake;  I want link to be in corpo color and has no border-bottom when user is on its corresponding page */
   const router = useRouter();

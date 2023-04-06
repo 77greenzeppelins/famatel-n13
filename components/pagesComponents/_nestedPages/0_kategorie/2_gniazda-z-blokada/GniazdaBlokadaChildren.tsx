@@ -21,7 +21,7 @@ const GniazdaBlokadaChildren = () => {
         <TableWithUnderlinedRows
           rowsData={gniazdaBlokada_DaneTechniczneText}
           //       tableContainerStyle= '';
-          // rowContainerStyle=[];
+          // rowContainerStyle="relative flex group"
           cellsStyles={['w-[50%]', 'w-[50%]']}
         />
       </SectionContentLayout>
@@ -43,7 +43,6 @@ const GniazdaBlokadaChildren = () => {
           cellsStyles={['w-full']}
         />
       </SectionContentLayout>
-      <div className="h-[1vh]" />
     </>
   );
 };

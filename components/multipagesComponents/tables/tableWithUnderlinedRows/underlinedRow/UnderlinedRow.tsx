@@ -62,7 +62,7 @@ const UnderlinedRow: React.FunctionComponent<{
         className={
           fakeUnderline
             ? fakeUnderline
-            : 'absolute inset-0 flex border-b border-light opacity-60 group-hover:opacity-100 ease-in duration-300'
+            : 'absolute inset-0 flex border-b border-greyShade1  group-hover:border-grey ease-in duration-300'
         }
       />
     </div>

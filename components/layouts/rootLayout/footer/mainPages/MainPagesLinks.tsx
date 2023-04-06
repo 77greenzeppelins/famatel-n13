@@ -1,27 +1,24 @@
 import React from 'react';
 /**Components**/
-import MobileNavLink from './mobileNavLink/MobileNavLink';
-/**Basic data*/
+import FooterLink from '../__link/FooterLink';
+/**Basic Data**/
 import { mainPages } from '../../../../../data/_data';
 
-/**---------------------------**/
-const LinksSection: React.FC<{
-  isSimple: boolean;
-}> = ({ isSimple }) => {
-  /**JSX*/
+/**----------------------------**/
+const MainPagesLinks: React.FC = () => {
   return (
-    <nav>
-      <ul className="flex w-full flex-col gap-[10px] ">
+    <nav className="w-[80%]">
+      <ul className="flex flex-col gap-y-4">
         {mainPages.map(({ arrayIndex, label, url }, i) => {
           return (
-            <MobileNavLink
+            <FooterLink
               key={arrayIndex}
               uniqueKey={arrayIndex}
               url={url}
               label={label}
               isLast={arrayIndex === mainPages.length}
-              isSimple={isSimple}
-            ></MobileNavLink>
+              isSimple={true}
+            ></FooterLink>
           );
         })}
       </ul>
@@ -29,4 +26,4 @@ const LinksSection: React.FC<{
   );
 };
 
-export default LinksSection;
+export default MainPagesLinks;

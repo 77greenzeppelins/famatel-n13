@@ -17,6 +17,8 @@ const ArrowButton: React.FunctionComponent<{
     setIsDisabled(true);
     //___do what you need to do...
     onClickHandler();
+    //___
+    // console.log('_____ArrowButton');
     //___set "timer"...
     const timer = setTimeout(() => {
       setIsDisabled(false);

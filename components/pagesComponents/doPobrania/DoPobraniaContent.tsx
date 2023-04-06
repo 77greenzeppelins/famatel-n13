@@ -24,7 +24,7 @@ const DoPobraniaContent = () => {
             animationDelay={0.1}
             outherContainerStyle="relative w-full h-full"
             measuredElementStyle="w-full h-full"
-            topFactor={0.1}
+            topFactor={0}
             bottomFactor={0.2}
           >
             <InViewAnimatedContent containerStyle="w-full">
@@ -39,7 +39,7 @@ const DoPobraniaContent = () => {
             animationDelay={0.1}
             outherContainerStyle="relative fc w-full h-full"
             measuredElementStyle="fc w-full h-full"
-            topFactor={0.1}
+            topFactor={0}
             bottomFactor={0.2}
           >
             <InViewAnimatedContent containerStyle="w-full">

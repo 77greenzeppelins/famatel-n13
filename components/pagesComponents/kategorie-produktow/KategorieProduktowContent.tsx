@@ -14,7 +14,7 @@ const KategorieProduktowContent = () => {
   return (
     <div
       data-component="KategorieProduktowContent__container"
-      className="flex flex-col justify-center w-screen min-h-screen  "
+      className="flex flex-col justify-center pt-[50px] overflow-hidden"
       //___pt-[50px] pb-[10vh]
     >
       <Section_1
@@ -23,9 +23,6 @@ const KategorieProduktowContent = () => {
         categoriesNumber={catalogStructureData.length}
         // categoryUrl={catalogStructureData[categoryIndex].mainCategoryUrl}
       />
-
-      {/* <Section_2 /> */}
-      {/* <div className="fixed w-full h-[50px] top-0 bg-dark" /> */}
     </div>
   );
 };

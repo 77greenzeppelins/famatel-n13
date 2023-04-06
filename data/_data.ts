@@ -52,12 +52,12 @@ const pagesUrl: IF_PagesUrl = {
 
 const menuLinkLabel: string[] = [
   /**used in: _dropDownMenusHolder_data.ts**/
-  'O FIRMIE',
-  'PRODUKTY',
-  'NOWOŚCI',
-  'REALIZACJE',
-  'DO POBRANIA',
-  'KONTAKT',
+  'O firmie',
+  'Produkty',
+  'Nowości',
+  'Realizacje',
+  'Do pobrania',
+  'Kontakt',
 ];
 
 /**used in <Header>; within appPages.map();**/
