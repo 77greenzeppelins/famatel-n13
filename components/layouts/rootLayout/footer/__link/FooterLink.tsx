@@ -37,7 +37,7 @@ const FooterLink: React.FunctionComponent<{
         controlsStart={{
           background: 'transparent',
         }}
-        aStyle={`relative flex w-full select-none touch-none focus:outline-none group `}
+        aStyle={`relative flex flex-col gap-y-[3px] w-full select-none touch-none focus:outline-none group `}
       >
         <p
           className={`p-small  text-left ${
@@ -48,6 +48,10 @@ const FooterLink: React.FunctionComponent<{
         >
           {label}
         </p>
+        <span
+          className=" w-full h-[1px] border-b border-greyShade2 group-hover:border-grey duration-300 delay-100 ease-in"
+          //___xs:hidden xs:w-0
+        />
       </AriaJSLink>
       {/* {isLast ? (
         <BorderHolder />
