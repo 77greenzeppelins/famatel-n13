@@ -9,8 +9,8 @@ import { IF_CatalogNavPanel } from '../../../../utils/TS/typeScriptStaff';
 import { corpoColors } from '../../../../data/_data';
 
 /**HardCoded Staff*/
-const headerTextStyle =
-  'text-grey text-[0.825rem] xxxl:text-[1rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]';
+// const headerTextStyle =
+//   'text-grey text-[0.825rem] xxxl:text-[1rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] uppercase';
 const textStyle = `text-[0.825rem] lg:text-[1.25rem] leading-1 tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]`;
 const customTextstyle =
   'text-light text-left text-[1.5rem] lg:text-[2rem] xxl:text-[2.25] leading-1 tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]';
@@ -33,7 +33,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
           <div key={index} className="flex flex-col ">
             <SmallPseudoHeader
               text={linkHeaders[index]}
-              textStyle={headerTextStyle}
+              // textStyle={headerTextStyle}
               hasBox={false}
               hasVerticalOrnament={false}
             />
@@ -64,7 +64,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
       <div>
         <SmallPseudoHeader
           text={bottomHeader}
-          textStyle={headerTextStyle}
+          // textStyle={headerTextStyle}
           hasBox={false}
           hasVerticalOrnament={false}
         />
@@ -103,7 +103,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
       <div className="flex gap-x-6 items-center">
         <SmallPseudoHeader
           text={optionalHeader}
-          textStyle={headerTextStyle}
+          // textStyle={headerTextStyle}
           hasBox={false}
           hasVerticalOrnament={false}
         />
@@ -124,7 +124,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
           inlineTextStyle={{ writingMode: 'vertical-rl' }}
         />
       </div>
-      <div className="w-[20px]  border-l border-greyShade1 "></div>
+      <div className="w-[20px]  border-l border-greyShade2"></div>
       <nav className="flex w-full flex-col gap-y-6 ">
         {createLinks()}
         {createBottomLevel()}
