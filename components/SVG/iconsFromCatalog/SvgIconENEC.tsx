@@ -32,11 +32,9 @@ function SvgIconENEC({ size, colorFG, colorBG, colorBGOpacity }: IProps) {
   */
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      // width="300"
-      // height="220"
-      // width={widthString}
-      // height={heightString}
       className="w-full aspect-square"
       version="1.1"
       viewBox="0 0 23.131 16.963"

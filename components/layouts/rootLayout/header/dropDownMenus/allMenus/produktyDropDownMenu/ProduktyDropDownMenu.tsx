@@ -13,11 +13,10 @@ const specialCardTextStyle = `text-greyShade2 ${basicTextStyle}`;
 const largeTextStyle =
   'text-greyShade2 text-1xl sm:text-2xl xl:text-3xl tracking-[0.09rem]';
 
-/**---------------------------------------------------------------------------**/
-const ProduktyDropDownMenu: React.FunctionComponent = () => {
-  /*
-  JSX
-   */
+/**-------------------------------------------**/
+
+const ProduktyDropDownMenu: React.FC = () => {
+  /**JSX**/
   return (
     <div
       id="ProduktyDropDownMenu__griddedContainer"

@@ -40,10 +40,10 @@ const Footer: React.FC = () => {
         <div className="flex justify-between inner-px-md-xl-xxl">
           <div className="flex gap-x-1">
             <p className="p-small text-grey">&copy;</p>
-            <p className="p-small text-grey">2013. Famatel Polska</p>
+            <p className="p-small text-grey">2023. Famatel Polska</p>
           </div>
           <div>
-            <p className="p-small text-grey">twórca: 77</p>
+            <p className="p-small text-grey">web development: 77</p>
           </div>
         </div>
         <div className="fc w-full">

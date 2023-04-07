@@ -4,33 +4,19 @@ import { corpoColors } from '../../../data/_data';
 
 /*TS*/
 interface IProps {
-  // size?: number;
   colorFG?: string;
   colorBG?: string;
   colorBGOpacity?: string;
-  // ID: string;
 }
 
 /********************************************************************************/
-const SvgIconMODRange = ({
-  //  size,
-  colorFG,
-  colorBG,
-  colorBGOpacity,
-}: // ID,
-IProps) => {
-  /*
-  ...WTF: slice first 3 letters  
-  */
-  // const modID = ID.slice(3);
-  /*
-  JSX
-  */
+const SvgIconMODRange = ({ colorFG, colorBG, colorBGOpacity }: IProps) => {
+  /**JSX**/
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      // width={`${size}`}
-      // height={`${size}`}
       className="w-full aspect-square"
       viewBox="0 0 100 100"
     >

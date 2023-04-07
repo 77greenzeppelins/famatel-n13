@@ -3,24 +3,18 @@ import React from 'react';
 import { corpoColors } from '../../../data/_data';
 /*TS*/
 interface IProps {
-  // size?: number;
   colorFG?: string;
   colorBG?: string;
   colorBGOpacity?: string;
 }
 
 /**************************************************************************/
-const SvgIconIZO = ({
-  //  size,
-  colorFG,
-  colorBG,
-  colorBGOpacity,
-}: IProps) => {
+const SvgIconIZO = ({ colorFG, colorBG, colorBGOpacity }: IProps) => {
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      // width={`${size}`}
-      // height={`${size}`}
       className="w-full h-full"
       viewBox="0 0 100 100"
     >

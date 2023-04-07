@@ -4,26 +4,20 @@ import { corpoColors } from '../../../data/_data';
 
 /*TS*/
 interface IProps {
-  // size?: number;
   colorFG?: string;
   colorBG?: string;
   colorBGOpacity?: string;
 }
 /************************************************************************/
-const SvgIconUV = ({
-  // size,
-  colorFG,
-  colorBG,
-  colorBGOpacity,
-}: IProps) => {
+const SvgIconUV = ({ colorFG, colorBG, colorBGOpacity }: IProps) => {
   /*
   JSX
   */
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      // width={`${size}`}
-      // height={`${size}`}
       className="w-full aspect-square"
       viewBox="0 0 100 100"
     >

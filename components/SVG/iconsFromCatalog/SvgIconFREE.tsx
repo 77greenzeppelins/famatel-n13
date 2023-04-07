@@ -6,21 +6,15 @@ interface IProps {
   colorFG?: string;
   colorBG?: string;
   colorBGOpacity?: string;
-  // size?: number;
 }
 
 /****************************************************************/
-const SvgIconFREE = ({
-  //  size,
-  colorFG,
-  colorBG,
-  colorBGOpacity,
-}: IProps) => {
+const SvgIconFREE = ({ colorFG, colorBG, colorBGOpacity }: IProps) => {
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      // width={`${size}`}
-      // height={`${size}`}
       className="w-full h-full"
       viewBox="0 0 100 100"
     >

@@ -11,40 +11,28 @@ import { motion } from 'framer-motion';
 /**------------------------------------------------------------------------------*/
 const SvgLogoF = ({
   animationCondition = false,
-  // basicSize
   svgStyle,
   gStyle,
 }: {
   animationCondition?: boolean;
   svgStyle: string;
   gStyle: string;
-  //  basicSize: number
 }) => {
-  /**...WTF*/
-  // console.log('SvgLogo', animationCondition);
-  /**FramerMotion Staff*/
-
-  /**JSX*/
+  /**JSX**/
   return (
     <motion.svg
       role="img"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       className={svgStyle}
-      // width={basicSize}
-      // height="500"
       viewBox="0 0 358 500"
       // animate={animationCondition ? 'strokeDark' : 'strokeLight'}
       // whileHover={{ scale: 1.05 }}
       // transition={svgTransition}
     >
-      <g
-        fill="none"
-        className={gStyle}
-        //  stroke={corpoColors.orange}
-      >
+      <g fill="none" className={gStyle}>
         <path
-          strokeWidth="1"
+          strokeWidth="0"
           d="M14 13.888v472.226h138.39V152.29H344V13.888z"
         ></path>
         <path d="M183.8 343.9H344V183.65H183.8z"></path>
