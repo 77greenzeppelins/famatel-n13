@@ -36,14 +36,18 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between inner-px-md-xl-xxl">
-        <div className="flex gap-x-1">
-          <p className="p-small text-grey">&copy;</p>
-          <p className="p-small text-grey">2013. Famatel Polska</p>
+      <div className="flex flex-col justify-center ">
+        <div className="flex justify-between inner-px-md-xl-xxl">
+          <div className="flex gap-x-1">
+            <p className="p-small text-grey">&copy;</p>
+            <p className="p-small text-grey">2013. Famatel Polska</p>
+          </div>
+          <div>
+            <p className="p-small text-grey">twórca: 77</p>
+          </div>
         </div>
-        <GoToTopButton />
-        <div>
-          <p className="p-small text-grey">twórca: 77</p>
+        <div className="fc w-full">
+          <GoToTopButton />
         </div>
       </div>
     </footer>
@@ -51,3 +55,6 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+{
+  /* <GoToTopButton />; */
+}
