@@ -13,8 +13,8 @@ const NumberTextModule: React.FC<{
   return (
     <InViewContainer
       animationDelay={2}
-      outherContainerStyle="relative flex flex-col px-[2%] xxs:px-[6%] md:px-[60px] lg:px-[15%]  "
-      measuredElementStyle="fc flex-col md:flex-row md:justify-center md:items-center pt-10 gap-y-6 gap-x-6 w-full h-full"
+      outherContainerStyle="relative flex flex-col px-[2%] xxs:px-[6%] md:px-[60px] lg:px-[15%]"
+      measuredElementStyle="fc flex-col md:flex-row md:justify-between md:items-center  gap-y-6 gap-x-6 w-full h-full "
       topFactor={0.5}
       bottomFactor={0.9}
     >

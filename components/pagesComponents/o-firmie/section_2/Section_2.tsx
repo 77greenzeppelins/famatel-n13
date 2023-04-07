@@ -18,32 +18,33 @@ const Section_2: React.FC<{
   return (
     <>
       <div className="hidden lg:flex w-full lg:h-[8vh] h-[14vh] bg-dark" />
-      <motion.div className="flex flex-col gap-y-20 ">
+      <motion.div className="flex flex-col gap-y-16 xl:gap-y-20 xxl:gap-y-28 ">
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[0].pseudoNumber}
           squareText={story.oFirmiePage.squareText[0].text}
           animatedText={story.oFirmiePage.animatedText[0]}
         />
         <ProductDescription
-          isProductDescriptionOpen={isSection_2_Open}
-          productDescriptionOpener={setIsSection_2_Open}
+        // isProductDescriptionOpen={isSection_2_Open}
+        // productDescriptionOpener={setIsSection_2_Open}
         />
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[1].pseudoNumber}
           squareText={story.oFirmiePage.squareText[1].text}
           animatedText={story.oFirmiePage.animatedText[1]}
         />
-        <NumberTextModule
-          squareNumber={story.oFirmiePage.squareText[2].pseudoNumber}
-          squareText={story.oFirmiePage.squareText[2].text}
-          animatedText={story.oFirmiePage.animatedText[2]}
-        />
+
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[3].pseudoNumber}
           squareText={story.oFirmiePage.squareText[3].text}
           animatedText={story.oFirmiePage.animatedText[3]}
         />
         <WordMap />
+        <NumberTextModule
+          squareNumber={story.oFirmiePage.squareText[2].pseudoNumber}
+          squareText={story.oFirmiePage.squareText[2].text}
+          animatedText={story.oFirmiePage.animatedText[2]}
+        />
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[4].pseudoNumber}
           squareText={story.oFirmiePage.squareText[4].text}

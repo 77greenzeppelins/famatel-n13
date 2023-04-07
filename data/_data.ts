@@ -230,7 +230,7 @@ const story = {
       'Nasze rozwiązania znane są Klientom w przeszło 80 krajach na całym świecie.',
       // 'W celu zapewnienia naszym Klientom sprawnej obsługi oparliśmy sie na 8 firmach partnerskich.',
       'Aby zoptymalizować realizację Twoich zamówień oparliśmy sie na 8 firmach partnerskich.',
-      'Oddajemy do Twojej dyspozycji 10 kategorii produktowych.',
+      'Stworzyliśmy 10 kategorii profesjonalnych produktów. To jest nasz wkład w rozwój Twójego biznesu .',
       'Jeśli działasz w zakresie elektryki przemysłowej na pewno mamy rozwiązanie dla Ciebie!',
     ],
     squareText: [
