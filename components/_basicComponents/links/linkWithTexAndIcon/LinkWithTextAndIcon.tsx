@@ -12,8 +12,8 @@ const mainContinerDefaultStyle = '';
 const defaultAStyle =
   'fc gap-4 h-full border border-greyShade1 hover:border-corpo ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-2 py-1';
 
-/**----------------------------------------------------------------**/
-const LinkWithTextAndIcon: React.FunctionComponent<{
+/**TS**/
+interface Props {
   linkHref: string;
   controlsSet?: {};
   ariaLabel?: string;
@@ -27,7 +27,9 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
   pStyle?: string;
   //___for Arrow
   arrowContainerStyle?: string;
-}> = ({
+}
+/**----------------------------------------------------------------**/
+const LinkWithTextAndIcon: React.FunctionComponent<Props> = ({
   linkHref,
   controlsSet,
   ariaLabel,
@@ -79,7 +81,7 @@ const LinkWithTextAndIcon: React.FunctionComponent<{
           containerStyle={
             arrowContainerStyle
               ? arrowContainerStyle
-              : 'fc h-6 w-6 aspect-square stroke-greyShade1 group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center '
+              : 'fc h-6 w-6 min-w-6 min-h-6 aspect-square stroke-greyShade1 group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0'
           }
           strokeWidth={1}
         />

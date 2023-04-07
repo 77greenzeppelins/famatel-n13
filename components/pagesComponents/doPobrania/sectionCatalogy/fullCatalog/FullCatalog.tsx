@@ -22,7 +22,7 @@ const FullCatalog: React.FC<{ mdTextStyle?: string; lgTextStyle?: string }> = ({
           <p className={lgTextStyle}>Katalog</p>
           <p className={mdTextStyle}>2023</p>
         </div>
-        <div className="flex items-center justify-between min-w-[92px] gap-3 group">
+        <div className="flex items-center justify-between min-w-[92px] gap-3 group bg-vB">
           <DownloadableLink
             staffToDownload={catalogLink}
             linkLabel={'PEŁNA WERSJA (53 MB)'}

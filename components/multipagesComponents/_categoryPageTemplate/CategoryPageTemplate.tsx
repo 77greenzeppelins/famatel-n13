@@ -23,7 +23,7 @@ const CategoryPageTemplate: React.FunctionComponent<{
   return (
     <div
       data-component="CategoryPageTemplate__container"
-      className="w-full inner-px-md-lg pt-[60px] bg-dark"
+      className="w-full inner-px-md-lg pt-[60px]"
     >
       <PageContentLayout divStyle="flex flex-col gap-y-[50px] lg:gap-y-[80px] pt-[60px]">
         <SectionContentLayout divStyle="flex xl:flex-row gap-y-4">

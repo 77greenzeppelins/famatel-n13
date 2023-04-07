@@ -11,7 +11,7 @@ import { corpoColors } from '../../../../data/_data';
 /**HardCoded Staff*/
 // const headerTextStyle =
 //   'text-grey text-[0.825rem] xxxl:text-[1rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] uppercase';
-const textStyle = `text-[0.825rem] lg:text-[1.25rem] leading-1 tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]`;
+const textStyle = `text-[0.825rem] lg:text-[1.25rem] leading-1 tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] `; //___w-fit
 const customTextstyle =
   'text-light text-left text-[1.5rem] lg:text-[2rem] xxl:text-[2.25] leading-1 tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]';
 
@@ -43,12 +43,12 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
                   <LinkWithTextAndIcon
                     linkHref={linkUrls[index]}
                     controlsSet={{ background: corpoColors.dark }}
-                    aStyle="flex items-center gap-4 h-full ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-[10px]"
+                    aStyle="flex items-center gap-4 h-full ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-[10px] w-fit "
                     pLabel={name}
                     //___for <SmallPseudoHeader>
                     hasBox={false}
                     hasVerticalOrnament={false}
-                    pStyle={`text-grey text-left ${textStyle}`}
+                    pStyle={`text-grey text-left  ${textStyle}`}
                   />
                 </div>
               </>

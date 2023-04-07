@@ -4,7 +4,7 @@ import ButtonsSection from './buttonsSection/ButtonsSection';
 
 /**HardCoded Staff*/
 const textStyle =
-  'p-medium text-grey group-hover:text-light ease-in duration-300 disable whitespace-normal';
+  'p-medium text-grey group-hover:text-light ease-in duration-300 disable-soft whitespace-normal';
 
 /**-----------------------------**/
 const DownloadableRow: React.FC<{
@@ -15,24 +15,30 @@ const DownloadableRow: React.FC<{
 }> = ({ rowLabel, rowNumber, buttonsLabels, staffToDownload }) => {
   /**JSX**/
   return (
-    <li className="relative min-h-[64px] sm:min-h-[32px] flex items-center group">
-      <div className="flex items-center min-w-[24px] min-h-[64px] sm:min-h-[32px] ">
-        <p className={textStyle}>{rowNumber}</p>
-      </div>
-      <div className="flex flex-col flex-wrap justify-between w-full sm:items-center gap-y-2 sm:flex-row">
-        <div className="sm3xx:min-w-[312px]">
-          <p className={textStyle}>{rowLabel}</p>
+    <li className="relative flex flex-col gap-[2px] items-center group">
+      <div className=" flex w-full">
+        <div
+          className="flex items-center min-w-[24px] min-h-[64px] sm:min-h-[32px]"
+          //__
+        >
+          <p className={textStyle}>{rowNumber}</p>
         </div>
-        <div className="flex gap-9">
-          <ButtonsSection
-            buttonsLabels={buttonsLabels}
-            staffToDownload={staffToDownload}
-            textStyle={textStyle}
-          />
+        <div className="flex flex-col flex-wrap justify-between w-full sm:items-center gap-y-2 sm:flex-row">
+          <div className="sm3xx:min-w-[312px]">
+            <p className={textStyle}>{rowLabel}</p>
+          </div>
+          <div className="flex gap-9 ">
+            <ButtonsSection
+              buttonsLabels={buttonsLabels}
+              staffToDownload={staffToDownload}
+              textStyle={textStyle}
+            />
+          </div>
         </div>
       </div>
-      <div
-        className="absolute inset-0 flex duration-300 ease-in border-b border-greyShade2 group-hover:border-grey"
+      <span
+        className="w-full h-[1px] duration-300 ease-in border-b border-greyShade2 group-hover:border-grey"
+        // className="absolute bottom-0 inset-x-0 h-[1px] flex duration-300 ease-in border-b border-greyShade2 group-hover:border-grey"
         //___pointer-events-none
       />
     </li>

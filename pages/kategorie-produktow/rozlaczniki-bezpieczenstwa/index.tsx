@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import type { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
 /**Components*/
 import Layout from '../../../components/layouts/rootLayout/Layout';
 import RozlacznikiBezpieczenstwaContent from '../../../components/pagesComponents/_nestedPages/0_kategorie/6_rozlacznikiBezpieczenstwa/RozlacznikiBezpieczenstwaCatContent';
@@ -11,8 +11,19 @@ import type { NextPageWithLayout } from '../../_app';
 
 /**----------------------------------------------------------**/
 const KategorieProduktowPage: NextPageWithLayout = () => {
+  /*
+  __1__ With these steps, Next.js app will always scroll to the top of the page when a new page is loaded
+  */
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
+  /**JSX**/
   return (
-    <div className="flex flex-col w-full min-h-screen bg-dark">
+    <div className="flex flex-col w-full bg-dark">
       <RozlacznikiBezpieczenstwaContent
         uniqueKey={0}
         categoryName={catalogStructureData[5].mainCategoryName}

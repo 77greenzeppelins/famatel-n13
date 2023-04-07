@@ -34,7 +34,7 @@ const SmallPseudoHeader: React.FunctionComponent<Props> = ({
         containerStyle
           ? containerStyle
           : 'relative flex items-center disable-soft'
-      }  ${hasBox ? 'gap-4' : 'gap-0'} `}
+      }  ${hasBox ? 'gap-4 w-fit' : 'gap-0 w-fit'} `}
     >
       {hasHorizontalOrnament && (
         <div className="absolute bottom-0 h-[1px] w-full border-b border-corpo" />

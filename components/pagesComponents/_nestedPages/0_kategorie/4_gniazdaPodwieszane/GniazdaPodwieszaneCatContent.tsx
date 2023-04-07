@@ -27,7 +27,7 @@ const GniazdaPodwieszaneContent = ({
 }) => {
   /**JSX**/
   return (
-    <div className="w-full inner-px-md-lg pt-[60px] bg-dark pb-[10vh]">
+    <div className="w-full inner-px-md-lg">
       <PageContentLayout>
         {/*
         _______________________________________header

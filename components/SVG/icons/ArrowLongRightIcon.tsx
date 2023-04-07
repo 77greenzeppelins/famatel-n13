@@ -23,7 +23,7 @@ const ArrowLongRightIcon = ({
       viewBox="0 0 24 24"
       strokeWidth={strokeWidth ? strokeWidth : 1.5}
       // stroke={corpoColors.light}
-      className={containerStyle ? containerStyle : 'w-6 h-6'}
+      className={containerStyle ? containerStyle : 'w-6 h-6 flex-shrink-0'}
       // onHoverStart={e => { fill:'#9b59b6'}}
       // onHoverEnd={e => {}}
     >
