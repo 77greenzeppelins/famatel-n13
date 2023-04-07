@@ -4,11 +4,9 @@ import InViewContainer from '../../../containers/inViewContainer/InViewContainer
 import InViewAnimatedContent from '../_inViewAnimatedContent/InViewAnimatedContent';
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
 import FadingHeader from '../../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
-/*Icons Staff*/
-import { EnvelopeIcon } from '@heroicons/react/24/solid';
-import { PhoneIcon } from '@heroicons/react/24/solid';
-/**Basic Data**/
-import { linksToInstantContactData } from '../../../../data/_data';
+import DirectPhoneGK from '../../../_basicComponents/links/directContactLinks/DirectPhoneGK';
+import DirectMailB from '../../../_basicComponents/links/directContactLinks/DirectMailB';
+import DirectMailGK from '../../../_basicComponents/links/directContactLinks/DirectMailGK';
 
 /**HardCoded Staff*/
 const aStyle = 'flex items-center gap-6 group no-sparkling';
@@ -17,8 +15,9 @@ const iconsStyle =
 const labelStyle =
   'text-grey text-[1rem] lg:text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-light group-hover:-translate-x-1 ease-in duration-300  origin-center break-all';
 
-/**-------------------------------------------------------------------------------**/
-const ContactContacts: React.FunctionComponent = () => {
+/**--------------------------------------**/
+
+const ContactContacts: React.FC = () => {
   /**JSX**/
   return (
     <div className="relative flex flex-col gap-y-1">
@@ -32,40 +31,33 @@ const ContactContacts: React.FunctionComponent = () => {
       >
         <InViewAnimatedContent>
           <FadingHeader label={'Kontakt'} />
-          <div className="flex flex-col gap-y-5 ">
-            <div>
-              <a
-                href="tel:601 460 307"
-                className={aStyle}
-                style={{ width: 'fit-content' }}
-              >
-                <PhoneIcon className={iconsStyle} />
-                <p className={labelStyle}>Telefon: +48 601 460 307</p>
-              </a>
-            </div>
+          <address className="not-italic">
+            <ul className="flex flex-col gap-y-5 ">
+              <li>
+                <DirectPhoneGK
+                  aStyle={aStyle}
+                  iconStyle={iconsStyle}
+                  labelStyle={labelStyle}
+                />
+              </li>
 
-            <div>
-              <a
-                href={linksToInstantContactData.mail}
-                className={aStyle}
-                style={{ width: 'fit-content' }}
-              >
-                <EnvelopeIcon className={iconsStyle} />
-                <p className={labelStyle}>biuro@famatel.pl</p>
-              </a>
-            </div>
+              <li>
+                <DirectMailB
+                  aStyle={aStyle}
+                  iconStyle={iconsStyle}
+                  labelStyle={labelStyle}
+                />
+              </li>
 
-            <div>
-              <a
-                href="mailto:grzegorz.kowcz@famatel.pl"
-                className={aStyle}
-                style={{ width: 'fit-content' }}
-              >
-                <EnvelopeIcon className={iconsStyle} />
-                <p className={labelStyle}>grzegorz.kowcz@famatel.pl</p>
-              </a>
-            </div>
-          </div>
+              <div>
+                <DirectMailGK
+                  aStyle={aStyle}
+                  iconStyle={iconsStyle}
+                  labelStyle={labelStyle}
+                />
+              </div>
+            </ul>
+          </address>
         </InViewAnimatedContent>
       </InViewContainer>
 

@@ -288,6 +288,14 @@ interface IF_SvgTech {
   }>;
 }
 
+/*
+used in: <NavWithLinks>; all places where "links to pages" work like footer, contactPage...
+*/
+interface IF_LinkData {
+  label: string;
+  url: string;
+}
+
 export type {
   ISubCategoriesItem,
   IF_CatalogStructureData,
@@ -313,4 +321,6 @@ export type {
   IF_CatalogNavPanel,
   //___
   IF_SvgTech,
+  //___07-IV
+  IF_LinkData,
 };

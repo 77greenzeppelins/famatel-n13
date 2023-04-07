@@ -8,8 +8,11 @@ import {
 
 /**Instant Contact Buttons**/
 const linksToInstantContactData = {
-  mail: 'mailto:biuro@famatel.pl',
-  mobile: 'tel:697-790-915',
+  mail: 'mailto:biuro@famatel.pl', //___to delate
+  mailB: 'mailto:biuro@famatel.pl',
+  mailGK: 'mailto:grzegorz.kowcz@famatel.pl',
+  mobile: 'tel:697-790-915', //___to delate
+  mobileGK: 'tel:697-790-915',
 };
 
 /**Data for Data**/

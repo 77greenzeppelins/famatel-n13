@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import type { ReactElement } from 'react';
+import { ReactElement } from 'react';
 /**Components*/
 import Layout from '../../../components/layouts/rootLayout/Layout';
 import CategoryPageTemplate from '../../../components/multipagesComponents/_categoryPageTemplate/CategoryPageTemplate';
-// import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
 /**TS**/
@@ -11,14 +10,22 @@ import type { NextPageWithLayout } from '../../_app';
 
 /**--------------------------------------------------------------**/
 const KategorieProduktowPage: NextPageWithLayout = () => {
+  /*
+  __1__ With these steps, Next.js app will always scroll to the top of the page when a new page is loaded
+  */
+  // const scrollToTop = () => {
+  //   window.scrollTo(0, 0);
+  // };
+  // useEffect(() => {
+  //   scrollToTop();
+  // }, []);
+
   /**JSX**/
   return (
     <div className="fc flex-col w-full min-h-screen bg-dark">
       <CategoryPageTemplate
         mainCategoryIndex={catalogStructureData[0].mainCategoryIndex}
-      >
-        {/* <WtyczkiGniazdaChildren /> */}
-      </CategoryPageTemplate>
+      ></CategoryPageTemplate>
     </div>
   );
 };
@@ -41,10 +48,7 @@ KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
           content="Zapoznaj się z ofertą przemysłowych wtyczek i gniazd marki Famatel."
         ></meta>
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <Layout>{page}</Layout>
     </>
   );
 };

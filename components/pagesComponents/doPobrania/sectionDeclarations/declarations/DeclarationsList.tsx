@@ -1,31 +1,18 @@
 import React from 'react';
 import DownloadableRow from '../../__downloadableRow/DownloadableRow';
 /**HardCoded Data**/
-const catalogChapters = [
-  'Deklaracja zgodności wyrobów o numerach katalogowych 3952.XXXX (IP44, IP65 stacjonarne i przenośne)',
-  'Deklaracja zgodności wyrobów o numerach katalogowych 3957.XXXX (IP44, IP65 stacjonarne i przenośne)',
-  'Deklaracja zgodności wyrobów o numerach katalogowych 3958.XXXX (IP44, IP65 stacjonarne i przenośne)',
-  'Deklaracja zgodności wyrobów o numerach katalogowych 3959.XXXX (IP44, IP65 stacjonarne i przenośne)',
-  'Deklaracja zgodności wyrobów o numerach katalogowych 3977.XXXX (IP44, IP65 stacjonarne i przenośne)',
-];
-const staffLinks = [
-  ['/pdf/declarations/D3952.XXXX zbiorcza.pdf'],
-  ['/pdf/declarations/D3957.XXXX zbiorcza.pdf'],
-  ['/pdf/declarations/D3958.XXXX zbiorcza.pdf'],
-  ['/pdf/declarations/D3959.XXXX zbiorcza.pdf'],
-  ['/pdf/declarations/D3977.XXXX zbiorcza.pdf'],
-];
-const buttonsLabels = [
-  ['0.6 MB'],
-  ['0.6 MB'],
-  ['0.2 MB'],
-  ['0.6 MB'],
-  ['0.6 MB'],
-];
+import {
+  catalogChapters,
+  staffLinks,
+  buttonsLabels,
+} from './declarationList_data';
+
+/**------------------------------**/
 
 const DeclarationsList = () => {
+  /**JSX**/
   return (
-    <div
+    <ul
       data-component="CatalogChapters"
       className="w-full flex flex-col gap-y-4 "
     >
@@ -38,7 +25,7 @@ const DeclarationsList = () => {
           staffToDownload={staffLinks[i]}
         />
       ))}
-    </div>
+    </ul>
   );
 };
 export default DeclarationsList;

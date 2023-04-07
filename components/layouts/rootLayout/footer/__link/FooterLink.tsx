@@ -2,20 +2,12 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import AriaJSLink from '../../../../_basicComponents/links/ariaJSLink/AriaJSLink';
 
-/**Direct Child**/
-const BorderHolder = () => {
-  return (
-    <div className="absolute w-full h-6 border-greyShade2 origin-right border-t-[0.5px]" />
-  );
-};
+/**TS**/
+import { IF_LinkData } from '../../../../../utils/TS/typeScriptStaff';
 
-const FooterLink: React.FunctionComponent<{
-  url: string;
-  label: string;
-  uniqueKey: number;
-  isLast: boolean;
-  isSimple: boolean;
-}> = ({ url, label, uniqueKey, isLast, isSimple }) => {
+/**---------------------------**/
+
+const FooterLink: React.FC<IF_LinkData> = ({ url, label }) => {
   /*useRouter Section
   why: for style sake;  I want link to be in corpo color 
   when user is on its corresponding page
@@ -23,14 +15,12 @@ const FooterLink: React.FunctionComponent<{
   const router = useRouter();
   const linkStyleIfRouterMatches = router.pathname === url;
 
-  // console.log('isSimple', isSimple);
   /**JSX**/
   return (
     <li
       data-component="NavLink_container"
       className="relative flex-col overflow-hidden fc"
     >
-      {/* <BorderHolder /> */}
       <AriaJSLink
         linkHref={url}
         controlsSet={{ background: 'transparent' }}
@@ -48,14 +38,8 @@ const FooterLink: React.FunctionComponent<{
         >
           {label}
         </p>
-        <span
-          className=" w-full h-[1px] border-b border-greyShade2 group-hover:border-grey duration-300 delay-100 ease-in"
-          //___xs:hidden xs:w-0
-        />
+        <span className=" w-full h-[1px] border-b border-greyShade2 group-hover:border-grey duration-300 delay-100 ease-in" />
       </AriaJSLink>
-      {/* {isLast ? (
-        <BorderHolder />
-      ) : null} */}
     </li>
   );
 };
