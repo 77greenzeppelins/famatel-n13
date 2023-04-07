@@ -7,7 +7,8 @@ import WordMap from './wordMap/WordMap';
 import { motion } from 'framer-motion';
 
 /**Basic Data*/
-import { story } from '../../../../data/_data';
+import { pagesUrl, story } from '../../../../data/_data';
+import LinkWithTextAndIcon from '../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
 
 /**---------------------------------------------**/
 const Section_2: React.FC<{
@@ -50,6 +51,15 @@ const Section_2: React.FC<{
           squareText={story.oFirmiePage.squareText[4].text}
           animatedText={story.oFirmiePage.animatedText[4]}
         />
+        <div className="fc inner-px-md-xl-xxl">
+          <LinkWithTextAndIcon
+            linkHref={pagesUrl.produkty}
+            pLabel={'Poznaj kategorie produktów'}
+            //___for <SmallPseudoHeader>
+            hasBox={false}
+            hasVerticalOrnament={false}
+          />
+        </div>
       </motion.div>
     </>
   );
