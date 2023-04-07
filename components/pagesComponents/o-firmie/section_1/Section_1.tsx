@@ -13,7 +13,7 @@ const Section_1: React.FunctionComponent<{
   return (
     <div
       data-component="Section_1__container"
-      className="relative flex flex-col-reverse items-end  xl:flex-row-reverse xl:items-center justify-center min-h-[100vh] xl:h-screen"
+      className="relative flex flex-col-reverse items-end  xl:flex-row-reverse xl:items-center justify-center  xl:h-screen"
     >
       <div className="relative flex items-start justify-end w-[98%] sm:w-[95%] md:w-[90%] lg:w-[84%] xl:w-[55%] xxl:w-[60%] xl:h-auto xs:-mt-20 lg:-mt-[80px] xl:mt-0">
         <GraphicSection

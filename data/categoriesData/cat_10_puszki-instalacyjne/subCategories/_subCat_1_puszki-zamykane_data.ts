@@ -392,7 +392,8 @@ const puszkiZamykane_productCard_data: IF_ProductCardData[] = [
   //___akcespria
   {
     arrayIndex: 41,
-    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3934-3944`,
+    // path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3934-3944`,
+    path: '',
     textIcons: ['IP54', 'Wymiary: 175 × 225 × 85 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[41],
     type: 'Typ: Dławnice kablowe',
@@ -401,7 +402,8 @@ const puszkiZamykane_productCard_data: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 42,
-    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3057`,
+    // path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3057`,
+    path: '',
     textIcons: ['IP54', 'Wymiary: 110 × 150 × 63 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[42],
     type: 'Typ: Szyna DIN',
@@ -410,7 +412,9 @@ const puszkiZamykane_productCard_data: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 43,
-    path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3054`,
+    // path: `${catalogStructureData[9].subCategoriesUrls[0]}/model-3054`,
+    path: '',
+
     textIcons: ['IP54', 'Wymiary: 135 × 160 × 83 (w/s/g)'],
     imageData: imgPuszkiInstalacyjne_01_zamykane[43],
     type: 'Typ: Płyta stalowa ocynkowana',

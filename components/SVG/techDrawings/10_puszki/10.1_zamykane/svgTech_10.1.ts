@@ -81,9 +81,9 @@ const svgTech_10_1: readonly IF_SvgTech[] = [
   { model: '3064', Component: SVG_10_1_3064 },
   { model: '3065', Component: SVG_10_1_3065 },
   { model: '3066', Component: SVG_10_1_3066 },
-  { model: '3067', Component: SVG_10_1_3067 },
-  { model: '3069', Component: SVG_10_1_3069 },
-  { model: '3054', Component: SVG_10_1_3054 },
+  { model: '3067/3067-1', Component: SVG_10_1_3067 },
+  { model: '3069/3069-1', Component: SVG_10_1_3069 },
+  { model: '3934/3944', Component: SVG_10_1_3054 },
   { model: '3057', Component: SVG_10_1_3057 },
   { model: '3934/3944', Component: SVG_10_1_3934 },
 ];

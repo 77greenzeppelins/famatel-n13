@@ -10,7 +10,6 @@ import { smallPseudoHeaders } from '../../../../../../data/_data';
 import {
   undelinedTableContainerStyle,
   undelinedTableTextStyle,
-  vertGap,
 } from '../../../../../../utils/tailwindStyles';
 
 /**------------------------------------------------**/

@@ -12,7 +12,7 @@ const OFirmieContent = () => {
   return (
     <div
       data-component="OFirmieContent__container"
-      className="flex flex-col justify-center overflow-hidden"
+      className="flex flex-col justify-center pt-[80px] overflow-hidden"
       //___pt-[60px] min-h-screen divide-y-[1px] divide-greyShade2 w-screen
     >
       <div className="z-[10]">
