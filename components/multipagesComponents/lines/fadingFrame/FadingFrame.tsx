@@ -1,6 +1,8 @@
 import React from 'react';
 /**Components**/
 import FadingLine from '../fadingLine/FadingLine';
+/**Framer Motion Staff**/
+import { motion } from 'framer-motion';
 /*
 (!) Parent should be "relative"
 */
@@ -18,48 +20,50 @@ const frameData = {
 const FadingFrame = () => {
   /**JSX{*/
   return (
-    <>
-      <div className="absolute flex inset-x-0 top-0 h-[1px]">
-        {frameData.horizontal.map(({ c, g, fromColor }, i) => (
-          <FadingLine
-            key={i}
-            containerStyle={c}
-            gradientTo={g}
-            fromColor={fromColor}
-          />
-        ))}
-      </div>
-      <div className="absolute flex inset-x-0 bottom-0 h-[1px]">
-        {frameData.horizontal.map(({ c, g, fromColor }, i) => (
-          <FadingLine
-            key={i}
-            containerStyle={c}
-            gradientTo={g}
-            fromColor={fromColor}
-          />
-        ))}
-      </div>
-      <div className="absolute flex flex-col inset-y-0 left-0 w-[1px]">
-        {frameData.vertical.map(({ c, g, fromColor }, i) => (
-          <FadingLine
-            key={i}
-            containerStyle={c}
-            gradientTo={g}
-            fromColor={fromColor}
-          />
-        ))}
-      </div>
-      <div className="absolute flex flex-col inset-y-0 right-0 w-[1px]">
-        {frameData.vertical.map(({ c, g, fromColor }, i) => (
-          <FadingLine
-            key={i}
-            containerStyle={c}
-            gradientTo={g}
-            fromColor={fromColor}
-          />
-        ))}
-      </div>
-    </>
+    <div className=" absolute inset-0 w-full h-full">
+      <motion.div className="relative w-full h-full">
+        <div className="absolute flex inset-x-0 top-0 h-[1px]">
+          {frameData.horizontal.map(({ c, g, fromColor }, i) => (
+            <FadingLine
+              key={i}
+              containerStyle={c}
+              gradientTo={g}
+              fromColor={fromColor}
+            />
+          ))}
+        </div>
+        <div className="absolute flex inset-x-0 bottom-0 h-[1px]">
+          {frameData.horizontal.map(({ c, g, fromColor }, i) => (
+            <FadingLine
+              key={i}
+              containerStyle={c}
+              gradientTo={g}
+              fromColor={fromColor}
+            />
+          ))}
+        </div>
+        <div className="absolute flex flex-col inset-y-0 left-0 w-[1px]">
+          {frameData.vertical.map(({ c, g, fromColor }, i) => (
+            <FadingLine
+              key={i}
+              containerStyle={c}
+              gradientTo={g}
+              fromColor={fromColor}
+            />
+          ))}
+        </div>
+        <div className="absolute flex flex-col inset-y-0 right-0 w-[1px]">
+          {frameData.vertical.map(({ c, g, fromColor }, i) => (
+            <FadingLine
+              key={i}
+              containerStyle={c}
+              gradientTo={g}
+              fromColor={fromColor}
+            />
+          ))}
+        </div>
+      </motion.div>
+    </div>
   );
 };
 

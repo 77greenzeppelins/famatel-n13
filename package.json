@@ -25,7 +25,7 @@
     "react-dom": "18.2.0",
     "react-use-measure": "^2.1.1",
     "typescript": "4.9.4",
-    "valtio": "^1.10.3"
+    "valtio": "^1.7.0"
   },
   "devDependencies": {
     "@types/locomotive-scroll": "^4.1.0",
