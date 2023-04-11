@@ -34,17 +34,20 @@ const HeroSection: React.FC<{ mdTextStyle?: string; lgTextStyle?: string }> = ({
       data-component="HeroSection__container"
       className="relative fc w-full h-full "
     >
+      <div
+        className="absolute h-full left-0 w-[5%] max-w-[40px] z-10 from-dark  to-transparent bg-gradient-to-r"
+        //___via-dark
+      />
+      <div className="absolute h-full right-0 w-[5%] max-w-[40px] z-10 from-dark to-transparent bg-gradient-to-l" />
       <HeroBackground />
       <motion.div
-        className={`relative fc flex-col gap-10 w-[30%] min-w-[340px] h-[80vh] min-h-[500px] z-10 bg-dark`}
+        className={`relative fc flex-col gap-10 w-[90%] xs4xx:w-[360px] lg:w-[400px] xxl:w-[460px] h-[80vh] min-h-[460px] z-10 bg-dark`}
         //___max-w-[600px] max-h-[600px]
         variants={container}
         initial="initial"
         animate="animate"
       >
-        {/* <motion.div variants={item}> */}
         <FadingFrame />
-        {/* </motion.div> */}
 
         <motion.div className="fc h-[40%] w-full" variants={item}>
           <SvgLogoF svgStyle={'h-full'} gStyle={'fill-corpo'} />

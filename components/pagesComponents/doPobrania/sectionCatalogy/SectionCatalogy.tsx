@@ -7,15 +7,8 @@ import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWi
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
 
-/**TS**/
-type Props = {
-  componentIsInView?: boolean;
-  mdTextStyle: string;
-  lgTextStyle: string;
-};
-
 /**-----------------------------------------**/
-const SectionCatalogy: React.FC<Props> = ({ mdTextStyle, lgTextStyle }) => {
+const SectionCatalogy: React.FC = () => {
   /**JSX**/
   return (
     <motion.div className="relative flex flex-col w-full gap-y-10">

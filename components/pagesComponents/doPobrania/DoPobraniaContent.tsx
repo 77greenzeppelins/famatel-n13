@@ -7,8 +7,7 @@ import SectionCatalogy from './sectionCatalogy/SectionCatalogy';
 import SectionDeclarations from './sectionDeclarations/SectionDeclarations';
 /**Hardcoded Staff*/
 const lgTextStyle =
-  'text-light text-left text-[2rem] xs:text-[2.5rem] sm:text-[3rem]  xxl:text-[5rem]  tracking-[2px] md:leading-[3rem] lg:leading-[4rem] xl:leading-[3.5rem] xxl:leading-[4rem]';
-//___md:text-[4rem] lg:text-[5rem] xl:text-[4.5rem]
+  'text-light text-left text-[2rem] xs:text-[2.5rem] sm:text-[3rem] tracking-[2px]';
 const mdTextStyle =
   'text-grey text-1xl tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025';
 
@@ -33,10 +32,7 @@ const DoPobraniaContent = () => {
             bottomFactor={0.2}
           >
             <InViewAnimatedContent containerStyle="w-full">
-              <SectionCatalogy
-                mdTextStyle={mdTextStyle}
-                lgTextStyle={lgTextStyle}
-              />
+              <SectionCatalogy />
             </InViewAnimatedContent>
           </InViewContainer>
 
