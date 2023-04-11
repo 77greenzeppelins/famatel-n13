@@ -3,8 +3,6 @@ import React from 'react';
 import SVG_1_2_13631 from './SVG_1.2_13631';
 import SVG_1_2_13634 from './SVG_1.2_13634';
 import SVG_1_2_13377 from './SVG_1.2_13377';
-import SVG_1_2_13377_d from './SVG_1.2_13377_d';
-
 import SVG_1_2_23270 from './SVG_1.2_23270';
 import SVG_1_2_24373 from './SVG_1.2_24373';
 import SVG_1_2_24374 from './SVG_1.2_24374';
