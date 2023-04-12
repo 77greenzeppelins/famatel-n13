@@ -26,7 +26,7 @@ const RoadPromptSection: React.FC<{
             mainContainerStyle="w-full flex flex-col gap-[4px]"
           />
           <div className="flex flex-col gap-1 w-[90%] pt-4">
-            {story.pageKontakt.adres.map(label => (
+            {story.pageKontakt.daneFirmy.slice(0, 3).map(label => (
               <p key={label} className="p-small text-grey">
                 {label}
               </p>

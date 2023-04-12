@@ -250,7 +250,6 @@ const story = {
       'NIP 8822120823',
       'KRS 0000525431',
     ],
-    // adres: ['ul. Willowa 5', '58-260 Bielawa'],
     dojazd: ['ul. Strażacka', '58-260 Bielawa'],
     dojazdNav: ['50.68051, 16.60300'],
   },
