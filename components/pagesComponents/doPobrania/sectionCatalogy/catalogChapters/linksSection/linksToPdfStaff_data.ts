@@ -1,5 +1,5 @@
 /**Basic Data*/
-import { mainCategoriesNames } from '../../../../../data/_data';
+import { mainCategoriesNames } from '../../../../../../data/_data';
 
 /**HardCoded Data**/
 const catalogChapters: string[] = ['Wstęp', ...mainCategoriesNames];

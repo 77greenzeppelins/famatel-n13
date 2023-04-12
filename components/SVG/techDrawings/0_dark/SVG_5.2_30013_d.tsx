@@ -1,11 +1,11 @@
 import { corpoColors } from '../../../../data/_data';
 /**---------------------------------------------**/
-const SVG_5_2_30013_d: React.FC<{ basicSize: number }> = ({ basicSize }) => {
+const SVG_5_2_30013_d: React.FC<{ className: string }> = ({ className }) => {
   /**JSX**/
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={basicSize}
+      className={className}
       viewBox="0 0 300 220"
     >
       <g

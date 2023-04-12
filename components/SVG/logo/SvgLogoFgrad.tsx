@@ -1,42 +1,16 @@
 /**BasicData*/
 import { corpoColors } from '../../../data/_data';
-/**FramerMotion Staff*/
-import { motion } from 'framer-motion';
-// import { svgTransition } from '../../../utils/framerMotion/framerMotionUtils';
-// const textVariants = {
-//   strokeLight: { fill: corpoColors.light, transition: { duration: 0.4 } },
-//   strokeDark: { fill: corpoColors.dark, transition: { duration: 0.4 } },
-// };
 
 /**------------------------------------------------------------------------------*/
-const SvgLogoFgrad = ({
-  animationCondition = false,
-  // basicSize
-  svgStyle,
-  gStyle,
-}: {
-  animationCondition?: boolean;
-  svgStyle: string;
-  gStyle?: string;
-  //  basicSize: number
-}) => {
-  /**...WTF*/
-  // console.log('SvgLogo', animationCondition);
-  /**FramerMotion Staff*/
-
+const SvgLogoFgrad: React.FC<{ className: string }> = ({ className }) => {
   /**JSX*/
   return (
-    <motion.svg
+    <svg
       role="img"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      className={svgStyle}
-      // width={basicSize}
-      // height="500"
+      className={className}
       viewBox="0 0 358 500"
-      // animate={animationCondition ? 'strokeDark' : 'strokeLight'}
-      // whileHover={{ scale: 1.05 }}
-      // transition={svgTransition}
     >
       <defs>
         <linearGradient
@@ -126,7 +100,7 @@ const SvgLogoFgrad = ({
         d="M183.17 -344.5H344.37V-343.5H183.17z"
         transform="rotate(90)"
       ></path>
-    </motion.svg>
+    </svg>
   );
 };
 

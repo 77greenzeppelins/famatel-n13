@@ -1,11 +1,13 @@
 import { corpoColors } from '../../../../data/_data';
 /**---------------------------------------------**/
-const SVG_2_1_25056_d: React.FC<{ basicSize: number }> = ({ basicSize }) => {
+const SVG_2_1_25056_d: React.FC<{ className: string }> = ({ className }) => {
   /**JSX**/
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      width={basicSize}
+      className={className}
       viewBox="0 0 800 500"
     >
       <path

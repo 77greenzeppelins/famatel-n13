@@ -6,8 +6,11 @@ import FadingHeader from '../../../multipagesComponents/pseudoHeaders/fadingHead
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
 import SvgMap from '../../../SVG/maps/SvgMap';
 import { MapPinIcon } from '@heroicons/react/24/solid';
+
+/**Basic Data**/
 import { story } from '../../../../data/_data';
 
+/**ChardCoded Staff**/
 const labelStyle =
   'text-grey text-[1rem] lg:text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-light ease-in duration-300 delay-100 origin-center break-all';
 
@@ -19,8 +22,6 @@ const ContactMapka = () => {
         animationDelay={2}
         outherContainerStyle="w-full"
         measuredElementStyle="relative "
-        // topFactor={0.3}
-        // bottomFactor={0.3}
         topFactor={0.2}
         bottomFactor={0.1}
       >
@@ -38,10 +39,7 @@ const ContactMapka = () => {
                   </li>
                 ))}
                 <div className="flex items-center gap-x-3">
-                  <MapPinIcon
-                    className="h-[16px] w-[16px] lg:h-[20px] lg:w-[20px] text-corpo group-hover:animate-pulse ease-in duration-300 delay-100"
-                    //___animate-pulse glow
-                  />
+                  <MapPinIcon className="h-[16px] w-[16px] lg:h-[20px] lg:w-[20px] text-corpo group-hover:animate-pulse ease-in duration-300 delay-100" />
                   <p className={labelStyle}>{story.pageKontakt.dojazdNav}</p>
                 </div>
               </ul>

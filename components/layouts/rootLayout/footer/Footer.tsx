@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col w-full gap-y-6 xs4xxw-1/2">
               <SmallPseudoHeader text="Kontakt" />
               <ContactsLinks />
-              <SmallPseudoHeader text="Adres" />
+              <SmallPseudoHeader text="Dane Firmowe" />
               <Address />
               <SocialMediaBar />
             </div>

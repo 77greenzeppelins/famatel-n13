@@ -1,30 +1,43 @@
 import React from 'react';
 /**Components**/
+/**Basic Data**/
+import { story } from '../../../../data/_data';
 /**Hardcoded Staff*/
 const witajStyle =
   'text-light text-5xl xxs:text-[4.5rem] xs:text-9xl font-bold tracking-[1.5px] lg:tracking-[1.5px] word-spacing-0125 lg:word-spacing-025 disable-soft';
 const sentenceStyle =
   'text-base lg:text-xl lg:text-2xl text-grey text-center  tracking-[1.5px] lg:tracking-[2px] word-spacing-0125 lg:word-spacing-025 disable-soft';
-/**Basic Data**/
-import { story } from '../../../../data/_data';
 
 /**Framer Motion Staff*/
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { opacityScaleYDynamicVariants } from '../../../../utils/framerMotion/framerMotionUtils';
+const springOptions = {
+  // damping: 100,
+  // mass: 10,
+  // stiffness: 100,
+  stiffness: 100,
+  damping: 30,
+  restDelta: 0.001,
+};
 
 /**------------------------------**/
 const ContactIntro = () => {
   /**...*/
   let { scrollY, scrollYProgress } = useScroll();
-  let animatedVal_1 = useTransform(scrollY, [0, 240], [0, 1]);
-  let animatedVal_2 = useTransform(scrollY, [0, 250], [1, 0.7]);
-  const x = useTransform(scrollYProgress, [0, 1], [0, 600]);
+  const scrollSpringed = useSpring(scrollYProgress, springOptions);
+  const scrollSpringedTransformed = useTransform(
+    scrollSpringed,
+    value => 1 - value
+  );
+  let animatedVal_1 = useTransform(scrollY, [0, 200], [0, 1]);
+
+  //____________
 
   /**JSX**/
   return (
-    <section
-      // className="sticky top-[50px] inset-x-0 flex flex-col justify-center gap-y-4 h-[60vh] xl:flex-row xl:gap-x-14 xl:w-[90%] xl:mx-auto xxl:w-[80%] z-0 px-2 overflow-hidden"
-      className=" flex flex-col justify-center gap-y-4 h-[60vh] xl:flex-row xl:gap-x-14 xl:w-[90%] xl:mx-auto xxl:w-[80%] z-0 px-2 overflow-hidden"
+    <motion.section
+      className="sticky top-[50px] inset-x-0 flex flex-col justify-center gap-y-4 h-[60vh] xl:flex-row xl:gap-x-14 xl:w-[90%] xl:mx-auto xxl:w-[80%] z-0 px-2 overflow-hidden"
+      // className=" flex flex-col justify-center gap-y-4 h-[60vh] xl:flex-row xl:gap-x-14 xl:w-[90%] xl:mx-auto xxl:w-[80%] z-0 px-2 overflow-hidden"
     >
       <motion.div
         className="flex justify-center xl:justify-start xl:items-center gap-x-6 transition-all"
@@ -40,7 +53,8 @@ const ContactIntro = () => {
         >
           <motion.p
             className={`${witajStyle} text-right`}
-            style={{ scale: animatedVal_2 }}
+            // style={{ scale: animatedVal_2 }}
+            style={{ scale: scrollSpringedTransformed }}
           >
             Witamy
           </motion.p>
@@ -52,8 +66,10 @@ const ContactIntro = () => {
           animate="to"
         >
           <motion.p
-            className={`${witajStyle} text-right origin-left`}
-            style={{ scale: animatedVal_2 }}
+            className={`${witajStyle} text-right `}
+            //___origin-left
+            // style={{ scale: animatedVal_2 }}
+            style={{ scale: scrollSpringedTransformed }}
           >
             !
           </motion.p>
@@ -67,7 +83,11 @@ const ContactIntro = () => {
           initial="from"
           animate="to"
         >
-          <motion.p className={sentenceStyle} style={{ scale: animatedVal_2 }}>
+          <motion.p
+            className={sentenceStyle}
+            //  style={{ scale: animatedVal_2 }}
+            style={{ scale: scrollSpringedTransformed }}
+          >
             {story.pageKontakt.s1}
           </motion.p>
         </motion.div>
@@ -76,7 +96,7 @@ const ContactIntro = () => {
         style={{ opacity: animatedVal_1 }}
         className="absolute inset-y-0 left-0 right-0 bg-dark "
       />
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,49 +1,27 @@
 /**BasicData*/
 import { corpoColors } from '../../../data/_data';
-/**FramerMotion Staff*/
-import { motion } from 'framer-motion';
-// import { svgTransition } from '../../../utils/framerMotion/framerMotionUtils';
-// const textVariants = {
-//   strokeLight: { fill: corpoColors.light, transition: { duration: 0.4 } },
-//   strokeDark: { fill: corpoColors.dark, transition: { duration: 0.4 } },
-// };
 
 /**------------------------------------------------------------------------------*/
-const SvgLogoFgradient = ({
-  animationCondition = false,
-  // basicSize
-  svgStyle,
-  gStyle,
-}: {
-  animationCondition?: boolean;
-  svgStyle: string;
-  gStyle?: string;
-  //  basicSize: number
-}) => {
+const SvgLogoFgradient: React.FC<{ className: string }> = ({ className }) => {
   /**...WTF*/
   // console.log('SvgLogo', animationCondition);
   /**FramerMotion Staff*/
 
   /**JSX*/
   return (
-    <motion.svg
+    <svg
       role="img"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      className={svgStyle}
-      // width={basicSize}
-      // height="500"
+      className={className}
       viewBox="0 0 358 500"
-      // animate={animationCondition ? 'strokeDark' : 'strokeLight'}
-      // whileHover={{ scale: 1.05 }}
-      // transition={svgTransition}
     >
       <defs>
         <linearGradient id="linearGradient3330">
-          <stop offset="0" stopOpacity="0" stop-color="white"></stop>
-          <stop offset="0.25" stop-color="white"></stop>
-          <stop offset="0.75" stopOpacity="0.839" stop-color="white"></stop>
-          <stop offset="1" stopOpacity="0" stop-color="white"></stop>
+          <stop offset="0" stopOpacity="0" stopColor="white"></stop>
+          <stop offset="0.25" stopColor="white"></stop>
+          <stop offset="0.75" stopOpacity="0.839" stopColor="white"></stop>
+          <stop offset="1" stopOpacity="0" stopColor="white"></stop>
         </linearGradient>
         <linearGradient
           id="linearGradient3284"
@@ -65,10 +43,10 @@ const SvgLogoFgradient = ({
           gradientUnits="userSpaceOnUse"
           // xlinkHref="#linearGradient3330"
         >
-          <stop offset="0" stopOpacity="0" stop-color="white"></stop>
-          <stop offset="0.25" stop-color="white"></stop>
-          <stop offset="0.75" stopOpacity="0.839" stop-color="white"></stop>
-          <stop offset="1" stopOpacity="0" stop-color="white"></stop>
+          <stop offset="0" stopOpacity="0" stopColor="white"></stop>
+          <stop offset="0.25" stopColor="white"></stop>
+          <stop offset="0.75" stopOpacity="0.839" stopColor="white"></stop>
+          <stop offset="1" stopOpacity="0" stopColor="white"></stop>
         </linearGradient>
         <linearGradient
           id="linearGradient3296"
@@ -80,10 +58,10 @@ const SvgLogoFgradient = ({
           gradientUnits="userSpaceOnUse"
           // xlinkHref="#linearGradient3330"
         >
-          <stop offset="0" stopOpacity="0" stop-color="white"></stop>
-          <stop offset="0.25" stop-color="white"></stop>
-          <stop offset="0.75" stopOpacity="0.839" stop-color="white"></stop>
-          <stop offset="1" stopOpacity="0" stop-color="white"></stop>
+          <stop offset="0" stopOpacity="0" stopColor="white"></stop>
+          <stop offset="0.25" stopColor="white"></stop>
+          <stop offset="0.75" stopOpacity="0.839" stopColor="white"></stop>
+          <stop offset="1" stopOpacity="0" stopColor="white"></stop>
         </linearGradient>
         <linearGradient
           id="linearGradient3300"
@@ -95,10 +73,10 @@ const SvgLogoFgradient = ({
           gradientUnits="userSpaceOnUse"
           // xlinkHref="#linearGradient3330"
         >
-          <stop offset="0" stopOpacity="0" stop-color="white"></stop>
-          <stop offset="0.25" stop-color="white"></stop>
-          <stop offset="0.75" stopOpacity="0.839" stop-color="white"></stop>
-          <stop offset="1" stopOpacity="0" stop-color="white"></stop>
+          <stop offset="0" stopOpacity="0" stopColor="white"></stop>
+          <stop offset="0.25" stopColor="white"></stop>
+          <stop offset="0.75" stopOpacity="0.839" stopColor="white"></stop>
+          <stop offset="1" stopOpacity="0" stopColor="white"></stop>
         </linearGradient>
         <linearGradient
           id="linearGradient4180"
@@ -260,7 +238,7 @@ const SvgLogoFgradient = ({
           transform="scale(-1)"
         ></path>
       </g>
-    </motion.svg>
+    </svg>
   );
 };
 

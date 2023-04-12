@@ -287,13 +287,36 @@ interface IF_SvgTech {
     basicSize: number;
   }>;
 }
-
+/*
+used in : doPobrania | background
+*/
+interface IF_ReactFC {
+  Component: React.FC<{
+    className: string;
+  }>;
+}
+interface IF_SvgTechTailwind extends IF_ReactFC {
+  model: string;
+  // Component: React.FC<{
+  //   className: string;
+  // }>;
+}
+interface IF_SvgTechTailwindMod1 extends IF_SvgTechTailwind {
+  id: string;
+}
 /*
 used in: <NavWithLinks>; all places where "links to pages" work like footer, contactPage...
 */
 interface IF_LinkData {
   label: string;
   url: string;
+}
+
+interface IF_NormalizedNumbers {
+  normalizedValues: {
+    x: number;
+    y: number;
+  };
 }
 
 export type {
@@ -320,7 +343,12 @@ export type {
   //___
   IF_CatalogNavPanel,
   //___
+  IF_ReactFC,
   IF_SvgTech,
+  IF_SvgTechTailwind,
+  IF_SvgTechTailwindMod1,
   //___07-IV
   IF_LinkData,
+  //___12-IV
+  IF_NormalizedNumbers,
 };

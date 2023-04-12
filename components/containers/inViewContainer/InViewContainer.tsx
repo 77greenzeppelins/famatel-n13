@@ -2,7 +2,7 @@ import React, { ReactElement, useRef, cloneElement } from 'react';
 /**Hook Staff**/
 import useMeasure from 'react-use-measure';
 /**FramerMotion Staff**/
-import { motion, useInView } from 'framer-motion';
+import { useInView } from 'framer-motion';
 
 /**TS**/
 interface Props {

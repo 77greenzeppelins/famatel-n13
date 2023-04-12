@@ -1,10 +1,12 @@
 /**Components**/
+
 import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
 import FadingHeader from '../../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
 import InViewAnimatedContent from '../_inViewAnimatedContent/InViewAnimatedContent';
-
-const address = ['Biuro/Magazyn', 'Ul. Willowa 5', '58-260 Bielawa'];
+/**Basic Data*/
+import { story } from '../../../../data/_data';
+/**HardCoded Staff*/
 const labelStyle =
   'text-grey text-[1rem] lg:text-2xl tracking-[1px] lg:tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 group-hover:text-light  ease-in duration-300  origin-center break-all';
 
@@ -22,10 +24,10 @@ const ContactAddress: React.FunctionComponent = () => {
         bottomFactor={0.1}
       >
         <InViewAnimatedContent>
-          <FadingHeader label={'Adres'} />
+          <FadingHeader label={'Dane Firmowe'} />
           <div className="pt-2">
             <ul className="flex flex-col gap-5 group">
-              {address.map((label, index) => (
+              {story.pageKontakt.daneFirmy.map((label, index) => (
                 <li key={index}>
                   <p className={labelStyle}>{label}</p>
                 </li>
