@@ -222,6 +222,10 @@ const smallPseudoHeaders = {
 /***...*/
 const story = {
   oFirmiePage: {
+    heroSection: [
+      'Dokładnie tyle kategorii produktów oddajemy do Twojej dyspozycji!',
+      '',
+    ],
     pseudoHeader: 'Bezpieczne rozwiązania',
     heroMainText: 'Elektryka przemysłowa',
     animatedText: [

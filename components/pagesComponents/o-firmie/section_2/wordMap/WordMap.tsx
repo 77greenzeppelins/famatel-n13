@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 /**Components**/
 import SvgWordMap from '../../../../SVG/maps/SvgWordMap';
+import SvgWordMapAnimated from '../../../../SVG/maps/SvgWordMapAnimated';
 /**Framer Motion Staff**/
 import { motion } from 'framer-motion';
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
@@ -30,7 +31,8 @@ const WordMap: React.FC<{ widthToDrag?: number }> = ({ widthToDrag = 768 }) => {
         dragElastic={0.9}
         dragMomentum={true}
       >
-        <SvgWordMap containerStyle="w-full" />
+        {/* <SvgWordMap containerStyle="w-full" /> */}
+        <SvgWordMapAnimated containerStyle="w-full" />
       </motion.div>
     </motion.div>
   );

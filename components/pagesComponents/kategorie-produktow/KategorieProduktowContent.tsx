@@ -4,6 +4,7 @@ import Section_1 from './section_1/Section_1';
 // import Section_2 from './section_2/Section_2';
 /**Basic Data*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
+import HeroSection from './heroSection/HeroSection';
 
 /**----------------------------------------------------------------------------------**/
 const KategorieProduktowContent = () => {
@@ -14,9 +15,10 @@ const KategorieProduktowContent = () => {
   return (
     <div
       data-component="KategorieProduktowContent__container"
-      className="flex flex-col justify-center pt-[60px] overflow-hidden"
+      className="flex flex-col justify-center pt-[120px] overflow-hidden"
       //___pt-[50px] pb-[10vh]
     >
+      <HeroSection />
       <Section_1
         categoryIndex={categoryIndex}
         setCategoryIndex={setCategoryIndex}
