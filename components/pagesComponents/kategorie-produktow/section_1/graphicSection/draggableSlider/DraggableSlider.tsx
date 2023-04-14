@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 /**Components**/
 import RowOfSlides from './draggableSliderContent/RowOfSlides';
 /**Hook Staff**/
-import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
 /**Framer Motion Staff*/
 import { motion } from 'framer-motion';
 
@@ -15,15 +14,16 @@ const minHeightForTwoLines = 300;
 /**-------------------------------------------------------**/
 const DraggableSlider: React.FunctionComponent<{
   width: number;
-  height: number;
+  heightValue: number;
   currentCategory: number;
-}> = ({ width, height, currentCategory }) => {
+  minHeight?: number;
+}> = ({ width, heightValue, currentCategory }) => {
   /**...**/
   const constraintsRef = useRef(null);
   /**Hook Section / just tell me what device's orientation is... **/
-  const { width: windowWidth, height: windowHeight } = useWindowSize({
-    screensNumber: 1,
-  });
+  // const { width: windowWidth, height: windowHeight } = useWindowSize({
+  //   screensNumber: 1,
+  // });
   //**just initial condition**/
   //   if (!width || !height) return null;
   /**simple data; how many n-size cells can we put to the line**/
@@ -31,7 +31,7 @@ const DraggableSlider: React.FunctionComponent<{
     width > minWidthForLargeCell ? largeCellSize : smallCellSize;
   const minNumberOfSlides = Math.trunc(width / slideSide);
   /** */
-  const slidersLines = height > minHeightForTwoLines ? 2 : 1;
+  const slidersLines = heightValue > minHeightForTwoLines ? 2 : 1;
 
   /**Handlers map(); we map as slider can have 1 or two "linesOfSlides"**/
   const createSlidersLineViaMap = Array.from({ length: slidersLines }).map(
@@ -78,7 +78,7 @@ const DraggableSlider: React.FunctionComponent<{
       ref={constraintsRef}
       className="flex flex-col justify-center items-center gap-4"
     >
-      {width && height ? createSlidersLineViaMap : null}
+      {width && heightValue ? createSlidersLineViaMap : null}
     </div>
   );
 };

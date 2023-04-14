@@ -5,7 +5,9 @@ import Section_1 from './section_1/Section_1';
 /**Basic Data*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
 import HeroSection from './heroSection/HeroSection';
-
+import DraggableSlider_1 from './draggableSlider_1/DraggableSlider_1';
+/**HardCodedStaff*/
+const slideHeight = 'h-[340px] xs:h-[440px]';
 /**----------------------------------------------------------------------------------**/
 const KategorieProduktowContent = () => {
   /**LocalState; just to control slides**/
@@ -19,6 +21,10 @@ const KategorieProduktowContent = () => {
       //___pt-[50px] pb-[10vh]
     >
       <HeroSection />
+      <DraggableSlider_1
+        currentIndex={categoryIndex}
+        slideHeight={slideHeight}
+      />
       <Section_1
         categoryIndex={categoryIndex}
         setCategoryIndex={setCategoryIndex}

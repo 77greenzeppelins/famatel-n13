@@ -8,7 +8,9 @@ import InViewAnimatedContent from '../../../../containers/inViewContainer/InView
 
 import { svgIconsFromCatalogRandome_data } from '../../../../SVG/iconsFromCatalog/_iconsFromCatalog_data';
 import { corpoColors } from '../../../../../data/_data';
+import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 /**HardCoded staff**/
+const mountingCondition = 1280;
 const heightValue = 300;
 const svgBasicSize = 60;
 const svgContainerSizes = 'w-[60px] h-[60px]';
@@ -21,6 +23,7 @@ const springOptions = {
 /**----------------------------**/
 const HeroBackground = () => {
   /**...**/
+  const { width: screenWidth } = useWindowSize({ screensNumber: 1 });
   const [ref, { height, width }] = useMeasure();
   /**FramerMotion Staff**/
   const { scrollY } = useScroll();
@@ -28,7 +31,7 @@ const HeroBackground = () => {
   //___
   const x = useSpring(scrollY, springOptions);
   //___
-  const xDivided = useTransform(x, value => value / 4);
+  const xDivided = useTransform(x, value => value / 8);
   //___
   const xDividedNegative = useTransform(x, value => value / -4);
   // const xLeft = useTransform(scrollYProgress, [0, 1], [0, -500]);
@@ -37,14 +40,14 @@ const HeroBackground = () => {
   const NumberOfSvgCells = Math.ceil(width / svgBasicSize);
   // console.log('height, width:', height, width);
   // console.log('NumberOfSvgCells:', NumberOfSvgCells);
-  //___
+  //___Helper;
   // useMotionValueEvent(scrollY, 'change', latest => {
   //   console.log('Page scroll: ', latest);
   //   scrollRef.current = latest / 2;
   //   console.log('scrollRef.current: ', latest / 2);
   // });
   /**JSX**/
-  return (
+  return screenWidth > mountingCondition ? (
     <div
       role="presentation"
       aria-hidden="true"
@@ -73,9 +76,9 @@ const HeroBackground = () => {
                 >
                   {svgIconsFromCatalogRandome_data
                     .slice(0, NumberOfSvgCells)
-                    .map(({ id, Icon }) => (
+                    .map(({ id, Icon }, i) => (
                       <div
-                        key={id}
+                        key={`${id}-${i}`}
                         className={`fc ${svgContainerSizes} aspect-square`}
                       >
                         <Icon
@@ -95,9 +98,9 @@ const HeroBackground = () => {
             >
               {svgIconsFromCatalogRandome_data
                 .slice(0, NumberOfSvgCells)
-                .map(({ id, Icon }) => (
+                .map(({ id, Icon }, i) => (
                   <div
-                    key={id}
+                    key={`${id}-${i}`}
                     className={`fc ${svgContainerSizes} aspect-square disable`}
                   >
                     <Icon
@@ -121,9 +124,9 @@ const HeroBackground = () => {
               {svgIconsFromCatalogRandome_data
                 .slice(0, NumberOfSvgCells + 1)
                 .reverse()
-                .map(({ id, Icon }) => (
+                .map(({ id, Icon }, i) => (
                   <div
-                    key={id}
+                    key={`${id}-${i}`}
                     className={`fc ${svgContainerSizes} aspect-square disable`}
                   >
                     <Icon
@@ -137,7 +140,7 @@ const HeroBackground = () => {
         </InViewAnimatedContent>
       </InViewContainer>
     </div>
-  );
+  ) : null;
 };
 
 export default HeroBackground;

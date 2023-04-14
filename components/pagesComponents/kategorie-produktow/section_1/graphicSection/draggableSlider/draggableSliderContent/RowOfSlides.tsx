@@ -25,7 +25,7 @@ const RowOfSlides: React.FunctionComponent<{
             <SlideContent
               currentCategory={currentCategory}
               slidesLineIndex={slidesLineIndex % 2}
-              slidesNumber={slidesNumber}
+              // slidesNumber={slidesNumber}
               slideIndex={i + (slidesLineIndex % 2)}
             />
           </div>

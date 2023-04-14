@@ -2,7 +2,7 @@ import React from 'react';
 /**Components**/
 import DraggableSlider from './draggableSlider/DraggableSlider';
 /**Hook Staff**/
-import useWindowSize from '../../../../../utils/hooks/useWindowSize';
+// import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 import useMeasure from 'react-use-measure';
 
 /**--------------------------------------------------------------------------------**/
@@ -11,11 +11,11 @@ const GraphicSection: React.FunctionComponent<{
   isPreviewOpen: boolean;
 }> = ({ categoryIndex, isPreviewOpen }) => {
   /**Hook Section / just tell me what device's orientation is... **/
-  const {
-    isLandscape,
-    // width: windowWidth,
-    // height: windowHeight,
-  } = useWindowSize({ screensNumber: 1 });
+  // const {
+  //   isLandscape,
+  //   // width: windowWidth,
+  //   // height: windowHeight,
+  // } = useWindowSize({ screensNumber: 1 });
   /**Hook Section / just count container of "sliding" images... **/
   const [ref, { width, height }] = useMeasure();
 
@@ -33,7 +33,7 @@ const GraphicSection: React.FunctionComponent<{
           >
             <DraggableSlider
               width={width}
-              height={height}
+              heightValue={height}
               currentCategory={categoryIndex}
             />
           </div>

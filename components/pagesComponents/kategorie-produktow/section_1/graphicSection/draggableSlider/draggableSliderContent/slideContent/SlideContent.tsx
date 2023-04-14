@@ -5,11 +5,11 @@ import IconsContent from './iconsContent/IconsContent';
 
 /**-------------------------------------------------**/
 const SlideContent: React.FunctionComponent<{
-  slidesNumber: number;
+  // slidesNumber: number;
   slideIndex: number;
   currentCategory: number; // from 0 to 11
   slidesLineIndex: number; // 0 or 1
-}> = ({ slidesNumber, slideIndex, currentCategory, slidesLineIndex }) => {
+}> = ({ slideIndex, currentCategory, slidesLineIndex }) => {
   //   console.log(
 
   const contentCreator = ({
