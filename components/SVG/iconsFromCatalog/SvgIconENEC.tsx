@@ -1,39 +1,12 @@
 import { corpoColors } from '../../../data/_data';
-
-interface IProps {
-  size?: number;
-  colorFG?: string;
-  colorBG?: string;
-  colorBGOpacity?: string;
-  className?: string;
-}
-
-/****************************************************************************/
-
-function SvgIconENEC({
-  size,
+/*TS*/
+import { IF_IconProps } from '../../../utils/TS/typeScriptStaff';
+/**-----------------------------------------------------------**/
+const SvgIconENEC: React.FC<IF_IconProps> = ({
   colorFG,
-  colorBG,
-  colorBGOpacity,
   className,
-}: IProps) {
-  /*
-  convert number to string
-  */
-  // const aspectRatio = 0.73;
-
-  // let widthString = '50';
-  // if (size) {
-  //   // let temp = size * multiFactor;
-  //   widthString = size.toString();
-  // }
-
-  // let heightString = '36.6';
-  // if (size) {
-  //   let temp = size * aspectRatio;
-  //   heightString = temp.toString();
-  // }
-
+  colorBGOpacity,
+}) => {
   /*
   JSX
   */
@@ -72,6 +45,6 @@ function SvgIconENEC({
       </text>
     </svg>
   );
-}
+};
 
 export default SvgIconENEC;

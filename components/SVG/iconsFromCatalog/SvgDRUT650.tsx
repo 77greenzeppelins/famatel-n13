@@ -3,18 +3,9 @@ import React from 'react';
 import { corpoColors } from '../../../data/_data';
 
 /*TS*/
-interface IProps {
-  // size?: number;
-  colorFG?: string;
-  // colorBG?: string;
-  // colorBGOpacity?: string;
-}
-/************************************************************************/
-const SvgDRUT650 = ({
-  colorFG,
-}: // colorBG,
-// colorBGOpacity,
-IProps) => {
+import { IF_IconProps } from '../../../utils/TS/typeScriptStaff';
+/**------------------------------------------------------------**/
+const SvgDRUT650: React.FC<IF_IconProps> = ({ colorFG, className }) => {
   /*
   JSX
   */
@@ -23,7 +14,7 @@ IProps) => {
       role="img"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full aspect-square"
+      className={className ? className : 'w-full aspect-square'}
       viewBox="0 0 100 100"
     >
       <text
@@ -39,7 +30,7 @@ IProps) => {
         fontFamily="Arial"
         fontSize="32"
         letterSpacing="0"
-        fill={colorFG ? colorFG : '#fff'}
+        fill={colorFG ? colorFG : corpoColors.light}
       >
         <tspan x="5.383" y="61.453">
           650°C

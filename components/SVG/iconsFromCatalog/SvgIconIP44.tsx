@@ -2,21 +2,14 @@ import React from 'react';
 import { corpoColors } from '../../../data/_data';
 
 /*TS*/
-interface IProps {
-  size?: number;
-  colorFG?: string;
-  colorBG?: string;
-  colorBGOpacity?: string;
-  // ID: string;
-}
-
-const SvgIconIP40 = ({
+import { IF_IconProps } from '../../../utils/TS/typeScriptStaff';
+/**-----------------------------------------------------------**/
+const SvgIconIP40: React.FC<IF_IconProps> = ({
   colorFG,
   colorBG,
+  className,
   colorBGOpacity,
-}: //size,
-//  ID
-IProps) => {
+}) => {
   /*
   JSX
   */
@@ -25,7 +18,7 @@ IProps) => {
       role="img"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full aspect-square"
+      className={className ? className : 'w-full aspect-square'}
       viewBox="0 0 100 100"
     >
       <path

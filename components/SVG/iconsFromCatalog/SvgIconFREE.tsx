@@ -2,20 +2,20 @@ import React from 'react';
 /**Basic Data**/
 import { corpoColors } from '../../../data/_data';
 /*TS*/
-interface IProps {
-  colorFG?: string;
-  colorBG?: string;
-  colorBGOpacity?: string;
-}
-
-/****************************************************************/
-const SvgIconFREE = ({ colorFG, colorBG, colorBGOpacity }: IProps) => {
+import { IF_IconProps } from '../../../utils/TS/typeScriptStaff';
+/**-----------------------------------------------------------**/
+const SvgIconFREE: React.FC<IF_IconProps> = ({
+  colorFG,
+  colorBG,
+  className,
+  colorBGOpacity,
+}) => {
   return (
     <svg
       role="img"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full h-full"
+      className={className ? className : 'w-full aspect-square'}
       viewBox="0 0 100 100"
     >
       <defs>

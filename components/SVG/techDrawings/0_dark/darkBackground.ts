@@ -66,6 +66,9 @@ const svgTech_darkBackground3: readonly IF_SvgTechTailwind[] = [
   { model: '3959_d', Component: SVG_8_1_3959_d },
 ];
 
+/*
+used in: doPobrania | ... | slider in "Katalog Podrozdziały"
+*/
 const svgTech_darkBackground_categories: readonly IF_SvgTechTailwindMod1[] = [
   //___
   // { model: '14307_d', Component: SVG_1_1_14307_d }, SvgLogoFgradient

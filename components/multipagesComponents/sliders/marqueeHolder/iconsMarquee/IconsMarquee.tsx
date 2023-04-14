@@ -12,8 +12,9 @@ const springOptions = {
 /**TS**/
 interface Props {
   //   children: ReactNode;
-  NumberOfSvgCells: number;
+  numberOfSvgCells: number;
   svgContainerSizes: string;
+  svgOffset: number;
   //___
   componentIsInView?: boolean;
   transitionDuration?: number;
@@ -23,8 +24,9 @@ interface Props {
 }
 
 const IconsMarquee: React.FC<Props> = ({
-  NumberOfSvgCells,
+  numberOfSvgCells,
   svgContainerSizes,
+  svgOffset,
   componentIsInView = false,
   transitionDuration = 0.6,
   transitionDelay = 0.2,
@@ -43,27 +45,33 @@ const IconsMarquee: React.FC<Props> = ({
         window.pageYOffset || document.documentElement.scrollTop;
       const hiddenAboveViewport = rect.top + scrollTop;
       const pixelsToScroll = hiddenAboveViewport - viewportHeight;
+      //___or...
+      // const pixelsToScroll = rect.top - viewportHeight;
 
       setScrollDistance(pixelsToScroll);
       //___
-      console.log('viewportHeight:', viewportHeight);
-      console.log('window.pageYOffsete:', window.pageYOffset);
-      console.log(
-        'document.documentElement.scrollTop:',
-        document.documentElement.scrollTop
-      );
-      console.log('hiddenAboveViewport:', hiddenAboveViewport);
-      console.log('pixelsToScroll:', pixelsToScroll);
-      console.log('scrollDistance:', scrollDistance);
+      // console.log('rect.top:', rect.top);
+      // console.log('viewportHeight:', window.innerHeight);
+      // console.log('window.pageYOffsete:', window.pageYOffset);
+      // console.log(
+      //   'document.documentElement.scrollTop:',
+      //   document.documentElement.scrollTop
+      // );
+      // console.log('hiddenAboveViewport:', hiddenAboveViewport);
+      // console.log('pixelsToScroll:', pixelsToScroll);
+      // console.log('scrollDistance:', scrollDistance);
     }
-  }, [scrollDistance]);
+  }, []);
   /**FramerMotion Staff**/
   const { scrollY } = useScroll();
 
   //___creat "x" veriable basing on scrollY value
   const x = useSpring(scrollY, springOptions);
   //___set actuall speed of x transformation
-  const transformedX = useTransform(x, value => (value - scrollDistance) / -1);
+  const transformedX = useTransform(
+    x,
+    value => (value - scrollDistance + svgOffset) / -1
+  );
 
   /**JSX**/
   return (
@@ -87,11 +95,11 @@ const IconsMarquee: React.FC<Props> = ({
       >
         <motion.div
           className="flex gap-10 transition-all ease-in-out"
-          style={{ x: componentIsInView ? transformedX : 0 }}
-          //   style={{ x: transformedX }}
+          // style={{ x: componentIsInView ? transformedX : 0 }}
+          style={{ x: transformedX }}
         >
           {svgIconsFromCatalogRandome_data
-            .slice(0, NumberOfSvgCells)
+            .slice(0, numberOfSvgCells)
             .map(({ id, Icon }, i) => (
               <div
                 key={`${i}-${id}`}

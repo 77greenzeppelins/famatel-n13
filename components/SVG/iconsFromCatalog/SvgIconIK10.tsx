@@ -3,27 +3,20 @@ import React from 'react';
 import { corpoColors } from '../../../data/_data';
 
 /*TS*/
-interface IProps {
-  colorFG?: string;
-  colorBG?: string;
-  colorBGOpacity?: string;
-  // ID: string;
-  // size?: number;
-}
-
-/****************************************************************************/
-const SvgIconIK10 = ({
+import { IF_IconProps } from '../../../utils/TS/typeScriptStaff';
+/**-----------------------------------------------------------**/
+const SvgIconIK10: React.FC<IF_IconProps> = ({
   colorFG,
   colorBG,
+  className,
   colorBGOpacity,
-}: // size, ID
-IProps) => {
+}) => {
   return (
     <svg
       role="img"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full aspect-square"
+      className={className ? className : 'w-full aspect-square'}
       viewBox="0 0 100 100"
     >
       <path

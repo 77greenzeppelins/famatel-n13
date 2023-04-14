@@ -18,6 +18,9 @@ import SvgIconUV from './SvgIconUV';
 import SvgDRUT650 from './SvgDRUT650';
 import SvgDRUT960 from './SvgDRUT960';
 
+/**TS**/
+import { IF_SvgIconData } from '../../../utils/TS/typeScriptStaff';
+
 const svgIconsFromCatalog_data = [
   { id: 'IP20', Icon: SvgIconIP20 },
   { id: 'IP40', Icon: SvgIconIP40 },
@@ -44,7 +47,7 @@ const svgIconsFromCatalog_data = [
   { id: 'DRUT960', Icon: SvgDRUT960 },
 ];
 
-const svgIconsFromCatalogRandome_data = [
+const svgIconsFromCatalogRandome_data: readonly IF_SvgIconData[] = [
   { id: 'IP20', Icon: SvgIconIP20 },
   { id: 'IK10', Icon: SvgIconIK10 },
   { id: 'DRUT960', Icon: SvgDRUT960 },

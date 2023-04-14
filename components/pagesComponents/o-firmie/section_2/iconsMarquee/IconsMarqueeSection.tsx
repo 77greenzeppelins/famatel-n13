@@ -6,7 +6,7 @@ const IconsMarqueeSection = () => {
   return (
     <div className="relative h-[80px] w-full ">
       {/* <MarqueeHolder childComponent={<IconsMarquee />}></MarqueeHolder> */}
-      <MarqueeHolder />
+      <MarqueeHolder marqueeContainerStyle="absolute nset-0 overflow-hidden z-5" />
     </div>
   );
 };

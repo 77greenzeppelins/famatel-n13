@@ -3,21 +3,21 @@ import React from 'react';
 import { corpoColors } from '../../../data/_data';
 
 /*TS*/
-interface IProps {
-  colorFG?: string;
-  colorBG?: string;
-  colorBGOpacity?: string;
-}
-
-/********************************************************************************/
-const SvgIconMODRange = ({ colorFG, colorBG, colorBGOpacity }: IProps) => {
+import { IF_IconProps } from '../../../utils/TS/typeScriptStaff';
+/**-----------------------------------------------------------**/
+const SvgIconMODRange: React.FC<IF_IconProps> = ({
+  colorFG,
+  colorBG,
+  className,
+  colorBGOpacity,
+}) => {
   /**JSX**/
   return (
     <svg
       role="img"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full aspect-square"
+      className={className ? className : 'w-full aspect-square'}
       viewBox="0 0 100 100"
     >
       <path

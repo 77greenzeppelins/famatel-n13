@@ -318,6 +318,23 @@ interface IF_NormalizedNumbers {
     y: number;
   };
 }
+//___used in: catalog svg icons
+interface IF_IconProps {
+  colorFG?: string;
+  colorBG?: string;
+  colorBGOpacity?: string;
+  className?: string;
+}
+interface IF_SvgIconData {
+  id: string;
+  // Icon: ({
+  //   colorFG,
+  //   colorBG,
+  //   colorBGOpacity,
+  //   className,
+  // }: IF_IconProps) => JSX.Element;
+  Icon: React.FC<IF_IconProps>;
+}
 
 export type {
   ISubCategoriesItem,
@@ -351,4 +368,7 @@ export type {
   IF_LinkData,
   //___12-IV
   IF_NormalizedNumbers,
+  //___
+  IF_IconProps, //catalog icons props;
+  IF_SvgIconData,
 };
