@@ -1,4 +1,10 @@
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useSpring,
+  useTransform,
+} from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 /**Basic Data*/
 import { corpoColors } from '../../../../../data/_data';
@@ -59,7 +65,6 @@ const IconsMarquee: React.FC<Props> = ({
       // );
       // console.log('hiddenAboveViewport:', hiddenAboveViewport);
       // console.log('pixelsToScroll:', pixelsToScroll);
-      // console.log('scrollDistance:', scrollDistance);
     }
   }, []);
   /**FramerMotion Staff**/
@@ -70,8 +75,12 @@ const IconsMarquee: React.FC<Props> = ({
   //___set actuall speed of x transformation
   const transformedX = useTransform(
     x,
-    value => (value - scrollDistance + svgOffset) / -1
+    value => (value - scrollDistance + svgOffset) / -3
   );
+  //___helper
+  // useMotionValueEvent(x, 'change', latest => {
+  //   console.log('x changed to', latest);
+  // });
 
   /**JSX**/
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 /**Hook staff**/
-import useMeasure from 'react-use-measure';
+import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**Components**/
 import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
 import IconsMarquee from '../marqueeSliders/iconsMarquee/IconsMarquee';
@@ -17,20 +17,19 @@ interface Props {
 used in: oFirmie | section2 | ... | <IconsMarqueeSection>
 */
 /**--------------------------------------**/
-const MarqueeHolder: React.FC<Props> = ({ marqueeContainerStyle }) => {
+const MarqueeFullWidth: React.FC<Props> = ({ marqueeContainerStyle }) => {
   /**...**/
-  const [ref, { height, width }] = useMeasure();
+  const { width } = useWindowSize({ screensNumber: 1 });
   const numberOfSvgCells = Math.ceil(width / svgBasicSize) + 4;
   console.log('...width:', width);
 
-  console.log('...numberOfSvgCells:', numberOfSvgCells);
+  // console.log('...numberOfSvgCells:', numberOfSvgCells);
   /**JSX**/
   return (
     <div
       role="presentation"
       aria-hidden="true"
       data-component="MarqueeHolder__container"
-      ref={ref}
       className={
         marqueeContainerStyle
           ? marqueeContainerStyle
@@ -54,4 +53,4 @@ const MarqueeHolder: React.FC<Props> = ({ marqueeContainerStyle }) => {
   );
 };
 
-export default MarqueeHolder;
+export default MarqueeFullWidth;
