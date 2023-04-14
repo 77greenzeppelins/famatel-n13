@@ -35,8 +35,6 @@ const InViewContainer: React.FC<Props> = ({
       bounds.height * bottomFactor
     }px 0px`,
   });
-  // console.log('InViewContainer / additionalCompNumb', );
-  // console.log('InViewContainer / bounds.width', bounds.width);
 
   /**JSX**/
   return (

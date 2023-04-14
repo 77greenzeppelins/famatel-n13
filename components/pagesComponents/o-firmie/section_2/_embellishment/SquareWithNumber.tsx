@@ -30,7 +30,13 @@ const SquareWithNumber: React.FC<Props> = ({
       //   aspectRatio: '1/1',
       // }}
     >
-      <FadingFrame />
+      <div
+        className={`${
+          componentIsInView ? 'opacity-1' : 'opacity-0'
+        } duration-[0.9s] delay-[0.6]`}
+      >
+        <FadingFrame />
+      </div>
       <p
         // ref={ref}
         className={` text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] lg:text-[2rem] xl:text-[2.25rem]   font-bold tracking-[2px] leading-tight  ${

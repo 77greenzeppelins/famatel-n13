@@ -44,4 +44,38 @@ const svgIconsFromCatalog_data = [
   { id: 'DRUT960', Icon: SvgDRUT960 },
 ];
 
-export { svgIconsFromCatalog_data };
+const svgIconsFromCatalogRandome_data = [
+  { id: 'IP20', Icon: SvgIconIP20 },
+  { id: 'IK10', Icon: SvgIconIK10 },
+  { id: 'DRUT960', Icon: SvgDRUT960 },
+  { id: 'IP40', Icon: SvgIconIP40 },
+  { id: 'UV', Icon: SvgIconUV },
+  { id: 'IK08', Icon: SvgIconIK08 },
+  { id: 'IP44', Icon: SvgIconIP44 },
+  { id: 'MOD12', Icon: SvgIconMOD12 },
+  { id: 'IP54', Icon: SvgIconIP54 },
+  { id: 'IK06', Icon: SvgIconIK06 },
+  { id: 'IP55', Icon: SvgIconIP55 },
+  { id: 'ENEC', Icon: SvgIconENEC },
+  { id: 'IP65', Icon: SvgIconIP65 },
+  { id: 'IZO', Icon: SvgIconIZO },
+  { id: 'FREE', Icon: SvgIconFREE },
+  { id: 'IK07', Icon: SvgIconIK07 },
+  { id: 'DRUT650', Icon: SvgDRUT650 },
+  { id: 'MODR', Icon: SvgIconMODRange },
+  { id: 'IP67', Icon: SvgIconIP67 },
+  { id: 'IK10', Icon: SvgIconIK10 },
+  { id: 'FREE', Icon: SvgIconFREE },
+  //___
+  { id: 'MOD12', Icon: SvgIconMOD12 },
+  { id: 'IP54', Icon: SvgIconIP54 },
+  { id: 'IK06', Icon: SvgIconIK06 },
+  { id: 'IP55', Icon: SvgIconIP55 },
+  { id: 'ENEC', Icon: SvgIconENEC },
+  { id: 'IP65', Icon: SvgIconIP65 },
+  { id: 'IZO', Icon: SvgIconIZO },
+  { id: 'DRUT960', Icon: SvgDRUT960 },
+  { id: 'IK10', Icon: SvgIconIK10 },
+];
+
+export { svgIconsFromCatalog_data, svgIconsFromCatalogRandome_data };

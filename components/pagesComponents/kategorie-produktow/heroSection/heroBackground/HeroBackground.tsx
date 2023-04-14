@@ -1,23 +1,18 @@
 import React, { useRef } from 'react';
+/**Hook staff**/
+import useMeasure from 'react-use-measure';
 /**FramerMotion Staff**/
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import InViewContainer from '../../../../containers/inViewContainer/InViewContainer';
 import InViewAnimatedContent from '../../../../containers/inViewContainer/InViewAnimatedContent';
-import {
-  svgTech_darkBackground,
-  svgTech_darkBackground2,
-  svgTech_darkBackground3,
-} from '../../../../SVG/techDrawings/0_dark/darkBackground';
-import useMeasure from 'react-use-measure';
 
+import { svgIconsFromCatalogRandome_data } from '../../../../SVG/iconsFromCatalog/_iconsFromCatalog_data';
+import { corpoColors } from '../../../../../data/_data';
 /**HardCoded staff**/
-const heightValue = 668;
-const svgBasicSize = 220;
-const svgContainerSizes = 'w-[220px] h-[220px]';
+const heightValue = 300;
+const svgBasicSize = 60;
+const svgContainerSizes = 'w-[60px] h-[60px]';
 const springOptions = {
-  // damping: 100,
-  // mass: 10,
-  // stiffness: 100,
   stiffness: 100,
   damping: 30,
   restDelta: 0.001,
@@ -29,10 +24,7 @@ const HeroBackground = () => {
   const [ref, { height, width }] = useMeasure();
   /**FramerMotion Staff**/
   const { scrollY } = useScroll();
-  //   {
-  //   target: scrollRef,
-  //   offset: ['end end', 'start start'],
-  // }
+
   //___
   const x = useSpring(scrollY, springOptions);
   //___
@@ -68,7 +60,7 @@ const HeroBackground = () => {
         bottomFactor={0.2}
       >
         <InViewAnimatedContent
-          containerStyle="relative flex flex-col  justify-around   w-full h-full"
+          containerStyle="relative flex flex-col  justify-evenly w-full h-full"
           yFactor={'0'}
         >
           {
@@ -76,18 +68,19 @@ const HeroBackground = () => {
             height > heightValue ? (
               <div className="flex w-full justify-start">
                 <motion.div
-                  className="flex gap-4 transition-all ease-in-out"
+                  className="flex gap-10 transition-all ease-in-out"
                   style={{ x: xDividedNegative }}
                 >
-                  {svgTech_darkBackground3
+                  {svgIconsFromCatalogRandome_data
                     .slice(0, NumberOfSvgCells)
-                    .map(({ model, Component }, index) => (
+                    .map(({ id, Icon }) => (
                       <div
-                        key={index}
+                        key={id}
                         className={`fc ${svgContainerSizes} aspect-square`}
                       >
-                        <Component
+                        <Icon
                           className={`fc ${svgContainerSizes} aspect-square`}
+                          colorFG={corpoColors.greyShade1}
                         />
                       </div>
                     ))}
@@ -97,18 +90,19 @@ const HeroBackground = () => {
           }
           <div className="flex w-full justify-end">
             <motion.div
-              className="flex gap-4 transition-all ease-in-out"
+              className="flex gap-10 transition-all ease-in-out"
               style={{ x: xDivided }}
             >
-              {svgTech_darkBackground
+              {svgIconsFromCatalogRandome_data
                 .slice(0, NumberOfSvgCells)
-                .map(({ model, Component }, index) => (
+                .map(({ id, Icon }) => (
                   <div
-                    key={index}
-                    className={`fc ${svgContainerSizes} aspect-square`}
+                    key={id}
+                    className={`fc ${svgContainerSizes} aspect-square disable`}
                   >
-                    <Component
+                    <Icon
                       className={`fc ${svgContainerSizes} aspect-square`}
+                      colorFG={corpoColors.greyShade1}
                     />
                   </div>
                 ))}
@@ -119,20 +113,22 @@ const HeroBackground = () => {
             className="flex w-full justify-start"
           >
             <motion.div
-              className="flex gap-4 "
+              className="flex gap-10 transition-all ease-in-out"
               //___transition-all ease-in-out
               style={{ x: xDividedNegative }}
               transition={{ stiffness: 100, damping: 30, restDelta: 0.001 }}
             >
-              {svgTech_darkBackground2
+              {svgIconsFromCatalogRandome_data
                 .slice(0, NumberOfSvgCells + 1)
-                .map(({ Component }, i) => (
+                .reverse()
+                .map(({ id, Icon }) => (
                   <div
-                    key={i}
-                    className={`fc ${svgContainerSizes} aspect-square`}
+                    key={id}
+                    className={`fc ${svgContainerSizes} aspect-square disable`}
                   >
-                    <Component
+                    <Icon
                       className={`fc ${svgContainerSizes} aspect-square`}
+                      colorFG={corpoColors.greyShade1}
                     />
                   </div>
                 ))}

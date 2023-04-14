@@ -5,11 +5,18 @@ interface IProps {
   colorFG?: string;
   colorBG?: string;
   colorBGOpacity?: string;
+  className?: string;
 }
 
 /****************************************************************************/
 
-function SvgIconENEC({ size, colorFG, colorBG, colorBGOpacity }: IProps) {
+function SvgIconENEC({
+  size,
+  colorFG,
+  colorBG,
+  colorBGOpacity,
+  className,
+}: IProps) {
   /*
   convert number to string
   */
@@ -35,7 +42,7 @@ function SvgIconENEC({ size, colorFG, colorBG, colorBGOpacity }: IProps) {
       role="img"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full aspect-square"
+      className={className ? className : 'w-full aspect-square'}
       version="1.1"
       viewBox="0 0 23.131 16.963"
     >

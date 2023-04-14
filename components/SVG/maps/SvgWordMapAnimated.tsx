@@ -14,6 +14,7 @@ const SvgWordMapAnimated = ({
   /**JSX**/
   return (
     <svg
+      role="image"
       xmlns="http://www.w3.org/2000/svg"
       //   width="1200"
       //   height="581.82"
@@ -21,14 +22,14 @@ const SvgWordMapAnimated = ({
       className={containerStyle}
     >
       <g transform="translate(15.693 8.79) scale(5.8169)">
-        {circles.map(({ cx, cy, r }) => (
+        {circles.map(({ cx, cy, r }, i) => (
           <motion.circle
             whileHover={{
               scale: 2,
               fill: corpoColors.light,
               transition: { duration: 1 },
             }}
-            key={`${cy}-${cy}-${r}`}
+            key={`${cy}-${cy}-${r}-${i}`}
             cx={cx}
             cy={cy}
             r={r}

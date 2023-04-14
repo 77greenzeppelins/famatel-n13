@@ -31,6 +31,8 @@ const HeroSection: React.FC<{ mdTextStyle?: string; lgTextStyle?: string }> = ({
 }) => {
   return (
     <div
+      role="presentation"
+      aria-hidden="true"
       data-component="HeroSection__container"
       className="relative fc w-full h-full "
     >

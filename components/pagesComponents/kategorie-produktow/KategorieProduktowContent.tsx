@@ -15,7 +15,7 @@ const KategorieProduktowContent = () => {
   return (
     <div
       data-component="KategorieProduktowContent__container"
-      className="flex flex-col justify-center pt-[120px] overflow-hidden"
+      className="flex flex-col justify-center pt-[60px] overflow-hidden"
       //___pt-[50px] pb-[10vh]
     >
       <HeroSection />

@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 /**Basic Data*/
 import { pagesUrl, story } from '../../../../data/_data';
 import LinkWithTextAndIcon from '../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
+import IconsMarqueeSection from './iconsMarquee/IconsMarqueeSection';
 
 /**---------------------------------------------**/
 const Section_2: React.FC<{
@@ -34,7 +35,7 @@ const Section_2: React.FC<{
           squareText={story.oFirmiePage.squareText[1].text}
           animatedText={story.oFirmiePage.animatedText[1]}
         />
-
+        <IconsMarqueeSection />
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[3].pseudoNumber}
           squareText={story.oFirmiePage.squareText[3].text}

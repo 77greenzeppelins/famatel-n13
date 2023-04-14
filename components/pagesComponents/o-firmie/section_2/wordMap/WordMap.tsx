@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 /**Components**/
-import SvgWordMap from '../../../../SVG/maps/SvgWordMap';
 import SvgWordMapAnimated from '../../../../SVG/maps/SvgWordMapAnimated';
 /**Framer Motion Staff**/
 import { motion } from 'framer-motion';

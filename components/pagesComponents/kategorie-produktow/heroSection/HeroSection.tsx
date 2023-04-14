@@ -1,20 +1,26 @@
 import React from 'react';
-
-import FadingFrame from '../../../multipagesComponents/lines/fadingFrame/FadingFrame';
-import SVG_10_d from '../../../SVG/techDrawingsDetails/SVG_10_d';
+/**Components**/
+import HeroBackground from './heroBackground/HeroBackground';
+import TenCategoriesWithSvg from './heroForegroundGraphic/TenCategoriesWithSvg';
 /**Basic Data**/
 import { story } from '../../../../data/_data';
+
 /**-------------------------**/
 const HeroSection = () => {
   return (
-    <div className="min-h-screen fc flex-col gap-y-10">
-      <div className="h-[55vh] min-h-[400px] ">
-        <div className="relative fc  h-full aspect-square">
-          {/* <FadingFrame /> */}
-          <SVG_10_d className="w-[100%] h-[100%]" />
+    <div className="relative  fc flex-col gap-y-10">
+      <div className="relative h-[76vh] min-h-[400px] w-full">
+        <div
+          className="absolute h-full left-0 w-[5%] max-w-[40px] z-10 from-dark  to-transparent bg-gradient-to-r"
+          //___via-dark
+        />
+        <div className="absolute h-full right-0 w-[5%] max-w-[40px] z-10 from-dark to-transparent bg-gradient-to-l" />
+        <div className=" fc  h-full ">
+          <HeroBackground />
+          <TenCategoriesWithSvg />
         </div>
       </div>
-      <div className="h-[40vh] ">
+      <div className="h-[30vh] ">
         <p className="text-grey text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight">
           {story.oFirmiePage.heroSection[0]}
         </p>
