@@ -1,6 +1,6 @@
 import React from 'react';
 /**Components*/
-import NavSection from '../navSection/NavSection';
+import NavSection from '../navSection/NavSection_0';
 import LinkWithTextAndIcon from '../../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
 import H1AnimatedPresence from '../../../../_basicComponents/componentH1/H1AnimatedPresence';
 /**Basic Data**/

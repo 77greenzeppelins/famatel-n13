@@ -1,21 +1,19 @@
 import React from 'react';
 import { corpoColors } from '../../../../../data/_data';
+import NumbersDisplayer from '../../../../multipagesComponents/counters/numbersDisplayer/NumbersDisplayer';
+import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import ChevronLeftIcon from '../../../../SVG/icons/ChevronLeftIcon';
 import ChevronRightIcon from '../../../../SVG/icons/ChevronRightIcon';
 import ArrowButton from '../../../../_basicComponents/buttons/arrowButton/ArrowButton';
+/**Basic Data*/
+import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
 
-interface Props {
+const NavSection_0: React.FC<{
+  //   setCategoryIndex;
   categoryIndex: number;
   setCategoryIndex: React.Dispatch<React.SetStateAction<number>>;
   categoriesNumber: number;
-}
-
-/**-------------------------------------**/
-const ButtonsPanel: React.FC<Props> = ({
-  categoryIndex,
-  setCategoryIndex,
-  categoriesNumber,
-}) => {
+}> = ({ categoryIndex, setCategoryIndex, categoriesNumber }) => {
   /**...**/
   const min = 0;
   const max = categoriesNumber - 1;
@@ -28,15 +26,11 @@ const ButtonsPanel: React.FC<Props> = ({
   };
   /**JSX**/
   return (
-    <div
-      data-component="ButtonsPanel__container"
-      className="flex flex-col items-end justify-between h-full pr-4 "
-    >
+    <div className="flex justify-between w-[80%] xs:max-w-[300px] lg:max-w-[500px] xl:w-full xl:max-w-[80%] ">
       <ArrowButton
-        buttonStyle="fc w-10 h-10 items-center justify-start focus:outline-none disable pointer-events-auto border border-greyShade2"
+        buttonStyle="flex items-center justify-start focus:outline-none disable pointer-events-auto "
         //___border border-greyShade2
         onClickHandler={prevCategory}
-        ariaLabel='Przycisk: "Poprzednia Kategoria"'
       >
         <ChevronLeftIcon
           className={`w-6 h-6`}
@@ -47,10 +41,23 @@ const ButtonsPanel: React.FC<Props> = ({
           }
         />
       </ArrowButton>
+      <div className="fc flex-col gap-y-2">
+        <SmallPseudoHeader
+          text="Kategorie produktów"
+          hasBox={false}
+          hasVerticalOrnament={false}
+          textStyle="header-link-label text-grey text-center leading-none"
+        />
+        <NumbersDisplayer
+          currentCategoryIndex={categoryIndex}
+          digitStyle="header-link-label text-grey"
+          digitContainerStyle="fc w-[20px]"
+          countedStaff={catalogStructureData.length}
+        />
+      </div>
       <ArrowButton
-        buttonStyle="fc w-10 h-10 items-center justify-start focus:outline-none disable pointer-events-auto border border-greyShade2"
+        buttonStyle="flex items-center justify-start focus:outline-none disable pointer-events-auto "
         onClickHandler={nextCategory}
-        ariaLabel='Przycisk: "Następna Kategoria"'
       >
         <ChevronRightIcon
           className={`w-6 h-6`}
@@ -65,4 +72,4 @@ const ButtonsPanel: React.FC<Props> = ({
   );
 };
 
-export default ButtonsPanel;
+export default NavSection_0;
