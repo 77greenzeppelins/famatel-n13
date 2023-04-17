@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 /**Components**/
 import Section_1 from './section_1/Section_1';
 import Section_2 from './section_2/Section_2';
+/**HardCoded Staff*/
+const mediumTextStyle =
+  'text-[1.25rem] xs:text-[1.5rem]  tracking-[2px] leading-tight';
 
 /**----------------------------------------------------------------**/
 const OFirmieContent = () => {
-  /**LocalState; just to open/close <ProductDescriptionOverlay> **/
-  const [isSection_2_Open, setIsSection_2_Open] = useState(false);
-
   /**JSX**/
   return (
     <div
@@ -17,14 +17,12 @@ const OFirmieContent = () => {
     >
       <div className="z-[10]">
         <Section_1
-          isSection_2_Open={isSection_2_Open}
-          setIsSection_2_Open={setIsSection_2_Open}
+          mediumTextStyle={`${mediumTextStyle} text-corpo group-hover:text-light`}
         />
       </div>
       <div className="z-[8]">
         <Section_2
-          isSection_2_Open={isSection_2_Open}
-          setIsSection_2_Open={setIsSection_2_Open}
+        //  mediumTextStyle={`${mediumTextStyle} text-grey`}
         />
       </div>
     </div>

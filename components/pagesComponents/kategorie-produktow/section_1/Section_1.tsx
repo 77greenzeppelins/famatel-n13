@@ -3,7 +3,6 @@ import useWindowSize from '../../../../utils/hooks/useWindowSize';
 import DraggableSlider from './graphicSection/draggableSlider/DraggableSlider';
 import NavSection from './navSection/NavSection';
 // import ButtonsPanel from './navSection/ButtonsPanel';
-import TextSection from './textSection/TextSection';
 
 /**HardCodedStaff*/
 /**--------------------------------------------------**/
@@ -35,10 +34,7 @@ const Section_1: React.FunctionComponent<{
         />
       </div>
 
-      <div
-        // ref={ref}
-        className="relative fc w-full max-w-[2000px] overflow-hidden "
-      >
+      <div className="relative fc w-full max-w-[2000px] overflow-hidden ">
         <DraggableSlider
           width={width}
           heightValue={1} //___fake value to

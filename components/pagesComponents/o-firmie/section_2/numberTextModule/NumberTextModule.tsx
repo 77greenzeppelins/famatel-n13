@@ -9,7 +9,8 @@ const NumberTextModule: React.FC<{
   squareNumber: string;
   squareText: string;
   animatedText: string;
-}> = ({ squareNumber, squareText, animatedText }) => {
+  textStyle?: string;
+}> = ({ squareNumber, squareText, animatedText, textStyle }) => {
   return (
     <InViewContainer
       animationDelay={2}
@@ -19,7 +20,7 @@ const NumberTextModule: React.FC<{
       bottomFactor={0.5}
     >
       <SquareWithNumber pseudoNumber={squareNumber} text={squareText} />
-      <AnimatedText text={animatedText} />
+      <AnimatedText text={animatedText} textStyle={textStyle} />
     </InViewContainer>
   );
 };

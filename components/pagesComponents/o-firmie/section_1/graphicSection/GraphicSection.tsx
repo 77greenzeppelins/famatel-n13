@@ -8,81 +8,18 @@ import { imgOFirmiePage } from '../../../../../public/images/oFirmiePage/imgOFir
 import { motion } from 'framer-motion';
 
 /**-------------------------------------------------------------------**/
-const GraphicSection: React.FunctionComponent<{
-  isSection_2_Open: boolean;
-  setIsSection_2_Open: React.Dispatch<React.SetStateAction<boolean>>;
-}> = ({ isSection_2_Open, setIsSection_2_Open }) => {
+const GraphicSection = () => {
   /**JSX**/
   return (
     <motion.div
       data-component="GraphicSection__container"
-      className="relative flex justify-end items-center w-full xl:max-w-[950px] xl:h-screen xxl:max-w-1150px]"
+      className="relative flex justify-end items-center w-full lg:max-w-[850px] xl:max-w-[780px] xxxl:max-w-[900px] "
+      //___xl:h-screen
     >
-      <ImageSection
-        imageData={imgOFirmiePage[0]}
-        isSection_2_Open={isSection_2_Open}
-        setIsSection_2_Open={setIsSection_2_Open}
-      />
+      <ImageSection imageData={imgOFirmiePage[0]} />
       <OverlayWithGradient />
     </motion.div>
   );
 };
 
 export default GraphicSection;
-
-{
-  /* <div
-        ref={ref}
-        data-layout="Fake-overlay__for-initial-animation "
-        className="absolute block h-full w-full pointer-events-none overflow-hidden"
-      >
-        <motion.div
-          style={{ width: bounds.width && bounds.width * 2 }}
-          initial={{ x: '-50%' }}
-          animate={{ x: '19%' }}
-          transition={{ duration: 2, delay: 0.9 }}
-          className="h-full bg-gradient-to-r from-transparent via-dark to-dark"
-        />
-      </div> */
-}
-
-{
-  /* <motion.div
-        className="absolute inset-0 w-full h-full bg-dark origin-bottom-right"
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0 }}
-        transition={{ duration: 2, delay: 0.8 }}
-      /> */
-}
-{
-  /* <div className="absolute inset-0 bg-vB" /> */
-}
-
-{
-  /* <SquareImageHolder
-        imageData={imgOFirmiePage[1]}
-        refDivStyle="flex justify-end items-center w-full h-full pb-[60px] md:pt-[30%]  lg:pb-0 lg:pt-[10%]"
-        squareDivStyle="relative overflow-hidden"
-        hasOverlay={true}
-        //
-        itemsNumber={16}
-        columns={4}
-        gridStyle="grid-cols-[repeat(4,_1fr)]"
-        delayPerPixel={0.0008}
-      >
-        <motion.div
-          className="absolute bottom-[21%] right-[44%] h-[50%] w-[55%] pointer-events-auto"
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: delayForSniper, duration: 0.9 },
-          }}
-        >
-          <AnimatedButton
-            onClick={() => {
-              productDescriptionOpener(prev => !prev);
-            }}
-          />
-        </motion.div>
-      </SquareImageHolder> */
-}

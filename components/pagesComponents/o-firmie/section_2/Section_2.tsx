@@ -10,12 +10,12 @@ import { motion } from 'framer-motion';
 /**Basic Data*/
 import { pagesUrl, story } from '../../../../data/_data';
 import LinkWithTextAndIcon from '../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
-
+/**TS**/
+interface Props {
+  mediumTextStyle?: string;
+}
 /**---------------------------------------------**/
-const Section_2: React.FC<{
-  isSection_2_Open: boolean;
-  setIsSection_2_Open: React.Dispatch<React.SetStateAction<boolean>>;
-}> = ({ isSection_2_Open, setIsSection_2_Open }) => {
+const Section_2 = ({ mediumTextStyle }: Props) => {
   /**JSX**/
   return (
     <>
@@ -25,32 +25,34 @@ const Section_2: React.FC<{
           squareNumber={story.oFirmiePage.squareText[0].pseudoNumber}
           squareText={story.oFirmiePage.squareText[0].text}
           animatedText={story.oFirmiePage.animatedText[0]}
+          textStyle={mediumTextStyle}
         />
-        <ProductDescription
-        // isProductDescriptionOpen={isSection_2_Open}
-        // productDescriptionOpener={setIsSection_2_Open}
-        />
+        <ProductDescription />
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[1].pseudoNumber}
           squareText={story.oFirmiePage.squareText[1].text}
           animatedText={story.oFirmiePage.animatedText[1]}
+          textStyle={mediumTextStyle}
         />
         {/* <IconsMarqueeSection /> */}
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[3].pseudoNumber}
           squareText={story.oFirmiePage.squareText[3].text}
           animatedText={story.oFirmiePage.animatedText[3]}
+          textStyle={mediumTextStyle}
         />
-        <WordMap />
+        {/* <WordMap /> */}
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[2].pseudoNumber}
           squareText={story.oFirmiePage.squareText[2].text}
           animatedText={story.oFirmiePage.animatedText[2]}
+          textStyle={mediumTextStyle}
         />
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[4].pseudoNumber}
           squareText={story.oFirmiePage.squareText[4].text}
           animatedText={story.oFirmiePage.animatedText[4]}
+          textStyle={mediumTextStyle}
         />
         <div className="fc inner-px-md-xl-xxl">
           <LinkWithTextAndIcon

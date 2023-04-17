@@ -1,8 +1,8 @@
 import React from 'react';
-import { corpoColors } from '../../../../../data/_data';
-import ChevronLeftIcon from '../../../../SVG/icons/ChevronLeftIcon';
-import ChevronRightIcon from '../../../../SVG/icons/ChevronRightIcon';
-import ArrowButton from '../../../../_basicComponents/buttons/arrowButton/ArrowButton';
+import { corpoColors } from '../../../../../../data/_data';
+import ChevronLeftIcon from '../../../../../SVG/icons/ChevronLeftIcon';
+import ChevronRightIcon from '../../../../../SVG/icons/ChevronRightIcon';
+import ArrowButton from '../../../../../_basicComponents/buttons/arrowButton/ArrowButton';
 
 interface Props {
   categoryIndex: number;
