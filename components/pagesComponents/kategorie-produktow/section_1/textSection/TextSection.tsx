@@ -6,16 +6,12 @@ import H1AnimatedPresence from '../../../../_basicComponents/componentH1/H1Anima
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
 import ArrowLongRightIcon from '../../../../SVG/icons/ArrowLongRightIcon';
 
-/**--------------------------------------------------------------------------------**/
-const TextSection: React.FunctionComponent<{
-  //   setCategoryIndex;
+/**TS**/
+interface Props {
   categoryIndex: number;
-  setCategoryIndex: React.Dispatch<React.SetStateAction<number>>;
-  categoriesNumber: number;
-}> = ({ categoryIndex, setCategoryIndex, categoriesNumber }) => {
-  /**Hook Section**/
-  //   const { isLandscape } = useWindowSize({ screensNumber: 1 });
-
+}
+/**--------------------------------------------------------------------------------**/
+const TextSection = ({ categoryIndex }: Props) => {
   /**JSX**/
   return (
     <div

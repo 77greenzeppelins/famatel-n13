@@ -6,6 +6,9 @@ import TextSection from '../textSection/TextSection';
 import ButtonsPanel from './ButtonsPanel';
 /**Basic Data*/
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
+import BasicLink from '../../../../_basicComponents/links/BasicLink';
+import AnimatedPHeader from '../../../../multipagesComponents/pseudoHeaders/animatedPHeader/AnimatedPHeader';
+import ArrowLongRightIcon from '../../../../SVG/icons/ArrowLongRightIcon';
 /**HardCoded Style*/
 const textStyle =
   // 'text-corpo text-center text-[1.25rem] xs:text-[1.5rem]  lg:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight';
@@ -44,15 +47,24 @@ const NavSection: React.FC<{
           />
         </div>
         <div className=" w-7/12">
-          <Link
+          {/* <Link
             href={catalogStructureData[categoryIndex].mainCategoryUrl}
+            aria-label={'Linka do kategorii'}
             scroll={false}
           >
-            <TextSection
-              categoryIndex={categoryIndex}
-              setCategoryIndex={setCategoryIndex}
-              categoriesNumber={categoriesNumber}
+            <TextSection categoryIndex={categoryIndex} />
+          </Link> */}
+          <Link
+            href={catalogStructureData[categoryIndex].mainCategoryUrl}
+            aria-label={`Link do kategorii: ${catalogStructureData[categoryIndex].mainCategoryName}`}
+            scroll={false}
+            className="flex flex-col items-center justify-center w-full h-full xl:h-full group"
+          >
+            <AnimatedPHeader
+              uniqueKey={categoryIndex}
+              label={catalogStructureData[categoryIndex].mainCategoryName}
             />
+            <ArrowLongRightIcon containerStyle="fc h-6 w-6 min-w-6 min-h-6 aspect-square stroke-greyShade1 group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0" />
           </Link>
         </div>
       </div>
