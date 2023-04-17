@@ -9,6 +9,7 @@ type Props = {
   transitionDelay?: number;
   containerStyle?: string;
   yFactor?: string;
+  xFactor?: string;
 };
 
 /**----------------------------------------------**/
@@ -19,6 +20,7 @@ const InViewAnimatedContent: React.FC<Props> = ({
   transitionDelay = 0.2,
   containerStyle,
   yFactor = '5%',
+  xFactor = '5%',
 }) => {
   /**JSX**/
   return (
@@ -29,6 +31,7 @@ const InViewAnimatedContent: React.FC<Props> = ({
       animate={{
         opacity: componentIsInView ? 1 : 0,
         y: componentIsInView ? 0 : yFactor,
+        x: componentIsInView ? 0 : xFactor,
       }}
       transition={{
         duration: transitionDuration,

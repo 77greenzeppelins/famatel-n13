@@ -1,18 +1,25 @@
 import { motion } from 'framer-motion';
-import React, { useCallback } from 'react';
-/**Components**/
-// import SvgIconIK from '../../../../../../../../SVG/iconsFromCatalog/SvgIconIK';
-// import SvgIconIP from '../../../../../../../../SVG/iconsFromCatalog/SvgIconIP';
+import React from 'react';
 /**Basic Data*/
 import { corpoColors } from '../../../../../../../../../data/_data';
 import { allCat } from './IconsContentData';
-/**------------------------------------------------**/
-const IconsContent: React.FunctionComponent<{
+
+/**TS**/
+interface Props {
   categoryIndex: number;
   slidesLineIndex: number;
   slideIndex: number;
-}> = ({ categoryIndex, slidesLineIndex, slideIndex }) => {
-  const currentIconMap = slidesLineIndex
+}
+/**--------------------------------------**/
+const IconsContent: React.FC<Props> = ({
+  categoryIndex,
+  slidesLineIndex,
+  slideIndex,
+}) => {
+  /*
+  wtf: in case we want two RowsOfSlides in one step this allows to differ them...
+  */
+  const arrayToMap = slidesLineIndex
     ? allCat[categoryIndex]
     : allCat[categoryIndex].reverse();
 
@@ -29,11 +36,11 @@ const IconsContent: React.FunctionComponent<{
           transition: { delay: 0.1, duration: 0.8 },
         }}
       >
-        {currentIconMap.map(({ Icon }, i) => {
+        {arrayToMap.map(({ Icon }, i) => {
           if (i === slideIndex) {
             return (
               <div key={i}>
-                {' '}
+                {/* <p className="text-corpo fc"> {`${slideIndex} / ${i}  `}</p> */}
                 <Icon colorFG={corpoColors.greyShade1} />{' '}
               </div>
             );

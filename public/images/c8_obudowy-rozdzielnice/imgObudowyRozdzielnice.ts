@@ -27,6 +27,10 @@ const imgObudowyRozdzielniceSlide: IF_ImgStaticData[] = [
   { image: img5 },
   { image: img6 },
   { image: img6 },
+  { image: img7 },
+  { image: img7 },
+  { image: img4 },
+  { image: img4 },
 ];
 
 const imgObudowyRozdzielnice_subCategoryCatalog: IF_ImgStaticData[] = [

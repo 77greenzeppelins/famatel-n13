@@ -35,6 +35,8 @@ const imgRozdzielniceModuloweSlider: IF_ImgStaticData[] = [
   { image: img6 },
   { image: imageC1 },
   { image: imageC1 },
+  { image: imageC7 },
+  { image: imageC7 },
 ];
 
 /**

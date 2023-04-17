@@ -8,7 +8,7 @@ import ArrowButton from '../../../../_basicComponents/buttons/arrowButton/ArrowB
 /**Basic Data*/
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
 
-const NavSection: React.FunctionComponent<{
+const NavSection: React.FC<{
   //   setCategoryIndex;
   categoryIndex: number;
   setCategoryIndex: React.Dispatch<React.SetStateAction<number>>;

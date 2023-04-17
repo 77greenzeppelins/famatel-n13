@@ -17,12 +17,13 @@ const DraggableSlider_1: React.FC<Props> = ({ currentIndex, slideHeight }) => {
   return (
     <div
       ref={ref}
-      className={`relative fc flex-col  w-full overflow-hidden ${slideHeight}`}
+      className={`relative fc w-full overflow-hidden ${slideHeight}`}
     >
       <DraggableSlider
         width={width}
         heightValue={1} //___fake value to
         currentCategory={currentIndex}
+        arrayOrder={0} //___specifief if read array from first or the last item
       />
     </div>
   );

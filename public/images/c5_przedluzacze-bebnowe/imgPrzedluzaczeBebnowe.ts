@@ -30,10 +30,17 @@ const imgPrzedluzaczeBebnoweSlides: IF_ImgStaticData[] = [
   { image: img1 },
   //___ img9 is for two products
   { image: img2 },
+  { image: img2 },
+  { image: img3 },
   { image: img3 },
   { image: img4 },
+  { image: img4 },
   { image: img5 },
+  { image: img5 },
+
   { image: img6 },
+  { image: img6 },
+
   { image: img7 },
   { image: img8 },
   { image: img9 },

@@ -32,6 +32,8 @@ const imgLadowarkiSlides: IF_ImgStaticData[] = [
   { image: img2 },
   { image: img1 },
   { image: img1 },
+  { image: img2 },
+  { image: img2 },
 ];
 
 export { imgLadowarki, imgLadowarkiSlides };

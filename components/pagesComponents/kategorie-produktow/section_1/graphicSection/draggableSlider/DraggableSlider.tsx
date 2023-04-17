@@ -4,44 +4,57 @@ import RowOfSlides from './draggableSliderContent/RowOfSlides';
 /**Hook Staff**/
 /**Framer Motion Staff*/
 import { motion } from 'framer-motion';
+import InViewContainer from '../../../../../containers/inViewContainer/InViewContainer';
+import InViewAnimatedContent from '../../../../../containers/inViewContainer/InViewAnimatedContent';
+// import InViewAnimatedContent from '../../../../kontakt/_inViewAnimatedContent/InViewAnimatedContent';
 
 /**HardCoded Staff**/
-const largeCellSize = 200;
+const largeCellSize = 180;
 const smallCellSize = 150;
 const minWidthForLargeCell = 475.22; //in relation with <Section_1> / <GraphisSection>'s container h-[340px] xs:h-[440px]
 const minHeightForTwoLines = 300;
 
-/**-------------------------------------------------------**/
-const DraggableSlider: React.FunctionComponent<{
+/**TS**/
+interface Props {
   width: number;
   heightValue: number;
   currentCategory: number;
   minHeight?: number;
-}> = ({ width, heightValue, currentCategory }) => {
+  arrayOrder?: number;
+  //___for <InViewAnimatedContent>
+  xFactor?: string;
+  yFactor?: string;
+}
+/**-------------------------------------------------------**/
+const DraggableSlider: React.FC<Props> = ({
+  width,
+  heightValue,
+  currentCategory,
+  arrayOrder, //___specifief if read array from first or the last item
+  xFactor,
+  yFactor,
+}) => {
   /**...**/
   const constraintsRef = useRef(null);
-  /**Hook Section / just tell me what device's orientation is... **/
-  // const { width: windowWidth, height: windowHeight } = useWindowSize({
-  //   screensNumber: 1,
-  // });
+
   //**just initial condition**/
   //   if (!width || !height) return null;
   /**simple data; how many n-size cells can we put to the line**/
   const slideSide =
     width > minWidthForLargeCell ? largeCellSize : smallCellSize;
-  const minNumberOfSlides = Math.trunc(width / slideSide);
-  /** */
+  const minNumberOfSlides = Math.trunc(Math.min(width, 2000) / slideSide);
+  /**simple data;...*/
   const slidersLines = heightValue > minHeightForTwoLines ? 2 : 1;
 
   /**Handlers map(); we map as slider can have 1 or two "linesOfSlides"**/
   const createSlidersLineViaMap = Array.from({ length: slidersLines }).map(
     (_, i) => {
-      /**___JSX of map();
-       * it creates one or two "line/row/some f*ing div with slides...
-       * **/
+      /*___JSX of map();
+      it creates one or two "line/row/some f*ing div with slides...
+      */
       return (
         <motion.div
-          data-layout={`DraggableSlider__slidersRowNr${i}`}
+          data-layout={`DraggableSlider__slidersRow_Nr-${i}`}
           key={i}
           // key={JSON.stringify(windowWidth + windowHeight + i)}
           drag="x"
@@ -51,32 +64,40 @@ const DraggableSlider: React.FunctionComponent<{
           dragElastic={0.9}
           dragMomentum={true}
         >
-          <RowOfSlides
-            //___just to follow category changes...
-            currentCategory={currentCategory}
-            //___just to specify slides...
-            slidesNumber={minNumberOfSlides + 6}
-            slideSide={slideSide}
-            //___
-            slidesLineIndex={i}
-          />
+          <InViewContainer
+            animationDelay={0.1}
+            outherContainerStyle="w-full h-full "
+            measuredElementStyle="w-full h-full "
+            topFactor={0.25}
+            bottomFactor={0.25}
+          >
+            <InViewAnimatedContent
+              containerStyle="relative flex flex-col  justify-evenly w-full h-full"
+              xFactor={xFactor}
+              yFactor={yFactor}
+            >
+              <RowOfSlides
+                //___just to follow category changes...
+                currentCategory={currentCategory}
+                //___just to specify slides...
+                slidesNumber={minNumberOfSlides + 6}
+                slideSide={slideSide}
+                //___
+                slidesLineIndex={arrayOrder ? arrayOrder : i}
+              />
+            </InViewAnimatedContent>
+          </InViewContainer>
         </motion.div>
       );
     }
   );
-
-  /**...WTF**/
-  //   useEffect(() => {
-  //     console.log('tempRef.current', tempRef.current);
-  //   }, [windowWidth, windowHeight]);
-  // console.log({ slidersLines });
 
   /**JSX**/
   return (
     <div
       data-layout="DraggableSlider__container"
       ref={constraintsRef}
-      className="flex flex-col justify-center items-center gap-4"
+      className="flex flex-col justify-center items-center"
     >
       {width && heightValue ? createSlidersLineViaMap : null}
     </div>
