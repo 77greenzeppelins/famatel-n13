@@ -2,7 +2,7 @@ import React from 'react';
 /**FramerMotion Staff*/
 import { motion } from 'framer-motion';
 /**Basic Data*/
-// import { corpoColors } from '../../../data/_data';
+import { corpoColors } from '../../../data/_data';
 
 /***********************************************************************************/
 const ArrowLongRightIcon = ({
@@ -29,7 +29,7 @@ const ArrowLongRightIcon = ({
     >
       {/* <title>Link SVG Icon</title> */}
       <path
-        className={pathStyle ? pathStyle : ''}
+        className={pathStyle ? pathStyle : 'text-corpo'}
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"

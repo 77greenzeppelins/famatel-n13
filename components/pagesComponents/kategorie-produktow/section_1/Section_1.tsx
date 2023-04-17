@@ -17,15 +17,15 @@ const Section_1: React.FunctionComponent<{
   const { width } = useWindowSize({ screensNumber: 1 });
   /**JSX**/
   return (
-    <div className="w-full flex flex-col gap-y-14">
-      {/* <div className="relative fc w-full max-w-[2000px] overflow-hidden">
+    <div className="w-full flex flex-col gap-y-20 pb-[20px] md:pb-[60px]">
+      <div className="relative fc w-full max-w-[2000px] overflow-hidden">
         <DraggableSlider
           width={width}
           heightValue={1} //___fake value to
           currentCategory={categoryIndex}
           arrayOrder={0} //___specifief if read array from first or the last item
         />
-      </div> */}
+      </div>
 
       <div className="flex justify-center w-full ">
         <NavSection

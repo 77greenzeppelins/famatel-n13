@@ -10,7 +10,7 @@ import { svgIconsFromCatalogRandome_data } from '../../../../SVG/iconsFromCatalo
 import { corpoColors } from '../../../../../data/_data';
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 /**HardCoded staff**/
-const mountingCondition = 1024; //1024  1280
+const mountingCondition = 640; //1024  1280
 const heightValue = 300;
 const svgBasicSize = 60;
 const svgContainerSizes = 'w-[60px] h-[60px]';
@@ -53,7 +53,8 @@ const HeroBackground = () => {
       aria-hidden="true"
       data-component="HeroBackground__container_for_useMeasure"
       ref={ref}
-      className="absolute hidden md:block inset-0 overflow-hidden z-5"
+      className="absolute  inset-0 overflow-hidden z-5"
+      //___hidden md:block
     >
       <InViewContainer
         animationDelay={0.1}
