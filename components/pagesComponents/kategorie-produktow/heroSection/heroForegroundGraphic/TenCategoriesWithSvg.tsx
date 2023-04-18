@@ -9,7 +9,7 @@ const TenCategoriesWithSvg = () => {
   /**JSX**/
   return (
     <>
-      <div className="relative fc h-[80%] lg:h-[90%] xl:h-hull z-10 ">
+      <div className="relative fc  sm:h-[80%] lg:h-[90%] xl:h-hull z-10">
         <div className="absolute left-0 w-[6%] h-full from-dark via-dark to-transparent bg-gradient-to-l"></div>
         <div className="absolute w-[88%] h-full  bg-dark"></div>
         <div className="absolute right-0 w-[6%] h-full from-dark to-transparent via-dark bg-gradient-to-r"></div>

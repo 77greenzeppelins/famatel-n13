@@ -134,7 +134,10 @@ const overlayClosebuttonVariants = {
 used in: <H1AnimatedPresence>...!important
 */
 const opacityScaleYVariants = {
-  from: { opacity: 0, scaleY: 0 },
+  from: {
+    opacity: 0,
+    scaleY: 0,
+  },
   to: {
     opacity: 1,
     scaleY: 1,

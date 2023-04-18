@@ -1,5 +1,6 @@
 import React from 'react';
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
+import AnimatedSpanHeader from '../../../multipagesComponents/pseudoHeaders/animatedSpanHeader/AnimatedSpanHeader';
 import DraggableSlider from './graphicSection/draggableSlider/DraggableSlider';
 import NavSection from './navSection/NavSection';
 
@@ -31,7 +32,6 @@ const Section_1: React.FunctionComponent<{
           categoriesNumber={categoriesNumber}
         />
       </div>
-
       <div className="relative fc w-full max-w-[2000px] overflow-hidden ">
         <DraggableSlider
           width={width}

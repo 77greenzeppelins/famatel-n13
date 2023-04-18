@@ -39,7 +39,7 @@ const AnimatedLink = ({
       className={
         linkStyle
           ? linkStyle
-          : 'flex flex-col items-center justify-center w-full h-full xl:h-full group'
+          : ' flex flex-col items-center justify-center w-full h-full xl:h-full group'
       }
     >
       <AnimatedSpanHeader

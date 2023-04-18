@@ -4,17 +4,25 @@ import HeroBackground from './heroBackground/HeroBackground';
 import TenCategoriesWithSvg from './heroForegroundGraphic/TenCategoriesWithSvg';
 /**Basic Data**/
 import { story } from '../../../../data/_data';
+import MobileMarquee from './mobileMarquee/MobileMarqui';
 
 /**-------------------------**/
 const HeroSection = () => {
   return (
-    <div className="relative fc flex-col gap-y-4 ">
+    <div className="relative fc flex-col gap-y-4">
       <div className="relative h-[70vh] md:h-[76vh] min-h-[300px] w-full">
         <div
           className="absolute h-full left-0 w-[5%] max-w-[40px] z-10 from-dark  to-transparent bg-gradient-to-r"
           //___via-dark
         />
         <div className="absolute h-full right-0 w-[5%] max-w-[40px] z-10 from-dark to-transparent bg-gradient-to-l" />
+        <div className="absolute sm:hidden h-[50px] bottom-8 inset-x-0">
+          <MobileMarquee />
+        </div>
+        <div className="absolute sm:hidden h-[50px] top-8 inset-x-0">
+          <MobileMarquee />
+        </div>
+
         <div className="fc h-full">
           <HeroBackground />
           <TenCategoriesWithSvg />
