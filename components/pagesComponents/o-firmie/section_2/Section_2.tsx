@@ -10,6 +10,8 @@ import { motion } from 'framer-motion';
 /**Basic Data*/
 import { pagesUrl, story } from '../../../../data/_data';
 import LinkWithTextAndIcon from '../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
+import PageAnimatedLink from '../_pageAnimatedLink/PageAnimatedLink';
+import IconsMarqueeSection from './iconsMarquee/IconsMarqueeSection';
 /**TS**/
 interface Props {
   mediumTextStyle?: string;
@@ -25,42 +27,39 @@ const Section_2 = ({ mediumTextStyle }: Props) => {
           squareNumber={story.oFirmiePage.squareText[0].pseudoNumber}
           squareText={story.oFirmiePage.squareText[0].text}
           animatedText={story.oFirmiePage.animatedText[0]}
-          textStyle={mediumTextStyle}
+          // textStyle={mediumTextStyle}
         />
         <ProductDescription />
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[1].pseudoNumber}
           squareText={story.oFirmiePage.squareText[1].text}
           animatedText={story.oFirmiePage.animatedText[1]}
-          textStyle={mediumTextStyle}
+          // textStyle={mediumTextStyle}
         />
-        {/* <IconsMarqueeSection /> */}
+        <IconsMarqueeSection />
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[3].pseudoNumber}
           squareText={story.oFirmiePage.squareText[3].text}
           animatedText={story.oFirmiePage.animatedText[3]}
-          textStyle={mediumTextStyle}
+          // textStyle={mediumTextStyle}
         />
         {/* <WordMap /> */}
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[2].pseudoNumber}
           squareText={story.oFirmiePage.squareText[2].text}
           animatedText={story.oFirmiePage.animatedText[2]}
-          textStyle={mediumTextStyle}
+          // textStyle={mediumTextStyle}
         />
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[4].pseudoNumber}
           squareText={story.oFirmiePage.squareText[4].text}
           animatedText={story.oFirmiePage.animatedText[4]}
-          textStyle={mediumTextStyle}
+          // textStyle={mediumTextStyle}
         />
         <div className="fc inner-px-md-xl-xxl">
-          <LinkWithTextAndIcon
+          <PageAnimatedLink
             linkHref={pagesUrl.produkty}
-            pLabel={'Poznaj kategorie produktów'}
-            //___for <SmallPseudoHeader>
-            hasBox={false}
-            hasVerticalOrnament={false}
+            textStyle={mediumTextStyle}
           />
         </div>
       </motion.div>

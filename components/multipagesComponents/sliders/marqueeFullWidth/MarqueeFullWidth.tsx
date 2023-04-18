@@ -6,24 +6,35 @@ import InViewContainer from '../../../containers/inViewContainer/InViewContainer
 import IconsMarquee from '../marqueeSliders/iconsMarquee/IconsMarquee';
 
 /**HardCoded staff**/
-// const heightValue = 300;
-const svgBasicSize = 60;
-const svgContainerSizes = 'w-[60px] h-[60px]';
+const svgDefaultTreshold = 768;
+const svgDefaultSize = [60];
+const svgDefaultContainerSizes = 'w-[60px] h-[60px]';
 /**TS**/
 interface Props {
   marqueeContainerStyle?: string;
+  svgBasicSize?: number[];
+  svgSizeTreshold?: number;
+  svgContainerSizes?: string;
 }
 /*
 used in: oFirmie | section2 | ... | <IconsMarqueeSection>
 */
 /**--------------------------------------**/
-const MarqueeFullWidth: React.FC<Props> = ({ marqueeContainerStyle }) => {
+const MarqueeFullWidth: React.FC<Props> = ({
+  marqueeContainerStyle,
+  svgBasicSize = svgDefaultSize,
+  svgSizeTreshold = svgDefaultTreshold,
+  svgContainerSizes = svgDefaultContainerSizes,
+}) => {
   /**...**/
   const { width } = useWindowSize({ screensNumber: 1 });
-  const numberOfSvgCells = Math.ceil(width / svgBasicSize) + 4;
+  const svgRespSize =
+    svgBasicSize.length > 0 && width > svgSizeTreshold
+      ? svgBasicSize[svgBasicSize.length - 1]
+      : svgBasicSize[0];
+  const numberOfSvgCells = Math.ceil(width / svgRespSize) + 4;
   console.log('...width:', width);
-
-  // console.log('...numberOfSvgCells:', numberOfSvgCells);
+  console.log('...svgRespSize:', svgRespSize);
   /**JSX**/
   return (
     <div
@@ -46,7 +57,7 @@ const MarqueeFullWidth: React.FC<Props> = ({ marqueeContainerStyle }) => {
         <IconsMarquee
           numberOfSvgCells={numberOfSvgCells}
           svgContainerSizes={svgContainerSizes}
-          svgOffset={svgBasicSize * 1.5} //to alligh svg row to screen side
+          svgOffset={svgRespSize * 1.5} //to alligh svg row to screen side
         />
       </InViewContainer>
     </div>
