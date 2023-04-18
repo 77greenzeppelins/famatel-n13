@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 /**Components**/
 import ContactIntro from './intro/ContactIntro';
 import ContactAddress from './adres/ContactAddress';
-
 import ContactContacts from './kontakty/ContactContacts';
 import ContactMapka from './mapka/ContactMapka';
-import WordMap from '../o-firmie/section_2/wordMap/WordMap';
+import WorldMapComponent from '../../SVG/maps/WorldMapComponent';
 
 /**----------------------------------**/
 const KontaktContent = () => {
-  /**Local State**/
-  const [animationStage, setAnimationStage] = useState<number>(0);
-
-  // console.log('.......animationStage', animationStage);
   /**JSX**/
   return (
     <div
@@ -33,7 +28,7 @@ const KontaktContent = () => {
                 </div>
               </div>
               <div className="hidden lg:flex justify-center items-end h-auto w-[50%] xl:w-[55%] z-10 ">
-                <WordMap widthToDrag={1500} />
+                <WorldMapComponent widthToDrag={1500} />
               </div>
             </div>
             <div className="">

@@ -2,16 +2,14 @@ import React from 'react';
 /**Components**/
 import NumberTextModule from './numberTextModule/NumberTextModule';
 import ProductDescription from './productDescription/ProductDescription';
-import WordMap from './wordMap/WordMap';
-// import IconsMarqueeSection from './iconsMarquee/IconsMarqueeSection';
-/**Framer Motion Staff*/
-import { motion } from 'framer-motion';
-
-/**Basic Data*/
-import { pagesUrl, story } from '../../../../data/_data';
-import LinkWithTextAndIcon from '../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
+import WorldMapComponent from '../../../SVG/maps/WorldMapComponent';
 import PageAnimatedLink from '../_pageAnimatedLink/PageAnimatedLink';
 import IconsMarqueeSection from './iconsMarquee/IconsMarqueeSection';
+/**Framer Motion Staff*/
+import { motion } from 'framer-motion';
+/**Basic Data*/
+import { pagesUrl, story } from '../../../../data/_data';
+
 /**TS**/
 interface Props {
   mediumTextStyle?: string;
@@ -43,7 +41,7 @@ const Section_2 = ({ mediumTextStyle }: Props) => {
           animatedText={story.oFirmiePage.animatedText[3]}
           // textStyle={mediumTextStyle}
         />
-        {/* <WordMap /> */}
+        <WorldMapComponent />
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[2].pseudoNumber}
           squareText={story.oFirmiePage.squareText[2].text}

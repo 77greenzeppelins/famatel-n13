@@ -12,9 +12,11 @@ const svgDefaultContainerSizes = 'w-[60px] h-[60px]';
 /**TS**/
 interface Props {
   marqueeContainerStyle?: string;
-  svgBasicSize?: number[];
+  //___treshold allows set to "basic" sizes of svgStaff for responsivness reason
   svgSizeTreshold?: number;
-  svgContainerSizes?: string;
+  //___must be an array to choose one of value
+  svgBasicSize: number[];
+  svgContainerSizes: string;
 }
 /*
 used in: oFirmie | section2 | ... | <IconsMarqueeSection>
@@ -30,11 +32,11 @@ const MarqueeFullWidth: React.FC<Props> = ({
   const { width } = useWindowSize({ screensNumber: 1 });
   const svgRespSize =
     svgBasicSize.length > 0 && width > svgSizeTreshold
-      ? svgBasicSize[svgBasicSize.length - 1]
-      : svgBasicSize[0];
+      ? svgBasicSize[svgBasicSize.length - 1] //___take the last one
+      : svgBasicSize[0]; //___take the very first
   const numberOfSvgCells = Math.ceil(width / svgRespSize) + 4;
-  console.log('...width:', width);
-  console.log('...svgRespSize:', svgRespSize);
+  // console.log('...width:', width);
+  // console.log('...svgRespSize:', svgRespSize);
   /**JSX**/
   return (
     <div
@@ -57,7 +59,7 @@ const MarqueeFullWidth: React.FC<Props> = ({
         <IconsMarquee
           numberOfSvgCells={numberOfSvgCells}
           svgContainerSizes={svgContainerSizes}
-          svgOffset={svgRespSize * 1.5} //to alligh svg row to screen side
+          svgOffset={svgRespSize * 1.5} //___to "align" svg row to screen side
         />
       </InViewContainer>
     </div>
