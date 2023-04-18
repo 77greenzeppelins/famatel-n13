@@ -2,7 +2,6 @@ import React from 'react';
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 import DraggableSlider from './graphicSection/draggableSlider/DraggableSlider';
 import NavSection from './navSection/NavSection';
-// import ButtonsPanel from './navSection/ButtonsPanel';
 
 /**HardCodedStaff*/
 /**--------------------------------------------------**/
@@ -11,8 +10,7 @@ const Section_1: React.FunctionComponent<{
   setCategoryIndex: React.Dispatch<React.SetStateAction<number>>;
   categoriesNumber: number;
 }> = ({ categoryIndex, setCategoryIndex, categoriesNumber }) => {
-  /**Hook Section / just count container of "sliding" images... **/
-  // const [ref, { width, height }] = useMeasure();
+  /**...**/
   const { width } = useWindowSize({ screensNumber: 1 });
   /**JSX**/
   return (
