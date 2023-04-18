@@ -6,13 +6,8 @@ import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWi
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
 
-/**TS**/
-import { IF_NormalizedNumbers } from '../../../../utils/TS/typeScriptStaff';
-
 /**-----------------------------------------**/
-const SectionCatalogy: React.FC<IF_NormalizedNumbers> = ({
-  normalizedValues,
-}) => {
+const SectionCatalogy: React.FC = () => {
   /**JSX**/
   return (
     <motion.div className="relative flex flex-col w-full gap-y-10">
@@ -20,8 +15,7 @@ const SectionCatalogy: React.FC<IF_NormalizedNumbers> = ({
         label={'KATALOG w rozdziałach'}
         mainContainerStyle="w-full md:w-[70%] lg:w-[50%] flex flex-col gap-[10px] "
       />
-      <CatalogChapters normalizedValues={normalizedValues} />
-
+      <CatalogChapters />
       <OverlayWithGradient
         initial={{ x: '-50%' }}
         animate={{ x: '100%' }}

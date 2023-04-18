@@ -1,21 +1,18 @@
 import React, { useEffect, useState } from 'react';
 /**Components**/
 import SmallPseudoHeader from '../../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
-import LinkWithTextAndIcon from '../../../_basicComponents/links/linkWithTexAndIcon/LinkWithTextAndIcon';
+import LinkWithSpanAndIcon from '../../../_basicComponents/links/linkWithSpanAndIcon/LinkWithSpanAndIcon';
 import H1Component from '../../../_basicComponents/componentH1/H1Component';
 /**TS**/
 import { IF_CatalogNavPanel } from '../../../../utils/TS/typeScriptStaff';
-/**Basic Data*/
-import { corpoColors } from '../../../../data/_data';
 
 /**HardCoded Staff*/
-// const headerTextStyle =
-//   'text-grey text-[0.825rem] xxxl:text-[1rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] uppercase';
 const textStyle = `text-[0.825rem] lg:text-[1rem] leading-1 tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] `; //___w-fit
 const customTextstyle =
   'text-light text-left text-[1.5rem] lg:text-[1.75rem] xxl:text-[2.25] leading-1 tracking-[0.125rem]  word-spacing-0125 lg:word-spacing-025 flex items-center h-full group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]';
 
-const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
+/**---------------------------------------------------**/
+const CatalogNavPanel: React.FC<IF_CatalogNavPanel> = ({
   linkHeaders,
   linkNames,
   linkUrls,
@@ -40,15 +37,15 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
             {name && (
               <>
                 <div style={{ width: 'fit-content' }}>
-                  <LinkWithTextAndIcon
+                  <LinkWithSpanAndIcon
+                    uniqueKeyToAnimate={''}
                     linkHref={linkUrls[index]}
-                    controlsSet={{ background: corpoColors.dark }}
-                    aStyle="flex items-center gap-4 h-full ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-[10px] w-fit "
-                    pLabel={name}
-                    //___for <SmallPseudoHeader>
-                    hasBox={false}
-                    hasVerticalOrnament={false}
-                    pStyle={`text-grey text-left  ${textStyle}`}
+                    linkLabel={name}
+                    ariaLabel={`Link do strony ${name}`}
+                    linkStyle={
+                      'flex items-center gap-4 h-full ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-[10px] w-fit '
+                    }
+                    spanStyle={`text-grey text-left  ${textStyle}`}
                   />
                 </div>
               </>
@@ -72,15 +69,15 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
           {bottomUrl ? (
             <>
               <div style={{ width: 'fit-content' }}>
-                <LinkWithTextAndIcon
+                <LinkWithSpanAndIcon
+                  uniqueKeyToAnimate={''}
                   linkHref={bottomUrl}
-                  controlsSet={{ background: corpoColors.dark }}
-                  aStyle="flex items-center gap-4 h-full ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-[10px]"
-                  pLabel={bottomName}
-                  //___for <SmallPseudoHeader>
-                  hasBox={false}
-                  hasVerticalOrnament={false}
-                  pStyle={`text-grey text-left ${textStyle}`}
+                  linkLabel={bottomName}
+                  ariaLabel={`Link do strony ${bottomName}`}
+                  linkStyle={
+                    'flex items-center gap-4 h-full ease-in duration-[0.4s] delay-[0.1s] bg-transparent focus:outline-none group pr-[10px] w-fit '
+                  }
+                  spanStyle={`text-grey text-left  ${textStyle}`}
                 />
               </div>
             </>
@@ -100,7 +97,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
   /**Handlers to conditionally create optionalHeader**/
   const createOptionalHeader = () => {
     return optionalHeader ? (
-      <div className="flex gap-x-6 items-center">
+      <div className="flex items-center gap-x-6">
         <SmallPseudoHeader
           text={optionalHeader}
           // textStyle={headerTextStyle}
@@ -125,7 +122,7 @@ const CatalogNavPanel: React.FunctionComponent<IF_CatalogNavPanel> = ({
         />
       </div>
       <div className="w-[20px]  border-l border-greyShade2"></div>
-      <nav className="flex w-full flex-col gap-y-6 xl:gap-y-8 ">
+      <nav className="flex flex-col w-full gap-y-6 xl:gap-y-8 ">
         {createLinks()}
         {createBottomLevel()}
         {createOptionalHeader()}

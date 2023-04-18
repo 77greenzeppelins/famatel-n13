@@ -1,33 +1,15 @@
+import { useRouter } from 'next/router';
 /**Components**/
 import HeaderLogoLink from './logoLink/HeaderLogoLink';
 import NavForMainPages from './navSection/NavForMainPages';
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
-// import { headerVariants } from '../../../../utils/framerMotion/framerMotionUtils';
-import { useRouter } from 'next/router';
-/**GlobalState Staff*/
-// import { useSnapshot } from 'valtio';
-// import { appGlobalStates } from '../../../../globalState/globalState';
-// import { useEffect } from 'react';
 
 /******************************************************************************/
 const Header: React.FunctionComponent = () => {
+  /**...**/
   const router = useRouter();
   const condition = router.pathname === '/';
-  // const condition = true;
-
-  /**GlobalState*/
-  // const snap = useSnapshot(appGlobalStates);
-  // const snap2 = useSnapshot(state);
-  /**...*/
-  // useEffect(() => {
-  //   console.log('snap.initialVal', snap.initialVal);
-  // }, [snap.initialVal]);
-
-  // const handler = () => {
-  //   ++snap.someNumb;
-  //   console.log('handler / snap.someNumb', snap.someNumb);
-  // };
 
   /**JSX*/
   return (
@@ -35,7 +17,7 @@ const Header: React.FunctionComponent = () => {
       data-component="Header__container"
       className={`fixed w-screen top-0 left-0 right-0 h-[50px] z-[500] bg-dark`}
     >
-      <div className="h-full w-full inner-px-md-xl-xxl ">
+      <div className="w-full h-full inner-px-md-xl-xxl ">
         <div className="relative w-full h-full">
           <motion.div
             className="absolute bottom-0 left-0 right-0 h-full border-b-[0.5px] border-greyShade1"
@@ -66,10 +48,10 @@ const Header: React.FunctionComponent = () => {
               },
             }}
           >
-            <div className="origin-left h-full flex items-center pb-1">
+            <div className="flex items-center h-full pb-1 origin-left">
               <HeaderLogoLink />
             </div>
-            <div className="flex items-center justify-end h-full w-full ">
+            <div className="flex items-center justify-end w-full h-full ">
               <NavForMainPages />
             </div>
           </motion.div>

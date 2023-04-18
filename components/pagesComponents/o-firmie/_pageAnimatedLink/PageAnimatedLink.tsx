@@ -1,6 +1,6 @@
 import React from 'react';
 /**Components*/
-import AnimatedLink from '../../kategorie-produktow/section_1/navSection/animatedLink/AnimatedLink';
+import LinkWithSpanAndIcon from '../../../_basicComponents/links/linkWithSpanAndIcon/LinkWithSpanAndIcon';
 /**HardCoded Staff*/
 const defaultTextStyle =
   'text-corpo text-left text-[1.25rem] xs:text-[1.5rem] md:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight group-hover:text-light';
@@ -15,7 +15,8 @@ interface Props {
 const PageAnimatedLink = ({ linkHref, textStyle, layoutStyle }: Props) => {
   /**JSX**/
   return (
-    <AnimatedLink
+    <LinkWithSpanAndIcon
+      uniqueKeyToAnimate={''} //___empty means no animation in <span>
       linkHref={linkHref}
       linkLabel={'Poznaj kategorie produktów'}
       ariaLabel={`Link do strony: Kategorie Produktów`}

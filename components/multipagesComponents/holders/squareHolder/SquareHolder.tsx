@@ -6,13 +6,13 @@ const defaultRefDivStyle = 'fc relative h-full w-full';
 const defaultSquareDivStyle = 'relative bg-light p-[6px] overflow-hidden';
 
 /**TS**/
-interface IF_SquareImageHolder {
+interface Props {
   children?: ReactNode;
   squareDivStyle?: string;
   refDivStyle?: string;
 }
 
-const SquareHolder: React.FunctionComponent<IF_SquareImageHolder> = ({
+const SquareHolder: React.FC<Props> = ({
   refDivStyle,
   squareDivStyle,
   children,

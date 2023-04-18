@@ -24,16 +24,6 @@ const AnimatedSpanHeader = ({
       //  initial={true}
       mode="wait"
     >
-      {/* <motion.span
-        key={uniqueKey}
-        variants={customeVariants ? customeVariants : opacityScaleYVariants}
-        initial="from"
-        animate="to"
-        exit="exit"
-        className={spanStyle ? spanStyle : h1DefaultStyle}
-      >
-        {label}
-      </motion.span> */}
       <motion.span
         key={uniqueKey}
         variants={customeVariants ? customeVariants : opacityScaleYVariants}
@@ -44,17 +34,6 @@ const AnimatedSpanHeader = ({
       >
         {label}
       </motion.span>
-
-      {/* <motion.p
-        key={uniqueKey}
-        variants={opacityScaleYVariants}
-        initial="from"
-        animate="to"
-        exit="exit"
-        className={'text-[1.5rem] text-grey text-cente'}
-      >
-        {label}
-      </motion.p> */}
     </AnimatePresence>
   );
 };

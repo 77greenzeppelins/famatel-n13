@@ -2,11 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 /**Components*/
-import ArrowLongRightIcon from '../../../../../SVG/icons/ArrowLongRightIcon';
-import AnimatedSpanHeader from '../../../../../multipagesComponents/pseudoHeaders/animatedSpanHeader/AnimatedSpanHeader';
+import ArrowLongRightIcon from '../../../SVG/icons/ArrowLongRightIcon';
+import AnimatedSpanHeader from '../../../multipagesComponents/pseudoHeaders/animatedSpanHeader/AnimatedSpanHeader';
 
 /**TS**/
 interface Props {
+  uniqueKeyToAnimate: string;
   linkHref: string;
   linkLabel: string;
   ariaLabel: string;
@@ -16,8 +17,9 @@ interface Props {
   iconStyle?: string;
 }
 
-/**------------------------------------------------------------------**/
-const AnimatedLink = ({
+/**----------------------------**/
+const LinkWithSpanAndIcon = ({
+  uniqueKeyToAnimate,
   linkHref,
   linkLabel,
   ariaLabel,
@@ -42,11 +44,16 @@ const AnimatedLink = ({
           : ' flex flex-col items-center justify-center w-full h-full xl:h-full group'
       }
     >
-      <AnimatedSpanHeader
-        uniqueKey={linkHref}
-        label={linkLabel}
-        spanStyle={spanStyle}
-      />
+      {uniqueKeyToAnimate ? (
+        <AnimatedSpanHeader
+          uniqueKey={uniqueKeyToAnimate}
+          label={linkLabel}
+          spanStyle={spanStyle}
+        />
+      ) : (
+        <span className={spanStyle}>{linkLabel}</span>
+      )}
+
       <ArrowLongRightIcon
         containerStyle={
           iconStyle
@@ -58,4 +65,4 @@ const AnimatedLink = ({
   );
 };
 
-export default AnimatedLink;
+export default LinkWithSpanAndIcon;

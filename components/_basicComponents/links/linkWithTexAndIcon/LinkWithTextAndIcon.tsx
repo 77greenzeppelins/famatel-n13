@@ -3,7 +3,6 @@ import React from 'react';
 import AriaJSLink from '../ariaJSLink/AriaJSLink';
 import ArrowLongRightIcon from '../../../SVG/icons/ArrowLongRightIcon';
 import SmallPseudoHeader from '../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
-// import LinkWithArrowIcon from '../../../SVG/icons/LinkWithArrowIcon';
 /**Basic Data**/
 import { corpoColors } from '../../../../data/_data';
 

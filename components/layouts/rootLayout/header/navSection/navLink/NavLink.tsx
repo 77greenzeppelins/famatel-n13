@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 /**Components*/
-import AriaJSLink from '../../../../../_basicComponents/links/ariaJSLink/AriaJSLink';
 import DropDownMenusHolder from '../../dropDownMenus/DropDownMenusHolder';
 import CatalogOpener from '../catalogOpener/CatalogOpener';
 /**TS**/
@@ -17,6 +17,7 @@ const NavLink: React.FC<Props> = ({ label, url, hasDropDownMenu }) => {
   /**why: for style sake;  I want link to be in corpo color and has no border-bottom when user is on its corresponding page */
   const router = useRouter();
   const linkStyleisHovered = router.pathname === url;
+  const isActive = router.asPath === url;
 
   /**Local State mr_1**/
   const [hovererState, setHoverState] = useState<{
@@ -26,7 +27,7 @@ const NavLink: React.FC<Props> = ({ label, url, hasDropDownMenu }) => {
     isHovered: false,
     label: '',
   });
-  /**Local State mr_2**/
+  /**Local State nr_2**/
   const [isClicked, setIsClicked] = useState(false);
 
   /**It allowes to close dropdownMenu when url changes*/
@@ -52,30 +53,25 @@ const NavLink: React.FC<Props> = ({ label, url, hasDropDownMenu }) => {
           />
         </div>
         <div className="hidden lg:block">
-          <AriaJSLink
-            linkHref={url}
-            controlsSet={{ background: 'transparent' }}
-            controlsStart={{
-              background: 'transparent',
-            }}
-            aStyle={`relative fc gap-1 w-full h-full cursor-pointer bg-transparent select-none touch-none focus:outline-none group ${
-              hasDropDownMenu ? 'pr-2' : ''
-            }`}
+          <Link
+            href={url}
+            aria-label={`Link do strony ${label}`}
+            aria-current={isActive ? 'page' : undefined}
+            scroll={false}
+            className={
+              `relative fc gap-1 w-full h-full cursor-pointer bg-transparent select-none touch-none  group ${
+                hasDropDownMenu ? 'pr-2' : ''
+              }`
+              //___focus:outline-none
+            }
           >
-            <p
+            <span
               className={`header-link-label ${
                 linkStyleisHovered ? 'text-corpo' : 'text-grey'
               }`}
             >
               <span>{label}</span>
-            </p>
-
-            {/* <div
-            className={`absolute border-b border-grey h-[32px] ${
-              linkStyleisHovered ? 'w-[0%]' : 'w-full'
-            } inset-0 opacity-0 hover:opacity-100  ease-in duration-300 `}
-            //__w-full h-full
-          /> */}
+            </span>
             <span
               className={`h-[1px] inline-block w-0 bg-grey absolute left-0 -bottom-[2px] group-hover:w-full transition-[width] ease-in duration-300 delay-400 ${
                 linkStyleisHovered ? 'opacity-0' : 'opacity-1'
@@ -83,7 +79,7 @@ const NavLink: React.FC<Props> = ({ label, url, hasDropDownMenu }) => {
             >
               &nbsp;
             </span>
-          </AriaJSLink>
+          </Link>
         </div>
       </li>
       {hasDropDownMenu ? (

@@ -2,22 +2,26 @@ import React from 'react';
 import Link from 'next/link';
 /*Components*/
 import SvgLogo from '../../../../SVG/logo/SvgLogo';
-// import AriaJSLink from '../../../../_basicComponents/links/ariaJSLink/AriaJSLink';
-/**Hook Section**/
-// import { useRouter } from 'next/router';
-// /**BasicData*/
-// import { pagesUrl } from '../../../../../data/_data';
+import { useRouter } from 'next/router';
 
-/******************************************************************************/
+/**------------------------------**/
 const HeaderLogoLink = () => {
+  /**staff for setting arai-current*/
+  const router = useRouter();
+  const isActive = router.asPath === '/';
   /**JSX*/
   return (
-    <Link href={'/'} scroll={false} className="pointer-events-auto">
-      <div className="flex justify-start cursor-pointer no-sparkling">
+    <Link
+      href={'/'}
+      aria-label={`Link do strony O Firmie`}
+      aria-current={isActive ? 'page' : undefined}
+      scroll={false}
+      className="pointer-events-auto"
+    >
+      <span className="flex justify-start cursor-pointer disable-soft">
         <SvgLogo />
-      </div>
+      </span>
     </Link>
-    // </AriaJSLink>
   );
 };
 

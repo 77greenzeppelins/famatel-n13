@@ -13,47 +13,13 @@ const mdTextStyle =
 
 /**----------------------------------**/
 const DoPobraniaContent = () => {
-  /**State for CursorTracker*/
-  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  // const [mouseRelativePosition, setMouseRelativePosition] = useState({
-  //   x: 0,
-  //   y: 0,
-  // });
-  const [normalizingValue, setNormalizingValue] = useState({ x: 0, y: 0 });
-
-  function handleMouseMove(event: React.MouseEvent) {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-    const x = event.clientX;
-    const y = event.clientY;
-    // setMousePosition({ x, y });
-    // const relativeX = x / screenWidth;
-    // const relativeY = y / screenHeight;
-    // setMouseRelativePosition({ x: relativeX, y: relativeY });
-
-    const normalizingX = 0.5 - x / screenWidth;
-    const normalizingY = 0.5 - y / screenHeight;
-    // const normalizingX = (x - screenWidth / 2) / (screenWidth / 2) + 0.5;
-    // const normalizingY = (y - screenHeight / 2) / (screenHeight / 2) + 0.5;
-    setNormalizingValue({ x: normalizingX, y: normalizingY });
-  }
-
   /**JSX**/
   return (
     <main
       data-component="KontaktContent__container"
-      className="relative bg-dark pt-[30px]"
-      onMouseMove={handleMouseMove}
+      className="relative bg-dark pt-[30px] pb-[12vh]"
     >
-      {/* <div className="sticky flex flex-col w-[200px] h-[140px] top-[50px] left-0 z-999 bg-vY">
-        <p>{`mouseX: ${mousePosition.x}`}</p>
-        <p>{`mouseY: ${mousePosition.y}`}</p>
-        <p>{`mouseRelX: ${mouseRelativePosition.x.toFixed(2)}`}</p>
-        <p>{`mouseRelY: ${mouseRelativePosition.y.toFixed(2)}`}</p>
-        <p>{`normalizingX: ${normalizingValue.x.toFixed(2)}`}</p>
-        <p>{`normalizingY: ${normalizingValue.y.toFixed(2)}`}</p>
-      </div> */}
-      <div className="fc w-full min-h-screen">
+      <div className="w-full min-h-screen fc">
         <HeroSection mdTextStyle={mdTextStyle} lgTextStyle={lgTextStyle} />
       </div>
       <div className="w-full h-full inner-px-md-xl-xxl">
@@ -66,12 +32,7 @@ const DoPobraniaContent = () => {
             bottomFactor={0.2}
           >
             <InViewAnimatedContent containerStyle="w-full">
-              <SectionCatalogy
-                normalizedValues={{
-                  x: normalizingValue.x,
-                  y: normalizingValue.y,
-                }}
-              />
+              <SectionCatalogy />
             </InViewAnimatedContent>
           </InViewContainer>
 
