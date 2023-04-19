@@ -45,7 +45,7 @@ const SquareHolderWithImage: React.FC<Props> = ({
         squareDivStyle={
           squareHolderInnerContainer
             ? squareHolderInnerContainer
-            : 'relative overflow-hidden bg-light p-2'
+            : 'relative overflow-hidden  bg-light p-2 '
         }
       >
         <motion.div

@@ -1,25 +1,25 @@
 import React from 'react';
 /**Components**/
-import SquareHolderWithImage from '../../../../holders/squareHolderWithImage/SquareHolderWithImage';
-import CardCounter from '../../../__cardCounter/CardCounter';
+import SquareHolderWithImage from '../../holders/squareHolderWithImage/SquareHolderWithImage';
+import CardCounter from '../__cardCounter/CardCounter';
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
-import { cardVariants } from '../../../../../../utils/framerMotion/framerMotionUtils';
+import { cardVariants } from '../../../../utils/framerMotion/framerMotionUtils';
 /**TS**/
-import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
+import { IF_ImgStaticData } from '../../../../utils/TS/typeScriptStaff';
 
 /**------------------------------------------------------------**/
-const ProductCardGraphicSection: React.FunctionComponent<{
+const CardGraphicSection: React.FunctionComponent<{
   imageData: IF_ImgStaticData;
   productIndex: number;
   imageAlt?: string;
 }> = ({ imageData, productIndex, imageAlt }) => {
   /**JSX**/
   return (
-    <div className="relative fc flex-col w-full h-full  rounded-l-sm">
+    <div className="relative fc flex-col w-full h-full">
       <motion.div
         data-component="ProductCardImageSection__white-container"
-        className={`relative fc  overflow-hidden w-full h-full rounded-l-md bg-light`}
+        className={`relative fc overflow-hidden w-full h-full rounded-l-md`}
         variants={cardVariants}
         initial="initial"
         animate="animate"
@@ -44,4 +44,4 @@ const ProductCardGraphicSection: React.FunctionComponent<{
   );
 };
 
-export default ProductCardGraphicSection;
+export default CardGraphicSection;

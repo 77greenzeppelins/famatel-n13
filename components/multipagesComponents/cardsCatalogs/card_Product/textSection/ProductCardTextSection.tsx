@@ -1,8 +1,8 @@
 import React from 'react';
 /**Components**/
-import SmallPseudoHeader from '../../../../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
+import SmallPseudoHeader from '../../../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 /**Hook Staff**/
-import useWindowSize from '../../../../../../utils/hooks/useWindowSize';
+import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 
 /**Hardcoded data*/
 /*
