@@ -15,6 +15,7 @@ const OverlayWithGradient: React.FC<{
   /**JSX**/
   return (
     <div
+      role="prezentacja"
       ref={ref}
       data-layout="Fake-overlay__for-initial-animation "
       className="absolute block h-full w-full pointer-events-none overflow-hidden"

@@ -35,11 +35,11 @@ const Card_Product: React.FunctionComponent<{
         href={path}
         scroll={false}
         aria-label={`Karta produktu: ${model}`}
-      ></Link>
+      />
       <div
         className="absolute inset-0 z-5"
         role="region"
-        aria-label={`Testowo-graficzna zawartość karty produktu: ${model}`}
+        aria-label={`Tekstowo-graficzna zawartość karty produktu: ${model}`}
       >
         <CardFrame>
           <div className="flex h-full w-full">

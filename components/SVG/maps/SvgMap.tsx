@@ -4,13 +4,15 @@ import { corpoColors } from '../../../data/_data';
 const SvgMap = ({ containerStyle }: { containerStyle?: string }) => {
   return (
     <svg
+      role="img"
+      aria-label="Mapka dojazdu"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      // width="800"
-      // height="800"
       viewBox="0 0 800 800"
       className={containerStyle}
     >
+      {/*
+      //___frame
       <path
         fill={corpoColors.dark}
         stroke={corpoColors.greyShade2}
@@ -18,7 +20,7 @@ const SvgMap = ({ containerStyle }: { containerStyle?: string }) => {
         strokeLinejoin="round"
         strokeWidth="2.182"
         d="M1.091 1.091H798.9110000000001V798.9110000000001H1.091z"
-      ></path>
+      ></path> */}
 
       <path
         //___roads_1

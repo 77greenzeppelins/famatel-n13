@@ -23,7 +23,10 @@ const BasicCardGraphicSection: React.FunctionComponent<{
         initial="initial"
         animate="animate"
       >
-        <SquareHolderWithImage imageData={imageData} />
+        <SquareHolderWithImage
+          imageData={imageData}
+          squareHolderOuterContainer="fc h-full bg-light"
+        />
       </motion.div>{' '}
     </div>
   );

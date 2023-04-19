@@ -30,6 +30,7 @@ const SmallPseudoHeader: React.FunctionComponent<Props> = ({
 }) => {
   return (
     <h2
+      role="heading"
       className={`${
         containerStyle
           ? containerStyle

@@ -35,7 +35,7 @@ const Card_SubCategory: React.FC<IF_Card> = ({
       <div
         className="absolute inset-0 z-5"
         role="region"
-        aria-label={`Testowo-graficzna zawartość karty produktu: ${label}`}
+        aria-label={`Tekstowo-graficzna zawartość karty produktu: ${label}`}
       >
         <CardFrame>
           <div className="flex h-full w-full">
