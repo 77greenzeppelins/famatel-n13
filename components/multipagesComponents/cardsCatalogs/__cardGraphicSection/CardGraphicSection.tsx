@@ -26,7 +26,6 @@ const CardGraphicSection: React.FunctionComponent<{
       >
         <SquareHolderWithImage imageData={imageData} imageAlt={imageAlt} />
       </motion.div>
-      {/* <ProductCardImageSection imageData={imageData} imageAlt={imageAlt} /> */}
       <div className="absolute top-0 w-full h-[10%]">
         <div className="relative fc w-full h-full ">
           <CardCounter

@@ -24,9 +24,21 @@ const Card_Basic: React.FunctionComponent<IF_Card> = ({
   return (
     <div
       data-component="Card_Basic__container"
-      className="w-full h-full cursor-pointer group"
+      className="relative w-full h-full cursor-pointer group"
     >
-      <Link href={url} scroll={false}>
+      <Link
+        className="relative block z-10 w-full h-full"
+        role="link"
+        href={url}
+        scroll={false}
+        aria-label={`Karta kategorii: ${label}`}
+      ></Link>
+
+      <div
+        className="absolute inset-0 z-5"
+        role="region"
+        aria-label={`Testowo-graficzna zawartość karty kategorii: ${label}`}
+      >
         <CardFrame>
           <div className="relative fc flex-col xs:flex-row w-full h-full ">
             <div className="flex items-center justify-between  w-full h-[40%] xs:w-[20%] xs:h-[80%]">
@@ -47,7 +59,7 @@ const Card_Basic: React.FunctionComponent<IF_Card> = ({
             </div>
           </div>
         </CardFrame>
-      </Link>
+      </div>
     </div>
   );
 };
