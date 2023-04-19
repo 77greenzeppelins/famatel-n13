@@ -50,6 +50,8 @@ const ContactMapka = () => {
               <Link
                 className="absolute z-10 w-full h-full"
                 role="link"
+                target="_blank"
+                rel="noopener"
                 // href="https://www.google.com/maps/search/Av.+el+Pla,+11+P.I.+Pla+els+Baltzacs.+08185+Lli%C3%A7%C3%A0+de+Vall.++Barcelona.+Spain/@41.587764,2.2493782,17z"
                 href="https://www.google.com/maps/search/Famatel+Polska+Sp.o.o+ul.+Willowa+5,+58+260+Bielawa+Polska"
                 //___Av. el Pla, 11 P.I. Pla els Baltzacs. 08185 Lliçà de Vall.  Barcelona. Spain
