@@ -1,7 +1,7 @@
+import Link from 'next/link';
 import React from 'react';
 /**Components**/
 import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
-import InViewAnimatedContent from '../_inViewAnimatedContent/InViewAnimatedContent';
 import FadingHeader from '../../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
 import SvgMap from '../../../SVG/maps/SvgMap';
@@ -9,8 +9,7 @@ import { MapPinIcon } from '@heroicons/react/24/solid';
 
 /**Basic Data**/
 import { story } from '../../../../data/_data';
-import LinkWithMap from './linkWithMap/LinkWithMap';
-import Link from 'next/link';
+import InViewAnimatedContent from '../../../containers/inViewContainer/InViewAnimatedContent';
 
 /**ChardCoded Staff**/
 const labelStyle =
@@ -48,18 +47,13 @@ const ContactMapka = () => {
             </div>
             <div className="relative flex w-full gap-x-6 min-h-[400px] xl:h-[80vh] lg:w-[50%] xl:w-[55%] md:justify-center pt-2">
               <Link
-                className="absolute z-10 w-full h-full"
+                aria-label={'Link do GoogleMap'}
                 role="link"
+                className="absolute z-10 w-full h-full"
                 target="_blank"
                 rel="noopener"
-                // href="https://www.google.com/maps/search/Av.+el+Pla,+11+P.I.+Pla+els+Baltzacs.+08185+Lli%C3%A7%C3%A0+de+Vall.++Barcelona.+Spain/@41.587764,2.2493782,17z"
                 href="https://www.google.com/maps/search/Famatel+Polska+Sp.o.o+ul.+Willowa+5,+58+260+Bielawa+Polska"
-                //___Av. el Pla, 11 P.I. Pla els Baltzacs. 08185 Lliçà de Vall.  Barcelona. Spain
-                // href="https://www.google.com/maps/search/ul.+Willowa+5,+58+260+Bielawa+Polska"
-                //__ul. Willowa 5, 58-260 Bielawa
-                // href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.1226646024706!2d16.600824306419636!3d50.680548067870525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470e3715598e761f%3A0x10519edde159a1b6!2sFamatel%20Polska%20Sp.%20z%20o.o.!5e0!3m2!1spl!2spl!4v1669975901879!5m2!1spl!2spl"
                 scroll={false}
-                aria-label={'Link do GoogleMap'}
               />
               <SvgMap containerStyle="relative w-full z-5" />
             </div>
@@ -76,3 +70,10 @@ const ContactMapka = () => {
 };
 
 export default ContactMapka;
+
+// href="https://www.google.com/maps/search/Av.+el+Pla,+11+P.I.+Pla+els+Baltzacs.+08185+Lli%C3%A7%C3%A0+de+Vall.++Barcelona.+Spain/@41.587764,2.2493782,17z"
+// href="https://www.google.com/maps/search/Famatel+Polska+Sp.o.o+ul.+Willowa+5,+58+260+Bielawa+Polska"
+//___Av. el Pla, 11 P.I. Pla els Baltzacs. 08185 Lliçà de Vall.  Barcelona. Spain
+// href="https://www.google.com/maps/search/ul.+Willowa+5,+58+260+Bielawa+Polska"
+//__ul. Willowa 5, 58-260 Bielawa
+// href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.1226646024706!2d16.600824306419636!3d50.680548067870525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470e3715598e761f%3A0x10519edde159a1b6!2sFamatel%20Polska%20Sp.%20z%20o.o.!5e0!3m2!1spl!2spl!4v1669975901879!5m2!1spl!2spl"

@@ -5,9 +5,9 @@ import { corpoColors } from '../../../data/_data';
 const SvgWordMapNoDots = ({ containerStyle }: { containerStyle?: string }) => {
   return (
     <svg
+      role="img"
+      aria-label="Mapa świata"
       xmlns="http://www.w3.org/2000/svg"
-      //   width="1200"
-      //   height="581.82"
       viewBox="0 0 1200 581.82"
       className={containerStyle}
     >

@@ -10,6 +10,7 @@ type Props = {
   containerStyle?: string;
   yFactor?: string;
   xFactor?: string;
+  scaleFactor?: number;
 };
 
 /**----------------------------------------------**/
@@ -21,6 +22,7 @@ const InViewAnimatedContent: React.FC<Props> = ({
   containerStyle,
   yFactor = '5%',
   xFactor = '5%',
+  scaleFactor,
 }) => {
   /**JSX**/
   return (
@@ -30,6 +32,7 @@ const InViewAnimatedContent: React.FC<Props> = ({
       initial={{ opacity: 0 }}
       animate={{
         opacity: componentIsInView ? 1 : 0,
+        scale: componentIsInView ? 1 : scaleFactor,
         y: componentIsInView ? 0 : yFactor,
         x: componentIsInView ? 0 : xFactor,
       }}

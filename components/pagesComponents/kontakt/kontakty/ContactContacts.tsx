@@ -1,7 +1,7 @@
 import React from 'react';
 /**Components**/
 import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
-import InViewAnimatedContent from '../_inViewAnimatedContent/InViewAnimatedContent';
+import InViewAnimatedContent from '../../../containers/inViewContainer/InViewAnimatedContent';
 import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
 import FadingHeader from '../../../multipagesComponents/pseudoHeaders/fadingHeader/FadingHeader';
 import DirectPhoneGK from '../../../_basicComponents/links/directContactLinks/DirectPhoneGK';

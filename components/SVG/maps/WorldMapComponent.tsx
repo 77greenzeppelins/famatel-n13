@@ -5,6 +5,7 @@ import SvgWordMapNoDots from './SvgWordMapNoDots';
 import useWindowSize from '../../../utils/hooks/useWindowSize';
 /**Framer Motion Staff**/
 import { motion } from 'framer-motion';
+import { cardVariants } from '../../../utils/framerMotion/framerMotionUtils';
 
 /**TS**/
 interface Props {
@@ -33,8 +34,16 @@ const WorldMapComponent: React.FC<Props> = ({
           ? outherContainerStyle
           : 'fc w-full overflow-hidden'
       }
+      // variants={cardVariants}
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { duration: 0.4, delay: 1 },
+      }}
     >
       <motion.div
+        aria-label="Element przesówny / drag event"
+        aria-grabbed={dragCondition}
         ref={constraintsRef}
         drag={dragCondition ? 'x' : false}
         className={
@@ -42,8 +51,6 @@ const WorldMapComponent: React.FC<Props> = ({
             ? innerContainerStyle
             : 'relative w-full min-w-[800px]'
         }
-        //translate-x-[-25%]
-        // dragConstraints={{ left: -400, right: 0 }}
         dragSnapToOrigin={true}
         dragElastic={0.9}
         dragMomentum={true}

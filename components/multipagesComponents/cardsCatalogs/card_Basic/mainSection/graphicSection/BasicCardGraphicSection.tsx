@@ -15,17 +15,18 @@ const BasicCardGraphicSection: React.FunctionComponent<{
   return (
     <div
       data-component="BasicCardGraphicSection__container"
-      className="flex justify-center items-end relative h-[55%] w-full"
+      className="flex justify-center items-end relative h-[60%] w-full"
     >
       <motion.div
-        className="fc relative h-[80%] w-[80%]"
+        className="fc relative h-[80%] w-[80%] "
         variants={cardVariants}
         initial="initial"
         animate="animate"
       >
         <SquareHolderWithImage
           imageData={imageData}
-          squareHolderOuterContainer="fc h-full bg-light"
+          squareHolderOuterContainer="fc h-full aspect-square bg-light p-1"
+          squareHolderInnerContainer="h-full "
         />
       </motion.div>{' '}
     </div>

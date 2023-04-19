@@ -9,7 +9,8 @@ const OverlayWithGradient: React.FC<{
   transition?: {};
   initial?: {};
   animate?: {};
-}> = ({ initial, animate, transition }) => {
+  divStyle?: string;
+}> = ({ initial, animate, transition, divStyle }) => {
   /**Hook Section**/
   const [ref, bounds] = useMeasure();
   /**JSX**/
@@ -17,7 +18,7 @@ const OverlayWithGradient: React.FC<{
     <div
       role="prezentacja"
       ref={ref}
-      data-layout="Fake-overlay__for-initial-animation "
+      data-layout="Overlay__for-initial-animation "
       className="absolute block h-full w-full pointer-events-none overflow-hidden"
     >
       <motion.div
@@ -25,7 +26,11 @@ const OverlayWithGradient: React.FC<{
         initial={initial ? initial : { x: '-50%' }}
         animate={animate ? animate : { x: '50%' }}
         transition={transition ? transition : { duration: 2, delay: 0.9 }}
-        className="h-full bg-gradient-to-r from-transparent via-dark to-dark"
+        className={
+          divStyle
+            ? divStyle
+            : 'h-full bg-gradient-to-r from-transparent via-dark to-dark'
+        }
       />
     </div>
   );
