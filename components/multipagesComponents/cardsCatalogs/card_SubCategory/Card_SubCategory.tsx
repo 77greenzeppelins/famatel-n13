@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
 /**Components**/
-import GridItemCardLayout from '../_gridItemCardLayout/GridItemCardLayout';
 import CardGraphicSection from '../__cardGraphicSection/CardGraphicSection';
 import SmallPseudoHeader from '../../pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 /**TS**/
