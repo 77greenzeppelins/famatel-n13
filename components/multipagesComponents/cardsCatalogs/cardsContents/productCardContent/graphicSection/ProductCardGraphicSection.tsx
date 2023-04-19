@@ -1,7 +1,10 @@
 import React from 'react';
 /**Components**/
-import ProductCardImageSection from '../imageSection/ProductCardImageSection';
+import SquareHolderWithImage from '../../../../holders/squareHolderWithImage/SquareHolderWithImage';
 import CardCounter from '../../../__cardCounter/CardCounter';
+/**FramerMotion Staff**/
+import { motion } from 'framer-motion';
+import { cardVariants } from '../../../../../../utils/framerMotion/framerMotionUtils';
 /**TS**/
 import { IF_ImgStaticData } from '../../../../../../utils/TS/typeScriptStaff';
 
@@ -13,11 +16,17 @@ const ProductCardGraphicSection: React.FunctionComponent<{
 }> = ({ imageData, productIndex, imageAlt }) => {
   /**JSX**/
   return (
-    <div
-      className="relative fc flex-col w-full h-full  rounded-l-sm"
-      //___flex items-center
-    >
-      <ProductCardImageSection imageData={imageData} />
+    <div className="relative fc flex-col w-full h-full  rounded-l-sm">
+      <motion.div
+        data-component="ProductCardImageSection__white-container"
+        className={`relative fc  overflow-hidden w-full h-full rounded-l-md bg-light`}
+        variants={cardVariants}
+        initial="initial"
+        animate="animate"
+      >
+        <SquareHolderWithImage imageData={imageData} imageAlt={imageAlt} />
+      </motion.div>
+      {/* <ProductCardImageSection imageData={imageData} imageAlt={imageAlt} /> */}
       <div className="absolute top-0 w-full h-[10%]">
         <div className="relative fc w-full h-full ">
           <CardCounter

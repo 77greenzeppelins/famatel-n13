@@ -15,7 +15,7 @@ const ImageSection: React.FunctionComponent<{
   return (
     <div
       // ref={ref}
-      data-component="ImageSection__Ref-container"
+      data-component="ImageSection__container"
       className="relative flex w-full h-full justify-end"
     >
       <PseudoTechPanel />

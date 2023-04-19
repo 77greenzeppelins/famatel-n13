@@ -27,7 +27,7 @@ const BasicCardMainSection: React.FunctionComponent<{
     <div className="w-full h-full flex flex-col ">
       {condition ? null : <BasicCardGraphicSection imageData={imageData} />}
       <div
-        data-layout="TextSection__container"
+        data-layout="BasicCardMainSection__textSection"
         className={`${
           condition
             ? 'flex h-full items-start justify-center px-4 xs3xx:px-6'

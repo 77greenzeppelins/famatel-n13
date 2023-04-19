@@ -23,7 +23,7 @@ const Card_Basic: React.FunctionComponent<IF_Card> = ({
   /**JSX**/
   return (
     <div
-      id="Card_Basic__container"
+      data-component="Card_Basic__container"
       className="w-full h-full cursor-pointer group"
     >
       <Link href={url} scroll={false}>
