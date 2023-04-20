@@ -257,6 +257,20 @@ const story = {
     dojazd: ['ul. Strażacka', '58-260 Bielawa'],
     dojazdNav: ['50.68051, 16.60300'],
   },
+  //___https://www.gov.pl/web/gov/polityka-dotyczaca-cookies
+  cookies: {
+    popup:
+      'W celu świadczenia usług na najwyższym poziomie stosujemy pliki cookies, a korzystanie z naszej witryny oznacza ich akceptację. W każdym momencie mogą Państwo dokonać zmiany ustawień w przeglądarce.',
+    link: 'W każdym momencie mogą Państwo dokonać zmiany ustawień w przeglądarce.',
+    // popup:
+    //   'W celu świadczenia usług na najwyższym poziomie stosujemy pliki cookies. Korzystanie z naszej witryny oznacza, że będą one zamieszczane w Państwa urządzeniu. W każdym momencie można dokonać zmiany ustawień Państwa przeglądarki',
+    policy:
+      'W celu świadczenia usług na najwyższym poziomie stosujemy pliki cookies. Korzystanie z naszej witryny oznacza, że będą one zamieszczane w Państwa urządzeniu. W każdym momencie można dokonać zmiany ustawień Państwa przeglądarki.',
+    comment1:
+      'Dla Państwa wygody serwis Famatel.pl używa plików cookies po to, by dostosować serwis do potrzeb użytkowników, a także w celach statystycznych.',
+    comment2:
+      'Pliki cookies (tzw. ciasteczka) to niewielkie pliki tekstowe wysyłane przez odwiedzany serwis internetowy do urządzenia internauty (komputer, smartfon itp.). Nie zawierają one żadnych danych osobowych.',
+  },
 };
 
 const mobileMenuData = {

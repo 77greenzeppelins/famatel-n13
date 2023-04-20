@@ -7,7 +7,7 @@ import AnimatedSpanHeader from '../../../multipagesComponents/pseudoHeaders/anim
 
 /**TS**/
 interface Props {
-  uniqueKeyToAnimate: string;
+  uniqueKeyToAnimate: string; // empty if no animation needed
   linkHref: string;
   linkLabel: string;
   ariaLabel: string;

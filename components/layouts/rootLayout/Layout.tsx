@@ -4,11 +4,12 @@ import Header from './header/Header';
 import MobileMenuButton from '../../multipagesComponents/mobileMenu/mobileMenuButton/MobileMenuButton';
 import MobileMenuOverlay from '../../multipagesComponents/mobileMenu/mobileMenuOverlay/MobileMenuOverlay';
 import MobileContactPanel from '../../multipagesComponents/mobileMenu/mobileContactPanel/MobileContactPanel';
+import Footer from './footer/Footer';
+import CookiesPopUp from './cookiesPopUp/CookiesPopUp';
 /**Basic Data**/
 import { mobileMenuData } from '../../../data/_data';
 /**Font Staff**/
 import localFont from '@next/font/local';
-import Footer from './footer/Footer';
 const haasFont = localFont({
   src: '../../../public/fonts/HaasGrotDisp-55Roman.woff2',
   // subsets: ["latin"]
@@ -50,6 +51,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           minH={mobileMenuData.minH}
         />
         <Footer />
+        <CookiesPopUp />
       </div>
     </>
   );
