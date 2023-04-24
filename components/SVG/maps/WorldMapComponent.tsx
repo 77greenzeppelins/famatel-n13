@@ -42,7 +42,7 @@ const WorldMapComponent: React.FC<Props> = ({
       }}
     >
       <motion.div
-        aria-label="Element przesówny / drag event"
+        aria-label="Element przesuwny / drag event"
         aria-grabbed={dragCondition}
         ref={constraintsRef}
         drag={dragCondition ? 'x' : false}

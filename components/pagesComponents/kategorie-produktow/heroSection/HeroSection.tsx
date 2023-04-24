@@ -2,9 +2,12 @@ import React from 'react';
 /**Components**/
 import HeroBackground from './heroBackground/HeroBackground';
 import TenCategoriesWithSvg from './heroForegroundGraphic/TenCategoriesWithSvg';
+import MobileMarquee from './mobileMarquee/MobileMarqui';
+import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
+import OverlayWithGradient from '../../../multipagesComponents/overlays/ovelayWithGradient/OverlayWithGradient';
+import InViewAnimatedContent from '../../../containers/inViewContainer/InViewAnimatedContent';
 /**Basic Data**/
 import { story } from '../../../../data/_data';
-import MobileMarquee from './mobileMarquee/MobileMarqui';
 
 /**-------------------------**/
 const HeroSection = () => {
@@ -29,9 +32,29 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="h-[30vh] md:h-[24vh] w-[74%]">
-        <p className="text-grey text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight">
-          {story.oFirmiePage.heroSection[0]}
-        </p>
+        <div className="relative flex items-start justify-center h-full">
+          <InViewContainer
+            animationDelay={0.1}
+            outherContainerStyle="relative fc "
+            measuredElementStyle="fc w-full h-full"
+            topFactor={0.6}
+          >
+            <InViewAnimatedContent
+              scaleFactor={0.95}
+              xFactor={'0'}
+              yFactor={'0'}
+            >
+              <p className="text-grey text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight">
+                {story.oFirmiePage.heroSection[0]}
+              </p>
+            </InViewAnimatedContent>
+          </InViewContainer>
+          <OverlayWithGradient
+            initial={{ x: '-50%' }}
+            animate={{ x: '100%' }}
+            transition={{ duration: 3, delay: 0.4 }}
+          />
+        </div>
       </div>
     </div>
   );

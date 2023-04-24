@@ -29,6 +29,7 @@ const ButtonsPanel: React.FC<Props> = ({
   /**JSX**/
   return (
     <div
+      role="group" //Indicates that the element contains a set of related elements, in this case, a set of buttons.
       data-component="ButtonsPanel__container"
       className="flex flex-col items-end justify-between h-full pr-4 "
     >

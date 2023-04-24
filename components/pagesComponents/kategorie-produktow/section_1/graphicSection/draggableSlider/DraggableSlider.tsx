@@ -54,6 +54,7 @@ const DraggableSlider: React.FC<Props> = ({
       */
       return (
         <motion.div
+          aria-label="Element przesuwny / drag event"
           data-layout={`DraggableSlider__slidersRow_Nr-${i}`}
           key={i}
           // key={JSON.stringify(windowWidth + windowHeight + i)}

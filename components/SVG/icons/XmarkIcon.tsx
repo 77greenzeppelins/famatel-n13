@@ -15,7 +15,7 @@ const XMarkIcon = ({
 }) => {
   return (
     <motion.svg
-      role="img"
+      role="ikonka"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

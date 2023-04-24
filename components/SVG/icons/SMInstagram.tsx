@@ -18,6 +18,8 @@ const SMInstagram = ({
 }) => {
   return (
     <motion.svg
+      role="ikonka"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill={fillColor ? fillColor : corpoColors.grey}
       viewBox="0 0 64 64"
