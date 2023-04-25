@@ -23,13 +23,13 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? (page => page);
 
-  useEffect(() => {
-    const hasAcceptedCookies =
-      localStorage.getItem('hasAcceptedCookies') === 'true';
-    if (hasAcceptedCookies) {
-      globalState.hasAcceptedCookies = true;
-    }
-  }, []);
+  // useEffect(() => {
+  //   const hasAcceptedCookies =
+  //     localStorage.getItem('hasAcceptedCookies') === 'true';
+  //   if (hasAcceptedCookies) {
+  //     globalState.hasAcceptedCookies = true;
+  //   }
+  // }, []);
 
   //var supportsInertiaScrolling = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
 

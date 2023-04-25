@@ -1,33 +1,39 @@
+import React, { useEffect, useState } from 'react';
+import { GetServerSidePropsContext } from 'next';
+/**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
-import React, { useEffect } from 'react';
-/**Components**/
-// import LinkWithSpanAndIcon from '../../../_basicComponents/links/linkWithSpanAndIcon/LinkWithSpanAndIcon';
-/*GlobalState Staff*/
-import { useSnapshot } from 'valtio';
-import { globalState } from '../../../../globalState/globalState';
 /**BasicData */
 import { story } from '../../../../data/_data';
 
 /**-----------------------------**/
 const CookiesPopUp: React.FC = () => {
-  /**GlobalState Section**/
-  const snap = useSnapshot(globalState);
+  /** */
+  const [accepted, setAccepted] = useState(false);
   /**...WTF...**/
   const onClickHandler = () => {
-    globalState.hasAcceptedCookies = true;
-    localStorage.setItem('hasAcceptedCookies', 'true');
-    console.log('onClick / snap.isCookiAccepted:', snap.hasAcceptedCookies);
+    setAccepted(true);
+    document.cookie = 'cookiesAccepted=true; path=/';
+    // localStorage.setItem('cookiesAccepted', 'true');
+    // console.log('onClick / snap.isCookiAccepted:', snap.cookiesAccepted);
   };
   useEffect(() => {
-    console.log('snap.isCookiAccepted:', snap.hasAcceptedCookies);
-  }, [snap.hasAcceptedCookies]);
+    const cookiesAccepted = document.cookie.includes('cookiesAccepted=true');
+    if (cookiesAccepted) {
+      setAccepted(true);
+    }
+    // const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    // if (cookiesAccepted) {
+    //   setAccepted(true);
+    // }
+    console.log('accepted:', accepted);
+  }, [accepted]);
   /**JSX**/
   return (
     <AnimatePresence>
-      {!snap.hasAcceptedCookies && (
+      {accepted ? null : (
         <motion.aside
           data-component="Header__container"
-          className={`fixed w-screen bottom-0 left-0 right-0 fc min-h-[100px] z-[999] backdrop-blur-xl pb-[20px]`}
+          className={`fixed w-full bottom-0 left-0 right-0 fc min-h-[100px] z-[999] backdrop-blur-xl pb-[20px]`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 1, delay: 4 } }}
           exit={{ opacity: 0, transition: { duration: 0.4, delay: 0.4 } }}
@@ -62,7 +68,36 @@ const CookiesPopUp: React.FC = () => {
 
 export default CookiesPopUp;
 
-// <header
-//       data-component="Header__container"
-//       className={`fixed w-screen top-0 left-0 right-0 h-[50px] z-[500] bg-dark`}
-//     >
+/*...*/
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const cookies = context.req.headers.cookie;
+
+  // If cookies are already accepted, set the accepted state variable to true
+  if (cookies && cookies.includes('cookiesAccepted=true')) {
+    return {
+      props: {
+        cookiesAccepted: true,
+      },
+    };
+  }
+
+  // If cookies are not accepted, return an empty object
+  return {
+    props: {},
+  };
+  // const cookiesAccepted = context.req.cookies.cookiesAccepted;
+
+  // // If cookies are already accepted, set the accepted state variable to true
+  // if (cookiesAccepted === 'true') {
+  //   return {
+  //     props: {
+  //       cookiesAccepted: true,
+  //     },
+  //   };
+  // }
+
+  // // If cookies are not accepted, return an empty object
+  // return {
+  //   props: {},
+  // };
+}
