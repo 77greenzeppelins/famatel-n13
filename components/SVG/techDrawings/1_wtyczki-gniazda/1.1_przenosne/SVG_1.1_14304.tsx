@@ -8,8 +8,6 @@ const SVG_1_1_14304: React.FC<{ basicSize: number }> = ({ basicSize }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      //  width="800"
-      //  height="500"
       width={basicSize}
       viewBox="0 0 800 500"
     >
