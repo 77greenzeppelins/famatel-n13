@@ -13,8 +13,6 @@ const CookiesPopUp: React.FC = () => {
   const onClickHandler = () => {
     setAccepted(true);
     document.cookie = 'cookiesAccepted=true; path=/';
-    // localStorage.setItem('cookiesAccepted', 'true');
-    // console.log('onClick / snap.isCookiAccepted:', snap.cookiesAccepted);
   };
   useEffect(() => {
     const cookiesAccepted = document.cookie.includes('cookiesAccepted=true');
@@ -51,11 +49,7 @@ const CookiesPopUp: React.FC = () => {
                 iconStyle=" h-4 w-4 aspect-square stroke-light origin-center flex-shrink-0"
               /> */}
             </p>
-            <button
-              className="px-4 py-1 bg-corpo"
-              // onClick={() => (globalState.isCookiAccepted = !snap.isCookiAccepted)}
-              onClick={onClickHandler}
-            >
+            <button className="px-4 py-1 bg-corpo" onClick={onClickHandler}>
               {' '}
               <p className="p-small text-light font-bold">Akceptuję</p>{' '}
             </button>
