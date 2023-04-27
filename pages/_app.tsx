@@ -7,7 +7,7 @@ import PageTransitionHolder from '../components/layouts/pseudoLayouts/pagesTrans
 import './globals.css'; // import '../styles/globals.css';
 
 /**GlobalState Staff*/
-import { globalState } from '../globalState/globalState';
+// import { globalState } from '../globalState/globalState';
 
 /**TS*/
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
