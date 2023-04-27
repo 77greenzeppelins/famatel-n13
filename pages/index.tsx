@@ -1,9 +1,11 @@
 import Head from 'next/head';
-import type { ReactElement } from 'react';
 import Layout from '../components/layouts/rootLayout/Layout';
 import OFirmieContent from '../components/pagesComponents/o-firmie/OFirmieContent';
+/**TS**/
 import type { NextPageWithLayout } from './_app';
+import type { ReactElement } from 'react';
 
+/**----------------------------------------------**/
 const HomePage: NextPageWithLayout = () => {
   return (
     <>
