@@ -20,7 +20,7 @@ const HomePage: NextPageWithLayout = () => {
           property="og:description"
           content="Famatel to międzynarodowy producent rozwiązań z zakresu  elektryki przemysłowej z ponad 30-letnim doświadczeniem. Oferujemy wysokiej jakości produkty, takie jak rozdzielnice, gniazda i wtyczki, które spełniają najwyższe standardy bezpieczeństwa i jakości. Dołącz do grona naszych zadowolonych klientów już dziś!"
         ></meta>
-        <link rel="canonical" href="https://www.famatel.pl" />
+        {/* <link rel="canonical" href="https://famatel.pl" /> */}
       </Head>
       <OFirmieContent />
       {/* <footer className="h-[25vh] bg-corpo"></footer> */}
