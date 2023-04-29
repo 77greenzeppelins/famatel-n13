@@ -13,6 +13,8 @@ import { svgIconsFromCatalogRandome_data } from '../../../../SVG/iconsFromCatalo
 const springOptions = {
   stiffness: 100,
   damping: 30,
+  // stiffness: 10,
+  // damping: 20,
   restDelta: 0.001,
 };
 /**TS**/
@@ -38,40 +40,8 @@ const IconsMarquee: React.FC<Props> = ({
   containerStyle,
   // yFactor = '5%',
 }) => {
-  const [scrollDistance, setScrollDistance] = useState<number>(0);
-  // const [contenerWidth, setContenerWidth] = useState<number>(0);
-
   const elementRef = useRef<HTMLDivElement>(null);
   /**...*/
-  useEffect(() => {
-    const measuredElement = elementRef.current;
-    if (measuredElement) {
-      const rect = measuredElement.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const hiddenAboveViewport = rect.top + scrollTop;
-      const pixelsToScroll = hiddenAboveViewport - viewportHeight;
-      //___or...
-      // const pixelsToScroll = rect.top - viewportHeight;
-
-      setScrollDistance(pixelsToScroll);
-      // setContenerWidth(rect.right);
-      //___
-      // console.log('rect.top:', rect.top);
-      // console.log('pixelsToScroll:', pixelsToScroll);
-      // console.log('rect.top:', rect.right);
-
-      // console.log('viewportHeight:', window.innerHeight);
-      // console.log('window.pageYOffsete:', window.pageYOffset);
-      // console.log(
-      //   'document.documentElement.scrollTop:',
-      //   document.documentElement.scrollTop
-      // );
-      // console.log('hiddenAboveViewport:', hiddenAboveViewport);
-      // console.log('pixelsToScroll:', pixelsToScroll);
-    }
-  }, []);
 
   // useEffect(() => {
   //   // console.log('scrollDistance:', scrollDistance);
@@ -80,15 +50,14 @@ const IconsMarquee: React.FC<Props> = ({
   // }, [numberOfSvgCells]);
 
   /**FramerMotion Staff**/
-  const { scrollY } = useScroll();
-
+  const { scrollYProgress } = useScroll({
+    target: elementRef,
+    offset: ['start end', 'end start'],
+  });
   //___creat "x" veriable basing on scrollY value
-  const x = useSpring(scrollY, springOptions);
+  const x2 = useSpring(scrollYProgress, springOptions);
   //___set actuall speed of x transformation
-  const transformedX = useTransform(
-    x,
-    value => (value - scrollDistance + svgOffset) / -3
-  );
+  const transformedX = useTransform(x2, value => (value * 200) / -3);
   //___helper
   // useMotionValueEvent(x, 'change', latest => {
   //   console.log('x changed to', latest);
@@ -110,7 +79,7 @@ const IconsMarquee: React.FC<Props> = ({
       }}
     >
       <div
-        data-component="IconsMarquee__container"
+        data-component="IconsMarquee__container "
         ref={elementRef}
         className="flex w-full justify-start"
         // style={{ transform: `translateX(${contenerWidth / 2}px)` }}
@@ -118,8 +87,11 @@ const IconsMarquee: React.FC<Props> = ({
         <motion.div
           className="flex gap-10 "
           //___transition-all ease-in-out
-          // style={{ x: componentIsInView ? transformedX : 0 }}
           style={{ x: transformedX }}
+          //___
+          // style={{ x: componentIsInView ? transformedX : 0 }}
+          // style={{ x: transformedX }}
+          //___
           // style={{ x }}
           // initial={{ x: '-50%' }}
           // animate={{ x: scrollY }}
@@ -144,3 +116,41 @@ const IconsMarquee: React.FC<Props> = ({
 };
 
 export default IconsMarquee;
+
+/*
+__1: approach that is base on stete and calculation where marquee is according to scroll value
+*/
+// const [scrollDistance, setScrollDistance] = useState<number>(0);
+// useEffect(() => {
+//   const measuredElement = elementRef.current;
+//   if (measuredElement) {
+//     const rect = measuredElement.getBoundingClientRect();
+//     const viewportHeight = window.innerHeight;
+//     const scrollTop =
+//       window.pageYOffset || document.documentElement.scrollTop;
+//     const hiddenAboveViewport = rect.top + scrollTop;
+//     const pixelsToScroll = hiddenAboveViewport - viewportHeight;
+//     //___or...
+//     // const pixelsToScroll = rect.top - viewportHeight;
+
+//     // setScrollDistance(pixelsToScroll);
+//     // setContenerWidth(rect.right);
+//     //___
+//     // console.log('rect.top:', rect.top);
+//     // console.log('pixelsToScroll:', pixelsToScroll);
+//     // console.log('rect.top:', rect.right);
+
+//     // console.log('viewportHeight:', window.innerHeight);
+//     // console.log('window.pageYOffsete:', window.pageYOffset);
+//     // console.log(
+//     //   'document.documentElement.scrollTop:',
+//     //   document.documentElement.scrollTop
+//     // );
+//     // console.log('hiddenAboveViewport:', hiddenAboveViewport);
+//     // console.log('pixelsToScroll:', pixelsToScroll);
+//   }
+// }, []);
+//___framer motion section
+// const { scrollY } = useScroll();
+//___creat "x" veriable basing on scrollY value
+// const x = useSpring(scrollY, springOptions);
