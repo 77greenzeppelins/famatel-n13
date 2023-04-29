@@ -73,11 +73,11 @@ const IconsMarquee: React.FC<Props> = ({
     }
   }, []);
 
-  useEffect(() => {
-    // console.log('scrollDistance:', scrollDistance);
-    // console.log('contenerWidth:', contenerWidth);
-    console.log('numberOfSvgCells', numberOfSvgCells);
-  }, [numberOfSvgCells]);
+  // useEffect(() => {
+  //   // console.log('scrollDistance:', scrollDistance);
+  //   // console.log('contenerWidth:', contenerWidth);
+  //   console.log('numberOfSvgCells', numberOfSvgCells);
+  // }, [numberOfSvgCells]);
 
   /**FramerMotion Staff**/
   const { scrollY } = useScroll();

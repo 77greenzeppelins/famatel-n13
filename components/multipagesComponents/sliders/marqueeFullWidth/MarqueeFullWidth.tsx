@@ -30,18 +30,17 @@ const MarqueeFullWidth: React.FC<Props> = ({
 }) => {
   /**...**/
   const { width } = useWindowSize({ screensNumber: 1 });
+  /*
+  why: svgBasicSize is an arra of one or two numbers; if two numbers we can choose one fize for mobile and one for desktop; mobile vs desktop is defined by svgDefaultTreshold in that case;
+  */
   const svgRespSize =
     svgBasicSize.length > 0 && width > svgSizeTreshold
-      ? svgBasicSize[svgBasicSize.length - 1] //___take the last one
+      ? svgBasicSize[svgBasicSize.length - 1] //___take the last one; larger value =  value for desktop
       : svgBasicSize[0]; //___take the very first
-  // const numberOfSvgCells = Math.ceil(width / svgRespSize) + 4;
-
-  //___
-  const numberOfSvgCells = Math.ceil(width / svgRespSize - 2);
-
-  console.log('...width:', width);
-  console.log('...svgRespSize:', svgRespSize);
-  console.log('...numberOfSvgCellse:', numberOfSvgCells);
+  /*
+  why: just calculate number of svg's in a line / in a marquee
+  */
+  const numberOfSvgCells = Math.ceil(width / svgRespSize);
 
   /**JSX**/
   return (
@@ -65,7 +64,7 @@ const MarqueeFullWidth: React.FC<Props> = ({
         <IconsMarquee
           numberOfSvgCells={numberOfSvgCells}
           svgContainerSizes={svgContainerSizes}
-          svgOffset={svgRespSize * 1.5} //___to "align" svg row to screen side
+          svgOffset={svgRespSize * 1.25} //___to "align" svg row to screen side
         />
       </InViewContainer>
     </div>
