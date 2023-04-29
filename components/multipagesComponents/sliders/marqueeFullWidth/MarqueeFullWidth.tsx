@@ -14,7 +14,7 @@ interface Props {
   marqueeContainerStyle?: string;
   //___treshold allows set to "basic" sizes of svgStaff for responsivness reason
   svgSizeTreshold?: number;
-  //___must be an array to choose one of value
+  //___must be an array to choose one of values; either mobile or desktop
   svgBasicSize: number[];
   svgContainerSizes: string;
 }
@@ -64,7 +64,8 @@ const MarqueeFullWidth: React.FC<Props> = ({
         <IconsMarquee
           numberOfSvgCells={numberOfSvgCells}
           svgContainerSizes={svgContainerSizes}
-          svgOffset={svgRespSize * 1.25} //___to "align" svg row to screen side
+          animationOffset={width * 0.75}
+          // svgOffset={svgRespSize * 1.25} //___to "align" svg row to screen side
         />
       </InViewContainer>
     </div>

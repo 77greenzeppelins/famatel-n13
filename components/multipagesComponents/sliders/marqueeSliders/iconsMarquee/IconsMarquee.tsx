@@ -5,7 +5,7 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 /**Basic Data*/
 import { corpoColors } from '../../../../../data/_data';
 import { svgIconsFromCatalogRandome_data } from '../../../../SVG/iconsFromCatalog/_iconsFromCatalog_data';
@@ -21,7 +21,7 @@ const springOptions = {
 interface Props {
   numberOfSvgCells: number;
   svgContainerSizes: string;
-  svgOffset: number;
+  animationOffset: number;
   //___
   componentIsInView?: boolean;
   transitionDuration?: number;
@@ -33,7 +33,7 @@ interface Props {
 const IconsMarquee: React.FC<Props> = ({
   numberOfSvgCells,
   svgContainerSizes,
-  svgOffset,
+  animationOffset,
   componentIsInView = false,
   transitionDuration = 0.4,
   transitionDelay = 0.1,
@@ -48,6 +48,7 @@ const IconsMarquee: React.FC<Props> = ({
   //   // console.log('contenerWidth:', contenerWidth);
   //   console.log('numberOfSvgCells', numberOfSvgCells);
   // }, [numberOfSvgCells]);
+  console.log('animationOffset', animationOffset);
 
   /**FramerMotion Staff**/
   const { scrollYProgress } = useScroll({
@@ -57,11 +58,14 @@ const IconsMarquee: React.FC<Props> = ({
   //___creat "x" veriable basing on scrollY value
   const x2 = useSpring(scrollYProgress, springOptions);
   //___set actuall speed of x transformation
-  const transformedX = useTransform(x2, value => (value * 200) / -3);
+  const transformedX = useTransform(
+    x2,
+    value => (value * animationOffset) / -3
+  );
   //___helper
-  // useMotionValueEvent(x, 'change', latest => {
-  //   console.log('x changed to', latest);
-  // });
+  useMotionValueEvent(scrollYProgress, 'change', latest => {
+    console.log('scrollYProgress changed to', latest);
+  });
 
   /**JSX**/
   return (
@@ -120,6 +124,17 @@ export default IconsMarquee;
 /*
 __1: approach that is base on stete and calculation where marquee is according to scroll value
 */
+// interface Props {
+//   numberOfSvgCells: number;
+//   svgContainerSizes: string;
+//   svgOffset: number;
+//   //___
+//   componentIsInView?: boolean;
+//   transitionDuration?: number;
+//   transitionDelay?: number;
+//   containerStyle?: string;
+
+// }
 // const [scrollDistance, setScrollDistance] = useState<number>(0);
 // useEffect(() => {
 //   const measuredElement = elementRef.current;
