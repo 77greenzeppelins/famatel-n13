@@ -17,7 +17,6 @@ const springOptions = {
 };
 /**TS**/
 interface Props {
-  //   children: ReactNode;
   numberOfSvgCells: number;
   svgContainerSizes: string;
   svgOffset: number;
@@ -26,7 +25,7 @@ interface Props {
   transitionDuration?: number;
   transitionDelay?: number;
   containerStyle?: string;
-  yFactor?: string;
+  // yFactor?: string;
 }
 
 const IconsMarquee: React.FC<Props> = ({
@@ -34,12 +33,14 @@ const IconsMarquee: React.FC<Props> = ({
   svgContainerSizes,
   svgOffset,
   componentIsInView = false,
-  transitionDuration = 0.6,
-  transitionDelay = 0.2,
+  transitionDuration = 0.4,
+  transitionDelay = 0.1,
   containerStyle,
-  yFactor = '5%',
+  // yFactor = '5%',
 }) => {
   const [scrollDistance, setScrollDistance] = useState<number>(0);
+  // const [contenerWidth, setContenerWidth] = useState<number>(0);
+
   const elementRef = useRef<HTMLDivElement>(null);
   /**...*/
   useEffect(() => {
@@ -55,8 +56,12 @@ const IconsMarquee: React.FC<Props> = ({
       // const pixelsToScroll = rect.top - viewportHeight;
 
       setScrollDistance(pixelsToScroll);
+      // setContenerWidth(rect.right);
       //___
       // console.log('rect.top:', rect.top);
+      // console.log('pixelsToScroll:', pixelsToScroll);
+      // console.log('rect.top:', rect.right);
+
       // console.log('viewportHeight:', window.innerHeight);
       // console.log('window.pageYOffsete:', window.pageYOffset);
       // console.log(
@@ -67,6 +72,13 @@ const IconsMarquee: React.FC<Props> = ({
       // console.log('pixelsToScroll:', pixelsToScroll);
     }
   }, []);
+
+  useEffect(() => {
+    // console.log('scrollDistance:', scrollDistance);
+    // console.log('contenerWidth:', contenerWidth);
+    console.log('numberOfSvgCells', numberOfSvgCells);
+  }, [numberOfSvgCells]);
+
   /**FramerMotion Staff**/
   const { scrollY } = useScroll();
 
@@ -101,11 +113,16 @@ const IconsMarquee: React.FC<Props> = ({
         data-component="IconsMarquee__container"
         ref={elementRef}
         className="flex w-full justify-start"
+        // style={{ transform: `translateX(${contenerWidth / 2}px)` }}
       >
         <motion.div
-          className="flex gap-10 transition-all ease-in-out"
+          className="flex gap-10 "
+          //___transition-all ease-in-out
           // style={{ x: componentIsInView ? transformedX : 0 }}
           style={{ x: transformedX }}
+          // style={{ x }}
+          // initial={{ x: '-50%' }}
+          // animate={{ x: scrollY }}
         >
           {svgIconsFromCatalogRandome_data
             .slice(0, numberOfSvgCells)

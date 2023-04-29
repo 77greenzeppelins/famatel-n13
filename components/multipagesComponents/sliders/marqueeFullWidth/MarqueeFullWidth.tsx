@@ -34,9 +34,15 @@ const MarqueeFullWidth: React.FC<Props> = ({
     svgBasicSize.length > 0 && width > svgSizeTreshold
       ? svgBasicSize[svgBasicSize.length - 1] //___take the last one
       : svgBasicSize[0]; //___take the very first
-  const numberOfSvgCells = Math.ceil(width / svgRespSize) + 4;
-  // console.log('...width:', width);
-  // console.log('...svgRespSize:', svgRespSize);
+  // const numberOfSvgCells = Math.ceil(width / svgRespSize) + 4;
+
+  //___
+  const numberOfSvgCells = Math.ceil(width / svgRespSize - 2);
+
+  console.log('...width:', width);
+  console.log('...svgRespSize:', svgRespSize);
+  console.log('...numberOfSvgCellse:', numberOfSvgCells);
+
   /**JSX**/
   return (
     <div
