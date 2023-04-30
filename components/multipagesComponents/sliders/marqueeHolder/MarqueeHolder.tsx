@@ -46,8 +46,9 @@ const MarqueeHolder: React.FC<Props> = ({ marqueeContainerStyle }) => {
       >
         <IconsMarquee
           numberOfSvgCells={numberOfSvgCells}
-          svgContainerSizes={svgContainerSizes}
-          svgOffset={svgBasicSize * 1.5} //to alligh svg row to screen side
+          cellStyle={svgContainerSizes}
+          animationOffset={svgBasicSize * 1.5} //to alligh svg row to screen side
+          transformationFactor={1}
         />
       </InViewContainer>
     </div>
