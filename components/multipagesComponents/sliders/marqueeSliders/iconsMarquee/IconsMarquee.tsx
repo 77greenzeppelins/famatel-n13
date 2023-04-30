@@ -20,24 +20,31 @@ const springOptions = {
 /**TS**/
 interface Props {
   numberOfSvgCells: number;
-  svgContainerSizes: string;
+
   animationOffset: number;
   //___
   componentIsInView?: boolean;
   transitionDuration?: number;
   transitionDelay?: number;
-  containerStyle?: string;
+  transformationFactor: number;
+  //___tailwind staff
+  marqueeContainerStyle?: string;
+  animatedContainerStyle?: string;
+  cellStyle: string;
   // yFactor?: string;
 }
 
 const IconsMarquee: React.FC<Props> = ({
   numberOfSvgCells,
-  svgContainerSizes,
   animationOffset,
   componentIsInView = false,
   transitionDuration = 0.4,
   transitionDelay = 0.1,
-  containerStyle,
+  transformationFactor,
+  //___tailwind Staff
+  marqueeContainerStyle,
+  animatedContainerStyle,
+  cellStyle,
   // yFactor = '5%',
 }) => {
   const elementRef = useRef<HTMLDivElement>(null);
@@ -48,7 +55,8 @@ const IconsMarquee: React.FC<Props> = ({
   //   // console.log('contenerWidth:', contenerWidth);
   //   console.log('numberOfSvgCells', numberOfSvgCells);
   // }, [numberOfSvgCells]);
-  console.log('animationOffset', animationOffset);
+  // console.log('numberOfSvgCells', numberOfSvgCells);
+  // console.log('animationOffset', animationOffset);
 
   /**FramerMotion Staff**/
   const { scrollYProgress } = useScroll({
@@ -60,18 +68,20 @@ const IconsMarquee: React.FC<Props> = ({
   //___set actuall speed of x transformation
   const transformedX = useTransform(
     x2,
-    value => (value * animationOffset) / -3
+    value => (value * animationOffset) / transformationFactor
   );
   //___helper
-  useMotionValueEvent(scrollYProgress, 'change', latest => {
-    console.log('scrollYProgress changed to', latest);
-  });
+  // useMotionValueEvent(scrollYProgress, 'change', latest => {
+  //   console.log('scrollYProgress changed to', latest);
+  // });
 
   /**JSX**/
   return (
     <motion.div
-      data-component="InViewAnimatedContent__container"
-      className={containerStyle ? containerStyle : 'flex flex-col gap-y-10'}
+      data-component="IconsMarquee__container"
+      className={
+        marqueeContainerStyle ? marqueeContainerStyle : 'flex flex-col gap-y-10'
+      }
       initial={{ opacity: 0 }}
       animate={{
         opacity: componentIsInView ? 1 : 0,
@@ -82,39 +92,29 @@ const IconsMarquee: React.FC<Props> = ({
         delay: transitionDelay,
       }}
     >
-      <div
-        data-component="IconsMarquee__container "
+      <motion.div
         ref={elementRef}
-        className="flex w-full justify-start"
-        // style={{ transform: `translateX(${contenerWidth / 2}px)` }}
+        className={
+          animatedContainerStyle
+            ? animatedContainerStyle
+            : 'flex justify-start w-full gap-x-[46px] md:gap-x-[60px] '
+        }
+        style={{ x: transformedX }}
       >
-        <motion.div
-          className="flex gap-10 "
-          //___transition-all ease-in-out
-          style={{ x: transformedX }}
-          //___
-          // style={{ x: componentIsInView ? transformedX : 0 }}
-          // style={{ x: transformedX }}
-          //___
-          // style={{ x }}
-          // initial={{ x: '-50%' }}
-          // animate={{ x: scrollY }}
-        >
-          {svgIconsFromCatalogRandome_data
-            .slice(0, numberOfSvgCells)
-            .map(({ id, Icon }, i) => (
-              <div
-                key={`${i}-${id}`}
-                className={`fc ${svgContainerSizes} aspect-square disable`}
-              >
-                <Icon
-                  className={`fc ${svgContainerSizes} aspect-square`}
-                  colorFG={corpoColors.greyShade1}
-                />
-              </div>
-            ))}
-        </motion.div>
-      </div>
+        {svgIconsFromCatalogRandome_data
+          .slice(0, numberOfSvgCells)
+          .map(({ id, Icon }, i) => (
+            <div
+              key={`${i}-${id}`}
+              className={`fc ${cellStyle} aspect-square disable`}
+            >
+              <Icon
+                className={`fc ${cellStyle} aspect-square`}
+                colorFG={corpoColors.greyShade1}
+              />
+            </div>
+          ))}
+      </motion.div>
     </motion.div>
   );
 };
@@ -169,3 +169,23 @@ __1: approach that is base on stete and calculation where marquee is according t
 // const { scrollY } = useScroll();
 //___creat "x" veriable basing on scrollY value
 // const x = useSpring(scrollY, springOptions);
+
+//___
+{
+  /* <motion.div
+          className={
+            animatedContainerStyle
+              ? animatedContainerStyle
+              : 'flex gap-x-[46px] md:gap-x-[60px] '
+          }
+          //___transition-all ease-in-out
+          style={{ x: transformedX }}
+          //___
+          // style={{ x: componentIsInView ? transformedX : 0 }}
+          // style={{ x: transformedX }}
+          //___
+          // style={{ x }}
+          // initial={{ x: '-50%' }}
+          // animate={{ x: scrollY }}
+        ></motion.div> */
+}

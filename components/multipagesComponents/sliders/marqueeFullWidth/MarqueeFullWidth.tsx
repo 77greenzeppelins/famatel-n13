@@ -7,26 +7,36 @@ import IconsMarquee from '../marqueeSliders/iconsMarquee/IconsMarquee';
 
 /**HardCoded staff**/
 const svgDefaultTreshold = 768;
-const svgDefaultSize = [60];
-const svgDefaultContainerSizes = 'w-[60px] h-[60px]';
+const svgDefaultSize = [46, 60];
+const defaultCellStyle = 'w-[46px] h-[46px] md:w-[60px] md:h-[60px]';
 /**TS**/
 interface Props {
-  marqueeContainerStyle?: string;
   //___treshold allows set to "basic" sizes of svgStaff for responsivness reason
   svgSizeTreshold?: number;
   //___must be an array to choose one of values; either mobile or desktop
   svgBasicSize: number[];
-  svgContainerSizes: string;
+  transformationFactor: number;
+  cellsNumberFactor: number;
+  //___Tailwind Staff
+  marqueeHolderStyle?: string;
+  marqueeContainerStyle?: string;
+  animatedContainerStyle?: string;
+  cellStyle: string;
 }
 /*
 used in: oFirmie | section2 | ... | <IconsMarqueeSection>
 */
 /**--------------------------------------**/
 const MarqueeFullWidth: React.FC<Props> = ({
-  marqueeContainerStyle,
   svgBasicSize = svgDefaultSize,
   svgSizeTreshold = svgDefaultTreshold,
-  svgContainerSizes = svgDefaultContainerSizes,
+  cellsNumberFactor,
+  transformationFactor,
+  //___Tailwind Staff
+  cellStyle = defaultCellStyle,
+  marqueeHolderStyle,
+  marqueeContainerStyle,
+  animatedContainerStyle,
 }) => {
   /**...**/
   const { width } = useWindowSize({ screensNumber: 1 });
@@ -39,8 +49,13 @@ const MarqueeFullWidth: React.FC<Props> = ({
       : svgBasicSize[0]; //___take the very first
   /*
   why: just calculate number of svg's in a line / in a marquee
+  !: if marquee has "gap-y-10" it means that space beetwen icons is 40px
+  !: recommended sice of icon for mobile is 46px; 
   */
-  const numberOfSvgCells = Math.ceil(width / svgRespSize);
+  const numberOfSvgCells = Math.ceil((width / svgRespSize) * cellsNumberFactor);
+
+  // console.log('MarqueeFullWidth / width', width);
+  // console.log('MarqueeFullWidth / width / svgRespSize', width / svgRespSize);
 
   /**JSX**/
   return (
@@ -49,8 +64,8 @@ const MarqueeFullWidth: React.FC<Props> = ({
       aria-hidden="true"
       data-component="MarqueeHolder__container"
       className={
-        marqueeContainerStyle
-          ? marqueeContainerStyle
+        marqueeHolderStyle
+          ? marqueeHolderStyle
           : 'absolute hidden md:block inset-0 overflow-hidden z-5'
       }
     >
@@ -63,8 +78,12 @@ const MarqueeFullWidth: React.FC<Props> = ({
       >
         <IconsMarquee
           numberOfSvgCells={numberOfSvgCells}
-          svgContainerSizes={svgContainerSizes}
           animationOffset={width * 0.75}
+          //___
+          marqueeContainerStyle={marqueeContainerStyle}
+          animatedContainerStyle={animatedContainerStyle}
+          cellStyle={cellStyle}
+          transformationFactor={transformationFactor}
           // svgOffset={svgRespSize * 1.25} //___to "align" svg row to screen side
         />
       </InViewContainer>

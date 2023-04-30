@@ -12,21 +12,25 @@ import { story } from '../../../../data/_data';
 /**-------------------------**/
 const HeroSection = () => {
   return (
-    <div className="relative fc flex-col gap-y-4">
+    <div className="relative flex-col fc gap-y-4">
       <div className="relative h-[70vh] md:h-[76vh] min-h-[300px] w-full">
         <div
           className="absolute h-full left-0 w-[5%] max-w-[40px] z-10 from-dark  to-transparent bg-gradient-to-r"
           //___via-dark
         />
         <div className="absolute h-full right-0 w-[5%] max-w-[40px] z-10 from-dark to-transparent bg-gradient-to-l" />
-        <div className="absolute sm:hidden h-[50px] bottom-8 inset-x-0">
-          <MobileMarquee />
-        </div>
+
         <div className="absolute sm:hidden h-[50px] top-8 inset-x-0">
-          <MobileMarquee />
+          <MobileMarquee transformationFactor={-2} />
+        </div>
+        <div className="absolute sm:hidden h-[50px] bottom-8 inset-x-0">
+          <MobileMarquee
+            transformationFactor={2}
+            animatedContainerStyle="flex justify-end w-full gap-x-[46px] md:gap-x-[60px]"
+          />
         </div>
 
-        <div className="fc h-full">
+        <div className="h-full fc">
           <HeroBackground />
           <TenCategoriesWithSvg />
         </div>
