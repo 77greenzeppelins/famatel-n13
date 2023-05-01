@@ -20,7 +20,7 @@ const Section_1: React.FunctionComponent<{
           width={width}
           heightValue={1} //___fake value to
           currentCategory={categoryIndex}
-          arrayOrder={0} //___specifief if read array from first or the last item
+          arrayOrder={1} //___specifief if read array from first or the last item
         />
       </div>
 
@@ -31,7 +31,7 @@ const Section_1: React.FunctionComponent<{
           categoriesNumber={categoriesNumber}
         />
       </div>
-      <div className="relative fc w-full max-w-[2000px] overflow-hidden ">
+      {/* <div className="relative fc w-full max-w-[2000px] overflow-hidden ">
         <DraggableSlider
           width={width}
           heightValue={1} //___fake value to
@@ -40,7 +40,7 @@ const Section_1: React.FunctionComponent<{
           xFactor={'-5%'}
           yFactor={'-5%'}
         />
-      </div>
+      </div> */}
     </div>
   );
   // return (

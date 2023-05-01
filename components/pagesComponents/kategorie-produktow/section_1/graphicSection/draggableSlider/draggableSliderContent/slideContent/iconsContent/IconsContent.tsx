@@ -7,21 +7,19 @@ import { allCat } from './IconsContentData';
 /**TS**/
 interface Props {
   categoryIndex: number;
-  slidesLineIndex: number;
+  // slidesLineIndex: number;
   slideIndex: number;
 }
 /**--------------------------------------**/
 const IconsContent: React.FC<Props> = ({
   categoryIndex,
-  slidesLineIndex,
+  // slidesLineIndex,
   slideIndex,
 }) => {
   /*
   wtf: in case we want two RowsOfSlides in one step this allows to differ them...
   */
-  const arrayToMap = slidesLineIndex
-    ? allCat[categoryIndex]
-    : allCat[categoryIndex].reverse();
+  const arrayToMap = allCat[categoryIndex];
 
   /**JSX**/
   return (

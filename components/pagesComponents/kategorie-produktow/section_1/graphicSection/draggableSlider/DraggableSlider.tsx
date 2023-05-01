@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 /**Components**/
 import RowOfSlides from './draggableSliderContent/RowOfSlides';
 /**Hook Staff**/
@@ -12,7 +12,8 @@ import InViewAnimatedContent from '../../../../../containers/inViewContainer/InV
 const largeCellSize = 180;
 const smallCellSize = 150;
 const minWidthForLargeCell = 475.22; //in relation with <Section_1> / <GraphisSection>'s container h-[340px] xs:h-[440px]
-const minHeightForTwoLines = 300;
+const sliderMaxWidth = 2000; //___max 2000px; it's a matter of items in array
+const slidesNumberOffset = 6;
 
 /**TS**/
 interface Props {
@@ -34,73 +35,58 @@ const DraggableSlider: React.FC<Props> = ({
   xFactor,
   yFactor,
 }) => {
-  /**...**/
+  /**References**/
   const constraintsRef = useRef(null);
-
-  //**just initial condition**/
-  //   if (!width || !height) return null;
   /**simple data; how many n-size cells can we put to the line**/
   const slideSide =
     width > minWidthForLargeCell ? largeCellSize : smallCellSize;
-  const minNumberOfSlides = Math.trunc(Math.min(width, 2000) / slideSide);
-  /**simple data;...*/
-  const slidersLines = heightValue > minHeightForTwoLines ? 2 : 1;
-
-  /**Handlers map(); we map as slider can have 1 or two "linesOfSlides"**/
-  const createSlidersLineViaMap = Array.from({ length: slidersLines }).map(
-    (_, i) => {
-      /*___JSX of map();
-      it creates one or two "line/row/some f*ing div with slides...
-      */
-      return (
-        <motion.div
-          aria-label="Element przesuwny / drag event"
-          data-layout={`DraggableSlider__slidersRow_Nr-${i}`}
-          key={i}
-          // key={JSON.stringify(windowWidth + windowHeight + i)}
-          drag="x"
-          dragConstraints={constraintsRef}
-          // dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-          dragSnapToOrigin={false}
-          dragElastic={0.9}
-          dragMomentum={true}
-        >
-          <InViewContainer
-            animationDelay={0.1}
-            outherContainerStyle="w-full h-full "
-            measuredElementStyle="w-full h-full "
-            topFactor={0.25}
-            bottomFactor={0.25}
-          >
-            <InViewAnimatedContent
-              containerStyle="relative flex flex-col  justify-evenly w-full h-full"
-              xFactor={xFactor}
-              yFactor={yFactor}
-            >
-              <RowOfSlides
-                //___just to follow category changes...
-                currentCategory={currentCategory}
-                //___just to specify slides...
-                slidesNumber={minNumberOfSlides + 6}
-                slideSide={slideSide}
-                //___
-                slidesLineIndex={arrayOrder ? arrayOrder : i}
-              />
-            </InViewAnimatedContent>
-          </InViewContainer>
-        </motion.div>
-      );
-    }
+  const minNumberOfSlides = Math.trunc(
+    Math.min(width, sliderMaxWidth) / slideSide
   );
 
   /**JSX**/
   return (
     <div
-      data-layout="DraggableSlider__container"
+      data-component="DraggableSlider__container"
       ref={constraintsRef}
       className="flex flex-col justify-center items-center"
     >
-      {width && heightValue ? createSlidersLineViaMap : null}
+      {/* {width && heightValue ? createSlidersLineViaMap : null} */}
+      <motion.div
+        aria-label="Element przesuwny / drag event"
+        // data-layout={`DraggableSlider__slidersRow_Nr-${i}`}
+        // key={i}
+        // key={JSON.stringify(windowWidth + windowHeight + i)}
+        drag="x"
+        dragConstraints={constraintsRef}
+        // dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+        dragSnapToOrigin={false}
+        dragElastic={0.9}
+        dragMomentum={true}
+      >
+        <InViewContainer
+          animationDelay={0.1}
+          outherContainerStyle="w-full h-full "
+          measuredElementStyle="w-full h-full "
+          topFactor={0.25}
+          bottomFactor={0.25}
+        >
+          <InViewAnimatedContent
+            containerStyle="relative flex flex-col  justify-evenly w-full h-full"
+            xFactor={xFactor}
+            yFactor={yFactor}
+          >
+            <RowOfSlides
+              //___just to follow category changes...
+              currentCategory={currentCategory}
+              //___just to specify slides...
+              slidesNumber={minNumberOfSlides + slidesNumberOffset}
+              slideSide={slideSide}
+              //___
+            />
+          </InViewAnimatedContent>
+        </InViewContainer>
+      </motion.div>
     </div>
   );
 };

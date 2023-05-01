@@ -31,15 +31,16 @@ const arrOfImages = [
 /**----------------------------------------------------**/
 const ImageContnent: React.FunctionComponent<{
   categoryIndex: number;
-  slidesLineIndex: number;
   slideIndex: number;
-}> = ({ categoryIndex, slidesLineIndex, slideIndex }) => {
+}> = ({ categoryIndex, slideIndex }) => {
   /**Basic Data**/
   const categoryImages = arrOfImages[categoryIndex];
+
+  console.log('....slideIndex:', slideIndex);
   /**JSX**/
   return (
     <div className="relative w-full h-full bg-light p-5 rounded-sm overflow-hidden">
-      <AnimatePresence initial={true}>
+      <AnimatePresence initial={true} mode="wait">
         <motion.div
           key={categoryIndex}
           initial={{ opacity: 0, scale: 0.95 }}
@@ -53,18 +54,10 @@ const ImageContnent: React.FunctionComponent<{
         >
           <Image
             alt="produkt z kategorii"
-            src={
-              /**
-               * slidesLineIndex is 0 for "slidesLine" nr.1; here imagesArray is read from the end...
-               */
-              slidesLineIndex
-                ? categoryImages[slideIndex].image
-                : categoryImages[categoryImages.length - slideIndex].image
-            }
+            src={categoryImages[slideIndex].image}
             fill
             sizes="400"
           />
-          <div data-layout="someFakeContainer" className="absolute inset-0 " />
         </motion.div>
       </AnimatePresence>
     </div>

@@ -10,7 +10,7 @@ const IconsMarqueeSection = () => {
         marqueeHolderStyle="absolute inset-0 overflow-hidden z-5"
         svgBasicSize={[46, 60]}
         transformationFactor={-2}
-        cellsNumberFactor={1}
+        cellsNumberFactor={0.75}
         cellStyle="w-[46px] h-[46px] md:w-[60px] md:h-[60px]"
       />
     </div>

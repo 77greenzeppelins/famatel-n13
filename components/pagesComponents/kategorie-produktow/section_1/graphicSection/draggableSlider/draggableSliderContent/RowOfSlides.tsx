@@ -7,8 +7,7 @@ const RowOfSlides: React.FunctionComponent<{
   slidesNumber: number; // from... to ...
   slideSide: number; // 200 or 150
   currentCategory: number; // from 0 to 9
-  slidesLineIndex: number; // 0 or 1
-}> = ({ slidesNumber, slideSide, currentCategory, slidesLineIndex }) => {
+}> = ({ slidesNumber, slideSide, currentCategory }) => {
   // if (!slidesNumber) return;
 
   // console.log({ slidesLineIndex });
@@ -17,17 +16,8 @@ const RowOfSlides: React.FunctionComponent<{
     <div data-component="RowOfSlides__container" className="flex">
       {Array.from({ length: slidesNumber }).map((_, i) => {
         return (
-          <div
-            key={i}
-            // className="border border-greyShade2"
-            style={{ width: slideSide, height: slideSide }}
-          >
-            <SlideContent
-              currentCategory={currentCategory}
-              slidesLineIndex={slidesLineIndex % 2}
-              // slidesNumber={slidesNumber}
-              slideIndex={i + (slidesLineIndex % 2)}
-            />
+          <div key={i} style={{ width: slideSide, height: slideSide }}>
+            <SlideContent currentCategory={currentCategory} slideIndex={i} />
           </div>
         );
       })}

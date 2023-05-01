@@ -3,38 +3,34 @@ import React from 'react';
 import ImageContent from './imageContent/ImageContent';
 import IconsContent from './iconsContent/IconsContent';
 
-/**-------------------------------------------------**/
-const SlideContent: React.FunctionComponent<{
-  // slidesNumber: number;
+/**-----------------------------**/
+const SlideContent: React.FC<{
+  currentCategory: number; // from 0 to 9 as we have 10 categories
   slideIndex: number;
-  currentCategory: number; // from 0 to 11
-  slidesLineIndex: number; // 0 or 1
-}> = ({ slideIndex, currentCategory, slidesLineIndex }) => {
-  //   console.log(
-
+}> = ({ slideIndex, currentCategory }) => {
+  /*Just a handler...*/
   const contentCreator = ({
     categoryIndex,
     slideIndex,
-    slidesLineIndex,
   }: {
     categoryIndex: number;
     slideIndex: number;
-    slidesLineIndex: number;
   }) => {
-    /**___JSX of contentCreator
-     * if slide index is odd / "nieparzysty" return <ImageContnent>
-     * **/
+    /*
+    JSX of contentCreator
+    if slide index is odd / "nieparzysty" return <ImageContent>
+    */
     return slideIndex % 2 ? (
       <ImageContent
         categoryIndex={categoryIndex}
-        slidesLineIndex={slidesLineIndex}
-        slideIndex={slideIndex}
+        slideIndex={
+          slideIndex === 1 ? 0 : slideIndex - Math.ceil(slideIndex / 2)
+        }
       />
     ) : (
       <IconsContent
         categoryIndex={categoryIndex}
-        slidesLineIndex={slidesLineIndex}
-        slideIndex={slideIndex}
+        slideIndex={slideIndex === 0 ? 0 : slideIndex / 2}
       />
     );
   };
@@ -44,7 +40,6 @@ const SlideContent: React.FunctionComponent<{
       {contentCreator({
         categoryIndex: currentCategory,
         slideIndex: slideIndex,
-        slidesLineIndex: slidesLineIndex,
       })}
     </div>
   );
