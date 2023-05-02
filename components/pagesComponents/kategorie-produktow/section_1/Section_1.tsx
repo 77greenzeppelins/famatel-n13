@@ -25,21 +25,24 @@ const Section_1: React.FunctionComponent<{
   /**JSX**/
   return (
     <div className="relative w-full flex flex-col gap-y-20 pb-[20px] md:pb-[60px] ">
-      <div className="relative fc w-full max-w-[2000px] overflow-hidden">
+      <div className="relative fc flex-col w-full max-w-[2000px] overflow-hidden">
+        <div className="h-[1px] w-full" ref={viewRef} />
+
         <DraggableSlider
           width={width}
           currentCategory={categoryIndex}
           arrayOrder={1} //___specifief if read array from first or the last item
         />
       </div>
-      <div className="flex flex-col w-full gap-10">
-        <div className="flex justify-center w-full " ref={viewRef}>
+      <div className="flex flex-col w-full gap-4">
+        <div className="flex justify-center w-full ">
           <NavSection
             categoryIndex={categoryIndex}
             setCategoryIndex={setCategoryIndex}
             categoriesNumber={categoriesNumber}
           />
         </div>
+        {/* <div className="h-[1px] w-full" ref={viewRef} /> */}
         <DescriptionSection categoryIndex={categoryIndex} />
       </div>
       <FixedNavSection
