@@ -1,13 +1,14 @@
 import React from 'react';
 /**Components**/
 import ImageContent from './imageContent/ImageContent';
-import IconsContent from './iconsContent/IconsContent';
+import SvgContent from './svgContent/SvgContent';
 
 /**-----------------------------**/
 const SlideContent: React.FC<{
   currentCategory: number; // from 0 to 9 as we have 10 categories
   slideIndex: number;
-}> = ({ slideIndex, currentCategory }) => {
+  slideSize: number;
+}> = ({ slideIndex, currentCategory, slideSize }) => {
   /*Just a handler...*/
   const contentCreator = ({
     categoryIndex,
@@ -28,9 +29,10 @@ const SlideContent: React.FC<{
         }
       />
     ) : (
-      <IconsContent
+      <SvgContent
         categoryIndex={categoryIndex}
         slideIndex={slideIndex === 0 ? 0 : slideIndex / 2}
+        slideSize={slideSize}
       />
     );
   };

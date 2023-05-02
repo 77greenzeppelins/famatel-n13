@@ -1,58 +1,13 @@
 import React, { useEffect } from 'react';
 
-const SvgTechSchuko = ({
-  width,
-  height,
-}: {
-  width: number;
-  height: number;
-}) => {
-  /*
-  calculation
-  */
-  const calcHeight = width * 0.566;
-  // const calcWidth = height * 0.666;
-  /*
-  width={`${width}`}
-  height={`${calcHeight}`}
-  */
-
-  /*
-  JSX
-  */
+const SvgTechSchuko: React.FC<{ basicSize: number }> = ({ basicSize }) => {
+  /*JSX*/
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={`${width}`}
-      height={`${calcHeight}`}
+      width={basicSize}
       viewBox="0 0 300 220"
     >
-      <defs>
-        <clipPath id="clipPath139357">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath139433-1">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath139463-1">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath139565-0">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath139629-2">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath139749-6">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath139881-1">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath139957-2">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-      </defs>
       <g
         clipPath="url(#clipPath139357)"
         transform="matrix(1.5452 0 0 -1.5452 -98.842 1118.4)"

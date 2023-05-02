@@ -18,7 +18,6 @@ const Section_1: React.FunctionComponent<{
       <div className="relative fc w-full max-w-[2000px] overflow-hidden">
         <DraggableSlider
           width={width}
-          heightValue={1} //___fake value to
           currentCategory={categoryIndex}
           arrayOrder={1} //___specifief if read array from first or the last item
         />

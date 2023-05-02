@@ -19,21 +19,14 @@ const imgLadowarki: IF_ImgStaticData[] = [
 const imgLadowarkiSlides: IF_ImgStaticData[] = [
   //___img1 for 3 products
   { image: img1 },
-  { image: img1 },
-  { image: img2 },
   { image: img2 },
   { image: img3 },
+  { image: img1 },
+  { image: img2 },
   { image: img3 },
   { image: img1 },
-  { image: img1 },
+  { image: img2 },
   { image: img3 },
-  { image: img3 },
-  { image: img2 },
-  { image: img2 },
-  { image: img1 },
-  { image: img1 },
-  { image: img2 },
-  { image: img2 },
 ];
 
 export { imgLadowarki, imgLadowarkiSlides };

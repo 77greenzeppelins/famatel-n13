@@ -11,21 +11,17 @@ const SvgTechSection = () => {
   */
   const [ref, bounds] = useMeasure();
   /*
-  ...WTF
-  */
-  useEffect(() => {
-    // console.log('SvgHolder / bounds:', bounds);
-  }, [bounds]);
-  /*
   JSX
   */
   return (
     <div
       data-component="SvgHolder__container"
       ref={ref}
-      className="fc w-full h-full bg-light"
+      className="fc w-full h-full bg-light p-6 rounded-md"
     >
-      <SvgTechSchuko width={bounds.width} height={bounds.height} />
+      <div className="fc w-full h-full">
+        <SvgTechSchuko basicSize={bounds.width * 0.9} />
+      </div>
     </div>
   );
 };

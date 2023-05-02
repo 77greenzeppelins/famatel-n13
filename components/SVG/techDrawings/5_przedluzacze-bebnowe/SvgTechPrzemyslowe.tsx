@@ -1,55 +1,13 @@
 import React, { useEffect } from 'react';
 
-const SvgTechPrzemyslowe = ({
-  width,
-  height,
-}: {
-  width: number;
-  height: number;
-}) => {
-  /*
-  calculation
-  */
-  const calcHeight = width * 0.566;
-  // const calcWidth = height * 0.666;
-  /*
-  width={`${width}`}
-  height={`${calcHeight}`}
-  */
-
-  /*
-  JSX
-  */
+const SvgTechPrzemyslowe: React.FC<{ basicSize: number }> = ({ basicSize }) => {
+  /*JSX*/
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={`${width}`}
-      height={`${calcHeight}`}
+      width={basicSize}
       viewBox="0 0 300 220"
     >
-      <defs>
-        <clipPath id="clipPath160629">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath160737">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath160869">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath161001">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath161093">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath161123">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-        <clipPath id="clipPath161229">
-          <path d="M15 15h612.28v858.9H15z"></path>
-        </clipPath>
-      </defs>
       <g
         clipPath="url(#clipPath160629)"
         transform="matrix(1.5259 0 0 -1.5259 -103.08 1108.4)"

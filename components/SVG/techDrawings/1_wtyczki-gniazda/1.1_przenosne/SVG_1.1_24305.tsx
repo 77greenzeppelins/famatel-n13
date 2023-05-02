@@ -7,6 +7,8 @@ const SVG_1_1_24305: React.FC<{ basicSize: number }> = ({ basicSize }) => {
   /**JSX**/
   return (
     <svg
+      role="img"
+      aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       //  width="800"
       //  height="500"

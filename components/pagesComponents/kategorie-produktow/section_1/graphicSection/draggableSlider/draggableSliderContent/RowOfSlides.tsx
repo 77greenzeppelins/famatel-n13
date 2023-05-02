@@ -13,11 +13,15 @@ const RowOfSlides: React.FunctionComponent<{
   // console.log({ slidesLineIndex });
   /**JSX**/
   return (
-    <div data-component="RowOfSlides__container" className="flex">
+    <div data-component="RowOfSlides__container" className="flex gap-[2px]">
       {Array.from({ length: slidesNumber }).map((_, i) => {
         return (
           <div key={i} style={{ width: slideSide, height: slideSide }}>
-            <SlideContent currentCategory={currentCategory} slideIndex={i} />
+            <SlideContent
+              currentCategory={currentCategory}
+              slideIndex={i}
+              slideSize={slideSide}
+            />
           </div>
         );
       })}

@@ -1,6 +1,5 @@
-// import { StaticImageData } from 'next/image';
-/**Images**/
-import img1 from './1_przenosne/1.1_03_14304.webp';
+/*Images*/
+import img1 from './1_przenosne/1.1_04_14307.webp';
 import img2 from './2_tablicowe/1.2_07_24377.webp';
 import img3 from './3_scienne/1.3_12_23626.webp';
 import img4 from './4_tablicowe-jednofazowe/1.4_01_13953_d2.webp';
@@ -10,29 +9,20 @@ import img7 from './7_chlodnicze/1.7_04_24398.webp';
 import img8 from './8_estradowe/1.8_08_17122.webp';
 import img9 from './9_camping/1.9_05_13011.webp';
 
-/**TS**/
+/*TS*/
 import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 
-/**
- * used in <ImageContnent>... deep in slider / graphicSection / ...
- **/
+/*
+used in <ImageContnent>... deep in slider / graphicSection / ...
+*/
 const imgWtyczkiGniazdaSlides: IF_ImgStaticData[] = [
   { image: img3 },
-  { image: img3 },
-  { image: img4 },
   { image: img4 },
   { image: img1 },
-  { image: img1 },
   { image: img2 },
-  { image: img2 },
-  //___
-  { image: img8 },
   { image: img8 },
   { image: img7 },
-  { image: img7 },
   { image: img6 },
-  { image: img6 },
-  { image: img5 },
   { image: img5 },
 ];
 

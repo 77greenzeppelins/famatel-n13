@@ -13,7 +13,6 @@ import { imgLadowarkiSlides } from '../../../../../../../../../public/images/c7_
 import { imgObudowyRozdzielniceSlide } from '../../../../../../../../../public/images/c8_obudowy-rozdzielnice/imgObudowyRozdzielnice';
 import { imgRozdzielniceModuloweSlider } from '../../../../../../../../../public/images/c9_rozdzielnice-modulowe/imgRozdzielniceModulowe';
 import { imgPuszkiInstalacyjneSlider } from '../../../../../../../../../public/images/c10_puszki-instalacyjne/imgPuszkiInstalacyjne';
-// import { imgDomoweSlider } from '../../../../../../../../../public/images/c11_domowe/imgDomowe';
 const arrOfImages = [
   imgWtyczkiGniazdaSlides,
   imgGniazdaZBlokadaSlides,
@@ -25,7 +24,6 @@ const arrOfImages = [
   imgObudowyRozdzielniceSlide,
   imgRozdzielniceModuloweSlider,
   imgPuszkiInstalacyjneSlider,
-  // imgDomoweSlider,
 ];
 
 /**----------------------------------------------------**/
@@ -36,10 +34,10 @@ const ImageContnent: React.FunctionComponent<{
   /**Basic Data**/
   const categoryImages = arrOfImages[categoryIndex];
 
-  console.log('....slideIndex:', slideIndex);
+  // console.log('....slideIndex:', slideIndex);
   /**JSX**/
   return (
-    <div className="relative w-full h-full bg-light p-5 rounded-sm overflow-hidden">
+    <div className="relative w-full h-full bg-light p-5 rounded-sm overflow-hidden pointer-events-none">
       <AnimatePresence initial={true} mode="wait">
         <motion.div
           key={categoryIndex}

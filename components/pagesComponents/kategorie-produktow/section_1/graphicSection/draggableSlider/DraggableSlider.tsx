@@ -9,16 +9,15 @@ import InViewAnimatedContent from '../../../../../containers/inViewContainer/InV
 // import InViewAnimatedContent from '../../../../kontakt/_inViewAnimatedContent/InViewAnimatedContent';
 
 /**HardCoded Staff**/
-const largeCellSize = 180;
+const largeCellSize = 280;
 const smallCellSize = 150;
-const minWidthForLargeCell = 475.22; //in relation with <Section_1> / <GraphisSection>'s container h-[340px] xs:h-[440px]
+const minWidthForLargeCell = 768; //in relation with <Section_1> / <GraphisSection>'s container h-[340px] xs:h-[440px]
 const sliderMaxWidth = 2000; //___max 2000px; it's a matter of items in array
 const slidesNumberOffset = 6;
 
 /**TS**/
 interface Props {
   width: number;
-  heightValue: number;
   currentCategory: number;
   minHeight?: number;
   arrayOrder?: number;
@@ -29,7 +28,6 @@ interface Props {
 /**-------------------------------------------------------**/
 const DraggableSlider: React.FC<Props> = ({
   width,
-  heightValue,
   currentCategory,
   arrayOrder, //___specifief if read array from first or the last item
   xFactor,

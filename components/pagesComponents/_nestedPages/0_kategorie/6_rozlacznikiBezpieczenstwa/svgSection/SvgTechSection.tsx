@@ -13,17 +13,13 @@ const SvgTechSection = () => {
   /**JSX**/
   return (
     <div
-      data-component="SvgTechSection__container"
+      data-component="SvgHolder__container"
       ref={ref}
-      className="fc w-full h-full bg-light"
+      className="fc w-full h-full bg-light p-6 rounded-md"
     >
-      <SvgTechWylacznikBezpieczenstwa
-        /*
-        ___1. usihg calculation in "width" we can control size of svgImage
-        */
-        width={Math.min(bounds.width, 600)}
-        height={bounds.height}
-      />
+      <div className="fc w-full h-full">
+        <SvgTechWylacznikBezpieczenstwa basicSize={bounds.width * 0.9} />
+      </div>
     </div>
   );
 };

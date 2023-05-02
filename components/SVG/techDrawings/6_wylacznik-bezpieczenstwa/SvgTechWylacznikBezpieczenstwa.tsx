@@ -1,24 +1,14 @@
 import React from 'react';
 
 /**------------------------------------------------**/
-const SvgTechWylacznikBezpieczenstwa = ({
-  width,
-  height,
-}: {
-  width: number;
-  height: number;
+const SvgTechWylacznikBezpieczenstwa: React.FC<{ basicSize: number }> = ({
+  basicSize,
 }) => {
-  /*
-  ___1. why "800/800"? it's image's aspectRatio....
-  */
-  const calcHeight = width * (800 / 800);
+  /*JSX*/
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      //   width="800"
-      //   height="800"
-      width={`${width}`}
-      height={`${calcHeight}`}
+      width={basicSize}
       viewBox="0 0 800 800"
     >
       <path

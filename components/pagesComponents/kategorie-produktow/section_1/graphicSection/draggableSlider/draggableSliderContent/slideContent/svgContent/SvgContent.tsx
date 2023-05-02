@@ -1,31 +1,30 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 /**Basic Data*/
-import { corpoColors } from '../../../../../../../../../data/_data';
-import { allCat } from './IconsContentData';
+import {
+  testSvg,
+  categoriesForSlider,
+} from '../../../../../../../../SVG/techDrawings/allSvgTech';
 
 /**TS**/
 interface Props {
   categoryIndex: number;
-  // slidesLineIndex: number;
+  slideSize: number;
   slideIndex: number;
 }
 /**--------------------------------------**/
-const IconsContent: React.FC<Props> = ({
+const SvgContent: React.FC<Props> = ({
   categoryIndex,
-  // slidesLineIndex,
+  slideSize,
   slideIndex,
 }) => {
-  /*
-  wtf: in case we want two RowsOfSlides in one step this allows to differ them...
-  */
-  const arrayToMap = allCat[categoryIndex];
+  const arrayToMap = categoriesForSlider[categoryIndex];
 
   /**JSX**/
   return (
     <div className="relative fc w-full h-full">
       <motion.div
-        className=" w-[50%] h-[50%] border border-greyShade1 rounded-sm p-4"
+        className="w-full h-full  rounded-sm bg-light"
         key={categoryIndex}
         initial={{ opacity: 0.5, scale: 1.03 }}
         animate={{
@@ -34,12 +33,11 @@ const IconsContent: React.FC<Props> = ({
           transition: { delay: 0.1, duration: 0.8 },
         }}
       >
-        {arrayToMap.map(({ Icon }, i) => {
+        {arrayToMap.map(({ Component }, i) => {
           if (i === slideIndex) {
             return (
-              <div key={i}>
-                {/* <p className="text-corpo fc"> {`${slideIndex} / ${i}  `}</p> */}
-                <Icon colorFG={corpoColors.greyShade1} />{' '}
+              <div className="fc w-full h-full" key={i}>
+                <Component basicSize={slideSize * 0.99} />
               </div>
             );
           }
@@ -49,7 +47,7 @@ const IconsContent: React.FC<Props> = ({
   );
 };
 
-export default IconsContent;
+export default SvgContent;
 
 // <p className="fc flex-col w-full h-full text-corpo">
 //   <span>{`slidesLineIndex: ${slidesLineIndex}`}</span>

@@ -16,20 +16,12 @@ import { IF_ImgStaticData } from '../../../utils/TS/typeScriptStaff';
 const imgObudowyRozdzielniceSlide: IF_ImgStaticData[] = [
   //___img1 for 3 products
   { image: img1 },
-  { image: img1 },
-  { image: img2 },
   { image: img2 },
   { image: img3 },
-  { image: img3 },
-  { image: img4 },
   { image: img4 },
   { image: img5 },
-  { image: img5 },
-  { image: img6 },
   { image: img6 },
   { image: img7 },
-  { image: img7 },
-  { image: img4 },
   { image: img4 },
 ];
 
