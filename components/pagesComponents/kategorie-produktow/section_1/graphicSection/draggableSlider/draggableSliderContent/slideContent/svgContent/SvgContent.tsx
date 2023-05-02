@@ -1,10 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 /**Basic Data*/
-import {
-  testSvg,
-  categoriesForSlider,
-} from '../../../../../../../../SVG/techDrawings/allSvgTech';
+import { categoriesForSlider } from '../../../../../../../../SVG/techDrawings/allSvgTech';
 
 /**TS**/
 interface Props {

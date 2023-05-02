@@ -1,8 +1,7 @@
 import React from 'react';
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
-
-/**HaardCoded Data**/
+/**HardCoded Data**/
 const svgMaxHeight = 'max-h-[540px]';
 
 /**TS**/

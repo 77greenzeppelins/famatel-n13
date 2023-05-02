@@ -174,19 +174,6 @@ const category10 = [
   svgTech_10_1[7],
 ];
 
-const testSvg = [
-  svgTech_1_9[9],
-  svgTech_1_2[2],
-  svgTech_1_3[6],
-  svgTech_1_4[4],
-  svgTech_1_7[4],
-  svgTech_1_5[1],
-  svgTech_1_1[6],
-  svgTech_1_1[7],
-  svgTech_1_1[8],
-  svgTech_1_1[9],
-];
-
 const categoriesForSlider = [
   category1,
   category2,
@@ -200,4 +187,4 @@ const categoriesForSlider = [
   category10,
 ];
 
-export { allSvgTech, testSvg, categoriesForSlider };
+export { allSvgTech, categoriesForSlider };

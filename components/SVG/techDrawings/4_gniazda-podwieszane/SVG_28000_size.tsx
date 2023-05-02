@@ -399,41 +399,44 @@ const SVG_28000_size: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         strokeLinecap="round"
         strokeOpacity="0.997"
         strokeWidth="0.75"
-        d="M270.22 108.52V90.967l-.403-.277-.567-.395h-39.428l-.567.395-.402.277v17.553h20.684z"
-        transform="translate(174.27 -1.267)"
+        d="M444.49 107.25V89.697l-.403-.277-.567-.395h-39.428l-.567.395-.402.277v17.553h20.684z"
       ></path>
-      <path
-        d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
-        transform="translate(174.27 -1.267) translate(-.486)"
-      ></path>
-      <path
-        fill="none"
-        stroke="#000"
-        strokeWidth="0.75"
-        d="M248.6 107.64V92.435l-6.386-1.264h-6.216l-6.386 1.264v15.205h9.494z"
-        transform="translate(174.27 -1.267)"
-      ></path>
-      <g fill="#1a1a1a">
+      <g fill={corpoColors.grey}>
         <path
           d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
-          transform="translate(174.27 -1.267) matrix(-1 0 0 1 478.65 0)"
+          transform="translate(173.78 -1.267)"
         ></path>
       </g>
       <path
-        d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
-        transform="translate(174.27 -1.267) translate(20.389)"
+        fill="none"
+        stroke="#000"
+        strokeWidth="0.75"
+        d="M422.87 106.37V91.165l-6.386-1.264h-6.216l-6.386 1.264v15.205h9.494z"
       ></path>
+      <g fill={corpoColors.grey}>
+        <path
+          d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
+          transform="matrix(-1 0 0 1 652.92 -1.267)"
+        ></path>
+      </g>
+      <g fill={corpoColors.grey}>
+        <path
+          d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
+          transform="translate(194.66 -1.267)"
+        ></path>
+      </g>
       <path
         fill="none"
         stroke="#000"
         strokeWidth="0.75"
-        d="M269.48 107.64V92.435l-6.386-1.264h-6.216l-6.386 1.264v15.205h9.494z"
-        transform="translate(174.27 -1.267)"
+        d="M443.75 106.37V91.165l-6.386-1.264h-6.216l-6.386 1.264v15.205h9.494z"
       ></path>
-      <path
-        d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
-        transform="translate(174.27 -1.267) matrix(-1 0 0 1 499.53 0)"
-      ></path>
+      <g fill={corpoColors.grey}>
+        <path
+          d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
+          transform="matrix(-1 0 0 1 673.8 -1.267)"
+        ></path>
+      </g>
       <g fill="none" stroke="#000" strokeWidth="0.75">
         <path
           strokeLinecap="round"
@@ -741,41 +744,42 @@ const SVG_28000_size: React.FC<{ basicSize: number }> = ({ basicSize }) => {
         strokeLinecap="round"
         strokeOpacity="0.997"
         strokeWidth="0.75"
-        d="M270.22 108.52V90.967l-.403-.277-.567-.395h-39.428l-.567.395-.402.277v17.553h20.684z"
-        transform="translate(-125.93 -1.267)"
+        d="M144.29 107.25V89.697l-.403-.277-.567-.395h-39.428l-.567.395-.402.277v17.553h20.684z"
       ></path>
-      <path
-        d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
-        transform="translate(-125.93 -1.267) translate(-.486)"
-      ></path>
-      <path
-        fill="none"
-        stroke="#000"
-        strokeWidth="0.75"
-        d="M248.6 107.64V92.435l-6.386-1.264h-6.216l-6.386 1.264v15.205h9.494z"
-        transform="translate(-125.93 -1.267)"
-      ></path>
-      <g fill="#1a1a1a">
+      <g fill={corpoColors.grey}>
         <path
           d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
-          transform="translate(-125.93 -1.267) matrix(-1 0 0 1 478.65 0)"
+          transform="translate(-126.42 -1.267)"
         ></path>
       </g>
       <path
-        d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
-        transform="translate(-125.93 -1.267) translate(20.389)"
+        fill="none"
+        stroke="#000"
+        strokeWidth="0.75"
+        d="M122.67 106.37V91.165l-6.386-1.264h-6.216l-6.386 1.264v15.205h9.494z"
       ></path>
+      <g fill={corpoColors.grey}>
+        <path
+          d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
+          transform="matrix(-1 0 0 1 352.72 -1.267)"
+        ></path>
+      </g>
+      <g fill={corpoColors.grey}>
+        <path
+          d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
+          transform="translate(-105.54 -1.267)"
+        ></path>
+      </g>
       <path
         fill="none"
         stroke="#000"
         strokeWidth="0.75"
-        d="M269.48 107.64V92.435l-6.386-1.264h-6.216l-6.386 1.264v15.205h9.494z"
-        transform="translate(-125.93 -1.267)"
+        d="M143.55 106.37V91.165l-6.386-1.264h-6.216l-6.386 1.264v15.205h9.494z"
       ></path>
-      <g>
+      <g fill={corpoColors.grey}>
         <path
           d="M236.18 92.101v14.938h-1.149V92.367zM234.67 92.398v14.641h-1.149v-14.38zM233.27 92.707v14.331h-1.125V92.962zM231.73 93.066v13.972h-1.097V93.315z"
-          transform="translate(-125.93 -1.267) matrix(-1 0 0 1 499.53 0)"
+          transform="matrix(-1 0 0 1 373.6 -1.267)"
         ></path>
       </g>
       <g fill="none" stroke="#000" strokeWidth="0.75">
