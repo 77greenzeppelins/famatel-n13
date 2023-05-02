@@ -245,6 +245,37 @@ const story = {
       { pseudoNumber: '10', text: 'kategorii' },
     ],
   },
+  pageProdukty: {
+    categoriesDescritpions: [
+      //___1
+      'Ergonomia, Niezawodność, Bezpieczeństwo, Szybkość podłączenia, Precyzja.Rozbudowana  seria przemysłowych wtyczek i gniazd SpeedPRO jest sumą wszystkich tych właściwości. Zaprojektowane i wyprodukowane zgodnie z najbardziej wymagającymi standardami jakości, gwarantują najlepszą wydajność w ekstremalnych zakresach temperatur, odporność mechaniczną i wodoszczelność.',
+      //___2
+      'Gniazda z rozłącznikiem i blokadą mechaniczną SpeedPRO dostępne w stopniach szczelności IP44 i IP67 zostały zaprojektowane do użytku w miejscach gdzie bezpieczeństwo jest najważniejsze. Dzięki blokadzie mechanicznej współpracującej z rozłącznikiem ta seria gniazd oferuje idealne rozwiązanie i gwarantuje bezpieczeństwo i jakość instalacji.',
+      //___3
+      'Rezultatem przemysłowych adapterów Famatel jest szeroki wachlarz możliwości wielokrotnego łącznia i różnych systemów łączenia. Wykonane z materiałów odpornych na udary mechaniczne i warunki atmosferyczne seria ta spełnia wymagania profesjonalnych użytkowników.',
+      //___4__gniazda podwieszane
+      'Linia mobilnych gniazd podwieszanych gwarantujących wysoki poziom elastyczności na liniach montażowych i w systemach automatyzacji przemysłowej. Dzięki ruch w płaszczyźnie pionowej zwiększa mobilność pracowników oraz stabilność pracy urządzeń. Możliwość montażu z gniazdami IP44 i IP65. ',
+      //Górna płytka z otworem na M20 i oznaczeniami na M25 i M32. Śruby i druty podtrzymujące wykonane ze stali nierdzewnej. Metalowy akcesorium do złącza sprężonego powietrza. Wersja ślepa z stopniem ochrony IP44 i wersja wpuszczana IP65. Przepust M20.
+      //___5__przedłużacze będnowe
+      'Zakres przedłużaczy przemysłowych IP67 firmy Famatel oferuje jakość i niezawodne rozwiązania idealne dla przemysłu, budownictwa i innych miejsc gdzie wymagany jest wysoki stopień szczelności IP67.',
+      //___6__rozłączniki bezpieczeństwa
+      'Bezpieczeństwo ludzi jest najważniejsze dlatego firma Famatel oddaje do Państwa dyspozycji nową serię rozłączników IP65. Wykonane z materiałów odpornych na uderzenia, korozję i czynniki chemiczne, Seria dostarcza dodatkowy punkt bezpieczeństwa i gwarancji instalacji.',
+      //___7__ładowarki samochodowe
+      '',
+      //___8__
+      'Nowa koncepcja przemysłowych obudów IP65 z możliwością budowania modułów w pionie i w poziomie za pomocą elementu łączącego. Asortyment składa się z kilkunastu wodoszczelnych skorelowanych modeli z miejscem na zabezpieczenia (wyłączniki MCB, RCCD, itp.). Dodatkowo oferujemy nasze usługi inżynieryjne w celu dostosowania produktu do konkretych specyfikacji technicznych.',
+      //___9
+      // 'Pełna gama rozdzielnic przemysłowych okablowanych i wyposażonych zgodnie z potrzebami. Oferujemy nasze usługi inżynieryjne w celu dostosowania produktu do szczególnych wymagań technicznych. W celu uzyskania oferty prosimy o kontakt.',
+      //???
+      'Rozbudowana oferta rozdzielnic modułowych. Kazda z kolekcji przygotowana została z myślą o potrzebach  ',
+      // 'Seria MAGNA składa się z 6 modeli do maksymalnej wielkości 800x600. Dzięki wszechstronności i odporności na działanie czynników zewnętrznych przeznaczone do stosowania w sektorze mieszkaniowym i przemysłowym. Wyposażone w metalową płytę, która pozwala na montaż dowolnego osprzętu elektrycznego i systemów sterowania. Jako opcja do wyposażenia w ramki modułowe jak również w wewnętrzne drzwi bezpieczeństwa. System zamykania z trójkątnym kluczem pozwala na szybki i łatwy dostęp do instalacji wewnętrznych.',
+      // 'Nowa seria rozdzielnic modułowych AcquaPLUS IP65 składa się z 4 modeli w rozmiarach od 18 do 72 modułów. Obudowy przeznaczone są do stosowania w sektorze usług oraz w trudnych warunkach. Główne cechy to szybki i łatwy montaż jak również ergonomiczna konstrukcja bezpiecznego systemu otwierania/zamykania drzwi ułatwiająca dostęp do elementów wewnętrznych po zainstalowaniu rozdzielnicy.',
+      // 'Nowa seria rozdzielnic modułowych Acqua IP65 składa się z sześciu modeli w rozmiarach od 4 do 42 modułów. Obudowy te przeznaczone są do stosowania w sektorze gospodarstw domowych i w sektorze usług. Zostały zaprojektowane do pracy w otoczeniu o wysokim poziomie wilgoci oraz zapylenia. Szybki i łatwy montaż sprawia, że są gotowe do użycie w każdym środowisku. Ergonomiczna konstrukcja została przebadana w celu ułatwienia dostępu do szafki po zainstalowaniu, umożliwiając łatwe otwieranie/zamykanie drzwi.',
+      //___10
+      'Nowa koncepcja puszek instalacyjnych składa się z 42 modeli pokrywających wszystkie potrzeby instalacji. Wykonane są z tworzywa termoplastycznego o wysokiej odporności na uderzenia, odpornego na promieniowanie UV oraz bez zawartości halogenów. Puszki o stopniu ochrony IP55 mogą by stosowane w różnych typach instalacji. Nowa konstrukcja dławnic gwarantuje stopień IP55 przy bezpośrednim wprowadzeniu przewodów bez konieczności użycia sztywnych rurek.',
+      // 'Nowa seria okienek modułowych IP67 Famatel pokrywa potrzeby każdej instalacji. Wyprodukowane z poliwęglanu zapewniają wysoką wytrzymałość mechaniczną oraz odporność na działanie innych czynników zewnętrznych. System zawiasów został zaprojektowany tak, aby zapewnić doskonałe zamknięcie.',
+    ],
+  },
   pageKontakt: {
     s1: 'Zespół Famatel Polska zaprasza do kontaktu od poniedziałku do piątku w godzinach 8ºº - 16ºº.',
     daneFirmy: [

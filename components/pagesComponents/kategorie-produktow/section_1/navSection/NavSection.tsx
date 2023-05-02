@@ -50,13 +50,13 @@ const NavSection: React.FC<{
           />
         </div>
       </div>
-      <div className="absolute inset-y-0 right-0 ">
+      {/* <div className="absolute inset-y-0 right-0 ">
         <ButtonsPanel
           categoryIndex={categoryIndex}
           setCategoryIndex={setCategoryIndex}
           categoriesNumber={categoriesNumber}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

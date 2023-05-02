@@ -17,13 +17,17 @@ const KategorieProduktowContent = () => {
       className="flex flex-col justify-center pt-[60px] overflow-hidden"
       //___pt-[50px] pb-[10vh]
     >
-      <HeroSection />
-      <Section_1
-        categoryIndex={categoryIndex}
-        setCategoryIndex={setCategoryIndex}
-        categoriesNumber={catalogStructureData.length}
-        // categoryUrl={catalogStructureData[categoryIndex].mainCategoryUrl}
-      />
+      <div className="z-1">
+        <HeroSection />
+      </div>
+      <div className="z-10">
+        <Section_1
+          categoryIndex={categoryIndex}
+          setCategoryIndex={setCategoryIndex}
+          categoriesNumber={catalogStructureData.length}
+          // categoryUrl={catalogStructureData[categoryIndex].mainCategoryUrl}
+        />
+      </div>
     </div>
   );
 };

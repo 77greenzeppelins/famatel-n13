@@ -47,7 +47,11 @@ const DraggableSlider: React.FC<Props> = ({
     <div
       data-component="DraggableSlider__container"
       ref={constraintsRef}
-      className="flex flex-col justify-center items-center"
+      // className="flex flex-col justify-center items-center"
+      /*
+      (!) below class + delate of div in parentComponent goives interesting effect... 
+      */
+      className="relative fc w-full max-w-[2000px] overflow-hidden"
     >
       {/* {width && heightValue ? createSlidersLineViaMap : null} */}
       <motion.div
