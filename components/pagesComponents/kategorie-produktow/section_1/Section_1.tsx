@@ -2,12 +2,13 @@ import React, { useRef } from 'react';
 /**Components**/
 import DescriptionSection from './descriptionSection/DescriptionSection';
 import DraggableSlider from './graphicSection/draggableSlider/DraggableSlider';
-import NavSection from './navSection/NavSection';
 import FixedNavSection from './fixedNavSection/FixedNavSection';
 /**Hooks**/
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**Framer Motion Staff*/
 import { useInView } from 'framer-motion';
+import CounterSection from './counterSection/CounterSection';
+// import CounterSection from './counterSection/CounterSection';
 
 /**HardCodedStaff*/
 /**--------------------------------------------------**/
@@ -17,8 +18,7 @@ const Section_1: React.FunctionComponent<{
   categoriesNumber: number;
 }> = ({ categoryIndex, setCategoryIndex, categoriesNumber }) => {
   /**References*/
-  const viewRef = useRef(null);
-
+  const viewRef = useRef<HTMLDivElement>(null!);
   const isInView = useInView(viewRef);
   /**...**/
   const { width } = useWindowSize({ screensNumber: 1 });
@@ -26,8 +26,6 @@ const Section_1: React.FunctionComponent<{
   return (
     <div className="relative w-full flex flex-col gap-y-20 pb-[20px] md:pb-[60px] ">
       <div className="relative fc flex-col w-full max-w-[2000px] overflow-hidden">
-        <div className="h-[1px] w-full" ref={viewRef} />
-
         <DraggableSlider
           width={width}
           currentCategory={categoryIndex}
@@ -36,13 +34,8 @@ const Section_1: React.FunctionComponent<{
       </div>
       <div className="flex flex-col w-full gap-4">
         <div className="flex justify-center w-full ">
-          <NavSection
-            categoryIndex={categoryIndex}
-            setCategoryIndex={setCategoryIndex}
-            categoriesNumber={categoriesNumber}
-          />
+          <CounterSection categoryIndex={categoryIndex} ref={viewRef} />
         </div>
-        {/* <div className="h-[1px] w-full" ref={viewRef} /> */}
         <DescriptionSection categoryIndex={categoryIndex} />
       </div>
       <FixedNavSection
