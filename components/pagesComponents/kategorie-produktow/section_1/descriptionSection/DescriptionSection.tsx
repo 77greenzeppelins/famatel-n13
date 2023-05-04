@@ -16,7 +16,7 @@ const DescriptionSection: React.FC<{ categoryIndex: number }> = ({
           hasBox={false}
           hasVerticalOrnament={true}
         />
-        <div className="h-full xxs:h-[130px]">
+        <div className="h-full xxs:h-[130px] xs4xx:h-[104px] xs:h-[78px] md:h-[70px] xl:h-[52px]">
           <AnimatedParagraph
             uniqueKey={categoryIndex}
             textsArray={story.pageProdukty.categoriesDescritpions}

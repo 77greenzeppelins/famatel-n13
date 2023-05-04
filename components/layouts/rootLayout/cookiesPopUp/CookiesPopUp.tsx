@@ -23,7 +23,7 @@ const CookiesPopUp: React.FC = () => {
     // if (cookiesAccepted) {
     //   setAccepted(true);
     // }
-    console.log('accepted:', accepted);
+    // console.log('accepted:', accepted);
   }, [accepted]);
   /**JSX**/
   return (
