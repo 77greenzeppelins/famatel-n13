@@ -56,6 +56,15 @@ const aBodyCell_Lg = `fc py-2 px-[1px] bg-greyTint2 border-x-[1px] border-dark t
 //___used in "productPages" | scecifies horizontal layout in "TablesSections"
 const tablesSectionContainer = 'flex flex-col w-full gap-16';
 
+//___text / oFirmie / link / sm
+//___'text-[0.75rem]  lg:text-[1rem] tracking-[2px] leading-tight text-dark font-bold group-hover:text-light group-hover:font-normal'
+
+//___text / produktyPage / category name animated text / md
+//` text-grey text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] flex items-center w-fit max-w-[750px] h-[72px] lg:h-[60px] disable-soft px-4`
+
+//___text / footer / produktyPage - description /
+//___'p-small text-left text-grey group-hover:text-light duration-[0.3s] delay-[0.1s] ease-in';
+
 export {
   vertGap,
   horizGap,

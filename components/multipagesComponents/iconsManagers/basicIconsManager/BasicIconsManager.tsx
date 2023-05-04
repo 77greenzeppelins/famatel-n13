@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 /**Components**/
 import CardFrame from '../../cardsCatalogs/__cardFrame/CardFrame';
 import IconsDescription from '../iconsDescription/IconsDescription';
@@ -37,8 +37,9 @@ const BasicIconsManager: React.FunctionComponent<{
     /*trigger this event only on demand i.e. must be allowed explicitelly*/
     const target = event.target as HTMLElement; //TS requirements
     if (isHoverabled && target.id) {
-      //   console.log('target.id:', target.id);
       setIconState({ id: target.id });
+      // console.log('..... onHoverStartHandler / target.id:', target.id);
+      // console.log('..... onHoverStartHandler / iconState.id:', iconState.id);
     }
   };
 
@@ -47,8 +48,13 @@ const BasicIconsManager: React.FunctionComponent<{
     if (isHoverabled) {
       // const target = event.target as HTMLElement; //TS requirements
       setIconState({ id: '' });
+      // console.log('..... onHoverEndHandler / id:', iconState.id);
     }
   };
+
+  // useEffect(() => {
+  //   console.log('..... onHoverEndHandler / id:', iconState.id);
+  // }, [iconState.id]);
   /**JSX**/
   return (
     <div
@@ -101,7 +107,7 @@ const BasicIconsManager: React.FunctionComponent<{
             </motion.div>
           ))}
       </div>
-      <div className="flex h-[1rem] lg:h-full  leading-none">
+      <div className="flex h-[24px]">
         <IconsDescription iconState={iconState} />
       </div>
     </div>

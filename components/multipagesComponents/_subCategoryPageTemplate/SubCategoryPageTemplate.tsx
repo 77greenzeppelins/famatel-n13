@@ -47,7 +47,7 @@ const SubCategoryPageTemplate: React.FunctionComponent<{
             hasBox={false}
             hasVerticalOrnament={true}
           /> */}
-          <FadingHeader label={smallPseudoHeaders.n5} />
+          <FadingHeader label={smallPseudoHeaders.n4} />
           <ProductsCatalog productCardsData={productCardsData} />
         </SectionContentLayout>
         {

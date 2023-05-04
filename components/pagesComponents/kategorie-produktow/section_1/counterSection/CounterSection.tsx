@@ -1,16 +1,16 @@
 import React, { ForwardedRef, forwardRef } from 'react';
 /**Components**/
 import NumbersDisplayer from '../../../../multipagesComponents/counters/numbersDisplayer/NumbersDisplayer';
+import LinkWithSpanAndIcon from '../../../../_basicComponents/links/linkWithSpanAndIcon/LinkWithSpanAndIcon';
+import AnimatedSpanHeader from '../../../../multipagesComponents/pseudoHeaders/animatedSpanHeader/AnimatedSpanHeader';
 /**Basic Data*/
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
-import LinkWithSpanAndIcon from '../../../../_basicComponents/links/linkWithSpanAndIcon/LinkWithSpanAndIcon';
 
 /**HardCoded Style*/
 const textStyle =
   'text-corpo text-center text-[1.75rem] xxs:text-[2.75rem] xs4xx:text-[4.5rem] lg:text-[5.5rem] font-bold tracking-[2px] leading-tight';
 
 /**TS**/
-
 type RefType = HTMLDivElement;
 
 type PropsType = {
@@ -27,10 +27,7 @@ const CounterSection = forwardRef(
   (props: PropsType, ref: ForwardedRef<RefType>) => {
     return (
       <div className="flex flex-col w-full items-center ">
-        <div
-          className=""
-          // className="w-5/12 fc"
-        >
+        <div>
           <NumbersDisplayer
             currentCategoryIndex={props.categoryIndex}
             digitStyle={textStyle}
@@ -38,22 +35,20 @@ const CounterSection = forwardRef(
             countedStaff={catalogStructureData.length}
           />
         </div>
-        <div className="fc w-full" ref={ref}>
+        <div className="fc flex-col w-full" ref={ref}>
+          <AnimatedSpanHeader
+            uniqueKey={props.categoryIndex}
+            label={catalogStructureData[props.categoryIndex].mainCategoryName}
+          />
           <LinkWithSpanAndIcon
-            uniqueKeyToAnimate={
-              catalogStructureData[props.categoryIndex].mainCategoryUrl
-            }
+            uniqueKeyToAnimate={''} //___empty means no animation in <span>
             linkHref={catalogStructureData[props.categoryIndex].mainCategoryUrl}
-            linkLabel={
-              catalogStructureData[props.categoryIndex].mainCategoryName
-            }
-            ariaLabel={`Link do kategorii: ${
-              catalogStructureData[props.categoryIndex].mainCategoryName
-            }`}
-            linkStyle="relative flex flex-col items-center justify-center w-full group"
-            //___h-full xl:h-full
-            spanStyle="text-grey text-center text-[1.25rem] xs:text-[1.5rem]  xs:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight flex items-center w-fit max-w-[750px] h-[72px] lg:h-[60px] disable-soft"
-            //___error maker: group-hover:text-light ease-in" ???
+            linkLabel={'Szczegóły kategorii'}
+            ariaLabel={`Link do strony: Kategorie Produktów`}
+            linkStyle="fc gap-x-4  group px-4 py-1 bg-corpo rounded-sm"
+            spanStyle={`p-small text-dark font-bold group-hover:text-light group-hover:font-normal  ease-in duration-[0.4s] delay-[0.1s] `}
+            //text-[0.75rem]  lg:text-[1rem] tracking-[2px] leading-tight
+            iconStyle="fc h-4 w-4  aspect-square stroke-dark group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0"
           />
         </div>
       </div>

@@ -32,7 +32,7 @@ const Section_1: React.FunctionComponent<{
           arrayOrder={1} //___specifief if read array from first or the last item
         />
       </div>
-      <div className="flex flex-col w-full gap-4">
+      <div className="flex flex-col w-full gap-12">
         <div className="flex justify-center w-full ">
           <CounterSection categoryIndex={categoryIndex} ref={viewRef} />
         </div>

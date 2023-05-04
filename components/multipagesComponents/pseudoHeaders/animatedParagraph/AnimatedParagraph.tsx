@@ -1,9 +1,9 @@
 import React from 'react';
-/** */
+/**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
 import { opacityScaleYVariants } from '../../../../utils/framerMotion/framerMotionUtils';
 /**HardCoded Staff*/
-const spanDefaultStyle = ` text-grey text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] flex items-center w-fit disable-soft px-4`;
+// const spanDefaultStyle = ` text-grey text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight group-hover:text-light ease-in duration-[0.4s] delay-[0.1s] flex items-center w-fit disable-soft px-4`;
 const paragraphDefaultStyle =
   'p-small text-left text-grey group-hover:text-light duration-[0.3s] delay-[0.1s] ease-in';
 

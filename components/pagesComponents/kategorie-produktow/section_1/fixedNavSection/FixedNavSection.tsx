@@ -15,6 +15,8 @@ const moreThen640Variant = {
 
 /**HardCodedStaff*/
 const smValue = 640; //___main layout setter
+const lessThen640Style = 'border-t border-l border-r';
+const moreThen640Style = 'border-t border-l border-b';
 
 /**TS**/
 interface Props {
@@ -24,23 +26,30 @@ interface Props {
   categoriesNumber: number;
 }
 
+/**----------------------------------------**/
 const FixedNavSection: React.FC<Props> = ({
   isInView,
   categoryIndex,
   setCategoryIndex,
   categoriesNumber,
 }) => {
+  /**Staff for responsive layout**/
   const { width } = useWindowSize({ screensNumber: 1 });
+  const layoutCondition = width >= smValue;
   /**JSX**/
   return (
     <motion.div
       className="fixed fc w-full h-[68px] sm:h-full sm:w-[80px] right-0 bottom-0 "
       custom={isInView}
-      variants={width >= smValue ? moreThen640Variant : lessThen640Variant}
+      variants={layoutCondition ? moreThen640Variant : lessThen640Variant}
       animate="to"
-      transition={{ delay: 0.1, duration: 0.6 }}
+      transition={{ delay: 0.2, duration: 0.6 }}
     >
-      <div className="fc w-[90%] h-full sm:w-full sm:h-[260px]  bg-dark border border-corpo py-6">
+      <div
+        className={`fc w-[90%] h-full sm:w-full sm:h-[260px] bg-dark ${
+          layoutCondition ? moreThen640Style : lessThen640Style
+        } border-corpo py-6`}
+      >
         <ButtonsPanel
           categoryIndex={categoryIndex}
           setCategoryIndex={setCategoryIndex}
