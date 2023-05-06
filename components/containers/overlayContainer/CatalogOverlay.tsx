@@ -4,7 +4,7 @@ import { useSnapshot } from 'valtio';
 import { globalState } from '../../../globalState/globalState';
 /**FramerMotion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
-import ProduktyDropDownMenu from '../../layouts/rootLayout/header/dropDownMenus/allMenus/produktyDropDownMenu/ProduktyDropDownMenu';
+// import ProduktyDropDownMenu from '../../layouts/rootLayout/header/dropDownMenus/allMenus/produktyDropDownMenu/ProduktyDropDownMenu';
 
 const CatalogOverlay = () => {
   /**GlobalState Section**/
@@ -18,7 +18,7 @@ const CatalogOverlay = () => {
           className="fixed flex justify-center left-0 right-0 top-[50px] bottom-0 bg-greyShade2"
           //___pointer-events-none
         >
-          <ProduktyDropDownMenu />
+          {/* <ProduktyDropDownMenu /> */}
         </div>
       )}
     </AnimatePresence>
