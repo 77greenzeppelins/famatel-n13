@@ -6,12 +6,13 @@ import ProduktyDropDownMenu from './allMenus/produktyDropDownMenu/ProduktyDropDo
 /**TS**/
 interface IDropDownMenusArray {
   id: string;
-  Component: FunctionComponent<{}>;
+  // Component: FunctionComponent<{}>;
 }
 
 /**Array of all DropDownMenus**/
 const dropDownMenusArray: IDropDownMenusArray[] = [
-  { id: menuLinkLabel[1], Component: ProduktyDropDownMenu },
+  // { id: menuLinkLabel[1], Component: ProduktyDropDownMenu },
+  { id: menuLinkLabel[1] },
 ];
 
 export { dropDownMenusArray };

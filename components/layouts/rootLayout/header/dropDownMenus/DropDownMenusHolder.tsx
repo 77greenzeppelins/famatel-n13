@@ -33,7 +33,7 @@ const DropDownMenusHolder = ({
             initial="initial"
             exit="initial"
           >
-            {dropDownMenusArray.map(({ id, Component }) => {
+            {/* {dropDownMenusArray.map(({ id, Component }) => {
               if (label === id) {
                 return (
                   <React.Fragment key={id}>
@@ -43,7 +43,7 @@ const DropDownMenusHolder = ({
                   </React.Fragment>
                 );
               }
-            })}
+            })} */}
           </motion.div>
         )}
       </AnimatePresence>
