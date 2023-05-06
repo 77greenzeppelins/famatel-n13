@@ -34,10 +34,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         className={`${haasFont.className} `}
       >
         {/* <div className="relative z-[10]">{children}</div> */}
-        {/* <Header /> */}
+
         {/* <CatalogOverlay /> */}
         {children}
-        <Header />
+        {/* <Header /> */}
+        <Header2 />
 
         <MobileMenuButton
           mobileMenuOpener={setIsMobileMenuOpen}

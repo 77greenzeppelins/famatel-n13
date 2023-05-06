@@ -1,9 +1,9 @@
 import React from 'react';
 /**Components**/
-import CardFrame from '../../../../../../../multipagesComponents/cardsCatalogs/__cardFrame/CardFrame';
-import Clock from '../../../../../../../multipagesComponents/timeAndData/Clock';
-import DateDisplayer from '../../../../../../../multipagesComponents/timeAndData/DateDisplayer';
-import SvgLogoF from '../../../../../../../SVG/logo/SvgLogoF';
+import CardFrame from '../../../../../../multipagesComponents/cardsCatalogs/__cardFrame/CardFrame';
+import Clock from '../../../../../../multipagesComponents/timeAndData/Clock';
+import DateDisplayer from '../../../../../../multipagesComponents/timeAndData/DateDisplayer';
+import SvgLogoF from '../../../../../../SVG/logo/SvgLogoF';
 
 /**--------------------------**/
 const SpecialCard: React.FC<{

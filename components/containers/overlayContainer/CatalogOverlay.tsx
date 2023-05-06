@@ -1,24 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 /**GlobalState Steff*/
 import { useSnapshot } from 'valtio';
 import { globalState } from '../../../globalState/globalState';
 /**FramerMotion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
-// import ProduktyDropDownMenu from '../../layouts/rootLayout/header/dropDownMenus/allMenus/produktyDropDownMenu/ProduktyDropDownMenu';
+import { useRouter } from 'next/router';
+import ProduktyDropDownMenu from '../../layouts/rootLayout/header/dropDownCatalog/produktyDropDownMenu/ProduktyDropDownMenu';
 
+/**TS**/
+interface State {
+  isHovered: boolean;
+}
+
+/**-----------------------------*/
 const CatalogOverlay = () => {
   /**GlobalState Section**/
   const snap = useSnapshot(globalState);
+
+  /**useRouter Section*/
+  /**why: for style sake;  I want link to be in corpo color and has no border-bottom when user is on its corresponding page */
+  const router = useRouter();
+
+  /**Local State mr_1**/
+  const [hoverState, setHoverState] = useState<State>({ isHovered: false });
+  /**Local State nr_2**/
+  const [isClicked, setIsClicked] = useState(false);
+
+  /**It allowes to close dropdownMenu when url changes*/
+  useEffect(() => {
+    return () => {
+      setHoverState({ isHovered: false });
+      setIsClicked(false);
+    };
+  }, [router.asPath]);
+
   /**JSX*/
   return (
     <AnimatePresence mode="wait">
       {snap.isCatalogOpen && (
         <div
-          data-layout="wrapper_for_DropDownMenuHolder"
-          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-0 bg-greyShade2"
-          //___pointer-events-none
+          data-layout="wrapper_for_ProduktyDropDownMenu"
+          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] pointer-events-none "
         >
-          {/* <ProduktyDropDownMenu /> */}
+          <ProduktyDropDownMenu
+            isHovered={snap.isCatalogOpen}
+            hasDropDownMenu={true}
+          />
         </div>
       )}
     </AnimatePresence>

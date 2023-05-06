@@ -18,13 +18,13 @@ const EventsPanel = () => {
   return (
     <div className="flex">
       {width >= layoutTreshold_1 ? (
-        <div className="fc h-6 w-10">
+        <div className="fc h-6 w-16">
           {' '}
           <ProductBrowserButton />
         </div>
       ) : null}
       {width >= layoutTreshold_1 ? (
-        <div className="relative fc h-6 w-10">
+        <div className="relative fc h-6 w-16">
           {' '}
           <CatalogButton />
           <CatalogOverlay />

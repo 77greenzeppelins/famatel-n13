@@ -16,7 +16,6 @@ const CatalogOpener: React.FunctionComponent<{
   setHoverState: React.Dispatch<
     React.SetStateAction<{
       isHovered: boolean;
-      label: string;
     }>
   >;
   label: string;
@@ -33,7 +32,6 @@ const CatalogOpener: React.FunctionComponent<{
     setHoverState(prevState => ({
       ...prevState,
       isHovered: !prevState.isHovered,
-      label: target.id,
     }));
     //___set timer...
     const timer = setTimeout(() => {

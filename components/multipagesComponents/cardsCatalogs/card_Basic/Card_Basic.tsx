@@ -10,8 +10,8 @@ import ArrowLongRightIcon from '../../../SVG/icons/ArrowLongRightIcon';
 import { useRouter } from 'next/router';
 
 /**Tailwind**/
-const basicTextStyle =
-  ' text-center text-[0.5rem] xs3xx:text-[0.625rem] md:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300 ';
+// const basicTextStyle =
+//   ' text-center text-[0.5rem] xs3xx:text-[0.625rem] md:text-[0.75rem] xxxl:text-[1.125rem] tracking-[0.09rem] leading-normal group-hover:text-light ease-in duration-300 ';
 
 /*
 used in: manu expanded menu / catalog....

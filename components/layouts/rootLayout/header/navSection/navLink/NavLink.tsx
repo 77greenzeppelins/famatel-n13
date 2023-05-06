@@ -2,14 +2,17 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 /**Components*/
-import DropDownMenusHolder from '../../dropDownMenus/DropDownMenusHolder';
 import CatalogOpener from '../catalogOpener/CatalogOpener';
-import ProduktyDropDownMenu from '../../dropDownMenus/allMenus/produktyDropDownMenu/ProduktyDropDownMenu';
+import ProduktyDropDownMenu from '../../dropDownCatalog/produktyDropDownMenu/ProduktyDropDownMenu';
 /**TS**/
 interface Props {
   label: string;
   url: string;
   hasDropDownMenu: boolean;
+}
+
+interface State {
+  isHovered: boolean;
 }
 
 /**---------------------------------------------------------------------**/
@@ -21,20 +24,14 @@ const NavLink: React.FC<Props> = ({ label, url, hasDropDownMenu }) => {
   const isActive = router.asPath === url;
 
   /**Local State mr_1**/
-  const [hovererState, setHoverState] = useState<{
-    isHovered: boolean;
-    label: string;
-  }>({
-    isHovered: false,
-    label: '',
-  });
+  const [hoverState, setHoverState] = useState<State>({ isHovered: false });
   /**Local State nr_2**/
   const [isClicked, setIsClicked] = useState(false);
 
   /**It allowes to close dropdownMenu when url changes*/
   useEffect(() => {
     return () => {
-      setHoverState({ isHovered: false, label: '' });
+      setHoverState({ isHovered: false });
       setIsClicked(false);
     };
   }, [router.asPath]);
@@ -44,17 +41,11 @@ const NavLink: React.FC<Props> = ({ label, url, hasDropDownMenu }) => {
     <>
       <li data-component="NavLink_container" className="relative ml-6 fc ">
         <div
-          data-layout="wrapper_for_DropDownMenuHolder"
+          data-layout="wrapper_for_ProduktyDropDownMenu"
           className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] pointer-events-none "
         >
-          {/* <DropDownMenusHolder
-            isHovered={hovererState.isHovered}
-            label={hovererState.label}
-            hasDropDownMenu={hasDropDownMenu}
-          /> */}
           <ProduktyDropDownMenu
-            isHovered={hovererState.isHovered}
-            label={hovererState.label}
+            isHovered={hoverState.isHovered}
             hasDropDownMenu={hasDropDownMenu}
           />
         </div>
