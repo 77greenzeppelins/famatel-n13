@@ -29,10 +29,11 @@ const CatalogOverlay = () => {
   /**It allowes to close dropdownMenu when url changes*/
   useEffect(() => {
     return () => {
-      setHoverState({ isHovered: false });
-      setIsClicked(false);
+      // setHoverState({ isHovered: false });
+      // setIsClicked(false);
+      globalState.isCatalogOpen = !snap.isCatalogOpen;
     };
-  }, [router.asPath]);
+  }, [router.asPath, snap.isCatalogOpen]);
 
   /**JSX*/
   return (
