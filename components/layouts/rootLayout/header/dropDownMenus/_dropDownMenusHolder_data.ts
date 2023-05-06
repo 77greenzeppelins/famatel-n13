@@ -2,7 +2,7 @@
 import { FunctionComponent } from 'react';
 import { menuLinkLabel } from '../../../../../data/_data';
 /**Componentrs**/
-import ProduktyDropDownMenu from './allMenus/produktyDropDownMenu/ProduktyDropDownMenu';
+// import ProduktyDropDownMenu from './allMenus/produktyDropDownMenu/ProduktyDropDownMenu';
 /**TS**/
 interface IDropDownMenusArray {
   id: string;
