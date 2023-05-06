@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductBrowser from '../../_basicComponents/forms/productBrowser/ProductBrowser';
 import Section2 from './section_2/Section2';
 /**Components**/
 
@@ -14,8 +15,11 @@ const NowosciContent = () => {
       data-component="KontaktContent__container"
       className="relative bg-dark pt-[60px]  "
     >
-      <div className="fc w-full min-h-screen inner-px-md-xl-xxl">
+      <div className="w-full min-h-screen fc inner-px-md-xl-xxl">
         <Section2 />
+      </div>
+      <div className="w-full min-h-screen fc inner-px-md-xl-xxl">
+        <ProductBrowser />
       </div>
     </div>
   );

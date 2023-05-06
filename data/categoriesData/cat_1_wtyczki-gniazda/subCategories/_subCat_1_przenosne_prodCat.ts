@@ -38,6 +38,7 @@ const headerBottomData_3 = [
 Data for Components
 */
 const wtyczkiGniazdaPrzenosne_tablesData = [
+  //__1
   {
     tablesData: [
       //___for 16A

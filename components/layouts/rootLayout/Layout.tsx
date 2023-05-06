@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 /**Components*/
-import Header from './header/Header';
+// import Header from './header/Header';
+import Header2 from './header/Header2';
 import MobileMenuButton from '../../multipagesComponents/mobileMenu/mobileMenuButton/MobileMenuButton';
 import MobileMenuOverlay from '../../multipagesComponents/mobileMenu/mobileMenuOverlay/MobileMenuOverlay';
 import MobileContactPanel from '../../multipagesComponents/mobileMenu/mobileContactPanel/MobileContactPanel';
@@ -10,6 +11,8 @@ import CookiesPopUp from './cookiesPopUp/CookiesPopUp';
 import { mobileMenuData } from '../../../data/_data';
 /**Font Staff**/
 import localFont from '@next/font/local';
+import CatalogOverlay from '../../containers/overlayContainer/CatalogOverlay';
+
 const haasFont = localFont({
   src: '../../../public/fonts/HaasGrotDisp-55Roman.woff2',
   // subsets: ["latin"]
@@ -28,11 +31,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {' '}
       <div
         data-component="RootLayout__container"
-        className={`${haasFont.className}`}
+        className={`${haasFont.className} relative `}
       >
         {/* <div className="relative z-[10]">{children}</div> */}
+        <Header2 />
+        <CatalogOverlay />
         {children}
-        <Header />
+
         <MobileMenuButton
           mobileMenuOpener={setIsMobileMenuOpen}
           mobileMenuState={isMobileMenuOpen}
@@ -50,6 +55,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           maxW={mobileMenuData.maxW}
           minH={mobileMenuData.minH}
         />
+
         <Footer />
         <CookiesPopUp />
       </div>

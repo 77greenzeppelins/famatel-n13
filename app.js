@@ -21,6 +21,14 @@ app.prepare().then(() => {
 
       const { pathname, query } = parsedUrl;
 
+// Redirect www to non-www version
+    // if (req.headers.host.startsWith('www.')) {
+    //     res.writeHead(301, { Location: `https://${hostname}${pathname}` });
+    //     res.end();
+    //     return;
+    //   }
+
+
       if (pathname === '/a') {
         await app.render(req, res, '/a', query);
       } else if (pathname === '/b') {

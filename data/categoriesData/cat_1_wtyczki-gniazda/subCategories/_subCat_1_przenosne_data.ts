@@ -13,6 +13,7 @@ const wtyczkiGniazdaPrzenosne_SubCategory_data = {
 };
 
 const productCardsData: IF_ProductCardData[] = [
+  //__1
   {
     arrayIndex: 0,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/wtyczki-ip54-16A-32A`,
@@ -22,6 +23,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: SpeedPRO',
     altName: 'Wtyczka przenośna SpeedPRO',
   },
+  //__2
   {
     arrayIndex: 1,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/wtyczki-ip67-16A-32A`,
@@ -31,6 +33,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: SpeedPRO',
     altName: 'Wtyczka przenośna SpeedPRO',
   },
+  //__3
   {
     arrayIndex: 2,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/wtyczki-ip67-63A`,
@@ -40,6 +43,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: SpeedPRO',
     altName: 'Wtyczka przenośna SpeedPRO',
   },
+  //__4
   {
     arrayIndex: 3,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/wtyczki-ip67-125A`,
@@ -49,6 +53,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: SpeedPRO',
     altName: 'Wtyczka przenośna SpeedPRO',
   },
+  //__4
   {
     arrayIndex: 4,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/gniazda-ip54-16A-32A`,
@@ -58,6 +63,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: SpeedPRO',
     altName: 'Gniazdo przenośne SpeedPRO',
   },
+  //__6
   {
     arrayIndex: 5,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/gniazda-ip67-16A-32A`,
@@ -67,6 +73,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: SpeedPRO',
     altName: 'Gniazdo przenośne SpeedPRO',
   },
+  //__7
   {
     arrayIndex: 6,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/gniazda-ip67-63A`,
@@ -76,6 +83,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: SpeedPRO',
     altName: 'Gniazdo przenośne SpeedPRO',
   },
+  //__8
   {
     arrayIndex: 7,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/gniazda-ip67-125A`,
@@ -85,6 +93,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: SpeedPRO',
     altName: 'Gniazdo przenośne SpeedPRO',
   },
+  //__9
   {
     arrayIndex: 8,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/wtyczki-ip54-16A-top`,
@@ -94,6 +103,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: TOP SpeedPRO',
     altName: 'Wtyczka przenośna TOP SpeedPRO',
   },
+  //__10
   {
     arrayIndex: 9,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/wtyczki-ip67-16A-top`,
@@ -103,6 +113,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: TOP SpeedPRO',
     altName: 'Wtyczka przenośna TOP SpeedPRO',
   },
+  //__11
   {
     arrayIndex: 10,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/gniazda-ip54-16A-top`,
@@ -112,6 +123,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: TOP SpeedPRO',
     altName: 'Gniazdo przenośne TOP SpeedPRO',
   },
+  //__12
   {
     arrayIndex: 11,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/gniazda-ip67-16A-top`,
@@ -121,6 +133,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: 'Kolekcja: TOP SpeedPRO',
     altName: 'Gniazdo przenośne TOP SpeedPRO',
   },
+  //__13
   {
     arrayIndex: 12,
     path: `${catalogStructureData[0].subCategoriesUrls[0]}/wtyczki-ip44-16A-32A`,
