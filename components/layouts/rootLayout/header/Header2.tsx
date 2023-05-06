@@ -5,7 +5,6 @@ import NavForMainPages from './navSection/NavForMainPages';
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
 import EventsPanel from './eventsPanel/EventsPanel';
-import CatalogOverlay from '../../../containers/overlayContainer/CatalogOverlay';
 
 /**----------------------**/
 const Header2 = () => {
@@ -58,7 +57,6 @@ const Header2 = () => {
               <EventsPanel />
             </div>
           </motion.div>
-          <CatalogOverlay />
         </div>
       </div>
     </header>

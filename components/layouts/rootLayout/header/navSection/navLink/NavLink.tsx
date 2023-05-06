@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 /**Components*/
 import DropDownMenusHolder from '../../dropDownMenus/DropDownMenusHolder';
 import CatalogOpener from '../catalogOpener/CatalogOpener';
+import ProduktyDropDownMenu from '../../dropDownMenus/allMenus/produktyDropDownMenu/ProduktyDropDownMenu';
 /**TS**/
 interface Props {
   label: string;
@@ -46,7 +47,12 @@ const NavLink: React.FC<Props> = ({ label, url, hasDropDownMenu }) => {
           data-layout="wrapper_for_DropDownMenuHolder"
           className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] pointer-events-none "
         >
-          <DropDownMenusHolder
+          {/* <DropDownMenusHolder
+            isHovered={hovererState.isHovered}
+            label={hovererState.label}
+            hasDropDownMenu={hasDropDownMenu}
+          /> */}
+          <ProduktyDropDownMenu
             isHovered={hovererState.isHovered}
             label={hovererState.label}
             hasDropDownMenu={hasDropDownMenu}

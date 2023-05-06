@@ -1,6 +1,7 @@
 import React from 'react';
 /**Hooks staff*/
 import useWindowSize from '../../../../../utils/hooks/useWindowSize';
+import CatalogOverlay from '../../../../containers/overlayContainer/CatalogOverlay';
 import CatalogButton from '../dropDownCatalog/catalogButton/CatalogButton';
 import ProductBrowserButton from '../productBrowser/productBrowserButton/ProductBrowserButton';
 /**HardCoded Staff*/
@@ -23,9 +24,10 @@ const EventsPanel = () => {
         </div>
       ) : null}
       {width >= layoutTreshold_1 ? (
-        <div className="fc h-6 w-10">
+        <div className="relative fc h-6 w-10">
           {' '}
           <CatalogButton />
+          <CatalogOverlay />
         </div>
       ) : null}
       {width >= layoutTreshold_2 ? (

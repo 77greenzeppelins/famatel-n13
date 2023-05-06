@@ -8,18 +8,24 @@ import useWindowSize from '../../../../utils/hooks/useWindowSize';
 import useMeasure from 'react-use-measure';
 /**Framer Motion Staff**/
 import { AnimatePresence, motion } from 'framer-motion';
-import ProduktyDropDownMenu from '../../../layouts/rootLayout/header/dropDownMenus/allMenus/produktyDropDownMenu/ProduktyDropDownMenu';
 /**Hardcoded Staff**/
 const mountingConditionValue = 1024;
 const minHeight = 500;
 
-/**-----------------------------------------------------**/
-const MobileMenuOverlay: React.FunctionComponent<{
+interface Props {
   mobileMenuOpener: Dispatch<SetStateAction<boolean>>;
   isMobileMenuOpen: boolean;
   setRoadPrompt: React.Dispatch<React.SetStateAction<boolean>>;
   roadPrompt: boolean;
-}> = ({ isMobileMenuOpen, mobileMenuOpener, setRoadPrompt, roadPrompt }) => {
+}
+
+/**-----------------------------------------------------**/
+const MobileMenuOverlay: React.FC<Props> = ({
+  isMobileMenuOpen,
+  mobileMenuOpener,
+  setRoadPrompt,
+  roadPrompt,
+}) => {
   /**UseRouter sectioin**/
   const router = useRouter();
 
@@ -79,9 +85,8 @@ const MobileMenuOverlay: React.FunctionComponent<{
           }}
         >
           <div className="relative fc w-full h-full bg-dark inner-px-md-xl-xxl">
-            {/* <LinksSection isSimple={height < minHeight} />
-            <RoadPromptSection roadPrompt={roadPrompt} /> */}
-            <ProduktyDropDownMenu />
+            <LinksSection isSimple={height < minHeight} />
+            <RoadPromptSection roadPrompt={roadPrompt} />
           </div>
         </motion.div>
       )}

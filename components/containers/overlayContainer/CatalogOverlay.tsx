@@ -15,7 +15,7 @@ const CatalogOverlay = () => {
       {snap.isCatalogOpen && (
         <div
           data-layout="wrapper_for_DropDownMenuHolder"
-          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] bg-greyShade2"
+          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-0 bg-greyShade2"
           //___pointer-events-none
         >
           <ProduktyDropDownMenu />

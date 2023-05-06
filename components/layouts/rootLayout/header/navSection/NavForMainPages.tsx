@@ -58,11 +58,9 @@ const NavForMainPages: React.FunctionComponent = () => {
     }
   };
 
-  /**Hook Section; data for calculations**/
   const { width } = useWindowSize({
     screensNumber: 1,
   });
-
   /**JSX*/
   return <nav className="h-full ">{createContent(width)}</nav>;
 };
