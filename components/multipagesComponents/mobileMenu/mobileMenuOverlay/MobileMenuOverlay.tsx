@@ -8,6 +8,7 @@ import useWindowSize from '../../../../utils/hooks/useWindowSize';
 import useMeasure from 'react-use-measure';
 /**Framer Motion Staff**/
 import { AnimatePresence, motion } from 'framer-motion';
+import ProduktyDropDownMenu from '../../../layouts/rootLayout/header/dropDownMenus/allMenus/produktyDropDownMenu/ProduktyDropDownMenu';
 /**Hardcoded Staff**/
 const mountingConditionValue = 1024;
 const minHeight = 500;
@@ -27,7 +28,7 @@ const MobileMenuOverlay: React.FunctionComponent<{
 
   /*Condition
   why: it allows to close <MobileMenuOverlay> when screen width changes; 
-  solved bug: without this ifstatement when user opens <MobileMenuOverlay> and inreases the width menu don't close even though "closeButton" disappears 
+  solved bug: without this if-statement when user opens <MobileMenuOverlay> and inceases the width menu don't close even though "closeButton" disappears 
   */
   const mountingCondition = width >= mountingConditionValue;
   useEffect(() => {
@@ -78,8 +79,9 @@ const MobileMenuOverlay: React.FunctionComponent<{
           }}
         >
           <div className="relative fc w-full h-full bg-dark inner-px-md-xl-xxl">
-            <LinksSection isSimple={height < minHeight} />
-            <RoadPromptSection roadPrompt={roadPrompt} />
+            {/* <LinksSection isSimple={height < minHeight} />
+            <RoadPromptSection roadPrompt={roadPrompt} /> */}
+            <ProduktyDropDownMenu />
           </div>
         </motion.div>
       )}

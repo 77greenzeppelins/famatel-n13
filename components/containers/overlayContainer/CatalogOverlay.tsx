@@ -13,28 +13,41 @@ const CatalogOverlay = () => {
   return (
     <AnimatePresence mode="wait">
       {snap.isCatalogOpen && (
-        <motion.div
-          data-component="MobileMenuOverlay__container"
-          key={snap.isCatalogOpen.toString()}
-          className="fixed left-0 right-0 top-0 bottom-0 z-[490] bg-grey"
-          initial={{ x: '100%' }}
-          animate={{
-            x: 0,
-            transition: { duration: 0.6, delay: 0.1, ease: 'easeOut' },
-          }}
-          exit={{
-            opacity: 0.9,
-            x: '100%',
-            transition: { duration: 0.8, delay: 1, ease: 'easeOut' },
-          }}
+        <div
+          data-layout="wrapper_for_DropDownMenuHolder"
+          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] bg-greyShade2"
+          //___pointer-events-none
         >
-          <div className="relative fc w-full h-full bg-grey inner-px-md-xl-xxl">
-            <ProduktyDropDownMenu />
-          </div>
-        </motion.div>
+          <ProduktyDropDownMenu />
+        </div>
       )}
     </AnimatePresence>
   );
+  // return (
+  //   <AnimatePresence mode="wait">
+  //     {snap.isCatalogOpen && (
+  //       <motion.div
+  //         data-component="MobileMenuOverlay__container"
+  //         key={snap.isCatalogOpen.toString()}
+  //         className="fixed left-0 right-0 top-0 bottom-0 z-[490] bg-grey"
+  //         initial={{ x: '100%' }}
+  //         animate={{
+  //           x: 0,
+  //           transition: { duration: 0.6, delay: 0.1, ease: 'easeOut' },
+  //         }}
+  //         exit={{
+  //           opacity: 0.9,
+  //           x: '100%',
+  //           transition: { duration: 0.8, delay: 1, ease: 'easeOut' },
+  //         }}
+  //       >
+  //         <div className="relative fc w-full h-full bg-grey inner-px-md-xl-xxl">
+  //           <ProduktyDropDownMenu />
+  //         </div>
+  //       </motion.div>
+  //     )}
+  //   </AnimatePresence>
+  // );
   // return (
   //   <AnimatePresence>
   //     {snap.isCatalogOpen ? (
