@@ -3,7 +3,7 @@ import React from 'react';
 import { useSnapshot } from 'valtio';
 import { globalState } from '../../../globalState/globalState';
 /**FramerMotion Staff*/
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import ProduktyDropDownMenu from '../../layouts/rootLayout/header/dropDownMenus/allMenus/produktyDropDownMenu/ProduktyDropDownMenu';
 
 const CatalogOverlay = () => {
@@ -13,12 +13,22 @@ const CatalogOverlay = () => {
   return (
     <AnimatePresence>
       {snap.isCatalogOpen ? (
-        <div
+        <motion.div
           data-component="CatalogOverlay"
-          className="fixed inset-0 bg-dark  z-[490] pt-[60px]"
+          className="fixed left-0 right-0 top-0 bottom-0 z-[500] pt-[50px]"
+          initial={{ x: '100%' }}
+          animate={{
+            x: 0,
+            transition: { duration: 0.6, delay: 0.1, ease: 'easeOut' },
+          }}
+          exit={{
+            opacity: 0.9,
+            x: '100%',
+            transition: { duration: 0.8, delay: 1, ease: 'easeOut' },
+          }}
         >
           <ProduktyDropDownMenu />
-        </div>
+        </motion.div>
       ) : null}
     </AnimatePresence>
   );

@@ -20,7 +20,7 @@ const ProduktyDropDownMenu: React.FC = () => {
   return (
     <div
       id="ProduktyDropDownMenu__griddedContainer"
-      className="grid grid-rows-4 grid-cols-3 xs:grid-rows-3 xs:grid-cols-4 w-[100vw] h-[100%] pt-[24px] pb-[4rem] px-[1rem] gap-[0.75rem]"
+      className="grid grid-rows-4 grid-cols-3 xs:grid-rows-3 xs:grid-cols-4 w-full h-full pt-[24px] pb-[4rem] px-[1rem] gap-[0.75rem]"
       //___place-items-stretch
     >
       {catalogStructureData.map(
