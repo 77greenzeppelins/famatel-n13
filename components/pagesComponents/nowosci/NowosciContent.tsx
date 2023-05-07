@@ -1,14 +1,9 @@
 import React from 'react';
-import ProductBrowser from '../../_basicComponents/forms/productBrowser/ProductBrowser';
-import Section2 from './section_2/Section2';
 /**Components**/
+import Section2 from './section_2/Section2';
 
 /**----------------------------------**/
 const NowosciContent = () => {
-  /**Local State**/
-  // const [animationStage, setAnimationStage] = useState<number>(0);
-
-  // console.log('.......animationStage', animationStage);
   /**JSX**/
   return (
     <div
@@ -17,9 +12,6 @@ const NowosciContent = () => {
     >
       <div className="w-full min-h-screen fc inner-px-md-xl-xxl">
         <Section2 />
-      </div>
-      <div className="w-full min-h-screen fc inner-px-md-xl-xxl">
-        <ProductBrowser />
       </div>
     </div>
   );

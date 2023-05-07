@@ -1,9 +1,13 @@
 import { proxy } from 'valtio';
 
 type globalStateType = {
-  isCatalogOpen: boolean;
+  isCatalogOpened: boolean;
+  isProductBrowserOpened: boolean;
 };
 
-const globalState = proxy<globalStateType>({ isCatalogOpen: false });
+const globalState = proxy<globalStateType>({
+  isCatalogOpened: false,
+  isProductBrowserOpened: false,
+});
 
 export { globalState };

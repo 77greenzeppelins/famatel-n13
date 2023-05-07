@@ -22,7 +22,7 @@ const CatalogButton = () => {
     //___disable button
     setIsDisabled(true);
     //___do what you need to do...
-    globalState.isCatalogOpen = !snap.isCatalogOpen;
+    globalState.isCatalogOpened = !snap.isCatalogOpened;
     //___set timer...
     const timer = setTimeout(() => {
       setIsDisabled(false);
@@ -39,17 +39,17 @@ const CatalogButton = () => {
       <motion.button
         disabled={isDisabled}
         aria-label={'przycisk'}
-        aria-expanded={snap.isCatalogOpen ? 'true' : 'false'}
+        aria-expanded={snap.isCatalogOpened ? 'true' : 'false'}
         onClick={onClickHandler}
         className=" fc origin-center w-6 focus:outline-none disable pointer-events-auto focus-visible:ring focus-visible:ring-offset-2 ring-offset-dark focus-visible:ring-corpo"
         animate={{
-          rotateY: snap.isCatalogOpen ? 180 : 0,
+          rotateY: snap.isCatalogOpened ? 180 : 0,
           transition: { duration: 0.6, delay: 0.1, ease: 'easeOut' },
         }}
       >
         <ListIcon
           pathStyle={`${
-            snap.isCatalogOpen ? 'stroke-corpo ' : 'stroke-light'
+            snap.isCatalogOpened ? 'stroke-corpo ' : 'stroke-light'
           } transition-all`}
         />
       </motion.button>
