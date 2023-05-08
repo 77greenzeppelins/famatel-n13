@@ -1,8 +1,32 @@
 import { wtyczkiGniazdaPrzenosne_tablesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_1_przenosne_prodCat';
+/**TS**/
+interface TestData {
+  models: string[];
+  url: string;
+}
 
-const testFunction = (val: string) => {
-  console.log('testFunction / val:', val);
-};
+function findUrlByModel(
+  model: string,
+  testStaticData: TestData[],
+  setState: React.Dispatch<React.SetStateAction<string | null>>
+) {
+  const data = testStaticData.find(item => item.models.includes(model));
+  setState(data ? data.url : null);
+}
+// function getUrlByModel(
+//   model: string,
+//   testStaticData: TestData[]
+// ): string | null {
+//   for (const data of testStaticData) {
+//     if (data.models.includes(model)) {
+//       console.log('getUrlByModel / data.url:', data.url);
+//       return data.url;
+//     }
+//   }
+//   return null; // if model is not found in any TestData.models array
+// }
+
+/**------------------------------------------------------------------------------**/
 
 function createArrayOfLongerStrings(): { [key: number]: string[] }[] {
   return wtyczkiGniazdaPrzenosne_tablesData.map(item => {
@@ -31,46 +55,4 @@ function createArrayOfLongerStrings(): { [key: number]: string[] }[] {
   });
 }
 
-interface TestData {
-  models: string[];
-  url: string;
-}
-
-// function getUrlByModel(
-//   model: string,
-//   testStaticData: TestData[]
-// ): string | null {
-//   for (const data of testStaticData) {
-//     if (data.models.includes(model)) {
-//       console.log('getUrlByModel / data.url:', data.url);
-//       return data.url;
-//     }
-//   }
-//   return null; // if model is not found in any TestData.models array
-// }
-
-function findUrlByModel(
-  model: string,
-  testStaticData: TestData[],
-  setState: React.Dispatch<React.SetStateAction<string | null>>
-): string | null {
-  const data = testStaticData.find(item => item.models.includes(model));
-  //   console.log('findUrlByModel / data:', data);
-  setState(data ? data.url : null);
-  return data ? data.url : null;
-}
-
-/*
-__1: no return means no "string | null" as returned value37
-*/
-// function findUrlByModel(
-//   model: string,
-//   testStaticData: TestData[],
-//   setState: React.Dispatch<React.SetStateAction<string | null>>
-// ) {
-//   const data = testStaticData.find(item => item.models.includes(model));
-//   //   console.log('findUrlByModel / data:', data);
-//   setState(data ? data.url : null);
-// }
-
-export { testFunction, findUrlByModel };
+export { findUrlByModel };

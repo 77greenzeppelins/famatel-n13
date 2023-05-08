@@ -20,7 +20,7 @@ const frameData = {
 const FadingFrame = () => {
   /**JSX{*/
   return (
-    <div className=" absolute inset-0 w-full h-full">
+    <div className="absolute inset-0 w-full h-full ">
       <motion.div className="relative w-full h-full">
         <div className="absolute flex inset-x-0 top-0 h-[1px]">
           {frameData.horizontal.map(({ c, g, fromColor }, i) => (

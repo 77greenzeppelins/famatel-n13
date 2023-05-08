@@ -121,6 +121,9 @@
   .p-v-small {
     @apply text-[0.5rem] xxl:text-[0.625rem] xxxl:text-[0.75rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-01 lg:word-spacing-0125;
   }
+  .p-regular {
+    @apply text-[0.75rem]  lg:text-[1rem] tracking-[2px] leading-tight;
+  }
 
   .word-break-all {
     word-wrap: break-all;
