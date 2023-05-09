@@ -225,7 +225,7 @@ const story = {
     header: 'Wyszukiwarka produktów', //___?
     placeholder: 'np.: 13100', //___?
     header1: 'Wprowadź kod produktu:',
-    header2: 'Rezultat wyszukiwania',
+    header2: 'Rezultat wyszukiwania:',
 
     button: 'Szukaj',
     valMin: 'Podany kod jest zbyt krótki.',

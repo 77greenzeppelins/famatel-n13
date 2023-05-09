@@ -12,6 +12,7 @@ import { findUrlByModel } from './productBrowserUtils';
 /**BasicData**/
 import { story } from '../../../../data/_data';
 import { allProductsForBrowser } from './productBrowser_data';
+import ResponseDisplayer from './responseDisplayer/ResponseDisplayer';
 
 /**HardCoded Staff**/
 const numMinLength = 4;
@@ -32,7 +33,10 @@ const ProductBrowser = () => {
   /**Validation Section**/
   const validationSchema = Yup.object({
     model: Yup.string()
-      .matches(/^(1|2|3|9|6|RG|SPT)[cfgpst/]\w*/i, {
+      // .matches(/^(1|2|3|9|6|RG|SPT)[cfgpst/]\w*/i, {
+      //   message: story.productBrowser.valMatch,
+      // })
+      .matches(/^(1|2|3|6|9|RG|SPT)[cfgpst/0-9]*$/i, {
         message: story.productBrowser.valMatch,
       })
       .min(numMinLength, story.productBrowser.valMin)
@@ -59,7 +63,7 @@ const ProductBrowser = () => {
   // console.log('ProductBrowser / wantedModel:', wantedModel);
   /**JSX**/
   return (
-    <div className="flex flex-col items-center w-full h-full gap-10 pt-10 sm:pt-20 inner-px-md-xl-xxl bg-gradient-to-b from-dark via-dark to-transparent ">
+    <div className="w-full h-full pt-10 sm:pt-20 inner-px-md-xl-xxl bg-gradient-to-b from-dark via-dark to-transparent">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -77,7 +81,7 @@ const ProductBrowser = () => {
         }) => (
           <div
             data-layout="AllSectionContainer"
-            className="flex flex-col w-full h-full "
+            className="flex flex-col w-full h-full gap-y-10 "
           >
             {/*
             --------------------------------------request section
@@ -125,7 +129,8 @@ const ProductBrowser = () => {
             {/*
             --------------------------------------error section
             */}
-            <div className="flex justify-center sm:justify-start min-h-[32px] overflow-hidden ">
+            <div className="flex flex-col items-center w-full h-[32px] gap-x-10 sm:flex-row overflow-hidden">
+              <div className="flex justify-center w-full sm:w-[500px] sm:justify-start" />
               <ErrorDisplayer
                 mountingCondition={errors.model && touched.model}
                 errorText={errors.model}
@@ -135,16 +140,20 @@ const ProductBrowser = () => {
             --------------------------------------response section
             */}
             <div>
-              <ProductPageDisplayer
+              {/* <ProductPageDisplayer
                 wantedModel={wantedModel}
                 visibilityCondition={errors.model}
+                submitCount={submitCount}
+              /> */}
+              <ResponseDisplayer
+                wantedModel={wantedModel}
                 submitCount={submitCount}
               />
             </div>
           </div>
         )}
       </Formik>
-      <FadingFrame />
+      {/* <FadingFrame /> */}
     </div>
   );
 };

@@ -17,9 +17,9 @@ const ErrorDisplayer = ({ mountingCondition, errorText }: Props) => {
       {mountingCondition ? (
         <motion.div
           key={errorText}
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <p className="text-left p-regular text-corpo">{errorText}</p>
