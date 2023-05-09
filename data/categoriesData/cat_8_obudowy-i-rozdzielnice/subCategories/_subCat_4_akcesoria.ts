@@ -198,7 +198,7 @@ const productCardsData: IF_ProductCardData[] = [
     imageData: imgObudowyRozdzielnice_04_akcesoria[20],
     type: 'Padlock for precinct',
     // collection: ['Kolekcja:', 'IMPACT'],
-    model: 'Model: 3983',
+    model: 'Model: 3984',
   },
   {
     arrayIndex: 21,

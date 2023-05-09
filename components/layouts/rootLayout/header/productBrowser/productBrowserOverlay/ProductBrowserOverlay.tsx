@@ -48,7 +48,7 @@ const ProductBrowserOverlay = () => {
           initial="initial"
           exit="initial"
         >
-          <div className=" w-screen min-h-[400px] pointer-events-auto bg-dark">
+          <div className="w-screen min-h-screen pointer-events-auto ">
             <div className="w-[100vw] h-full fc">
               <ProductBrowser />
             </div>

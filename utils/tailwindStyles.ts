@@ -67,6 +67,11 @@ const tablesSectionContainer = 'flex flex-col w-full gap-16';
 //___text / footer / produktyPage - description /
 //___'p-small text-left text-grey group-hover:text-light duration-[0.3s] delay-[0.1s] ease-in';
 
+//taken from global.css
+// .p-medium {
+//   @apply text-[0.825rem] xxxl:text-[1rem] tracking-[1px] lg:tracking-[0.125rem] word-spacing-0125 lg:word-spacing-025;
+// }
+
 export {
   vertGap,
   horizGap,

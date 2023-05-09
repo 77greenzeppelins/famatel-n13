@@ -138,12 +138,12 @@ const productCardsData: IF_ProductCardData[] = [
   },
   {
     arrayIndex: 14,
-    path: `${rozdzielniceModuloweSubCategoryData.subCategoryUrl}/model-39054-T`,
+    path: `${rozdzielniceModuloweSubCategoryData.subCategoryUrl}/model-39072`,
     textIcons: ['IP65', '72DIN'],
     imageData: imgRozdzielniceModulowe_02_modulowe[14],
     type: 'Typ: Rozdzielnica modułowa ścienna',
     collection: ['Kolekcja: ACQUA'],
-    model: 'Model: 39054-T',
+    model: 'Model: 39072',
   },
 ];
 

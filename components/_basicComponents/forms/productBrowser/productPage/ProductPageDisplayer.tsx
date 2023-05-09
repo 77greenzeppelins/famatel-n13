@@ -14,9 +14,14 @@ const defaultLayoutStyle = 'flex items-center w-fit max-w-[750px] disable-soft';
 interface Props {
   wantedModel: string | null;
   visibilityCondition: string | boolean | undefined;
+  submitCount: number;
 }
 /**-------------------------------------**/
-const ProductPageDisplayer = ({ wantedModel, visibilityCondition }: Props) => {
+const ProductPageDisplayer = ({
+  wantedModel,
+  visibilityCondition,
+  submitCount,
+}: Props) => {
   const [isHovered, SetIsHovered] = useState(false);
   // if (Boolean(wantedModel)) {
   //   console.log("This code won't execute.");
@@ -28,19 +33,81 @@ const ProductPageDisplayer = ({ wantedModel, visibilityCondition }: Props) => {
   //     wantedModel === null
   //   );
   // }
-  console.log('ProductPageDisplayerst / wantedModel', wantedModel);
-  console.log(
-    'ProductPageDisplayerst / visibilityCondition',
-    visibilityCondition
-  );
+  // console.log(
+  //   "ProductPageDisplayerst / wantedModel === '' ",
+  //   wantedModel === ''
+  // );
+  // console.log(
+  //   'ProductPageDisplayerst / visibilityCondition',
+  //   visibilityCondition
+  // );
 
   // if (wantedModel === '') {
-  //   null;
+  //   console.log('wantedModel === " " ');
+  //   return null;
   // }
+
+  // if (visibilityCondition !== undefined) {
+  //   console.log('visibilityCondition !== undefined');
+  //   return null;
+  // }
+
+  // if (wantedModel === null) {
+  //   console.log('wantedModel === null');
+  // } else {
+  //   console.log('wantedModel === null / ...show link');
+  // }
+
+  // console.log('submitCount:', submitCount);
   /**JSX**/
   return (
     <AnimatePresence>
-      {/* {wantedModel === '' ||
+      {wantedModel === null ? (
+        <motion.div className="min-h-[20px] bg-greyShade2">
+          <p>{story.productBrowser.noProduct}</p>
+        </motion.div>
+      ) : wantedModel === '' ? null : (
+        <motion.div
+          className=" bg-greyShade2"
+          onHoverStart={e => {
+            // console.log('onHoverStart');
+            SetIsHovered(true);
+          }}
+          onHoverEnd={e => {
+            // console.log('onHoverEnd');
+            SetIsHovered(false);
+          }}
+        >
+          <LinkWithSpanAndIcon
+            uniqueKeyToAnimate={''} //___empty means no animation in <span>
+            linkHref={wantedModel}
+            linkLabel={story.productBrowser.isProduct}
+            ariaLabel={`Link do strony: Kategorie Produktów`}
+            linkStyle="fc gap-4  px-4 py-1 xl:py-4 rounded-sm "
+            spanStyle={`p-regular ${
+              isHovered ? 'text-light' : 'text-grey'
+            } ease-in duration-[0.4s] delay-[0.1s] `} //___group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]
+            // iconStyle="fc h-4 w-4 aspect-square stroke-grey hover:stroke-light hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0"
+            iconStyle={`fc h-4 w-4 aspect-square  ${
+              isHovered ? 'stroke-light ' : 'stroke-grey '
+            }    ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0`}
+          />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
+export default ProductPageDisplayer;
+
+//  iconStyle={`fc h-4 w-4 aspect-square  ${
+//               isHovered
+//                 ? 'stroke-light translate-x-1'
+//                 : 'stroke-grey translate-x-0'
+//             }    ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0`}
+
+{
+  /* {wantedModel === '' ||
       wantedModel === null ||
       visibilityCondition ? null : wantedModel === null ||
         visibilityCondition ? (
@@ -74,47 +141,5 @@ const ProductPageDisplayer = ({ wantedModel, visibilityCondition }: Props) => {
             }    ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0`}
           />
         </motion.div>
-      )} */}
-      {wantedModel === null ? (
-        <motion.div className="min-h-[20px] bg-greyShade2">
-          <p>{story.productBrowser.noProduct}</p>
-        </motion.div>
-      ) : wantedModel === '' ? null : (
-        <motion.div
-          className=" bg-greyShade2"
-          onHoverStart={e => {
-            console.log('onHoverStart');
-            SetIsHovered(true);
-          }}
-          onHoverEnd={e => {
-            console.log('onHoverEnd');
-            SetIsHovered(false);
-          }}
-        >
-          <LinkWithSpanAndIcon
-            uniqueKeyToAnimate={''} //___empty means no animation in <span>
-            linkHref={wantedModel}
-            linkLabel={story.productBrowser.isProduct}
-            ariaLabel={`Link do strony: Kategorie Produktów`}
-            linkStyle="fc gap-4  px-4 py-1 xl:py-4 rounded-sm "
-            spanStyle={`p-regular ${
-              isHovered ? 'text-light' : 'text-grey'
-            } ease-in duration-[0.4s] delay-[0.1s] `} //___group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]
-            // iconStyle="fc h-4 w-4 aspect-square stroke-grey hover:stroke-light hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0"
-            iconStyle={`fc h-4 w-4 aspect-square  ${
-              isHovered ? 'stroke-light ' : 'stroke-grey '
-            }    ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0`}
-          />
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};
-
-export default ProductPageDisplayer;
-
-//  iconStyle={`fc h-4 w-4 aspect-square  ${
-//               isHovered
-//                 ? 'stroke-light translate-x-1'
-//                 : 'stroke-grey translate-x-0'
-//             }    ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0`}
+      )} */
+}

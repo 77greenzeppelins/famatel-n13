@@ -5,20 +5,6 @@ import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
-const catalogVersion = [
-  '13631',
-  '13634',
-  '13377',
-  '23270',
-  '24373',
-  '24374',
-  '24377',
-  '23230',
-  '24333',
-  '24336',
-  '24337',
-];
-
 const gniazdaTablicowe_SubCategory_data = {
   subCategoryName: catalogStructureData[0].subCategoriesNames[1],
   subCategoryUrl: catalogStructureData[0].subCategoriesUrls[1],
@@ -26,6 +12,7 @@ const gniazdaTablicowe_SubCategory_data = {
 };
 
 const productCardsData: IF_ProductCardData[] = [
+  //__1
   {
     arrayIndex: 0,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip54-16A-32A-75`,
@@ -35,6 +22,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: ['Kolekcja:', 'SpeedPRO'],
     altName: 'Wtyczka tablicowa proste',
   },
+  //__2
   {
     arrayIndex: 1,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip54-16A-55`,
@@ -44,6 +32,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: ['Kolekcja:', 'SpeedPRO'],
     altName: 'Wtyczka tablicowa proste',
   },
+  //__3
   {
     arrayIndex: 2,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip67-63A`,
@@ -53,6 +42,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: ['Kolekcja:', 'SpeedPRO'],
     altName: 'Wtyczka tablicowa proste',
   },
+  //__4
   {
     arrayIndex: 3,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip54-16A-32A-75-cover`,
@@ -62,6 +52,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: ['Kolekcja:', 'SpeedPRO'],
     altName: 'Gniazdo tablicowe proste',
   },
+  //__5
   {
     arrayIndex: 4,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip67-16A-32A-75-cover`,
@@ -71,6 +62,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: ['Kolekcja:', 'SpeedPRO'],
     altName: 'Gniazdo tablicowe proste',
   },
+  //__6
   {
     arrayIndex: 5,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip67-63A-cover`,
@@ -80,6 +72,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: ['Kolekcja:', 'SpeedPRO'],
     altName: 'Gniazdo tablicowe proste',
   },
+  //__7
   {
     arrayIndex: 6,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/proste-ip67-125A-cover`,
@@ -89,6 +82,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: ['Kolekcja:', 'SpeedPRO'],
     altName: 'Gniazdo tablicowe proste',
   },
+  //__8
   {
     arrayIndex: 7,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/skosne10-ip54-16A-32A-75-cover`,
@@ -98,6 +92,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: ['Kolekcja:', 'SpeedPRO'],
     altName: 'Gniazdo tablicowe skośne 10°',
   },
+  //__9
   {
     arrayIndex: 8,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/skosne10-ip67-16A-32A-75-cover`,
@@ -107,6 +102,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: ['Kolekcja:', 'SpeedPRO'],
     altName: 'Gniazdo tablicowe skośne 10°',
   },
+  //__10
   {
     arrayIndex: 9,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/skosne10-ip67-63A-75-cover`,
@@ -116,6 +112,7 @@ const productCardsData: IF_ProductCardData[] = [
     collection: ['Kolekcja:', 'SpeedPRO'],
     altName: 'Gniazdo tablicowe skośne 10°',
   },
+  //__11
   {
     arrayIndex: 10,
     path: `${gniazdaTablicowe_SubCategory_data.subCategoryUrl}/skosne15-ip67-125A-75-cover`,

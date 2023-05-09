@@ -272,39 +272,8 @@ const wtyczkiGniazdaTablicowe_tablesData = [
       },
     ],
   },
-  //__10
-  {
-    tablesData: [
-      //___for 16A
-      {
-        headerTopData: headerTopData_1,
-        headerBottomData: headerBottomData_1,
-        headerType: 1,
-        bodyType: 1,
-        amper: '16',
-        rowsData: [
-          ['3', '10', '24100', '24200', '24310', '24410'],
-          ['4', '6', '24101', '24201', '24300', '24400'],
-          ['5', '4', '24107', '24202', '24301', '24401'],
-        ],
-      },
-      //___for 32A
-      {
-        headerTopData: [''],
-        headerBottomData: [''],
-        headerType: 0,
-        bodyType: 1,
-        amper: '32',
-        rowsData: [
-          ['3', '3', '24102', '24203', '24311', '24411'],
-          ['4', '3', '24103', '24204', '24302', '24402'],
-          ['5', '3', '24112', '24210', '24303', '24403'],
-        ],
-      },
-    ],
-  },
 
-  //___11__for 63A / s.41
+  //___10__for 63A / s.41
   {
     tablesData: [
       {
@@ -321,7 +290,7 @@ const wtyczkiGniazdaTablicowe_tablesData = [
       },
     ],
   },
-  //___12__for 125A / s.41
+  //___11__for 125A / s.41
   {
     tablesData: [
       {
@@ -341,3 +310,36 @@ const wtyczkiGniazdaTablicowe_tablesData = [
 ];
 
 export { wtyczkiGniazdaTablicowe_tablesData };
+
+//__________________???
+//__10
+// {
+//   tablesData: [
+//     //___for 16A
+//     {
+//       headerTopData: headerTopData_1,
+//       headerBottomData: headerBottomData_1,
+//       headerType: 1,
+//       bodyType: 1,
+//       amper: '16',
+//       rowsData: [
+//         ['3', '10', '24100', '24200', '24310', '24410'],
+//         ['4', '6', '24101', '24201', '24300', '24400'],
+//         ['5', '4', '24107', '24202', '24301', '24401'],
+//       ],
+//     },
+//     //___for 32A
+//     {
+//       headerTopData: [''],
+//       headerBottomData: [''],
+//       headerType: 0,
+//       bodyType: 1,
+//       amper: '32',
+//       rowsData: [
+//         ['3', '3', '24102', '24203', '24311', '24411'],
+//         ['4', '3', '24103', '24204', '24302', '24402'],
+//         ['5', '3', '24112', '24210', '24303', '24403'],
+//       ],
+//     },
+//   ],
+// },

@@ -222,12 +222,16 @@ const smallPseudoHeaders = {
 /***...*/
 const story = {
   productBrowser: {
-    header: 'Wyszukiwarka produktów',
-    placeholder: 'Wprowadź kod produktu',
+    header: 'Wyszukiwarka produktów', //___?
+    placeholder: 'np.: 13100', //___?
+    header1: 'Wprowadź kod produktu:',
+    header2: 'Rezultat wyszukiwania',
+
     button: 'Szukaj',
     valMin: 'Podany kod jest zbyt krótki.',
     valMax: 'Podany kod jest zbyt długi.',
     valRequired: 'Podaj kod szukanego produktu!',
+    valMatch: 'Podany kod nie odnosi się do żadnego produktu',
     isProduct: 'Zobacz stronę produktu.',
     noProduct: 'W naszej ofercie nie ma produktu o podanym kodzie.',
     hasCard: 'Podierz kartę produktu (PDF)',

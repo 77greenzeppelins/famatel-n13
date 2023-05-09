@@ -5,16 +5,6 @@ import { catalogStructureData } from '../../../_catalogStructure_data';
 /**TS**/
 import { IF_ProductCardData } from '../../../../utils/TS/typeScriptStaff';
 
-const catalogVersion = [
-  '13800',
-  '14800',
-  '23800',
-  '24800',
-  '25540',
-  '25556',
-  '23072',
-  '24991',
-];
 const wtyczkiGniazdaNiskieNapiecia_SubCategory_data = {
   subCategoryName: catalogStructureData[0].subCategoriesNames[5],
   subCategoryUrl: catalogStructureData[0].subCategoriesUrls[5],

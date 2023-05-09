@@ -40,7 +40,7 @@ const przedluzaczeBebnoweMetalowe_table1_data = {
     ],
     //___3
     [
-      '30051',
+      '30052',
       ['50m', 'H07RN-F', '5 x 2,5 mm²'],
       [
         'Industrial CEE IP67 3P+N+T 16A/250V',
