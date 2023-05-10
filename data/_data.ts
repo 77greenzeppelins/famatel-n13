@@ -222,11 +222,11 @@ const smallPseudoHeaders = {
 /***...*/
 const story = {
   productBrowser: {
-    header: 'Wyszukiwarka produktów', //___?
-    placeholder: 'np.: 13100', //___?
+    placeholder: 'np.: 13100',
     header1: 'Wprowadź kod produktu:',
     header2: 'Rezultat wyszukiwania:',
-
+    noResult: 'Brak',
+    noError: 'Sprawdźmy to!',
     button: 'Szukaj',
     valMin: 'Podany kod jest zbyt krótki.',
     valMax: 'Podany kod jest zbyt długi.',

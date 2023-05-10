@@ -13,6 +13,7 @@ import LinkWithSpanAndIcon from '../../../../links/linkWithSpanAndIcon/LinkWithS
 /**TS**/
 interface Props {
   wantedModel: string | null;
+
   // visibilityCondition: string | boolean | undefined;
   // submitCount: number;
 }
@@ -23,70 +24,43 @@ const ProductPageDisplayer = ({
   wantedModel,
 }: Props) => {
   const [isHovered, SetIsHovered] = useState(false);
-  // if (Boolean(wantedModel)) {
-  //   console.log("This code won't execute.");
-  // } else {
-  //   console.log('This code will execute.');
-  //   console.log('ProductPageDisplayerst / wantedModel', wantedModel);
-  //   console.log(
-  //     'ProductPageDisplayerst / wantedModel === null',
-  //     wantedModel === null
-  //   );
-  // }
-  // console.log(
-  //   "ProductPageDisplayerst / wantedModel === '' ",
-  //   wantedModel === ''
-  // );
-  // console.log(
-  //   'ProductPageDisplayerst / visibilityCondition',
-  //   visibilityCondition
-  // );
-
-  // if (wantedModel === '') {
-  //   console.log('wantedModel === " " ');
-  //   return null;
-  // }
-
-  // if (visibilityCondition !== undefined) {
-  //   console.log('visibilityCondition !== undefined');
-  //   return null;
-  // }
-
-  // if (wantedModel === null) {
-  //   console.log('wantedModel === null');
-  // } else {
-  //   console.log('wantedModel === null / ...show link');
-  // }
-
-  // console.log('submitCount:', submitCount);
   /**JSX**/
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {wantedModel === null ? (
-        <motion.div className="min-h-[20px] ">
+        <motion.div
+          key={wantedModel}
+          className="min-h-[20px]"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <p className="text-left p-regular text-corpo">
-            {/* {story.productBrowser.noProduct} */}
-            Brak
+            {story.productBrowser.noResult}
           </p>
         </motion.div>
-      ) : wantedModel === '' ? null : (
+      ) : (
         <motion.div
-          className=""
+          key={wantedModel}
+          className="flex  gap-2 "
           onHoverStart={e => {
-            // console.log('onHoverStart');
             SetIsHovered(true);
           }}
           onHoverEnd={e => {
-            // console.log('onHoverEnd');
             SetIsHovered(false);
           }}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <LinkWithSpanAndIcon
             uniqueKeyToAnimate={''} //___empty means no animation in <span>
             linkHref={wantedModel}
             linkLabel={story.productBrowser.isProduct}
             ariaLabel={`Link do strony z wyszukiwanym produktem`}
-            linkStyle="fc gap-4  px-4 py-1 xl:py-4 rounded-sm "
+            linkStyle="fc gap-4"
             spanStyle={`p-regular ${
               isHovered ? 'text-light' : 'text-grey'
             } ease-in duration-[0.4s] delay-[0.1s] `} //___group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]

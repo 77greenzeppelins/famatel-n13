@@ -8,6 +8,7 @@ import ProductBrowser from '../../../../../_basicComponents/forms/productBrowser
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { overlayContainerVariants } from '../../../../../../utils/framerMotion/framerMotionUtils';
+import ProductBrowserByFormik from '../../../../../_basicComponents/forms/productBrowser/ProductBrowserByFormik';
 
 /**Tailwind**/
 // const basicTextStyle =
@@ -51,6 +52,7 @@ const ProductBrowserOverlay = () => {
           <div className="w-screen min-h-screen pointer-events-auto ">
             <div className="w-[100vw] h-full fc">
               <ProductBrowser />
+              {/* <ProductBrowserByFormik /> */}
             </div>
           </div>
         </motion.div>
