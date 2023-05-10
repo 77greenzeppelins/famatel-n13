@@ -11,7 +11,9 @@ interface Props {
   wantedModelDeclaration: string | null;
 }
 
+/**-----------------------------------------------------------------------**/
 const ProductLinks = ({ wantedModel, wantedModelDeclaration }: Props) => {
+  /**JSX**/
   return (
     <AnimatePresence mode="wait">
       {wantedModel === '' ? null : (

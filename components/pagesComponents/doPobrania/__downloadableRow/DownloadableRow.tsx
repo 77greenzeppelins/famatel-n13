@@ -4,7 +4,7 @@ import ButtonsSection from './buttonsSection/ButtonsSection';
 
 /**HardCoded Staff*/
 const textStyle =
-  'p-medium text-grey group-hover:text-light ease-in duration-300 disable-soft whitespace-normal';
+  'p-regular text-grey group-hover:text-light ease-in duration-300 disable-soft whitespace-normal';
 
 /**-----------------------------**/
 const DownloadableRow: React.FC<{
