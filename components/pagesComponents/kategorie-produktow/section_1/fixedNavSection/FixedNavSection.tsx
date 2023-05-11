@@ -4,6 +4,10 @@ import ButtonsPanel from './buttonsPanel/ButtonsPanel';
 
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
+/*
+wtf: 
+__1__ thera are two "variantsSpecifications" that are selected depending on "smValue" that is layout setter; one option for mobileLike one for  notMobileLike;
+*/
 const lessThen640Variant = {
   from: { y: '200px', opacity: 0 },
   to: (isInView: boolean) => ({
