@@ -33,10 +33,10 @@ function findDeclarationByModel(
 ) {
   console.log('...............findUrlByModel');
   const foundData = staticData.find(item => item.models.includes(typedModel));
-  console.log(
-    'findUrlByModel / foundData ? foundData.url : null:',
-    foundData ? foundData.url : null
-  );
+  // console.log(
+  //   'findUrlByModel / foundData ? foundData.url : null:',
+  //   foundData ? foundData.url : null
+  // );
   setDeclarationUrl(foundData ? foundData.url : null);
 }
 

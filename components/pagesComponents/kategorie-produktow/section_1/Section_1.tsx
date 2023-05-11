@@ -18,7 +18,7 @@ const Section_1: React.FunctionComponent<{
   categoriesNumber: number;
 }> = ({ categoryIndex, setCategoryIndex, categoriesNumber }) => {
   /**References*/
-  const viewRef = useRef<HTMLDivElement>(null!);
+  const viewRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(viewRef);
   /**...**/
   const { width } = useWindowSize({ screensNumber: 1 });

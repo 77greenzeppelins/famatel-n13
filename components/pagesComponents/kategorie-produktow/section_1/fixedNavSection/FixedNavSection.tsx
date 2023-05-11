@@ -3,14 +3,24 @@ import useWindowSize from '../../../../../utils/hooks/useWindowSize';
 import ButtonsPanel from './buttonsPanel/ButtonsPanel';
 
 /**Framer Motion Staff*/
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 const lessThen640Variant = {
-  from: { y: '200px' },
-  to: (isInView: boolean) => ({ y: isInView ? 0 : '200px' }),
+  from: { y: '200px', opacity: 0 },
+  to: (isInView: boolean) => ({
+    y: isInView ? 0 : '200px',
+    opacity: 1,
+    transition: { delay: 0, duration: 0.6 },
+  }),
+  exit: { y: '200px', opacity: 1, transition: { delay: 0.1, duration: 0.6 } },
 };
 const moreThen640Variant = {
-  from: { x: '200px' },
-  to: (isInView: boolean) => ({ x: isInView ? 0 : '200px' }),
+  from: { x: '200px', opacity: 0 },
+  to: (isInView: boolean) => ({
+    x: isInView ? 0 : '200px',
+    opacity: 1,
+    transition: { delay: 0, duration: 0.6 },
+  }),
+  exit: { x: '200px', opacity: 1, transition: { delay: 0.1, duration: 0.6 } },
 };
 
 /**HardCodedStaff*/
@@ -37,26 +47,31 @@ const FixedNavSection: React.FC<Props> = ({
   const { width } = useWindowSize({ screensNumber: 1 });
   const layoutCondition = width >= smValue;
   /**JSX**/
+  // console.log('isInView:', isInView);
   return (
-    <motion.div
-      className="fixed fc w-full h-[68px] sm:h-full sm:w-[80px] right-0 bottom-0 "
-      custom={isInView}
-      variants={layoutCondition ? moreThen640Variant : lessThen640Variant}
-      animate="to"
-      transition={{ delay: 0.2, duration: 0.6 }}
-    >
-      <div
-        className={`fc w-[90%] h-full sm:w-full sm:h-[260px] bg-dark ${
-          layoutCondition ? moreThen640Style : lessThen640Style
-        } border-corpo py-6`}
-      >
-        <ButtonsPanel
-          categoryIndex={categoryIndex}
-          setCategoryIndex={setCategoryIndex}
-          categoriesNumber={categoriesNumber}
-        />
-      </div>
-    </motion.div>
+    <AnimatePresence mode="wait" initial={true} custom={isInView}>
+      {isInView && (
+        <motion.div className="fixed fc w-full h-[68px] sm:h-full sm:w-[80px] right-0 bottom-0">
+          <motion.div
+            className={`fc w-[90%] h-full sm:w-full sm:h-[260px] bg-dark ${
+              layoutCondition ? moreThen640Style : lessThen640Style
+            } border-corpo py-6`}
+            key={isInView.toString()}
+            custom={isInView}
+            variants={layoutCondition ? moreThen640Variant : lessThen640Variant}
+            initial="from"
+            animate="to"
+            exit="exit"
+          >
+            <ButtonsPanel
+              categoryIndex={categoryIndex}
+              setCategoryIndex={setCategoryIndex}
+              categoriesNumber={categoriesNumber}
+            />
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
