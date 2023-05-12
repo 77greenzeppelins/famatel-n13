@@ -69,15 +69,15 @@ const ProductBrowser = () => {
   };
 
   /**...**/
-  useEffect(() => {
-    console.log('ProductBrowser / wantedModel:', wantedModel);
-    console.log("ProductBrowser / wantedModel === '' :", wantedModel === '');
-    console.log(
-      'ProductBrowser / wantedModel === null :',
-      wantedModel === null
-    );
-  }, [wantedModel]);
-  console.log('ProductBrowser / wantedModel:', wantedModel);
+  // useEffect(() => {
+  //   console.log('ProductBrowser / wantedModel:', wantedModel);
+  //   console.log("ProductBrowser / wantedModel === '' :", wantedModel === '');
+  //   console.log(
+  //     'ProductBrowser / wantedModel === null :',
+  //     wantedModel === null
+  //   );
+  // }, [wantedModel]);
+  // console.log('ProductBrowser / wantedModel:', wantedModel);
   /**JSX**/
   return (
     <div className="w-full h-full pt-10 sm:pt-20 inner-px-md-xl-xxl bg-gradient-to-b from-dark via-dark to-transparent">
@@ -107,7 +107,7 @@ const ProductBrowser = () => {
             <form
               onSubmit={handleSubmit}
               data-layou="pseudoHeader"
-              className="flex flex-col gap-y-6 items-center w-full sm:gap-y-0 sm:gap-x-10 sm:flex-row "
+              className="flex flex-col items-center w-full gap-y-6 sm:gap-y-0 sm:gap-x-10 sm:flex-row "
             >
               <label
                 htmlFor="model"

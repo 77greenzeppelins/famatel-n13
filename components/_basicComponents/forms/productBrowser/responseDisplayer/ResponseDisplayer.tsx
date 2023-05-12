@@ -28,8 +28,9 @@ const ResponseDisplayer = ({
         */
         submitCount > 0 && wantedModel !== '' ? (
           <motion.div
+            key={`${submitCount}`}
             // className="flex items-center w-full gap-x-10 sm:flex-row sm:items-start "
-            className="flex flex-col gap-y-6 items-center w-full sm:gap-y-0 sm:gap-x-10 sm:flex-row sm:items-start "
+            className="flex flex-col items-center w-full gap-y-6 sm:gap-y-0 sm:gap-x-10 sm:flex-row sm:items-start "
           >
             <div className="flex justify-center w-full sm:w-[300px] md:w-[400px] lg:w-[500px] sm:justify-start">
               <p className="p-medium text-grey">

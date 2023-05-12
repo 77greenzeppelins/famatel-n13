@@ -22,7 +22,7 @@ const ErrorDisplayer = ({
     <AnimatePresence mode="wait">
       {mountingCondition ? (
         <motion.div
-          key={errorText}
+          key={`${errorText}-${submitCount}`}
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
@@ -32,7 +32,7 @@ const ErrorDisplayer = ({
         </motion.div>
       ) : submitCount > 0 ? (
         <motion.div
-          key={errorText}
+          key={`${errorText}-${submitCount}`}
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100 }}
