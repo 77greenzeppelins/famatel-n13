@@ -20,9 +20,9 @@ const ProductPageDisplayer = ({ wantedModel }: Props) => {
         <motion.div
           key={wantedModel}
           className="min-h-[20px]"
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
+          exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <p className="text-left p-regular text-corpo">
@@ -32,16 +32,16 @@ const ProductPageDisplayer = ({ wantedModel }: Props) => {
       ) : (
         <motion.div
           key={wantedModel}
-          className="flex  gap-2 "
+          className="flex gap-2 "
           onHoverStart={e => {
             SetIsHovered(true);
           }}
           onHoverEnd={e => {
             SetIsHovered(false);
           }}
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
+          exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <LinkWithSpanAndIcon

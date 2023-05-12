@@ -23,9 +23,9 @@ const ErrorDisplayer = ({
       {mountingCondition ? (
         <motion.div
           key={`${errorText}-${submitCount}`}
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
+          exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.2, delay: 0 }}
         >
           <p className="text-left p-regular text-corpo">{errorText}</p>
@@ -33,9 +33,9 @@ const ErrorDisplayer = ({
       ) : submitCount > 0 ? (
         <motion.div
           key={`${errorText}-${submitCount}`}
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
+          exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.2, delay: 0 }}
         >
           <p className="text-left p-regular text-corpo">
