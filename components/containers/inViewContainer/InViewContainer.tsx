@@ -39,12 +39,12 @@ const InViewContainer: React.FC<Props> = ({
   /**JSX**/
   return (
     <div
-      data-layout="OutherContainer"
+      data-layout="InViewContainer_OutherWrapper"
       ref={elementInView}
       className={outherContainerStyle ? outherContainerStyle : 'w-full h-full'}
     >
       <div
-        data-layout="InnerContainer"
+        data-layout="InViewContainer_InnerWrapper"
         className={innerContainerStyle ? innerContainerStyle : 'w-full h-full'}
       >
         <div
