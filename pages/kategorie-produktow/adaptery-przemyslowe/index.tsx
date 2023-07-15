@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import { NextPage } from 'next/types';
-import { ReactElement, useEffect } from 'react';
+import { useEffect } from 'react';
 /**Components*/
-import Layout from '../../../components/layouts/rootLayout/Layout';
 import CategoryPageTemplate from '../../../components/multipagesComponents/_categoryPageTemplate/CategoryPageTemplate';
 /**BasicData*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';

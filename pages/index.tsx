@@ -2,6 +2,7 @@ import { NextPage } from 'next/types';
 import Head from 'next/head';
 /**Components**/
 import OFirmieContent from '../components/pagesComponents/o-firmie/OFirmieContent';
+import { useEffect } from 'react';
 // import Layout from '../components/layouts/rootLayout/Layout';
 /**TS**/
 // import type { NextPageWithLayout } from './_app';
@@ -38,6 +39,17 @@ import OFirmieContent from '../components/pagesComponents/o-firmie/OFirmieConten
 
 /*****************************************************************************/
 const Home: NextPage = () => {
+  /*
+  ___1. scrollBar position coordinator
+  */
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
+  /**JSX**/
   return (
     <>
       <Head>

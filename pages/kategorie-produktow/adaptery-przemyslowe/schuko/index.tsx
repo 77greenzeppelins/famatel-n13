@@ -1,26 +1,13 @@
 import Head from 'next/head';
-import type { ReactElement } from 'react';
+import { NextPage } from 'next/types';
 /**Components*/
-import Layout from '../../../../components/layouts/rootLayout/Layout';
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
-// import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { adapteryPrzemysloweSubCategoriesData } from '../../../../data/categoriesData/cat_3_adaptery-przemyslowe/_cat3_adaptery-przemyslowe_data';
 import { adapteryPrzemysloweSchuko_productCards_data } from '../../../../data/categoriesData/cat_3_adaptery-przemyslowe/subCategories/_subCat_1_schuko_data';
-/**TS**/
-import type { NextPageWithLayout } from '../../../_app';
 
 /**--------------------------------------------------------------**/
-const SubKategorieProduktowPage: NextPageWithLayout = () => {
-  return (
-    <SubCategoryPageTemplate
-      subCategoryData={adapteryPrzemysloweSubCategoriesData[0]}
-      productCardsData={adapteryPrzemysloweSchuko_productCards_data}
-    />
-  );
-};
-
-SubKategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
+const SubKategorieProduktowPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -38,10 +25,10 @@ SubKategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
           content="Zapoznaj się z ofertą adapterów przemysłowych Schuko marki Famatel."
         ></meta>
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <SubCategoryPageTemplate
+        subCategoryData={adapteryPrzemysloweSubCategoriesData[0]}
+        productCardsData={adapteryPrzemysloweSchuko_productCards_data}
+      />
     </>
   );
 };
