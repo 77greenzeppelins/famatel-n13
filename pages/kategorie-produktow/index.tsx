@@ -1,11 +1,10 @@
 import Head from 'next/head';
-import { ReactElement, useEffect } from 'react';
+import { NextPage } from 'next/types';
+import { useEffect } from 'react';
 /**Components*/
-import Layout from '../../components/layouts/rootLayout/Layout';
 import KategorieProduktowContent from '../../components/pagesComponents/kategorie-produktow/KategorieProduktowContent';
-import type { NextPageWithLayout } from '../_app';
 
-const KategorieProduktowPage: NextPageWithLayout = () => {
+const KategorieProduktowPage: NextPage = () => {
   /*
   __1__ With these steps, Next.js app will always scroll to the top of the page when a new page is loaded
   */
@@ -17,10 +16,6 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
   }, []);
 
   /**JSX*/
-  return <KategorieProduktowContent />;
-};
-
-KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <Head>
@@ -39,7 +34,7 @@ KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
         ></meta>
         <link rel="canonical" href="https://www.famatel.pl/produkty" />
       </Head>
-      <Layout>{page}</Layout>
+      <KategorieProduktowContent />
     </>
   );
 };
