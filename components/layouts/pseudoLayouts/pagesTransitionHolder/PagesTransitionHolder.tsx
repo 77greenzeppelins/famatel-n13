@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { routingAnimation as variants } from '../../../../utils/framerMotion/framerMotionUtils';
 
-/******************************************************************************************/
+/*-------------------------------------------------------*/
 const PageTransitionHolder: React.FunctionComponent<{
   children: ReactNode;
 }> = ({ children }) => {

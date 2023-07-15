@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useEffect } from 'react';
 /**Components**/
 import FadingLine from '../../../multipagesComponents/lines/fadingLine/FadingLine';
 import SmallPseudoHeader from '../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
@@ -9,8 +9,12 @@ import ProductCategoriesLinks from './productCategories/ProductCategoriesLinks';
 import GoToTopButton from './goToTopButton/GoToTopButton';
 import Address from './contacts/Address';
 
-/**----------------------**/
-const Footer: React.FC = () => {
+const Footer = memo(function Footer() {
+  // useEffect(() => {
+  //   console.log('Footer rendered or re-rendered');
+  //   // count < 1 && console.log('count:', count);
+  // });
+
   /**JSX**/
   return (
     <footer className="flex flex-col w-full pb-10 gap-y-10">
@@ -49,15 +53,12 @@ const Footer: React.FC = () => {
             <p className="p-small text-grey">web development: 77</p>
           </div>
         </div>
-        <div className="fc w-full">
+        <div className="w-full fc">
           <GoToTopButton />
         </div>
       </div>
     </footer>
   );
-};
+});
 
 export default Footer;
-{
-  /* <GoToTopButton />; */
-}

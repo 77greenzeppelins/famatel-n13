@@ -4,10 +4,9 @@ import HeaderLogoLink from './logoLink/HeaderLogoLink';
 import NavForMainPages from './navSection/NavForMainPages';
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
-import EventsPanel from './eventsPanel/EventsPanel';
 
-/**----------------------**/
-const Header2 = () => {
+/******************************************************************************/
+const Header1: React.FunctionComponent = () => {
   /**...**/
   const router = useRouter();
   const condition = router.pathname === '/';
@@ -18,7 +17,7 @@ const Header2 = () => {
       data-component="Header__container"
       className={`fixed w-screen top-0 left-0 right-0 h-[50px] z-[500] bg-dark`}
     >
-      <div className="relative w-full h-full inner-px-md-xl-xxl ">
+      <div className="w-full h-full inner-px-md-xl-xxl ">
         <div className="relative w-full h-full">
           <motion.div
             className="absolute bottom-0 left-0 right-0 h-full border-b-[0.5px] border-greyShade1"
@@ -52,9 +51,8 @@ const Header2 = () => {
             <div className="flex items-center h-full pb-1 origin-left">
               <HeaderLogoLink />
             </div>
-            <div className="flex items-center justify-end w-full h-full">
-              {/* <NavForMainPages /> */}
-              <EventsPanel />
+            <div className="flex items-center justify-end w-full h-full ">
+              <NavForMainPages />
             </div>
           </motion.div>
         </div>
@@ -63,4 +61,4 @@ const Header2 = () => {
   );
 };
 
-export default Header2;
+export default Header1;

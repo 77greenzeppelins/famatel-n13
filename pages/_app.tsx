@@ -1,8 +1,10 @@
-import { ReactElement, ReactNode, useEffect } from 'react';
-import type { NextPage } from 'next';
+// import { ReactElement, ReactNode } from 'react';
+// import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 /**Components*/
-import PageTransitionHolder from '../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
+import AppLayout from '../components/layouts/rootLayout/AppLayout';
+// import Layout from '../components/layouts/rootLayout/Layout';
+// import PageTransitionHolder from '../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
 /**CSS / Tailwind Staff*/
 import './globals.css'; // import '../styles/globals.css';
 
@@ -10,34 +12,33 @@ import './globals.css'; // import '../styles/globals.css';
 // import { globalState } from '../globalState/globalState';
 
 /**TS*/
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode;
-};
+// export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+//   getLayout?: (page: ReactElement) => ReactNode;
+// };
 
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout;
-};
+// type AppPropsWithLayout = AppProps & {
+//   Component: NextPageWithLayout;
+// };
 
-/*--------------------------------------------------------------------------------------------*/
-export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  // Use the layout defined at the page level, if available
-  const getLayout = Component.getLayout ?? (page => page);
-
-  // useEffect(() => {
-  //   const hasAcceptedCookies =
-  //     localStorage.getItem('hasAcceptedCookies') === 'true';
-  //   if (hasAcceptedCookies) {
-  //     globalState.hasAcceptedCookies = true;
-  //   }
-  // }, []);
-
-  //var supportsInertiaScrolling = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
-
-  return getLayout(
-    <PageTransitionHolder>
+/**---------------------------------------------------------------------------**/
+export default function MyApp({ Component, pageProps }: AppProps) {
+  /**JSX**/
+  return (
+    <AppLayout>
       <Component {...pageProps} />
-    </PageTransitionHolder>
-
-    // </main>
+    </AppLayout>
   );
 }
+
+// export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+//   // Use the layout defined at the page level, if available
+//   const getLayout = Component.getLayout ?? (page => page);
+
+//   return getLayout(
+//     <PageTransitionHolder>
+//       <Component {...pageProps} />
+//     </PageTransitionHolder>
+
+//     // </main>
+//   );
+// }
