@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { NextPage } from 'next/types';
 import { ReactElement, useEffect } from 'react';
 /**Components**/
-import Layout from '../../components/layouts/rootLayout/Layout';
 import DoPobraniaContent from '../../components/pagesComponents/doPobrania/DoPobraniaContent';
 /**TS**/
 
