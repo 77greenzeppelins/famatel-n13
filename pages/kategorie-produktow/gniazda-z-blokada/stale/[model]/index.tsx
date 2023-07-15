@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import React, { ReactElement, useState } from 'react';
+import { NextPage } from 'next/types';
 /**Components**/
-import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
 import GniazdaBlokadaStaleContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/2.2_gniazda-blokada-stale/GniazdaBlokadaStaleContent';
 /**BasicData**/
@@ -11,45 +10,10 @@ import {
   gniazdaBlokadaStale_SubCategory_data,
   gniazdaBlokadaStale_productCards_data,
 } from '../../../../../data/categoriesData/cat_2_gniazda-z-blokada/subCategories/_subCat_2_stale_data';
-/**TS**/
-import { NextPageWithLayout } from '../../../../_app';
 
 /**--------------------------------------**/
-const GniazdaBlokadaStaleProductPage: NextPageWithLayout = () => {
-  /**Router Section**/
-  //   const router = useRouter();
-  //   console.log('obudowyPusteSubCategoryData:', obudowyPusteSubCategoryData);
-  /**...**/
-
+const GniazdaBlokadaStaleProductPage: NextPage = () => {
   /**JSX**/
-  return (
-    <ProductPageTemplate
-      productCardsData={gniazdaBlokadaStale_productCards_data}
-      //___data for navSection => data about category
-      categoryName={
-        catalogStructureData[
-          mainCategoriesSummaryData.gniazdaBlokada.categoryIndex
-        ].mainCategoryName
-      }
-      categoryUrl={
-        catalogStructureData[
-          mainCategoriesSummaryData.gniazdaBlokada.categoryIndex
-        ].mainCategoryUrl
-      }
-      //___data for navSection => data about subCategory
-      subCategoryName={gniazdaBlokadaStale_SubCategory_data.subCategoryName}
-      subCategoryUrl={gniazdaBlokadaStale_SubCategory_data.subCategoryUrl}
-    >
-      <GniazdaBlokadaStaleContent
-        productCardsData={gniazdaBlokadaStale_productCards_data}
-      />
-    </ProductPageTemplate>
-  );
-};
-
-GniazdaBlokadaStaleProductPage.getLayout = function getLayout(
-  page: ReactElement
-) {
   return (
     <>
       <Head>
@@ -67,10 +31,27 @@ GniazdaBlokadaStaleProductPage.getLayout = function getLayout(
           content="Specyfikacja techniczna gniazda stałego z rozłącznikiem i blokadą marki Famatel."
         ></meta>
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <ProductPageTemplate
+        productCardsData={gniazdaBlokadaStale_productCards_data}
+        //___data for navSection => data about category
+        categoryName={
+          catalogStructureData[
+            mainCategoriesSummaryData.gniazdaBlokada.categoryIndex
+          ].mainCategoryName
+        }
+        categoryUrl={
+          catalogStructureData[
+            mainCategoriesSummaryData.gniazdaBlokada.categoryIndex
+          ].mainCategoryUrl
+        }
+        //___data for navSection => data about subCategory
+        subCategoryName={gniazdaBlokadaStale_SubCategory_data.subCategoryName}
+        subCategoryUrl={gniazdaBlokadaStale_SubCategory_data.subCategoryUrl}
+      >
+        <GniazdaBlokadaStaleContent
+          productCardsData={gniazdaBlokadaStale_productCards_data}
+        />
+      </ProductPageTemplate>
     </>
   );
 };
