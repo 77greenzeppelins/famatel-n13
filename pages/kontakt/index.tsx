@@ -1,13 +1,11 @@
 import Head from 'next/head';
-import { ReactElement, useEffect } from 'react';
+import { NextPage } from 'next/types';
+import { useEffect } from 'react';
 /**Components**/
-import Layout from '../../components/layouts/rootLayout/Layout';
 import KontaktContent from '../../components/pagesComponents/kontakt/KontaktContent';
-// import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
-import type { NextPageWithLayout } from '../_app';
 
 /**---------------------------------------------**/
-const KontaktPage: NextPageWithLayout = () => {
+const KontaktPage: NextPage = () => {
   /*
   __1__ With these steps, Next.js app will always scroll to the top of the page when a new page is loaded
   */
@@ -18,10 +16,6 @@ const KontaktPage: NextPageWithLayout = () => {
     scrollToTop();
   }, []);
   /**JSX**/
-  return <KontaktContent />;
-};
-
-KontaktPage.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <Head>
@@ -40,10 +34,7 @@ KontaktPage.getLayout = function getLayout(page: ReactElement) {
         ></meta>
         <link rel="canonical" href="https://www.famatel.pl/kontakt" />
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <KontaktContent />
     </>
   );
 };
