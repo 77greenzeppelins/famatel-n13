@@ -1,29 +1,15 @@
 import Head from 'next/head';
-import type { ReactElement } from 'react';
+import { NextPage } from 'next/types';
 /**Components*/
-import Layout from '../../../../components/layouts/rootLayout/Layout';
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
 import WtyczkiGniazdaPrzenosneChildren from '../../../../components/pagesComponents/_nestedPages/1_subKategorie/1.1_wtyczki-gniazda-przenosne/WtyczkiGniazdaPrzenosneChildren';
-// import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
 import { productCardsData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_1_przenosne_data';
-/**TS**/
-import type { NextPageWithLayout } from '../../../_app';
 
 /**--------------------------------------------------------------**/
-const KategorieProduktowPage: NextPageWithLayout = () => {
-  return (
-    <SubCategoryPageTemplate
-      subCategoryData={wtyczkiGniazdaSubCategoriesData[0]}
-      productCardsData={productCardsData}
-    >
-      <WtyczkiGniazdaPrzenosneChildren />
-    </SubCategoryPageTemplate>
-  );
-};
-
-KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
+const KategorieProduktowPage: NextPage = () => {
+  /**JSX**/
   return (
     <>
       <Head>
@@ -41,10 +27,12 @@ KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
           content="Poznaj ofertę wtyczek i gniazd przenośnych marki Famatel."
         ></meta>
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <SubCategoryPageTemplate
+        subCategoryData={wtyczkiGniazdaSubCategoriesData[0]}
+        productCardsData={productCardsData}
+      >
+        <WtyczkiGniazdaPrzenosneChildren />
+      </SubCategoryPageTemplate>
     </>
   );
 };

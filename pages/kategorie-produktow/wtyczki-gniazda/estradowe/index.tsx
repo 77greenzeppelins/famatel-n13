@@ -1,27 +1,14 @@
 import Head from 'next/head';
-import type { ReactElement } from 'react';
+import { NextPage } from 'next/types';
 /**Components*/
-import Layout from '../../../../components/layouts/rootLayout/Layout';
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
-// import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
 /**BasicData*/
 import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
 import { wtyczkiGniazdaEstradowe_productCard_data } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_8_estradowe_data';
 
-/**TS**/
-import type { NextPageWithLayout } from '../../../_app';
-
-/**--------------------------------------------------------------**/
-const KategorieProduktowPage: NextPageWithLayout = () => {
-  return (
-    <SubCategoryPageTemplate
-      subCategoryData={wtyczkiGniazdaSubCategoriesData[7]}
-      productCardsData={wtyczkiGniazdaEstradowe_productCard_data}
-    />
-  );
-};
-
-KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
+/**----------------------------------------------**/
+const KategorieProduktowPage: NextPage = () => {
+  /**JSX**/
   return (
     <>
       <Head>
@@ -39,10 +26,10 @@ KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
           content="Poznaj ofertę wtyczek i gniazd estradowych marki Famatel."
         ></meta>
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <SubCategoryPageTemplate
+        subCategoryData={wtyczkiGniazdaSubCategoriesData[7]}
+        productCardsData={wtyczkiGniazdaEstradowe_productCard_data}
+      />
     </>
   );
 };

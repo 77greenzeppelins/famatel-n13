@@ -1,6 +1,6 @@
-import React, { ReactElement, useState } from 'react';
+import Head from 'next/head';
+import { NextPage } from 'next/types';
 /**Components**/
-import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
 import WtyczkiGniazdaTablicoweContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/1.2_wtyczki-gniazda-tablicowe/WtyczkiGniazdaTablicoweContent';
 /**BasicData**/
@@ -10,42 +10,10 @@ import {
   gniazdaTablicowe_SubCategory_data,
   productCardsData,
 } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_2_tablicowe_data';
-/**TS**/
-import { NextPageWithLayout } from '../../../../_app';
-import Head from 'next/head';
 
 /**--------------------------------------**/
-const GniazdaTablicoweProductPage: NextPageWithLayout = () => {
-  /**Router Section**/
-  //   const router = useRouter();
-  //   console.log('obudowyPusteSubCategoryData:', obudowyPusteSubCategoryData);
-  /**...**/
-
+const GniazdaTablicoweProductPage: NextPage = () => {
   /**JSX**/
-  return (
-    <ProductPageTemplate
-      productCardsData={productCardsData}
-      //___data for navSection => data about category
-      categoryName={
-        catalogStructureData[
-          mainCategoriesSummaryData.wtyczkiGniazda.categoryIndex
-        ].mainCategoryName
-      }
-      categoryUrl={
-        catalogStructureData[
-          mainCategoriesSummaryData.wtyczkiGniazda.categoryIndex
-        ].mainCategoryUrl
-      }
-      //___data for navSection => data about subCategory
-      subCategoryName={gniazdaTablicowe_SubCategory_data.subCategoryName}
-      subCategoryUrl={gniazdaTablicowe_SubCategory_data.subCategoryUrl}
-    >
-      <WtyczkiGniazdaTablicoweContent productCardsData={productCardsData} />
-    </ProductPageTemplate>
-  );
-};
-
-GniazdaTablicoweProductPage.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <Head>
@@ -63,10 +31,25 @@ GniazdaTablicoweProductPage.getLayout = function getLayout(page: ReactElement) {
           content="Specyfikacja techniczna osprzętu elektrycznego tablicowego marki Famatel."
         ></meta>
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <ProductPageTemplate
+        productCardsData={productCardsData}
+        //___data for navSection => data about category
+        categoryName={
+          catalogStructureData[
+            mainCategoriesSummaryData.wtyczkiGniazda.categoryIndex
+          ].mainCategoryName
+        }
+        categoryUrl={
+          catalogStructureData[
+            mainCategoriesSummaryData.wtyczkiGniazda.categoryIndex
+          ].mainCategoryUrl
+        }
+        //___data for navSection => data about subCategory
+        subCategoryName={gniazdaTablicowe_SubCategory_data.subCategoryName}
+        subCategoryUrl={gniazdaTablicowe_SubCategory_data.subCategoryUrl}
+      >
+        <WtyczkiGniazdaTablicoweContent productCardsData={productCardsData} />
+      </ProductPageTemplate>
     </>
   );
 };

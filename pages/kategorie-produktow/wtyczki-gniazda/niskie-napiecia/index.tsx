@@ -1,29 +1,14 @@
 import Head from 'next/head';
-import type { ReactElement } from 'react';
-/**Components*/
-import Layout from '../../../../components/layouts/rootLayout/Layout';
+import { NextPage } from 'next/types';
+/**Components**/
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
 import WtyczkiGniazdaNiskieNapieciaChildren from '../../../../components/pagesComponents/_nestedPages/1_subKategorie/1.6_wtyczki-gniazda-niskie-napiecia/WtyczkiGniazdaNiskieNapieciaChildren';
-// import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
-/**BasicData*/
+/**BasicData**/
 import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
 import { productCardsData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_6_niskie-napiecia_data';
 
-/**TS**/
-import type { NextPageWithLayout } from '../../../_app';
-
 /**--------------------------------------------------------------**/
-const KategorieProduktowPage: NextPageWithLayout = () => {
-  return (
-    <SubCategoryPageTemplate
-      subCategoryData={wtyczkiGniazdaSubCategoriesData[5]}
-      productCardsData={productCardsData}
-    >
-      <WtyczkiGniazdaNiskieNapieciaChildren />
-    </SubCategoryPageTemplate>
-  );
-};
-KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
+const KategorieProduktowPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -41,10 +26,12 @@ KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
           content="Poznaj ofertę wtyczek i gniazd na niskie napięcia marki Famatel."
         ></meta>
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <SubCategoryPageTemplate
+        subCategoryData={wtyczkiGniazdaSubCategoriesData[5]}
+        productCardsData={productCardsData}
+      >
+        <WtyczkiGniazdaNiskieNapieciaChildren />
+      </SubCategoryPageTemplate>
     </>
   );
 };
