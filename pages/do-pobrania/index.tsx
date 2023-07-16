@@ -13,9 +13,10 @@ const DoPobraniaPage: NextPage = () => {
   // const scrollToTop = () => {
   //   window.scrollTo(0, 0);
   // };
-  // useEffect(() => {
-  //   scrollToTop();
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // scrollToTop();
+  }, []);
 
   /**JSX**/
   return (

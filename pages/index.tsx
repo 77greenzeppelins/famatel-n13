@@ -45,9 +45,10 @@ const Home: NextPage = () => {
   // const scrollToTop = () => {
   //   window.scrollTo(0, 0);
   // };
-  // useEffect(() => {
-  //   scrollToTop();
-  // }, []);
+  useEffect(() => {
+    // scrollToTop();
+    window.scrollTo(0, 0);
+  }, []);
 
   /**JSX**/
   return (

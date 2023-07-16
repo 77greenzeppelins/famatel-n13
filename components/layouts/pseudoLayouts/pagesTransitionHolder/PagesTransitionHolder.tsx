@@ -17,7 +17,7 @@ const PageTransitionHolder: React.FunctionComponent<{
       // initial={false}
       // exitBeforeEnter={true}//depricated
       mode="wait"
-      onExitComplete={() => window.scrollTo(0, 0)}
+      // onExitComplete={() => window.scrollTo(0, 0)}
     >
       <motion.div
         data-container="PageTransitionHolder__container"
