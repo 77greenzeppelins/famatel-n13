@@ -1,16 +1,13 @@
 import Head from 'next/head';
-import { ReactElement, useEffect } from 'react';
-/**Components*/
-import Layout from '../../../components/layouts/rootLayout/Layout';
+import { NextPage } from 'next/types';
+import { useEffect } from 'react';
+/**Components**/
 import RozlacznikiBezpieczenstwaContent from '../../../components/pagesComponents/_nestedPages/0_kategorie/6_rozlacznikiBezpieczenstwa/RozlacznikiBezpieczenstwaCatContent';
-// import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
-/**BasicData*/
+/**BasicData**/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
-/**TS**/
-import type { NextPageWithLayout } from '../../_app';
 
 /**----------------------------------------------------------**/
-const KategorieProduktowPage: NextPageWithLayout = () => {
+const KategorieProduktowPage: NextPage = () => {
   /*
   __1__ With these steps, Next.js app will always scroll to the top of the page when a new page is loaded
   */
@@ -22,17 +19,6 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
   }, []);
 
   /**JSX**/
-  return (
-    <div className="flex flex-col w-full bg-dark">
-      <RozlacznikiBezpieczenstwaContent
-        uniqueKey={0}
-        categoryName={catalogStructureData[5].mainCategoryName}
-      />
-    </div>
-  );
-};
-
-KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
   return (
     <>
       <Head>
@@ -50,10 +36,12 @@ KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
           content="Zapoznaj się z ofertą rozłączników bezpieczeństwa marki Famatel."
         ></meta>
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <div className="flex flex-col w-full bg-dark">
+        <RozlacznikiBezpieczenstwaContent
+          uniqueKey={0}
+          categoryName={catalogStructureData[5].mainCategoryName}
+        />
+      </div>
     </>
   );
 };
