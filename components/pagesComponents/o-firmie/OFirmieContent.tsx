@@ -11,7 +11,10 @@ const OFirmieContent = () => {
       data-component="OFirmieContent__container"
       className="flex flex-col justify-center pt-[80px] overflow-hidden"
     >
-      <div className="z-[10] min-h-screen">
+      <div
+        className="z-[10] min-h-screen "
+        //___flex justify-center lg:block
+      >
         <Section_1
           mediumTextStyle={`p-regular text-dark font-bold group-hover:text-light group-hover:font-normal`}
         />

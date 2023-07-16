@@ -5,8 +5,6 @@ import ProductDescription from './productDescription/ProductDescription';
 import WorldMapComponent from '../../../SVG/maps/WorldMapComponent';
 import PageAnimatedLink from '../_pageAnimatedLink/PageAnimatedLink';
 import IconsMarqueeSection from './iconsMarquee/IconsMarqueeSection';
-/**Framer Motion Staff*/
-import { motion } from 'framer-motion';
 /**Basic Data*/
 import { pagesUrl, story } from '../../../../data/_data';
 
@@ -20,7 +18,7 @@ const Section_2 = ({ mediumTextStyle }: Props) => {
   return (
     <>
       <div className="hidden lg:flex w-full lg:h-[8vh] h-[14vh] bg-dark" />
-      <motion.div className="flex flex-col gap-y-16 xl:gap-y-20 xxl:gap-y-28 ">
+      <div className="flex flex-col gap-y-16 xl:gap-y-20 xxl:gap-y-28 ">
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[0].pseudoNumber}
           squareText={story.oFirmiePage.squareText[0].text}
@@ -60,7 +58,7 @@ const Section_2 = ({ mediumTextStyle }: Props) => {
             textStyle={mediumTextStyle}
           />
         </div>
-      </motion.div>
+      </div>
     </>
   );
   // return (

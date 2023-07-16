@@ -5,7 +5,7 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 /**Basic Data*/
 import { corpoColors } from '../../../../../data/_data';
 import { svgIconsFromCatalogRandome_data } from '../../../../SVG/iconsFromCatalog/_iconsFromCatalog_data';
@@ -48,15 +48,6 @@ const IconsMarquee: React.FC<Props> = ({
   // yFactor = '5%',
 }) => {
   const elementRef = useRef<HTMLDivElement>(null);
-  /**...*/
-
-  // useEffect(() => {
-  //   // console.log('scrollDistance:', scrollDistance);
-  //   // console.log('contenerWidth:', contenerWidth);
-  //   console.log('numberOfSvgCells', numberOfSvgCells);
-  // }, [numberOfSvgCells]);
-  // console.log('numberOfSvgCells', numberOfSvgCells);
-  // console.log('animationOffset', animationOffset);
 
   /**FramerMotion Staff**/
   const { scrollYProgress } = useScroll({
@@ -71,9 +62,9 @@ const IconsMarquee: React.FC<Props> = ({
     value => (value * animationOffset) / transformationFactor
   );
   //___helper
-  // useMotionValueEvent(scrollYProgress, 'change', latest => {
-  //   console.log('scrollYProgress changed to', latest);
-  // });
+  useMotionValueEvent(scrollYProgress, 'change', latest => {
+    console.log('scrollYProgress changed to', latest);
+  });
 
   /**JSX**/
   return (

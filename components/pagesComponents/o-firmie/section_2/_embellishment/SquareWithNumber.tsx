@@ -1,8 +1,7 @@
 import React from 'react';
 import FadingFrame from '../../../../multipagesComponents/lines/fadingFrame/FadingFrame';
 import FadingLine from '../../../../multipagesComponents/lines/fadingLine/FadingLine';
-/**Hook Staff**/
-// import useMeasure from 'react-use-measure';
+
 /**TS**/
 type Props = {
   componentIsInView?: boolean;
@@ -16,19 +15,12 @@ const SquareWithNumber: React.FC<Props> = ({
   pseudoNumber = '000',
   text = 'lorem',
 }) => {
-  // const [ref, bounds] = useMeasure();
-  // const val = bounds.width * 1.5;
-  // const val = bounds.width + 20;
-
+  /**JSX**/
   return (
     <div
       className={`fc flex-col  ${
         componentIsInView ? ' translate-x-0' : ' translate-x-4'
       } duration-[0.9s] delay-[0.6] p-2 disable-soft w-[80px] h-[80px] md:w-[120px] md:h-[120px] aspect-square`}
-      // style={{
-      //   //  width: val,
-      //   aspectRatio: '1/1',
-      // }}
     >
       <div
         className={`${
@@ -47,9 +39,6 @@ const SquareWithNumber: React.FC<Props> = ({
         {pseudoNumber}
       </p>
       <div
-        // className={`w-full h-[1px] border-t ${
-        //   componentIsInView ? 'border-corpo ' : 'border-dark '
-        // } duration-[0.9s] delay-[0.6]`}
         className={`w-full flex h-[1px] ${
           componentIsInView ? 'opacity-1' : 'opacity-0'
         } duration-[0.9s] delay-[0.6]`}

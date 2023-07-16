@@ -2,11 +2,11 @@ import Head from 'next/head';
 import { NextPage } from 'next/types';
 import { useEffect } from 'react';
 /**Components*/
+import PageTransitionHolder from '../../../../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
 /**BasicData*/
 import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
 import { wtyczkiGniazdaEstradowe_productCard_data } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_8_estradowe_data';
-
 /**----------------------------------------------**/
 const KategorieProduktowPage: NextPage = () => {
   /*
@@ -18,7 +18,7 @@ const KategorieProduktowPage: NextPage = () => {
 
   /**JSX**/
   return (
-    <>
+    <PageTransitionHolder>
       <Head>
         <title>Wtyczki i gniazda estradowe | Famatel Polska</title>
         <meta
@@ -38,7 +38,7 @@ const KategorieProduktowPage: NextPage = () => {
         subCategoryData={wtyczkiGniazdaSubCategoriesData[7]}
         productCardsData={wtyczkiGniazdaEstradowe_productCard_data}
       />
-    </>
+    </PageTransitionHolder>
   );
 };
 

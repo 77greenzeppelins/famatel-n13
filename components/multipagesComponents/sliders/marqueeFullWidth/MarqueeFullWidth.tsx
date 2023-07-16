@@ -41,7 +41,7 @@ const MarqueeFullWidth: React.FC<Props> = ({
   /**...**/
   const { width } = useWindowSize({ screensNumber: 1 });
   /*
-  why: svgBasicSize is an arra of one or two numbers; if two numbers we can choose one fize for mobile and one for desktop; mobile vs desktop is defined by svgDefaultTreshold in that case;
+  why: svgBasicSize is an array of one or two numbers; if two numbers we can choose one fize for mobile and one for desktop; mobile vs desktop is defined by svgDefaultTreshold in that case;
   */
   const svgRespSize =
     svgBasicSize.length > 0 && width > svgSizeTreshold
@@ -53,9 +53,10 @@ const MarqueeFullWidth: React.FC<Props> = ({
   !: recommended sice of icon for mobile is 46px; 
   */
   const numberOfSvgCells = Math.ceil((width / svgRespSize) * cellsNumberFactor);
-
-  // console.log('MarqueeFullWidth / width', width);
-  // console.log('MarqueeFullWidth / width / svgRespSize', width / svgRespSize);
+  console.log('width:', width);
+  console.log('svgRespSize:', svgRespSize);
+  console.log('cellsNumberFactor:', cellsNumberFactor);
+  console.log('numberOfSvgCells:', numberOfSvgCells);
 
   /**JSX**/
   return (

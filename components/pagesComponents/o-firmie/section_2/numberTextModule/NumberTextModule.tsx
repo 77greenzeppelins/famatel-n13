@@ -11,6 +11,7 @@ const NumberTextModule: React.FC<{
   animatedText: string;
   textStyle?: string;
 }> = ({ squareNumber, squareText, animatedText, textStyle }) => {
+  /**JSX**/
   return (
     <InViewContainer
       animationDelay={2}
