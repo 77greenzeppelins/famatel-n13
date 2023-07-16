@@ -1,16 +1,13 @@
 import Head from 'next/head';
-import { ReactElement, useEffect } from 'react';
-/**Components*/
-import Layout from '../../../components/layouts/rootLayout/Layout';
+import { NextPage } from 'next/types';
+import { useEffect } from 'react';
+/**Components**/
 import CategoryPageTemplate from '../../../components/multipagesComponents/_categoryPageTemplate/CategoryPageTemplate';
-// import NestedLayout from '../components/layouts/pagesLayouts/homeLayout/HomeLayout';
-/**BasicData*/
+/**BasicData**/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
-/**TS**/
-import type { NextPageWithLayout } from '../../_app';
 
 /**----------------------------------------------------------**/
-const KategorieProduktowPage: NextPageWithLayout = () => {
+const KategorieProduktowPage: NextPage = () => {
   /*
   __1__ With these steps, Next.js app will always scroll to the top of the page when a new page is loaded
   */
@@ -21,17 +18,7 @@ const KategorieProduktowPage: NextPageWithLayout = () => {
     scrollToTop();
   }, []);
 
-  /** JSX*/
-  return (
-    <div className="fc flex-col w-full bg-dark">
-      <CategoryPageTemplate
-        mainCategoryIndex={catalogStructureData[4].mainCategoryIndex}
-      />
-    </div>
-  );
-};
-
-KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
+  /**JSX**/
   return (
     <>
       <Head>
@@ -49,10 +36,11 @@ KategorieProduktowPage.getLayout = function getLayout(page: ReactElement) {
           content="Zapoznaj się z ofertą przedłużaczy bębnowych marki Famatel."
         ></meta>
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <div className="fc flex-col w-full bg-dark">
+        <CategoryPageTemplate
+          mainCategoryIndex={catalogStructureData[4].mainCategoryIndex}
+        />
+      </div>
     </>
   );
 };
