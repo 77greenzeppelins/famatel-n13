@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { NextPage } from 'next/types';
 import { useEffect } from 'react';
 /**Components**/
+import PageTransitionHolder from '../../../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
 import CategoryPageTemplate from '../../../components/multipagesComponents/_categoryPageTemplate/CategoryPageTemplate';
 /**BasicData**/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
@@ -17,7 +18,7 @@ const KategorieProduktowPage: NextPage = () => {
 
   /**JSX**/
   return (
-    <>
+    <PageTransitionHolder>
       <Head>
         <title>Przemysłowe wtyczki i gniazda | Famatel Polska</title>
         <meta
@@ -33,12 +34,13 @@ const KategorieProduktowPage: NextPage = () => {
           content="Zapoznaj się z ofertą przemysłowych wtyczek i gniazd marki Famatel."
         ></meta>
       </Head>
+
       <div className="fc flex-col w-full bg-dark">
         <CategoryPageTemplate
           mainCategoryIndex={catalogStructureData[0].mainCategoryIndex}
         />
       </div>
-    </>
+    </PageTransitionHolder>
   );
 };
 
