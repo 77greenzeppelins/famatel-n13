@@ -1,7 +1,6 @@
 import Head from 'next/head';
-import React, { ReactElement, useState } from 'react';
+import { NextPage } from 'next/types';
 /**Components**/
-import Layout from '../../../../../components/layouts/rootLayout/Layout';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
 import PuszkiZamykaneContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/9.1_puszki-zamykane/PuszkiZamykaneContent';
 /**BasicData**/
@@ -11,40 +10,10 @@ import {
   puszkiZamykane_productCard_data,
   puszkiZamykane_SubCategory_data,
 } from '../../../../../data/categoriesData/cat_10_puszki-instalacyjne/subCategories/_subCat_1_puszki-zamykane_data';
-/**TS**/
-import { NextPageWithLayout } from '../../../../_app';
 
-/**--------------------------------------**/
-const WtyczkiGniazdaEstradoweProductPage: NextPageWithLayout = () => {
+/**--------------------------------------------------------**/
+const WtyczkiGniazdaEstradoweProductPage: NextPage = () => {
   /**JSX**/
-  return (
-    <ProductPageTemplate
-      productCardsData={puszkiZamykane_productCard_data}
-      //___data for navSection => data about category
-      categoryName={
-        catalogStructureData[
-          mainCategoriesSummaryData.puszkiInstalacyjne.categoryIndex
-        ].mainCategoryName
-      }
-      categoryUrl={
-        catalogStructureData[
-          mainCategoriesSummaryData.puszkiInstalacyjne.categoryIndex
-        ].mainCategoryUrl
-      }
-      //___data for navSection => data about subCategory
-      subCategoryName={puszkiZamykane_SubCategory_data.subCategoryName}
-      subCategoryUrl={puszkiZamykane_SubCategory_data.subCategoryUrl}
-    >
-      <PuszkiZamykaneContent
-        productCardsData={puszkiZamykane_productCard_data}
-      />
-    </ProductPageTemplate>
-  );
-};
-
-WtyczkiGniazdaEstradoweProductPage.getLayout = function getLayout(
-  page: ReactElement
-) {
   return (
     <>
       <Head>
@@ -62,10 +31,27 @@ WtyczkiGniazdaEstradoweProductPage.getLayout = function getLayout(
           content="Specyfikacja techniczna zamykanej puszki instalacyjnej marki Famatel."
         ></meta>
       </Head>
-      <Layout>
-        {/* <NestedLayout>{page}</NestedLayout> */}
-        {page}
-      </Layout>
+      <ProductPageTemplate
+        productCardsData={puszkiZamykane_productCard_data}
+        //___data for navSection => data about category
+        categoryName={
+          catalogStructureData[
+            mainCategoriesSummaryData.puszkiInstalacyjne.categoryIndex
+          ].mainCategoryName
+        }
+        categoryUrl={
+          catalogStructureData[
+            mainCategoriesSummaryData.puszkiInstalacyjne.categoryIndex
+          ].mainCategoryUrl
+        }
+        //___data for navSection => data about subCategory
+        subCategoryName={puszkiZamykane_SubCategory_data.subCategoryName}
+        subCategoryUrl={puszkiZamykane_SubCategory_data.subCategoryUrl}
+      >
+        <PuszkiZamykaneContent
+          productCardsData={puszkiZamykane_productCard_data}
+        />
+      </ProductPageTemplate>
     </>
   );
 };

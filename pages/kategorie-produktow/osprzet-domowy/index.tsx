@@ -1,7 +1,6 @@
 import type { ReactElement } from 'react';
 import { NextPage } from 'next/types';
 /**Components*/
-import Layout from '../../../components/layouts/rootLayout/Layout';
 import CategoryPageTemplate from '../../../components/multipagesComponents/_categoryPageTemplate/CategoryPageTemplate';
 /**BasicData*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
