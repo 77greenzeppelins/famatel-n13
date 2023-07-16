@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { NextPage } from 'next/types';
+import { useEffect } from 'react';
 /**Components**/
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
 import WtyczkiGniazdaEstradoweContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/1.8_wtyczki-gniazda-estradowe/WtyczkiGniazdaEstradoweContent';
@@ -13,6 +14,13 @@ import {
 
 /**--------------------------------------**/
 const WtyczkiGniazdaEstradoweProductPage: NextPage = () => {
+  /*
+  __1__ With these steps, Next.js app will always scroll to the top of the page when a new page is loaded
+  */
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   /**JSX**/
   return (
     <>
