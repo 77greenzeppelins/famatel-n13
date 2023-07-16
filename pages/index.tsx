@@ -42,12 +42,12 @@ const Home: NextPage = () => {
   /*
   ___1. scrollBar position coordinator
   */
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
-  useEffect(() => {
-    scrollToTop();
-  }, []);
+  // const scrollToTop = () => {
+  //   window.scrollTo(0, 0);
+  // };
+  // useEffect(() => {
+  //   scrollToTop();
+  // }, []);
 
   /**JSX**/
   return (
