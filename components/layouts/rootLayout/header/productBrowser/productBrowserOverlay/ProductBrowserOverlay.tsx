@@ -44,7 +44,7 @@ const ProductBrowserOverlay = () => {
       {snap.isProductBrowserOpened && (
         <motion.div
           data-layout="ProductBrowserOverlay__container"
-          className={`fixed flex justify-center left-0 right-0 bottom-[1px] pointer-events-none ${corpoStandards.popUpsStyle}`}
+          className={`fixed flex justify-center left-0 right-0 bottom-[1px] pointer-events-none top-[64px] lg:top-[78px]`}
           key={snap.isCatalogOpened.toString()}
           variants={overlayContainerVariants}
           animate="animate"

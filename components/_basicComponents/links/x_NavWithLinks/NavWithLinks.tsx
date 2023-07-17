@@ -32,6 +32,6 @@ const NavWithLinks: React.FC<Props> = ({
 
 export default NavWithLinks;
 
-interface Props {
-  ChildComponent: React.FC<IF_LinkData>;
-}
+// interface Props {
+//   ChildComponent: React.FC<IF_LinkData>;
+// }

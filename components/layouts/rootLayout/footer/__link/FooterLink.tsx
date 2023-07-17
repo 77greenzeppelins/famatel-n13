@@ -3,14 +3,16 @@ import Link from 'next/link';
 import React from 'react';
 
 /**TS**/
-import { IF_LinkData } from '../../../../../utils/TS/typeScriptStaff';
-
+interface Props {
+  url: string;
+  label: string;
+  labelStyle?: string;
+}
 /**---------------------------**/
 
-const FooterLink: React.FC<IF_LinkData> = ({ url, label }) => {
+const FooterLink = ({ url, label, labelStyle }: Props) => {
   /*useRouter Section
-  why: for style sake;  I want link to be in corpo color 
-  when user is on its corresponding page
+  why: for style sake;  I want link to be in corpo color when user is on its corresponding page
   */
   const router = useRouter();
   const linkStyleIfRouterMatches = router.pathname === url;
@@ -34,13 +36,13 @@ const FooterLink: React.FC<IF_LinkData> = ({ url, label }) => {
         <span
           className={`p-small  text-left ${
             linkStyleIfRouterMatches
-              ? 'text-corpo'
-              : 'text-grey group-hover:text-light duration-[0.3s] delay-[0.1s] ease-in'
+              ? 'text-corpo font-bold'
+              : 'text-dark font-bold group-hover:text-greyTint2 duration-[0.3s] delay-[0.1s] ease-in'
           } ${linkStyleIfRouterMatches ? 'cursor-default' : 'cursor-pointer'}`}
         >
           {label}
         </span>
-        <span className=" w-full h-[1px] border-b border-greyShade2 group-hover:border-grey duration-300 delay-100 ease-in" />
+        <span className=" w-full h-[1px] border-b border-dark group-hover:border-greyTint2 duration-300 delay-100 ease-in" />
       </Link>
     </li>
   );

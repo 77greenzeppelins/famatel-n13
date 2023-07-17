@@ -62,9 +62,9 @@ const IconsMarquee: React.FC<Props> = ({
     value => (value * animationOffset) / transformationFactor
   );
   //___helper
-  useMotionValueEvent(scrollYProgress, 'change', latest => {
-    console.log('scrollYProgress changed to', latest);
-  });
+  // useMotionValueEvent(scrollYProgress, 'change', latest => {
+  //   console.log('scrollYProgress changed to', latest);
+  // });
 
   /**JSX**/
   return (

@@ -6,6 +6,7 @@ import XMarkIcon from '../../../SVG/icons/XmarkIcon';
 /**Framer Motion Staff*/
 import { AnimatePresence, motion } from 'framer-motion';
 import { headerVariants } from '../../../../utils/framerMotion/framerMotionUtils';
+import { corpoColors } from '../../../../data/_data';
 
 /**-------------------------------------------------------**/
 const MobileMenuButton: React.FunctionComponent<{
@@ -26,7 +27,7 @@ const MobileMenuButton: React.FunctionComponent<{
     <AnimatePresence>
       <aside
         data-component="MobileMenuButton__container"
-        className={` fc lg:hidden fixed w-screen top-0 left-0 right-0 h-[50px] z-[600] bg-transparent pointer-events-none`}
+        className={` fc lg:hidden fixed w-screen top-0 left-0 right-0 h-[64px] lg:h-[78px] z-[600] bg-transparent pointer-events-none`}
       >
         <motion.div
           className="flex items-center justify-end w-full h-full inner-px-md-xl-xxl"
@@ -46,7 +47,7 @@ const MobileMenuButton: React.FunctionComponent<{
               onClickHandler={() => mobileMenuOpener(prev => !prev)}
               buttonStyle="relative fc w-6 h-6 focus:outline-none disable group "
             >
-              <HamburgerIcon />
+              <HamburgerIcon strokeColor={corpoColors.dark} strokeWidth={1.5} />
             </ArrowButton>
           )}
         </motion.div>

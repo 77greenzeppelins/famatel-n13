@@ -7,9 +7,12 @@ import { motion } from 'framer-motion';
 import EventsPanel from './eventsPanel/EventsPanel';
 
 /** */
-import { corpoStandards } from '../../../../data/_data';
+// import { corpoStandards } from '../../../../data/_data';
 
-/**----------------------**/
+/*----------------------
+ ___1. styles: "h-[64px] lg:h-[78px]" are corelated with "top" of  <EventsPanel> | <ProductBrowserOverlay /> & <CatalogOverlay /> + height of <MobileMenuButton>
+ ___2. due to "unknow" reason styling via "corpoStandards" doesn't work...
+*/
 const Header = memo(function Header() {
   // const [count, setCount] = useState(0);
   // useEffect(() => {
@@ -33,7 +36,8 @@ const Header = memo(function Header() {
   return (
     <header
       data-component="Header__container"
-      className={`fixed w-screen top-0 left-0 right-0 z-[500] bg-grey ${corpoStandards.headerStyle} `}
+      className={`fixed w-screen top-0 left-0 right-0 z-[500] bg-grey h-[64px] lg:h-[78px] `}
+      //___${corpoStandards.headerStyle}
     >
       <div className="relative w-full h-full inner-px-md-xl-xxl ">
         <div className="relative w-full h-full">
@@ -70,7 +74,6 @@ const Header = memo(function Header() {
               <HeaderLogoLink />
             </div>
             <div className="flex items-center justify-end w-full h-full">
-              {/* <NavForMainPages /> */}
               <EventsPanel />
             </div>
           </motion.div>

@@ -46,7 +46,8 @@ const corpoColors: IF_CorpoColors = {
 
 /*
 ___1. some style suggestion taken from famatel.com
-___2. headerStyle determines popUpsStyle that is used in <ProductBrowserOverlay> 
+___2. header's height style determines <ProductBrowserOverlay /> & <CatalogOverlay /> top property and <MobileMenuButton>'s height property;
+___3. finally: importing this from that file doesn't work...
 */
 const corpoStandards = {
   headerStyle: 'h-[64px] lg:h-[78px] ',
@@ -60,6 +61,11 @@ const pagesUrl: IF_PagesUrl = {
   nowosci: '/nowosci',
   doPobrania: '/do-pobrania',
   kontakt: '/kontakt',
+};
+
+const regulacjeUrl = {
+  notaPrawna: { label: 'Nota prawna', url: '/nota-prawna' },
+  // cookies: { label: 'cookies', url: '/Polityka cookies' },
 };
 
 const menuLinkLabel: string[] = [
@@ -337,6 +343,8 @@ const sliderTriggersForTables = {
 export {
   //___from famatel.com
   corpoStandards,
+  //___
+  regulacjeUrl,
   //___
   pagesUrl,
   corpoColors,

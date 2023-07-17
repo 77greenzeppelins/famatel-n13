@@ -6,10 +6,12 @@ import { corpoColors } from '../../../data/_data';
 /***********************************************************************************/
 const HamburgerIcon = ({
   containerStyle,
+  strokeColor,
   strokeWidth = 1,
   pathStyle,
 }: {
   strokeWidth?: number;
+  strokeColor?: string;
   containerStyle?: string;
   pathStyle?: string;
 }) => {
@@ -21,7 +23,7 @@ const HamburgerIcon = ({
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth={strokeWidth}
-      stroke={corpoColors.light}
+      stroke={strokeColor ? strokeColor : corpoColors.light}
       className={containerStyle ? containerStyle : 'origin-center'}
       whileHover={{ scale: 1.1 }}
       transition={{
