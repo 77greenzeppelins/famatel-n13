@@ -8,6 +8,9 @@ import SocialMediaBar from './contacts/SocialMediaBar';
 import ProductCategoriesLinks from './productCategories/ProductCategoriesLinks';
 import GoToTopButton from './goToTopButton/GoToTopButton';
 import Address from './contacts/Address';
+/**BasicData*/
+
+import FooterBottomPart from './bottomPart/FooterBottomPart';
 
 const Footer = memo(function Footer() {
   // useEffect(() => {
@@ -17,7 +20,7 @@ const Footer = memo(function Footer() {
 
   /**JSX**/
   return (
-    <footer className="flex flex-col w-full pb-10 gap-y-10">
+    <footer className="flex flex-col w-full gap-y-10">
       <div className="relative flex items-end h-20 ">
         <FadingLine gradientTo="toLeft" containerStyle="w-1/2 h-[1px]" />
         <FadingLine gradientTo="toRight" containerStyle="w-1/2 h-[1px]" />
@@ -57,6 +60,7 @@ const Footer = memo(function Footer() {
           <GoToTopButton />
         </div>
       </div>
+      <FooterBottomPart />
     </footer>
   );
 });
