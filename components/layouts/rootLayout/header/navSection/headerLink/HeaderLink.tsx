@@ -34,8 +34,8 @@ const HeaderLink: React.FC<Props> = ({ label, url }) => {
           aria-current={isActive ? 'page' : undefined}
           scroll={false}
           // className="relative fc gap-1 w-full h-full cursor-pointer bg-transparent select-none touch-none  group"
-          className={`relative text-light header-link-label disable h-[40px] fc  ${
-            isActive ? 'hover:text-light' : 'hover:text-corpo'
+          className={`relative text-dark font-bold header-link-label disable h-[40px] fc  ${
+            isActive ? 'hover:text-dark' : 'hover:text-corpo'
           }  delay-100 duration-300 ease-linear`}
         >
           {/* <span

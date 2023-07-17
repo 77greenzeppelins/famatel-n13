@@ -44,6 +44,15 @@ const corpoColors: IF_CorpoColors = {
   vModLight: '#eaeaea',
 };
 
+/*
+___1. some style suggestion taken from famatel.com
+___2. headerStyle determines popUpsStyle that is used in <ProductBrowserOverlay> 
+*/
+const corpoStandards = {
+  headerStyle: 'h-[64px] lg:h-[78px] ',
+  popUpsStyle: 'top-[64px] lg:top-[78px]',
+};
+
 const pagesUrl: IF_PagesUrl = {
   home: '/',
   realizacje: '/realizacje',
@@ -326,6 +335,9 @@ const sliderTriggersForTables = {
 };
 /**...............**/
 export {
+  //___from famatel.com
+  corpoStandards,
+  //___
   pagesUrl,
   corpoColors,
   menuLinkLabel,
@@ -348,91 +360,3 @@ export {
   mobileMenuData,
   sliderTriggersForTables,
 };
-
-// const mainCategories: IF_MainCategorySpecification[] = [
-//   {
-//     arrayIndex: 0,
-//     name: mainCategoriesNames[0],
-//     fullName: 'Przemysłowe wtyczki i gniazda',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[0]}`,
-//     image: imgOfProductsReps[0].image,
-//   },
-//   {
-//     arrayIndex: 1,
-//     name: mainCategoriesNames[1],
-//     fullName: 'Gniazda z rozłącznikiem i blokadą ',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[1]}`,
-//     image: imgOfProductsReps[1].image,
-//   },
-//   {
-//     arrayIndex: 2,
-//     name: mainCategoriesNames[2],
-//     fullName: 'Adaptery przemysłowe',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[2]}`,
-//     image: imgOfProductsReps[2].image,
-//   },
-//   {
-//     arrayIndex: 3,
-//     name: mainCategoriesNames[3],
-//     fullName: 'Gniazda podwieszane',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[3]}`,
-//     image: imgOfProductsReps[3].image,
-//   },
-//   {
-//     arrayIndex: 4,
-//     name: mainCategoriesNames[4],
-//     fullName: 'Przedłużacze bębnowe',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[4]}`,
-//     image: imgOfProductsReps[4].image,
-//   },
-//   {
-//     arrayIndex: 5,
-//     name: mainCategoriesNames[5],
-//     fullName: 'Rozłączniki bezpieczeństwa',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[5]}`,
-//     image: imgOfProductsReps[5].image,
-//   },
-//   {
-//     arrayIndex: 6,
-//     name: mainCategoriesNames[6],
-//     fullName: 'Ładowarki samochodowe',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[6]}`,
-//     image: imgOfProductsReps[6].image,
-//   },
-//   {
-//     arrayIndex: 7,
-//     name: mainCategoriesNames[7],
-//     fullName: 'Obudowy i rozdzielnice',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[7]}`,
-//     image: imgOfProductsReps[7].image,
-//   },
-//   {
-//     arrayIndex: 8,
-//     name: mainCategoriesNames[8],
-//     fullName: 'Rozdzielnice modułowe',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[8]}`,
-//     image: imgOfProductsReps[8].image,
-//   },
-//   {
-//     arrayIndex: 9,
-//     name: mainCategoriesNames[9],
-//     fullName: 'Puszki instalacyjne',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[9]}`,
-//     image: imgOfProductsReps[9].image,
-//   },
-//   {
-//     arrayIndex: 10,
-//     name: mainCategoriesNames[10],
-//     // fullName: 'Wtyczki, gniazda, adaptery domowe',
-//     fullName: 'Osprzęt domowy',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[10]}`,
-//     image: imgOfProductsReps[10].image,
-//   },
-//   {
-//     arrayIndex: 11,
-//     name: mainCategoriesNames[11],
-//     fullName: 'Himarsy i dżaweliny',
-//     url: `${pagesUrl.produkty}/${mainCategoriesPath[11]}`,
-//     image: imgOfProductsReps[11].image,
-//   },
-// ];

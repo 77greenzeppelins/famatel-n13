@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 /*Components*/
 import SvgLogo from '../../../../SVG/logo/SvgLogo';
-import { useRouter } from 'next/router';
+/**BasicData*/
+import { corpoColors } from '../../../../../data/_data';
 
 /**------------------------------**/
 const HeaderLogoLink = () => {
@@ -16,11 +18,11 @@ const HeaderLogoLink = () => {
       aria-label={`Link do strony O Firmie`}
       aria-current={isActive ? 'page' : undefined}
       scroll={false}
-      className="pointer-events-auto"
+      className="fc pointer-events-auto h-full "
     >
-      <span className="flex justify-start cursor-pointer disable-soft">
-        <SvgLogo />
-      </span>
+      {/* <span className="fc h-full cursor-pointer disable-soft bg-light"> */}
+      <SvgLogo fillColorText={corpoColors.dark} />
+      {/* </span> */}
     </Link>
   );
 };

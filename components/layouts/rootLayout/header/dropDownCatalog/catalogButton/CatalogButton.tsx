@@ -49,8 +49,9 @@ const CatalogButton = () => {
       >
         <ListIcon
           pathStyle={`${
-            snap.isCatalogOpened ? 'stroke-corpo ' : 'stroke-light'
+            snap.isCatalogOpened ? 'stroke-corpo ' : 'stroke-dark'
           } transition-all`}
+          strokeWidth={1.5}
         />
       </motion.button>
     </div>

@@ -13,6 +13,7 @@ interface Props {
   boxStyle?: string;
   // verticalOrnamentStyle?: string;
   hasVerticalOrnament?: boolean;
+  ornamentColor?: string;
   hasHorizontalOrnament?: boolean;
   hasBox?: boolean;
 }
@@ -25,6 +26,7 @@ const SmallPseudoHeader: React.FunctionComponent<Props> = ({
   boxStyle,
   // verticalOrnamentStyle,
   hasVerticalOrnament = true,
+  ornamentColor,
   hasHorizontalOrnament = false,
   hasBox = false,
 }) => {
@@ -38,7 +40,7 @@ const SmallPseudoHeader: React.FunctionComponent<Props> = ({
       }  ${hasBox ? 'gap-4 w-fit' : 'gap-0 w-fit'} `}
     >
       {hasHorizontalOrnament && (
-        <div className="absolute bottom-0 h-[1px] w-full border-b border-corpo" />
+        <div className="absolute bottom-0 h-[1px] w-full border-b  border-corpo" />
       )}
       {hasHorizontalOrnament && (
         <div className="absolute top-0 h-[1px] w-full border-b border-corpo" />
@@ -46,8 +48,8 @@ const SmallPseudoHeader: React.FunctionComponent<Props> = ({
       {hasBox && <div className={boxStyle ? boxStyle : boxDefaultStyle} />}
       <p
         className={`${textStyle ? textStyle : textDefaultStyle} ${
-          hasVerticalOrnament ? 'border-l-[2px] border-corpo pl-3' : ''
-        } `}
+          hasVerticalOrnament ? 'border-l-[2px]  pl-3' : ''
+        } ${ornamentColor ? ornamentColor : 'border-corpo'} `}
         style={inlineTextStyle}
       >
         {text}

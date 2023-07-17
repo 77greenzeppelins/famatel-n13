@@ -1,11 +1,13 @@
 import { useRouter } from 'next/router';
+import { useEffect, useState, memo } from 'react';
 /**Components**/
 import HeaderLogoLink from './logoLink/HeaderLogoLink';
-// import NavForMainPages from './navSection/NavForMainPages';
 /**FramerMotion Staff**/
 import { motion } from 'framer-motion';
 import EventsPanel from './eventsPanel/EventsPanel';
-import { useEffect, useState, memo } from 'react';
+
+/** */
+import { corpoStandards } from '../../../../data/_data';
 
 /**----------------------**/
 const Header = memo(function Header() {
@@ -31,7 +33,7 @@ const Header = memo(function Header() {
   return (
     <header
       data-component="Header__container"
-      className={`fixed w-screen top-0 left-0 right-0 h-[50px] z-[500] bg-dark`}
+      className={`fixed w-screen top-0 left-0 right-0 z-[500] bg-grey ${corpoStandards.headerStyle} `}
     >
       <div className="relative w-full h-full inner-px-md-xl-xxl ">
         <div className="relative w-full h-full">

@@ -9,7 +9,9 @@ import SpecialCard from './specialCard/SpecialCard';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { overlayContainerVariants } from '../../../../../../utils/framerMotion/framerMotionUtils';
+/**BasicData**/
 import { catalogStructureData } from '../../../../../../data/_catalogStructure_data';
+import { corpoStandards } from '../../../../../../data/_data';
 
 /**Tailwind**/
 const basicTextStyle =
@@ -30,7 +32,10 @@ const CatalogOverlay = () => {
   /**GlobalState Section**/
   const snap = useSnapshot(globalState);
 
-  /**It allowes to close dropdownMenu when url changes**/
+  /*
+  ___1. what it does? ==> It allowes to close dropdownMenu when url changes
+  
+  */
   const router = useRouter();
   useEffect(() => {
     return () => {
@@ -44,7 +49,7 @@ const CatalogOverlay = () => {
       {snap.isCatalogOpened && (
         <motion.div
           data-layout="wrapper_for_ProduktyDropDownMenu"
-          className="fixed flex justify-center left-0 right-0 top-[50px] bottom-[1px] pointer-events-none "
+          className={`fixed flex justify-center left-0 right-0  bottom-[1px] pointer-events-none ${corpoStandards.popUpsStyle}`}
           key={snap.isCatalogOpened.toString()}
           variants={overlayContainerVariants}
           animate="animate"

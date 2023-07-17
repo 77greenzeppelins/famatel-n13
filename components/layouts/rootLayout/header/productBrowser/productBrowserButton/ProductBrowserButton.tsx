@@ -48,8 +48,9 @@ const ProductBrowserButton = () => {
       >
         <MagGlassIcon
           pathStyle={`${
-            snap.isProductBrowserOpened ? 'stroke-corpo ' : 'stroke-light'
+            snap.isProductBrowserOpened ? 'stroke-corpo ' : 'stroke-dark'
           } transition-all`}
+          strokeWidth={1.5}
         />
       </motion.button>
     </div>
