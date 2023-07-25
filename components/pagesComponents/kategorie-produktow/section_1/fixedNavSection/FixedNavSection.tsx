@@ -6,7 +6,7 @@ import ButtonsPanel from './buttonsPanel/ButtonsPanel';
 import { AnimatePresence, motion } from 'framer-motion';
 /*
 wtf: 
-__1__ thera are two "variantsSpecifications" that are selected depending on "smValue" that is layout setter; one option for mobileLike one for  notMobileLike;
+__1__ thera are two "variantsSpecifications" that are selected depending on "lgValue" that is layout setter; one option for mobileLike one for  notMobileLike;
 */
 const lessThen640Variant = {
   from: { y: '200px', opacity: 0 },
@@ -55,9 +55,9 @@ const FixedNavSection: React.FC<Props> = ({
   return (
     <AnimatePresence mode="wait" initial={true} custom={isInView}>
       {isInView && (
-        <motion.div className="fixed fc w-full h-[68px] sm:h-full sm:w-[80px] right-0 bottom-0">
+        <motion.div className="fixed fc w-full h-[68px] lg:h-full lg:w-[80px] right-0 bottom-0">
           <motion.div
-            className={`fc w-[90%] h-full sm:w-full sm:h-[260px] bg-dark ${
+            className={`fc w-[90%] h-full lg:w-full lg:h-[260px] bg-dark ${
               layoutCondition ? moreThen640Style : lessThen640Style
             } border-corpo py-6`}
             key={isInView.toString()}
