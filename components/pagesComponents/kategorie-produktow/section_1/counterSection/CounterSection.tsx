@@ -40,7 +40,7 @@ const CounterSection = forwardRef(
             uniqueKey={props.categoryIndex}
             label={catalogStructureData[props.categoryIndex].mainCategoryName}
           />
-          <div className="hidden sm:block">
+          <div className="hidden lg:block">
             <LinkWithSpanAndIcon
               uniqueKeyToAnimate={''} //___empty means no animation in <span>
               linkHref={

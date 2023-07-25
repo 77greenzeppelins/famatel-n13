@@ -50,7 +50,7 @@ const ButtonsPanel: React.FC<Props> = ({
           }
         />
       </ArrowButton>
-      <div className="block sm:hidden">
+      <div className="block lg:hidden">
         <LinkWithSpanAndIcon
           uniqueKeyToAnimate={''} //___empty means no animation in <span>
           linkHref={catalogStructureData[categoryIndex].mainCategoryUrl}
