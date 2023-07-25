@@ -1,8 +1,10 @@
 import React from 'react';
+import { catalogStructureData } from '../../../../../../data/_catalogStructure_data';
 import { corpoColors } from '../../../../../../data/_data';
 import ChevronLeftIcon from '../../../../../SVG/icons/ChevronLeftIcon';
 import ChevronRightIcon from '../../../../../SVG/icons/ChevronRightIcon';
 import ArrowButton from '../../../../../_basicComponents/buttons/arrowButton/ArrowButton';
+import LinkWithSpanAndIcon from '../../../../../_basicComponents/links/linkWithSpanAndIcon/LinkWithSpanAndIcon';
 
 interface Props {
   categoryIndex: number;
@@ -31,7 +33,7 @@ const ButtonsPanel: React.FC<Props> = ({
     <div
       role="group" //Indicates that the element contains a set of related elements, in this case, a set of buttons.
       data-component="ButtonsPanel__container"
-      className="flex flex-row items-center justify-between px-6 w-full sm:flex-col  sm:justify-between sm:px-0 h-full  "
+      className="flex flex-row items-center justify-between w-full h-full px-6 sm:flex-col sm:justify-between sm:px-0 "
     >
       <ArrowButton
         buttonStyle="fc w-10 h-10 items-center justify-start focus:outline-none disable pointer-events-auto border border-greyShade2"
@@ -48,6 +50,19 @@ const ButtonsPanel: React.FC<Props> = ({
           }
         />
       </ArrowButton>
+      <div className="block sm:hidden">
+        <LinkWithSpanAndIcon
+          uniqueKeyToAnimate={''} //___empty means no animation in <span>
+          linkHref={catalogStructureData[categoryIndex].mainCategoryUrl}
+          linkLabel={'Szczegóły kategorii'}
+          ariaLabel={`Link do strony: Kategorie Produktów`}
+          linkStyle="fc gap-x-4 group px-4 py-1 bg-corpo rounded-sm"
+          spanStyle={`p-small text-dark font-bold group-hover:text-light group-hover:font-normal  ease-in duration-[0.4s] delay-[0.1s] `}
+          //text-[0.75rem]  lg:text-[1rem] tracking-[2px] leading-tight
+          iconStyle="fc h-4 w-4  aspect-square stroke-dark group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0"
+        />
+      </div>
+
       <ArrowButton
         buttonStyle="fc w-10 h-10 items-center justify-start focus:outline-none disable pointer-events-auto border border-greyShade2"
         onClickHandler={nextCategory}

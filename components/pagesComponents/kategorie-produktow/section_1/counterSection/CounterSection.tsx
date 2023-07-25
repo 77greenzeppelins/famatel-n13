@@ -40,16 +40,20 @@ const CounterSection = forwardRef(
             uniqueKey={props.categoryIndex}
             label={catalogStructureData[props.categoryIndex].mainCategoryName}
           />
-          <LinkWithSpanAndIcon
-            uniqueKeyToAnimate={''} //___empty means no animation in <span>
-            linkHref={catalogStructureData[props.categoryIndex].mainCategoryUrl}
-            linkLabel={'Szczegóły kategorii'}
-            ariaLabel={`Link do strony: Kategorie Produktów`}
-            linkStyle="fc gap-x-4  group px-4 py-1 bg-corpo rounded-sm"
-            spanStyle={`p-small text-dark font-bold group-hover:text-light group-hover:font-normal  ease-in duration-[0.4s] delay-[0.1s] `}
-            //text-[0.75rem]  lg:text-[1rem] tracking-[2px] leading-tight
-            iconStyle="fc h-4 w-4  aspect-square stroke-dark group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0"
-          />
+          <div className="hidden sm:block">
+            <LinkWithSpanAndIcon
+              uniqueKeyToAnimate={''} //___empty means no animation in <span>
+              linkHref={
+                catalogStructureData[props.categoryIndex].mainCategoryUrl
+              }
+              linkLabel={'Szczegóły kategorii'}
+              ariaLabel={`Link do strony: Kategorie Produktów`}
+              linkStyle="fc gap-x-4 group px-4 py-1 bg-corpo rounded-sm"
+              spanStyle={`p-small text-dark font-bold group-hover:text-light group-hover:font-normal  ease-in duration-[0.4s] delay-[0.1s] `}
+              //text-[0.75rem]  lg:text-[1rem] tracking-[2px] leading-tight
+              iconStyle="fc h-4 w-4  aspect-square stroke-dark group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0"
+            />
+          </div>
         </div>
       </div>
     );
