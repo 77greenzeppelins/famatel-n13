@@ -11,6 +11,8 @@ const PageTransitionHolder: React.FunctionComponent<{
   /**Router Section*/
   const { pathname } = useRouter();
 
+  console.log('pathname:', pathname);
+
   /**JSX*/
   return (
     <AnimatePresence

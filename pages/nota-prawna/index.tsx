@@ -26,7 +26,7 @@ const NotaPrawnaPage: NextPage = () => {
         ></meta>
         <meta name="description" content="Nota Prawna"></meta>
         <meta property="og:description" content="Nota Prawna"></meta>
-        <link rel="canonical" href="https://www.famatel.pl/kontakt" />
+        <link rel="canonical" href="https://www.famatel.pl/nota-prawna" />
       </Head>
       <NotaPrawnaContent />
     </>

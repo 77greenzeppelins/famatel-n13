@@ -7,7 +7,7 @@ const NotaPrawnaContent = () => {
   //   console.log('textArray:', textArray);
   /**JSX**/
   return (
-    <div className="h-full w-full pt-[64px] lg:pt-[78px] inner-px-md-xl-xxl">
+    <div className="min-h-screen w-full pt-[64px] lg:pt-[78px] inner-px-md-xl-xxl">
       <h1 className="text-light text-left text-[2rem] xs:text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[4.5rem] xxl:text-[5rem] font-bold tracking-[5px] leading-tight pt-20 pb-10 md:inner-px-md-xl-xxl">
         {textArray[0]}
         <br />
