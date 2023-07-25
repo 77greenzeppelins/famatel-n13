@@ -8,7 +8,7 @@ import { catalogStructureData } from '../../../../../data/_catalogStructure_data
 
 /**HardCoded Style*/
 const textStyle =
-  'text-corpo text-center text-[1.75rem] xxs:text-[2.75rem] xs4xx:text-[4.5rem] lg:text-[5.5rem] font-bold tracking-[2px] leading-tight';
+  'text-grey text-center text-[1.75rem] xxs:text-[2.75rem] xs4xx:text-[4.5rem] lg:text-[5.5rem] font-bold tracking-[2px] leading-tight';
 
 /**TS**/
 type RefType = HTMLDivElement;
@@ -26,7 +26,7 @@ in this case we "apply" to forwadRef two generic types; order matters...
 const CounterSection = forwardRef(
   (props: PropsType, ref: ForwardedRef<RefType>) => {
     return (
-      <div className="flex flex-col w-full items-center ">
+      <div className="flex flex-col items-center w-full ">
         <div>
           <NumbersDisplayer
             currentCategoryIndex={props.categoryIndex}
@@ -35,7 +35,7 @@ const CounterSection = forwardRef(
             countedStaff={catalogStructureData.length}
           />
         </div>
-        <div className="fc flex-col w-full" ref={ref}>
+        <div className="flex-col w-full fc" ref={ref}>
           <AnimatedSpanHeader
             uniqueKey={props.categoryIndex}
             label={catalogStructureData[props.categoryIndex].mainCategoryName}
