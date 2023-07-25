@@ -33,7 +33,7 @@ const ButtonsPanel: React.FC<Props> = ({
     <div
       role="group" //Indicates that the element contains a set of related elements, in this case, a set of buttons.
       data-component="ButtonsPanel__container"
-      className="flex flex-row items-center justify-between w-full h-full px-6 sm:flex-col sm:justify-between sm:px-0 "
+      className="flex flex-row items-center justify-between w-full h-full px-6 lg:flex-col lg:justify-between lg:px-0 "
     >
       <ArrowButton
         buttonStyle="fc w-10 h-10 items-center justify-start focus:outline-none disable pointer-events-auto border border-greyShade2"
