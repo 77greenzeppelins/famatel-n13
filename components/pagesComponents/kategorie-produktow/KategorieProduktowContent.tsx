@@ -11,7 +11,7 @@ const KategorieProduktowContent = () => {
   return (
     <div
       data-component="KategorieProduktowContent__container"
-      className="flex flex-col gap-10 lg:gap-20 justify-center pt-[60px] overflow-hidden"
+      className="flex flex-col gap-10 sm:gap-20 lg:gap-32 justify-center pt-[60px] overflow-hidden"
       //___pt-[50px] pb-[10vh]
     >
       <div className="z-1">
