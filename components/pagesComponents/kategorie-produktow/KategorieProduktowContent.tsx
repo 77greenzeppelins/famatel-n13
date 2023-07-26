@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 /**Components**/
 import HeroSection from './heroSection/HeroSection';
 import Section_1 from './section_1/Section_1';
+import Section_2 from './section_2/Section_2';
 /**Basic Data*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
 
@@ -20,8 +21,16 @@ const KategorieProduktowContent = () => {
       <div className="z-1">
         <HeroSection />
       </div>
-      <div className="z-10">
+      {/* <div className="z-10">
         <Section_1
+          categoryIndex={categoryIndex}
+          setCategoryIndex={setCategoryIndex}
+          categoriesNumber={catalogStructureData.length}
+          // categoryUrl={catalogStructureData[categoryIndex].mainCategoryUrl}
+        />
+      </div> */}
+      <div className="z-10">
+        <Section_2
           categoryIndex={categoryIndex}
           setCategoryIndex={setCategoryIndex}
           categoriesNumber={catalogStructureData.length}
