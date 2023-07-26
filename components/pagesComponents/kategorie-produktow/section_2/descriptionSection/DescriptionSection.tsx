@@ -9,7 +9,7 @@ const DescriptionSection: React.FC<{ categoryIndex: number }> = ({
   categoryIndex,
 }) => {
   return (
-    <div className="w-full flex flex-col gap-12 inner-px-md-xl-xxl">
+    <div className="flex flex-col w-full gap-12 ">
       <div className="w-full flex flex-col gap-4 sm:pr-[80px]">
         <SmallPseudoHeader
           text={'Opis'}

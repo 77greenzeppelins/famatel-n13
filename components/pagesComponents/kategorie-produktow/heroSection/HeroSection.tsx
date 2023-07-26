@@ -35,7 +35,7 @@ const HeroSection = () => {
           <TenCategoriesWithSvg />
         </div>
       </div>
-      <div className="h-[30vh] md:h-[24vh] w-[74%]">
+      <div className="min-h-[30vh] min-md:h-[24vh] w-[74%]">
         <div className="relative flex items-start justify-center h-full">
           <InViewContainer
             animationDelay={0.1}
@@ -48,7 +48,7 @@ const HeroSection = () => {
               xFactor={'0'}
               yFactor={'0'}
             >
-              <p className="text-grey text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight">
+              <p className="text-center text-grey p-v-large">
                 {story.oFirmiePage.heroSection[0]}
               </p>
             </InViewAnimatedContent>

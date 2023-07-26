@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 /**Components**/
 import RowOfSlides from './draggableSliderContent/RowOfSlides';
 /**Hook Staff**/
@@ -26,13 +26,13 @@ interface Props {
   yFactor?: string;
 }
 /**-------------------------------------------------------**/
-const DraggableSlider: React.FC<Props> = ({
+const DraggableSlider = memo(function DraggableSlider({
   width,
   currentCategory,
   arrayOrder, //___specifief if read array from first or the last item
   xFactor,
   yFactor,
-}) => {
+}: Props) {
   /**References**/
   const constraintsRef = useRef(null);
   /**simple data; how many n-size cells can we put to the line**/
@@ -47,7 +47,7 @@ const DraggableSlider: React.FC<Props> = ({
     <div
       data-component="DraggableSlider__container"
       ref={constraintsRef}
-      // className="flex flex-col justify-center items-center"
+      // className="flex flex-col items-center justify-center"
       /*
       (!) below class + delate of div in parentComponent goives interesting effect... 
       */
@@ -91,7 +91,7 @@ const DraggableSlider: React.FC<Props> = ({
       </motion.div>
     </div>
   );
-};
+});
 
 export default DraggableSlider;
 
@@ -117,7 +117,7 @@ export default DraggableSlider;
 //             // className={`w-[${slideSide}px]  h-[${slideSide}px] border`}
 //             // className={`${cellSize} border`}
 //           >
-//             <p className="fc flex-col w-full h-full text-corpo">
+//             <p className="flex-col w-full h-full fc text-corpo">
 //               <span>{`n: ${slidesNumber}`}</span>
 //               <span>{`i: ${i}`}</span>
 //             </p>

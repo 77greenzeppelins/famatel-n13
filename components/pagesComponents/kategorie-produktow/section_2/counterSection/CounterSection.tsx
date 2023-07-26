@@ -1,24 +1,25 @@
 import React, { ForwardedRef, forwardRef } from 'react';
 /**Components**/
 import NumbersDisplayer_2 from '../../../../multipagesComponents/counters/numbersDisplayer/NumbersDisplayer_2';
-import LinkWithSpanAndIcon from '../../../../_basicComponents/links/linkWithSpanAndIcon/LinkWithSpanAndIcon';
-import AnimatedSpanHeader from '../../../../multipagesComponents/pseudoHeaders/animatedSpanHeader/AnimatedSpanHeader';
+import AnimatedLabel from '../../../../multipagesComponents/pseudoHeaders/animatedLabel/AnimatedLabel';
 /**Basic Data*/
 import { catalogStructureData } from '../../../../../data/_catalogStructure_data';
-
-/**HardCoded Style*/
-const textStyle =
-  'text-grey text-center text-[1.75rem] xxs:text-[2.75rem] xs4xx:text-[4.5rem] lg:text-[5.5rem] font-bold tracking-[2px] leading-tight';
+import { simpleOpacityVariants } from '../../../../../utils/framerMotion/framerMotionUtils';
+import LinkAsContainer from '../../../../_basicComponents/links/linkAsContainer/LinkAsContainer';
+import NavWithProgressBar from '../../../../multipagesComponents/navigations/navWithProgressBar/NavWithProgressBar';
 
 /**TS**/
 type RefType = HTMLDivElement;
 
 type PropsType = {
   categoryIndex: number;
+  setCategoryIndex: React.Dispatch<React.SetStateAction<number>>;
+  categoriesNumber: number;
 };
 /**------------------------------------------------------------**/
 /*
-syntax__2:
+___1. why "forwardRef"? ==> because if this section in inView <FixedNavSection> in <Section_2> appears... 
+___2. syntax__2:
 const CounterSection = forwardRef<RefType, PropsType>(
   (props, ref) => {...}
 in this case we "apply" to forwadRef two generic types; order matters...
@@ -26,34 +27,32 @@ in this case we "apply" to forwadRef two generic types; order matters...
 const CounterSection = forwardRef(
   (props: PropsType, ref: ForwardedRef<RefType>) => {
     return (
-      <div className="flex flex-col items-center w-full ">
-        <div>
+      <div className="flex flex-col w-full ">
+        <div className="flex gap-x-20">
           <NumbersDisplayer_2
             currentCategoryIndex={props.categoryIndex}
-            // digitStyle={textStyle}
-            // digitContainerStyle="fc xxs:w-[66px] xs4xx:w-[80px]"
             countedStaff={catalogStructureData.length}
           />
-        </div>
-        <div className="flex-col w-full fc" ref={ref}>
-          <AnimatedSpanHeader
-            uniqueKey={props.categoryIndex}
-            label={catalogStructureData[props.categoryIndex].mainCategoryName}
+          <NavWithProgressBar
+            setCategoryIndex={props.setCategoryIndex}
+            categoryIndex={props.categoryIndex}
+            categoriesNumber={props.categoriesNumber}
           />
-          <div className="hidden lg:block">
-            <LinkWithSpanAndIcon
-              uniqueKeyToAnimate={''} //___empty means no animation in <span>
-              linkHref={
-                catalogStructureData[props.categoryIndex].mainCategoryUrl
-              }
-              linkLabel={'Szczegóły kategorii'}
-              ariaLabel={`Link do strony: Kategorie Produktów`}
-              linkStyle="fc gap-x-4 group px-4 py-1 bg-corpo rounded-sm"
-              spanStyle={`p-small text-dark font-bold group-hover:text-light group-hover:font-normal  ease-in duration-[0.4s] delay-[0.1s] `}
-              //text-[0.75rem]  lg:text-[1rem] tracking-[2px] leading-tight
-              iconStyle="fc h-4 w-4  aspect-square stroke-dark group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0"
+        </div>
+        <div className="lg:w-[80%] m-auto" ref={ref}>
+          <LinkAsContainer
+            linkHref={catalogStructureData[props.categoryIndex].mainCategoryUrl}
+            ariaLabel={`Link do kategorii: ${
+              catalogStructureData[props.categoryIndex].mainCategoryName
+            }`}
+          >
+            <AnimatedLabel
+              customeVariants={simpleOpacityVariants}
+              uniqueKey={props.categoryIndex}
+              label={catalogStructureData[props.categoryIndex].mainCategoryName}
+              hasIcon={true}
             />
-          </div>
+          </LinkAsContainer>
         </div>
       </div>
     );

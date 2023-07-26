@@ -1,40 +1,26 @@
 import React, { useState } from 'react';
 /**Components**/
 import HeroSection from './heroSection/HeroSection';
-import Section_1 from './section_1/Section_1';
 import Section_2 from './section_2/Section_2';
 /**Basic Data*/
 import { catalogStructureData } from '../../../data/_catalogStructure_data';
 
 /**----------------------------------------------------------------------------------**/
 const KategorieProduktowContent = () => {
-  /**LocalState; just to control slides**/
-  const [categoryIndex, setCategoryIndex] = useState(0);
-
   /**JSX**/
   return (
     <div
       data-component="KategorieProduktowContent__container"
-      className="flex flex-col justify-center pt-[60px] overflow-hidden"
+      className="flex flex-col gap-10 lg:gap-20 justify-center pt-[60px] overflow-hidden"
       //___pt-[50px] pb-[10vh]
     >
       <div className="z-1">
         <HeroSection />
       </div>
-      {/* <div className="z-10">
-        <Section_1
-          categoryIndex={categoryIndex}
-          setCategoryIndex={setCategoryIndex}
-          categoriesNumber={catalogStructureData.length}
-          // categoryUrl={catalogStructureData[categoryIndex].mainCategoryUrl}
-        />
-      </div> */}
       <div className="z-10">
         <Section_2
-          categoryIndex={categoryIndex}
-          setCategoryIndex={setCategoryIndex}
-          categoriesNumber={catalogStructureData.length}
-          // categoryUrl={catalogStructureData[categoryIndex].mainCategoryUrl}
+
+        // categoryUrl={catalogStructureData[categoryIndex].mainCategoryUrl}
         />
       </div>
     </div>

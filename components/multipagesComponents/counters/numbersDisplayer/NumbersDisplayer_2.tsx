@@ -7,7 +7,7 @@ import {
 } from '../../../../utils/framerMotion/framerMotionUtils';
 /**HardCoded Data*/
 const largeDigitsContainerDefaultStyle = `flex justify-end xs:min-w-[150px]  xs3xx:min-w-[130px] min-w-[110px] `;
-const smalldigitsContainerDefaultStyle = `pl-2 pt-2`;
+const smalldigitsContainerDefaultStyle = ` pl-2 pt-2`;
 
 const largeTextDefault = 'p-u-large text-grey';
 const smallTextDefault = 'p-medium text-grey';
@@ -31,7 +31,7 @@ const NumbersDisplayer_2: React.FunctionComponent<{
     countedStaff > 9 && currentCategoryIndex + 1 < 10;
   /**JSX**/
   return (
-    <div className="flex disable">
+    <div className="flex disable w-fit">
       <div
         className={`${digitContainerStyle} ? ${digitContainerStyle} : ${largeDigitsContainerDefaultStyle}`}
       >
@@ -57,8 +57,18 @@ const NumbersDisplayer_2: React.FunctionComponent<{
         }
       >
         <p className={smallDigitStyle ? smallDigitStyle : smallTextDefault}>
-          / {countedStaff}
+          <span
+            className={smallDigitStyle ? smallDigitStyle : smallTextDefault}
+          >
+            /
+          </span>
+          <span
+            className={smallDigitStyle ? smallDigitStyle : smallTextDefault}
+          >
+            {countedStaff}
+          </span>
         </p>
+        {/* <p></p> */}
       </div>
       {/* <div
         className={

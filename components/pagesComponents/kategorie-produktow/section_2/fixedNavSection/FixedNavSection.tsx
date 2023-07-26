@@ -28,9 +28,9 @@ const moreThen640Variant = {
 };
 
 /**HardCodedStaff*/
-const smValue = 640; //___main layout setter
+// const smValue = 640; //___main layout setter
 const lessThen640Style = 'border-t border-l border-r';
-const moreThen640Style = 'border-t border-l border-b';
+// const moreThen640Style = 'border-t border-l border-b';
 
 /**TS**/
 interface Props {
@@ -49,20 +49,18 @@ const FixedNavSection: React.FC<Props> = ({
 }) => {
   /**Staff for responsive layout**/
   const { width } = useWindowSize({ screensNumber: 1 });
-  const layoutCondition = width >= smValue;
+  // const layoutCondition = width >= smValue;
   /**JSX**/
   // console.log('isInView:', isInView);
   return (
     <AnimatePresence mode="wait" initial={true} custom={isInView}>
       {isInView && (
-        <motion.div className="fixed fc w-full h-[68px] lg:h-full lg:w-[80px] right-0 bottom-0">
+        <motion.div className="sm:hidden fixed fc w-full h-[78px]  right-0 bottom-0 bg-black">
           <motion.div
-            className={`fc w-[90%] h-full lg:w-full lg:h-[260px] bg-dark ${
-              layoutCondition ? moreThen640Style : lessThen640Style
-            } border-corpo py-6`}
+            className={`fc w-[90%] h-full lg:w-full lg:h-[260px] bg-dark border-t border-l border-r border-corpo py-6`}
             key={isInView.toString()}
             custom={isInView}
-            variants={layoutCondition ? moreThen640Variant : lessThen640Variant}
+            variants={lessThen640Variant}
             initial="from"
             animate="to"
             exit="exit"
