@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
 /**Components**/
-import RowOfSlides from './draggableSliderContent/RowOfSlides';
+// import RowOfSlides from './draggableSliderContent/RowOfSlides';
+import RowOfSlides from '../../../section_2/graphicSection/draggableSlider/draggableSliderContent/RowOfSlides';
 /**Hook Staff**/
 /**Framer Motion Staff*/
 import { motion } from 'framer-motion';
 import InViewContainer from '../../../../../containers/inViewContainer/InViewContainer';
 import InViewAnimatedContent from '../../../../../containers/inViewContainer/InViewAnimatedContent';
+
 // import InViewAnimatedContent from '../../../../kontakt/_inViewAnimatedContent/InViewAnimatedContent';
 
 /**HardCoded Staff**/
