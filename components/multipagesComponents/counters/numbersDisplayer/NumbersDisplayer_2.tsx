@@ -9,7 +9,7 @@ import {
 const largeDigitsContainerDefaultStyle = `flex justify-end xs:min-w-[150px]  xs3xx:min-w-[130px] min-w-[110px] `;
 const smalldigitsContainerDefaultStyle = ` pl-2 pt-2`;
 
-const largeTextDefault = 'p-u-large text-grey';
+const largeTextDefault = 'p-u-large text-light';
 const smallTextDefault = 'p-medium text-grey';
 
 /**-------------------------------------------------**/

@@ -18,13 +18,17 @@ const GoToTopButton: React.FC = () => {
       aria-label={'Przycisk: Idź do początku strony'}
       role="button"
       onClick={handleClick}
-      className={'relative fc flex-col gap-y-2 h-8 w-8 disable-soft bg-corpo'}
+      className={
+        'relative fc flex-col gap-y-2 h-10 w-10 disable-soft border border-grey '
+        //___hover:border-corpo transition duration-300 ease-in-out group
+      }
     >
       <ChevronTopIcon
-        className={`w-6 h-6`}
-        strokeColor={corpoColors.dark}
+        svgStyle="w-6 h-6"
+        // className={`w-6 h-6 origin-center group-hover:scale-125 group-hover:stroke-corpo duration-500 ease-in-out`}
+        strokeColor={corpoColors.grey}
         scale={1.2}
-        strokeColorWhileHover={corpoColors.light}
+        strokeColorWhileHover={corpoColors.orange}
       />
     </button>
   );

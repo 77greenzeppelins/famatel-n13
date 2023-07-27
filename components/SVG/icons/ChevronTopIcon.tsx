@@ -7,12 +7,14 @@ import { svgTransition } from '../../../utils/framerMotion/framerMotionUtils';
 /***********************************************************************************/
 const ChevronTopIcon = ({
   className,
+  svgStyle,
   strokeWidth = 1,
   strokeColor,
   strokeColorWhileHover = corpoColors.orange,
   scale,
 }: {
-  className: string;
+  className?: string;
+  svgStyle?: string;
   strokeWidth?: number;
   strokeColor?: string;
   strokeColorWhileHover?: string;
@@ -27,7 +29,7 @@ const ChevronTopIcon = ({
       viewBox="0 0 24 24"
       strokeWidth={strokeWidth}
       stroke={strokeColor ? strokeColor : corpoColors.light}
-      className={className ? className : 'w-6 h-6'}
+      className={svgStyle ? svgStyle : 'w-6 h-6'}
       whileHover={{
         scale: scale ? scale : 1.05,
         stroke: strokeColorWhileHover,
@@ -38,6 +40,7 @@ const ChevronTopIcon = ({
       }}
     >
       <path
+        className={className ? className : 'w-6 h-6'}
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M4.5 15.75l7.5-7.5 7.5 7.5"

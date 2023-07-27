@@ -5,8 +5,10 @@ import { opacityScaleYVariants } from '../../../../utils/framerMotion/framerMoti
 import ArrowLongRightIcon from '../../../SVG/icons/ArrowLongRightIcon';
 /**HardCoded Staff*/
 const containerDefaultStyle =
-  'flex items-center w-fit max-w-[750px] h-[72px] lg:h-[60px] disable-soft origin-left group gap-x-4';
-const textDefaultStyle = `text-grey p-medium group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]`;
+  'flex items-center w-fit  disable-soft origin-left group gap-x-4';
+//___max-w-[750px] h-[72px] lg:h-[60px]
+const textDefaultStyle =
+  'text-grey p-medium group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]';
 
 /**TS**/
 interface Props {

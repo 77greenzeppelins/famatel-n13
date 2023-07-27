@@ -30,7 +30,7 @@ const NavWithProgressBar = ({
   };
 
   return (
-    <div className="flex items-center justify-between w-full gap-x-4">
+    <div className="items-center justify-between hidden w-full sm:flex gap-x-4">
       <ArrowButton
         buttonStyle="fc w-10 h-10 aspect-square items-center justify-start focus:outline-none disable pointer-events-auto "
         //___border border-greyShade2

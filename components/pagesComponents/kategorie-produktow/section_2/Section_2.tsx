@@ -10,6 +10,8 @@ import useWindowSize from '../../../../utils/hooks/useWindowSize';
 import { useInView } from 'framer-motion';
 /**Basic Data*/
 import { catalogStructureData } from '../../../../data/_catalogStructure_data';
+import NavWithProgressBar from '../../../multipagesComponents/navigations/navWithProgressBar/NavWithProgressBar';
+import PageAnimatedLink from '../../o-firmie/_pageAnimatedLink/PageAnimatedLink';
 
 /**HardCodedStaff*/
 /**--------------------------------------------------**/
@@ -28,7 +30,7 @@ const Section_2 = () => {
       data-component="Section_2"
       className="relative w-full flex flex-col gap-y-20 pb-[20px] md:pb-[60px] "
     >
-      <div className="flex flex-col w-full gap-12 inner-px-md-xl-xxl">
+      <div className="flex flex-col w-full  lg:min-h-[90vh] inner-px-md-xl-xxl">
         <div className="flex w-full ">
           <CounterSection
             ref={viewRef}
@@ -37,7 +39,7 @@ const Section_2 = () => {
             categoriesNumber={catalogStructureData.length}
           />
         </div>
-        <div className="flex w-full lg:w-[80%] m-auto">
+        <div className="flex w-full sm:w-[80%] m-auto">
           <DescriptionSection categoryIndex={categoryIndex} />
         </div>
       </div>
@@ -47,6 +49,19 @@ const Section_2 = () => {
           width={width}
           currentCategory={categoryIndex}
           arrayOrder={1} //___specifief if read array from first or the last item
+        />
+      </div>
+      <div className="h-[200px] inner-px-md-xl-xxl lg:w-[60%] m-auto">
+        <NavWithProgressBar
+          setCategoryIndex={setCategoryIndex}
+          categoryIndex={categoryIndex}
+          categoriesNumber={catalogStructureData.length}
+        />
+      </div>
+      <div>
+        <PageAnimatedLink
+          linkHref={catalogStructureData[categoryIndex].mainCategoryUrl}
+          textStyle="p-regular text-dark font-bold group-hover:text-light group-hover:font-normal"
         />
       </div>
       <FixedNavSection

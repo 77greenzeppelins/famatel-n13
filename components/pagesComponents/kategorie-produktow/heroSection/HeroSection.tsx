@@ -13,7 +13,7 @@ import { story } from '../../../../data/_data';
 const HeroSection = () => {
   return (
     <div className="relative flex-col fc gap-y-0">
-      <div className="relative h-[60vh] sm:h-[70vh] md:h-[76vh] min-h-[300px] w-full">
+      <div className="relative h-[60vh] sm:h-[70vh] md:h-[76vh] lg:min-h-screen min-h-[300px] w-full">
         <div
           className="absolute h-full left-0 w-[5%] max-w-[40px] z-10 from-dark  to-transparent bg-gradient-to-r"
           //___via-dark
@@ -35,13 +35,14 @@ const HeroSection = () => {
           <TenCategoriesWithSvg />
         </div>
       </div>
-      <div className="my-10 sm:my-0 inner-px-md-xl-xxl">
-        <div className="relative flex items-start justify-center h-full ">
+      <div className="h-[50vh] lg:min-h-[50vh] inner-px-md-xl-xxl">
+        <div className="relative w-full h-full lg:w-[80%] m-auto fc">
           <InViewContainer
             animationDelay={0.1}
             outherContainerStyle="relative fc "
             measuredElementStyle="fc w-full h-full"
-            topFactor={0.6}
+            topFactor={0.5}
+            bottomFactor={0.2}
           >
             <InViewAnimatedContent
               scaleFactor={0.95}

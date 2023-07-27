@@ -55,7 +55,7 @@ const FixedNavSection: React.FC<Props> = ({
   return (
     <AnimatePresence mode="wait" initial={true} custom={isInView}>
       {isInView && (
-        <motion.div className="sm:hidden fixed fc w-full h-[78px]  right-0 bottom-0 backdrop-blur-lg">
+        <motion.div className="sm:hidden fixed fc w-full h-[78px]  right-0 bottom-0">
           <motion.div
             className={`fc w-[90%] h-full lg:w-full lg:h-[260px] bg-dark border-t border-l border-r border-corpo py-6`}
             key={isInView.toString()}

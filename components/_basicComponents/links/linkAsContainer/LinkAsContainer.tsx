@@ -29,7 +29,8 @@ const LinkAsContainer = ({
       aria-current={isActive ? 'page' : undefined}
       scroll={false}
       className={
-        linkStyle ? linkStyle : 'flex items-center w-fit h-full group '
+        linkStyle ? linkStyle : 'flex items-center  group '
+        //___w-fit
       }
     >
       {children}

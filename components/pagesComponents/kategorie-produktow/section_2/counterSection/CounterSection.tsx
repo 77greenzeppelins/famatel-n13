@@ -27,19 +27,23 @@ in this case we "apply" to forwadRef two generic types; order matters...
 const CounterSection = forwardRef(
   (props: PropsType, ref: ForwardedRef<RefType>) => {
     return (
-      <div className="flex flex-col w-full ">
-        <div className="flex gap-x-20">
+      <div className="flex flex-col w-full lg:gap-y-8 ">
+        <div className="flex justify-center sm:justify-start gap-x-20">
           <NumbersDisplayer_2
             currentCategoryIndex={props.categoryIndex}
             countedStaff={catalogStructureData.length}
           />
+
           <NavWithProgressBar
             setCategoryIndex={props.setCategoryIndex}
             categoryIndex={props.categoryIndex}
             categoriesNumber={props.categoriesNumber}
           />
         </div>
-        <div className="lg:w-[80%] m-auto" ref={ref}>
+        <div
+          className="flex justify-center lg:justify-start sm:w-[80%] h-[280px] lg:h-[340px] m-auto"
+          ref={ref}
+        >
           <LinkAsContainer
             linkHref={catalogStructureData[props.categoryIndex].mainCategoryUrl}
             ariaLabel={`Link do kategorii: ${
@@ -51,6 +55,7 @@ const CounterSection = forwardRef(
               uniqueKey={props.categoryIndex}
               label={catalogStructureData[props.categoryIndex].mainCategoryName}
               hasIcon={true}
+              textStyle="text-grey p-l-m group-hover:text-light ease-in duration-[0.4s] delay-[0.1s]"
             />
           </LinkAsContainer>
         </div>
