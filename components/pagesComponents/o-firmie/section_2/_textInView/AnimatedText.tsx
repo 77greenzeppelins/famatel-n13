@@ -1,8 +1,6 @@
 import React from 'react';
 /**Framer Motion Staff**/
 import { motion } from 'framer-motion';
-/**Basic Data**/
-import { story } from '../../../../../data/_data';
 
 /**TS**/
 type Props = {
@@ -23,9 +21,7 @@ const AnimatedText: React.FC<Props> = ({
       <motion.p
         data-component="AnimatedText__p"
         className={`${
-          textStyle
-            ? textStyle
-            : 'text-grey text-center text-[1.25rem] xs:text-[1.5rem]  md:text-[1.75rem] xxl:text-[2.25rem] tracking-[2px] leading-tight'
+          textStyle ? textStyle : 'text-grey text-center p-medium'
         }`}
         animate={{
           opacity: componentIsInView ? 1 : 0,

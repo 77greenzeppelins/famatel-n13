@@ -1,13 +1,12 @@
 import React from 'react';
+/**Components**/
+import FooterLink from '../__link/FooterLink';
 /**Basic Data*/
 import { regulacjeUrl } from '../../../../../data/_data';
-import FooterLink from '../__link/FooterLink';
 
 /**----------------------**/
 const Regulacje = () => {
   const labelsArray = Object.values(regulacjeUrl);
-  //
-  console.log('labelsArray:', labelsArray);
   /**JSX**/
   return (
     <div className="w-full sm:w-[80%]">

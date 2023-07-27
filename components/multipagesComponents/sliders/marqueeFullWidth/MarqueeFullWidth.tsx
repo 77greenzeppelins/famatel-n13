@@ -53,10 +53,10 @@ const MarqueeFullWidth: React.FC<Props> = ({
   !: recommended sice of icon for mobile is 46px; 
   */
   const numberOfSvgCells = Math.ceil((width / svgRespSize) * cellsNumberFactor);
-  console.log('width:', width);
-  console.log('svgRespSize:', svgRespSize);
-  console.log('cellsNumberFactor:', cellsNumberFactor);
-  console.log('numberOfSvgCells:', numberOfSvgCells);
+  // console.log('width:', width);
+  // console.log('svgRespSize:', svgRespSize);
+  // console.log('cellsNumberFactor:', cellsNumberFactor);
+  // console.log('numberOfSvgCells:', numberOfSvgCells);
 
   /**JSX**/
   return (

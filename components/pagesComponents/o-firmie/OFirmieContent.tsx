@@ -20,9 +20,7 @@ const OFirmieContent = () => {
         />
       </div>
       <div className="z-[8] ">
-        <Section_2
-          mediumTextStyle={`p-regular text-dark font-bold group-hover:text-light group-hover:font-normal`}
-        />
+        <Section_2 />
       </div>
     </div>
   );

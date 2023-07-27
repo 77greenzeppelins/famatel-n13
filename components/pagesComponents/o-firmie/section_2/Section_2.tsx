@@ -8,12 +8,8 @@ import IconsMarqueeSection from './iconsMarquee/IconsMarqueeSection';
 /**Basic Data*/
 import { pagesUrl, story } from '../../../../data/_data';
 
-/**TS**/
-interface Props {
-  mediumTextStyle?: string;
-}
 /**---------------------------------------------**/
-const Section_2 = ({ mediumTextStyle }: Props) => {
+const Section_2 = () => {
   /**JSX**/
   return (
     <>
@@ -46,17 +42,14 @@ const Section_2 = ({ mediumTextStyle }: Props) => {
           animatedText={story.oFirmiePage.animatedText[2]}
           // textStyle={mediumTextStyle}
         />
-        <NumberTextModule
+        {/* <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[4].pseudoNumber}
           squareText={story.oFirmiePage.squareText[4].text}
           animatedText={story.oFirmiePage.animatedText[4]}
           // textStyle={mediumTextStyle}
-        />
+        /> */}
         <div className="fc inner-px-md-xl-xxl">
-          <PageAnimatedLink
-            linkHref={pagesUrl.produkty}
-            textStyle={mediumTextStyle}
-          />
+          <PageAnimatedLink linkHref={pagesUrl.produkty} />
         </div>
       </div>
     </>

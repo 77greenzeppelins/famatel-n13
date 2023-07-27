@@ -1,5 +1,8 @@
 import React, { useRef, useState } from 'react';
 /**Components**/
+import NavWithProgressBar from '../../../multipagesComponents/navigations/navWithProgressBar/NavWithProgressBar';
+import LinkAsContainer from '../../../_basicComponents/links/linkAsContainer/LinkAsContainer';
+import AnimatedLabel from '../../../multipagesComponents/pseudoHeaders/animatedLabel/AnimatedLabel';
 import CounterSection from './counterSection/CounterSection';
 import DescriptionSection from './descriptionSection/DescriptionSection';
 import DraggableSlider from './graphicSection/draggableSlider/DraggableSlider';
@@ -8,10 +11,9 @@ import FixedNavSection from './fixedNavSection/FixedNavSection';
 import useWindowSize from '../../../../utils/hooks/useWindowSize';
 /**Framer Motion Staff*/
 import { useInView } from 'framer-motion';
+import { simpleOpacityVariants } from '../../../../utils/framerMotion/framerMotionUtils';
 /**Basic Data*/
 import { catalogStructureData } from '../../../../data/_catalogStructure_data';
-import NavWithProgressBar from '../../../multipagesComponents/navigations/navWithProgressBar/NavWithProgressBar';
-import PageAnimatedLink from '../../o-firmie/_pageAnimatedLink/PageAnimatedLink';
 
 /**HardCodedStaff*/
 /**--------------------------------------------------**/
@@ -51,18 +53,28 @@ const Section_2 = () => {
           arrayOrder={1} //___specifief if read array from first or the last item
         />
       </div>
-      <div className="h-[200px] inner-px-md-xl-xxl lg:w-[60%] m-auto">
+      <div className=" inner-px-md-xl-xxl w-full lg:w-[60%] m-auto">
         <NavWithProgressBar
           setCategoryIndex={setCategoryIndex}
           categoryIndex={categoryIndex}
           categoriesNumber={catalogStructureData.length}
         />
       </div>
-      <div>
-        <PageAnimatedLink
+      <div className="mx-auto -mt-20 sm:mt-0 inner-px-md-xl-xxl">
+        <LinkAsContainer
           linkHref={catalogStructureData[categoryIndex].mainCategoryUrl}
-          textStyle="p-regular text-dark font-bold group-hover:text-light group-hover:font-normal"
-        />
+          ariaLabel={`Link do kategorii: ${catalogStructureData[categoryIndex].mainCategoryName}`}
+          linkStyle="flex items-center w-fit px-4 py-2 rounded-sm bg-corpo group "
+        >
+          <AnimatedLabel
+            customeVariants={simpleOpacityVariants}
+            uniqueKey={categoryIndex}
+            label="Szczegóły kategorii"
+            hasIcon={true}
+            textStyle="text-dark font-bold header-link-label group-hover:text-light group-hover:font-normal ease-in duration-[0.4s] delay-[0.1s]"
+            iconStyle="fc h-6 w-6 min-w-6 min-h-6 aspect-square stroke-dark group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0"
+          />
+        </LinkAsContainer>
       </div>
       <FixedNavSection
         isInView={isInView}
