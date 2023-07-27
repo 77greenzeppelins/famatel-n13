@@ -5,9 +5,15 @@ import SubCategoryPageTemplate from '../../../../components/multipagesComponents
 /**BasicData*/
 import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
 import { wtyczkiGniazdaCampingowe_productCard_data } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_9_campingowe_data';
+import { useEffect } from 'react';
 
 /**--------------------------------------------------------------**/
 const KategorieProduktowPage: NextPage = () => {
+  /**...**/
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Head>

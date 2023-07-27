@@ -10,9 +10,15 @@ import {
   wtyczkiGniazdaCampingowe_SubCategory_data,
   wtyczkiGniazdaCampingowe_productCard_data,
 } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_9_campingowe_data';
+import { useEffect } from 'react';
 
 /**--------------------------------------**/
 const WtyczkiGniazdaCampingoweProductPage: NextPage = () => {
+  /**ScrollToTop**/
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   /**JSX**/
   return (
     <>
