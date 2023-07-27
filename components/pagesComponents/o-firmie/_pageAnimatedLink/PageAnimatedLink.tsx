@@ -21,15 +21,15 @@ const PageAnimatedLink = ({ linkHref, textStyle, layoutStyle }: Props) => {
     <LinkAsContainer
       linkHref={linkHref}
       ariaLabel="Link do strony: Kategorie Produktów"
-      linkStyle="flex items-center w-fit px-4 py-2 rounded-sm bg-corpo group "
+      linkStyle="flex items-center w-fit px-4 py-2 rounded-sm border border-corpo hover:bg-corpo group ease-in duration-[0.4s] delay-[0.1s]"
     >
       <AnimatedLabel
         customeVariants={simpleOpacityVariants}
         uniqueKey={linkHref}
         label="Poznaj kategorie produktów"
         hasIcon={true}
-        textStyle="text-dark font-bold header-link-label group-hover:text-light group-hover:font-normal ease-in duration-[0.4s] delay-[0.1s]"
-        iconStyle="fc h-6 w-6 min-w-6 min-h-6 aspect-square stroke-dark group-hover:stroke-light group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0"
+        textStyle="text-corpo font-normal header-link-label group-hover:text-dark group-hover:font-bold ease-in duration-[0.4s] delay-[0.1s]"
+        iconStyle="fc h-6 w-6 min-w-6 min-h-6 aspect-square stroke-corpo group-hover:stroke-dark group-hover:translate-x-1 ease-in duration-[0.4s] delay-[0.1s] origin-center flex-shrink-0"
       />
     </LinkAsContainer>
   );
