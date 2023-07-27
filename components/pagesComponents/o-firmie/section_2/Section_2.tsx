@@ -7,6 +7,8 @@ import PageAnimatedLink from '../_pageAnimatedLink/PageAnimatedLink';
 import IconsMarqueeSection from './iconsMarquee/IconsMarqueeSection';
 /**Basic Data*/
 import { pagesUrl, story } from '../../../../data/_data';
+import InViewContainer from '../../../containers/inViewContainer/InViewContainer';
+import InViewAnimatedContent from '../../../containers/inViewContainer/InViewAnimatedContent';
 
 /**---------------------------------------------**/
 const Section_2 = () => {
@@ -14,14 +16,26 @@ const Section_2 = () => {
   return (
     <>
       <div className="hidden lg:flex w-full lg:h-[8vh] h-[14vh] bg-dark" />
-      <div className="flex flex-col gap-y-16 xl:gap-y-20 xxl:gap-y-28 ">
+      <div className="flex flex-col gap-y-16 xl:gap-y-20 lg:gap-y-32 ">
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[0].pseudoNumber}
           squareText={story.oFirmiePage.squareText[0].text}
           animatedText={story.oFirmiePage.animatedText[0]}
           // textStyle={mediumTextStyle}
         />
-        <ProductDescription />
+
+        <InViewContainer
+          animationDelay={0.1}
+          outherContainerStyle="relative fc "
+          measuredElementStyle="w-full h-full"
+          topFactor={0.1}
+          bottomFactor={0.1}
+        >
+          <InViewAnimatedContent scaleFactor={0.95} xFactor={'0'} yFactor={'0'}>
+            <ProductDescription />
+          </InViewAnimatedContent>
+        </InViewContainer>
+
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[1].pseudoNumber}
           squareText={story.oFirmiePage.squareText[1].text}
@@ -35,7 +49,18 @@ const Section_2 = () => {
           animatedText={story.oFirmiePage.animatedText[3]}
           // textStyle={mediumTextStyle}
         />
-        <WorldMapComponent />
+        <InViewContainer
+          animationDelay={0.1}
+          outherContainerStyle="relative fc "
+          measuredElementStyle="w-full h-full"
+          topFactor={0.1}
+          bottomFactor={0.1}
+        >
+          <InViewAnimatedContent scaleFactor={0.95} xFactor={'0'} yFactor={'0'}>
+            <WorldMapComponent />
+          </InViewAnimatedContent>
+        </InViewContainer>
+
         <NumberTextModule
           squareNumber={story.oFirmiePage.squareText[2].pseudoNumber}
           squareText={story.oFirmiePage.squareText[2].text}

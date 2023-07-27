@@ -1,5 +1,6 @@
 import React from 'react';
 import { story } from '../../../../../data/_data';
+import { simpleOpacityVariants } from '../../../../../utils/framerMotion/framerMotionUtils';
 import AnimatedParagraph from '../../../../multipagesComponents/pseudoHeaders/animatedParagraph/AnimatedParagraph';
 import SmallPseudoHeader from '../../../../multipagesComponents/pseudoHeaders/SmallPseudoHeader.tsx/SmallPseudoHeader';
 import SubCategoriesModule from './subCategoriesModule/SubCategoriesModule';
@@ -21,6 +22,7 @@ const DescriptionSection: React.FC<{ categoryIndex: number }> = ({
             uniqueKey={categoryIndex}
             textsArray={story.pageProdukty.categoriesDescritpions}
             spanStyle="p-small text-left text-grey"
+            // customeVariants={simpleOpacityVariants}
           />
         </div>
       </div>
