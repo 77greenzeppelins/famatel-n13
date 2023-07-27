@@ -1,20 +1,29 @@
 /**used in: <PageTransitionContainer>*/
 const routingAnimation = {
-  in: {
-    opacity: 1,
+  initial: {
+    opacity: 0,
     // scale: 1,
-    // x: 0,
+    y: 100,
     transition: {
       //   delay: 1,
-      duration: 0.2,
+      duration: 0.8,
     },
   },
-  out: {
+  animate: {
+    opacity: 1,
+    // scale: 0.995,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      // delay: 1,
+    },
+  },
+  exit: {
     opacity: 0,
     // scale: 0.995,
-    // x: 20,
+    y: -100,
     transition: {
-      duration: 0.2,
+      duration: 0.8,
       // delay: 1,
     },
   },

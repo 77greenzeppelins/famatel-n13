@@ -10,9 +10,17 @@ import {
   wtyczkiGniazdaSchuko_SubCategory_data,
   wtyczkiGniazdaSchuko_productCards_data,
 } from '../../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_5_jednofazowe_data';
+import PageTransitionHolder from '../../../../../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
+import { useEffect } from 'react';
 
 /**--------------------------------------**/
 const WtyczkiGniazdaSchukoProductPage: NextPage = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   /**JSX**/
   return (
     <>
@@ -31,27 +39,31 @@ const WtyczkiGniazdaSchukoProductPage: NextPage = () => {
           content="Specyfikacja techniczna osprzętu elektrycznego jednofazowego marki Famatel."
         ></meta>
       </Head>
-      <ProductPageTemplate
-        productCardsData={wtyczkiGniazdaSchuko_productCards_data}
-        //___data for navSection => data about category
-        categoryName={
-          catalogStructureData[
-            mainCategoriesSummaryData.wtyczkiGniazda.categoryIndex
-          ].mainCategoryName
-        }
-        categoryUrl={
-          catalogStructureData[
-            mainCategoriesSummaryData.wtyczkiGniazda.categoryIndex
-          ].mainCategoryUrl
-        }
-        //___data for navSection => data about subCategory
-        subCategoryName={wtyczkiGniazdaSchuko_SubCategory_data.subCategoryName}
-        subCategoryUrl={wtyczkiGniazdaSchuko_SubCategory_data.subCategoryUrl}
-      >
-        <WtyczkiGniazdaSchukoContent
+      <PageTransitionHolder>
+        <ProductPageTemplate
           productCardsData={wtyczkiGniazdaSchuko_productCards_data}
-        />
-      </ProductPageTemplate>
+          //___data for navSection => data about category
+          categoryName={
+            catalogStructureData[
+              mainCategoriesSummaryData.wtyczkiGniazda.categoryIndex
+            ].mainCategoryName
+          }
+          categoryUrl={
+            catalogStructureData[
+              mainCategoriesSummaryData.wtyczkiGniazda.categoryIndex
+            ].mainCategoryUrl
+          }
+          //___data for navSection => data about subCategory
+          subCategoryName={
+            wtyczkiGniazdaSchuko_SubCategory_data.subCategoryName
+          }
+          subCategoryUrl={wtyczkiGniazdaSchuko_SubCategory_data.subCategoryUrl}
+        >
+          <WtyczkiGniazdaSchukoContent
+            productCardsData={wtyczkiGniazdaSchuko_productCards_data}
+          />
+        </ProductPageTemplate>
+      </PageTransitionHolder>
     </>
   );
 };

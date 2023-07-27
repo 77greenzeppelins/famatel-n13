@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { useRouter } from 'next/router';
 /*FramerMotion Staff*/
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,9 +9,11 @@ const PageTransitionHolder: React.FunctionComponent<{
   children: ReactNode;
 }> = ({ children }) => {
   /**Router Section*/
-  const { pathname } = useRouter();
+  const router = useRouter();
 
-  console.log('pathname:', pathname);
+  // useEffect(() => {
+  //   console.log('pathname:', pathname);
+  // }, [pathname]);
 
   /**JSX*/
   return (
@@ -20,18 +22,19 @@ const PageTransitionHolder: React.FunctionComponent<{
       // exitBeforeEnter={true}//depricated
       mode="wait"
       // onExitComplete={() => window.scrollTo(0, 0)}
+      // onExitComplete={() => console.log('pathname:', pathname)}
     >
-      <motion.div
+      <motion.main
         data-container="PageTransitionHolder__container"
         className="w-full h-full"
-        key={pathname}
+        key={router.route}
         variants={variants}
-        initial="out"
-        animate="in"
-        exit="out"
+        initial="initial"
+        animate="animate"
+        exit="axit"
       >
         {children}
-      </motion.div>
+      </motion.main>
     </AnimatePresence>
   );
 };
