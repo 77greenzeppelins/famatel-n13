@@ -1,14 +1,16 @@
 import React, { useRef } from 'react';
 /**Hook staff**/
 import useMeasure from 'react-use-measure';
-/**FramerMotion Staff**/
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import useWindowSize from '../../../../../utils/hooks/useWindowSize';
+/**Components**/
 import InViewContainer from '../../../../containers/inViewContainer/InViewContainer';
 import InViewAnimatedContent from '../../../../containers/inViewContainer/InViewAnimatedContent';
-
 import { svgIconsFromCatalogRandome_data } from '../../../../SVG/iconsFromCatalog/_iconsFromCatalog_data';
+/**FramerMotion Staff**/
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+/**BasicData**/
 import { corpoColors } from '../../../../../data/_data';
-import useWindowSize from '../../../../../utils/hooks/useWindowSize';
+
 /**HardCoded staff**/
 const mountingCondition = 640; //1024  1280
 const heightValue = 300;
@@ -53,7 +55,7 @@ const HeroBackground = () => {
       aria-hidden="true"
       data-component="HeroBackground__container_for_useMeasure"
       ref={ref}
-      className="absolute  inset-0 overflow-hidden z-5"
+      className="absolute inset-0 overflow-hidden z-5"
       //___hidden md:block
     >
       <InViewContainer
@@ -70,7 +72,7 @@ const HeroBackground = () => {
           {
             //__optional
             height > heightValue ? (
-              <div className="flex w-full justify-start">
+              <div className="flex justify-start w-full">
                 <motion.div
                   className="flex gap-10 transition-all ease-in-out"
                   style={{ x: xDividedNegative }}
@@ -92,7 +94,7 @@ const HeroBackground = () => {
               </div>
             ) : null
           }
-          <div className="flex w-full justify-end">
+          <div className="flex justify-end w-full">
             <motion.div
               className="flex gap-10 transition-all ease-in-out"
               style={{ x: xDivided }}
@@ -113,8 +115,8 @@ const HeroBackground = () => {
             </motion.div>
           </div>
           <div
-            //  className="flex w-full justify-start"
-            className="flex w-full justify-start"
+            //  className="flex justify-start w-full"
+            className="flex justify-start w-full"
           >
             <motion.div
               className="flex gap-10 transition-all ease-in-out"
