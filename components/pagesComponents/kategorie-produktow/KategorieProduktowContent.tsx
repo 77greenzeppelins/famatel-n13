@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import HeroSection from './heroSection/HeroSection';
 import Section_2 from './section_2/Section_2';
 /**Basic Data*/
-import { catalogStructureData } from '../../../data/_catalogStructure_data';
 
 /**----------------------------------------------------------------------------------**/
 const KategorieProduktowContent = () => {
