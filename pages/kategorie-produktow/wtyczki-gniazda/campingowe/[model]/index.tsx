@@ -15,10 +15,12 @@ import { useEffect } from 'react';
 /**--------------------------------------**/
 const WtyczkiGniazdaCampingoweProductPage: NextPage = () => {
   /**ScrollToTop**/
-  useEffect(() => {
+  const scrollToTop = () => {
     window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+    scrollToTop();
   }, []);
-
   /**JSX**/
   return (
     <>

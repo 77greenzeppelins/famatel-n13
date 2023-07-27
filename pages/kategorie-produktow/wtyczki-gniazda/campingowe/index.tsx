@@ -10,8 +10,11 @@ import { useEffect } from 'react';
 /**--------------------------------------------------------------**/
 const KategorieProduktowPage: NextPage = () => {
   /**...**/
-  useEffect(() => {
+  const scrollToTop = () => {
     window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+    scrollToTop();
   }, []);
 
   return (
