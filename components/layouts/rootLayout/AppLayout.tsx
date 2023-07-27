@@ -3,10 +3,9 @@ import React from 'react';
 import Header from './header/Header';
 import Footer from './footer/Footer';
 import CookiesPopUp from './cookiesPopUp/CookiesPopUp';
+import MobileMenu from '../../multipagesComponents/mobileMenu/MobileMenu';
 /**Font Staff**/
 import localFont from '@next/font/local';
-import MobileMenu from '../../multipagesComponents/mobileMenu/MobileMenu';
-import PageTransitionHolder from '../pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
 
 const haasFont = localFont({
   src: '../../../public/fonts/HaasGrotDisp-55Roman.woff2',
@@ -21,9 +20,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       className={`${haasFont.className} `}
     >
       <Header />
-      <PageTransitionHolder>{children}</PageTransitionHolder>
+      {children}
       <MobileMenu />
-
       <Footer />
       <CookiesPopUp />
     </div>
