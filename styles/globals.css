@@ -158,14 +158,14 @@
   */
   .scroll-bar-style {
     /* IE and Edge */
-    -ms-overflow-style: thin;
+    -ms-overflow-style: auto;
     /* Firefox */
-    scrollbar-width: thin;
+    scrollbar-width: auto;
   }
 
   /* Chrome, Safari and Opera */
   .scroll-bar-style::-webkit-scrollbar {
-    width: 4px;
+    width: 20px;
     background-color: var(--corpo-grey-shade-2);
   }
   .scroll-bar-style::-webkit-scrollbar-thumb {

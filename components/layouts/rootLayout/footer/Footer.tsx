@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React, { memo, useEffect } from 'react';
 
 /**Components**/
@@ -16,29 +17,47 @@ const labelStyle =
 // const iconStyleTrans =
 //   'h-4 w-4 text-light group-hover:text-dark group-hover:translate-x-1 ease-in duration-300  origin-center';
 
-const Footer = memo(function Footer() {
+const Footer = function Footer() {
+  const router = useRouter();
   // useEffect(() => {
   //   console.log('Footer rendered or re-rendered');
   //   // count < 1 && console.log('count:', count);
   // });
+  console.log('router.pathname', router.pathname);
+  // console.log('router.route', router.route);
+  // console.log('router.asPath', router.asPath);
+
+  // if(router.pathname)
 
   /**JSX**/
   return (
     <footer className="flex flex-col w-full pt-20 ">
-      <div className="w-full fc pb-2">
+      {/* <div className="w-full pb-2 fc">
         <GoToTopButton />
       </div>
       <FooterTopPart
         headerTextStyle={headerTextStyle}
         ornamentColor={ornamentColor}
         labelStyle={labelStyle}
-      />
+      /> */}
+      <div className="fc w-full h-[40vh] p-v-large text-dark bg-yellow-600">
+        {router.pathname}
+      </div>
       <FooterBottomPart />
-      {/* <div className="relative flex items-end h-20 ">
+    </footer>
+  );
+};
+
+export default Footer;
+
+{
+  /* <div className="relative flex items-end h-20 ">
         <FadingLine gradientTo="toLeft" containerStyle="w-1/2 h-[1px]" />
         <FadingLine gradientTo="toRight" containerStyle="w-1/2 h-[1px]" />
-      </div> */}
-      {/* <div className="w-full inner-px-md-xl-xxl ">
+      </div> */
+}
+{
+  /* <div className="w-full inner-px-md-xl-xxl ">
         <div className="flex flex-col w-full sm:flex-row gap-y-14 sm:gap-h-0 ">
           <div className="flex flex-col w-full gap-y-14 xs4xx:flex-row xs4xx:gap-x-6 sm:w-2/3 sm:gap-x-0">
             <div className="flex flex-col w-full gap-y-6 xs4xxw-1/2">
@@ -58,8 +77,10 @@ const Footer = memo(function Footer() {
             <ProductCategoriesLinks />
           </div>
         </div>
-      </div> */}
-      {/* <div className="flex flex-col justify-center ">
+      </div> */
+}
+{
+  /* <div className="flex flex-col justify-center ">
         <div className="flex justify-between inner-px-md-xl-xxl">
           <div className="flex gap-x-1">
             <p className="p-small text-grey">&copy;</p>
@@ -72,12 +93,8 @@ const Footer = memo(function Footer() {
         <div className="w-full fc">
           <GoToTopButton />
         </div>
-      </div> */}
-    </footer>
-  );
-});
-
-export default Footer;
+      </div> */
+}
 
 /*
 //___my version

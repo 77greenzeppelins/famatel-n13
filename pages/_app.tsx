@@ -18,8 +18,7 @@ const haasFont = localFont({
 });
 
 /**---------------------------------------------------------------------------**/
-export default function MyApp({ Component, pageProps, router }: AppProps) {
-  console.log('router.route:', router.route);
+export default function MyApp({ Component, pageProps }: AppProps) {
   /**JSX**/
   return (
     <>
@@ -32,13 +31,13 @@ export default function MyApp({ Component, pageProps, router }: AppProps) {
         <Component {...pageProps} />
       </AppLayout> */}
       <Header />
-      <AnimatePresence
-        mode="wait"
+      {/* <AnimatePresence
+        mode="sync"
         initial={false}
         // onExitComplete={() => window.scrollTo(0, 0)}
-      >
-        <Component {...pageProps} />
-      </AnimatePresence>
+      > */}
+      <Component {...pageProps} />
+      {/* </AnimatePresence> */}
       <MobileMenu />
       {/* <Footer /> */}
       <CookiesPopUp />

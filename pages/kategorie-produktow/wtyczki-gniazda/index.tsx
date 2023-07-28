@@ -40,7 +40,7 @@ const WtyczkiGniazdaPage: NextPage = () => {
           ></meta>
         </Head>
 
-        <div className="flex-col w-full fc bg-dark">
+        <div className="bg-dark">
           <CategoryPageTemplate
             mainCategoryIndex={catalogStructureData[0].mainCategoryIndex}
           />
