@@ -10,9 +10,9 @@ const NowosciPage: NextPage = () => {
   /*
   __1__ With these steps, Next.js app will always scroll to the top of the page when a new page is loaded
   */
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   /**JSX**/
   return (
@@ -34,6 +34,7 @@ const NowosciPage: NextPage = () => {
         <link rel="canonical" href="https://www.famatel.pl/nowosci" />
       </Head>
       <NowosciContent />
+      <div className="h-[50vh]" />
     </PageWrapper>
   );
 };

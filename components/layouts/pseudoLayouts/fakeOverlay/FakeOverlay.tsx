@@ -33,7 +33,7 @@ const FakeOverlay = () => {
   return isMounted ? (
     <div
       data-component="FakeOverlay"
-      className="fixed w-full h-full bg-grey z-[499]"
+      className="fixed w-full h-full bg-dark z-[499]"
     >
       FakeOverlay
     </div>

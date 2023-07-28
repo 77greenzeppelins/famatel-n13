@@ -56,7 +56,7 @@ const HomePage = () => {
 
   /**JSX**/
   return (
-    <>
+    <PageWrapper>
       <Head>
         <title>Famatel Polska</title>
         <meta property="og:title" content="Famatel Polska"></meta>
@@ -70,7 +70,7 @@ const HomePage = () => {
         ></meta>
       </Head>
       <OFirmieContent />
-    </>
+    </PageWrapper>
   );
 };
 
