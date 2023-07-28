@@ -15,11 +15,11 @@ const mdTextStyle =
 const DoPobraniaContent = () => {
   /**JSX**/
   return (
-    <main
+    <div
       data-component="KontaktContent__container"
-      className="relative bg-dark pt-[30px] pb-[12vh]"
+      className="relative bg-dark pt-[64px] lg:pt-[78px] w-full"
     >
-      <div className="w-full min-h-screen fc">
+      <div className="w-full min-h-[90vh] fc">
         <HeroSection mdTextStyle={mdTextStyle} lgTextStyle={lgTextStyle} />
       </div>
       <div className="w-full h-full inner-px-md-xl-xxl">
@@ -49,7 +49,7 @@ const DoPobraniaContent = () => {
           </InViewContainer>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 export default DoPobraniaContent;

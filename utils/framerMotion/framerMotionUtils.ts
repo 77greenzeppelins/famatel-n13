@@ -3,12 +3,12 @@ const routingAnimation = {
   initial: {
     opacity: 0,
     // scale: 0.995,
-    x: -200,
+    y: -200,
   },
   animate: {
     opacity: 1,
     // scale: 1,
-    x: 0,
+    y: 0,
     transition: {
       duration: 1,
       // delay: 1,
@@ -17,7 +17,7 @@ const routingAnimation = {
   exit: {
     opacity: 0,
     // scale: 0.995,
-    x: 200,
+    y: 200,
     transition: {
       duration: 1,
       // delay: 1,

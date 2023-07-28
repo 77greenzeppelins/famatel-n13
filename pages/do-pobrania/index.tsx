@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { NextPage } from 'next/types';
 import { useEffect } from 'react';
 /**Components**/
+import PageWrapper from '../../components/layouts/pseudoLayouts/pageWrapper/PageWrapper';
 import DoPobraniaContent from '../../components/pagesComponents/doPobrania/DoPobraniaContent';
 /**TS**/
 
@@ -20,7 +21,7 @@ const DoPobraniaPage: NextPage = () => {
 
   /**JSX**/
   return (
-    <>
+    <PageWrapper>
       <Head>
         <title>Materiały do pobrania | Famatel Polska</title>
         <meta
@@ -38,7 +39,7 @@ const DoPobraniaPage: NextPage = () => {
         <link rel="canonical" href="https://www.famatel.pl/do-pobrania" />
       </Head>
       <DoPobraniaContent />
-    </>
+    </PageWrapper>
   );
 };
 

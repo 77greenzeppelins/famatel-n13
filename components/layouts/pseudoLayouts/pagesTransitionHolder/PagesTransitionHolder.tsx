@@ -14,6 +14,10 @@ const PageTransitionHolder: React.FunctionComponent<{
   // useEffect(() => {
   //   console.log('pathname:', pathname);
   // }, [pathname]);
+  useEffect(() => {
+    // scrollToTop();
+    window.scrollTo(0, 0);
+  }, []);
 
   /**JSX*/
   return (
@@ -26,7 +30,7 @@ const PageTransitionHolder: React.FunctionComponent<{
     >
       <motion.main
         data-container="PageTransitionHolder__container"
-        className="w-full h-full"
+        className="w-full h-full overflow-x-hidden"
         key={router.route}
         variants={variants}
         initial="initial"

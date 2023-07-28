@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { NextPage } from 'next/types';
 import { useEffect } from 'react';
 /**Components**/
+import PageTransitionHolder from '../../../../../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
 import ProductPageTemplate from '../../../../../components/multipagesComponents/_productPageTemplate/ProductPageTemplate';
 import WtyczkiGniazdaEstradoweContent from '../../../../../components/pagesComponents/_nestedPages/2_produkty/1.8_wtyczki-gniazda-estradowe/WtyczkiGniazdaEstradoweContent';
 /**BasicData**/
@@ -17,13 +18,13 @@ const WtyczkiGniazdaEstradoweProductPage: NextPage = () => {
   /*
   __1__ With these steps, Next.js app will always scroll to the top of the page when a new page is loaded
   */
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   /**JSX**/
   return (
-    <>
+    <PageTransitionHolder>
       <Head>
         <title>Osprzęt elektryczny estradowy | Famatel Polska</title>
         <meta
@@ -62,7 +63,7 @@ const WtyczkiGniazdaEstradoweProductPage: NextPage = () => {
           productCardsData={wtyczkiGniazdaEstradowe_productCard_data}
         />
       </ProductPageTemplate>
-    </>
+    </PageTransitionHolder>
   );
 };
 

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import { NextPage } from 'next/types';
 /**Components*/
+// import PageWrapper from '../../../../components/layouts/pseudoLayouts/pageWrapper/PageWrapper';
 import SubCategoryPageTemplate from '../../../../components/multipagesComponents/_subCategoryPageTemplate/SubCategoryPageTemplate';
 /**BasicData*/
 import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';

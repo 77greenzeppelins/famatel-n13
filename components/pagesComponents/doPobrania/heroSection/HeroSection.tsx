@@ -34,7 +34,7 @@ const HeroSection: React.FC<{ mdTextStyle?: string; lgTextStyle?: string }> = ({
       role="presentation"
       aria-hidden="true"
       data-component="HeroSection__container"
-      className="relative fc w-full h-full "
+      className="relative w-full h-full fc"
     >
       <div
         className="absolute h-full left-0 w-[5%] max-w-[40px] z-10 from-dark  to-transparent bg-gradient-to-r"
@@ -55,7 +55,7 @@ const HeroSection: React.FC<{ mdTextStyle?: string; lgTextStyle?: string }> = ({
           <SvgLogoF svgStyle={'h-full'} gStyle={'fill-corpo'} />
         </motion.div>
 
-        <motion.div className="fc flex-col" variants={item}>
+        <motion.div className="flex-col fc" variants={item}>
           <p className={lgTextStyle}>Katalog</p>
           <p className={mdTextStyle}>2023</p>
         </motion.div>
