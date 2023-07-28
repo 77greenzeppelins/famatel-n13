@@ -67,6 +67,8 @@ const EstradoweModelPage: NextPage = () => {
             productCardsData={wtyczkiGniazdaEstradowe_productCard_data}
           />
         </ProductPageTemplate>
+        {/* <div className="bg-red-400 h-[25vh] w-full"></div>
+        <div className="bg-red-800 h-[25vh] w-full"></div> */}
       </PageWrapper>
       <Footer />
     </>

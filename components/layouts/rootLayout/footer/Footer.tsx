@@ -18,12 +18,12 @@ const labelStyle =
 //   'h-4 w-4 text-light group-hover:text-dark group-hover:translate-x-1 ease-in duration-300  origin-center';
 
 const Footer = function Footer() {
-  const router = useRouter();
+  // const router = useRouter();
   // useEffect(() => {
   //   console.log('Footer rendered or re-rendered');
   //   // count < 1 && console.log('count:', count);
   // });
-  console.log('router.pathname', router.pathname);
+  // console.log('router.pathname', router.pathname);
   // console.log('router.route', router.route);
   // console.log('router.asPath', router.asPath);
 
@@ -32,17 +32,17 @@ const Footer = function Footer() {
   /**JSX**/
   return (
     <footer className="flex flex-col w-full pt-20 ">
-      {/* <div className="w-full pb-2 fc">
+      <div className="w-full pb-2 fc">
         <GoToTopButton />
       </div>
       <FooterTopPart
         headerTextStyle={headerTextStyle}
         ornamentColor={ornamentColor}
         labelStyle={labelStyle}
-      /> */}
-      <div className="fc w-full h-[40vh] p-v-large text-dark bg-yellow-600">
+      />
+      {/* <div className="fc w-full h-[40vh] p-v-large text-dark bg-yellow-600">
         {router.pathname}
-      </div>
+      </div> */}
       <FooterBottomPart />
     </footer>
   );

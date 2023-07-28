@@ -41,6 +41,8 @@ const EstradowePage: NextPage = () => {
           subCategoryData={wtyczkiGniazdaSubCategoriesData[7]}
           productCardsData={wtyczkiGniazdaEstradowe_productCard_data}
         />
+        {/* <div className="bg-green-400 h-[25vh] w-full"></div>
+        <div className="bg-green-800 h-[25vh] w-full"></div> */}
       </PageWrapper>
       <Footer />
     </>

@@ -27,15 +27,15 @@ const PageWrapper = ({ children }: Props) => {
   //   });
   // }, [router.asPath]);
 
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-  useEffect(() => {
-    timerRef.current = setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 0.1);
-    return () => {
-      clearTimeout(timerRef.current as NodeJS.Timeout);
-    };
-  }, []);
+  // const timerRef = useRef<NodeJS.Timeout | null>(null);
+  // useEffect(() => {
+  //   timerRef.current = setTimeout(() => {
+  //     window.scrollTo(0, 0);
+  //   }, 0.1);
+  //   return () => {
+  //     clearTimeout(timerRef.current as NodeJS.Timeout);
+  //   };
+  // }, []);
 
   return (
     <motion.main

@@ -45,6 +45,8 @@ const WtyczkiGniazdaPage: NextPage = () => {
             mainCategoryIndex={catalogStructureData[0].mainCategoryIndex}
           />
         </div>
+        {/* <div className="bg-blue-400 h-[25vh] w-full"></div>
+        <div className="bg-blue-800 h-[25vh] w-full"></div> */}
       </PageWrapper>
       <Footer />
     </>

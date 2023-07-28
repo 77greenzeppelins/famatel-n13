@@ -38,6 +38,8 @@ const KategorieProduktowPage: NextPage = () => {
           <link rel="canonical" href="https://www.famatel.pl/produkty" />
         </Head>
         <KategorieProduktowContent />
+        {/* <div className="bg-yellow-400 h-[25vh] w-full"></div>
+        <div className="bg-yellow-800 h-[25vh] w-full"></div> */}
       </PageWrapper>
       <Footer />
     </>

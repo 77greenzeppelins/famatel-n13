@@ -12,6 +12,7 @@ import '../styles/globals.css';
 //___https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 import localFont from '@next/font/local';
 import { AnimatePresence } from 'framer-motion';
+import FakeOverlay from '../components/layouts/pseudoLayouts/fakeOverlay/FakeOverlay';
 
 const haasFont = localFont({
   src: '../public/fonts/HaasGrotDisp-55Roman.woff2',
@@ -31,6 +32,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </AppLayout> */}
       <Header />
+      <FakeOverlay />
       {/* <AnimatePresence
         mode="sync"
         initial={false}
