@@ -10,18 +10,18 @@ const routingAnimation = {
     // scale: 1,
     x: 0,
     transition: {
-      duration: 1.5,
+      duration: 1,
       // delay: 1,
     },
   },
   exit: {
     opacity: 0,
     // scale: 0.995,
-    y: 200,
-    // transition: {
-    //   duration: 1.5,
-    //   // delay: 1,
-    // },
+    x: 200,
+    transition: {
+      duration: 1,
+      // delay: 1,
+    },
   },
 };
 /*

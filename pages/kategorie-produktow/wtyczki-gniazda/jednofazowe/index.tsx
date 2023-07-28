@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { NextPage } from 'next/types';
 /**Components*/
@@ -5,8 +6,6 @@ import SubCategoryPageTemplate from '../../../../components/multipagesComponents
 /**BasicData*/
 import { wtyczkiGniazdaSubCategoriesData } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/_cat1_wtyczki-gniazda_data';
 import { wtyczkiGniazdaSchuko_productCards_data } from '../../../../data/categoriesData/cat_1_wtyczki-gniazda/subCategories/_subCat_5_jednofazowe_data';
-import PageTransitionHolder from '../../../../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
-import { useEffect } from 'react';
 
 /**--------------------------------------------------------------**/
 const KategorieProduktowPage: NextPage = () => {
@@ -34,12 +33,11 @@ const KategorieProduktowPage: NextPage = () => {
           content="Poznaj ofertę wtyczek i gniazd jednofazowych marki Famatel."
         ></meta>
       </Head>
-      <PageTransitionHolder>
-        <SubCategoryPageTemplate
-          subCategoryData={wtyczkiGniazdaSubCategoriesData[4]}
-          productCardsData={wtyczkiGniazdaSchuko_productCards_data}
-        />
-      </PageTransitionHolder>
+
+      <SubCategoryPageTemplate
+        subCategoryData={wtyczkiGniazdaSubCategoriesData[4]}
+        productCardsData={wtyczkiGniazdaSchuko_productCards_data}
+      />
     </>
   );
 };

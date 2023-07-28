@@ -2,10 +2,18 @@
 @tailwind utilities;
 @tailwind base;
 
+/*
+ body {
+    @apply overflow-x-hidden w-full h-full overscroll-y-contain bg-dark;
+    @apply scroll-bar-style;
+  }
+
+*/
+
 /*__________________________________________________________base*/
 @layer base {
   body {
-    @apply overflow-x-hidden w-full h-full overscroll-y-contain bg-dark;
+    @apply w-full h-full bg-dark;
     @apply scroll-bar-style;
   }
   :root {

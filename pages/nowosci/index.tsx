@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { NextPage } from 'next/types';
 import { useEffect } from 'react';
+import PageWrapper from '../../components/layouts/pseudoLayouts/pageWrapper/PageWrapper';
 /**Components**/
 import NowosciContent from '../../components/pagesComponents/nowosci/NowosciContent';
 
@@ -15,7 +16,7 @@ const NowosciPage: NextPage = () => {
 
   /**JSX**/
   return (
-    <>
+    <PageWrapper>
       <Head>
         <title>Nowości | Famatel Polska</title>
         <meta
@@ -33,7 +34,7 @@ const NowosciPage: NextPage = () => {
         <link rel="canonical" href="https://www.famatel.pl/nowosci" />
       </Head>
       <NowosciContent />
-    </>
+    </PageWrapper>
   );
 };
 

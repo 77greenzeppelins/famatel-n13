@@ -1,9 +1,7 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { NextPage } from 'next/types';
-import { useEffect } from 'react';
-import PageTransitionHolder from '../../components/layouts/pseudoLayouts/pagesTransitionHolder/PagesTransitionHolder';
 /**Components*/
 import KategorieProduktowContent from '../../components/pagesComponents/kategorie-produktow/KategorieProduktowContent';
 
@@ -38,9 +36,7 @@ const KategorieProduktowPage: NextPage = () => {
         ></meta>
         <link rel="canonical" href="https://www.famatel.pl/produkty" />
       </Head>
-      <PageTransitionHolder>
-        <KategorieProduktowContent />
-      </PageTransitionHolder>
+      <KategorieProduktowContent />
     </>
   );
 };
