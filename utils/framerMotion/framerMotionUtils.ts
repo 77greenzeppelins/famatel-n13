@@ -2,30 +2,26 @@
 const routingAnimation = {
   initial: {
     opacity: 0,
-    // scale: 1,
-    y: 100,
-    transition: {
-      //   delay: 1,
-      duration: 0.8,
-    },
+    // scale: 0.995,
+    x: -200,
   },
   animate: {
     opacity: 1,
-    // scale: 0.995,
-    y: 0,
+    // scale: 1,
+    x: 0,
     transition: {
-      duration: 0.8,
+      duration: 1.5,
       // delay: 1,
     },
   },
   exit: {
     opacity: 0,
     // scale: 0.995,
-    y: -100,
-    transition: {
-      duration: 0.8,
-      // delay: 1,
-    },
+    y: 200,
+    // transition: {
+    //   duration: 1.5,
+    //   // delay: 1,
+    // },
   },
 };
 /*
