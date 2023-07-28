@@ -3,6 +3,7 @@ import { NextPage } from 'next/types';
 import { useEffect } from 'react';
 /**Components**/
 import PageWrapper from '../../components/layouts/pseudoLayouts/pageWrapper/PageWrapper';
+import Footer from '../../components/layouts/rootLayout/footer/Footer';
 import DoPobraniaContent from '../../components/pagesComponents/doPobrania/DoPobraniaContent';
 /**TS**/
 
@@ -21,25 +22,28 @@ const DoPobraniaPage: NextPage = () => {
 
   /**JSX**/
   return (
-    <PageWrapper>
-      <Head>
-        <title>Materiały do pobrania | Famatel Polska</title>
-        <meta
-          property="og:title"
-          content="Materiały do pobrania &nbsp;|&nbsp; Famatel Polska"
-        ></meta>
-        <meta
-          name="description"
-          content="Witaj na stronie z materiałami do pobrania. Peły obraz naszej elektryki przemysłowej uzyskasz dzięki najnowszemu katalowi. Poznasz tutaj wszystkie wtyczki, gniazda, czy rozdzielnice przemysłowe w najrozmaitszych konfiguracjach. Jeśli wolisz, możesz pobierać też poszczególne jego rozdziały. Znajdziesz tutaj ponadto deklaracje zgodności technicznej oraz karty techniczne poszczególnych produktów."
-        ></meta>
-        <meta
-          property="og:description"
-          content="Witaj na stronie z materiałami do pobrania. Peły obraz naszej elektryki przemysłowej uzyskasz dzięki najnowszemu katalowi. Poznasz tutaj wszystkie wtyczki, gniazda, czy rozdzielnice przemysłowe w najrozmaitszych konfiguracjach. Jeśli wolisz, możesz pobierać też poszczególne jego rozdziały. Znajdziesz tutaj ponadto deklaracje zgodności technicznej oraz karty techniczne poszczególnych produktów."
-        ></meta>
-        <link rel="canonical" href="https://www.famatel.pl/do-pobrania" />
-      </Head>
-      <DoPobraniaContent />
-    </PageWrapper>
+    <>
+      <PageWrapper>
+        <Head>
+          <title>Materiały do pobrania | Famatel Polska</title>
+          <meta
+            property="og:title"
+            content="Materiały do pobrania &nbsp;|&nbsp; Famatel Polska"
+          ></meta>
+          <meta
+            name="description"
+            content="Witaj na stronie z materiałami do pobrania. Peły obraz naszej elektryki przemysłowej uzyskasz dzięki najnowszemu katalowi. Poznasz tutaj wszystkie wtyczki, gniazda, czy rozdzielnice przemysłowe w najrozmaitszych konfiguracjach. Jeśli wolisz, możesz pobierać też poszczególne jego rozdziały. Znajdziesz tutaj ponadto deklaracje zgodności technicznej oraz karty techniczne poszczególnych produktów."
+          ></meta>
+          <meta
+            property="og:description"
+            content="Witaj na stronie z materiałami do pobrania. Peły obraz naszej elektryki przemysłowej uzyskasz dzięki najnowszemu katalowi. Poznasz tutaj wszystkie wtyczki, gniazda, czy rozdzielnice przemysłowe w najrozmaitszych konfiguracjach. Jeśli wolisz, możesz pobierać też poszczególne jego rozdziały. Znajdziesz tutaj ponadto deklaracje zgodności technicznej oraz karty techniczne poszczególnych produktów."
+          ></meta>
+          <link rel="canonical" href="https://www.famatel.pl/do-pobrania" />
+        </Head>
+        <DoPobraniaContent />
+      </PageWrapper>
+      <Footer />
+    </>
   );
 };
 

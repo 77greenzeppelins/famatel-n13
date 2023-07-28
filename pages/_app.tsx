@@ -11,8 +11,7 @@ import '../styles/globals.css';
 //___my approach: Apply the font in <head>
 //___https://nextjs.org/docs/pages/building-your-application/optimizing/fonts
 import localFont from '@next/font/local';
-import { AnimatePresence, motion } from 'framer-motion';
-import { routingAnimation } from '../utils/framerMotion/framerMotionUtils';
+import { AnimatePresence } from 'framer-motion';
 
 const haasFont = localFont({
   src: '../public/fonts/HaasGrotDisp-55Roman.woff2',
@@ -41,7 +40,7 @@ export default function MyApp({ Component, pageProps, router }: AppProps) {
         <Component {...pageProps} />
       </AnimatePresence>
       <MobileMenu />
-      <Footer />
+      {/* <Footer /> */}
       <CookiesPopUp />
     </>
   );

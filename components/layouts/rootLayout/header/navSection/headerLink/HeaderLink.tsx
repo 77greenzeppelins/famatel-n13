@@ -26,14 +26,14 @@ const HeaderLink: React.FC<Props> = ({ label, url }) => {
     <>
       <li
         data-component="NavLink_container"
-        className="relative ml-6 fc hidden lg:block"
+        className="relative hidden ml-6 fc lg:block"
       >
         <Link
           href={url}
           aria-label={`Link do strony ${label}`}
           aria-current={isActive ? 'page' : undefined}
           scroll={false}
-          // className="relative fc gap-1 w-full h-full cursor-pointer bg-transparent select-none touch-none  group"
+          // className="relative w-full h-full gap-1 bg-transparent cursor-pointer select-none fc touch-none group"
           className={`relative text-dark font-bold header-link-label disable h-[40px] fc  ${
             isActive ? 'hover:text-dark' : 'hover:text-corpo'
           }  delay-100 duration-300 ease-linear`}

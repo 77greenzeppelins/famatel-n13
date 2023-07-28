@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { NextPage } from 'next/types';
 import { useEffect } from 'react';
+import Footer from '../../components/layouts/rootLayout/footer/Footer';
 /**Components**/
 import KontaktContent from '../../components/pagesComponents/kontakt/KontaktContent';
 
@@ -35,6 +36,7 @@ const KontaktPage: NextPage = () => {
         <link rel="canonical" href="https://www.famatel.pl/kontakt" />
       </Head>
       <KontaktContent />
+      <Footer />
     </>
   );
 };

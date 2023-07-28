@@ -17,9 +17,9 @@ const routingAnimation = {
   exit: {
     opacity: 0,
     // scale: 0.995,
-    y: 200,
+    // y: 200,
     transition: {
-      duration: 1,
+      duration: 0,
       // delay: 1,
     },
   },
